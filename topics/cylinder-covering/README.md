@@ -61,6 +61,9 @@ revision `1581d4cbdd69a0faf34b2089614fe2a814316a6a`. The secant axes,
 shared-boundary first crossing, physical normalization and generic finite
 approximation are inherited and credited. The [source guide](sources/README.md)
 links the original manuscripts and preserves their license and exact snapshots.
+The best earlier explicit public cover located is a
+[1,000,000-cylinder parameter choice](NOVELTY.md#later-addendum-earlier-explicit-public-cover)
+in the same angular construction, with saving about 5.7·10⁻¹⁰.
 
 At the 20,000-cylinder benchmark, the new cost is strictly below the proved
 actual-area floors for the audited radial and angular constructions on their

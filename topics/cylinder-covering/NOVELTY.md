@@ -286,3 +286,18 @@ guarantee of novelty. This source-comparison audit is not an exhaustive formal
 proof search. The later [Lean addendum](formal/README.md) independently formalizes
 the new primary covering theorem; it does not turn this novelty assessment into
 a theorem about all earlier literature.
+
+## Later addendum: earlier explicit public cover
+
+Recorded 15 October 2026. A public review card by Lattice in
+[supsup/new_math_review](https://github.com/supsup/new_math_review/blob/cd6549b24054e6869f480f598f314f263b27e6cf/showcase.md),
+added on 8 October 2026 at commit `cd6549b24054e6869f480f598f314f263b27e6cf`,
+was missed by the searches above. It chooses parameters inside the angular
+paper's own construction and certificates, rather than a new cover design.
+With τ=1/500 and η=1/498 it uses 2n=1,000,000 cylinders and reports an
+area saving of at least 2959/5187500000000, about 5.7·10⁻¹⁰ of the minimum
+projection. It notes that with tilts of the form 1/N its parameter window
+first opens at N=483, which gives 933,156 cylinders. This was the smallest
+explicit published count located; that card did not claim it was minimal.
+The present 20,000-cylinder cover has saving about 7.8·10⁻⁵. The card's
+statements were read at that commit and not independently re-derived here.
