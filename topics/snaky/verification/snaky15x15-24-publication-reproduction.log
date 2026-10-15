@@ -1,0 +1,56 @@
+...............................
+----------------------------------------------------------------------
+Ran 31 tests in 0.008s
+
+OK
+VERIFIED: 8734 cards, 144288 inside and 8728 outside response checks; Black wins on 15x15 within 24 Black moves. Computational audit, not a new optimality result.
+{
+  "certificate_sha256": "ff88668bddcbc4bb4a0dfa9794ac411b1492ddbcb22013621f1723f9cc3ef567",
+  "controls": [
+    {
+      "control": "root_height_reduced_by_one",
+      "error": "height-descent: card 8733 reply (6, 7) target height 23 is not below 23",
+      "status": "rejected"
+    },
+    {
+      "control": "root_response_removed",
+      "error": "missing-response: card 8733 lacks reply (0, 0)",
+      "status": "rejected"
+    }
+  ],
+  "corrupted_root_height": 23,
+  "original_root_height": 24,
+  "removed_response": [
+    0,
+    0
+  ],
+  "root_index": 8733,
+  "status": "controls_passed",
+  "verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10"
+}
+{"status": "constructed", "elapsed_seconds": 8.979653, "constructor_stats": {"calls": 17853, "catalog_leaves": 12, "baseline_leaves": 17748, "internal_cards": 89, "memo_hits": 4}, "catalog_stats": {"queries": 101, "families_examined": 5039538, "support_tests": 302146, "hits": 12}, "synthesized_card_count": 89}
+wrote /var/folders/k1/h6fzj_197kn5y48v7bpbjj380000gq/T/snaky15x15-24-x4r8q8u3/construction.json
+{
+  "output_sha256": "ff88668bddcbc4bb4a0dfa9794ac411b1492ddbcb22013621f1723f9cc3ef567",
+  "output_cards": 8734,
+  "output_bytes": 3181250,
+  "compact_root": {
+    "child": 8733,
+    "orientation": 0,
+    "translation": [
+      0,
+      0
+    ]
+  },
+  "root_height": 24,
+  "source_counts": {
+    "gotrevor_15x15": 8645,
+    "sieben_20": 0,
+    "snaky_19": 0,
+    "constructed_24": 89
+  },
+  "status": "identical",
+  "independent_verification_performed": false
+}
+Reconstruction matched the delivered certificate and provenance map byte for byte.
+COMPUTATIONAL CHECKS PASSED: Snaky on 15x15 within 24 Maker claims. This command did not perform Lean kernel verification.

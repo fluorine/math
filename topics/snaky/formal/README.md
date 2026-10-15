@@ -1,4 +1,4 @@
-# Lean certificate and infinite-board theorem
+# Lean certificates and game theorems
 
 The formal target is the actual infinite-board game:
 
@@ -56,6 +56,50 @@ The local runtime was obtained from the
 It reports commit `5045d0056413266e57c625dcd7c365b10e377c52`.
 The archive and extracted runtime remain in the repository's ignored research
 cache, not in this artifact. Use the matching official asset for another host.
+
+## Separate 15×15 theorem within 24 Maker claims
+
+`Snaky/Result15x15_24.lean` states the bounded finite-board theorem:
+
+```lean
+Snaky.snaky_wins_15x15_in_24 :
+  Snaky.BlackWinsIn (Snaky.placements 15 15 Snaky.snaky) (15 * 15) 24 [] []
+```
+
+The complete target and its axiom audit passed on 15 October 2026. Its only
+axioms are `propext`, `Classical.choice` and `Quot.sound`; no placeholders,
+custom axioms or native-decision shortcuts occur. All 4,050 dependency modules
+have successful compiler records. The final resume compiled 240 modules and
+reused 3,810 after source/compiler/dependency-digest checks. See the
+[kernel audit](kernel-audit-15x15-24.json),
+[complete build evidence](../verification/snaky15x15-24-lean-build.json), and
+[exact theorem/axiom output](../verification/snaky15x15-24-axioms.txt).
+
+To reproduce:
+
+```sh
+python3 topics/snaky/formal/build.py --lean /absolute/path/to/lean \
+  --generated-name Gen15x15_24 --target Snaky.AxiomAudit15x15_24 \
+  --certificate topics/snaky/certificate/snaky15x15-24.cards.txt \
+  --units 200000 --max-cards 15 --max-cells 2 --data-cards 125 \
+  --memory-mb 2048 --module-seconds 180
+```
+
+This uses one Lean thread, a 2,048 MB compiler memory cap and a 180-second
+per-module timeout. It generates 70 data files and 3,971 proof files, plus
+`Tree.lean` and `All.lean`. The smaller data groups use
+`tools/cards2lean_sized.py`, which changes only the pinned generator's
+`PER_FILE` grouping constant. The certificate and card rules are unchanged.
+
+The build report binds the certificate, generator, adapter and generated
+sources by SHA-256, and checks that the inputs did not change during the run.
+Unchanged checked modules can be reused after interruption. The result is
+separate from the nineteen-move targets; their default build arguments remain
+unchanged. The historical nineteen-move audit records the earlier builder
+hash; this shared builder adds only the documented generation options and
+input-hash reporting. The nineteen-move theorem and soundness sources are
+unchanged. See [the result note](../RESULT-15X15-24.md) for independent checks
+and the soundness argument.
 
 ## Provenance and trust boundary
 

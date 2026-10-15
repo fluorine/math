@@ -4,9 +4,11 @@ Updated 2026-10-15. **The 19-move result is complete, independently verified,
 fully checked by the Lean kernel, and reproduced byte for byte.** The proof
 covers both the empty infinite square board and the empty 17×17 board.
 
-The user authorized publication on 15 October 2026. This release contains only
+The user authorized publication on 15 October 2026. The first release contained
 the completed nineteen-move result from verified research commit `0a858c3`.
-Further Snaky research remains on a separate local branch. The announcement
+This update adds the separately verified 24-move result on 15×15. The
+eighteen-move research is checkpointed and paused on a separate local branch;
+no eighteen-move strategy was found. The announcement
 under `publication/X_POST.txt` is a draft, not a claim that it has been posted.
 
 ## Location and ownership
@@ -21,7 +23,8 @@ under `publication/X_POST.txt` is a draft, not a claim that it has been posted.
   `constructor/` and `MANUSCRIPT.md`; independent verifier owns `verification/`.
   Tactics worker wrote `formal/Snaky/Plane.lean` and `Result19.lean`. Root owns
   formal build infrastructure. Publication of this completed result is authorized;
-  follow-on results remain separate and are not included in this release.
+  the separately authorized 24-move result is included in this update.
+  Unsuccessful eighteen-move experiments are not part of the publication.
 
 ## Host and limits
 
@@ -126,3 +129,36 @@ locally as `reference/sieben-UPSTREAM-README.md`, with its hash and provenance.
 The repository is public. `publication/X_POST.txt` contains a 270-character
 standard-length announcement, counting the URL as 23 characters, plus detailed
 credits and a follow-up. It is ready-to-post text, not a posted X status.
+
+## Verified 24-move result and research stop
+
+On 15 October 2026, the user requested that eighteen-move research be
+checkpointed and paused, the 24-move result be fully verified and published
+if successful, and work then stop. The local eighteen-move checkpoint is
+`e8abb61` on `research/snaky-next-20261015-a`; it contains no claimed win.
+
+The separate 15×15 proof passed the independent checker on all 8,734 cards,
+144,288 inside replies and 8,728 outside classes. All 31 verifier tests and
+both corruption controls passed. Deterministic reconstruction reproduced
+both certificate and provenance map exactly. The root is empty, height 24,
+with 220 support cells inside the 225-cell board. Its exact SHA-256 is
+`ff88668bddcbc4bb4a0dfa9794ac411b1492ddbcb22013621f1723f9cc3ef567`.
+
+The full Lean 4.34.1 target `Snaky.AxiomAudit15x15_24` succeeded, covering
+4,050 dependency modules. It prints exactly the 24-claim theorem on empty
+15×15, depending only on `propext`, `Classical.choice` and `Quot.sound`.
+All successful module records and source hashes are preserved in
+`verification/snaky15x15-24-lean-build.json`; the concise record is
+`formal/kernel-audit-15x15-24.json`. Compilation used one worker and a
+2,048 MB cap in its final passes, with resumable checkpoints for host load.
+No proof obligation was weakened.
+
+The publication worktree is separate from both the original nineteen-move
+publication and the paused research. It includes only the completed 24-move
+proof, its exact inputs and dependencies, reconstruction, independent checks,
+formal sources, evidence and explanatory note. No X posting is authorized.
+
+A fresh publication-checkout run passed the full Python reproduction and
+regenerated all 4,043 Lean files byte for byte identically to the kernel-checked
+sources. All other formal-source hashes matched as well. No search or proof
+build remains running; further research is paused at the user's request.

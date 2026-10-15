@@ -1,0 +1,24 @@
+{"status": "constructed", "elapsed_seconds": 7.982841, "constructor_stats": {"calls": 17853, "catalog_leaves": 12, "baseline_leaves": 17748, "internal_cards": 89, "memo_hits": 4}, "catalog_stats": {"queries": 101, "families_examined": 5039538, "support_tests": 302146, "hits": 12}, "synthesized_card_count": 89}
+wrote /var/folders/k1/h6fzj_197kn5y48v7bpbjj380000gq/T/snaky15x15-24-n_2hqf2b/construction.json
+{
+  "output_sha256": "ff88668bddcbc4bb4a0dfa9794ac411b1492ddbcb22013621f1723f9cc3ef567",
+  "output_cards": 8734,
+  "output_bytes": 3181250,
+  "compact_root": {
+    "child": 8733,
+    "orientation": 0,
+    "translation": [
+      0,
+      0
+    ]
+  },
+  "root_height": 24,
+  "source_counts": {
+    "gotrevor_15x15": 8645,
+    "sieben_20": 0,
+    "snaky_19": 0,
+    "constructed_24": 89
+  },
+  "status": "identical",
+  "independent_verification_performed": false
+}

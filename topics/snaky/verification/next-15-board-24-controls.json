@@ -1,0 +1,24 @@
+{
+  "certificate_sha256": "3c997a486a943d43a5858c2d4bfd3af67c88223aeb09f207be8f88b06ec6e411",
+  "controls": [
+    {
+      "control": "root_height_reduced_by_one",
+      "error": "height-descent: card 13965 reply (6, 7) target height 23 is not below 23",
+      "status": "rejected"
+    },
+    {
+      "control": "root_response_removed",
+      "error": "missing-response: card 13965 lacks reply (0, 0)",
+      "status": "rejected"
+    }
+  ],
+  "corrupted_root_height": 23,
+  "original_root_height": 24,
+  "removed_response": [
+    0,
+    0
+  ],
+  "root_index": 13965,
+  "status": "controls_passed",
+  "verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10"
+}

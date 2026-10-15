@@ -1,0 +1,2 @@
+Snaky.snaky_wins_15x15_in_24 : Snaky.BlackWinsIn (Snaky.placements 15 15 Snaky.snaky) (15 * 15) 24 [] []
+'Snaky.snaky_wins_15x15_in_24' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,62 @@
+{
+  "board_cells": 225,
+  "cards_checked": 13966,
+  "certificate_path": "topics/snaky/experiments/next-step/15-board-24.cards.txt",
+  "certificate_sha256": "3c997a486a943d43a5858c2d4bfd3af67c88223aeb09f207be8f88b06ec6e411",
+  "cols": 15,
+  "duplicate_response_keys": 0,
+  "elapsed_seconds": 8.259028,
+  "free_cell_budget_lhs": 48,
+  "game": "Snaky maker-breaker; Black first; six-cell D4 placements",
+  "ignored_response_entries": 0,
+  "inside_reply_checks": 243706,
+  "max_card_height": 25,
+  "optimality_claimed": false,
+  "outside_reply_checks": 13942,
+  "proof_assistant_kernel_checked_by_this_run": false,
+  "python_version": "3.9.6",
+  "reachable_cards": 8734,
+  "root_board_cells_outside_support": 5,
+  "root_height_black_moves": 24,
+  "root_hint_graph_depth": 24,
+  "root_index": 13965,
+  "root_inside_reply_classes": 219,
+  "root_support_bounds_xy": [
+    0,
+    14,
+    0,
+    14
+  ],
+  "root_support_cells": 220,
+  "rows": 15,
+  "shape": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "shape_orientation_count": 8,
+  "status": "verified",
+  "terminal_cards": 24,
+  "verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10"
+}

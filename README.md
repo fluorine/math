@@ -48,6 +48,12 @@ Breaker reply. The repository includes the mathematical argument, exact data,
 construction code, independent verifier, formal sources, negative controls and
 source attribution. No optimality claim is made.
 
+The separate [24-move proof on 15×15](topics/snaky/RESULT-15X15-24.md) improves
+the pinned height-25 certificate on that smaller board. Its 8,734-card proof
+is independently checked, reproduced exactly, and fully verified by Lean
+4.34.1. The [dedicated kernel audit](topics/snaky/formal/kernel-audit-15x15-24.json)
+records the exact bounded theorem and its standard axiom dependencies.
+
 ## Effective cylinder covers of a regular tetrahedron
 
 [Read the mathematical note](topics/cylinder-covering/output/pdf/cylinder-covering-note.pdf)

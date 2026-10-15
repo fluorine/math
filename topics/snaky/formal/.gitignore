@@ -1,5 +1,6 @@
 .build/
 Snaky/Gen19/
+Snaky/Gen15x15_24/
 *.olean
 *.ilean
 *.trace

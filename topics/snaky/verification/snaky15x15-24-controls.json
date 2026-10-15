@@ -1,0 +1,24 @@
+{
+  "certificate_sha256": "ff88668bddcbc4bb4a0dfa9794ac411b1492ddbcb22013621f1723f9cc3ef567",
+  "controls": [
+    {
+      "control": "root_height_reduced_by_one",
+      "error": "height-descent: card 8733 reply (6, 7) target height 23 is not below 23",
+      "status": "rejected"
+    },
+    {
+      "control": "root_response_removed",
+      "error": "missing-response: card 8733 lacks reply (0, 0)",
+      "status": "rejected"
+    }
+  ],
+  "corrupted_root_height": 23,
+  "original_root_height": 24,
+  "removed_response": [
+    0,
+    0
+  ],
+  "root_index": 8733,
+  "status": "controls_passed",
+  "verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10"
+}

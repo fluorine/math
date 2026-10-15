@@ -195,3 +195,24 @@ completion on the whole integer plane. The saved
 with five Black cells are blocked; the maximum in an unblocked placement is
 four. Thus this exact late position has no legal one-move win. This says
 nothing about an earlier strategy choice or a game-wide lower bound.
+
+## Separate 15×15, 24-move certificate
+
+The independent audit in `snaky15x15-24-audit.json` checks all 8,734 reachable
+cards, 144,288 inside replies and 8,728 outside classes. The empty root has
+height and graph depth 24, with 220 protected cells on the 225-cell board.
+Its outside class covers the other five board cells. The free-cell condition
+is `48 ≤ 225`; the certificate contains six terminal cards.
+
+`snaky15x15-24-controls.json` records rejection of a root-height change from
+24 to 23 and deletion of the root's required `(0,0)` reply. These controls
+are not a game lower bound. The same 31 general verifier tests apply.
+
+```sh
+python3 topics/snaky/reproduce_15x15_24.py --reconstruct
+```
+
+This serial command checks the pinned SHA-256, runs the tests and full audit,
+rejects both corruptions, and reproduces both certificate and provenance map
+byte for byte. It does not run Lean. The formal target and its separately
+recorded status are in [RESULT-15X15-24.md](../RESULT-15X15-24.md).

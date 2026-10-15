@@ -141,3 +141,23 @@ forward references. Acceptance and deliberate negative controls belong to
 the independent verifier. A final result is the compact certificate, its
 semantic soundness argument, and that independent acceptance record; a
 constructor success message alone is insufficient.
+
+## Separate 15×15, 24-move construction
+
+`package_15x15.py` reproduces the 24-move certificate using the unchanged
+retained-history constructor. It starts from the pinned 15×15, height-25
+policy and consults the twenty- and nineteen-move catalogs as additional
+leaves. The compact output retains 8,645 original 15×15 cards and 89 new
+ordinary cards; no twenty- or nineteen-move source cards survive pruning.
+
+```sh
+python3 topics/snaky/constructor/package_15x15.py --reconstruct --check
+```
+
+This compares both the exact certificate and every entry of its provenance
+map, without overwriting either. The helper's bare invocation expects an
+intermediate experiment file; the command above needs only committed inputs.
+Use `python3 topics/snaky/reproduce_15x15_24.py --reconstruct` to also run the
+independent verifier and corruption controls. The construction itself is not
+a verification claim; see [the result note](../RESULT-15X15-24.md) for scope
+and the separate Lean check. No eighteen-move research is needed to reproduce it.

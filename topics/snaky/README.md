@@ -1,4 +1,4 @@
-# Snaky within 19 Maker moves
+# Snaky strategy bounds
 
 **Maker can force the six-cell Snaky within 19 of Maker's own moves on the
 initially empty infinite square board, against every legal Breaker strategy.**
@@ -14,6 +14,22 @@ within 19 moves on the empty 17×17 board.
 Maker moves first. Each player claims one previously unclaimed cell per turn.
 A winning set is any translation, rotation or reflection of
 `{(0,0),(1,0),(2,0),(3,0),(3,1),(4,1)}`; Maker may own additional cells.
+
+## Verified 24-move result on 15×15
+
+The [24-move proof note](RESULT-15X15-24.md) gives an 8,734-card strategy on
+the empty 15×15 board, improving the pinned source certificate's bound of 25.
+Its independent checks, exact reconstruction and **full Lean kernel audit
+have passed**. The note includes the mathematical argument, provenance,
+scope, and commands for both computational and formal reproduction.
+
+```sh
+python3 topics/snaky/reproduce_15x15_24.py --reconstruct
+```
+
+The board sizes distinguish the claims: nineteen moves on 17×17 and the
+infinite board; twenty-four moves on the smaller 15×15 board. Neither is an
+optimality claim. See the [dated 15×15 comparison](NOVELTY-15X15-24.md).
 
 ## Contribution and prior work
 
@@ -90,5 +106,5 @@ or run `xelatex` three times in `topics/snaky/publication`.
 · [Pinned source data and credits](reference/README.md)
 · [Announcement draft](publication/X_POST.txt)
 
-This publication contains only the completed nineteen-move result. Follow-on
-Snaky experiments are maintained separately and are not claims of this release.
+The eighteen-move research is paused and maintained separately. It has not
+produced an eighteen-move strategy and is not part of either proof package.

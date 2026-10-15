@@ -1,0 +1,68 @@
+{
+  "status": "kernel_verified_and_reproduced",
+  "checked_at_utc": "2026-10-15T14:19:04.323437+00:00",
+  "certificate_sha256": "ff88668bddcbc4bb4a0dfa9794ac411b1492ddbcb22013621f1723f9cc3ef567",
+  "lean_version": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "compiler_archive_sha256": "65f22a4f047738ec742667b3247e836a86ebf06eabc12655c3dee00637e37866",
+  "theorem_and_axiom_output": [
+    "Snaky.snaky_wins_15x15_in_24 : Snaky.BlackWinsIn (Snaky.placements 15 15 Snaky.snaky) (15 * 15) 24 [] []",
+    "'Snaky.snaky_wins_15x15_in_24' depends on axioms: [propext, Classical.choice, Quot.sound]"
+  ],
+  "build": {
+    "status": "compiled",
+    "target": "Snaky.AxiomAudit15x15_24",
+    "lean": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+    "threads": 1,
+    "memory_limit_mb": 2048,
+    "timeout_per_module_seconds": 180,
+    "host": "macOS-26.3-arm64-arm-64bit",
+    "modules_in_dependency_closure": 4050,
+    "modules_compiled_this_run": 240,
+    "elapsed_seconds": 263.7791,
+    "child_max_rss": 1269645312,
+    "child_max_rss_unit": "bytes",
+    "certificate_sha256": "ff88668bddcbc4bb4a0dfa9794ac411b1492ddbcb22013621f1723f9cc3ef567"
+  },
+  "cache_scope": "The final resume compiled 240 modules; all 4050 dependency modules have successful cached compiler records revalidated by source, compiler-version and dependency digests. Resume wall time and peak child RSS describe the final pass only.",
+  "sum_recorded_module_wall_seconds": 4695.1087,
+  "full_build_evidence": "../verification/snaky15x15-24-lean-build.json",
+  "formal_source_sha256": {
+    "Snaky/Result15x15_24.lean": "ceb893a6ec89ad977aa8e14f78b4449a6cf9ecccb58f13b5817c51a65b81e08d",
+    "Snaky/AxiomAudit15x15_24.lean": "bbf7e68a659239e8a3d78cafd57e4cf0c39ca9d356f839feca18e40956f54289",
+    "build.py": "db078f26ac5a848136b79fcc4717cb811f7e7e95a58e760ec9261b156edfb880",
+    "tools/cards2lean.py": "703fd9f2e2b1d890389c518ea1b1187f32064b9eb48506b849771945455ac363",
+    "tools/cards2lean_sized.py": "b0d488083cadf39ca3c13088ce8200adaa5d665007b15d540d2cfcd7f2865f10",
+    "Snaky/Game.lean": "6c50131917d312e5fc1b9f65476ff0d12462c049585a0e14969b8b9f59e137f5",
+    "Snaky/Cards.lean": "e32e0963fd44957fff82b5a95f252d61762c53086b7fb6dbaf4e1bd8b9c0c63a",
+    "Snaky/Controls.lean": "6e3bd76dda6d241e14a972a1c8a6f78479913ff1b7ca068617fc99fc393ee981",
+    "Snaky/Bounded.lean": "4af5a64267f3f731f83ceb522ddc1d6533dab7fc7a8ba32fdeec3aa0602b2db2",
+    "Snaky/CardsSound.lean": "abe03c08cda6e631ac6df6e07a474fdb74a5fa3245077a561c1af474c49b0f65"
+  },
+  "independent_reproduction": {
+    "exit_code": 0,
+    "unit_tests_passed": 31,
+    "cards_checked": 8734,
+    "inside_reply_checks": 144288,
+    "outside_reply_checks": 8728,
+    "candidate_corruption_controls_rejected": [
+      "root_height_reduced_to_23",
+      "required_root_reply_removed"
+    ],
+    "reconstructed_certificate_byte_for_byte_identical": true,
+    "reconstructed_provenance_map_byte_for_byte_identical": true,
+    "evidence": "../verification/snaky15x15-24-full-reproduction.log"
+  },
+  "scope": "Upper bound of 24 actual Maker claims, including the winning claim, from the empty 15x15 board. No optimality claim or improvement to the separately published 19-move infinite-board bound.",
+  "publication_checkout_check": {
+    "reproduction_exit_code": 0,
+    "evidence": "../verification/snaky15x15-24-publication-reproduction.log",
+    "generated_lean_modules_reproduced_byte_for_byte": 4043,
+    "all_formal_source_hashes_match": true,
+    "lean_kernel_build_repeated": false,
+    "explanation": "Fresh publication-checkout generation exactly matched all 4043 generated source files from the completed kernel build; unchanged formal sources matched their audited hashes."
+  },
+  "reproduction_commands": [
+    "python3 topics/snaky/reproduce_15x15_24.py --reconstruct",
+    "python3 topics/snaky/formal/build.py --lean /absolute/path/to/lean --generated-name Gen15x15_24 --target Snaky.AxiomAudit15x15_24 --certificate topics/snaky/certificate/snaky15x15-24.cards.txt --units 200000 --max-cards 15 --max-cells 2 --data-cards 125 --memory-mb 2048 --module-seconds 180"
+  ]
+}
