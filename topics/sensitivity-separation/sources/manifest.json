@@ -1,0 +1,506 @@
+[
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "LICENSE",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/LICENSE",
+    "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "bytes": 11357
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "README.md",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/README.md",
+    "sha256": "5e8878ee04866f52ec942852552b9c28db278f65691c7ab49a87c9e93a9199fd",
+    "bytes": 4190
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/ComparatorChallenges/SensitivitySeparation.json",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/ComparatorChallenges/SensitivitySeparation.json",
+    "sha256": "d5ab43d4dc9111caf9c679c50d7127ee73f6aa1f831f8cc689a1de761fc99897",
+    "bytes": 342
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/ComparatorChallenges/SensitivitySeparation.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/ComparatorChallenges/SensitivitySeparation.lean",
+    "sha256": "76405c3a09039be254192bdb453af6121987ffd3a3236a7303fc4979d9361eae",
+    "bytes": 1291
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Basic.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Basic.lean",
+    "sha256": "0b5a775c881fb2681fb42f32d8ef686ac0d6f349dd71d69680ef79630aa30998",
+    "bytes": 7296
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/ComparisonSequences.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/ComparisonSequences.lean",
+    "sha256": "4fcd69fe62a44d1d6de9f2fa9aa944d5fde907fbd0a0528e57f5b607e2a65c4e",
+    "bytes": 5258
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Composition.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Composition.lean",
+    "sha256": "bcacfe0854692ad07fff5ff58371f1bc2cab5848bb6e10281c339d3a07fc19bc",
+    "bytes": 5761
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/CompositionFamilies.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/CompositionFamilies.lean",
+    "sha256": "a867e084613a6e573f8f595553940d5206322907c3f69641d7a46cf8665ffae2",
+    "bytes": 2358
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/ConstructedSeed.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/ConstructedSeed.lean",
+    "sha256": "3f5ee421f85b00f3a45dcf059a011a3001d26ff268599023bc04f0bb4676dbc7",
+    "bytes": 1802
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Construction.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Construction.lean",
+    "sha256": "847581170ac8031bd97316f7d314d2eadf790138c6709ec96d03acfecb813477",
+    "bytes": 8691
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/DividedProfiles.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/DividedProfiles.lean",
+    "sha256": "dccbc4d09ad6b6502c9cc86fd56009db0ab411e38eabccf87f1ebd433fed8739",
+    "bytes": 2649
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/FiniteDepthError.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/FiniteDepthError.lean",
+    "sha256": "d17a8ec7e420c11d9593db738d47550955eace9b9c03095696da440619088d22",
+    "bytes": 1825
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/FixedCoordinates.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/FixedCoordinates.lean",
+    "sha256": "e71af39ab20d366353dad5cdb4a48859b2e182e9d4e24baf50b3ee75fab616e6",
+    "bytes": 1265
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/HammingBase.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/HammingBase.lean",
+    "sha256": "e4232eff0d06000899554fbc8976f56893879357ec882e1becc8467e5838329b",
+    "bytes": 6519
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/HammingSource.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/HammingSource.lean",
+    "sha256": "0f58d67d4b0fbaccbe4beb3a058c4b59928db153188715f4c5c9dde71f97572f",
+    "bytes": 978
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/InitialPredicates.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/InitialPredicates.lean",
+    "sha256": "117546a4193d60c2330ed85eee50de43a949d1d316eda149a6429aac3a4ac08e",
+    "bytes": 5382
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Iterates.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Iterates.lean",
+    "sha256": "913b6322a7a7c28c7275a400cda697d5781dbd9de89e2805cbcb7be1c31de690",
+    "bytes": 5126
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Labeling.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Labeling.lean",
+    "sha256": "e4ab3692d90d1d9c1c0594336aa9b65adfd30271983f4ee61bff2ade3a00f321",
+    "bytes": 2894
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/LabelingBounds.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/LabelingBounds.lean",
+    "sha256": "97a41a0330eaf3ac6f59430a161f94d05279d2aa14f65ff4a6960abdf84e6f42",
+    "bytes": 704
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/LabelingConstraints.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/LabelingConstraints.lean",
+    "sha256": "aca543383b725818f1996f61e88e8339f99a30f2fc04425b331d434e21810c7e",
+    "bytes": 1490
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/LabelingEstimate.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/LabelingEstimate.lean",
+    "sha256": "a8678653402e7d41c6c2b435ab46b1f3597fe73b06d0f7e915b04df86164e52a",
+    "bytes": 2966
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/LabelingEvents.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/LabelingEvents.lean",
+    "sha256": "25178ca036da0e9b213f6660300ec3247c54f50f0901c24fadffbcc9e54e8275",
+    "bytes": 3333
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/LabelingProbability.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/LabelingProbability.lean",
+    "sha256": "8d45625e791904800e9eca62862e709d4c877aa7007c57a8a7b20d2542648195",
+    "bytes": 3445
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Main.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Main.lean",
+    "sha256": "e657e766a6ddb34d53e9269529a674cad24ee3d6115f18fb8a019809d6b4af3c",
+    "bytes": 2595
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Model.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Model.lean",
+    "sha256": "56384f0174a652dabf35dbdb0a0bfe74bdbe4054af36e1f93f393a1865d4e7cf",
+    "bytes": 1514
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Or.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Or.lean",
+    "sha256": "6150f829f003c0e027ecd18ef88f0d9ff7b719f7dde300a6d3b03ee593907bd6",
+    "bytes": 3750
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/OrSource.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/OrSource.lean",
+    "sha256": "81cd7d96abb2bd23c6745c57bcebbe4509985f4e3ed46ebe048eccd2fa1a99e4",
+    "bytes": 2011
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/ParameterBounds.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/ParameterBounds.lean",
+    "sha256": "45c3a40dd11f75270a275adbdb1c47b31cfc5b830f3da0e83d36ac24a203533d",
+    "bytes": 2700
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/PowerAmplification.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/PowerAmplification.lean",
+    "sha256": "818080ce3140ed410493b7d8e70c8518675f99c2f745d5dfb968887f5976d115",
+    "bytes": 4410
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/ProfileArithmetic.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/ProfileArithmetic.lean",
+    "sha256": "6cbde7cd86367b8f9f07a03a7121713b05ac0e65bc3a16e2a46f08d0db6ec87b",
+    "bytes": 3931
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/QuantitativeProfiles.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/QuantitativeProfiles.lean",
+    "sha256": "1aa70b0686564e53e70812c627df8c947f045e429bf9149f5dd6d49e51c66e96",
+    "bytes": 2760
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Recursive.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Recursive.lean",
+    "sha256": "494ee23e32dac7a454c59273439fd3876942d38ab01458a6ff183c1383bda48b",
+    "bytes": 1357
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveBlocks.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveBlocks.lean",
+    "sha256": "88d8058b297cc13333bef4c1cc4d8f8790ba1de7492c77d3b81ac399f9874ffa",
+    "bytes": 3718
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveCandidates.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveCandidates.lean",
+    "sha256": "2faa5de503793a792d3f3c88e73ee84b5a68bce2b9de21ab630eeceab4315df8",
+    "bytes": 4105
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveChildren.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveChildren.lean",
+    "sha256": "1e3af197a06e9a0fb9b4eab78940010f066ba6c55c7f5cbb47e6bc0079adf5f8",
+    "bytes": 1682
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveDefinitions.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveDefinitions.lean",
+    "sha256": "31a5146e0aec3721ed14f5c13fd68ce916616a9988ae43412caedc45321fc019",
+    "bytes": 4584
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveFailures.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveFailures.lean",
+    "sha256": "22755d726a35448efcbabeadec07e369c5143958c7af7b87f3317941f62e78ad",
+    "bytes": 6315
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveFlips.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveFlips.lean",
+    "sha256": "a7ff80531219a2cd601d830ccc0060a89170916ffd6486b8f49ea78edfee4b82",
+    "bytes": 3581
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveJointZero.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveJointZero.lean",
+    "sha256": "6857e21703cc90dccc927f0419617e8d57ce09e5a06a729951c73fd2b25066b0",
+    "bytes": 4829
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveOne.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveOne.lean",
+    "sha256": "26254dba8f84f2a73f53bf641ac0fbbbd5b8bd6b13c1fa91698baac1d84c88f7",
+    "bytes": 7837
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveProfiles.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveProfiles.lean",
+    "sha256": "e9699f0bdb058570230062dbe8acaf56ab3843e114fd4d45e99220bad5fda7fb",
+    "bytes": 4122
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveRepair.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveRepair.lean",
+    "sha256": "e77240f26ccc57e2d5b065ac64fd8e0f3afdbac82fe3ec79624a391722cc7fbd",
+    "bytes": 4696
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveSets.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveSets.lean",
+    "sha256": "215e2c7d69121a38208b230477a10d6f21534536f900051d68948fb455bcba6f",
+    "bytes": 3779
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/RecursiveZero.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/RecursiveZero.lean",
+    "sha256": "bf45aea78248cde889c2187e1b2ab5693eadec682ad7937c8374c6a19f91ea63",
+    "bytes": 6262
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Reindex.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Reindex.lean",
+    "sha256": "0421a8fced5a6f15b9b2f74110956175602fecba0deceeebd6f02c16183d73fc",
+    "bytes": 3792
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/ScalarBounds.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/ScalarBounds.lean",
+    "sha256": "d9b45e7963750727c16b1c3ba89b8081de958cc5c4762fc1af04bb479309bf43",
+    "bytes": 1821
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/SeedAmplification.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/SeedAmplification.lean",
+    "sha256": "97a114f9b0b91ee137f7461a612eaf41bb52b40562cf66168f7fe11513f835a6",
+    "bytes": 1746
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Separation.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Separation.lean",
+    "sha256": "7e87439c7016f29521d7795779fe8ba94ea094ab8cd6539b4a139e9e7638ec0b",
+    "bytes": 2291
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/SeparationArithmetic.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/SeparationArithmetic.lean",
+    "sha256": "8b5dd009390d40e8c7603fa344007253a2e1ce6a82b797021aad35341c9aff6e",
+    "bytes": 4210
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Tournament.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Tournament.lean",
+    "sha256": "9c07af57267c3533aa3a93df27993f30abf940b6252a1ddca826be07c3ae040d",
+    "bytes": 2121
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/TournamentCounts.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/TournamentCounts.lean",
+    "sha256": "71af6d2b8f9efd2b04ce782ed128d2a567b887184d3ad39336f0ad550c405e06",
+    "bytes": 2541
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/TournamentCyclic.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/TournamentCyclic.lean",
+    "sha256": "90d106dd4971876031d2ec6ac353352b14dcbabe7c1305b23bf798e6a3550ce2",
+    "bytes": 1679
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/Tower.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/Tower.lean",
+    "sha256": "b735c02e0b8fa4b319ae0b4b41e89e1fa841fa78a0871e66ab0a60ca0776f8f3",
+    "bytes": 6306
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/TowerProfiles.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/TowerProfiles.lean",
+    "sha256": "0dab1c7d954d2747052beac5d98c75d1d04924b140a2fe7691a5d19e480d0223",
+    "bytes": 3949
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/OAI/Combinatorics/Sensitivity/UniformCoordinates.lean",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Combinatorics/Sensitivity/UniformCoordinates.lean",
+    "sha256": "63145ec3e58bfb6a645f0210b28eabb525e0ee18d2514ef8015f5968b4914c10",
+    "bytes": 1058
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "lean/docs/132.md",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/docs/132.md",
+    "sha256": "2fd45b173892a873ff619558717e4130f07c28ba29bc5c643383d5f3d5831157",
+    "bytes": 1050
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/README.md",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/README.md",
+    "sha256": "64ff84ebe06ea43c928d1ff45be1613f9e639252075227075080308f65746a3c",
+    "bytes": 705
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/paper.tex",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/paper.tex",
+    "sha256": "680cbf5dff0a7be28cd75a4b2ef69c50f870d490eeeb3761e1961acc78856fb4",
+    "bytes": 1512
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/references.bib",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/references.bib",
+    "sha256": "5eaa645e9375d8901a5781adce7662336bd793e4b9ee02ba37299c5c6a32f595",
+    "bytes": 5477
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/00-introduction.tex",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/00-introduction.tex",
+    "sha256": "dd01765eb021cada2599f14f75238db34a82057b5496cab91043529406c122ea",
+    "bytes": 7334
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/01-construction.tex",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/01-construction.tex",
+    "sha256": "c6e9dcfc8e7da0509259e94082eb008330ea53012c0e084e659b36d2970193c3",
+    "bytes": 8407
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/02-recurrences.tex",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/02-recurrences.tex",
+    "sha256": "ea1e88293d6de95e93062685862eb8dce8056e8a9318a17f5d4ed71e5e54b8cc",
+    "bytes": 7305
+  },
+  {
+    "repository": "openai/math",
+    "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+    "path": "preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/03-separation.tex",
+    "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/03-separation.tex",
+    "sha256": "009de287a9b582610a0d984b310ad13e7abc4ccb343a0196bcfb4c623566eeec",
+    "bytes": 9099
+  }
+]

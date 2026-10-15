@@ -1,0 +1,55 @@
+Cached 63 pinned files; manifest: /Volumes/2tb/math/.worktrees/sensitivity-20261015-01a13f19/topics/sensitivity-separation/sources/manifest.json
+{
+  "status": "passed",
+  "small_tournaments_exhausted": 129088,
+  "sharp_coherent_set_size": 15,
+  "smallest_q_in_uniform_family": 3,
+  "M_at_q3": 676,
+  "k_at_q3": 913953,
+  "large_tournaments_materialized": 0,
+  "elapsed_seconds": 1.84,
+  "scope": "finite diagnostics; infinite-family proof is CONSTRUCTOR.md"
+}
+{
+  "status": "PASS",
+  "exhaustive_configurations": 46656,
+  "zero_inputs_checked": 39744,
+  "maximum_gate_candidates": 3,
+  "exact_counting_templates": [
+    "no_gates",
+    "one_ordinary_gate",
+    "one_joint_gate",
+    "two_gates_ordinary_sink",
+    "two_joint_gates",
+    "three_joint_gates"
+  ],
+  "counterexamples_checked": [
+    "head_not_tail",
+    "source_head_reassignment",
+    "three_distinct_gate_repairs"
+  ],
+  "scope": "local combinatorial regression, not a substitute for the proof"
+}
+{
+  "status": "passed",
+  "parameters": {
+    "q": 1001,
+    "digit_length": 13,
+    "depth": 17,
+    "M": 169000000,
+    "r": 13000,
+    "k": 57122000000000001,
+    "OR_copies": 164900179
+  },
+  "baseline_alpha": [
+    "2.015410903091582180309460216867688179698892237240749644504435630102760",
+    "2.015410903091582180309460216867688179698892237240749644504435630102763"
+  ],
+  "structural_alpha": [
+    "2.015411547311478476334208965670076477674132049564555125797308872608957",
+    "2.015411547311478476334208965670076477674132049564555125797308872608960"
+  ],
+  "dimension_digits": 373,
+  "same_seed_strict_improvement": true
+}
+All finite checks and exact seed certificates passed. Infinite claims rely on the independently audited written proofs; no Lean build was run.
