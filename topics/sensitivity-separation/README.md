@@ -3,6 +3,8 @@
 **[Read the mathematical note (PDF)](output/pdf/sensitivity-note.pdf)**
 · [LaTeX source](publication/sensitivity-note.tex)
 · [Detailed novelty audit](publication/NOVELTY_AUDIT.md)
+· [Follow-up review and sharper comparison](publication/FOLLOWUP_REVIEW.md)
+· [Independent-review prompt](publication/EXTERNAL_REVIEW_PROMPT.txt)
 
 This note makes the tournament labels in the OpenAI family-132 construction
 uniformly computable on an infinite parameter family, and strengthens the
@@ -31,6 +33,12 @@ digits, then has $r$ labels and no head-coherent 16-set. Each edge query
 takes $O((\log M)^2)$ bit operations and $O(\log M)$ space. No stored edge
 table, witness advice, or random seed is required.
 
+The [follow-up proof](publication/FOLLOWUP_REVIEW.md) uses the chosen cyclic
+orientation to sharpen the cap to $H+1$, where $H=\lceil\log_q k\rceil$.
+The uniform bound is fourteen, attained at $q=3$; the exact maximum for the
+fixed $q=1001$ seed is seven. These are direct consequences of the bucket
+argument and transitive final-digit buckets.
+
 **Refined profiles.** Most candidate target repairs must cross two nested
 child thresholds simultaneously. At most one target is an exception, and
 the target and gate counts constrain one another. This gives six branches
@@ -47,6 +55,7 @@ note and [PROFILE.md](proofs/PROFILE.md).
 | Excluding the head digit from the palette; parameter substitution and query cost | Elementary encoding and arithmetic consequences. |
 | Arbitrary-tournament head-coherent bound $h+2$ | Specific directed adaptation proved here; no matching theorem was located in the audit. Historical priority remains provisional. |
 | Replacement of the family-132 random labels | Application of that bound to the exact source contract. |
+| Cyclic-family cap $H+1$, uniform fourteen, and exact seven at the fixed seed | Elementary corollaries of the label argument; proved in the follow-up addendum. |
 | Nested predicates, four ordinary/joint profiles, zero-block witnesses | Inherited from family 132. |
 | Target coefficient 16 reduced to 15, tighter gate envelope, base bound $d+1$ | Immediate consequences of the existing proof; included in our baseline. |
 | Joint accounting of target repairs, coupled target/gate counts, six/five profile branches | Additional combinatorial arguments relative to the inspected source. |
@@ -69,23 +78,27 @@ $$n=c\cdot19\cdot M(kr)^{17},\qquad B=cMk^{17}.$$
 The dimension is a 373-digit integer. Writing $A$ for the sensitivity upper
 bound, the exponent certificate is $\alpha=\log(B)/\log(A)$.
 
-| Analysis | Certified exponent, abbreviated |
+| Analysis using the exact coherence cap seven | Certified exponent, abbreviated |
 |---|---:|
-| Existing proof with its immediate refinements | 2.0154109030915821803… |
-| Coupled-profile theorem in this note | 2.0154115473114784763… |
+| Existing proof with its immediate refinements | 2.0154112468376777104… |
+| Coupled-profile theorem | 2.0154115475113140209… |
 
 The strict improvement follows from the exact inequality $A_{\rm new}<A_{\rm old}$,
 with $B$ and $n$ unchanged. The
-[certificate](checks/seed-certificate.json) also records disjoint certified
-logarithm intervals and exact integer-power checks. An exponent greater than
+[follow-up certificate](checks/independent-audit.json) records exact integers
+and disjoint rigorous logarithm intervals. An exponent greater than
 2.0154 already follows from the existing proof; it is not the novelty claim.
 These are bounds, not exact sensitivities, and the seed is not claimed optimal.
 
-Both calculations use only the no-coherent-16 contract. In this seed, seven
-leading base-1001 digits are common; our label theorem on the remaining six
-positions actually gives a coherent-set bound of eight. Neither calculation
-uses that additional information. Thus the comparison isolates the profile
-refinement at a fixed contract and is not an optimized analysis of this seed.
+The original PDF and [original certificate](checks/seed-certificate.json)
+compare cap-fifteen bounds, giving 2.0154109030915821803… versus
+2.0154115473114784763…. That comparison remains valid under its stated
+contract. The table above applies the additional easy information to both
+analyses, with the same OR-copy count. The gain remains positive, approximately
+$3.0067\times10^{-7}$. Even the sharper immediate baseline stays below the
+original cap-fifteen coupled result. The
+[addendum](publication/FOLLOWUP_REVIEW.md) supplies the proof and all three
+cap-fifteen/eight/seven comparisons. No optimality claim is made.
 
 ## Reproduce
 
@@ -101,6 +114,18 @@ The command runs serially with timeouts and verifies 129088 small labeled
 tournaments, 46656 local profile configurations, exact obstruction templates,
 and the fixed-seed arithmetic certificate. It does not instantiate the large
 tournament or the Boolean truth table.
+
+Run the separately implemented follow-up audit with:
+
+```sh
+python3 topics/sensitivity-separation/checks/independent_audit.py
+```
+
+It derives the same-seed comparisons from the manuscript equations, checks
+the seven-vertex witness, and independently encloses logarithms using rational
+series bounds and outward integer rounding. It also rechecks the original
+exact-power certificates. The standard reproduction above was rerun from a
+clean checkout with an empty source cache; all checks passed.
 
 The infinite claims rest on the written proofs. Finite checks, source scans,
 and independent AI-agent review are supplementary evidence. The new theorems

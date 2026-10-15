@@ -5,6 +5,13 @@ Audit date: **15 October 2026**. This is a companion to the
 [label proof](../proofs/CONSTRUCTOR.md), and the
 [profile proof](../proofs/PROFILE.md).
 
+**Follow-up:** the [fresh review and addendum](FOLLOWUP_REVIEW.md) proves the
+cyclic-family cap $H+1$ and the exact fixed-seed cap seven, applies that
+information to both numerical analyses, and records a separate arithmetic
+implementation. It also completes the public GitHub history/issue check
+that was access-limited during this audit. The original PDF comparison and
+its limitations below are retained as a record of the reviewed version.
+
 **The defensible contribution is an elementary directed adaptation of a
 classical labelling method, together with a stronger local estimate for an
 existing Boolean-function construction.** The first-difference mechanism is
@@ -29,7 +36,7 @@ bound highlighted in its main theorem.
 | Record the differing coordinate together with the source symbol | Classical local-asymmetry mechanism | The binary form is the Cole–Vishkin deterministic-coin-tossing mechanism. The extension to a larger alphabet is elementary. |
 | Omit the head's digit from the local palette | Routine encoding | This is a bijective relabelling at each fixed head. It preserves exactly the equalities needed for coherence; it does not preserve all global colour relations. |
 | Every coherent set has at most $h+2$ vertices under any tournament orientation | Specific lemma proved here; no exact prior theorem located | It requires an additional induction on first-digit buckets. It should be described as an elementary directed adaptation, with provisional novelty. |
-| Mixed radices, the $h+1$ bound when the last radix is two, and an arbitrary-orientation sharpness example | Direct variants of that lemma | These are short consequences of the same proof, not separate methodological contributions. Sharpness is not established for the cyclic orientation. |
+| Mixed radices, the $h+1$ bound when the last radix is two, and an arbitrary-orientation sharpness example | Direct variants of that lemma | These are short consequences of the same proof, not separate methodological contributions. Cyclic-family sharpness is addressed separately in the follow-up addendum. |
 | The cyclic regular tournament on $2M^2+1$ vertices | Inherited | This orientation is already explicitly proposed in the source, Section 2. |
 | The family $M=[13(q-1)]^2$, with an efficient edge-query algorithm | Application of the directed lemma | The parameter choice and arithmetic are routine once the lemma is available. The useful consequence is a uniform deterministic replacement for the source's probabilistic labels on this unbounded family. |
 | Nested predicates, four ordinary/joint profiles, and the disjoint blocks at zero | Inherited construction | These are the definitions and arguments in source Section 2. |

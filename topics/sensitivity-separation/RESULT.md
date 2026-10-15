@@ -1,5 +1,13 @@
 # Result — 15 October 2026
 
+**Latest addendum:** [FOLLOWUP_REVIEW.md](publication/FOLLOWUP_REVIEW.md)
+proves the exact coherence cap seven for the fixed seed. Applying seven to
+both analyses changes the certified comparison to
+2.0154112468376777104… versus 2.0154115475113140209… at unchanged $B,n,C$.
+The original cap-fifteen results below remain valid. The addendum includes
+fresh AI proof review, a separate arithmetic implementation, clearer novelty
+boundaries, and a [prompt for an external referee](publication/EXTERNAL_REVIEW_PROMPT.txt).
+
 **The compact-generator target is met by a proved construction.** A separate
 coupled-profile theorem also gives a strictly smaller ordinary-sensitivity
 bound on the same explicit seed. The results have independent AI-agent mathematical

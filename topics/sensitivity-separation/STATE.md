@@ -1,5 +1,18 @@
 # Research state — 15 October 2026
 
+Follow-up review of public commit `00820a6`: three fresh-context AI agents
+and the primary reviewer checked the labels, profile proof, and arithmetic.
+No proof gap or certificate discrepancy was found. A direct cyclic-orientation
+corollary gives a uniform cap fourteen and exact cap seven at q=1001.
+Using seven in both analyses preserves a strict gain; see
+[FOLLOWUP_REVIEW.md](publication/FOLLOWUP_REVIEW.md). A fresh checkout fetched
+and hash-checked all 63 sources and passed the existing reproduction.
+`checks/independent_audit.py` separately passed exact arithmetic and rational
+logarithm checks; `checks/independent-audit.json` preserves its output.
+The user authorized publication of these follow-up improvements. The original
+PDF/TeX remain the reviewed cap-fifteen version, with the new addendum linked
+from the public overview. No human referee or Lean verification is claimed.
+
 Mathematical targets achieved: succinct proved uniform labels for family 132
 and a strictly stronger coupled-profile theorem. Both survived independent
 audit. Historical novelty remains provisional; see NOVELTY.md and RESULT.md.
