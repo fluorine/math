@@ -25,6 +25,7 @@ def main():
     run("checks/label_contract.py","--self-test")
     run("checks/profile_local.py")
     run("checks/seed_certificate.py","--check",str(ROOT/"checks/seed-certificate.json"))
+    run("checks/independent_audit.py",timeout=120)
     print("All finite checks and exact seed certificates passed. Infinite claims rely on the independently audited written proofs; no Lean build was run.")
 
 

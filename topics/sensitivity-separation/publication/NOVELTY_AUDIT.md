@@ -9,8 +9,10 @@ Audit date: **15 October 2026**. This is a companion to the
 cyclic-family cap $H+1$ and the exact fixed-seed cap seven, applies that
 information to both numerical analyses, and records a separate arithmetic
 implementation. It also completes the public GitHub history/issue check
-that was access-limited during this audit. The original PDF comparison and
-its limitations below are retained as a record of the reviewed version.
+that was access-limited during this audit. The current manuscript incorporates
+these conclusions and the matched cap-seven comparison. The cap-fifteen
+formulas and original numerical comparison below are retained and identified
+as the original contract specialization.
 
 **The defensible contribution is an elementary directed adaptation of a
 classical labelling method, together with a stronger local estimate for an
@@ -37,6 +39,7 @@ bound highlighted in its main theorem.
 | Omit the head's digit from the local palette | Routine encoding | This is a bijective relabelling at each fixed head. It preserves exactly the equalities needed for coherence; it does not preserve all global colour relations. |
 | Every coherent set has at most $h+2$ vertices under any tournament orientation | Specific lemma proved here; no exact prior theorem located | It requires an additional induction on first-digit buckets. It should be described as an elementary directed adaptation, with provisional novelty. |
 | Mixed radices, the $h+1$ bound when the last radix is two, and an arbitrary-orientation sharpness example | Direct variants of that lemma | These are short consequences of the same proof, not separate methodological contributions. Cyclic-family sharpness is addressed separately in the follow-up addendum. |
+| Cyclic-family cap $H+1$, uniform cap fourteen, and exact cap seven at the fixed seed | Elementary corollaries of the directed lemma | Transitive final-digit buckets improve the induction base; explicit coherent sets attain fourteen at $q=3$ and seven at $q=1001$. These conclusions are now included in the manuscript. |
 | The cyclic regular tournament on $2M^2+1$ vertices | Inherited | This orientation is already explicitly proposed in the source, Section 2. |
 | The family $M=[13(q-1)]^2$, with an efficient edge-query algorithm | Application of the directed lemma | The parameter choice and arithmetic are routine once the lemma is available. The useful consequence is a uniform deterministic replacement for the source's probabilistic labels on this unbounded family. |
 | Nested predicates, four ordinary/joint profiles, and the disjoint blocks at zero | Inherited construction | These are the definitions and arguments in source Section 2. |
@@ -224,7 +227,8 @@ credited to it in our comparison:
    When only one predicate remains, both joint profiles are zero by
    the empty-maximum convention.
 
-Thus the source-derived zero-side baseline used in the fixed comparison is
+Thus the source-derived zero-side baseline under the original cap-fifteen
+contract is
 
 $$
 S_0^+\le15a+\max\{b+e,3e\},\qquad
@@ -232,7 +236,9 @@ J_0^+\le15a+3e,
 $$
 
 with the source's one-side inequalities unchanged. These improvements
-require no new invariant. The relevant locators are
+require no new invariant. If the labels have a stronger coherence cap $K$,
+the same proof immediately replaces $15a$ by $Ka$. The current fixed-seed
+comparison uses the exact cap $K=7$ on both sides. The relevant locators are
 [Lemma 2.2 and its proof](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/01-construction.tex#L142),
 [the target count](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/02-recurrences.tex#L70),
 and [the gate argument](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/02-recurrences.tex#L82).
@@ -280,7 +286,7 @@ joint-target and coupled-counting argument to $J_0^+$.
 Compare [the source's joint-zero argument](https://github.com/openai/math/blob/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026/build/sections/02-recurrences.tex#L115)
 with [the complete new proof](../proofs/PROFILE.md#joint-zero-transitions).
 
-The resulting theorem is
+The resulting theorem, specialized to the original cap fifteen, is
 
 $$
 \begin{aligned}
@@ -298,6 +304,13 @@ these zero-side envelopes are no larger than the source-derived baseline.
 They can be strictly smaller. This is additional analysis of exactly the
 source construction and hypotheses; the gated architecture and the idea
 of tracking joint sensitivity are inherited.
+
+The current manuscript states the same counting proof for every coherence
+cap $K\ge3$: replace $15,14,13,12$ in these zero-side formulas by
+$K,K-1,K-2,K-3$, respectively. No additional candidate case is needed.
+Combining that statement with the elementary cyclic cap seven gives the
+current numerical comparison; the generic-cap substitution is not a separate
+claim of a new method.
 
 ### A precise scalar nonimplication witness
 
@@ -352,30 +365,38 @@ The integer $n$ has 373 digits. Both analyses use the same explicit
 labels, the same function, the same $B$, and the same $n$. Only the
 proved sensitivity upper bound $A$ changes.
 
-| Analysis of this same seed | Certified $\log B/\log A$, shortened for display |
+| Current comparison on this seed, using cap seven | Certified $\log B/\log A$, shortened for display |
 |---|---:|
-| Source argument with the listed immediate refinements | $2.015410903091582180\ldots$ |
-| New coupled-profile theorem | $2.015411547311478476\ldots$ |
+| Source argument with the listed immediate refinements | $2.015411246837677710\ldots$ |
+| New coupled-profile theorem | $2.015411547511314020\ldots$ |
 
-The gain is approximately $6.4422\times10^{-7}$ in the certified
+The gain is approximately $3.0067\times10^{-7}$ in the certified
 exponent. Exact integers establish $A_{\rm new}<A_{\rm old}$; with
 $B>1$ and $A_{\rm old}>A_{\rm new}>1$, this already proves the
 strict exponent comparison. Disjoint enclosing intervals and exact
 integer-power checks are saved in
-[seed-certificate.json](../checks/seed-certificate.json). Neither number
+[independent-audit.json](../checks/independent-audit.json). Neither number
 is asserted to use the seed's exact sensitivity. No global or sampled
 optimum is certified.
 
-There is a further direct consequence of **our label theorem** that these
-calculations deliberately leave unused. Here $k<1001^6$, so all thirteen-digit
-indices share seven leading zeros. Deleting them and subtracting the common
-label offset gives six varying positions, hence a coherent-set bound of eight.
-The source's target-count argument can exploit this stronger bound too.
-Both displayed calculations instead use only the common no-coherent-16
-contract. Their strict comparison isolates the coupled-profile refinement
-under that contract; neither is an optimized analysis of the actual seed.
-This label-specific sharpening should not be presented as another independent
-structural theorem.
+The original cap-fifteen comparison remains valid and is retained in
+[seed-certificate.json](../checks/seed-certificate.json):
+
+| Historical comparison under the no-coherent-16 contract | Certified $\log B/\log A$, shortened for display |
+|---|---:|
+| Source argument with the listed immediate refinements | $2.015410903091582180\ldots$ |
+| New coupled-profile theorem | $2.015411547311478476\ldots$ |
+
+That earlier calculation left a direct label-specific improvement unused:
+$k<1001^6$ leaves six active digits, so the arbitrary-orientation theorem
+already gives a cap of eight. The chosen cyclic orientation further makes
+every final-digit bucket transitive, improving the induction base and giving
+$H+1=7$. The set $\{0,1,q,q^2,q^3,q^4,q^5\}$ attains seven. The current
+comparison incorporates this information symmetrically. Its OR-copy count
+is unchanged from the historical calculation and has not been reoptimized
+for seven. These elementary consequences and their proofs are in the
+manuscript and [follow-up review](FOLLOWUP_REVIEW.md); they are not another
+independent structural method or a claim of an optimized analysis.
 
 The steps that turn these bounds into an infinite family are inherited:
 
@@ -419,7 +440,8 @@ A suitable contribution statement is:
 > parameter family. We also refine its ordinary/joint sensitivity
 > estimates by counting joint target repairs and coupling target and gate
 > candidates. The resulting bounds improve the certified exponent for a
-> fixed explicit seed by about $6.44\times10^{-7}$. The underlying
+> fixed explicit seed by about $3.01\times10^{-7}$ after applying its exact
+> coherence cap seven to both analyses. The underlying
 > construction, OR balancing, and composition amplification are inherited;
 > the numerical threshold greater than 2.0154 already follows from the
 > earlier argument.
@@ -464,7 +486,9 @@ showed version 1; the inspected `Timeroot/BS_Lam` revision was
 `7bd39a8d41ee7910d3296d0477ad18f8fff9d870`, dated 28 August 2026.
 See the [source inventory and earlier search log](../sources/LITERATURE.md).
 
-Coverage of public repository discussion and history was incomplete.
+Coverage of public repository discussion and history was incomplete during
+the original audit; the [follow-up review](FOLLOWUP_REVIEW.md) records the
+subsequent authenticated history and issue search.
 The open-issues landing page showed zero open issues, the Discussions URL
 returned 404, and GitHub API rate limits prevented a complete audit of
 closed issues and commit history. Neither those observations nor the

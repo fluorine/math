@@ -30,14 +30,18 @@ ordinary sensitivity and block sensitivity uses a labelled regular tournament
 with no head-coherent set of sixteen vertices. We give an elementary directed
 adaptation of classical first-difference colouring that supplies the exact
 labels on an infinite parameter family, with polynomial logarithmic bit time
-per edge query and no witness advice. We also refine the construction's
+per edge query and no witness advice. In the indexed cyclic construction,
+the coherent-set bound is fourteen throughout the family and exactly seven
+for the fixed seed below. These are direct consequences of the same proof.
+We also refine the construction's
 coupled sensitivity estimates: candidate target repairs usually cross two
 child thresholds, and target and gate candidate counts obey joint constraints.
 We prove the resulting six-branch ordinary and five-branch joint zero-side
 bounds. On one fixed explicit seed, exact arithmetic certifies an improvement
 of the amplified exponent bound from
-$2.015410903091582180\ldots$ to $2.015411547311478476\ldots$.
-The former already follows from immediate refinements of the published proof.
+$2.015411246837677710\ldots$ to $2.015411547511314020\ldots$,
+using the exact cap seven in both analyses. The former already follows from
+immediate refinements of the published proof with these explicit labels.
 The contribution is a deterministic instantiation and a local proof
 refinement, not a new separation architecture or a record-exponent claim.
 \end{abstract}
@@ -77,6 +81,8 @@ novelty of its exact formulation is not assured. The numerical comparison
 later in the note is deliberately against an immediate refinement of the
 published proof on the \emph{same seed}. An exponent exceeding $2.0154$
 already follows from that baseline.
+The sharper cyclic coherence bound and its exact seven-vertex witness are
+elementary corollaries; they are not separate methodological novelty claims.
 
 \section{Explicit labels for the exact tournament condition}
 \begin{definition}[Head coherence]\label{def:coherence}
@@ -180,6 +186,60 @@ All integers involved have $O(\log M)$ bits. A fixed number of ordinary
 integer operations extracts thirteen digits and evaluates
 \eqref{eq:label}--\eqref{eq:cyclic}; schoolbook arithmetic gives the bit
 bound. The algorithm is uniform in $q$, and the family is unbounded.
+\end{proof}
+
+\begin{corollary}[Cyclic coherence and the exact seven-bound]
+\label{cor:cyclic}
+For the indexed tournament in Theorem~\ref{thm:generator}, put
+$H=\ceil{\log_q k}\le13$. Every head-coherent set has at most $H+1$
+vertices. The uniform bound fourteen is attained at $q=3$.
+At $q=1001$, the maximum coherent-set size is exactly seven.
+\end{corollary}
+\begin{proof}
+Delete the $13-H$ common leading zero digits and subtract the resulting
+common palette offset. Within a fixed prefix of length $H-1$, indices span
+at most $q-1\le13^4(q-1)^4=M^2$. Thus every edge in such a final-digit
+bucket points from the smaller index to the larger. Three distinct digits
+would give the largest vertex two incoming edges with different source
+digits, contradicting fixed-head injectivity. The one-digit coherent bound
+is therefore two.
+
+The bucket argument of Theorem~\ref{thm:digits} applies inside every prefix.
+There is at most one nonsingleton bucket, with at most one vertex outside
+it; if all buckets are singletons there are at most three vertices.
+Hence the bounds for suffix length $s$ satisfy
+\[
+ C_1\le2,\qquad
+ C_s\le\max\{3,C_{s-1}+1\}\le s+1\quad(s\ge2).
+\]
+This gives the bound $H+1$, including its separate one-digit base case.
+
+For $q=3$, the fourteen vertices
+\[
+ \{3^{11}\}\cup\{3^{11}+3^j:0\le j\le10\}
+ \cup\{2\cdot3^{11},3^{12}\}
+\]
+are valid indices in $[177147,531441]$. Their span is
+$354294<M^2=456976$, so all edges point increasingly. At each new head,
+the earlier vertices have a common first-difference position and source
+digit: first the successive suffix powers, then the digit one against
+two at place $3^{11}$, then zero against one at place $3^{12}$.
+This is a coherent fourteen-set.
+
+For $q=1001$, exact arithmetic gives
+\[
+ q^5=1{,}005{,}010{,}010{,}005{,}001
+ <M^2=28{,}561{,}000{,}000{,}000{,}000
+\]
+and $q^5<k<q^6$, so $H=6$ and the upper bound is seven.
+The seven valid vertices
+\[
+ I=\{0,1,q,q^2,q^3,q^4,q^5\}
+\]
+span less than $M^2$, so every edge points increasingly. For each head
+$q^j$, every earlier vertex agrees before its leading one and has zero
+in that position. All incoming labels at that head coincide. This proves
+the matching lower bound seven.
 \end{proof}
 
 \begin{remark}[Extent of the classical correspondence]
@@ -468,6 +528,40 @@ $P_{g'}=0$, and nesting forces $P_{g'}=1$ afterward, so it costs at
 most $c$. This proves~\eqref{eq:ones} and completes the proof of
 Theorem~\ref{thm:profiles}.
 
+\begin{corollary}[Profiles with an arbitrary coherence cap]
+\label{cor:cap-profiles}
+Suppose every head-coherent set has size at most $K$, where $K\ge3$.
+Then the zero-side bounds in Theorem~\ref{thm:profiles} hold with
+\begin{align}
+ F_0^{(K)}(a,b,c,e)&=\max\left\{
+ \begin{array}{ll}
+ a+(K-1)c,&a+(K-2)c+b,\\
+ Kc+e,&(K-2)c+b+e,\\
+ (K-1)c+2e,&(K-3)c+3e
+ \end{array}\right\},\label{eq:FK0}\\
+ F_J^{(K)}(a,b,c,e)&=\max\left\{
+ \begin{array}{ll}
+ a+(K-1)c,&a+(K-2)c+e,\\
+ Kc+e,&(K-1)c+2e,\\
+ (K-3)c+3e&
+ \end{array}\right\}.\label{eq:FKJ}
+\end{align}
+The one-side bounds~\eqref{eq:ones} are unchanged.
+\end{corollary}
+\begin{proof}
+The six ordinary cases above bound the number of targets respectively by
+$K,K-1,K,K-2,K-1,K-3$. In the first two cases at most one target costs
+$a$ and the others cost $c$; in the remaining cases all cost $c$.
+The exceptional head reassignment in the second case, deletion of at most
+one target in the fifth, and coherent union with three gate candidates in
+the sixth apply unchanged. These are the only uses of the number fifteen.
+The gate costs are as before, giving~\eqref{eq:FK0}. For joint acceptance,
+use the stronger-parent lists and retain gates failing at both indices.
+Every retained gate costs $e$, so substitute $b=e$ and discard the dominated
+fourth branch to obtain~\eqref{eq:FKJ}. All coefficients are nonnegative
+because $K\ge3$; hence the same monotone propagation is valid.
+\end{proof}
+
 \begin{remark}[What the refinement does and does not assert]
 The displayed source bounds are
 \begin{equation}\label{eq:published}
@@ -583,6 +677,14 @@ Together with~\eqref{eq:ones}, these are valid for every $M\ge3$
 with admissible labels. The large-$M$ restriction in
 Proposition~\ref{prop:coarse} is only sufficient for its convenient
 scalar estimate, not a restriction on exact recurrence iteration.
+More generally, if the labels have coherence cap $K\ge3$, the identical
+source-derived argument gives
+\begin{equation}\label{eq:immediateK}
+ S_{j,0}\le Ka+\max\{b+e,3e\},\qquad
+ J_{j,0}\le Ka+3e.
+\end{equation}
+We use $K=7$ in both~\eqref{eq:immediateK} and
+Corollary~\ref{cor:cap-profiles} for the fixed seed below.
 
 The OR-copy count can also be optimized without a new combinatorial
 theorem. If $W=Mk^d>s_0$, the function
@@ -613,14 +715,16 @@ The seed dimension and zero-block bound are exactly
 \begin{equation}\label{eq:fixednb}
  n=C\cdot19M(kr)^{17},\qquad B=CMk^{17}.
 \end{equation}
-The integer $n$ has $373$ decimal digits. Iteration of the immediate
-baseline gives a bound $A_\old$; iteration of
-Theorem~\ref{thm:profiles} gives a strictly smaller bound $A_\new$.
+The integer $n$ has $373$ decimal digits. Its labels have exact coherence
+cap seven by Corollary~\ref{cor:cyclic}. Iteration of the immediate
+baseline~\eqref{eq:immediateK} with $K=7$ gives a bound $A_\old$;
+iteration of Corollary~\ref{cor:cap-profiles} with the same $K=7$ gives
+a strictly smaller bound $A_\new$.
 For $\alpha_*=\log B/\log A_*$, certified enclosures are
 \begin{align}
- 2.015410903091582180&<\alpha_\old<2.015410903091582181,
+ 2.015411246837677710&<\alpha_\old<2.015411246837677711,
  \label{eq:oldinterval}\\
- 2.015411547311478476&<\alpha_\new<2.015411547311478477.
+ 2.015411547511314020&<\alpha_\new<2.015411547511314021.
  \label{eq:newinterval}
 \end{align}
 Composition of this one explicit seed therefore satisfies
@@ -636,8 +740,8 @@ Start with $v_0=(18,19M,0,0)$. For $v_j=(a,b,c,e)$, set
  v_{j+1}=\bigl(z,\ M^2a+rb,\ \min\{w,z\},\
               \min\{M^2c+rb,M^2a+rb\}\bigr),
 \end{equation}
-where $(z,w)$ is either the right side of~\eqref{eq:immediate}
-or $(F_0,F_J)$. Iterate exactly seventeen times. If $(a_*,b_*)$
+where $(z,w)$ is either the right side of~\eqref{eq:immediateK} with $K=7$
+or $(F_0^{(7)},F_J^{(7)})$. Iterate exactly seventeen times. If $(a_*,b_*)$
 are the first two final entries, define
 $A_*=\max\{Ca_*,b_*\}$. At the terminal level the actual joint
 profiles are zero; their final comparison entries are not used.
@@ -646,7 +750,7 @@ Definition~\ref{def:profiles}.
 
 Evaluation of these recurrences gives the exact rational enclosures
 \begin{align*}
- 3187070\cdot10^{143}&<A_\old<3187071\cdot10^{143},\\
+ 3186883\cdot10^{143}&<A_\old<3186884\cdot10^{143},\\
  3186720\cdot10^{143}&<A_\new<3186721\cdot10^{143}.
 \end{align*}
 In particular $1<A_\new<A_\old$. For both values $A_*$, exact integer
@@ -657,36 +761,61 @@ powers verify
 Hence both exponent bounds exceed $2.0154$, and the common positive
 $B$ with $A_\new<A_\old$ proves a strict improvement.
 
-For the finer enclosures, the accompanying certificate evaluates
-$\log A_*,\log B$ with correctly rounded $70$-digit decimal logarithms.
-The adjacent representable values enclose each exact logarithm.
-Dividing the lower numerator endpoint by the upper positive denominator
-endpoint with downward rounding, and conversely with upward rounding,
-encloses their ratio. The resulting intervals are contained strictly
-in~\eqref{eq:oldinterval}--\eqref{eq:newinterval}.
-The numerical operations use the documented logarithm and rounding
-contracts of Python's Decimal implementation~\cite{Decimal}.
-The companion JSON records all integers, the longer intervals, and
-the exact-power checks~\eqref{eq:powercert}. Equation~\eqref{eq:update}
-and parameters~\eqref{eq:fixed} independently specify the certificate.
+For the finer enclosures, the independent certificate uses exact rational
+series bounds, without a library logarithm. For an integer $x>1$, put
+$m=\lfloor\log_2x\rfloor$ and $z=(x-2^m)/(x+2^m)\in[0,1/3)$.
+Then
+\[
+ \log x=m\log2+2\sum_{j=0}^{119}\frac{z^{2j+1}}{2j+1}+R,
+ \qquad 0\le R\le\frac{2z^{241}}{241(1-z^2)}.
+\]
+The same series with $z=1/3$ encloses $\log2$. The implementation rounds
+every operation outward on the rational lattice $10^{-100}\mathbb Z$.
+Lower-numerator/upper-denominator and upper-numerator/lower-denominator
+division then enclose each exponent ratio. The resulting intervals lie
+strictly inside~\eqref{eq:oldinterval}--\eqref{eq:newinterval}.
+The companion \nolinkurl{checks/independent-audit.json} records the exact
+integers, longer intervals, and power checks~\eqref{eq:powercert}.
+Equation~\eqref{eq:update} and parameters~\eqref{eq:fixed} independently
+specify the certificate.
 Finally Theorem~\ref{thm:generator} supplies the labels, and
 Proposition~\ref{prop:seed} proves the stated Boolean-function bounds.
 \end{proof}
 
-No numerical search is needed to define this seed. The chosen $C$
-optimizes the immediate baseline's two bracketing integer candidates
-using certified interval comparison; it is then kept unchanged in the
-new analysis. There is no assertion of a globally optimal exponent,
-a minimal dimension, or simultaneous attainability of all profile bounds.
+No numerical search is needed to define this seed. The chosen $C$ was
+selected by comparing the two bracketing integer candidates for the
+earlier cap-fifteen immediate baseline. It is kept unchanged here so that
+the Boolean function, block witnesses, and dimension remain identical.
+It is not asserted to optimize either cap-seven bound. There is no claim
+of a globally optimal exponent, minimal dimension, or simultaneous
+attainability of all profile bounds.
 
-Both calculations use only the no-head-coherent-sixteen-set contract.
-For this particular seed, $k<1001^6$, so the thirteen-digit vertex words
-share seven leading zeros. Deleting them and subtracting the common label
-offset, Theorem~\ref{thm:digits} actually bounds coherent sets by eight.
-This is a direct consequence of the label theorem. Neither calculation
-exploits that stronger label-specific bound. The comparison therefore
-isolates the coupled-profile refinement at a fixed contract; it is not
-an optimized analysis even of this explicit seed.
+\begin{remark}[Comparison with the earlier certificate]
+The first version used cap fifteen in both analyses. Deleting the seven
+common leading zero digits already gives cap eight by
+Theorem~\ref{thm:digits}; Corollary~\ref{cor:cyclic} improves this to the
+exact cap seven. The following table applies each cap symmetrically, with
+all seed parameters including $C$ fixed. Entries abbreviate certified
+intervals; they are not exact sensitivities.
+\begin{center}
+\small
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Cap $K$ & Immediate baseline exponent & Coupled-profile exponent\\
+\midrule
+15 & $2.015410903091582180\ldots$ & $2.015411547311478476\ldots$\\
+8 & $2.015411203868314436\ldots$ & $2.015411547486334582\ldots$\\
+7 & $2.015411246837677710\ldots$ & $2.015411547511314020\ldots$\\
+\bottomrule
+\end{tabular}
+\end{center}
+At cap seven the gain is approximately $3.0067363631\times10^{-7}$.
+The sharpened immediate baseline still falls below the earlier cap-fifteen
+coupled bound, so the easy label tightening does not subsume the profile
+refinement. The earlier \nolinkurl{checks/seed-certificate.json} is retained
+and checked independently, including its original Decimal logarithm
+enclosures~\cite{Decimal}.
+\end{remark}
 
 \section{Uniformity, verification, and limitations}
 The seed is described by $(d,q,C)$ and a fixed program, requiring
@@ -713,9 +842,11 @@ truth table.
 The companion files in \nolinkurl{topics/sensitivity-separation/} of the
 \href{https://github.com/shjvandekamp/math}{repository} include the
 generator, local profile diagnostics, exact recurrence implementation,
-and \nolinkurl{checks/seed-certificate.json}. The bounded generator check
+and the original and revised arithmetic certificates. The bounded generator check
 exhausts $129088$ small tournaments and also checks a sharp coherent
-fifteen-set and parameter arithmetic. The profile checker exhausts small
+fifteen-set for arbitrary orientations and parameter arithmetic. This is
+compatible with the smaller cap in the indexed cyclic family.
+The profile checker exhausts small
 nested-state models and checks explicit candidate-count templates.
 These are finite regression checks; the infinite label theorem and
 all-input profile theorem rest on the proofs above. The fixed-seed
@@ -724,8 +855,15 @@ reproduction command from that topic directory is
 \begin{center}
 \texttt{python3 scripts/reproduce.py --fetch-sources}.
 \end{center}
-It verifies pinned source hashes and runs the bounded checks serially;
-it materializes no large tournament or Boolean truth table.
+It verifies pinned source hashes and runs the bounded checks serially,
+including a separate arithmetic audit of both the current cap-seven and
+earlier cap-fifteen comparisons. That implementation
+also checks the seven- and fourteen-vertex witnesses and uses the rational
+logarithm enclosures above. It materializes no large tournament or Boolean
+truth table. The independent arithmetic audit can also be run on its own:
+\begin{center}
+\texttt{python3 checks/independent\_audit.py}.
+\end{center}
 
 The scope of the contribution is limited. The first-difference technique,
 the gated recursion, OR balancing, and composition are inherited methods.

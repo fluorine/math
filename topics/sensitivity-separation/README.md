@@ -4,7 +4,6 @@
 · [LaTeX source](publication/sensitivity-note.tex)
 · [Detailed novelty audit](publication/NOVELTY_AUDIT.md)
 · [Follow-up review and sharper comparison](publication/FOLLOWUP_REVIEW.md)
-· [Independent-review prompt](publication/EXTERNAL_REVIEW_PROMPT.txt)
 
 This note makes the tournament labels in the OpenAI family-132 construction
 uniformly computable on an infinite parameter family, and strengthens the
@@ -33,11 +32,12 @@ digits, then has $r$ labels and no head-coherent 16-set. Each edge query
 takes $O((\log M)^2)$ bit operations and $O(\log M)$ space. No stored edge
 table, witness advice, or random seed is required.
 
-The [follow-up proof](publication/FOLLOWUP_REVIEW.md) uses the chosen cyclic
-orientation to sharpen the cap to $H+1$, where $H=\lceil\log_q k\rceil$.
+The note also uses the chosen cyclic orientation to sharpen the cap to
+$H+1$, where $H=\lceil\log_q k\rceil$.
 The uniform bound is fourteen, attained at $q=3$; the exact maximum for the
 fixed $q=1001$ seed is seven. These are direct consequences of the bucket
-argument and transitive final-digit buckets.
+argument and transitive final-digit buckets. The
+[follow-up review](publication/FOLLOWUP_REVIEW.md) records their derivation.
 
 **Refined profiles.** Most candidate target repairs must cross two nested
 child thresholds simultaneously. At most one target is an exception, and
@@ -55,7 +55,7 @@ note and [PROFILE.md](proofs/PROFILE.md).
 | Excluding the head digit from the palette; parameter substitution and query cost | Elementary encoding and arithmetic consequences. |
 | Arbitrary-tournament head-coherent bound $h+2$ | Specific directed adaptation proved here; no matching theorem was located in the audit. Historical priority remains provisional. |
 | Replacement of the family-132 random labels | Application of that bound to the exact source contract. |
-| Cyclic-family cap $H+1$, uniform fourteen, and exact seven at the fixed seed | Elementary corollaries of the label argument; proved in the follow-up addendum. |
+| Cyclic-family cap $H+1$, uniform fourteen, and exact seven at the fixed seed | Elementary corollaries of the label argument, included in the note. |
 | Nested predicates, four ordinary/joint profiles, zero-block witnesses | Inherited from family 132. |
 | Target coefficient 16 reduced to 15, tighter gate envelope, base bound $d+1$ | Immediate consequences of the existing proof; included in our baseline. |
 | Joint accounting of target repairs, coupled target/gate counts, six/five profile branches | Additional combinatorial arguments relative to the inspected source. |
@@ -90,11 +90,12 @@ and disjoint rigorous logarithm intervals. An exponent greater than
 2.0154 already follows from the existing proof; it is not the novelty claim.
 These are bounds, not exact sensitivities, and the seed is not claimed optimal.
 
-The original PDF and [original certificate](checks/seed-certificate.json)
-compare cap-fifteen bounds, giving 2.0154109030915821803… versus
-2.0154115473114784763…. That comparison remains valid under its stated
-contract. The table above applies the additional easy information to both
-analyses, with the same OR-copy count. The gain remains positive, approximately
+The PDF gives the cap-seven comparison above and retains the historical
+cap-fifteen comparison from the [original certificate](checks/seed-certificate.json):
+2.0154109030915821803… versus 2.0154115473114784763…. That earlier comparison
+remains valid under its stated contract. Using the exact cap seven applies
+the additional easy information to both analyses, with the same OR-copy
+count. The gain remains positive, approximately
 $3.0067\times10^{-7}$. Even the sharper immediate baseline stays below the
 original cap-fifteen coupled result. The
 [addendum](publication/FOLLOWUP_REVIEW.md) supplies the proof and all three
@@ -112,10 +113,11 @@ Only the Python standard library is used. The optional `--fetch-sources`
 downloads or hash-checks 63 pinned source files. Omit it for offline checks.
 The command runs serially with timeouts and verifies 129088 small labeled
 tournaments, 46656 local profile configurations, exact obstruction templates,
-and the fixed-seed arithmetic certificate. It does not instantiate the large
-tournament or the Boolean truth table.
+the historical cap-fifteen certificate, and the separate cap-seven arithmetic
+and witness checks. It does not instantiate the large tournament or the
+Boolean truth table.
 
-Run the separately implemented follow-up audit with:
+To run just the separately implemented follow-up audit:
 
 ```sh
 python3 topics/sensitivity-separation/checks/independent_audit.py
@@ -124,8 +126,10 @@ python3 topics/sensitivity-separation/checks/independent_audit.py
 It derives the same-seed comparisons from the manuscript equations, checks
 the seven-vertex witness, and independently encloses logarithms using rational
 series bounds and outward integer rounding. It also rechecks the original
-exact-power certificates. The standard reproduction above was rerun from a
-clean checkout with an empty source cache; all checks passed.
+exact-power certificates. The follow-up review records a successful clean
+checkout run of the original reproduction, with an empty source cache,
+and a successful separate arithmetic audit. The current reproduction command
+runs both checks together.
 
 The infinite claims rest on the written proofs. Finite checks, source scans,
 and independent AI-agent review are supplementary evidence. The new theorems

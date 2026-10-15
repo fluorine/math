@@ -2,8 +2,10 @@
 """Independent, bounded audit of the fixed-seed arithmetic.
 
 This file imports no companion implementation. The recurrences below were
-transcribed from publication/sensitivity-note.tex, equations (immediate),
-(F0), (FJ), (ones), and (update), after reading the pinned source proof.
+transcribed from publication/sensitivity-note.tex, equations (immediateK),
+(FK0), (FKJ), (ones), and (update), after reading the pinned source proof.
+The current cap-7 manuscript is checked against its printed enclosures;
+the original cap-15 values remain checked against seed-certificate.json.
 Only the saved scan's two reported candidates are checked; no grid is run.
 
 Logarithms use exact integer interval arithmetic, not Decimal or libm:
@@ -15,10 +17,11 @@ Every multiplication and division below rounds outward on a fixed rational
 lattice. Thus all reported log intervals follow from integer arithmetic and
 the displayed convergent-series identity, without a library log contract.
 
-The cap-8/cap-7 calculations keep q, d, M, r, k, C, n, and B unchanged.
-They are illustrative, not an optimization. Their interpretation as bounds
-requires the parameterized structural proof and, for cap 7, the cyclic-label
-argument to be validated separately; arithmetic does not prove those facts.
+All cap comparisons keep q, d, M, r, k, C, n, and B unchanged. They are
+illustrative, not an optimization. Their interpretation as bounds requires
+the parameterized structural proof and cyclic-label upper-bound argument to
+be validated separately; arithmetic does not prove those facts. The explicit
+coherent witnesses of sizes seven and fourteen are checked pair by pair.
 
 Run directly with Python 3. This script writes only its JSON report to stdout.
 Each expensive integer power has a 45-second wall-clock deadline on POSIX.
@@ -167,6 +170,34 @@ def first_difference_label(tail, head, q, h):
     raise ValueError("self edge has no first difference")
 
 
+def coherent_witness(vertices, q, h):
+    """Check every arc of a proposed coherent set, without building the graph."""
+    r = h * (q - 1)
+    M = r * r
+    k = 2 * M * M + 1
+    require(vertices == sorted(set(vertices)), "witness indices are not distinct and sorted")
+    require(0 <= vertices[0] <= vertices[-1] < k <= q**h,
+            "witness indices do not fit the label construction")
+    require(vertices[-1] - vertices[0] <= M * M,
+            "witness is outside a transitive cyclic interval")
+    incoming_labels = {}
+    edges = 0
+    for j, head in enumerate(vertices):
+        labels = set()
+        for tail in vertices[:j]:
+            require(1 <= (head - tail) % k <= M * M,
+                    "witness edge is not directed from smaller to larger")
+            label = first_difference_label(tail, head, q, h)
+            require(0 <= label < r, "witness label is outside the palette")
+            labels.add(label)
+            edges += 1
+        require(len(labels) <= 1, "witness is not head-coherent")
+        incoming_labels[str(head)] = sorted(labels)
+    require(edges == len(vertices) * (len(vertices) - 1) // 2,
+            "not all witness pairs were checked")
+    return dict(q=q, vertices=vertices, edges_checked=edges, incoming_labels=incoming_labels)
+
+
 def compare_saved(actual, saved, label):
     for key in ("S0", "S1", "A", "B", "n", "dimension_digits"):
         require(actual[key] == saved[key], label + ": saved " + key + " differs")
@@ -222,6 +253,8 @@ def main():
     started = time.monotonic()
     tex_bytes = (ROOT / "publication/sensitivity-note.tex").read_bytes()
     tex = tex_bytes.decode()
+    for label in ("eq:immediateK", "eq:FK0", "eq:FKJ"):
+        require(r"\label{" + label + "}" in tex, "missing parameterized recurrence: " + label)
     fixed = equation(tex, "eq:fixed")
     params = {name: int(re.search(r"\b" + name + r"=(\d+)", fixed).group(1))
               for name in ("q", "d", "M", "r", "k", "C")}
@@ -255,15 +288,6 @@ def main():
         require(old_saved["mode"] == ("structural" if mode == "coupled" else mode),
                 label + ": saved mode differs")
         alpha = compare_saved(actual, old_saved, label)
-        tex_name = "old" if label == "baseline" else "new"
-        claim = re.search(r"(\d+\.\d+)&<\\alpha_\\" + tex_name + r"<(\d+\.\d+)", tex)
-        require(claim is not None, "missing printed exponent interval")
-        within(alpha, claim.groups(), label + ": printed exponent interval")
-        raw_claim = re.search(r"(\d+)\\cdot10\^\{(\d+)\}&<A_\\" + tex_name +
-                              r"<(\d+)\\cdot10\^\{(\d+)\}", tex)
-        require(raw_claim is not None, "missing printed sensitivity enclosure")
-        a, b, c, e = map(int, raw_claim.groups())
-        require(a * 10**b < actual["A"] < c * 10**e, "printed A enclosure fails")
         cases[label] = actual
         intervals[label] = alpha
 
@@ -286,15 +310,8 @@ def main():
     lower_power, b_power, upper_power = map(int, power_claim.groups())
     require((lower_power, b_power, upper_power) == (20154, 10000, 20155),
             "power certificate changed")
-    power_started = time.monotonic()
-    B_power = bounded_power(old["B"], b_power)
-    for label in ("baseline", "structural"):
-        A_power = bounded_power(cases[label]["A"], lower_power)
-        require(A_power < B_power <= A_power * cases[label]["A"],
-                label + ": exact integer power certificate fails")
-    power_seconds = time.monotonic() - power_started
-
-    # Only the two bracketing C values at this one baseline seed are compared.
+    # C was selected for the historical cap-15 baseline. It remains fixed in
+    # the sharper comparisons; there is no claim of cap-7 OR optimization.
     floor_C = old["S1"] // old["S0"]
     brackets = sorted({max(1, floor_C), max(1, ceildiv(old["S1"], old["S0"]))})
     require(C in brackets, "chosen C is not a bracketing baseline candidate")
@@ -312,21 +329,17 @@ def main():
     witness = [0, 1] + [q**power for power in range(1, active_digits)]
     require(len(witness) == 7 and witness[-1] < M * M < k,
             "seven-vertex witness does not fit the transitive cyclic interval")
-    incoming_labels = {}
-    witness_edges = 0
-    for j, head in enumerate(witness):
-        labels = set()
-        for tail in witness[:j]:
-            require(1 <= (head - tail) % k <= M * M,
-                    "witness edge is not directed from smaller to larger")
-            label = first_difference_label(tail, head, q, h)
-            require(0 <= label < r, "witness label is outside the palette")
-            labels.add(label)
-            witness_edges += 1
-        require(len(labels) <= 1, "witness is not head-coherent")
-        incoming_labels[str(head)] = sorted(labels)
-    require(witness_edges == 21, "not all witness pairs were checked")
+    seven_witness = coherent_witness(witness, q, h)
+    seven_witness["conclusion"] = (
+        "Lower bound 7 verified; the separate upper-bound proof makes the maximum exactly 7.")
+    fourteen_vertices = [3**11] + [3**11 + 3**power for power in range(11)] + [2 * 3**11, 3**12]
+    require(len(fourteen_vertices) == 14, "fourteen-vertex witness has the wrong size")
+    fourteen_witness = coherent_witness(fourteen_vertices, 3, h)
+    fourteen_witness["conclusion"] = (
+        "Lower bound 14 at q=3 verified; the separate upper-bound proof makes the uniform cap sharp.")
     sharper = {}
+    current_cases = {}
+    current_intervals = {}
     for cap in (active_digits + 2, active_digits + 1):
         rows = {}
         cap_intervals = {}
@@ -338,8 +351,14 @@ def main():
             rows[mode] = {key: result[key] for key in ("S0", "S1", "A")}
             rows[mode]["alpha_interval"] = decimal_interval(alpha)
             cap_intervals[mode] = alpha
+            if cap == 7:
+                label = "baseline" if mode == "immediate" else "structural"
+                current_cases[label] = result
+                current_intervals[label] = alpha
         require(rows["coupled"]["A"] < rows["immediate"]["A"],
                 "sharper cap does not preserve the coupled improvement")
+        require(cap_intervals["coupled"][0] > cap_intervals["immediate"][1],
+                "log intervals do not certify the sharper-cap coupled improvement")
         baseline_beats_published = cap_intervals["immediate"][0] > intervals["structural"][1]
         published_beats_baseline = intervals["structural"][0] > cap_intervals["immediate"][1]
         require(baseline_beats_published or published_beats_baseline,
@@ -352,6 +371,34 @@ def main():
             (cap_intervals["coupled"][0] - cap_intervals["immediate"][1],
              cap_intervals["coupled"][1] - cap_intervals["immediate"][0]))
         sharper[str(cap)] = rows
+
+    # The manuscript's main comparison now uses the exact cap seven on both
+    # sides. Its rounded values must enclose the independently computed ones.
+    require(set(current_cases) == {"baseline", "structural"}, "missing current cap-7 comparison")
+    for label in ("baseline", "structural"):
+        tex_name = "old" if label == "baseline" else "new"
+        claim = re.search(r"(\d+\.\d+)&<\\alpha_\\" + tex_name + r"<(\d+\.\d+)", tex)
+        require(claim is not None, "missing printed cap-7 exponent interval")
+        within(current_intervals[label], claim.groups(), label + ": printed cap-7 exponent interval")
+        raw_claim = re.search(r"(\d+)\\cdot10\^\{(\d+)\}&<A_\\" + tex_name +
+                              r"<(\d+)\\cdot10\^\{(\d+)\}", tex)
+        require(raw_claim is not None, "missing printed cap-7 sensitivity enclosure")
+        a, b, c, e = map(int, raw_claim.groups())
+        require(a * 10**b < current_cases[label]["A"] < c * 10**e,
+                label + ": printed cap-7 A enclosure fails")
+
+    power_started = time.monotonic()
+    B_power = bounded_power(old["B"], b_power)
+    power_checks = {}
+    for scope, pair in (("historical_cap_15", cases), ("current_manuscript_cap_7", current_cases)):
+        power_checks[scope] = {}
+        for label, result in pair.items():
+            require(result["B"] == old["B"], "integer-power comparisons use different block bounds")
+            A_power = bounded_power(result["A"], lower_power)
+            require(A_power < B_power <= A_power * result["A"],
+                    scope + " " + label + ": exact integer power certificate fails")
+            power_checks[scope][label] = True
+    power_seconds = time.monotonic() - power_started
 
     coarse_d = 9
     coarse_q = max(3, 1 + ceildiv(3**(coarse_d + 1), h))
@@ -379,36 +426,40 @@ def main():
     for label in cases:
         cases[label]["alpha_interval"] = decimal_interval(intervals[label])
         cases[label]["log_A_scaled_interval"] = list(log_integer(cases[label]["A"]))
+        current_cases[label]["alpha_interval"] = decimal_interval(current_intervals[label])
+        current_cases[label]["log_A_scaled_interval"] = list(log_integer(current_cases[label]["A"]))
     report = dict(
         status="all independent arithmetic checks passed",
         publication_sha256=hashlib.sha256(tex_bytes).hexdigest(),
         pinned_source_hashes=source_hashes(),
         parameters=expected_parameters,
         published_cap_15=cases,
+        current_manuscript_cap_7=current_cases,
         exact_power_certificate=dict(lower_A_exponent=lower_power, B_exponent=b_power,
                                      upper_A_exponent=upper_power, B_power_bits=B_power.bit_length(),
-                                     passed_for_both_A=True, elapsed_seconds=round(power_seconds, 3),
+                                     checked_cases=power_checks, passed_for_all_four_A=True,
+                                     elapsed_seconds=round(power_seconds, 3),
                                      timeout_seconds_per_power=POWER_TIMEOUT),
         rational_log_certificate=dict(scale=str(SCALE), terms=TERMS,
                                       log_B_scaled_interval=list(log_integer(old["B"])),
                                       method="positive atanh series, exact outward integer rounding, geometric tail bound"),
-        OR_baseline_bracketing_candidates=brackets,
-        OR_baseline_chosen_C_certified_better=True,
+        historical_cap_15_OR_baseline_bracketing_candidates=brackets,
+        historical_cap_15_OR_baseline_chosen_C_certified_better=True,
         effective_label_parameters=dict(active_digits=active_digits, fixed_leading_zero_digits=h-active_digits,
                                         arbitrary_orientation_cap=active_digits+2,
                                         cyclic_transitive_final_bucket_cap=active_digits+1),
-        seven_vertex_coherent_witness=dict(vertices=witness, edges_checked=witness_edges,
-                                           incoming_labels=incoming_labels,
-                                           conclusion="Lower bound 7 verified; the separate upper-bound proof makes the maximum exactly 7."),
+        seven_vertex_coherent_witness=seven_witness,
+        fourteen_vertex_coherent_witness=fourteen_witness,
         same_seed_same_C_sharper_caps=sharper,
         coarse_saved_instance_verified=True,
         saved_scan_candidate_intervals_verified=scan_checks,
-        comparison_scope=("Illustrative fixed-seed comparison, not global optimization. The cap-15 "
-                          "comparison is fair at the explicitly stated contract and is arithmetically "
-                          "correct. The cap-8 and cap-7 source-derived baselines both improve but remain "
-                          "below the published cap-15 coupled exponent; coupling improves each matching "
-                          "sharper-cap baseline. The publication acknowledges cap 8 and disclaims "
-                          "optimization of this seed."),
+        comparison_scope=("The current manuscript uses cap 7 for both the source-derived baseline "
+                          "and coupled-profile comparison. The original published cap-15 values "
+                          "are independently checked against seed-certificate.json for historical "
+                          "continuity. All caps use the same seed and C, chosen originally for the "
+                          "cap-15 baseline. Coupling strictly improves each matching baseline. "
+                          "This is an illustrative fixed-seed comparison, not exact sensitivity, "
+                          "cap-7 OR optimization, or global optimization."),
         limitations=["The parameterized coupled formulas require a separate structural-proof review.",
                      "The cap-7 interpretation requires the separate cyclic-label proof review.",
                      "This is not a truth-table calculation of exact sensitivity or a formal proof replay.",

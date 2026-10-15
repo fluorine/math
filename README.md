@@ -9,17 +9,16 @@ relationship to prior work and the scope of its verification.
 · [Overview and reproduction](topics/sensitivity-separation/README.md)
 · [Novelty audit](topics/sensitivity-separation/publication/NOVELTY_AUDIT.md)
 · [Follow-up review and sharper comparison](topics/sensitivity-separation/publication/FOLLOWUP_REVIEW.md)
-· [Prompt for an independent referee](topics/sensitivity-separation/publication/EXTERNAL_REVIEW_PROMPT.txt)
 
 An elementary directed adaptation of classical first-difference coloring gives
 a compact deterministic generator for the tournament-label condition in the
 OpenAI family-132 construction. A companion theorem strengthens its coupled
-sensitivity-profile estimates. A follow-up argument proves that the actual
+sensitivity-profile estimates. The note proves that the actual
 coherent-set maximum is seven for the fixed seed. Using this sharper bound
 in both analyses improves the certified exponent from approximately
-2.0154112468 to 2.0154115475 at unchanged dimension. The original PDF gives
-the valid comparison under the standard label contract; the linked addendum
-proves the sharpening and supplies an independently implemented certificate.
+2.0154112468 to 2.0154115475 at unchanged dimension. The PDF includes the
+sharper bound and comparison; the linked review records the follow-up
+audit and its independently implemented certificate.
 
 These are AI-assisted mathematical contributions offered for public scrutiny.
 The notes distinguish the additional arguments from inherited constructions,

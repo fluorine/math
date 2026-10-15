@@ -4,12 +4,14 @@
 [`00820a69fbaeab0f20d4b099153d3bf8c6b27be9`](https://github.com/shjvandekamp/math/tree/00820a69fbaeab0f20d4b099153d3bf8c6b27be9).
 This addendum records a fresh proof and arithmetic review, an elementary
 strengthening of the label bound, and its numerical consequences.
-The [external-review prompt](EXTERNAL_REVIEW_PROMPT.txt) is available for a
-researcher to assess the work independently.
+The current [manuscript](sensitivity-note.tex) and
+[PDF](../output/pdf/sensitivity-note.pdf) now incorporate the cyclic bound,
+the generic-cap profile theorem, and the matched cap-seven comparison below.
+This report retains the findings and numerical context of the earlier review.
 
-**No gap was found in the published label or coupled-profile proofs, and the
-published numerical certificate reproduced.** The actual cyclic construction
-has a better coherence bound than the calculation uses: at most fourteen
+**No gap was found in the reviewed label or coupled-profile proofs, and the
+cap-fifteen numerical certificate reproduced.** The actual cyclic construction
+has a better coherence bound than that calculation used: at most fourteen
 throughout the parameter family, and exactly seven for the fixed seed.
 Applying seven to both analyses still gives a strict coupled-profile gain.
 These additional bounds are elementary consequences of the existing argument,
@@ -100,8 +102,8 @@ $$\{3^{11}\}\;\cup\;\{3^{11}+3^j:0\le j\le10\}
 
 These fourteen valid indices lie between $177147$ and $531441$, with span
 $354294<M^2=456976$. Edges again point increasingly. The successive powers
-in the lower suffix, then the leading digit two at position eleven, then
-the one at position twelve, each give a common first-difference position and
+in the lower suffix, then the leading digit two at place $3^{11}$, then
+the one at place $3^{12}$, each give a common first-difference position and
 source digit at every head. Thus this is a coherent fourteen-set. This does
 not change the sharp $h+2$ statement for arbitrary orientations: the cyclic
 indexed family has additional structure.
@@ -150,9 +152,9 @@ write $\alpha=\log(B)/\log(A)$.
 
 | Coherence information used | Immediate baseline $\alpha$ | Coupled-profile $\alpha$ |
 |---|---:|---:|
-| $K=15$, as in the published certificate | 2.015410903091582180… | 2.015411547311478476… |
+| $K=15$, as in the original certificate at `00820a6` | 2.015410903091582180… | 2.015411547311478476… |
 | $K=8$, deleting common leading digits only | 2.015411203868314436… | 2.015411547486334582… |
-| $K=7$, using the proposition above | 2.015411246837677710… | 2.015411547511314020… |
+| $K=7$, using the proposition above and now included in the manuscript | 2.015411246837677710… | 2.015411547511314020… |
 
 The decimals in this table are abbreviated, not interval endpoints. Exact
 integers and enclosing rational/decimal intervals are saved in
@@ -163,10 +165,10 @@ below the original $K=15$ coupled certificate, by approximately
 $3.0047380077\times10^{-7}$. Thus the elementary tightening does not
 subsume the published coupled-profile improvement.
 
-The original PDF's comparison remains valid under its explicitly stated
-contract. It already discloses that the cap of eight was unused. The table
-here measures the improvement after using the additional easy information on
-both sides. Neither table claims exact sensitivity, optimal parameters, an
+The PDF at the reviewed commit `00820a6` remains valid under its explicitly
+stated contract. It disclosed that the cap of eight was unused. The current
+manuscript includes the sharper comparison above, using the additional easy
+information on both sides. Neither comparison claims exact sensitivity, optimal parameters, an
 optimal proof bound, or a literature-wide record. The OR-copy count is held
 fixed; no new parameter sweep or global optimization was performed.
 
@@ -217,7 +219,9 @@ labelled tournaments and 46656 local profile configurations, and reproduced
 the published certificate. The printed arbitrary-orientation sharpness
 example of size fifteen is compatible with the smaller cyclic-family bound.
 
-The new independent implementation is run separately:
+At the time of this review, the new independent implementation was run
+separately with the command below. It is now also included in the main
+reproduction command.
 
 ```sh
 python3 topics/sensitivity-separation/checks/independent_audit.py
@@ -246,6 +250,5 @@ also inspected by the primary reviewer.
 
 These computations corroborate the written proofs. They neither evaluate the
 huge truth table nor independently formalize the infinite statements. The
-new historical claims still need external literature scrutiny, and the
-[review prompt](EXTERNAL_REVIEW_PROMPT.txt) explicitly invites counterexamples,
-missing references, and negative or inconclusive findings.
+historical claims still need external literature scrutiny. Counterexamples,
+missing references, and negative or inconclusive findings are welcome.
