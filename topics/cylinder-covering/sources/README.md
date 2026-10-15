@@ -17,8 +17,11 @@ The four primary manuscripts, dated 27 September 2026, are:
 The selected Lean modules supply definitions, earlier footprint estimates,
 source sufficient conditions and comparison constants. They are prior-art
 snapshots, not a formalization of this repository's new quartic/secant theorem.
-The source proofs were inspected as mathematical text; no new Lean kernel
-verification is claimed.
+The broad comparison-source audit inspected these proofs as mathematical text.
+The later [formalization addendum](../formal/README.md) checks the new primary
+quartic/secant theorem and its eight-module OpenAI geometric dependency closure;
+it archives those originals separately and validates every header-only adaptation.
+That formalization is distinct from this larger prior-art evidence archive.
 
 The upstream `CONTENTS.md`, manuscript READMEs and other snapshots retain
 links to their original repository layout. Some link targets are not included

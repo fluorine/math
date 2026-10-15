@@ -165,7 +165,7 @@ The inspected `Radial/OverlapBounds.lean` retains the cubic 9e^3 error;
 do not contain the new cap-dependent triangle slope in their inspected
 formulas. No matching quartic certificate or its sharpness result was found
 in the targeted dependency audit. This is not an exhaustive search of every
-Lean module; no Lean compilation or axiom audit was performed.
+Lean module; no Lean compilation or axiom audit was performed as part of that historical source search.
 
 ## Follow-up question: exact finite enclosure optimality
 
@@ -282,4 +282,7 @@ instance of a generic method, arbitrary changes to its tile selection or error
 allocation, or all cylinder covers. The fresh targeted audit found no matching
 quartic/secant certificate or sharper quantified admissible range in the
 inspected source dependencies; that remains search evidence rather than a
-guarantee of novelty. No Lean compilation or exhaustive proof search is claimed.
+guarantee of novelty. This source-comparison audit is not an exhaustive formal
+proof search. The later [Lean addendum](formal/README.md) independently formalizes
+the new primary covering theorem; it does not turn this novelty assessment into
+a theorem about all earlier literature.

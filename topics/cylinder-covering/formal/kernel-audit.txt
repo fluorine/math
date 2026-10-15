@@ -1,0 +1,214 @@
+Tetrahedron formal verification record
+
+Fresh compilation of all 25 local modules and the independent Python checks completed in the first invocation. Its subsequent replay exceeded the earlier 1850 MiB resident-memory guard. The final standalone replay and negative controls completed in a separate invocation with the documented 2300 MiB guard, using the identical checked proof sources and compiled artifacts. Replay evidence is bound to the complete compiled-artifact closure. No mathematical source changed between these successful compilation and replay phases.
+
+=== Fresh compilation and independent-check transcript ===
+PASS: 91 source SHA-256 hashes and 48 Git blob hashes.
+MATCH InverseSqrt.lean
+MATCH BenchmarkPolynomials.lean
+PASS: exact cap elimination and nonnegative square certificate, 0<e<=1.
+PASS: refined triangle supports, exact area, and uniform finite bounds.
+PASS: symmetric constant-cap triangle optimum and sharp 4e/N rate.
+PASS: exact integral coefficients and one-sided e^6 remainder <=8.
+PASS: uniform common-padding source comparison on d<=e^2, 0<e<=1/10.
+PASS: 36 independent constructor output checks (metric, vertices, area).
+PASS: power-sum recurrence and independent integer-sqrt checks, odd/even N.
+Angular source explicit-budget lower at tau=1/5 >= 0.513014901477832
+Global common-padding radial floor >= 0.499999957133058
+Global explicit-budget angular floor >= 0.499999989283264
+Published nilpotent apex count > 102400/3; grid ratio >= 637/1250.
+PASS: published rational product/log finite subcovers need >20 million cells.
+e=1/10, N=10000, cylinders=20000:
+  exact triangle R in [0.499947504745824, 0.499947504745984]
+  common-padding source sector lower >= 0.504347312079790
+  general theorem bound <= 0.499959469292064
+e=1/100, N=20000, cylinders=40000:
+  exact triangle R in [0.500000345647165, 0.500000345647166]
+  common-padding source sector lower >= 0.500002834956276
+e=1/1000, N=2000000, cylinders=4000000:
+  exact triangle R in [0.499999985334570, 0.499999985334571]
+  common-padding source sector lower >= 0.499999987833506
+Scope: global floors and published-recipe comparisons have the stated hypotheses.
+No global optimality, all-baseline dominance, or novelty claim is certified.
+PASS: verify.py matches last-run.txt.
+PASS: exact secant boundary, coupled elimination, quartic square certificate.
+PASS: uniform residual bound, closed coverage padding, and e/N leading rate.
+PASS: schedule saving on 0<e<=1/40 with margin >=e²/2400.
+PASS: sharper schedule quartic coefficient 9/2 and |R-J|<=2e/N for all N.
+PASS: N>=ceil(480/e) gives saving >=e²/240 throughout 0<e<=1/10.
+PASS: 36 independent secant generator metric/area/vertex checks.
+PASS: exact power-sum costs cross-checked with integer square roots, odd/even N.
+Published compatible-range ratio >= 0.499999999819155092; full count >=36,864,000.
+e=1/10, N=10000, cylinders=20000:
+  secant R in [0.499921585997001674, 0.499921585997001774]
+  continuous angular candidate eta=.001,tau=.2 is now covered by this proof.
+e=1/100, N=20000, cylinders=40000:
+  secant R in [0.499998863418315727, 0.499998863418315728]
+e=1/1000, N=2000000, cylinders=4000000:
+  secant R in [0.499999983836322736, 0.499999983836322737]
+PASS: secant_verify.py matches secant-last-run.txt.
+REPRODUCED: exact independent certificates, generated proof data and source pins.
+CHECK TetrahedronCover.Definitions
+CHECK OAI.Geometry.ArithmeticImports
+CHECK OAI.Geometry.CylinderCovering.Convexity.GeneralCapCoverage
+CHECK TetrahedronCover.Partition
+CHECK TetrahedronCover.Algebra
+CHECK TetrahedronCover.Secant
+CHECK OAI.Geometry.Imports
+CHECK OAI.Geometry.TriangularCovering.Basic
+CHECK OAI.Geometry.TriangularCovering.CoordinateCover
+CHECK OAI.Geometry.TriangularCovering.TriangleArea
+CHECK OAI.Geometry.TriangularCovering.Projection
+CHECK OAI.Geometry.TriangularCovering.CylinderFamily
+CHECK OAI.Geometry.TriangularCovering.Tetrahedron
+CHECK OAI.Geometry.TriangularCovering.Shadows
+CHECK TetrahedronCover.Geometry
+CHECK TetrahedronCover.InverseSqrt
+CHECK TetrahedronCover.BenchmarkPolynomials
+CHECK TetrahedronCover.Benchmark
+CHECK TetrahedronCover.Result
+CHECK TetrahedronCover.Estimates
+CHECK TetrahedronCover.Continuum
+CHECK TetrahedronCover.Schedule
+CHECK TetrahedronCover.Nonuniform
+CHECK TetrahedronCover.Main
+CHECK TetrahedronCover.Audit
+theorem TetrahedronCover.finiteFamily_covers : ∀ (P : TetrahedronCover.Partition) {e : ℝ} (he : 0 < e) (he1 : e < 1),
+  OAI.TriangularCovering.Covers (TetrahedronCover.finiteFamily P e he he1)
+'TetrahedronCover.finiteFamily_covers' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.finiteFamily_total : ∀ (P : TetrahedronCover.Partition) (e : ℝ) (he : 0 < e) (he1 : e < 1),
+  OAI.TriangularCovering.totalArea (TetrahedronCover.finiteFamily P e he he1) / OAI.TriangularCovering.A_min =
+    ∑ i, (P.cell i).term e
+'TetrahedronCover.finiteFamily_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.finiteFamily_bases : ∀ (P : TetrahedronCover.Partition) (e : ℝ) (he : 0 < e) (he1 : e < 1)
+  (i : Fin (2 * P.count)),
+  IsCompact (TetrahedronCover.finiteFamily P e he he1 i).base ∧
+    (∀ z ∈ (TetrahedronCover.finiteFamily P e he he1 i).base,
+        inner ℝ (TetrahedronCover.finiteFamily P e he he1 i).axis z = 0) ∧
+      ∃ v, AffineIndependent ℝ v ∧ (TetrahedronCover.finiteFamily P e he he1 i).base = (convexHull ℝ) (Set.range v)
+'TetrahedronCover.finiteFamily_bases' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.effective_triangular_covers : ∀ (N : ℕ) (hN : 0 < N) (e : ℝ) (he : 0 < e) (he1 : e < 1),
+  OAI.TriangularCovering.Covers (TetrahedronCover.uniformFamily N hN e he he1) ∧
+    IsGreatest (Set.range (TetrahedronCover.familyAxisTangent (TetrahedronCover.uniformPartition N hN) e he he1))
+      (√3 * e * (1 - 1 / ↑N))
+'TetrahedronCover.effective_triangular_covers' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.geometric_uniform_error : ∀ (N : ℕ) (hN : 0 < N) {e : ℝ} (he : 0 < e) (he1 : e ≤ 1 / 10),
+  |OAI.TriangularCovering.totalArea (TetrahedronCover.uniformFamily N hN e he ⋯) / OAI.TriangularCovering.A_min -
+        TetrahedronCover.J e| ≤
+    2 * e / ↑N
+'TetrahedronCover.geometric_uniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.geometric_nonuniform_error : ∀ (P : TetrahedronCover.Partition) {e : ℝ} (he : 0 < e)
+  (he1 : e ≤ 1 / 10),
+  |OAI.TriangularCovering.totalArea (TetrahedronCover.finiteFamily P e he ⋯) / OAI.TriangularCovering.A_min -
+        TetrahedronCover.J e| ≤
+    e * P.mesh
+'TetrahedronCover.geometric_nonuniform_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.geometric_effective_count : ∀ (N : ℕ) (hN : 0 < N) {e : ℝ} (he : 0 < e) (he1 : e ≤ 1 / 10),
+  ⌈480 / e⌉₊ ≤ N →
+    OAI.TriangularCovering.Covers (TetrahedronCover.uniformFamily N hN e he ⋯) ∧
+      OAI.TriangularCovering.totalArea (TetrahedronCover.uniformFamily N hN e he ⋯) / OAI.TriangularCovering.A_min ≤
+        1 / 2 - e ^ 2 / 240
+'TetrahedronCover.geometric_effective_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.geometric_schedule_upper : ∀ (N : ℕ) (hN : 0 < N) {e : ℝ} (he : 0 < e) (he1 : e ≤ 1 / 10),
+  TetrahedronCover.scheduleCount e ≤ N →
+    OAI.TriangularCovering.totalArea (TetrahedronCover.uniformFamily N hN e he ⋯) / OAI.TriangularCovering.A_min ≤
+      1 / 2 - e ^ 2 / 60 + e ^ 3 / 2 + 9 / 2 * e ^ 4
+'TetrahedronCover.geometric_schedule_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.geometric_schedule_saving : ∀ {e : ℝ},
+  0 < e →
+    e ≤ 1 / 50 →
+      ∃ c,
+        OAI.TriangularCovering.Covers c ∧
+          OAI.TriangularCovering.totalArea c / OAI.TriangularCovering.A_min ≤ 1 / 2 - 73 / 15000 * e ^ 2 ∧
+            OAI.TriangularCovering.totalArea c < OAI.TriangularCovering.A_min / 2
+'TetrahedronCover.geometric_schedule_saving' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.geometric_schedule_asymptotic : ∀ {e : ℝ} (he : 0 < e) (he1 : e ≤ 1 / 10),
+  |OAI.TriangularCovering.totalArea (TetrahedronCover.uniformFamily (TetrahedronCover.scheduleCount e) ⋯ e he ⋯) /
+          OAI.TriangularCovering.A_min -
+        (1 / 2 - e ^ 2 / 60 + e ^ 3 / 2)| ≤
+    9 / 2 * e ^ 4
+'TetrahedronCover.geometric_schedule_asymptotic' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.tetrahedron_20000 : OAI.TriangularCovering.Covers TetrahedronCover.benchmarkFamily ∧
+  499921585997001674 / 1000000000000000000 ≤
+      OAI.TriangularCovering.totalArea TetrahedronCover.benchmarkFamily / OAI.TriangularCovering.A_min ∧
+    OAI.TriangularCovering.totalArea TetrahedronCover.benchmarkFamily / OAI.TriangularCovering.A_min ≤
+        499921585997001774 / 1000000000000000000 ∧
+      OAI.TriangularCovering.totalArea TetrahedronCover.benchmarkFamily / OAI.TriangularCovering.A_min <
+        499922 / 1000000
+'TetrahedronCover.tetrahedron_20000' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem TetrahedronCover.exists_triangular_cover_below_half : ∃ c,
+  OAI.TriangularCovering.Covers c ∧ OAI.TriangularCovering.totalArea c < OAI.TriangularCovering.A_min / 2
+'TetrahedronCover.exists_triangular_cover_below_half' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+=== Final standalone kernel replay and negative-control transcript ===
+REPLAY TetrahedronCover.Definitions
+replaying TetrahedronCover.Definitions
+REPLAY OAI.Geometry.ArithmeticImports
+replaying OAI.Geometry.ArithmeticImports
+REPLAY OAI.Geometry.CylinderCovering.Convexity.GeneralCapCoverage
+replaying OAI.Geometry.CylinderCovering.Convexity.GeneralCapCoverage
+REPLAY TetrahedronCover.Partition
+replaying TetrahedronCover.Partition
+REPLAY TetrahedronCover.Algebra
+replaying TetrahedronCover.Algebra
+REPLAY TetrahedronCover.Secant
+replaying TetrahedronCover.Secant
+REPLAY OAI.Geometry.Imports
+replaying OAI.Geometry.Imports
+REPLAY OAI.Geometry.TriangularCovering.Basic
+replaying OAI.Geometry.TriangularCovering.Basic
+REPLAY OAI.Geometry.TriangularCovering.CoordinateCover
+replaying OAI.Geometry.TriangularCovering.CoordinateCover
+REPLAY OAI.Geometry.TriangularCovering.TriangleArea
+replaying OAI.Geometry.TriangularCovering.TriangleArea
+REPLAY OAI.Geometry.TriangularCovering.Projection
+replaying OAI.Geometry.TriangularCovering.Projection
+REPLAY OAI.Geometry.TriangularCovering.CylinderFamily
+replaying OAI.Geometry.TriangularCovering.CylinderFamily
+REPLAY OAI.Geometry.TriangularCovering.Tetrahedron
+replaying OAI.Geometry.TriangularCovering.Tetrahedron
+REPLAY OAI.Geometry.TriangularCovering.Shadows
+replaying OAI.Geometry.TriangularCovering.Shadows
+REPLAY TetrahedronCover.Geometry
+replaying TetrahedronCover.Geometry
+REPLAY TetrahedronCover.InverseSqrt
+replaying TetrahedronCover.InverseSqrt
+REPLAY TetrahedronCover.BenchmarkPolynomials
+replaying TetrahedronCover.BenchmarkPolynomials
+REPLAY TetrahedronCover.Benchmark
+replaying TetrahedronCover.Benchmark
+REPLAY TetrahedronCover.Result
+replaying TetrahedronCover.Result
+REPLAY TetrahedronCover.Estimates
+replaying TetrahedronCover.Estimates
+REPLAY TetrahedronCover.Continuum
+replaying TetrahedronCover.Continuum
+REPLAY TetrahedronCover.Schedule
+replaying TetrahedronCover.Schedule
+REPLAY TetrahedronCover.Nonuniform
+replaying TetrahedronCover.Nonuniform
+REPLAY TetrahedronCover.Main
+replaying TetrahedronCover.Main
+REPLAY TetrahedronCover.Audit
+replaying TetrahedronCover.Audit
+NEGATIVE CONTROL FalseBenchmarkUpper
+.cache/build/FalseBenchmarkUpper.lean:6:24: error: unsolved goals
+⊢ False
+NEGATIVE CONTROL DamagedTaylorIdentity
+Try this:
+  [apply] ring_nf
+
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+.cache/build/DamagedTaylorIdentity.lean:6:50: error: unsolved goals
+z : ℝ
+⊢ 1 + z * (-1 / 2) + z ^ 2 * (3 / 8) + z ^ 3 * (-5 / 16) + z ^ 4 * (35 / 128) + z ^ 5 * (-63 / 256) +
+          z ^ 6 * (231 / 1024) +
+        z ^ 7 * (-429 / 2048) +
+      z ^ 8 * (6435 / 32768) =
+    1 + z * (-1 / 2) + z ^ 2 * (3 / 8) + z ^ 3 * (-5 / 16) + z ^ 4 * (35 / 128) + z ^ 5 * (-63 / 256) +
+          z ^ 6 * (231 / 1024) +
+        z ^ 7 * (-429 / 2048) +
+      z ^ 8 * (1609 / 8192)
+{"status": "compiled", "target": "TetrahedronCover.Audit", "lean": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)", "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612", "upstream_revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a", "threads": 1, "lean_allocation_limit_mb": 3072, "resident_limit_mb": 2300, "timeout_per_module_seconds": 240, "host": "macOS-26.3-arm64-arm-64bit", "modules_in_dependency_closure": 25, "modules_compiled_this_run": 0, "elapsed_seconds": 360.7416, "child_max_rss": 2117468160, "child_max_rss_unit": "bytes", "replay_driver_sha256": "54dad8476f96258337c93480e836616046d6b85bdd881a606f91a4a29d7306fd"}

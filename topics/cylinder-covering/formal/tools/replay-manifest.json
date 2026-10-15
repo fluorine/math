@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/leanprover/lean4",
+  "revision": "5045d0056413266e57c625dcd7c365b10e377c52",
+  "url": "https://raw.githubusercontent.com/leanprover/lean4/5045d0056413266e57c625dcd7c365b10e377c52/src/LeanChecker.lean",
+  "original_path": "tools/upstream/LeanChecker.lean",
+  "adapted_path": "tools/KernelReplay.lean",
+  "sha256": "2d18ec111d73c536b0bdee2533556bb9548c349f386797d3d3837b1f84d55dae",
+  "git_blob": "e6491d6e0a7fc9130b3b9ace89218e2f277100bf",
+  "replace_from": "  let (_, s) ← importModulesCore mod.imports |>.run\n  let env ← finalizeImport s mod.imports {} 0 false false (isModule := true)",
+  "replace_to": "  let level := if mod.isModule then OLeanLevel.exported else OLeanLevel.private\n  let (_, s) ← importModulesCore mod.imports (globalLevel := level) |>.run\n  let env ← finalizeImport s mod.imports {} 0 false false (level := level) (isModule := true)"
+}

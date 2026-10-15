@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""Check source pins and reproduce both independent exact certificates offline."""
+"""Reproduce the exact certificates and, optionally, the complete Lean audit."""
 
+import argparse
+import fcntl
 import hashlib
 import json
 import os
@@ -52,11 +54,34 @@ def reproduce(script, record):
 
 
 def main():
-    check_sources()
-    reproduce("verify.py", "last-run.txt")
-    reproduce("secant_verify.py", "secant-last-run.txt")
-    print("REPRODUCED: exact certificates and all source pins.", flush=True)
-    print("Universal coverage rests on the written proof; no Lean check is claimed.")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--formal", action="store_true", help="also run the Lean build, kernel replay and negative controls")
+    parser.add_argument("--lean", help="path to the pinned Lean 4.34.1 executable")
+    parser.add_argument("--fresh", action="store_true", help="recompile every local proof module")
+    args = parser.parse_args()
+    os.nice(19)
+    formal = TOPIC / "formal"
+    build = formal / ".cache" / "build"
+    build.mkdir(parents=True, exist_ok=True)
+    # Share the formal compiler's lock: only one local computational job runs.
+    with (build / "compile.lock").open("a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        check_sources()
+        subprocess.run([sys.executable, str(formal / "tools" / "generate_certificates.py"), "--check"], check=True)
+        reproduce("verify.py", "last-run.txt")
+        reproduce("secant_verify.py", "secant-last-run.txt")
+    print("REPRODUCED: exact independent certificates, generated proof data and source pins.", flush=True)
+    if args.formal:
+        command = [sys.executable, str(formal / "build.py"), "--target", "TetrahedronCover.Audit",
+                   "--replay", "--negative-controls"]
+        if args.lean:
+            command += ["--lean", args.lean]
+        if args.fresh:
+            command.append("--fresh")
+        subprocess.run(command, cwd=formal, check=True)
+        print("REPRODUCED: Lean theorem checks, axiom audit, local kernel replay and negative controls.", flush=True)
+    else:
+        print("Lean was not run by this invocation. Use --formal for the separate kernel audit.")
 
 
 if __name__ == "__main__":

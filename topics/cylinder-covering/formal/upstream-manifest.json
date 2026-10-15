@@ -1,0 +1,72 @@
+{
+  "repository": "https://github.com/openai/math",
+  "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "files": [
+    {
+      "path": "OAI/Geometry/CylinderCovering/Convexity/GeneralCapCoverage.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Convexity/GeneralCapCoverage.lean",
+      "sha256": "8dd2fc52a5768cc57ba2d74857e615b1aa9d84a4a6a96eb54fa1567dfdfb57a7",
+      "git_blob": "b56833a117a0d1b1574dca436af7eb116b525317",
+      "original_path": "upstream/OAI/Geometry/CylinderCovering/Convexity/GeneralCapCoverage.lean",
+      "import_replacement": "import OAI.Geometry.ArithmeticImports\n",
+      "module_interface": true
+    },
+    {
+      "path": "OAI/Geometry/TriangularCovering/Basic.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/TriangularCovering/Basic.lean",
+      "sha256": "85de512b9afc6954278ff4d75b340a0725ceacbc1c4b5385ce4583ed04cac11d",
+      "git_blob": "21697e5a6fe4e63aea9b8d8af64bfd6da399782f",
+      "original_path": "upstream/OAI/Geometry/TriangularCovering/Basic.lean",
+      "import_replacement": "import OAI.Geometry.Imports\n",
+      "module_interface": true
+    },
+    {
+      "path": "OAI/Geometry/TriangularCovering/CoordinateCover.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/TriangularCovering/CoordinateCover.lean",
+      "sha256": "e9c27f321c63934681516af310b80e66636ca6ed86bedc120e280139f987002c",
+      "git_blob": "c03143b3525791c9e19acbc4b86f0f05113c7d27",
+      "original_path": "upstream/OAI/Geometry/TriangularCovering/CoordinateCover.lean",
+      "module_interface": true
+    },
+    {
+      "path": "OAI/Geometry/TriangularCovering/CylinderFamily.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/TriangularCovering/CylinderFamily.lean",
+      "sha256": "a3ac554ed44308318824d1b65a246d9f889b7aaf96d5e5d747624a4ee120a1d2",
+      "git_blob": "be9b1503478122b66550916f5c9884132dee30ab",
+      "original_path": "upstream/OAI/Geometry/TriangularCovering/CylinderFamily.lean",
+      "module_interface": true
+    },
+    {
+      "path": "OAI/Geometry/TriangularCovering/Projection.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/TriangularCovering/Projection.lean",
+      "sha256": "c03283dc72b9b0e80ae155517e2c30026aa403319380e62cdc9cb4c9e747cfa6",
+      "git_blob": "357fd408dd450319d1fbb60aea4a803d08907521",
+      "original_path": "upstream/OAI/Geometry/TriangularCovering/Projection.lean",
+      "module_interface": true
+    },
+    {
+      "path": "OAI/Geometry/TriangularCovering/Shadows.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/TriangularCovering/Shadows.lean",
+      "sha256": "293c6494412507778b3394e6b6079f5487215c47ba5cc68ad6adb177391769e5",
+      "git_blob": "999243bfdae0b8bfd23b2dacacb6e7099228db11",
+      "original_path": "upstream/OAI/Geometry/TriangularCovering/Shadows.lean",
+      "module_interface": true
+    },
+    {
+      "path": "OAI/Geometry/TriangularCovering/Tetrahedron.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/TriangularCovering/Tetrahedron.lean",
+      "sha256": "f24a292be93f7035434f14e9b17e737c9efe8b4da3699165de0c37c00b7901bf",
+      "git_blob": "44ee4cc707bb9e28e0d572373dd425153a43c600",
+      "original_path": "upstream/OAI/Geometry/TriangularCovering/Tetrahedron.lean",
+      "module_interface": true
+    },
+    {
+      "path": "OAI/Geometry/TriangularCovering/TriangleArea.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/TriangularCovering/TriangleArea.lean",
+      "sha256": "e44012484737bbff7d4856d4345955911bf2303f284ae7ea93a6324d3e744f23",
+      "git_blob": "ceed7cec468337594b6648ec5a2b191e8ba35967",
+      "original_path": "upstream/OAI/Geometry/TriangularCovering/TriangleArea.lean",
+      "module_interface": true
+    }
+  ]
+}

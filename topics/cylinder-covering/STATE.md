@@ -157,3 +157,16 @@ The 13-page publication PDF compiled successfully with the desktop LaTeX
 compiler and Tectonic. Its page layout, main equations and comparison table
 were inspected after correcting line overflow; the final Tectonic build has
 no layout warnings. Both verifier outputs and all source pins reproduce.
+
+
+## Lean formalization addendum
+
+The later publication request extends the primary result to a complete Lean
+formalization in formal/. Earlier entries above describe the research and
+publication state at that time; their no-Lean statements are historical. The
+analytical PDF and its open LaTeX source are preserved as published. The current
+verification status, exact statement scope and reproducible commands are in
+formal/README.md and formal/kernel-audit.json. The eight reused OpenAI modules
+have exact archived originals and checked header-only adaptations. All new
+geometric and quantitative arguments are in TetrahedronCover/. No X post is
+part of this publication.

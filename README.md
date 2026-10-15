@@ -58,6 +58,7 @@ records the exact bounded theorem and its standard axiom dependencies.
 
 [Read the mathematical note](topics/cylinder-covering/output/pdf/cylinder-covering-note.pdf)
 · [Full proof and reproduction](topics/cylinder-covering/README.md)
+· [Lean proof and kernel audit](topics/cylinder-covering/formal/README.md)
 · [Exact verification](topics/cylinder-covering/verification/secant-report.md)
 · [Novelty and source comparison](topics/cylinder-covering/NOVELTY.md)
 
@@ -69,10 +70,12 @@ contains a sharp finite enclosure theorem in a specified class.
 
 The published comparison uses the audited source sufficient ranges and count
 conventions; it is not global optimality over all covers or all new instances
-of generic methods. The new proof has independent exact-arithmetic checks but
-is not formalized in Lean or human-refereed. Pinned upstream Lean files document
-prior-art constants. Full derivations, compact generators, source hashes and
-reproduction commands are included.
+of generic methods. The primary finite-cover theorem is formalized in Lean,
+including actual geometry, effective count/error estimates and the complete
+numerical interval. The package includes the independent exact-arithmetic
+checks, kernel audit, negative controls, compact generators and pinned source
+attribution. The comparison and restricted-class optimality arguments remain
+separately identified written proofs. No human referee review is claimed.
 
 ## Three overlapping VIX windows in a finite activity market
 

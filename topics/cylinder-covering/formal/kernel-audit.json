@@ -1,0 +1,645 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "verified_utc": "2026-10-15T14:48:02.606842+00:00",
+  "scope": "Actual finite tetrahedron covers, Euclidean triangular bases and area, uniform and nonuniform error bounds, effective count schedules, two-sided asymptotic remainder, and the complete 20000-cylinder benchmark interval.",
+  "reproduction_command": "python3 topics/cylinder-covering/reproduce.py --formal --fresh",
+  "execution_note": "Fresh compilation of all 25 local modules and the independent Python checks completed in the first invocation. Its subsequent replay exceeded the earlier 1850 MiB resident-memory guard. The final standalone replay and negative controls completed in a separate invocation with the documented 2300 MiB guard, using the identical checked proof sources and compiled artifacts. Replay evidence is bound to the complete compiled-artifact closure. No mathematical source changed between these successful compilation and replay phases.",
+  "lean": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "mathlib_revision": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+  "openai_revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "host": "macOS-26.3-arm64-arm-64bit",
+  "limits": {
+    "threads": 1,
+    "lean_allocation_limit_mb": 3072,
+    "resident_limit_mb": 2300,
+    "timeout_per_module_seconds": 240
+  },
+  "fresh_compilation": {
+    "modules": 25,
+    "sum_module_seconds": 148.0998,
+    "peak_sampled_rss_kib": 1776736
+  },
+  "standalone_replay": {
+    "modules": 25,
+    "sum_module_seconds": 353.2437,
+    "peak_sampled_rss_kib": 2067824,
+    "invocation_elapsed_seconds": 360.7416,
+    "driver_sha256": "54dad8476f96258337c93480e836616046d6b85bdd881a606f91a4a29d7306fd",
+    "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513",
+    "kernel": "Same Lean kernel, separate replay process; pinned external imports remain dependencies."
+  },
+  "independent_checks": {
+    "source_sha256_count": 91,
+    "source_git_blob_count": 48,
+    "exact_verifiers": [
+      "verify.py",
+      "secant_verify.py"
+    ],
+    "recorded_outputs_match": true,
+    "generated_lean_sources_match": true
+  },
+  "axiom_audit": {
+    "TetrahedronCover.finiteFamily_covers": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.finiteFamily_total": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.finiteFamily_bases": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.effective_triangular_covers": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.geometric_uniform_error": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.geometric_nonuniform_error": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.geometric_effective_count": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.geometric_schedule_upper": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.geometric_schedule_saving": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.geometric_schedule_asymptotic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.tetrahedron_20000": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "TetrahedronCover.exists_triangular_cover_below_half": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "negative_controls": [
+    {
+      "control": "FalseBenchmarkUpper",
+      "status": "rejected",
+      "seconds": 2.2665,
+      "peak_rss_kib": 995520,
+      "diagnostic": ".cache/build/FalseBenchmarkUpper.lean:6:24: error: unsolved goals\n\u22a2 False\n",
+      "source_sha256": "d307e2f13d32c2bb5379039620cfb00ef2dbdef5f213ac5e22d60bacd8ec78a8"
+    },
+    {
+      "control": "DamagedTaylorIdentity",
+      "status": "rejected",
+      "seconds": 3.0851,
+      "peak_rss_kib": 995168,
+      "diagnostic": "Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.\n.cache/build/DamagedTaylorIdentity.lean:6:50: error: unsolved goals\nz : \u211d\n\u22a2 1 + z * (-1 / 2) + z ^ 2 * (3 / 8) + z ^ 3 * (-5 / 16) + z ^ 4 * (35 / 128) + z ^ 5 * (-63 / 256) +\n          z ^ 6 * (231 / 1024) +\n        z ^ 7 * (-429 / 2048) +\n      z ^ 8 * (6435 / 32768) =\n    1 + z * (-1 / 2) + z ^ 2 * (3 / 8) + z ^ 3 * (-5 / 16) + z ^ 4 * (35 / 128) + z ^ 5 * (-63 / 256) +\n          z ^ 6 * (231 / 1024) +\n        z ^ 7 * (-429 / 2048) +\n      z ^ 8 * (1609 / 8192)\n",
+      "source_sha256": "cf522c2300c9d38eed2ec829d6de1e758cbb1258aaeec0ea7169d4d77d2ead81"
+    }
+  ],
+  "checked_closure": {
+    "TetrahedronCover.Definitions": {
+      "module": "TetrahedronCover.Definitions",
+      "seconds": 5.5963,
+      "peak_rss_kib": 926176,
+      "digest": "cc86ad1d00ce470fda008faafe0ad2b26ede20c3b0dd39f27c8bc2a7e47a3d68",
+      "source_sha256": "c18e9dfad9f256ebdca30e5d424851790c67a61a13108c4186e26913e98d53fc",
+      "outputs": {
+        "lib/TetrahedronCover/Definitions.olean": "3f85ae71870e4845a453ded469d9bb29a56ad17d8a136da6cabef61aa05c4fdb",
+        "lib/TetrahedronCover/Definitions.olean.server": "51929ddc177a209bcb413230b47af274b18140127e7b02b7d87909bba8e79c7d",
+        "lib/TetrahedronCover/Definitions.olean.private": "5d73d0d1e56239d764b58f59c4c330de042652e0b324ac0b558c810f832001c0"
+      }
+    },
+    "OAI.Geometry.ArithmeticImports": {
+      "module": "OAI.Geometry.ArithmeticImports",
+      "seconds": 2.0279,
+      "peak_rss_kib": 859968,
+      "digest": "689b279e02fdeff55ea0106eeb76bd709e5e16b28de3e4edf5cb15a15a87dbe7",
+      "source_sha256": "e18c4e7240fc14717c1ab45ef77c65ef0846e3c850877bf5ed479bc6ee0117a7",
+      "outputs": {
+        "lib/OAI/Geometry/ArithmeticImports.olean": "b417cfba8de4261680fd3d89d155eda17ef4e3b7a2124439d300030167b488ea",
+        "lib/OAI/Geometry/ArithmeticImports.olean.server": "fe2ddd7b48b819f3effa73b57ca0f6cca9bbf158303a997324b36c207cc15d72",
+        "lib/OAI/Geometry/ArithmeticImports.olean.private": "428613ffa49171c3514d9accfc29c667bba9918a06a1a20943eb214c3c503764"
+      }
+    },
+    "OAI.Geometry.CylinderCovering.Convexity.GeneralCapCoverage": {
+      "module": "OAI.Geometry.CylinderCovering.Convexity.GeneralCapCoverage",
+      "seconds": 8.127,
+      "peak_rss_kib": 1102320,
+      "digest": "e36d250307010ab5a5240746b2023c221a376ec3d41bf5767b4db098116f33b9",
+      "source_sha256": "3d54d266f00a358c0e7ffa5fc1ef5611be83b72db5f77a4087035e5b1cca344f",
+      "outputs": {
+        "lib/OAI/Geometry/CylinderCovering/Convexity/GeneralCapCoverage.olean": "06e05827e0b9981180f73aa0f4526c9a9726cc8d5afb932b067f476e292bee48",
+        "lib/OAI/Geometry/CylinderCovering/Convexity/GeneralCapCoverage.olean.server": "cbc32b8fa42f87884637e71f5b7555a0ea99b94d385686d99261858dcdbf34d6",
+        "lib/OAI/Geometry/CylinderCovering/Convexity/GeneralCapCoverage.olean.private": "0c4c872a86426bcfc95311db20daeb3c80fd8b88f7cb080b2c1bb239a50bcd40"
+      }
+    },
+    "TetrahedronCover.Partition": {
+      "module": "TetrahedronCover.Partition",
+      "seconds": 2.5397,
+      "peak_rss_kib": 958608,
+      "digest": "d7a12a4a9326a198f9d261fc4610f5827bf1e3006ff40bae23ce011629dd976d",
+      "source_sha256": "efb6a1db39108ba8b8e05a93152fb5529aad2d54c35f6a06c0847f61458db764",
+      "outputs": {
+        "lib/TetrahedronCover/Partition.olean": "efe8b59897f33f9297abceaba14f951c29e574798adca8bfe56076d776d0ac62",
+        "lib/TetrahedronCover/Partition.olean.server": "47ffbe5ca8619036187b8d1956851d53ee393d56a1b8c5cb5abc3c42aff484b4",
+        "lib/TetrahedronCover/Partition.olean.private": "888e9b0442ce73e348bddceb865720db78db22dd6637ef317cbf42893d6a0cbe"
+      }
+    },
+    "TetrahedronCover.Algebra": {
+      "module": "TetrahedronCover.Algebra",
+      "seconds": 4.5725,
+      "peak_rss_kib": 1056816,
+      "digest": "c01c3197e562506b4baa76bc42a874683cd1ddc824f77d46b25acf78996595b3",
+      "source_sha256": "2d5d7223ef7f9d753ee3de23c4f928ccd1c2027e93513a0bf72297f8a4e09b76",
+      "outputs": {
+        "lib/TetrahedronCover/Algebra.olean": "7b780234e4f07a74bd528735690a238cf867235f3a8ee792f897ec686f8add51",
+        "lib/TetrahedronCover/Algebra.olean.server": "4c03f027d4eddaad0713616e94e3cda15b9dc34a19cf2c8c5dd3098c681e39c4",
+        "lib/TetrahedronCover/Algebra.olean.private": "9c949f9bd067e7eca090337b7de24287c6c5cc9693fbf2083d0b26669ac4e2d0"
+      }
+    },
+    "TetrahedronCover.Secant": {
+      "module": "TetrahedronCover.Secant",
+      "seconds": 3.5572,
+      "peak_rss_kib": 1039808,
+      "digest": "41629a042e88de2c45cf35388ae053cc3b7de904bd18dd5d0e9d4658b7582d41",
+      "source_sha256": "899cf686590a10bbeb8e74b9d4481bad88b813eca1f975cbc54c4e544008f1c6",
+      "outputs": {
+        "lib/TetrahedronCover/Secant.olean": "bda86b376ba57f0bd96243c129e0754ff5caf6960c3f6d1dec9a06b929c907be",
+        "lib/TetrahedronCover/Secant.olean.server": "cca2d1e7b456666f7da0e4fb7d75ec08dbf300122389095538b526e1bfa8d9e8",
+        "lib/TetrahedronCover/Secant.olean.private": "ef964f5ca8c0053ad6269efcfb0b70befbbb1d243463bf5dbd14717210c025d7"
+      }
+    },
+    "OAI.Geometry.Imports": {
+      "module": "OAI.Geometry.Imports",
+      "seconds": 5.0864,
+      "peak_rss_kib": 1345744,
+      "digest": "bcc2a653c07468dd4a2092a32f638ae2980a9667e8381d93e5641fba790be7e2",
+      "source_sha256": "014880c5ebe3c63ef3b25a8987a7002e7e82248ba6078dcc6a95f08f09d55e4d",
+      "outputs": {
+        "lib/OAI/Geometry/Imports.olean": "19168b6662c43228cd4497e877ad2a756f8bfe13bc3c5120575ffc1fbcb368c4",
+        "lib/OAI/Geometry/Imports.olean.server": "6dd7a8193dc9f92b71e241c320db2f51a275f734f5290e2b5e5efb955b0d064d",
+        "lib/OAI/Geometry/Imports.olean.private": "a0067adb8c59cc2f878e7042895cf8f8cd43bc5011ef3fd15880132a2bf97d2c"
+      }
+    },
+    "OAI.Geometry.TriangularCovering.Basic": {
+      "module": "OAI.Geometry.TriangularCovering.Basic",
+      "seconds": 3.0487,
+      "peak_rss_kib": 1462096,
+      "digest": "ba1afc542421b43c95ecbc667a80a5221e54b966fc59faa7f0d4fb8b0bb5e21f",
+      "source_sha256": "e1cb1c867dcb5a29195da80f06dd007233fa41f14237d6efc4286cdfe805a932",
+      "outputs": {
+        "lib/OAI/Geometry/TriangularCovering/Basic.olean": "025f3c54d80b1a00041e7e57e46f5265ebe7e30418737087e577fed055f0d87e",
+        "lib/OAI/Geometry/TriangularCovering/Basic.olean.server": "a0e2503895b614f4e1c5de07d0d3a77da4ba2df841c2b758cb25f902f018c431",
+        "lib/OAI/Geometry/TriangularCovering/Basic.olean.private": "70c70d9338605f074a0ef9a3b7ca64f456745e19fa959d718e67bf34ea0f8d45"
+      }
+    },
+    "OAI.Geometry.TriangularCovering.CoordinateCover": {
+      "module": "OAI.Geometry.TriangularCovering.CoordinateCover",
+      "seconds": 9.144,
+      "peak_rss_kib": 1560752,
+      "digest": "7fea0932f25ad0544496beb5f111b8373c904359f90f7c6abc10313b5ed8c021",
+      "source_sha256": "513b96ac6c9905b6be8513bdf03b755acae744c26f4c3f82be92ffd2dd914a37",
+      "outputs": {
+        "lib/OAI/Geometry/TriangularCovering/CoordinateCover.olean": "d70d4479b5b3a5f663e5fd5bdc8ac7a0e59c34964743a4f65fe7fe8c0f5907e5",
+        "lib/OAI/Geometry/TriangularCovering/CoordinateCover.olean.server": "835152f0ca6b87363e6186fa360fb3155d701181eb3ae79c848a5a23fef46972",
+        "lib/OAI/Geometry/TriangularCovering/CoordinateCover.olean.private": "4303b3ffba5e0821b2f78d80c0a6e8c2167b85cd07704196cfde63649e1d13d5"
+      }
+    },
+    "OAI.Geometry.TriangularCovering.TriangleArea": {
+      "module": "OAI.Geometry.TriangularCovering.TriangleArea",
+      "seconds": 4.5845,
+      "peak_rss_kib": 1502656,
+      "digest": "01edc59372f8bf3cd6fcaf8a08aa1f7b7bc0e4c100060b73f9e38a992524a785",
+      "source_sha256": "06d588f3e2801fd5e434cd31a3436eb90eb1fe806cba84e8f7b7b73a634d28ef",
+      "outputs": {
+        "lib/OAI/Geometry/TriangularCovering/TriangleArea.olean": "bc48695d1b871e50a5f41a7ac127bea1057ddb2e7c8db8786459cbe8b8525543",
+        "lib/OAI/Geometry/TriangularCovering/TriangleArea.olean.server": "bfaed024669bc6de0942e1d6a05d7df54fb30dab95440dc317bf044604ee092f",
+        "lib/OAI/Geometry/TriangularCovering/TriangleArea.olean.private": "19dbd3f31dfc56758ede369a2e4c83f443d1c9cc8a201a4f03520108ce12d7e3"
+      }
+    },
+    "OAI.Geometry.TriangularCovering.Projection": {
+      "module": "OAI.Geometry.TriangularCovering.Projection",
+      "seconds": 5.0984,
+      "peak_rss_kib": 1454416,
+      "digest": "acfa48eb7f5faf5434a7a10b9cc9ff9c5e54cc10d6592c62ae1a701bf8fe078c",
+      "source_sha256": "0ee47b1d2b3e8602522ce9ebae55d07ef9497007e2deb4a67118dfba58a19e9d",
+      "outputs": {
+        "lib/OAI/Geometry/TriangularCovering/Projection.olean": "7f5e0b773d82532e4ff99b52213c0921be2d376fd9fce08377a66397211013ac",
+        "lib/OAI/Geometry/TriangularCovering/Projection.olean.server": "4e4a07783d8c2a2719dc9d22e4c3b34d7f6bdfdf1474514d646512e18472043f",
+        "lib/OAI/Geometry/TriangularCovering/Projection.olean.private": "ecad26c254c2d34ca814e2e713b9d1c3eac6d28c411624f0d368b4f13d06f942"
+      }
+    },
+    "OAI.Geometry.TriangularCovering.CylinderFamily": {
+      "module": "OAI.Geometry.TriangularCovering.CylinderFamily",
+      "seconds": 5.622,
+      "peak_rss_kib": 1450560,
+      "digest": "7693d907e62a27821afedebb49a56cb3322f8d244e4ece0f27bd7cac270ed9d9",
+      "source_sha256": "361eb1f9dba74619c84f3da8e1dc019d1886dfa4969d4e75f9fe8f636562716d",
+      "outputs": {
+        "lib/OAI/Geometry/TriangularCovering/CylinderFamily.olean": "47725f30f12ee393dbe29e670ca76b05774a1b2ce43730c5db01065e1b82b9af",
+        "lib/OAI/Geometry/TriangularCovering/CylinderFamily.olean.server": "8073d1860662db2f4032d60f6ba0495c27b4c5542162fe951564b8c8ac93f77e",
+        "lib/OAI/Geometry/TriangularCovering/CylinderFamily.olean.private": "d5ca49103303a8a4668a9f57985efd49b03d8e2dade3c764b49c1b3156463c1b"
+      }
+    },
+    "OAI.Geometry.TriangularCovering.Tetrahedron": {
+      "module": "OAI.Geometry.TriangularCovering.Tetrahedron",
+      "seconds": 8.6503,
+      "peak_rss_kib": 1546192,
+      "digest": "417f5b44f30c40a0be024e488ca924b0e48aa3551c4863da71c5a82a5c78b372",
+      "source_sha256": "dd44fae6e4dfe0c7fe0e286fbc15088bb3eec7e1734cf6e9780c894871b40094",
+      "outputs": {
+        "lib/OAI/Geometry/TriangularCovering/Tetrahedron.olean": "399ce299b43fd7616e8b4a021a8db24d41d4226e6afa0cd4c4e5be97e743b43f",
+        "lib/OAI/Geometry/TriangularCovering/Tetrahedron.olean.server": "c5b56a132fa5ffcef40bb7242f98ab1bd27f7b8170822da3eb9640b24cda47ec",
+        "lib/OAI/Geometry/TriangularCovering/Tetrahedron.olean.private": "ae37221fd21fc9b5398ac7191858c47f9c787137cc5b7a4e79f1044c01e73c32"
+      }
+    },
+    "OAI.Geometry.TriangularCovering.Shadows": {
+      "module": "OAI.Geometry.TriangularCovering.Shadows",
+      "seconds": 7.6135,
+      "peak_rss_kib": 1550208,
+      "digest": "62cd8a76b1292aec11bda2857a054b00bc33f5870be24704c894ae7ba0604745",
+      "source_sha256": "c1cb2e1e75eb2db554ba3829e24e1f89b61bf14a88177fd0092142e20dbb2092",
+      "outputs": {
+        "lib/OAI/Geometry/TriangularCovering/Shadows.olean": "1b6ee65978aea11ccf24aaa053a9b04cdb1b58cf2d4a790517be9f4254a982e0",
+        "lib/OAI/Geometry/TriangularCovering/Shadows.olean.server": "9229d61fe1ba885abd3dcd7e54613049c08a56153c627e401fb66822e8866b97",
+        "lib/OAI/Geometry/TriangularCovering/Shadows.olean.private": "e3d58c722f787759d749ef630256e21e031f3ac36844bae048191031ef3b5681"
+      }
+    },
+    "TetrahedronCover.Geometry": {
+      "module": "TetrahedronCover.Geometry",
+      "seconds": 4.5687,
+      "peak_rss_kib": 1510752,
+      "digest": "fe49205487e73ada7f4ef26826955622fbec4b09eefb1b97cb33787a2770c02d",
+      "source_sha256": "21930aa813c85dad3d94fdf1b512e26f1fccb744562a3e3941113dfe8f61ccc8",
+      "outputs": {
+        "lib/TetrahedronCover/Geometry.olean": "17f8d6a23009d8d2aad113f531636f65da2844ec7f89e56ef916c220b985249b",
+        "lib/TetrahedronCover/Geometry.olean.server": "096370bceb20b420c612a181daefd20dbacb97678469ebc363ca98f215d04b00",
+        "lib/TetrahedronCover/Geometry.olean.private": "ef4f65a3c0b1d3dc5cfb89cc42fe28a7550035bae3b99b2a5692320f3ad14406"
+      }
+    },
+    "TetrahedronCover.InverseSqrt": {
+      "module": "TetrahedronCover.InverseSqrt",
+      "seconds": 3.5581,
+      "peak_rss_kib": 1037536,
+      "digest": "f1fd9ad48481f73c72b012aac1cc838c4f6c35300a323b796efd28ab7aa73203",
+      "source_sha256": "dd2dc6dbe8b5ae24b327bfc2a1cdd3fbb594928b2fc2f97edebe511f038ffb19",
+      "outputs": {
+        "lib/TetrahedronCover/InverseSqrt.olean": "3e73c11122e1d2fcf449529d020dabe2d8f8de1adef1a677e6c62129fc977f57",
+        "lib/TetrahedronCover/InverseSqrt.olean.server": "51713a3cf86bf77356ef6ff00f8d4a49162367baf479b17e158a7f5819518251",
+        "lib/TetrahedronCover/InverseSqrt.olean.private": "813128665e7a30ccead0f98086fa1ab538f0b0d404aa33a371a30c3443661551"
+      }
+    },
+    "TetrahedronCover.BenchmarkPolynomials": {
+      "module": "TetrahedronCover.BenchmarkPolynomials",
+      "seconds": 17.9573,
+      "peak_rss_kib": 1776736,
+      "digest": "c0a562cb8088a1211964929d58e5f12e92e0060718a3e2cba097202340cb5d89",
+      "source_sha256": "a130239af65926f4a2a25db0bf52ec0c9e8dc3a241a7d8bcf0163d39773ddd1c",
+      "outputs": {
+        "lib/TetrahedronCover/BenchmarkPolynomials.olean": "ddc42e65f361f812ab897ac2136949a9d2eb6c614df24b288abdfd93aa269de5",
+        "lib/TetrahedronCover/BenchmarkPolynomials.olean.server": "10c0117e86b241327c2bdb4e9d077a431d9627e04c419eabef7e0e607684e6f8",
+        "lib/TetrahedronCover/BenchmarkPolynomials.olean.private": "90612d684aaea0d6ecbdaf155a8b2dc0466debff9028e1bb0248436db784414b"
+      }
+    },
+    "TetrahedronCover.Benchmark": {
+      "module": "TetrahedronCover.Benchmark",
+      "seconds": 3.0481,
+      "peak_rss_kib": 1025424,
+      "digest": "59bd4c314b88ef794e549a310e5f2330d0b9a9046e9086a25ccd0c83bbfa294c",
+      "source_sha256": "d995a100b5cc0d3db08ab0e839b5c06f06e95766e4fed42941c55f2f28f2d330",
+      "outputs": {
+        "lib/TetrahedronCover/Benchmark.olean": "8783874dd5d7f62172d39a6719c39a6661d457b59cc735fd7272d0622b7f9c6d",
+        "lib/TetrahedronCover/Benchmark.olean.server": "3368e04201890e9f872a14b3f8f113c72ad15ab1bd5acc38899c95095776b579",
+        "lib/TetrahedronCover/Benchmark.olean.private": "8d728b86497901b9421c6c6062bd8e50138fd97c5e7a212c0ebad2daeb6b6ae5"
+      }
+    },
+    "TetrahedronCover.Result": {
+      "module": "TetrahedronCover.Result",
+      "seconds": 3.5582,
+      "peak_rss_kib": 1442096,
+      "digest": "7c1ff2370ef6fc8a62d95d336b296dcb77a2bd86127c921935918c3b2f64116b",
+      "source_sha256": "1c0b2f9014907b41f21e0781d18cdff74188be8e0ea700972e9f381be7b0b7f3",
+      "outputs": {
+        "lib/TetrahedronCover/Result.olean": "10528c9e7d4607744ac58cb5cca9d6bdfc609918531c2a8ef20837eccc2d19b3",
+        "lib/TetrahedronCover/Result.olean.server": "d16e52cc7efba98ababa38154b572ac86f3d21c47dad09e0af6ff9526dbd73d8",
+        "lib/TetrahedronCover/Result.olean.private": "9c192eac059003a8dce9fcd1ecd1ebb5844acb9f136fb94e5f5b660658e26e0b"
+      }
+    },
+    "TetrahedronCover.Estimates": {
+      "module": "TetrahedronCover.Estimates",
+      "seconds": 13.2117,
+      "peak_rss_kib": 1108720,
+      "digest": "a838f425e3f424afda28d05532de4be274badafadcf35c65eedc2a9977b60c41",
+      "source_sha256": "13624f082beb2ccea6b3514dce867f366c36eaa7fe5f2833ab70c4d6c9ca1024",
+      "outputs": {
+        "lib/TetrahedronCover/Estimates.olean": "885b7270c7dd3a06078a1a7fda9626bed121a4646e1e472fe3715d8f6b0a9adb",
+        "lib/TetrahedronCover/Estimates.olean.server": "db82d8e1070b853d7fb9c9b25ce0d847181725c9c5b3fe00cb542bc1d84ce340",
+        "lib/TetrahedronCover/Estimates.olean.private": "5402a414d9e1323753170a2a3196457ab98135423c64bb16e0a73630225e6f35"
+      }
+    },
+    "TetrahedronCover.Continuum": {
+      "module": "TetrahedronCover.Continuum",
+      "seconds": 10.1573,
+      "peak_rss_kib": 1549024,
+      "digest": "6f3da38f4aa05793bf3ecd883c07adc9d8b22654edffbbbcc5bb9cc3feeeedd2",
+      "source_sha256": "8eef4964d41c126d71d7f659cbe00e4c1ac7a68070396508621ec0f2613e3185",
+      "outputs": {
+        "lib/TetrahedronCover/Continuum.olean": "6b49195c9c242b02af01fd6e11c101405d8276e65b834c2e0ddf732b925aeeb4",
+        "lib/TetrahedronCover/Continuum.olean.server": "8375a52af28f00b2b61878ae7fa62c578c74f0a17625d8a66cd06ba4ea2ccbe5",
+        "lib/TetrahedronCover/Continuum.olean.private": "64b738ea2b685045a798985d276b0f6732089daa1ddb5fbeb0e5ca8580f7cfb5"
+      }
+    },
+    "TetrahedronCover.Schedule": {
+      "module": "TetrahedronCover.Schedule",
+      "seconds": 5.0813,
+      "peak_rss_kib": 1478976,
+      "digest": "8f4526ab9a868bf4971784ac8e499fd928ef2f3f6a025c583bc046abc321c664",
+      "source_sha256": "e1d3f7b11782d61f1d3c81c2c74f82614ce83a8dd6d4559bdf8814cf3be95188",
+      "outputs": {
+        "lib/TetrahedronCover/Schedule.olean": "d20750ea13609f7c75e1e01278aeb8efe639dedd0bf557783b18a36a87e5772a",
+        "lib/TetrahedronCover/Schedule.olean.server": "1b5acfca426bed1157fbded26e2490b37e5d481bc9bbe438778b615b5634925a",
+        "lib/TetrahedronCover/Schedule.olean.private": "92705531eb9229e49ab56b8e1593f726ce72fc5b6245c9be00c4d3402798b10c"
+      }
+    },
+    "TetrahedronCover.Nonuniform": {
+      "module": "TetrahedronCover.Nonuniform",
+      "seconds": 5.077,
+      "peak_rss_kib": 1474624,
+      "digest": "2116135095663640bef7da3cff26324710a7b4710fdd939bb7fa137f08cab58f",
+      "source_sha256": "c872cc33396e2a0d0a7f9f3f2fccd356ca3c8211f6cd5d5fb623b9a014e4b9f6",
+      "outputs": {
+        "lib/TetrahedronCover/Nonuniform.olean": "2368caccb417424b010f0b3ab18023fd75ef34890cb19d6b41f0ae1dedfcbcff",
+        "lib/TetrahedronCover/Nonuniform.olean.server": "4dfda78e7aa7ba305b637dcae20169a22b1f9224824a8b3b7bf12e639ffe1176",
+        "lib/TetrahedronCover/Nonuniform.olean.private": "1f6f216eb353b69e51451d5f2fc0dcbbfcc884b52bd6e1d2abd4c8a05a98eca0"
+      }
+    },
+    "TetrahedronCover.Main": {
+      "module": "TetrahedronCover.Main",
+      "seconds": 3.563,
+      "peak_rss_kib": 1468640,
+      "digest": "384187833aede486fae334fef26967f27931045a25992b524196c816a94db729",
+      "source_sha256": "46ede7438f966bb5bb73ce9f85769f87be7fa214b1095eef370de6b95e666de4",
+      "outputs": {
+        "lib/TetrahedronCover/Main.olean": "603543a619e0a4b936b1514e8c3c02ca0d8d2bdb6b0706e21c3182c577d1ba52",
+        "lib/TetrahedronCover/Main.olean.server": "bb192201a99657e1fd7df31ec09f5b805f8451eca07fcf9e99944e29750a4183",
+        "lib/TetrahedronCover/Main.olean.private": "a94bdde36af45959beb70b81636a43e66425df382169bc81bfb68a55b236dcd9"
+      }
+    },
+    "TetrahedronCover.Audit": {
+      "module": "TetrahedronCover.Audit",
+      "seconds": 3.0507,
+      "peak_rss_kib": 1449520,
+      "digest": "7aec5f3e0fbc408f42a949c25e3f9954ab561769935cd40009d0f850a319c60c",
+      "source_sha256": "b298ff986f43bdbde47688f618d6f2695ec8aaa922789b48496c84762e808843",
+      "outputs": {
+        "lib/TetrahedronCover/Audit.olean": "ba7bb679293d8a5aed6accba77e910f32e9fd6a8b6811a0c41678de8dfe176d0",
+        "lib/TetrahedronCover/Audit.olean.server": "4037b44c222e9c97f36c91650006139873bd6d06dfe4907c112ab39bc1b8569d",
+        "lib/TetrahedronCover/Audit.olean.private": "a3caee52d5730385e11d34d915b8e609b1a97b74021f69391e72c83c9e766119"
+      }
+    }
+  },
+  "replay_records": [
+    {
+      "module": "TetrahedronCover.Definitions.replay",
+      "seconds": 15.9653,
+      "peak_rss_kib": 1191808,
+      "digest": "4c22cd6069df9f2df5ab84db12f732702aca1e831414f7e856ee225d8a32685a",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.ArithmeticImports.replay",
+      "seconds": 14.3441,
+      "peak_rss_kib": 1203456,
+      "digest": "c2a98e99232ea1d662e8b2563315f26ad3d068c49dcb608e038be443ab5bb36c",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.CylinderCovering.Convexity.GeneralCapCoverage.replay",
+      "seconds": 15.0127,
+      "peak_rss_kib": 1188112,
+      "digest": "661e09ff80992774e56dbc36bb1785da33e1e3517a2835c1f3e25d068116327f",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Partition.replay",
+      "seconds": 15.1246,
+      "peak_rss_kib": 1225584,
+      "digest": "49e2393221863c03ec5dd28751c1e4c13dca59170ddba7c02090422e788094d5",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Algebra.replay",
+      "seconds": 14.5974,
+      "peak_rss_kib": 1265856,
+      "digest": "5178a25ca07da5d1235158aa1583a94140dda586f412f8fd6473958a6f814cfa",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Secant.replay",
+      "seconds": 13.8862,
+      "peak_rss_kib": 1234624,
+      "digest": "6717654b3dde4d28b58200f54c3cae02234d28462228375b75b1d97c26616daf",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.Imports.replay",
+      "seconds": 16.511,
+      "peak_rss_kib": 1616048,
+      "digest": "fda7015c52d0daa9110f5e3aacd8c2153d775a2f3f6e20a9f1c89589f52d97b2",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.TriangularCovering.Basic.replay",
+      "seconds": 13.4764,
+      "peak_rss_kib": 1749456,
+      "digest": "7da901a1dba23df7cc1b61ddbe911998039413160ca4bcd4093e37a5c52f22a3",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.TriangularCovering.CoordinateCover.replay",
+      "seconds": 17.3253,
+      "peak_rss_kib": 1603616,
+      "digest": "654ad6d39a2c11c8724948fdf33b4fe0722828d2844daae3f51f5282173ad81a",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.TriangularCovering.TriangleArea.replay",
+      "seconds": 16.8035,
+      "peak_rss_kib": 1641968,
+      "digest": "5d94c1be55b2a8b96f7438a910aa6699a0cdd70e8d45a1574b8e6add1b1ff882",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.TriangularCovering.Projection.replay",
+      "seconds": 19.2273,
+      "peak_rss_kib": 1665392,
+      "digest": "13cafaddede4cea5464280e2f63030904bd38c492738ac534fa80f1136ef94cc",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.TriangularCovering.CylinderFamily.replay",
+      "seconds": 10.5677,
+      "peak_rss_kib": 2053440,
+      "digest": "aa9d1a4db14126dd31d2568cc0c8a4e8e97333f3d95558e7d8c82158ff8c0e2b",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.TriangularCovering.Tetrahedron.replay",
+      "seconds": 11.424,
+      "peak_rss_kib": 2067824,
+      "digest": "5f7a156444e6c6e53a87f7c463ffdfd1b620c8b820eb5fec7ceff34d07c7f7d4",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "OAI.Geometry.TriangularCovering.Shadows.replay",
+      "seconds": 10.7013,
+      "peak_rss_kib": 2059632,
+      "digest": "6b19a4149c51a7157daeb7dd04ce0f585399c4bf81412df26fec8e1b1a8a781b",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Geometry.replay",
+      "seconds": 13.947,
+      "peak_rss_kib": 1937248,
+      "digest": "51b3bc1067ca795304b4522c1b8a519b5a63ab37e79ec665fd7614dab08d7229",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.InverseSqrt.replay",
+      "seconds": 11.9674,
+      "peak_rss_kib": 1659376,
+      "digest": "27792b4994d705e1d8a6d2b35ce0c119c1728f76b80f8197792a7556649f7a27",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.BenchmarkPolynomials.replay",
+      "seconds": 19.333,
+      "peak_rss_kib": 1929808,
+      "digest": "43b5657aa87069b9c2ac035a2c8e0956641af903e182eea79d9e658c2e8ec675",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Benchmark.replay",
+      "seconds": 10.9496,
+      "peak_rss_kib": 1644096,
+      "digest": "e079544c72e616e615264e0f62097a2eaac988ff34740b68cacc9e8667d4aa97",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Result.replay",
+      "seconds": 14.2575,
+      "peak_rss_kib": 1628480,
+      "digest": "7275631f2f41820b6b2e4d89819ee8b9821bad58944397f93e2eec05483e5bc4",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Estimates.replay",
+      "seconds": 10.7411,
+      "peak_rss_kib": 1655536,
+      "digest": "a388c349cc84b6b22079f795ef6c1dc728de80bebcf18cc53e9cb6d4dd21af07",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Continuum.replay",
+      "seconds": 15.6665,
+      "peak_rss_kib": 1645120,
+      "digest": "344a7a206bca671fd38acdd12fa2bc5654e7b6757ad3f1c0c5edd6e6d6ae43d4",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Schedule.replay",
+      "seconds": 11.4662,
+      "peak_rss_kib": 1857072,
+      "digest": "a5511fba83c863ed45820f58fddf8b908a5a41dd6a91731dd4e1e6faa63742d6",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Nonuniform.replay",
+      "seconds": 10.5805,
+      "peak_rss_kib": 2029024,
+      "digest": "dd67c9782a091b4501058e49cd26c89b7177a68b267c5777d6ccd12330a52765",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Main.replay",
+      "seconds": 17.1554,
+      "peak_rss_kib": 1621744,
+      "digest": "dc34d5642ee1e5bf1eea6d5eaae54abb5bd91bb6f4e1beed549a0936d7c41c2f",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    },
+    {
+      "module": "TetrahedronCover.Audit.replay",
+      "seconds": 12.2127,
+      "peak_rss_kib": 1661024,
+      "digest": "8a28bb8dd1c942635b8e20d495d3a497aae0559b0979b938cef609d97dc71809",
+      "artifact_closure_sha256": "7063b493a4e2313cdc3cb199c9949ac6542b666b57c1f76ccc10d87543f2d513"
+    }
+  ],
+  "source_sha256": {
+    "topics/cylinder-covering/formal/TetrahedronCover/Definitions.lean": "c18e9dfad9f256ebdca30e5d424851790c67a61a13108c4186e26913e98d53fc",
+    "topics/cylinder-covering/formal/OAI/Geometry/ArithmeticImports.lean": "e18c4e7240fc14717c1ab45ef77c65ef0846e3c850877bf5ed479bc6ee0117a7",
+    "topics/cylinder-covering/formal/OAI/Geometry/CylinderCovering/Convexity/GeneralCapCoverage.lean": "3d54d266f00a358c0e7ffa5fc1ef5611be83b72db5f77a4087035e5b1cca344f",
+    "topics/cylinder-covering/formal/TetrahedronCover/Partition.lean": "efb6a1db39108ba8b8e05a93152fb5529aad2d54c35f6a06c0847f61458db764",
+    "topics/cylinder-covering/formal/TetrahedronCover/Algebra.lean": "2d5d7223ef7f9d753ee3de23c4f928ccd1c2027e93513a0bf72297f8a4e09b76",
+    "topics/cylinder-covering/formal/TetrahedronCover/Secant.lean": "899cf686590a10bbeb8e74b9d4481bad88b813eca1f975cbc54c4e544008f1c6",
+    "topics/cylinder-covering/formal/OAI/Geometry/Imports.lean": "014880c5ebe3c63ef3b25a8987a7002e7e82248ba6078dcc6a95f08f09d55e4d",
+    "topics/cylinder-covering/formal/OAI/Geometry/TriangularCovering/Basic.lean": "e1cb1c867dcb5a29195da80f06dd007233fa41f14237d6efc4286cdfe805a932",
+    "topics/cylinder-covering/formal/OAI/Geometry/TriangularCovering/CoordinateCover.lean": "513b96ac6c9905b6be8513bdf03b755acae744c26f4c3f82be92ffd2dd914a37",
+    "topics/cylinder-covering/formal/OAI/Geometry/TriangularCovering/TriangleArea.lean": "06d588f3e2801fd5e434cd31a3436eb90eb1fe806cba84e8f7b7b73a634d28ef",
+    "topics/cylinder-covering/formal/OAI/Geometry/TriangularCovering/Projection.lean": "0ee47b1d2b3e8602522ce9ebae55d07ef9497007e2deb4a67118dfba58a19e9d",
+    "topics/cylinder-covering/formal/OAI/Geometry/TriangularCovering/CylinderFamily.lean": "361eb1f9dba74619c84f3da8e1dc019d1886dfa4969d4e75f9fe8f636562716d",
+    "topics/cylinder-covering/formal/OAI/Geometry/TriangularCovering/Tetrahedron.lean": "dd44fae6e4dfe0c7fe0e286fbc15088bb3eec7e1734cf6e9780c894871b40094",
+    "topics/cylinder-covering/formal/OAI/Geometry/TriangularCovering/Shadows.lean": "c1cb2e1e75eb2db554ba3829e24e1f89b61bf14a88177fd0092142e20dbb2092",
+    "topics/cylinder-covering/formal/TetrahedronCover/Geometry.lean": "21930aa813c85dad3d94fdf1b512e26f1fccb744562a3e3941113dfe8f61ccc8",
+    "topics/cylinder-covering/formal/TetrahedronCover/InverseSqrt.lean": "dd2dc6dbe8b5ae24b327bfc2a1cdd3fbb594928b2fc2f97edebe511f038ffb19",
+    "topics/cylinder-covering/formal/TetrahedronCover/BenchmarkPolynomials.lean": "a130239af65926f4a2a25db0bf52ec0c9e8dc3a241a7d8bcf0163d39773ddd1c",
+    "topics/cylinder-covering/formal/TetrahedronCover/Benchmark.lean": "d995a100b5cc0d3db08ab0e839b5c06f06e95766e4fed42941c55f2f28f2d330",
+    "topics/cylinder-covering/formal/TetrahedronCover/Result.lean": "1c0b2f9014907b41f21e0781d18cdff74188be8e0ea700972e9f381be7b0b7f3",
+    "topics/cylinder-covering/formal/TetrahedronCover/Estimates.lean": "13624f082beb2ccea6b3514dce867f366c36eaa7fe5f2833ab70c4d6c9ca1024",
+    "topics/cylinder-covering/formal/TetrahedronCover/Continuum.lean": "8eef4964d41c126d71d7f659cbe00e4c1ac7a68070396508621ec0f2613e3185",
+    "topics/cylinder-covering/formal/TetrahedronCover/Schedule.lean": "e1d3f7b11782d61f1d3c81c2c74f82614ce83a8dd6d4559bdf8814cf3be95188",
+    "topics/cylinder-covering/formal/TetrahedronCover/Nonuniform.lean": "c872cc33396e2a0d0a7f9f3f2fccd356ca3c8211f6cd5d5fb623b9a014e4b9f6",
+    "topics/cylinder-covering/formal/TetrahedronCover/Main.lean": "46ede7438f966bb5bb73ce9f85769f87be7fa214b1095eef370de6b95e666de4",
+    "topics/cylinder-covering/formal/TetrahedronCover/Audit.lean": "b298ff986f43bdbde47688f618d6f2695ec8aaa922789b48496c84762e808843",
+    "topics/cylinder-covering/formal/build.py": "4902ec6d8689cb9330b13346c4c73e3fbdacb5002e87a227d85cf7f5712de071",
+    "topics/cylinder-covering/formal/lean-toolchain": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b",
+    "topics/cylinder-covering/formal/lake-manifest.json": "cdf38326f373a485678d71160da23240cb749ab13e228a09b01cca3ee08b4350",
+    "topics/cylinder-covering/formal/lakefile.toml": "5552cfd3cb43136e61b1203675e6fea942272984f28f5c87094bf242519804cb",
+    "topics/cylinder-covering/formal/upstream-manifest.json": "d7018182241904c1eb4288d8a5db3db08f0a947a0782117d757ff2fa6b738df0",
+    "topics/cylinder-covering/formal/tools/KernelReplay.lean": "54dad8476f96258337c93480e836616046d6b85bdd881a606f91a4a29d7306fd",
+    "topics/cylinder-covering/formal/tools/upstream/LeanChecker.lean": "2d18ec111d73c536b0bdee2533556bb9548c349f386797d3d3837b1f84d55dae",
+    "topics/cylinder-covering/formal/tools/replay-manifest.json": "363468a30943965346cb15b505ff89b4acd0cd201a338ecc572c40c887ce0a0e",
+    "topics/cylinder-covering/formal/tools/generate_certificates.py": "3d809c0f94c4b51488f6a7135a53d4d05d6732aad6525a33c56f5f32d0e969c5",
+    "topics/cylinder-covering/formal/TetrahedronCover.lean": "2d7cc7190e391ca3fa7320e5a8ca4da227d2b290d3383383ab01cc2834796995",
+    "topics/cylinder-covering/reproduce.py": "d2d1bc9663f04030084d2701e976e31635056f0e5573199518c2fa5d5e6b8a7b",
+    "topics/cylinder-covering/verification/verify.py": "ef1d3e29c364e051e437fcf822c2e84653cf523d5f30a05f6dd147db69afd8e0",
+    "topics/cylinder-covering/verification/secant_verify.py": "8b5bad7c4836cb8766f971b59f0a7498cffab684ec5562c7726d847cfd65e13d",
+    "topics/cylinder-covering/verification/last-run.txt": "01d5564e79e7822c33b11944c980c1965b7c3157fce3b8375963436e2c17e174",
+    "topics/cylinder-covering/verification/secant-last-run.txt": "6310e020bfa0eb80ef0ef8c43bcfb0b63e0d1e5f012ef0101201ebe058517f2a",
+    "topics/cylinder-covering/sources/manifest.json": "3b1f838b08b8a29cc4164f416fd1a0d4d13de9b6e645a7d2f3ac3749baec94f8"
+  },
+  "transcript": "kernel-audit.txt"
+}

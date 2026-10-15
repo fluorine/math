@@ -3,6 +3,8 @@
 **[Read the mathematical note (PDF)](output/pdf/cylinder-covering-note.pdf)**
 · [LaTeX source](publication/cylinder-covering-note.tex)
 · [Full Markdown proof](SECANT-THEOREM.md)
+· [Lean proof and reproduction](formal/README.md)
+· [Kernel audit](formal/kernel-audit.json)
 · [Result and comparison](RESULT.md)
 · [Novelty audit](NOVELTY.md)
 
@@ -84,9 +86,20 @@ area sums, and separately check the generators' axes, vertices, projections
 and physical areas. Exact power sums avoid allocating even the four-million-
 cylinder example. No sampled point cloud substitutes for coverage.
 
-**The new theorem is not formalized in Lean and has not been reviewed by a
-human referee.** The vendored Lean files are prior-art evidence for source
-constants. They do not constitute a kernel check of the new theorem.
+The new primary theorem has a [Lean formalization](formal/README.md) of the
+actual closed-body coverage, perpendicular triangular bases, geometric area
+sum, exact angle, finite error estimates, count schedules, two-sided asymptotic
+remainder, arbitrary-partition mesh bound and complete numerical interval.
+The public theorem `TetrahedronCover.tetrahedron_20000` combines the actual
+20,000-cylinder coverage and area claims in one statement. The
+[kernel audit](formal/kernel-audit.json) records the final checked statements,
+axioms, build and standalone replay; negative controls are included.
+
+The analytical PDF and LaTeX are preserved as published. Their verification-status
+paragraph predates this Lean addendum and is superseded by the current audit.
+The historical source-comparison and restricted-class optimality arguments remain
+separately identified written proofs with exact-arithmetic checks. No human
+referee review is claimed.
 
 From a clean checkout, Python 3.9 or later and its standard library suffice:
 
@@ -98,7 +111,17 @@ python3 topics/cylinder-covering/reproduce.py
 
 This checks all 91 source hashes and available Git blob IDs, runs both exact
 verifiers serially, and requires their output to match the recorded certificates.
-It needs no network, external Python packages, computer algebra system or Lean.
+This Python-only command needs no network, external Python packages, computer
+algebra system or Lean. To run the complete formal audit after installing the
+pinned Lean/mathlib dependencies as described in [formal/README.md](formal/README.md):
+
+```sh
+python3 topics/cylinder-covering/reproduce.py --formal --fresh
+```
+
+The command recompiles every local proof module, checks the final axiom lists,
+replays each local module through Lean’s kernel replay implementation, and
+requires rejection of two deliberately false proof obligations.
 
 Generate any one cylinder, with exact rational data, by index:
 

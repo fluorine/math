@@ -1,0 +1,203 @@
+#!/usr/bin/env python3
+"""Generate polynomial proof data; Lean checks every identity and final inequality.
+
+The generator is untrusted. No numerical value is accepted merely because this
+program produces it: generated theorems use ring and norm_num, whose proof terms
+are subsequently checked by the Lean kernel.
+"""
+import argparse
+from fractions import Fraction as F
+from math import comb
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parents[1]
+
+
+def add(a, b):
+    c = [F(0)] * max(len(a), len(b))
+    for i, x in enumerate(a): c[i] += x
+    for i, x in enumerate(b): c[i] += x
+    return c
+
+
+def mul(a, b):
+    c = [F(0)] * (len(a) + len(b) - 1)
+    for i, x in enumerate(a):
+        for j, y in enumerate(b): c[i+j] += x*y
+    return c
+
+
+def scale(a, b): return [b*x for x in a]
+
+
+def power(a, n):
+    result = [F(1)]
+    for _ in range(n): result = mul(result, a)
+    return result
+
+
+def taylor(n): return [F((-1)**k * comb(2*k, k), 4**k) for k in range(n+1)]
+
+
+def compose(a, b):
+    result = [F(0)]
+    for c in reversed(a): result = add(mul(result, b), [c])
+    return result
+
+
+def real(x):
+    x = F(x)
+    return f'({x.numerator} / {x.denominator} : ℝ)' if x.denominator != 1 else f'({x.numerator} : ℝ)'
+
+
+def expression(a, variable='x'):
+    return ' +\n    '.join(f'{real(c)} * {variable}^{k}' for k, c in enumerate(a) if c) or '(0 : ℝ)'
+
+
+def bernstein(a, variable='z'):
+    n = len(a)-1
+    b = [sum(a[j] * F(comb(k,j), comb(n,j)) for j in range(k+1)) for k in range(n+1)]
+    assert all(c >= 0 for c in b)
+    return ' +\n    '.join(f'{real(c*comb(n,k))} * {variable}^{k} * (1-{variable})^{n-k}' for k,c in enumerate(b) if c)
+
+
+def antiderivative(a):
+    # Q(x+1)-Q(x)=P(x), Q(0)=0, solved from the highest coefficient down.
+    q = [F(0)] * (len(a)+1)
+    for k in range(len(a)-1, -1, -1):
+        q[k+1] = (a[k] - sum(q[j]*comb(j,k) for j in range(k+2,len(q)))) / (k+1)
+    return q
+
+
+def inverse_sqrt_source():
+    s = '''module
+public import TetrahedronCover.Definitions
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.NormNum
+public import Mathlib.Tactic.Positivity
+
+@[expose] public section
+
+/-! Generated exact polynomial certificates for reciprocal square roots.
+Regenerate with tools/generate_certificates.py. All coefficients are rational;
+all equalities are checked by ring and all order conclusions by proof terms. -/
+namespace TetrahedronCover
+noncomputable section
+'''
+    for n in (8,9):
+        a = taylor(n)
+        s += f'\ndef taylor{n} (z : ℝ) : ℝ :=\n    {expression(a,"z")}\n'
+        s += f'\nprivate lemma taylor{n}_bernstein (z : ℝ) : taylor{n} z =\n    {bernstein(a)} := by\n  unfold taylor{n}\n  ring\n'
+        s += f'\nlemma taylor{n}_nonneg {{z : ℝ}} (hz : 0 ≤ z) (hz1 : z ≤ 1) : 0 ≤ taylor{n} z := by\n  have h1 : 0 ≤ 1-z := sub_nonneg.mpr hz1\n  rw [taylor{n}_bernstein]\n  positivity\n'
+        residual = mul([F(1),F(1)],mul(a,a)); residual[0]-=1
+        if n%2: residual=scale(residual,-1)
+        assert all(c==0 for c in residual[:n+1])
+        residual=residual[n+1:]
+        lhs = f'(1+z)*(taylor{n} z)^2-1' if n%2==0 else f'1-(1+z)*(taylor{n} z)^2'
+        s += f'\nprivate lemma taylor{n}_residual (z : ℝ) : {lhs} =\n  z^{n+1} * (\n    {bernstein(residual)}) := by\n  unfold taylor{n}\n  ring\n'
+        s += f'\nlemma taylor{n}_residual_nonneg {{z : ℝ}} (hz : 0 ≤ z) (hz1 : z ≤ 1) : 0 ≤ {lhs} := by\n  have h1 : 0 ≤ 1-z := sub_nonneg.mpr hz1\n  rw [taylor{n}_residual]\n  positivity\n'
+    s += '''
+lemma inverse_sqrt_bounds {z : ℝ} (hz : 0 ≤ z) (hz1 : z ≤ 1) :
+    taylor9 z ≤ 1 / Real.sqrt (1+z) ∧
+    1 / Real.sqrt (1+z) ≤ taylor8 z := by
+  have hp : 0 < 1+z := by linarith
+  have hs : 0 < Real.sqrt (1+z) := Real.sqrt_pos.mpr hp
+  have hs2 : (Real.sqrt (1+z))^2 = 1+z := Real.sq_sqrt hp.le
+  have h8 := taylor8_nonneg hz hz1
+  have h9 := taylor9_nonneg hz hz1
+  have r8 := taylor8_residual_nonneg hz hz1
+  have r9 := taylor9_residual_nonneg hz hz1
+  have sq8 : 1 ≤ (taylor8 z * Real.sqrt (1+z))^2 := by
+    rw [mul_pow, hs2]
+    nlinarith only [r8]
+  have sq9 : (taylor9 z * Real.sqrt (1+z))^2 ≤ 1 := by
+    rw [mul_pow, hs2]
+    nlinarith only [r9]
+  constructor
+  · apply (le_div_iff₀ hs).mpr
+    nlinarith only [sq9, mul_nonneg h9 hs.le]
+  · apply (div_le_iff₀ hs).mpr
+    nlinarith only [sq8, mul_nonneg h8 hs.le]
+
+end
+end TetrahedronCover
+'''
+    return s
+
+
+def benchmark_source():
+    e=F(1,10);d=F(1,5000)
+    m=1+e*e+F(9,16)*e**4
+    delta=d*(m*(e+e*e/2)+2*e*e+m*e*e*d/4)/(2*(1-e))
+    endpoint=[F(1,5000), F(1,5000)]
+    mid=[F(1,10000),F(1,5000)]
+    left=[F(0),F(1,5000)]
+    slope=scale(add([F(1)],mul(left,endpoint)), F(1,2))
+    cap=add([1+F(9,16)*e**4+delta],scale(add(power(endpoint,2),power(endpoint,4)),e*e/2))
+    arg=scale(add(power(slope,2),scale(power(mid,2),2)),e*e)
+    s='''module
+public import TetrahedronCover.InverseSqrt
+
+@[expose] public section
+
+/-! Exact finite-sum certificates, generated by tools/generate_certificates.py.
+The telescope is a polynomial identity over all real x. Lean checks it with
+ring, and checks the final rational bounds with norm_num; Python is not trusted. -/
+namespace TetrahedronCover
+noncomputable section
+open scoped BigOperators
+
+def benchmarkDelta : ℝ := @DELTA@
+def benchmarkCap (x : ℝ) : ℝ := C (1/10) ((x+1)/5000) + benchmarkDelta
+def benchmarkArgument (x : ℝ) : ℝ :=
+  (1/10 : ℝ)^2 * (((1+(x/5000)*((x+1)/5000))/2)^2 + 2*((2*x+1)/10000)^2)
+'''.replace('@DELTA@',real(delta))
+    for n in (8,9):
+        p=scale(mul(power(cap,2),compose(taylor(n),arg)),F(1,10000))
+        q=antiderivative(p)
+        s+=f'\ndef benchmarkSummand{n} (x : ℝ) : ℝ :=\n  (benchmarkCap x)^2 * taylor{n} (benchmarkArgument x) / 10000\n'
+        s+=f'\ndef benchmarkPrimitive{n} (x : ℝ) : ℝ :=\n    {expression(q)}\n'
+        s+=f'\nlemma benchmark_telescope{n} (x : ℝ) :\n    benchmarkSummand{n} x = benchmarkPrimitive{n} (x+1) - benchmarkPrimitive{n} x := by\n  unfold benchmarkSummand{n} benchmarkCap benchmarkArgument benchmarkDelta C h G taylor{n} benchmarkPrimitive{n}\n  ring\n'
+        s+=f'''\nlemma benchmark_sum{n} (n : ℕ) :
+    (∑ j ∈ Finset.range n, benchmarkSummand{n} (j : ℝ)) =
+      benchmarkPrimitive{n} (n : ℝ) - benchmarkPrimitive{n} 0 := by
+  induction n with
+  | zero => simp
+  | succ n ih =>
+    rw [Finset.sum_range_succ, ih, benchmark_telescope{n}]
+    push_cast
+    ring
+'''
+    s+='''
+lemma benchmark_upper_rational :
+    (∑ j ∈ Finset.range 5000, benchmarkSummand8 (j : ℝ)) ≤
+      (499921585997001774 / 1000000000000000000 : ℝ) := by
+  rw [benchmark_sum8]
+  norm_num [benchmarkPrimitive8]
+
+lemma benchmark_lower_rational :
+    (499921585997001674 / 1000000000000000000 : ℝ) ≤
+      ∑ j ∈ Finset.range 5000, benchmarkSummand9 (j : ℝ) := by
+  rw [benchmark_sum9]
+  norm_num [benchmarkPrimitive9]
+
+end
+end TetrahedronCover
+'''
+    return s
+
+
+def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--check',action='store_true')
+    args=parser.parse_args()
+    for name,content in [('InverseSqrt.lean',inverse_sqrt_source()),('BenchmarkPolynomials.lean',benchmark_source())]:
+        path=HERE/'TetrahedronCover'/name
+        if args.check:
+            if not path.exists() or path.read_text()!=content:
+                raise SystemExit('Generated proof data differ: '+name)
+        else: path.write_text(content)
+        print(('MATCH ' if args.check else 'WROTE ')+name)
+
+if __name__=='__main__': main()

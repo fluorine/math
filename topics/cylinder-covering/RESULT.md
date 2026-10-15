@@ -151,5 +151,9 @@ The complete package is published under
 It includes the PDF, standalone LaTeX, full supporting derivations, generators,
 independent exact certificates and source attribution. The research used
 standard-library exact arithmetic without cloud compute or large cylinder arrays.
-The new theorem is not Lean-formalized or human-refereed. Pinned Lean files
-provide evidence about the earlier source constructions.
+The primary theorem is now formalized in Lean; see the [formal proof guide](formal/README.md)
+and [kernel audit](formal/kernel-audit.json). This covers the actual geometric
+construction and its full quantitative claims. The comparison with earlier
+constructions and supplementary restricted-class optimality remain separately
+identified written arguments. The preserved analytical PDF predates the Lean
+addendum. No human referee review is claimed.

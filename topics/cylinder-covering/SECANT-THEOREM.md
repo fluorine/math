@@ -523,7 +523,11 @@ bounds and exact polynomial power sums. The constructor is loaded only for
 separate physical-metric, projection, vertex, and area regression checks.
 See [the report](verification/secant-report.md) for outward intervals and
 [the saved run](verification/secant-last-run.txt) for reproduction output.
-No point-cloud check substitutes for Sections 2–3, and no Lean build is claimed.
+No point-cloud check substitutes for Sections 2–3. The subsequent
+[Lean formalization](formal/README.md) supplies kernel-checked coverage of the
+actual closed tetrahedron, the geometric area identity and the quantitative
+claims; its [audit record](formal/kernel-audit.json) is separate from the
+independent exact-arithmetic checks described here.
 
 ## 8. Published comparison at the finite benchmark
 
