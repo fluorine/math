@@ -1,0 +1,237 @@
+Exact JSON matches Lean literal certificate data.
+Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)
+Checking VixOverlap.ScheduleData
+Checking VixOverlap.CoinProduct
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/CoinProduct.lean:50:41: warning: This simp argument is unused:
+  hr
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hi]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Checking VixOverlap.ScheduleStock
+Checking VixOverlap.ScheduleCertificate
+Checking VixOverlap.Payoff
+Checking VixOverlap.Vanilla
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/Vanilla.lean:53:8: warning: `if_neg` has been deprecated: Use `ite_eq_right` instead
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/Vanilla.lean:162:18: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/Vanilla.lean:185:44: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/Vanilla.lean:219:18: warning: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+Checking VixOverlap.QuoteContract
+Checking VixOverlap.PriceIdentification
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/PriceIdentification.lean:25:54: warning: `if_false` has been deprecated: Use `ite_false` instead
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/PriceIdentification.lean:25:64: warning: `if_true` has been deprecated: Use `ite_true` instead
+Checking VixOverlap.QuoteBridge
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/QuoteBridge.lean:17:42: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rawWeight, Fintype.sum_prod_type, Signs, CoinProduct.Signs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/QuoteBridge.lean:113:29: warning: Unused tactic linter: `omega` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/QuoteBridge.lean:113:29: warning: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+Checking VixOverlap.Model
+Checking VixOverlap.ScheduleModel
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/ScheduleModel.lean:78:14: warning: This simp argument is unused:
+  Fintype.card_fun
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Signs, CoinProduct.Signs]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/ScheduleModel.lean:126:27: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/ScheduleModel.lean:192:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/ScheduleModel.lean:329:25: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Checking VixOverlap.ScheduleBounds
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/ScheduleBounds.lean:22:10: warning: Try this: intro _ _
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/ScheduleBounds.lean:110:23: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Checking VixOverlap.BudgetAlgebra
+Checking VixOverlap.ScheduleMoments
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/ScheduleMoments.lean:147:64: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/Volumes/2tb/math/.worktrees/vix-overlap-consistency/projects/vix-overlap-consistency/formal/VixOverlap/ScheduleMoments.lean:200:13: warning: This simp argument is unused:
+  Fin.val_mk
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [Nat.add_assoc, Nat.reduceAdd, Nat.cast_add, Nat.cast_one] at h
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+Checking VixOverlap.PairTests
+Checking VixOverlap.FinancialTests
+Checking VixOverlap.Headline
+Checking VixOverlap
+Checking VixOverlap.Audit
+structure VixOverlap.FiniteModel.{u_1} {N : ℕ} (grid : VixOverlap.EventGrid N) (Ω : Type u_1) [Fintype Ω] : Type u_1
+number of parameters: 4
+fields:
+  VixOverlap.FiniteModel.law : VixOverlap.FiniteLaw Ω
+  VixOverlap.FiniteModel.filtration : VixOverlap.HistoryFiltration N Ω
+  VixOverlap.FiniteModel.stock : Fin (N + 1) → Ω → ℝ
+  VixOverlap.FiniteModel.budget : Fin (N + 1) → Fin N → Ω → ℝ
+  VixOverlap.FiniteModel.stock_pos : ∀ (j : Fin (N + 1)) (ω : Ω), 0 < self.stock j ω
+  VixOverlap.FiniteModel.stock_initial : ∀ (ω : Ω), self.stock 0 ω = 1
+  VixOverlap.FiniteModel.stock_adapted : ∀ (j : Fin (N + 1)) (ω η : Ω),
+      (self.filtration.partition j) ω η → self.stock j ω = self.stock j η
+  VixOverlap.FiniteModel.budget_nonneg : ∀ (j : Fin (N + 1)) (h : Fin N) (ω : Ω), ↑j ≤ ↑h → 0 ≤ self.budget j h ω
+  VixOverlap.FiniteModel.budget_adapted : ∀ (j : Fin (N + 1)) (h : Fin N) (ω η : Ω),
+      ↑j ≤ ↑h → (self.filtration.partition j) ω η → self.budget j h ω = self.budget j h η
+  VixOverlap.FiniteModel.martingale : ∀ (j k : Fin (N + 1)),
+      j ≤ k →
+        ∀ (ω : Ω),
+          VixOverlap.historySum self.law.weight (self.filtration.partition j) ω (self.stock k) =
+            self.stock j ω * VixOverlap.historyMass self.law.weight (self.filtration.partition j) ω
+  VixOverlap.FiniteModel.diagonal : ∀ (h : Fin N) (ω : Ω),
+      (VixOverlap.historySum self.law.weight (self.filtration.partition h.castSucc) ω fun η =>
+          -2 * Real.log (self.stock h.succ η / self.stock h.castSucc η)) =
+        self.budget h.castSucc h ω * VixOverlap.historyMass self.law.weight (self.filtration.partition h.castSucc) ω
+  VixOverlap.FiniteModel.tower : ∀ (j k : Fin (N + 1)) (h : Fin N),
+      j ≤ k →
+        ↑k ≤ ↑h →
+          ∀ (ω : Ω),
+            VixOverlap.historySum self.law.weight (self.filtration.partition j) ω (self.budget k h) =
+              self.budget j h ω * VixOverlap.historyMass self.law.weight (self.filtration.partition j) ω
+constructor:
+  VixOverlap.FiniteModel.mk.{u_1} {N : ℕ} {grid : VixOverlap.EventGrid N} {Ω : Type u_1} [Fintype Ω]
+    (law : VixOverlap.FiniteLaw Ω) (filtration : VixOverlap.HistoryFiltration N Ω) (stock : Fin (N + 1) → Ω → ℝ)
+    (budget : Fin (N + 1) → Fin N → Ω → ℝ) (stock_pos : ∀ (j : Fin (N + 1)) (ω : Ω), 0 < stock j ω)
+    (stock_initial : ∀ (ω : Ω), stock 0 ω = 1)
+    (stock_adapted : ∀ (j : Fin (N + 1)) (ω η : Ω), (filtration.partition j) ω η → stock j ω = stock j η)
+    (budget_nonneg : ∀ (j : Fin (N + 1)) (h : Fin N) (ω : Ω), ↑j ≤ ↑h → 0 ≤ budget j h ω)
+    (budget_adapted :
+      ∀ (j : Fin (N + 1)) (h : Fin N) (ω η : Ω), ↑j ≤ ↑h → (filtration.partition j) ω η → budget j h ω = budget j h η)
+    (martingale :
+      ∀ (j k : Fin (N + 1)),
+        j ≤ k →
+          ∀ (ω : Ω),
+            VixOverlap.historySum law.weight (filtration.partition j) ω (stock k) =
+              stock j ω * VixOverlap.historyMass law.weight (filtration.partition j) ω)
+    (diagonal :
+      ∀ (h : Fin N) (ω : Ω),
+        (VixOverlap.historySum law.weight (filtration.partition h.castSucc) ω fun η =>
+            -2 * Real.log (stock h.succ η / stock h.castSucc η)) =
+          budget h.castSucc h ω * VixOverlap.historyMass law.weight (filtration.partition h.castSucc) ω)
+    (tower :
+      ∀ (j k : Fin (N + 1)) (h : Fin N),
+        j ≤ k →
+          ↑k ≤ ↑h →
+            ∀ (ω : Ω),
+              VixOverlap.historySum law.weight (filtration.partition j) ω (budget k h) =
+                budget j h ω * VixOverlap.historyMass law.weight (filtration.partition j) ω) :
+    VixOverlap.FiniteModel grid Ω
+def VixOverlap.FitsVanilla : VixOverlap.FiniteLaw VixOverlap.ScheduleCertificate.Schedule → ℝ → Finset (Fin 3) → Prop :=
+fun p ε J =>
+  (∀ (j : Fin 8) (K : ℝ),
+      0 ≤ K →
+        VixOverlap.stockCallPrice (VixOverlap.ScheduleModel.model p) j K =
+          VixOverlap.stockCallPrice (VixOverlap.ScheduleModel.model VixOverlap.ScheduleModel.uniformScheduleLaw) j K) ∧
+    ∀ w ∈ J,
+      ∀ (K : ℝ),
+        0 ≤ K →
+          VixOverlap.vixCallPrice (VixOverlap.ScheduleModel.model p) (VixOverlap.ScheduleModel.window w) K =
+            VixOverlap.QuoteContract.targetCall VixOverlap.ScheduleModel.c ε w K
+VixOverlap.financial_three_window_obstruction (ε : ℝ) (h0 : 0 ≤ ε) (hε : ε < 1 / 30) :
+  (∀ (J : Finset (Fin 3)),
+      J.card ≤ 2 →
+        ∃ p,
+          VixOverlap.FitsVanilla p ε J ∧
+            (∀ (i : Fin 6) (s : VixOverlap.ScheduleModel.State),
+                (VixOverlap.ScheduleModel.model p).budget 0 i.succ s = VixOverlap.ScheduleModel.c / 2) ∧
+              (0 < ε → ∀ (s : VixOverlap.ScheduleModel.State), 0 < (VixOverlap.ScheduleModel.model p).law.weight s) ∧
+                (∀ (s : VixOverlap.ScheduleModel.State),
+                    VixOverlap.ScheduleModel.gamma p s ^ 2 < VixOverlap.ScheduleModel.momentBound) ∧
+                  ∀ (w : Fin 3) (s : VixOverlap.ScheduleModel.State),
+                    (VixOverlap.historySum (VixOverlap.ScheduleModel.model p).law.weight
+                        ((VixOverlap.ScheduleModel.model p).filtration.partition
+                          (VixOverlap.ScheduleModel.window w).start)
+                        s fun z =>
+                        -2 *
+                          Real.log
+                            ((VixOverlap.ScheduleModel.model p).stock (VixOverlap.ScheduleModel.window w).finish z /
+                              (VixOverlap.ScheduleModel.model p).stock (VixOverlap.ScheduleModel.window w).start z)) =
+                      (VixOverlap.ScheduleModel.model p).windowBudget (VixOverlap.ScheduleModel.window w) s *
+                        VixOverlap.historyMass (VixOverlap.ScheduleModel.model p).law.weight
+                          ((VixOverlap.ScheduleModel.model p).filtration.partition
+                            (VixOverlap.ScheduleModel.window w).start)
+                          s) ∧
+    (¬∃ p, VixOverlap.FitsVanilla p ε Finset.univ) ∧
+      (∀ (w : Fin 3),
+          ∑ n,
+              VixOverlap.ScheduleCertificate.mixedTarget ε w n *
+                VixOverlap.QuoteContract.countVix VixOverlap.ScheduleModel.c ↑n ^ 2 =
+            ((VixOverlap.ScheduleModel.model VixOverlap.ScheduleModel.uniformScheduleLaw).expectation fun state =>
+                -2 *
+                  Real.log
+                    ((VixOverlap.ScheduleModel.model VixOverlap.ScheduleModel.uniformScheduleLaw).stock
+                        (VixOverlap.ScheduleModel.window w).finish state /
+                      (VixOverlap.ScheduleModel.model VixOverlap.ScheduleModel.uniformScheduleLaw).stock
+                        (VixOverlap.ScheduleModel.window w).start state)) /
+              3) ∧
+        (∀ (i j : Fin 3),
+            i < j →
+              ∀ (K : ℝ),
+                ∑ n,
+                      VixOverlap.ScheduleCertificate.mixedTarget ε i n *
+                        max (VixOverlap.QuoteContract.countVix VixOverlap.ScheduleModel.c ↑n ^ 2 - K) 0 -
+                    ∑ n,
+                      VixOverlap.ScheduleCertificate.mixedTarget ε j n *
+                        max (VixOverlap.QuoteContract.countVix VixOverlap.ScheduleModel.c ↑n ^ 2 - K) 0 ≤
+                  -(2 / 3) *
+                    (VixOverlap.ScheduleModel.model VixOverlap.ScheduleModel.uniformScheduleLaw).expectation
+                      fun state =>
+                      Real.log
+                          ((VixOverlap.ScheduleModel.model VixOverlap.ScheduleModel.uniformScheduleLaw).stock
+                            (VixOverlap.ScheduleModel.window j).start state) -
+                        Real.log
+                          ((VixOverlap.ScheduleModel.model VixOverlap.ScheduleModel.uniformScheduleLaw).stock
+                            (VixOverlap.ScheduleModel.window i).start state)) ∧
+          ∑ t,
+                  ↑(VixOverlap.ScheduleCertificate.windowDual t.1 t.2) *
+                    VixOverlap.ScheduleCertificate.mixedTarget ε t.1 t.2 -
+                21 / 32 =
+              (1 - 30 * ε) / 32 ∧
+            0 < (1 - 30 * ε) / 32
+VixOverlap.QuoteContract.vanilla_three_window_obstruction {c : ℝ} (hc : 0 < c) (ε : ℝ) (h0 : 0 ≤ ε) (hε : ε < 1 / 30) :
+  VixOverlap.QuoteContract.ThreeWindowObstruction c ε
+VixOverlap.ScheduleModel.model (p : VixOverlap.FiniteLaw VixOverlap.ScheduleCertificate.Schedule) :
+  VixOverlap.FiniteModel VixOverlap.ScheduleModel.grid VixOverlap.ScheduleModel.State
+'VixOverlap.financial_three_window_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.QuoteContract.vanilla_three_window_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleModel.model' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleModel.model_window_log_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleModel.uniform_model_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleModel.uniform_moment_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleModel.model_stock_forward' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleModel.model_expected_window_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleModel.model_vix_second_moment' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleModel.model_overlap_log_cost' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.FiniteModel.intervalBudget_additive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.fitting_root_budgets' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.genuinely_overlapping' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.quoted_second_moment_log_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.quoted_overlap_log_inequality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.exact_separation_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleCertificate.three_window_count_obstruction' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'VixOverlap.ScheduleCertificate.universal_separator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleCertificate.mixed_strictly_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.ScheduleCertificate.prefix_marginals_bit_mean' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.Vanilla.nonneg_calls_identify_fiber_statistic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.Vanilla.active_count_identified' depends on axioms: [propext, Classical.choice, Quot.sound]
+PASS: 19 local modules freshly compiled; exit status 0.
