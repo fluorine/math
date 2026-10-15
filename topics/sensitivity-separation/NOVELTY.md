@@ -1,5 +1,11 @@
 # Novelty and target audit — 15 October 2026
 
+The completed, deeper comparison is in
+[publication/NOVELTY_AUDIT.md](publication/NOVELTY_AUDIT.md). It distinguishes
+the classical first-difference mechanism, the specific directed adaptation,
+immediate source-proof corollaries, and the additional profile arguments.
+This file preserves the original target and research-stage audit.
+
 Initial status: research targets, not established results. The target/audit
 sections below were written before mathematical experiments. The final
 outcome section records the subsequent proved results and their scope.

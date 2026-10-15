@@ -2,9 +2,15 @@
 
 **The compact-generator target is met by a proved construction.** A separate
 coupled-profile theorem also gives a strictly smaller ordinary-sensitivity
-bound on the same explicit seed. The results have independent mathematical
+bound on the same explicit seed. The results have independent AI-agent mathematical
 and code review, with bounded executable checks. Historical novelty remains
 provisional; these are not claims of peer review or Lean formalization.
+
+For public reading, start with the [typeset note](output/pdf/sensitivity-note.pdf),
+the [repository overview](README.md), and the
+[completed novelty audit](publication/NOVELTY_AUDIT.md). The latter gives
+source-by-source comparisons and an explicit scalar countermodel showing
+that the new inequalities do not follow from the old numerical system.
 
 ## Uniform deterministic labels
 
@@ -66,6 +72,12 @@ The numerical gain is small. An exponent above 2.0154 already follows from
 the existing recurrences with better parameters; it is **baseline**, not
 the novelty claim. Neither the optional finite scan nor this seed is
 claimed globally optimal. See [BASELINE.md](proofs/BASELINE.md).
+
+Both calculations use the no-coherent-16 contract. For the chosen seed,
+seven leading base-1001 digits are common, so the label theorem actually
+gives a coherent-set bound of eight. This additional direct corollary is
+unused in both calculations; the reported comparison isolates the profile
+refinement at a fixed contract, rather than optimizing this particular seed.
 
 ## Reproduce
 

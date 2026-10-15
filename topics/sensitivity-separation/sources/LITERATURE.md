@@ -1,5 +1,10 @@
 # Source and literature audit
 
+The completed follow-up comparison, including Cole–Vishkin, canonical Ramsey,
+star-colored graphs, lexicographic products, and the exact profile-proof
+boundary, is in [the publication novelty audit](../publication/NOVELTY_AUDIT.md).
+The inventory below preserves the initial source-recovery audit.
+
 Audit date: 15 October 2026 (Europe/Amsterdam). Independent reader: verifier
 agent; saved and integrated by primary. No priority guarantee is implied.
 

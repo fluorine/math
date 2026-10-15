@@ -1,5 +1,10 @@
 # Succinct first-difference labels for a sensitivity construction
 
+This is the working manuscript. The public version is the
+[typeset note](output/pdf/sensitivity-note.pdf), with
+[standalone LaTeX source](publication/sensitivity-note.tex) and a
+[deeper novelty audit](publication/NOVELTY_AUDIT.md).
+
 Research manuscript, 15 October 2026. The precise directed adaptation and
 application below have provisional novelty status; the underlying
 first-difference method is classical.

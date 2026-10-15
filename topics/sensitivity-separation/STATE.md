@@ -4,10 +4,10 @@ Mathematical targets achieved: succinct proved uniform labels for family 132
 and a strictly stronger coupled-profile theorem. Both survived independent
 audit. Historical novelty remains provisional; see NOVELTY.md and RESULT.md.
 
-Worktree: `/Volumes/2tb/math/.worktrees/sensitivity-20261015-01a13f19`
-
 Branch: `research/sensitivity-20261015-01a13f19`; base `7566886`.
-Other worktrees and main are untouched. No remote writes are authorized.
+Other worktrees and main are untouched. The user requested a public package
+for X and a possible push to `shjvandekamp/math`, with explicit permission
+requested only after the complete package is ready. No push has occurred.
 
 Host inspected: Apple arm64 Mac mini, macOS 26.3, 8 physical/logical cores,
 16 GiB memory; external volume had 368 GiB free. A pre-existing zstd process
@@ -51,8 +51,37 @@ Reproduction passed using scripts/reproduce.py --fetch-sources. See
 checks/reproduction.log. No long-running computations or partial searches
 remain. No cloud compute, deployment, purchase, push, or remote merge occurred.
 
+Publication preparation adds a standalone typeset mathematical note, a deeper
+novelty audit, a public repository overview, and an X announcement draft.
+The deeper comparison separates the classical label mechanism and routine
+corollaries from the directed avoidance proof and coupled-profile argument.
+Historical priority remains provisional. Reviews to date are by AI agents;
+the work has no human referee review or formal verification of the new results.
+
+The final 10-page PDF compiled successfully with the desktop compiler and
+Tectonic. Its rendered layout, displayed certificate enclosures, local links,
+and short-thread lengths were checked. No mathematical implementation changed
+during publication preparation; the recorded reproduction remains applicable.
+The public note explicitly discloses the additional coherent-set bound eight
+for q=1001 after deleting seven common leading digits. Both saved recurrence
+calculations leave that label-specific improvement unused, so their comparison
+is at the common no-16 contract and does not optimize the actual seed.
+
+Publication package: README.md, publication/sensitivity-note.tex,
+output/pdf/sensitivity-note.pdf, publication/NOVELTY_AUDIT.md, and
+publication/X_POST.txt. The intended next step is a non-forced Git push to
+the existing repository only after the user's requested approval. Posting
+to X is not authorized by a repository-push approval.
+
+Publication access check: a noninteractive HTTPS push dry run failed because
+Git had no usable GitHub password/token. GitHub CLI is also unauthenticated.
+An SSH read-only check stopped at host-key verification, without changing
+known hosts. GitHub authentication is required before a real push can run.
+The remote main was still the initial commit `7566886` when checked; do not
+force-push if it changes before approval. No remote refs have been written.
+
 Optional next research: formalize the new combinatorial theorem in Lean,
-broaden historical comparison, or seek better seed/profile parameters.
+obtain external mathematical feedback, or seek better seed/profile parameters.
 No global optimum or unqualified historical priority is claimed. All
 required deliverables are local and scoped to this branch; git log records
 the local commit without modifying the shared main checkout.

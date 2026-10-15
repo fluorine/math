@@ -1,0 +1,801 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,xcolor}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\bs}{\operatorname{bs}}
+\newcommand{\wt}{\operatorname{wt}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\ind}{\mathbf1}
+\newcommand{\old}{\mathrm{old}}
+\newcommand{\new}{\mathrm{new}}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\hypersetup{pdftitle={First-difference labels and a coupled-profile refinement for a sensitivity construction}}
+\title[Explicit labels and refined sensitivity profiles]{First-difference labels and a coupled-profile refinement\texorpdfstring{\\}{} for a sensitivity construction}
+\date{15 October 2026}
+\begin{document}
+\begin{abstract}
+The OpenAI family-132 construction of a superquadratic separation between
+ordinary sensitivity and block sensitivity uses a labelled regular tournament
+with no head-coherent set of sixteen vertices. We give an elementary directed
+adaptation of classical first-difference colouring that supplies the exact
+labels on an infinite parameter family, with polynomial logarithmic bit time
+per edge query and no witness advice. We also refine the construction's
+coupled sensitivity estimates: candidate target repairs usually cross two
+child thresholds, and target and gate candidate counts obey joint constraints.
+We prove the resulting six-branch ordinary and five-branch joint zero-side
+bounds. On one fixed explicit seed, exact arithmetic certifies an improvement
+of the amplified exponent bound from
+$2.015410903091582180\ldots$ to $2.015411547311478476\ldots$.
+The former already follows from immediate refinements of the published proof.
+The contribution is a deterministic instantiation and a local proof
+refinement, not a new separation architecture or a record-exponent claim.
+\end{abstract}
+\maketitle
+
+\section{Scope and attribution}
+For a total Boolean function $f:\{0,1\}^n\to\{0,1\}$, write $x^D$ for
+the input obtained by flipping the coordinates in $D$. Its \emph{sensitivity}
+$s(f,x)$ counts coordinates $v$ with $f(x^{\{v\}})\ne f(x)$.
+Its \emph{block sensitivity} $\bs(f,x)$ is the largest number of pairwise
+disjoint nonempty sets $D$ whose separate flips change $f(x)$. Put
+$s(f)=\max_xs(f,x)$ and $\bs(f)=\max_x\bs(f,x)$.
+
+The pinned OpenAI manuscript~\cite{OpenAI132} proves that
+$\bs(f)/s(f)^2$ is unbounded for total Boolean functions and obtains a
+fixed exponent greater than two by composition. Its construction adapts
+gated tournaments from Meiburg~\cite{Meiburg}; the latter's headline
+comparison is with spectral sensitivity $\lambda$, not ordinary
+sensitivity $s$. Since $\lambda\le s$, a lower bound in terms of
+$\lambda$ does not by itself imply the ordinary-sensitivity separation.
+OR balancing and composition are established tools; see
+Ambainis--Sun~\cite{AmbainisSun} and Tal~\cite{Tal}.
+
+This note proves two statements within the family-132 framework.
+First, a classical first-difference rule has a useful arbitrary-orientation
+head-coherence bound, yielding a succinct deterministic replacement for the
+source's probabilistic labelling. Second, a finer analysis of the source's
+candidate clauses gives stronger coupled profile inequalities. All Boolean
+predicates and the zero-block construction remain those of~\cite{OpenAI132}.
+
+First-difference methods, including position-plus-own-bit local asymmetry,
+are classical: see Cole--Vishkin~\cite{ColeVishkin}, Vishkin's
+notes~\cite{VishkinNotes}, and the hypercube colouring in
+Gishboliner--Milojevi\'c--Sudakov--Wigderson~\cite{GMSW}.
+The directed application below is an elementary adaptation, and historical
+novelty of its exact formulation is not assured. The numerical comparison
+later in the note is deliberately against an immediate refinement of the
+published proof on the \emph{same seed}. An exponent exceeding $2.0154$
+already follows from that baseline.
+
+\section{Explicit labels for the exact tournament condition}
+\begin{definition}[Head coherence]\label{def:coherence}
+A tournament directs exactly one edge between each pair of distinct vertices.
+Given labels $\ell(i,j)$ on its edges $i\to j$, a vertex set $I$ is
+\emph{head-coherent} if there are labels $m_j$, $j\in I$, such that
+\[
+ \ell(i,j)=m_j\qquad(i,j\in I,\ i\to j).
+\]
+A vertex with no incoming edge in $I$ imposes no restriction on $m_j$.
+\end{definition}
+
+The condition required in~\cite[Lemma 2.1]{OpenAI132} is a regular
+tournament on
+\begin{equation}\label{eq:parameters}
+ k=2M^2+1,\qquad r=\ceil{\sqrt M},\qquad M\ge3,
+\end{equation}
+with outdegree $M^2$, labels in $\{0,\ldots,r-1\}$, and no head-coherent
+sixteen-set. Independent labels give the source's existence bound
+$k^{16}r^{-104}\le3^{16}M^{-20}<1$.
+
+\begin{theorem}[First-difference bound]\label{thm:digits}
+Let $h\ge1$ and $q\ge2$. Give any subset of $\{0,\ldots,q-1\}^h$ any
+tournament orientation. For $x\to y$, let $u$ be the first position at
+which $x_u\ne y_u$, and set
+\begin{equation}\label{eq:label}
+ \ell(x,y)=(u-1)(q-1)+x_u-\ind\{x_u>y_u\}.
+\end{equation}
+These $h(q-1)$ labels have no head-coherent set of more than $h+2$ vertices.
+\end{theorem}
+\begin{proof}
+At a fixed head digit $b$, the map $a\mapsto a-\ind\{a>b\}$ is a
+bijection from the digits other than $b$ to $\{0,\ldots,q-2\}$.
+Thus equal labels at a fixed head mean equal first-difference positions
+and equal source digits there. Positions have disjoint palettes.
+
+Partition a coherent set by first digit into buckets. A vertex receiving
+an edge from its own bucket has an incoming label with position at least
+two. It cannot also receive an edge from outside that bucket, whose
+position would be one. It therefore sends an edge to every outside vertex.
+Every bucket of size at least two contains such a vertex. Two buckets of
+size at least two would consequently require both directions between a
+chosen vertex of each. Hence there is at most one large bucket $B$.
+
+If $B$ exists, choose $z\in B$ receiving an edge from $B$. Every vertex
+outside $B$ receives an edge from $z$, and all outside buckets are singletons.
+If two outside vertices existed, their mutual edge would give its head
+two position-one labels with distinct source digits, one from $B$ and one
+from the other singleton. Fixed-head injectivity excludes this. There is
+therefore at most one vertex outside $B$.
+
+If all buckets are singletons, each vertex has indegree at most one;
+summing indegrees gives $|I|(|I|-1)/2\le|I|$, so $|I|\le3$.
+Inside a large bucket, delete its common first digit and subtract the
+palette offset. Coherence is preserved. The one-digit bound is three,
+and the preceding argument gives $C_h\le\max\{3,C_{h-1}+1\}$ for the
+maximum possible size. Induction yields $C_h\le h+2$.
+\end{proof}
+
+\begin{remark}\label{rem:sharp}
+For $q\ge3$ the bound is sharp over arbitrary orientations. Start with
+three words differing only in the last digit, oriented as a directed
+triangle. Successively add a word with a nonzero digit one position
+earlier than all preceding nonzero digits, directing all preceding
+vertices toward it. Each new head receives one label, giving $h+2$
+coherent vertices. The proof also works for unequal radices $q_u$,
+using $\sum_u(q_u-1)$ labels. If the last radix is two, the base bound
+is two and the resulting bound is $h+1$.
+\end{remark}
+
+\begin{theorem}[Exact infinite family]\label{thm:generator}
+For every integer $q\ge3$, let
+\begin{equation}\label{eq:family}
+ M=[13(q-1)]^2,\qquad r=13(q-1),\qquad k=2M^2+1.
+\end{equation}
+There is a uniform deterministic tournament on $k$ vertices, of outdegree
+$M^2$, with labels in $\{0,\ldots,r-1\}$ and no head-coherent sixteen-set.
+Each edge orientation and label
+can be evaluated using $O(\log M)$ storage bits and
+$O((\log M)^2)$ bit operations, with no precomputed witness or edge table.
+\end{theorem}
+\begin{proof}
+On $\{0,\ldots,k-1\}$ use the cyclic orientation
+\begin{equation}\label{eq:cyclic}
+ i\to j\quad\Longleftrightarrow\quad
+ 1\le(j-i)\bmod k\le M^2.
+\end{equation}
+There are exactly $M^2$ successors per vertex, and odd $k$ ensures one
+direction per pair. Encode each index with thirteen base-$q$ digits,
+including leading zeros, and use~\eqref{eq:label}. This uses
+$13(q-1)=r=\ceil{\sqrt M}$ labels.
+
+There are enough words: for $q=3$,
+$k=913953<1594323=3^{13}$. For $q\ge4$,
+\[
+ q^{13}-k>q^4(q^9-2\cdot13^4)-1>0,
+\]
+since $4^9=262144>57122=2\cdot13^4$.
+Theorem~\ref{thm:digits} bounds coherent sets by fifteen.
+All integers involved have $O(\log M)$ bits. A fixed number of ordinary
+integer operations extracts thirteen digits and evaluates
+\eqref{eq:label}--\eqref{eq:cyclic}; schoolbook arithmetic gives the bit
+bound. The algorithm is uniform in $q$, and the family is unbounded.
+\end{proof}
+
+\begin{remark}[Extent of the classical correspondence]
+Uncompressed labels $(u,x_u)$ use the classical position-plus-source-digit
+idea. Compression in~\eqref{eq:label} preserves equality at each
+\emph{fixed head}, which is precisely what Definition~\ref{def:coherence}
+uses. It need not preserve a global proper-colouring or walk-colouring
+property. The bucket argument proves the directed bound separately.
+\end{remark}
+
+\section{The inherited Boolean recursion}
+Fix $d\ge1$, $M\ge3$, and a labelled regular tournament with the parameters
+in~\eqref{eq:parameters} and no head-coherent sixteen-set.
+Here $d$ is recursion depth; the digit length $h=13$ is independent of it.
+Put
+\begin{equation}\label{eq:heights}
+ L=d+2,\qquad H_j=d+1-j,\qquad N_j=LM(kr)^j
+ \quad(0\le j\le d).
+\end{equation}
+The following predicates are exactly those of~\cite{OpenAI132}.
+Partition the base coordinates into $M$ disjoint $L$-sets $E_v$, let
+$z_v=\ind_{E_v}$, and set
+\begin{equation}\label{eq:base}
+ D(x)=\min_v\dist(x,z_v),\qquad
+ P_{0,p}(x)=\ind\{D(x)\le d+1-p\},\quad 1\le p\le H_0.
+\end{equation}
+At level $j\ge1$, arrange the input into $kr$ children $x_{i,t}$,
+where $0\le i<k$ and $0\le t<r$. Write $Q=H_{j-1}$. For
+$1\le p\le H_j$, clause $i$ for predicate index $p$ requires
+\begin{equation}\label{eq:clauses}
+ \begin{aligned}
+ P_{j-1,Q}(x_{i,t})&=1 &&(0\le t<r),\\
+ P_{j-1,Q-p}(x_{v,\ell(i,v)})&=0 &&(i\to v).
+ \end{aligned}
+\end{equation}
+Let $P_{j,p}$ be the OR of all these clauses. The first line consists
+of \emph{targets}, and the second of \emph{gates}. Each condition in a
+fixed clause uses a distinct child.
+
+\begin{lemma}[Basic properties and zero blocks; inherited]\label{lem:blocks}
+These predicates are total and nested:
+$P_{j,1}\ge\cdots\ge P_{j,H_j}$. All reject zero. There are $Mk^j$
+pairwise disjoint nonempty blocks of size $Lr^j$ whose separate flips
+at zero make every level-$j$ predicate accept.
+\end{lemma}
+\begin{proof}
+All indices in~\eqref{eq:clauses} are valid, since $1\le Q-p<Q$.
+The formulas therefore define a value on every input. Nesting holds at
+the base, and increasing $p$ decreases the gate index, strengthening the
+requirement that a nested predicate be zero. Targets are unchanged.
+
+At the base, $D(0)=L>d$, and flipping $E_v$ produces a centre, where
+all predicates accept. Inductively every target at zero is false.
+Given a preceding sensitive block, copy it into all $r$ children of
+one row and take the union. Those targets accept after the flip, while
+every other row remains zero, so every outgoing gate passes. Distinct
+rows or preceding block indices give disjoint unions. Their number is
+$k\cdot Mk^{j-1}$ and their size is $r\cdot Lr^{j-1}$.
+\end{proof}
+
+\begin{definition}[Ordinary and joint profiles]\label{def:profiles}
+For $b\in\{0,1\}$, let
+\[
+ S_{j,b}=\max_{p,x:\,P_{j,p}(x)=b}
+ \bigl|\{v:P_{j,p}(x^{\{v\}})=1-b\}\bigr|.
+\]
+The joint profile is
+\[
+ J_{j,b}=\max_{\substack{p<p',\,x:\\P_{j,p}(x)=P_{j,p'}(x)=b}}
+ \bigl|\{v:P_{j,p}(x^{\{v\}})=P_{j,p'}(x^{\{v\}})=1-b\}\bigr|.
+\]
+Both predicates use the same input and the same raw coordinate. Empty
+maxima are zero; in particular $J_{d,0}=J_{d,1}=0$. Always
+$0\le J_{j,b}\le S_{j,b}$.
+\end{definition}
+
+\begin{lemma}[Base profiles; inherited]\label{lem:baseprofiles}
+At level zero,
+\[
+ S_{0,0}\le d+1,\qquad S_{0,1}\le LM,\qquad J_{0,0}=J_{0,1}=0.
+\]
+The displayed source recurrence uses the looser bound $S_{0,0}\le L$.
+\end{lemma}
+\begin{proof}
+Distinct centres have distance $2L=2d+4$, so at most one centre can
+lie within distance $d+1$ of a rejecting input. A successful flip must
+move toward that centre from distance $R+1$, where $R\le d$ is the
+predicate's radius. There are at most $R+1\le d+1$ such coordinates.
+The one-side bound is the input dimension. Finally $D$ is 1-Lipschitz
+on adjacent inputs, so one flip cannot cross two distinct integer radii.
+\end{proof}
+
+\section{A coupled candidate refinement}
+At a fixed level write the preceding actual profiles as
+\begin{equation}\label{eq:childnames}
+ a=S_{j-1,0},\qquad b=S_{j-1,1},\qquad
+ c=J_{j-1,0},\qquad e=J_{j-1,1}.
+\end{equation}
+Thus $c\le a$ and $e\le b$. These letters are separate from the final
+seed sensitivity bound $A$ and zero-block bound $B$.
+
+\begin{theorem}[Refined coupled profiles]\label{thm:profiles}
+For the predicates above and any admissible labels,
+\begin{align}
+ S_{j,0}&\le F_0(a,b,c,e),& J_{j,0}&\le F_J(a,b,c,e),\label{eq:newzero}\\
+ S_{j,1}&\le M^2a+rb,& J_{j,1}&\le M^2c+rb,\label{eq:ones}
+\intertext{where}
+ F_0(a,b,c,e)&=\max\left\{
+ \begin{array}{lll}
+ a+14c,&a+13c+b,&15c+e,\\
+ 13c+b+e,&14c+2e,&12c+3e
+ \end{array}\right\},\label{eq:F0}\\
+ F_J(a,b,c,e)&=\max\left\{
+ \begin{array}{lll}
+ a+14c,&a+13c+e,&15c+e,\\
+ 14c+2e,&12c+3e
+ \end{array}\right\}.\label{eq:FJ}
+\end{align}
+All branches have nonnegative coefficients. Consequently these bounds
+can be propagated from componentwise upper bounds, with optional
+definitional capping $J_{j,b}\le S_{j,b}$.
+\end{theorem}
+
+The one-side inequalities~\eqref{eq:ones} are inherited from the source.
+The refinement concerns its treatment of candidate clauses at a rejecting
+input. We prove every branch, including the joint transition statement.
+
+\subsection{Candidate structure}
+Fix a parent index and a rejecting input. Suppress the child-level prefix,
+write $Q$ for the strongest child index, and $g<Q$ for the gate index.
+Let $T$ be the clauses with exactly one failed target and no failed gate.
+Let $G$ be the clauses with exactly one failed gate and no failed target.
+Every successful coordinate repairs a clause in these fixed lists: one
+raw bit can affect at most one condition of a clause. Write $m_t$ for
+the missing-target position of a row $t\in T$.
+
+\begin{lemma}\label{lem:candidates}
+The set $T$ is head-coherent and $|T|\le15$. Every edge between $G$ and
+$T$ points from $G$ to $T$. Moreover $|G|\le3$; if $|G|=3$, it is a
+directed cycle and all three failed gates are internal to $G$.
+\end{lemma}
+\begin{proof}
+For $s\to t$ inside $T$, the passing gate gives $P_g=0$, hence
+$P_Q=0$, at its selected child in row $t$. The unique such child is
+$m_t$, so $\ell(s,t)=m_t$. This proves coherence. An edge from $T$ to
+$G$ would fail its gate because all children of a $G$ row have
+$P_Q=1$, hence $P_g=1$. Thus no such edge exists.
+
+Every internal outgoing edge of a $G$ vertex is a failed gate, so each
+has internal outdegree at most one. Counting edges yields
+$|G|(|G|-1)/2\le|G|$, hence $|G|\le3$. With three vertices the only
+possibility is a directed cycle, using each vertex's unique failure.
+\end{proof}
+
+Call a target candidate \emph{ordinary} if its missing target has
+$P_g=1$ and $P_Q=0$, and \emph{joint} otherwise. An ordinary target
+has at most $a$ repair coordinates. A joint target starts with
+$P_g=P_Q=0$ and a successful repair makes both one, so it has at most
+$c$ repair coordinates. Call a gate candidate ordinary if its failed
+gate child has $P_Q=0$, and joint otherwise. An ordinary gate costs
+at most $b$ repairs. A joint gate starts with $P_g=P_Q=1$ and repairing
+$P_g$ makes both zero, so it costs at most $e$.
+
+\begin{lemma}\label{lem:ordinary}
+There is at most one ordinary target. If $|G|\ge2$, every target is
+joint. At most one gate candidate is ordinary, and all gate candidates
+are joint when $|G|=3$.
+\end{lemma}
+\begin{proof}
+An ordinary target has no incoming edge from $T$: such an edge would
+force $P_g=0$ at its missing target. A tournament has at most one
+vertex of indegree zero. Also an ordinary target's entire row has
+$P_g=1$. Every $G$ vertex therefore uses its unique failed gate on
+that row. When $|G|\ge2$, its internal edge already uses one such
+failure, a contradiction. Finally every failed gate internal to $G$
+is joint, because all targets of its head row pass. With two gate
+candidates only the sink could be ordinary; with three, every failure
+is internal by Lemma~\ref{lem:candidates}.
+\end{proof}
+
+\subsection{All six ordinary zero cases}
+The following table gives upper bounds for the combined repair cost.
+The possible overlap of repair coordinates only makes the union smaller.
+\begin{center}
+\small
+\begin{tabular}{@{}c p{6.8cm} c@{}}
+\toprule
+$|G|$ & Condition & Repair bound\\
+\midrule
+0 & No gate candidate & $a+14c$\\
+1 & An ordinary target or an ordinary gate exists & $a+13c+b$\\
+1 & Neither ordinary type exists & $15c+e$\\
+2 & The sink's failed gate is ordinary & $13c+b+e$\\
+2 & Both failed gates are joint & $14c+2e$\\
+3 & The gate candidates form a directed cycle & $12c+3e$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For completeness, the cardinality argument for each row follows.
+
+\emph{No gate candidate.}
+There are at most fifteen targets and at most one is ordinary. Since
+$c\le a$, their cost is bounded by $a+14c$, including when no ordinary
+target exists or $T$ is empty.
+
+\emph{One gate candidate, an ordinary type present.}
+Suppose first that the failed gate is ordinary. If it points into $T$,
+its child has $P_Q=0$ and so is that row's missing target; its label
+is $m_t$. Every other edge from $G$ into $T$ passes and also has label
+$m_t$. Thus $T\cup G$ is head-coherent, whether or not the failure
+points into $T$, and $|T|\le14$.
+
+Suppose instead that an ordinary target exists. Its entire row has
+$P_g=1$, so the sole gate candidate's unique failure points into that
+row. The ordinary target is a source inside $T$ and has just one
+incoming edge in $T\cup G$. Assign its head label to that edge's label;
+no internal incoming edge competes. All other heads retain their
+coherent labels. Again $T\cup G$ is coherent and $|T|\le14$.
+This reassignment of the exceptional head label is necessary; its
+missing-target position need not label the failed edge. The target cost
+is at most $a+13c$, and the gate cost is at most $b$ since $e\le b$.
+
+\emph{One gate candidate, neither ordinary type present.}
+The general bound $|T|\le15$ gives target cost $15c$, and the gate
+costs $e$. The union need not be coherent in this case.
+
+\emph{Two gate candidates, ordinary sink gate.}
+The tail's failed gate is their internal edge; only the sink can fail
+outside $G$. If its ordinary failed gate points into $T$, its child
+has $P_Q=0$, so its label is the head's missing position $m_t$.
+Every other edge into $T$ passes and has its prescribed label.
+The internal edge of $G$ imposes only one incoming label there, and
+there are no edges from $T$ to $G$. Hence $T\cup G$ is coherent and
+$|T|\le13$. All targets are joint by Lemma~\ref{lem:ordinary}; the
+gate cost is at most $b+e$.
+
+\emph{Two gate candidates, both joint.}
+Only the sink can have a failure outside $G$. All edges from $G$ into
+$T$ therefore have the expected head label except possibly at the head
+of that one failure. Delete that target if it exists. The remaining
+union is coherent, so $|T|-1+2\le15$ and $|T|\le14$. All target
+repairs are joint, giving $14c+2e$.
+
+\emph{Three gate candidates.}
+All failures are internal to their directed cycle, whose heads each
+have one incoming edge. All edges into $T$ pass. Thus $T\cup G$ is
+coherent and $|T|\le12$. All candidates are joint, giving $12c+3e$.
+
+These cases exhaust the possibilities. Taking their maximum and then
+maximizing over rejecting inputs proves~\eqref{eq:F0}.
+
+\subsection{All joint zero transitions and the one side}
+Fix parent indices $p<p'$ and an input where both predicates are zero.
+Their gate indices obey $g'=Q-p'<g=Q-p<Q$.
+Form $T$ at the stronger parent index $p'$. Form $G$ there too, but
+retain only candidates whose unique failed gate also fails at the
+weaker index $p$.
+
+A coordinate making both parents accept satisfies some clause at $p'$.
+Before the flip this clause has exactly one failed condition. A target
+failure puts it in $T$. If it is a gate failure, every other gate
+already passes at $p'$, hence also at $p$. All targets pass as well.
+If that same gate did not fail at $p$, the weaker parent would already
+accept, a contradiction. Thus this clause lies in the retained $G$.
+The fixed lists cover every simultaneous success even when the witness
+clause depends on the flipped coordinate.
+
+The previous candidate arguments apply to these lists at gate index
+$g'$. Deleting gate candidates changes none of their premises. Target
+repairs have the same costs $a,c$. Every retained gate, including a
+gate ordinary relative to $P_Q$, now costs at most $e$: its distinct
+predicates $P_{g'}$ and $P_g$ start at one, and satisfying the stronger
+gate makes both zero. Replace $b$ by $e$ in the six rows. The fourth
+row $13c+2e$ is dominated by the fifth, $14c+2e$. The remaining five
+rows are exactly~\eqref{eq:FJ}. If there are no distinct parent
+indices the joint profile is zero by definition.
+
+For ordinary one-to-zero transitions, fix one initially satisfied
+clause. Every successful rejection breaks it, by one of its $r$ targets
+or $M^2$ gates. These cost at most $rb$ and $M^2a$, respectively.
+For joint rejection at indices $p<p'$, fix a clause satisfied at $p'$;
+it also satisfies $p$. Since both parents reject after the flip, this
+clause must fail at the weaker index $p$. A target failure costs at
+most $b$. A gate failure changes $P_g$ from zero to one; initially
+$P_{g'}=0$, and nesting forces $P_{g'}=1$ afterward, so it costs at
+most $c$. This proves~\eqref{eq:ones} and completes the proof of
+Theorem~\ref{thm:profiles}.
+
+\begin{remark}[What the refinement does and does not assert]
+The displayed source bounds are
+\begin{equation}\label{eq:published}
+ S_{j,0}\le16a+b+3e,\qquad J_{j,0}\le16a+3e,
+\end{equation}
+with the same one-side bounds. The new argument uses joint target
+repairs and coupled counts; it is not just replacement of $16$ by $15$.
+For example, when $c=e=0$, it gives $S_{j,0}\le a+b$ and
+$J_{j,0}\le a$.
+
+One cannot simply assume $|T|+|G|\le15$. On a transitive set of fifteen
+target rows, give every row the two child states $(0,2)$, where states
+$0,1,2$ denote $(P_g,P_Q)=(0,0),(1,0),(1,1)$. Add a gate row $(2,2)$
+pointing to all targets. Give all target edges label zero and all gate
+edges label zero except its edge to the last target, labelled one.
+There are fifteen target candidates and one gate candidate; their full
+sixteen-set is incoherent at that last head. Likewise, three gate
+candidates can form a directed cycle. These examples delimit the local
+counting argument; they are not asserted to be full regular recursive
+seeds or to attain all global profile maxima simultaneously.
+\end{remark}
+\section{Propagation, balancing, and a fixed-seed comparison}
+\subsection{The inherited OR and composition principles}
+
+\begin{proposition}[Seed and amplification]\label{prop:seed}
+Suppose $s_0,s_1$ bound $S_{d,0},S_{d,1}$. For an integer $C\ge1$,
+the OR of $C$ disjoint copies of $P_{d,1}$ is a total nonconstant
+function $f$, rejects zero, and has
+\begin{equation}\label{eq:seed}
+ n=CLM(kr)^d,\qquad s(f)\le A=\max\{Cs_0,s_1\},\qquad
+ \bs(f,0)\ge B=CMk^d.
+\end{equation}
+If $B>A^2>1$, the $m$-fold disjoint iterate $F_m$ has dimension $n^m$
+and satisfies, for $\alpha=\log B/\log A>2$,
+\begin{equation}\label{eq:amplify}
+ F_m(0)=0,\quad s(F_m)\le A^m,\quad
+ \bs(F_m,0)\ge B^m\ge s(F_m)^\alpha.
+\end{equation}
+In particular $\bs(F_m,0)$ tends to infinity.
+\end{proposition}
+\begin{proof}
+At a zero of the OR every copy rejects, so sensitivities sum to at
+most $Cs_0$. At a one, two accepting copies prevent any single-bit
+rejection; with exactly one accepting copy, the sensitivity is at
+most $s_1$. Lemma~\ref{lem:blocks} supplies $CMk^d$ disjoint
+zero-sensitive blocks and proves nonconstancy.
+
+For total $f,g$, a bit of child $i$ is sensitive for $f\circ g$
+exactly when that bit is sensitive for $g$ and outer coordinate $i$
+is sensitive for $f$ at the vector of child outputs. Hence
+$s(f\circ g)\le s(f)s(g)$. If $g(0)=0$, disjoint zero-sensitive
+families $U_1,\ldots,U_a$ for $f$ and $V_1,\ldots,V_b$ for $g$
+give the nonempty, pairwise disjoint blocks $U_i\times V_j$ for
+$f\circ g$. Flipping one changes exactly the outer coordinates in
+$U_i$. Thus $\bs(f\circ g,0)\ge\bs(f,0)\bs(g,0)$.
+Iteration proves~\eqref{eq:amplify}, and $B>1$ gives growth.
+\end{proof}
+
+\begin{proposition}[Published coarse consequence with explicit labels]
+\label{prop:coarse}
+For each $d\ge1$, choose
+\begin{equation}\label{eq:qdepth}
+ q(d)=\max\left\{3,1+\ceil{\frac{3^{d+1}}{13}}\right\},\qquad
+ M=[13(q(d)-1)]^2.
+\end{equation}
+Then the explicit seed with $C=M$ satisfies
+\begin{equation}\label{eq:coarsebounds}
+ n=(d+2)M^2(kr)^d,\qquad
+ A=2(d+2)M^{d+1},\qquad B=M^2k^d,
+\end{equation}
+and $B/A^2\ge2^d/[4(d+2)^2]$. At $d=9$ this is at least
+$128/121>1$, so Proposition~\ref{prop:seed} gives a uniform power
+separation. These quantitative estimates are inherited
+from~\cite{OpenAI132}; explicit labels are supplied by
+Theorem~\ref{thm:generator}.
+\end{proposition}
+\begin{proof}
+Equation~\eqref{eq:qdepth} gives $M\ge9^{d+1}$. Normalize the
+published profiles by $M^{j+b}$ and let $u_j,v_j$ be the maxima of
+the normalized ordinary and joint profiles. Put
+$\varepsilon=\max\{r,16\}/M\le2/3^{d+1}$.
+Equations~\eqref{eq:ones} and~\eqref{eq:published} give
+\[
+ u_j\le(1+\varepsilon)u_{j-1}+3v_{j-1},\qquad
+ v_j\le\varepsilon u_{j-1}+3v_{j-1},
+\]
+with $u_0\le L,v_0=0$. The corresponding equality comparison
+sequences $U_j,V_j$ satisfy simultaneously
+$U_j\le2L$ and $V_j\le\varepsilon L(3^j-1)$ for $j\le d$.
+Indeed the bound for $V_j$ follows from the preceding bounds, and
+summing the increments for $U$ gives
+\[
+ U_j\le L+\varepsilon L\left[\frac32(3^j-1)-j\right]<2L,
+\]
+since $\varepsilon\le2/3^{d+1}$. Thus
+$S_{j,b}\le2LM^{j+b}$. Substituting in~\eqref{eq:seed} with $C=M$
+gives~\eqref{eq:coarsebounds}, and $k/M^2>2$ gives the ratio.
+\end{proof}
+
+\subsection{The source-derived baseline used here}
+Before comparing numerical consequences of Theorem~\ref{thm:profiles},
+we include the following immediate improvements of the source proof
+in the baseline. Use $S_{0,0}\le d+1$ rather than $d+2$, and
+$|T|\le15$ rather than $16$, still charging every target repair to
+$a$. One or two gate candidates cost at most $b+e$; three cost $3e$.
+For simultaneous acceptance all gates cost $e$. Thus the immediate
+source-derived zero-side updates are
+\begin{equation}\label{eq:immediate}
+ S_{j,0}\le15a+\max\{b+e,3e\},\qquad
+ J_{j,0}\le15a+3e.
+\end{equation}
+Together with~\eqref{eq:ones}, these are valid for every $M\ge3$
+with admissible labels. The large-$M$ restriction in
+Proposition~\ref{prop:coarse} is only sufficient for its convenient
+scalar estimate, not a restriction on exact recurrence iteration.
+
+The OR-copy count can also be optimized without a new combinatorial
+theorem. If $W=Mk^d>s_0$, the function
+\[
+ \frac{\log(CW)}{\log\max\{Cs_0,s_1\}}
+\]
+increases up to $C=s_1/s_0$ and decreases afterward, where its
+denominator is positive. Below that point the denominator is constant;
+above it the derivative has the sign of $\log(s_0/W)<0$.
+The two positive integers bracketing $s_1/s_0$ therefore suffice.
+Both immediate refinements and OR optimization belong to the baseline.
+
+\subsection{Certified comparison on one unchanged seed}
+The following finite result compares proved upper bounds on sensitivity,
+not exact sensitivity values. It changes neither the labels nor the
+Boolean function between the two analyses.
+
+\begin{theorem}[Fixed explicit seed]\label{thm:numerical}
+Set
+\begin{equation}\label{eq:fixed}
+ \begin{gathered}
+ q=1001,\quad d=17,\quad M=169000000,\quad r=13000,\\
+ k=57122000000000001,\qquad C=164900179.
+ \end{gathered}
+\end{equation}
+Use Theorem~\ref{thm:generator}'s labels and the recursion above.
+The seed dimension and zero-block bound are exactly
+\begin{equation}\label{eq:fixednb}
+ n=C\cdot19M(kr)^{17},\qquad B=CMk^{17}.
+\end{equation}
+The integer $n$ has $373$ decimal digits. Iteration of the immediate
+baseline gives a bound $A_\old$; iteration of
+Theorem~\ref{thm:profiles} gives a strictly smaller bound $A_\new$.
+For $\alpha_*=\log B/\log A_*$, certified enclosures are
+\begin{align}
+ 2.015410903091582180&<\alpha_\old<2.015410903091582181,
+ \label{eq:oldinterval}\\
+ 2.015411547311478476&<\alpha_\new<2.015411547311478477.
+ \label{eq:newinterval}
+\end{align}
+Composition of this one explicit seed therefore satisfies
+\eqref{eq:amplify} with $\alpha=\alpha_\new>2.0154$.
+The strict improvement is from $A_\old$ to $A_\new$ at fixed $B,n$;
+the inequality $\alpha>2.0154$ itself already holds for the baseline.
+\end{theorem}
+
+\begin{proof}[Proof and arithmetic certificate]
+The exact definitions of the two integers are short recurrences.
+Start with $v_0=(18,19M,0,0)$. For $v_j=(a,b,c,e)$, set
+\begin{equation}\label{eq:update}
+ v_{j+1}=\bigl(z,\ M^2a+rb,\ \min\{w,z\},\
+              \min\{M^2c+rb,M^2a+rb\}\bigr),
+\end{equation}
+where $(z,w)$ is either the right side of~\eqref{eq:immediate}
+or $(F_0,F_J)$. Iterate exactly seventeen times. If $(a_*,b_*)$
+are the first two final entries, define
+$A_*=\max\{Ca_*,b_*\}$. At the terminal level the actual joint
+profiles are zero; their final comparison entries are not used.
+All operations are on integers and all cappings are valid by
+Definition~\ref{def:profiles}.
+
+Evaluation of these recurrences gives the exact rational enclosures
+\begin{align*}
+ 3187070\cdot10^{143}&<A_\old<3187071\cdot10^{143},\\
+ 3186720\cdot10^{143}&<A_\new<3186721\cdot10^{143}.
+\end{align*}
+In particular $1<A_\new<A_\old$. For both values $A_*$, exact integer
+powers verify
+\begin{equation}\label{eq:powercert}
+ A_*^{20154}<B^{10000}\le A_*^{20155}.
+\end{equation}
+Hence both exponent bounds exceed $2.0154$, and the common positive
+$B$ with $A_\new<A_\old$ proves a strict improvement.
+
+For the finer enclosures, the accompanying certificate evaluates
+$\log A_*,\log B$ with correctly rounded $70$-digit decimal logarithms.
+The adjacent representable values enclose each exact logarithm.
+Dividing the lower numerator endpoint by the upper positive denominator
+endpoint with downward rounding, and conversely with upward rounding,
+encloses their ratio. The resulting intervals are contained strictly
+in~\eqref{eq:oldinterval}--\eqref{eq:newinterval}.
+The numerical operations use the documented logarithm and rounding
+contracts of Python's Decimal implementation~\cite{Decimal}.
+The companion JSON records all integers, the longer intervals, and
+the exact-power checks~\eqref{eq:powercert}. Equation~\eqref{eq:update}
+and parameters~\eqref{eq:fixed} independently specify the certificate.
+Finally Theorem~\ref{thm:generator} supplies the labels, and
+Proposition~\ref{prop:seed} proves the stated Boolean-function bounds.
+\end{proof}
+
+No numerical search is needed to define this seed. The chosen $C$
+optimizes the immediate baseline's two bracketing integer candidates
+using certified interval comparison; it is then kept unchanged in the
+new analysis. There is no assertion of a globally optimal exponent,
+a minimal dimension, or simultaneous attainability of all profile bounds.
+
+Both calculations use only the no-head-coherent-sixteen-set contract.
+For this particular seed, $k<1001^6$, so the thirteen-digit vertex words
+share seven leading zeros. Deleting them and subtracting the common label
+offset, Theorem~\ref{thm:digits} actually bounds coherent sets by eight.
+This is a direct consequence of the label theorem. Neither calculation
+exploits that stronger label-specific bound. The comparison therefore
+isolates the coupled-profile refinement at a fixed contract; it is not
+an optimized analysis even of this explicit seed.
+
+\section{Uniformity, verification, and limitations}
+The seed is described by $(d,q,C)$ and a fixed program, requiring
+$O(\log d+\log q+\log C)$ parameter bits. There is no label advice.
+For~\eqref{eq:qdepth} with $C=M$, one can give only $d$ and derive the
+other integers: $\log M=O(d)$ and $\log n=O(d^2)$. The parameter
+description then has $O(\log d)$ bits, while deriving its large integers
+takes time polynomial in $d$, not necessarily in $\log d$.
+
+Polynomial logarithmic edge access is distinct from evaluation of the
+whole $n$-bit function. A bottom-up evaluator computes every child's
+predicate vector once. There are $O(n)$ nodes and at most
+$d k(r+M^2)=O(dk^2)$ condition tests per internal node. Base distances
+can be obtained by scanning each leaf once, since
+\[
+ D(x)=\wt(x)+L-2\max_v\wt(x|_{E_v}).
+\]
+A conservative bound is $O(ndk^2(\log n)^2)$ bit operations and
+$O(n(d+1))$ bits for input, predicate values, and bookkeeping. Thus
+expansion of an evaluation circuit has polynomial cost in the input
+size; neither the description nor the generator requires a $2^n$-entry
+truth table.
+
+The companion files in \nolinkurl{topics/sensitivity-separation/} of the
+\href{https://github.com/shjvandekamp/math}{repository} include the
+generator, local profile diagnostics, exact recurrence implementation,
+and \nolinkurl{checks/seed-certificate.json}. The bounded generator check
+exhausts $129088$ small tournaments and also checks a sharp coherent
+fifteen-set and parameter arithmetic. The profile checker exhausts small
+nested-state models and checks explicit candidate-count templates.
+These are finite regression checks; the infinite label theorem and
+all-input profile theorem rest on the proofs above. The fixed-seed
+comparison is additionally an exact arithmetic calculation. A single
+reproduction command from that topic directory is
+\begin{center}
+\texttt{python3 scripts/reproduce.py --fetch-sources}.
+\end{center}
+It verifies pinned source hashes and runs the bounded checks serially;
+it materializes no large tournament or Boolean truth table.
+
+The scope of the contribution is limited. The first-difference technique,
+the gated recursion, OR balancing, and composition are inherited methods.
+The label theorem supplies an elementary directed adaptation with exact
+uniform parameters. The profile theorem refines a local step of the
+published proof. No priority guarantee, record exponent, or optimality
+claim is made.
+
+\section*{AI assistance and verification status}
+The arguments, code, and draft were developed with OpenAI Codex using
+multiple GPT-6 Astra agents for construction, adversarial checking, and
+writing. Separate agent reviews checked the saved mathematical arguments
+and code, and the companion reproduction run passed. This describes
+AI-assisted verification, not human peer review. The results of this note
+have not been formalized in Lean, and no Lean kernel replay is claimed.
+The written proofs and identified arithmetic artifacts state the evidence
+supporting the conclusions.
+
+\begin{thebibliography}{99}
+\bibitem{AmbainisSun}
+A. Ambainis and X. Sun,
+\emph{New separation between $s(f)$ and $bs(f)$},
+Electronic Colloquium on Computational Complexity, TR11-116 (2011),
+\href{https://arxiv.org/abs/1108.3494v1}{arXiv:1108.3494v1};
+see Section 4, Lemma 1 for the OR identities.
+
+\bibitem{ColeVishkin}
+R. Cole and U. Vishkin,
+\emph{Deterministic coin tossing with applications to optimal parallel
+list ranking}, Information and Control \textbf{70} (1986), no. 1, 32--53,
+\href{https://doi.org/10.1016/S0019-9958(86)80023-7}{doi:10.1016/S0019-9958(86)80023-7}.
+
+\bibitem{GMSW}
+L. Gishboliner, A. Milojevi\'c, B. Sudakov, and Y. Wigderson,
+\emph{Canonical Ramsey numbers of sparse graphs}, 11 October 2024,
+\href{https://arxiv.org/abs/2410.08644v1}{arXiv:2410.08644v1};
+see Section 2.1, the proof of Theorem 2.3.
+
+\bibitem{Meiburg}
+A. Meiburg,
+\emph{Block Sensitivity can exceed Spectral Sensitivity Squared},
+1 August 2026,
+\href{https://arxiv.org/html/2608.00851v1}{arXiv:2608.00851v1}.
+
+\bibitem{OpenAI132}
+OpenAI,
+\emph{A superquadratic separation between sensitivity and block
+sensitivity}, 25 September 2026, OpenAI math family 132.
+Pinned repository revision
+\texttt{1581d4cbdd69a0faf34b2089614fe2a814316a6a}.
+\href{https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026}{Manuscript and source files}.
+
+\bibitem{Decimal}
+Python Software Foundation,
+\emph{Decimal---Decimal fixed-point and floating-point arithmetic},
+Python 3 documentation, consulted 15 October 2026.
+\href{https://docs.python.org/3/library/decimal.html#decimal.Decimal.ln}{Correctly rounded logarithms}
+and \href{https://docs.python.org/3/library/decimal.html#rounding-modes}{rounding modes}.
+
+\bibitem{Tal}
+A. Tal,
+\emph{Properties and Applications of Boolean Function Composition},
+Proceedings of ITCS 2013, pp. 441--454,
+\href{https://doi.org/10.1145/2422436.2422485}{doi:10.1145/2422436.2422485}.
+
+\bibitem{VishkinNotes}
+U. Vishkin,
+\emph{Thinking in Parallel: Some Basic Data-Parallel Algorithms and
+Techniques}, 12 October 2010, p. 72,
+\href{https://users.umiacs.umd.edu/~vishkin/PUBLICATIONS/classnotes.pdf}{author-hosted notes};
+consulted 15 October 2026 for the position-plus-own-bit formulation.
+\end{thebibliography}
+\end{document}

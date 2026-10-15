@@ -43,6 +43,13 @@ same actual seed (same d,M,r,c, labels and dimension) and establish a
 strictly smaller sensitivity bound, or a genuinely better admissible
 regime. The final seed certificate supplies that comparison separately.
 
+Both certificate calculations use only the no-coherent-16 contract. For
+the final q=1001 seed, seven leading digits are common and k<q^6, so our
+label theorem also gives a coherent-set bound of eight. That additional
+label-specific consequence is unused in both calculations. The baseline
+here therefore compares the two profile analyses at a fixed contract;
+it is not the strongest elementary analysis of the explicit labels.
+
 Re-run the optional bounded baseline scan from the topic directory:
 
 ```sh
