@@ -1,0 +1,30 @@
+import VixOverlap
+
+#print VixOverlap.FiniteModel
+#print VixOverlap.FitsVanilla
+#check VixOverlap.financial_three_window_obstruction
+#check VixOverlap.QuoteContract.vanilla_three_window_obstruction
+#check VixOverlap.ScheduleModel.model
+
+#print axioms VixOverlap.financial_three_window_obstruction
+#print axioms VixOverlap.QuoteContract.vanilla_three_window_obstruction
+#print axioms VixOverlap.ScheduleModel.model
+#print axioms VixOverlap.ScheduleModel.model_window_log_identity
+#print axioms VixOverlap.ScheduleModel.uniform_model_nonzero
+#print axioms VixOverlap.ScheduleModel.uniform_moment_bound
+#print axioms VixOverlap.ScheduleModel.model_stock_forward
+#print axioms VixOverlap.ScheduleModel.model_expected_window_log
+#print axioms VixOverlap.ScheduleModel.model_vix_second_moment
+#print axioms VixOverlap.ScheduleModel.model_overlap_log_cost
+#print axioms VixOverlap.FiniteModel.intervalBudget_additive
+#print axioms VixOverlap.fitting_root_budgets
+#print axioms VixOverlap.genuinely_overlapping
+#print axioms VixOverlap.quoted_second_moment_log_identity
+#print axioms VixOverlap.quoted_overlap_log_inequality
+#print axioms VixOverlap.exact_separation_margin
+#print axioms VixOverlap.ScheduleCertificate.three_window_count_obstruction
+#print axioms VixOverlap.ScheduleCertificate.universal_separator
+#print axioms VixOverlap.ScheduleCertificate.mixed_strictly_positive
+#print axioms VixOverlap.ScheduleCertificate.prefix_marginals_bit_mean
+#print axioms VixOverlap.Vanilla.nonneg_calls_identify_fiber_statistic
+#print axioms VixOverlap.Vanilla.active_count_identified
