@@ -1,0 +1,5 @@
+.build/
+Snaky/Gen19/
+*.olean
+*.ilean
+*.trace

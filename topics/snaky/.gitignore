@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+build/
+# Regenerated from pinned inputs; the single delivered copy is certificate/snaky19.cards.txt.
+constructor/*.cards.txt

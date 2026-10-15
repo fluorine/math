@@ -1,0 +1,61 @@
+{
+  "already_won_placements": 0,
+  "black_stones": 18,
+  "blocked_by_black_overlap": {
+    "1": 145,
+    "2": 113,
+    "3": 73,
+    "4": 27,
+    "5": 12
+  },
+  "cannot_win_on_next_move": true,
+  "card_verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10",
+  "distinct_placements_intersecting_black": 435,
+  "enumeration_covers_all_one_move_wins_on_integer_plane": true,
+  "example_closest_placement": [
+    [
+      6,
+      1
+    ],
+    [
+      6,
+      2
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ]
+  ],
+  "game_wide_lower_bound_claimed": false,
+  "geometry": "integer plane",
+  "input_report_sha256": "4eaf8869d880eb577f56219d0aa1165ffe7407316f67ba796152b3f65797ea9c",
+  "legal_completion_moves": [],
+  "legal_move_pairs_replayed": 18,
+  "max_black_overlap_in_unblocked_placement": 4,
+  "one_move_completion_placements": 0,
+  "raw_anchor_pairs": 864,
+  "remaining_black_moves": 1,
+  "scope": "only this concrete late position, after its listed legal trace",
+  "selected_policy_hints_checked_by_this_run": false,
+  "status": "verified",
+  "unblocked_by_black_overlap": {
+    "1": 40,
+    "2": 12,
+    "3": 10,
+    "4": 3
+  },
+  "verifier_sha256": "08c8ffc3e440328a5b6c5532904906bbe10a642c3209d449f090d632702650b5",
+  "white_stones": 18
+}

@@ -1,9 +1,10 @@
 # Soundness of the baseline certificate rules
 
 This argument separates finite data checking from game semantics. It proves
-the meaning of any accepted card set; it does not assert that this project has
-constructed a set with root height 19. The reference set's declared root height
-is 20.
+the meaning of any accepted card set. The independent verifier has accepted
+`certificate/snaky19.cards.txt` with empty root requirements and root height 19;
+applying the argument to that file establishes the stated infinite-board bound.
+The earlier public reference set has root height 20.
 
 Fix a finite collection of valid cards as specified in `SPECIFICATION.md`.
 We prove by strong induction on h: at any Maker turn on Z² with disjoint finite

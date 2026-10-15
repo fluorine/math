@@ -13,3 +13,10 @@ and a Lean proof. Its upstream attribution and permission statement is in
 [nandorsieben/Snaky](https://github.com/nandorsieben/Snaky/tree/a0a36dd4edffdccdb7c4b14849c81e83dd6a25aa).
 
 This reference is a baseline, not this project's final certificate or a new result.
+
+`gotrevor-15x15-cards.txt` is the same revision's
+[`cert/snaky-15x15-cards.txt`](https://github.com/gotrevor/snaky-15x15/blob/b18ed32473a6a22ebfdda98da62d61b8b1590c1e/cert/snaky-15x15-cards.txt),
+retrieved 2026-10-15, 3,337,287 bytes.
+SHA-256: `94fc96c8e9a7bbd99748f8668fd8ba22519fe9ea771ec76fe1c3ab94ee283084`.
+It has 8,671 cards and root height 25; its local tactics are an additional pool
+for construction experiments, not an improvement of the 20-move root bound.

@@ -1,0 +1,4 @@
+{
+  "status": "rejected",
+  "error": "off-board: White turn 19 at (-1019, -1000) is outside the board"
+}

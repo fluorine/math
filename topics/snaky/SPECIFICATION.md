@@ -56,15 +56,20 @@ h px py |A| Ax Ay ... |S| Sx Sy ... pass |replies| reply ...
 ```
 
 Here pass is `-1` (absent) or four integers `j k dx dy`. Each reply is six
-integers `wx wy j k dx dy`. A strict parser rejects truncation, extra tokens,
-invalid indices, duplicate coordinate entries/response keys and invalid
-symmetry codes. The independent checker must not silently normalize malformed
-syntax into a different valid theorem. Terminal cards may omit continuations.
+integers `wx wy j k dx dy`. The parser rejects truncation, noninteger tokens,
+negative natural fields and invalid symmetry codes. Records may be separated
+by arbitrary whitespace; their counts determine boundaries. Duplicate A/S
+coordinates are harmless membership repetitions. For duplicate response keys,
+the first entry is used, matching Lean's `List.lookup`. Hints at already-owned
+cells are unused, as are all continuations of terminal cards. Every hint used
+in a derivation must reference an existing card. The independent checker must
+not silently normalize malformed syntax into a different valid theorem.
 
 ## Research extensions and acceptance boundary
 
-These are sound candidate construction tools; their description does not claim
-that they achieve 19 moves.
+The final 19-move construction uses retained Maker history and safe cells,
+then exports ordinary cards checked by the rules above. The optional occupied-
+pivot deduction is also sound but was not used in the successful run.
 
 - Keep all accumulated M instead of only a template's A. When a nonterminal
   card's p already belongs to M, its pass child is applicable immediately. This

@@ -1,0 +1,62 @@
+{
+  "board_cells": 289,
+  "cards_checked": 3468,
+  "certificate_path": "topics/snaky/constructor/snaky19.compact.cards.txt",
+  "certificate_sha256": "baf8774e1fc6eea60b1756437e8b3caae0ede5e001b10c0c3787aab51840782e",
+  "cols": 17,
+  "duplicate_response_keys": 0,
+  "elapsed_seconds": 1.698405,
+  "free_cell_budget_lhs": 38,
+  "game": "Snaky maker-breaker; Black first; six-cell D4 placements",
+  "ignored_response_entries": 0,
+  "inside_reply_checks": 61040,
+  "max_card_height": 19,
+  "optimality_claimed": false,
+  "outside_reply_checks": 3456,
+  "proof_assistant_kernel_checked_by_this_run": false,
+  "python_version": "3.9.6",
+  "reachable_cards": 3468,
+  "root_board_cells_outside_support": 40,
+  "root_height_black_moves": 19,
+  "root_hint_graph_depth": 19,
+  "root_index": 3467,
+  "root_inside_reply_classes": 248,
+  "root_support_bounds_xy": [
+    0,
+    16,
+    0,
+    16
+  ],
+  "root_support_cells": 249,
+  "rows": 17,
+  "shape": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "shape_orientation_count": 8,
+  "status": "verified",
+  "terminal_cards": 12,
+  "verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10"
+}

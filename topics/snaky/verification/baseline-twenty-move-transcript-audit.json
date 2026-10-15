@@ -1,0 +1,76 @@
+{
+  "black_moves": 20,
+  "card_verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10",
+  "cards": [
+    1737,
+    1736,
+    1668,
+    1036,
+    1016,
+    1015,
+    1009,
+    1007,
+    1006,
+    429,
+    428,
+    427,
+    426,
+    425,
+    424,
+    423,
+    422,
+    421,
+    83,
+    6
+  ],
+  "certificate_sha256": "c15deef097541e2413cc543916e8d5773ffa398f5be66ca976c73f894c7fd832",
+  "finite_board_legal": false,
+  "first_snaky_on_black_move": 20,
+  "game_lower_bound_claimed": false,
+  "geometry": "integer plane",
+  "off_board_moves": [
+    {
+      "black_turn": 19,
+      "player": "White",
+      "point": [
+        -1019,
+        -1000
+      ]
+    }
+  ],
+  "outcome": "legal_twenty_move_route",
+  "outside_support_replies": 1,
+  "scope": "one concrete transcript and its selected certificate hints",
+  "selected_hint_checks": 19,
+  "status": "verified",
+  "transcript_report_sha256": "9d6ae9a73aa4c513819e5ca6f5ef07403c1e0151a96cdacab10f35e9e020fd3d",
+  "verifier_sha256": "8bdaea7c4c60f79507dc8479dad888ae30534331bffdb8986886a12e2294fdb7",
+  "white_moves": 19,
+  "whole_strategy_checked_by_this_run": false,
+  "winning_placement": [
+    [
+      6,
+      2
+    ],
+    [
+      7,
+      2
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      9,
+      3
+    ],
+    [
+      10,
+      3
+    ]
+  ]
+}

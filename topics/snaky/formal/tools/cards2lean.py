@@ -1,0 +1,294 @@
+#!/usr/bin/env -S uv run --quiet python3
+"""Generate the kernel-checked card data: Lean source under lean/Snaky/Gen/ from the card text
+file (cert/snaky-15x15-cards.txt, format of tools/cards2txt.py).  `--name=Gen17` writes another card
+set to lean/Snaky/Gen17/ instead (namespace and module prefix `Snaky.Gen17`); the 17 x 17 set is
+`third_party/sieben/cards-17x17.txt`.
+
+  Snaky/Gen/DataNN.lean    `def cI : Card := ...`, 500 cards per file
+  Snaky/Gen/Tree.lean      subtrees `tK : CTree` (one per chunk), the whole lookup `tree`, `getK`
+  Snaky/Gen/ChunkNNN.lean  `theorem tK_ok : tK.all (cardOK getK) = true := by decide +kernel`
+                           (big cards: ChunkNNNHead.lean, ChunkNNNR*.lean, glued in ChunkNNN)
+  Snaky/Gen/All.lean       `tree_ok` (glue of the chunk theorems) and `root_ok`
+
+The kernel evaluates every chunk; nothing here is trusted.  Chunks are packed by an estimated
+kernel cost (list-membership comparisons, from the probe on branch wip/kernel-probe: about 7 us and
+2 KB each) so each declaration stays within a few GB.
+
+A card over the cap (--units, default 1.5M, about 3 GB) is checked in pieces: `cardHead` and its
+replies over consecutive pieces of its region, one declaration and file each, combined by
+`cardOK_of_split`.  `modules.json` lists every proof module with its estimated units, for
+`tools/build-kernel`.
+
+usage: cards2lean.py CARDS.txt LEAN_DIR [--name=NAME] [--units N] [--max-cards N] [--max-cells N]
+"""
+import os
+import sys
+
+ORIENT = [(1, 0, 0, 1), (-1, 0, 0, 1), (0, -1, 1, 0), (0, 1, 1, 0),
+          (-1, 0, 0, -1), (1, 0, 0, -1), (0, 1, -1, 0), (0, -1, -1, 0)]
+PER_FILE = 500
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+def parse(path):
+    xs = [int(t) for t in open(path).read().split()[1:]]
+    pos = 0
+
+    def nxt():
+        nonlocal pos
+        pos += 1
+        return xs[pos - 1]
+
+    def pts():
+        return [(nxt(), nxt()) for _ in range(nxt())]
+
+    def hint(j):
+        return (j, nxt(), nxt(), nxt())
+
+    rows, cols, root, k, dx, dy = (nxt() for _ in range(6))
+    cards = []
+    while pos < len(xs):
+        h, px, py = nxt(), nxt(), nxt()
+        A, S = pts(), pts()
+        j = nxt()
+        pas = None if j < 0 else hint(j)
+        reps = []
+        for _ in range(nxt()):
+            w = (nxt(), nxt())
+            reps.append((w, hint(nxt())))
+        cards.append({"A": A, "S": S, "p": (px, py), "h": h, "pass": pas, "replies": reps})
+    return (rows, cols, root, (k, dx, dy)), cards
+
+
+def i(n):
+    return f"({n})" if n < 0 else str(n)
+
+
+def pt(p):
+    return f"({i(p[0])}, {i(p[1])})"
+
+
+def xf(k, dx, dy):
+    a, b, c, d = ORIENT[k]
+    return f"⟨{i(a)}, {i(b)}, {i(c)}, {i(d)}, {i(dx)}, {i(dy)}⟩"
+
+
+def hint(h):
+    j, k, dx, dy = h
+    return f"({j}, {xf(k, dx, dy)})"
+
+
+def card(c):
+    pas = f"some {hint(c['pass'])}" if c["pass"] is not None else "none"
+    reps = ", ".join(f"({pt(w)}, {hint(h)})" for w, h in c["replies"])
+    return (f"{{ A := [{', '.join(map(pt, c['A']))}], S := [{', '.join(map(pt, c['S']))}], "
+            f"p := {pt(c['p'])}, h := {c['h']}, pass := {pas}, replies := [{reps}] }}")
+
+
+def units(c, cards):
+    """Estimated list-membership comparisons for checking card c (probe cost model)."""
+    B = len(c["A"]) + 1
+    u = len(c["S"]) * (B + len(c["replies"]))
+    hints = [h for _, h in c["replies"]] + ([c["pass"]] if c["pass"] else [])
+    for j, *_ in hints:
+        u += len(cards[j]["A"]) * B + len(cards[j]["S"]) * len(c["S"])
+    return u
+
+
+def head_units(c, cards):
+    """`cardHead`: the move's membership test plus the pass hint."""
+    B = len(c["A"]) + 1
+    u = len(c["S"])
+    if c["pass"]:
+        j = c["pass"][0]
+        u += len(cards[j]["A"]) * B + len(cards[j]["S"]) * len(c["S"])
+    return u
+
+
+def reply_units(c, w, cards):
+    """`replyOK c w`: membership in p :: A, the hint lookup, and the hint's cover test."""
+    B = len(c["A"]) + 1
+    u = B + len(c["replies"])
+    h = dict(c["replies"]).get(w)
+    if h is not None:
+        u += len(cards[h[0]]["A"]) * B + len(cards[h[0]]["S"]) * len(c["S"])
+    return u
+
+
+def reply_parts(c, cards, cap, max_cells):
+    """Consecutive pieces of S whose reply checks each stay under `cap` units and `max_cells`
+    cells.  The cell cap is the binding one in practice: the unit estimate misjudges a big card's
+    replies by up to 10x (measured 2026-10-07: card 0's middle cells cost about 0.4 s and
+    110 MB each), so `tools/measure-kernel` is the check that the pieces stay small."""
+    parts, cur, cu = [], [], 0
+    for w in c["S"]:
+        u = reply_units(c, tuple(w), cards)
+        if cur and (cu + u > cap or len(cur) >= max_cells):
+            parts.append((cur, cu))
+            cur, cu = [], 0
+        cur.append(tuple(w))
+        cu += u
+    parts.append((cur, cu))
+    return parts
+
+
+def chunks(cards, max_units, max_cards):
+    out, cur, cu = [], [], 0
+    for n, c in enumerate(cards):
+        u = units(c, cards)
+        if cur and (cu + u > max_units or len(cur) >= max_cards):
+            out.append(cur)
+            cur, cu = [], 0
+        cur.append(n)
+        cu += u
+    out.append(cur)
+    return out
+
+
+def balanced(items, leaf):
+    """Balanced CTree source over a non-empty list of index ranges [(lo, hi, src)]."""
+    if len(items) == 1:
+        return leaf(items[0])
+    mid = len(items) // 2
+    return (f"(.node {items[mid][0]} {balanced(items[:mid], leaf)} "
+            f"{balanced(items[mid:], leaf)})")
+
+
+def write(path, text):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w").write(text)
+
+
+def main():
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    opts = dict(a[2:].split("=", 1) for a in sys.argv[1:] if a.startswith("--") and "=" in a)
+    if len(args) != 2:
+        sys.exit(__doc__)
+    src, lean = args
+    name = opts.get("name", "Gen")
+    (rows, cols, root, rxf), cards = parse(src)
+    n = len(cards)
+    gen = os.path.join(lean, "Snaky", name)
+    rel = os.path.relpath(os.path.abspath(src), REPO)
+    HEADER = f"-- Generated by tools/cards2lean.py from {rel}; do not edit.\n"
+    sys.setrecursionlimit(100000)
+
+    nfiles = (n + PER_FILE - 1) // PER_FILE
+    for f in range(nfiles):
+        body = "\n".join(f"def c{k} : Card := {card(cards[k])}"
+                         for k in range(f * PER_FILE, min(n, (f + 1) * PER_FILE)))
+        write(os.path.join(gen, f"Data{f:02d}.lean"),
+              HEADER + f"import Snaky.Cards\n\nnamespace Snaky.{name}\n\n" + body + f"\n\nend Snaky.{name}\n")
+
+    cap = int(opts.get("units", 1_500_000))
+    ch = chunks(cards, cap, int(opts.get("max-cards", 60)))
+    subs = []
+    for k, idx in enumerate(ch):
+        t = balanced([(j, j + 1, None) for j in idx], lambda it: f"(.leaf {it[0]} c{it[0]})")
+        subs.append(f"def t{k} : CTree := {t}")
+    top = balanced([(idx[0], idx[-1] + 1, k) for k, idx in enumerate(ch)], lambda it: f"t{it[2]}")
+    imports = "".join(f"import Snaky.{name}.Data{f:02d}\n" for f in range(nfiles))
+    write(os.path.join(gen, "Tree.lean"), HEADER + imports + f"""
+namespace Snaky.{name}
+
+{chr(10).join(subs)}
+
+/-- All {n} cards, indexed `0 … {n - 1}`. -/
+def tree : CTree := {top}
+
+def getK : Nat → Option Card := tree.get
+
+end Snaky.{name}
+""")
+    modules = []
+    for k, idx in enumerate(ch):
+        u = sum(units(cards[j], cards) for j in idx)
+        if len(idx) > 1 or u <= cap:
+            modules.append({"module": f"Snaky.{name}.Chunk{k:03d}", "units": u})
+            write(os.path.join(gen, f"Chunk{k:03d}.lean"), HEADER + f"""import Snaky.{name}.Tree
+
+namespace Snaky.{name}
+
+set_option maxHeartbeats 0 in
+/-- Cards {idx[0]}-{idx[-1]} are justified. -/
+theorem t{k}_ok : t{k}.all (cardOK getK) = true := by decide +kernel
+
+end Snaky.{name}
+""")
+            continue
+        # one big card: its head and its replies in pieces, one declaration (and file) each
+        i = idx[0]
+        c = cards[i]
+        parts = reply_parts(c, cards, cap, int(opts.get("max-cells", 15)))
+        write(os.path.join(gen, f"Chunk{k:03d}Head.lean"), HEADER + f"""import Snaky.{name}.Tree
+
+namespace Snaky.{name}
+
+set_option maxHeartbeats 0 in
+/-- Card {i}: move, height, and pass hint. -/
+theorem c{i}_head : cardHead getK c{i} = true := by decide +kernel
+
+end Snaky.{name}
+""")
+        modules.append({"module": f"Snaky.{name}.Chunk{k:03d}Head", "units": head_units(c, cards)})
+        for r, (ws, pu) in enumerate(parts):
+            write(os.path.join(gen, f"Chunk{k:03d}R{r}.lean"), HEADER + f"""import Snaky.{name}.Tree
+
+namespace Snaky.{name}
+
+def c{i}_part{r} : List Pt := [{', '.join(map(pt, ws))}]
+
+set_option maxHeartbeats 0 in
+/-- Card {i}: White replies at {len(ws)} cells of its region (piece {r + 1} of {len(parts)}). -/
+theorem c{i}_r{r} : c{i}_part{r}.all (replyOK getK c{i}) = true := by decide +kernel
+
+end Snaky.{name}
+""")
+            modules.append({"module": f"Snaky.{name}.Chunk{k:03d}R{r}", "units": pu})
+        L = " ++ ".join(f"c{i}_part{r}" for r in range(len(parts)))
+        rs = ", ".join(f"c{i}_r{r}" for r in range(len(parts)))
+        write(os.path.join(gen, f"Chunk{k:03d}.lean"), HEADER + f"import Snaky.{name}.Chunk{k:03d}Head\n"
+              + "".join(f"import Snaky.{name}.Chunk{k:03d}R{r}\n" for r in range(len(parts)))
+              + f"""import Snaky.CardsSound
+
+namespace Snaky.{name}
+
+/-- Card {i} is justified (checked in {len(parts) + 1} pieces). -/
+theorem t{k}_ok : t{k}.all (cardOK getK) = true :=
+  CTree.all_leaf (cardOK_of_split ({L}) c{i}_head (by decide +kernel)
+    (by simp only [List.all_append, {rs}, Bool.and_self]))
+
+end Snaky.{name}
+""")
+        modules.append({"module": f"Snaky.{name}.Chunk{k:03d}", "units": len(c["S"]) ** 2})
+    glue = glue_proof(0, len(ch))
+    k_, dx, dy = rxf
+    write(os.path.join(gen, "All.lean"), HEADER + "".join(
+        f"import Snaky.{name}.Chunk{k:03d}\n" for k in range(len(ch))) + f"""import Snaky.CardsSound
+
+namespace Snaky.{name}
+
+/-- Every card in the lookup tree is justified. -/
+theorem tree_ok : tree.all (cardOK getK) = true := {glue}
+
+/-- The root card {root} has `A = []` and fits on the {rows} × {cols} board. -/
+theorem root_ok : rootOK getK {rows} {cols} {root} {xf(k_, dx, dy)} = true := by decide +kernel
+
+end Snaky.{name}
+""")
+    import json
+    write(os.path.join(gen, "modules.json"), json.dumps(modules, indent=0) + "\n")
+    print(f"{n} cards, {nfiles} data files, {len(ch)} chunks, {len(modules)} proof modules; "
+          f"largest {max(m['units'] for m in modules):,} units")
+
+
+def glue_proof(lo, hi):
+    """Proof term for the top of `tree`, splitting exactly as `balanced` does."""
+    if hi - lo == 1:
+        return f"t{lo}_ok"
+    mid = lo + (hi - lo) // 2
+    return f"(CTree.all_node {glue_proof(lo, mid)} {glue_proof(mid, hi)})"
+
+
+if __name__ == "__main__":
+    main()
