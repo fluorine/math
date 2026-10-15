@@ -1,0 +1,32 @@
+ANNOUNCEMENT DRAFT — NOT POSTED
+
+Standard-length X post
+----------------------
+Can Maker build Snaky while an opponent blocks one cell per turn?
+
+We found a strategy that wins within 19 Maker moves, down from 20.
+
+Lean-verified and independently checked. Built on Sieben, Morris & OpenAI.
+
+Full proof and code:
+https://github.com/shjvandekamp/math/tree/main/topics/snaky
+
+Optional follow-up
+------------------
+The theorem starts from the empty infinite square board and covers every legal Breaker strategy. The winning claim counts toward 19. The same certificate works on 17×17.
+
+The result is an upper bound, not a proof of optimality. Prior-bound and novelty claims refer to the public-source audit dated 15 October 2026.
+
+The repository contains the full argument, exact certificate, deterministic constructor, independent verifier, negative controls, Lean sources and reproducible build instructions. The new step retains Maker history and safe cells that the current tactic has forgotten.
+
+Credits
+-------
+Nándor Sieben: public 20-move strategy.
+Trevor Morris: 15×15 tactics, compact card format, generator and inherited formal soundness infrastructure.
+OpenAI: earlier 21-move Snaky result.
+This repository: the new history-aware composition, independent checks, and direct infinite-board Lean theorem for the resulting 19-move certificate.
+
+Reference style
+---------------
+https://x.com/annanay/status/2110445399286731013
+Use the problem / improvement / verification and credit / full-proof-link structure. This draft is original wording, not a quotation.

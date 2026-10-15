@@ -75,4 +75,4 @@ python3 topics/snaky/formal/build.py --lean /absolute/path/to/lean --target Snak
 
 No optimality, 18-move impossibility, or infinite-board lower bound is asserted.
 Earlier search failure concerned a restricted construction mechanism. Nothing
-has been published or pushed remotely.
+from the later follow-on research is included in this nineteen-move publication.

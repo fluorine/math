@@ -1,25 +1,88 @@
 # Snaky within 19 Maker moves
 
-**A Lean-checked certificate forces Snaky within 19 Maker moves on the infinite board.**
-This improves the public bound located by the 15 October 2026 audit, from 20.
-See `RESULT.md` for claims and limits,
-`MANUSCRIPT.md` for the mathematical argument, and `NOVELTY.md` for the pre-search audit.
+**Maker can force the six-cell Snaky within 19 of Maker's own moves on the
+initially empty infinite square board, against every legal Breaker strategy.**
+The winning claim is included in the 19. The same certificate proves a win
+within 19 moves on the empty 17×17 board.
 
-From the repository root, verify the final certificate and rejection controls:
+[Read the proof note](output/pdf/snaky-note.pdf)
+· [Markdown manuscript](MANUSCRIPT.md)
+· [LaTeX source](publication/snaky-note.tex)
+· [Result and verification scope](RESULT.md)
+· [Novelty audit](NOVELTY.md)
+
+Maker moves first. Each player claims one previously unclaimed cell per turn.
+A winning set is any translation, rotation or reflection of
+`{(0,0),(1,0),(2,0),(3,0),(3,1),(4,1)}`; Maker may own additional cells.
+
+## Contribution and prior work
+
+The dated public-source audit found 20 moves as the strongest prior public
+bound. This construction combines Nándor Sieben's twenty-move strategy with
+local tactics from Trevor Morris's 15×15 work, building on OpenAI's earlier
+Snaky result. It retains the actual Maker history and safe cells that the
+current tactical template has forgotten, producing a uniform nineteen-move
+strategy. The contribution is the new composition and its verified bound;
+the imported tactics and proof infrastructure are explicitly credited in the
+[provenance record](reference/README.md).
+
+The result is an upper bound. It does not prove that nineteen is optimal.
+Novelty is relative to the [15 October 2026 audit](NOVELTY.md), rather than a
+claim that every unpublished or unindexed result has been ruled out.
+This is an AI-assisted mathematical contribution offered for public scrutiny.
+
+## What is verified
+
+- The [exact certificate](certificate/snaky19.cards.txt) has 3,468 reachable
+  cards. The independent verifier checked all 61,040 inside reply obligations,
+  3,456 universal outside classes, terminal shapes and strict move-count descent.
+- All 31 focused tests passed. Deliberately reducing the root bound or removing
+  a required reply was rejected. Reconstruction produced identical certificate
+  bytes. See the [verification evidence](verification/README.md).
+- Lean 4.34.1 kernel checked both
+  `Snaky.snaky_wins_plane_in_19 : Snaky.PlaneBlackWinsIn 19 [] []` and
+  `Snaky.snaky_wins_17x17_in_19`. Both depend only on `propext`,
+  `Classical.choice` and `Quot.sound`. There are no proof placeholders,
+  custom axioms or native decision shortcuts. See the
+  [formal proof](formal/README.md) and [kernel audit](formal/kernel-audit.json).
+
+The plane theorem handles every legal integer-coordinate Breaker reply
+explicitly, including replies outside the certificate's finite support.
+[Game conventions](SPECIFICATION.md) and the [soundness argument](SOUNDNESS.md)
+explain the connection between finite data and the infinite game.
+
+## Reproduce from a clean checkout
+
+Python 3.9 or later and its standard library suffice for construction and
+independent checking. No network or external Python packages are needed:
 
 ```sh
-python3 topics/snaky/reproduce.py
+git clone https://github.com/shjvandekamp/math.git
+cd math
+python3 topics/snaky/reproduce.py --reconstruct
 ```
 
-This command uses only Python's standard library and runs serially. Add
-`--reconstruct` to repeat the bounded construction from the pinned source data
-and require an identical certificate; add `--baselines` for the baseline audits.
-Constructor and verifier share the declarative file interface, not checking code.
+For the full formal proof, install the official Lean **4.34.1** compiler and run:
 
-`SPECIFICATION.md` defines the game and certificate rules. `SOUNDNESS.md` explains
-why accepted rules yield a policy against all infinite-board replies. Public
-data and attribution live in `reference/`; construction tools in `constructor/`;
-independent checking in `verification/`; formal proof sources in `formal/`.
+```sh
+python3 topics/snaky/formal/build.py --lean /absolute/path/to/lean --target Snaky.Audit
+```
 
-All work is local on a unique research branch. Do not merge another topic,
-publish, or push results without the user's publication authorization.
+The [formal build guide](formal/README.md) gives compiler provenance and resource
+limits. It generates the proof modules from the committed certificate and
+checks them serially; no mathlib is needed. Generated modules and binaries are
+rebuildable outputs, not missing proof inputs.
+
+The PDF note was built with Tectonic 0.15.0. To regenerate it from the included
+standalone LaTeX source:
+
+```sh
+tectonic --outdir topics/snaky/output/pdf topics/snaky/publication/snaky-note.tex
+```
+
+[Construction tools and mechanism](constructor/README.md)
+· [Pinned source data and credits](reference/README.md)
+· [Announcement draft](publication/X_POST.txt)
+
+This publication contains only the completed nineteen-move result. Follow-on
+Snaky experiments are maintained separately and are not claims of this release.

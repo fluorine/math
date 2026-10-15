@@ -4,16 +4,24 @@ Updated 2026-10-15. **The 19-move result is complete, independently verified,
 fully checked by the Lean kernel, and reproduced byte for byte.** The proof
 covers both the empty infinite square board and the empty 17×17 board.
 
+The user authorized publication on 15 October 2026. This release contains only
+the completed nineteen-move result from verified research commit `0a858c3`.
+Further Snaky research remains on a separate local branch. The announcement
+under `publication/X_POST.txt` is a draft, not a claim that it has been posted.
+
 ## Location and ownership
 
 - Repository: `/Volumes/2tb/math`, original HEAD `7566886575317521d0b9510c7ef1198845ccec4f`.
 - Isolated worktree: `/Volumes/2tb/math/.worktrees/snaky19-20261015-a`.
-- Branch: `research/snaky19-20261015-a`.
+- Verified research branch: `research/snaky19-20261015-a` at `0a858c3`.
+- Publication integration branch: `publication/snaky19-20261015`, based on the
+  repository's current main branch and preserving the sensitivity contribution.
 - Scope: `topics/snaky/`; other sessions have separate worktrees. Do not modify them.
 - Root owns specifications, integration and result claims. Constructor owns
   `constructor/` and `MANUSCRIPT.md`; independent verifier owns `verification/`.
   Tactics worker wrote `formal/Snaky/Plane.lean` and `Result19.lean`. Root owns
-  formal build infrastructure. No publication or remote push authorized.
+  formal build infrastructure. Publication of this completed result is authorized;
+  follow-on results remain separate and are not included in this release.
 
 ## Host and limits
 
@@ -79,8 +87,7 @@ Formal checks use one thread and a 4,096 MB Lean memory cap. No paid/cloud compu
 
 The requested 19-move target is achieved. No search or proof build is left
 running. All delivered files are under `topics/snaky/` on the isolated research
-branch. No remote push or publication has occurred. The 18-move question and
-optimality remain outside this completed result.
+branch. The 18-move question and optimality remain outside this completed result.
 
 Ignored local build outputs and hashes remain under `formal/.build/`; generated
 `Gen19` uses 1,165 proof modules with 400,000-unit / 5-response-cell chunks to
