@@ -40,3 +40,27 @@ The numerical LP is used only to discover data. The JSON data generator writes
 literal tables; ordinary `decide` checks finite integer facts in the kernel,
 and algebraic proofs carry them to real expectations. No LP-duality theorem,
 external certificate oracle, or continuous-realization theorem is assumed.
+
+## Same-panel compatibility extension
+
+| Obligation | Lean source and principal declaration |
+|---|---|
+| Broader class, original bounds/root data, unchanged ordinary quotes | `BroadContract.lean`: `Admissible`, `FitsPanel`, `HasCompatibleLaw` |
+| Exact 39-state schedule/signal data and revelation times | `HiddenData.lean`: `Atom`, `weight`, `History` |
+| Positive weights, prefix/signal marginals, all fixing-history means | `HiddenCertificate.lean`: `certificate` |
+| Finite conditioning, reconstruction and tower including null histories | `FiniteConditioning.lean`: `avg_reconstruct`, `avg_tower_hsum` |
+| Actual positive stock, budgets, full model, root values and envelope | `HiddenModel.lean`: `model`, `model_admissible` |
+| Signals equal conditional budgets, exact log relation | `HiddenModel.lean`: `model_windowBudget`, `model_window_log_identity` |
+| Every unchanged stock and VIX call | `HiddenQuotes.lean`: `model_stock_calls`, `model_vix_calls`, `model_fitsPanel` |
+| Mixture with trivial root and branch revelation at event 1 | `Mixture.lean`: `Mixture.model`, `Broad.mix_admissible` |
+| Full-family ordinary quotes and conditional-log identities | `Mixture.lean`: `Broad.mix_fitsPanel`, `Broad.mix_window_log_identity` |
+| Actual common financial law for every `0≤ε≤1` | `ExtensionHeadline.lean`: `financial_same_panel_compatibility` |
+| Comparison with the published obstruction for `ε<1/30` | `ExtensionHeadline.lean`: `information_restriction_is_essential` |
+| Positive same-history states with different future activity | `ExtensionHeadline.lean`: `hidden_window_not_revealed` |
+
+The new implication chain is data → finite conditional averages → full
+hidden-information financial model → ordinary calls → filtered mixture →
+same-panel compatibility. The old impossibility theorem is imported unchanged
+only for the final comparison. No infeasibility of a numerical relaxation is
+used. A compatible witness is embedded directly in the declared broader class;
+there is no need to assert a finite reduction of all possible models.

@@ -1,77 +1,149 @@
 # Verification record
 
-**PASS — 2026-10-15, exit status 0.** The complete scoped financial theorem and its local dependency closure were freshly compiled. This verifies the declared finite architecture, not unrestricted SPX/VIX markets or mathematical novelty.
+**PASS — 2026-10-15, exit status 0.** Both the published finite-architecture
+obstruction and the same-panel compatibility theorem were checked in
+one complete fresh local-source build: **27 modules, 39 distinct audited
+declarations** (43 printed lists including duplicates). Every audited list
+contains exactly `propext`, `Classical.choice`, and `Quot.sound`.
 
 ## Reproduce
 
-From `projects/vix-overlap-consistency` in the research checkout:
+From `projects/vix-overlap-consistency`:
 
 ```sh
 scripts/verify.sh
 ```
 
-The recorded run used:
+The recorded complete run was:
 
 ```sh
-scripts/verify.sh > notes/verification.log 2>&1
+scripts/verify.sh > notes/extension-verification.log 2>&1
 ```
 
-It ended with:
+The saved output has trailing spaces removed; its final line is:
 
 ```text
-PASS: 19 local modules freshly compiled; exit status 0.
+PASS: 27 local modules freshly compiled; exit status 0.
 ```
 
-The entry point first checks that `certificates/exact.json` matches the literal Lean data. It then verifies exact compiler/dependency revisions and unchanged dependency sources, rejects local proof placeholders, custom axioms and native computation oracles, rebuilds every local module in the import closure, and checks every printed axiom list. All 22 audited declarations passed. Linter warnings about unused simplifier arguments or deprecated names are present; there are no build errors.
+The entry point checks both exact JSON certificates against their literal
+Lean tables, checks compiler/dependency revisions and unchanged dependency
+sources, rejects local proof placeholders/custom axioms/native computation
+oracles, rebuilds every local source in the import closure, and checks every
+printed transitive axiom list. Linter warnings are present; there are no
+build errors. Python checks are not proof oracles: the certificate identities
+and their financial implications are independently proved inside Lean.
 
-The build reuses pinned upstream Mathlib artifacts but never reuses a local proof module without recompilation. It is a clean local-source verification, not a from-source rebuild of the whole Lean/Mathlib ecosystem. Missing dependencies are restored from the checked-in manifest; the no-dependency bootstrap path was inspected but not separately run from an empty download cache.
+The build reuses pinned upstream Mathlib artifacts and always recompiles the
+local proof closure. It is not a from-source rebuild of the entire
+Lean/Mathlib ecosystem. Missing dependencies and artifacts are restored from
+the pinned manifest. The fresh network bootstrap was exercised successfully
+by the published baseline's GitHub CI.
 
 ## Pinned versions
 
 | Component | Pin |
 |---|---|
-| Lean | 4.34.1, arm64-apple-darwin24.6.0 |
+| Lean | 4.34.1 |
 | Lean compiler commit | `5045d0056413266e57c625dcd7c365b10e377c52` |
-| Mathlib | `d13f23b723b8a846827a245b89c10fc7d3f11612` (v4.34.1) |
+| Mathlib | `d13f23b723b8a846827a245b89c10fc7d3f11612` |
 | Transitive packages | Exact revisions in `formal/lake-manifest.json` |
 
-`formal/lean-toolchain` pins the compiler. Set `VIX_LEAN=/absolute/path/to/lean` if it is not on PATH. On this Mac, the script also recognizes `/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean`. Initial dependency retrieval requires network access. No BrownianMotion or formal-mathfin declaration is imported.
+The local run used arm64-apple-darwin24.6.0. Set
+`VIX_LEAN=/absolute/path/to/lean` if needed. The script also recognizes the
+installed compiler under `/Volumes/2tb/math/.research-cache/toolchains`.
+No BrownianMotion or formal-mathfin declaration is imported. Initial
+retrieval needs network access; checking saved certificates needs only
+Python's standard library. SciPy is used only for numerical discovery.
 
-## Headline and axioms
+## Headline statements and axioms
 
-The full statement is `VixOverlap.financial_three_window_obstruction` in `formal/VixOverlap/Headline.lean`. It includes proper-panel structural witnesses, full-panel impossibility, fixed root budgets, positive witness weights for ε>0, a common moment bound, full window conditional-log identities, actual-SPX-log T2/T4 tests, and the exact positive separation margin. `Audit.lean` prints the relevant definitions/statements and requests transitive axiom dependencies.
+`VixOverlap.financial_three_window_obstruction` remains the published
+restricted impossibility theorem, including all proper-panel witnesses,
+common bounds/budgets, full window log identities, frozen tests and margin.
 
-The recorded output includes:
+`VixOverlap.Extension.financial_same_panel_compatibility` supplies an actual
+full filtered law for every `0≤ε≤1` on a fixed 6592-state carrier, with the
+same complete vanilla panel, original initial data and moment bound, unit
+stock forwards and all three conditional-log identities.
+`Extension.information_restriction_is_essential` explicitly pairs broader
+existence with restricted impossibility for every `0≤ε<1/30`.
+
+The complete log contains:
 
 ```text
 'VixOverlap.financial_three_window_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
-'VixOverlap.QuoteContract.vanilla_three_window_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
-'VixOverlap.ScheduleModel.model' depends on axioms: [propext, Classical.choice, Quot.sound]
-'VixOverlap.quoted_second_moment_log_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
-'VixOverlap.quoted_overlap_log_inequality' depends on axioms: [propext, Classical.choice, Quot.sound]
-'VixOverlap.exact_separation_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.Extension.financial_same_panel_compatibility' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.Extension.same_panel_compatible' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.Extension.information_restriction_is_essential' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.HiddenModel.model' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.HiddenQuotes.model_fitsPanel' depends on axioms: [propext, Classical.choice, Quot.sound]
+'VixOverlap.Mixture.model' depends on axioms: [propext, Classical.choice, Quot.sound]
 ```
 
-Every other audited declaration has the same three foundational axioms. The complete output is in `notes/verification.log`. There is no `sorry`, `admit`, `sorryAx`, substantive custom axiom, native computation oracle, or external solver assumption in the main proof closure. Ordinary `decide` proves finite integer facts; proved finite-sum identities lift the certificate to arbitrary real probabilities. Logarithms and square roots are exact real expressions.
+All other audited declarations have the same three foundational axioms.
+There is no `sorry`, `admit`, `sorryAx`, substantive new axiom, native
+computation oracle, external solver assumption or assumed continuous
+realization in either proof closure. Finite integer facts use ordinary
+`decide`; algebraic proofs lift them to real probabilities. Logarithms and
+square roots remain exact real expressions.
 
 ## Statement and library audit
 
-An independent explorer compared the informal theorem with the formal declaration and definitions. Initial findings required the full structural constructor, window log relation, ordinary-quote identification, common budgets/bounds, actual-SPX-log tests, and an integrated axiom audit. These were implemented. The final source audit found no material statement-level gap; its findings and limits are in `notes/statement-review.md`.
+Independent source reviews are recorded in `notes/statement-review.md` and
+`notes/extension-review.md`. The extension review found no material gap in
+the ordinary observations, quantifiers, full model constructor, null-history
+handling, root mixture conditioning, common moment bound or interpretation.
+Its wording clarification was incorporated: the broader class allows extra
+fixing signals and finite latent states; the witness is not claimed to be
+merely a coarsening of the original 4096-state model.
 
-T1 is established by actual probability laws, stock positivity, `model_stock_forward`, and the common pointwise moment bound. T2 and T4 appear explicitly in the headline. T3 is stronger than testing a finite selection of inequalities: every proper subpanel has an actual filtered law. `uniform_model_nonzero` provides a nonzero-variance admissible example. Additivity is proved in `BudgetAlgebra.lean`. Conditional equations remain unnormalized on zero-mass histories.
+The headline returns `FiniteModel`, whose fields require positivity,
+adaptation, every martingale row, diagonal log row and full tower row.
+`Broad.Admissible` and `Broad.FitsPanel` contain restrictions and observed
+prices, not an assumed existence result. Nonvacuity follows from the explicit
+normalized positive witness. Pointwise signal identification uses proved
+positive history masses. Mixture proofs multiply unnormalized branch rows,
+including zero-weight branches at both endpoints.
 
-The relevant Mathlib declarations for real logarithms, square roots and prime factorization were inspected. Strict stock positivity keeps the diagonal identity in the intended logarithm domain; square-root squaring uses a proved nonnegative argument. Imported results do not assume the desired realization or obstruction. The exact dependency map is in PROOF_MAP.md.
+The previously inspected Mathlib logarithm, square-root and factorization
+results remain unchanged. The new finite conditioning proof partitions sums
+into finite equivalence classes; it assumes no measure-theoretic realization
+result. PROOF_MAP.md records every main implication. Novelty is a separate,
+provisional assessment in NOVELTY.md.
 
-## Resource and discovery record
+## GitHub publication
 
-Builds were serial, single-threaded, and `nice 19`, with Lean's internal allocation cap set to 4,096 MB. Direct measurement of the final expectation module gave a peak macOS physical footprint of about 352 MiB; mapped maximum RSS was about 2.18 GB. Earlier Lake-wrapper footprint measurements were discarded because the wrapper spawns a Lean child. No other task's active process was modified.
+The authorized original baseline was pushed and merged through
+[PR #2](https://github.com/shjvandekamp/math/pull/2) at main commit
+`bffaa68ca7b965162e6437d30f90881ce64bff15` on 2026-10-15.
+Its [main-branch CI run](https://github.com/shjvandekamp/math/actions/runs/38745717506)
+and [PR CI run](https://github.com/shjvandekamp/math/actions/runs/38743905081)
+both passed. Each ran the complete baseline verifier: 19 local modules and
+22 audited declarations. `notes/verification.log` preserves the fresh local
+publication run. The compatibility extension is now published through
+[PR #3](https://github.com/shjvandekamp/math/pull/3). Its first
+[full 27-module Linux CI run](https://github.com/shjvandekamp/math/actions/runs/38753211263)
+passed on commit `916a761`; the PR records checks for the final publication
+head. Further research was stopped at the user's request; no subsequent
+exploratory theorem is included.
 
-The numerical script discovers candidates only. `scripts/exactify.py` reconstructs rational data and checks it with Python fractions; its successful gap 1/32 check is supporting evidence, not the theorem. The final Lean certificate checks the data and its mathematical implications independently of the numerical LP. Failed model-design approaches are recorded in THEOREM.md and `notes/model-audit.md`.
+CI pins checkout to `3d3c42e5aac5ba805825da76410c181273ba90b1`, installs the
+Lean 4.34.1 Linux archive, and checks its official SHA-256
+`47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4`.
+The Ubuntu 24.04 image is maintained rather than bit-pinned; compiler and
+dependency identities are checked independently. An initial bootstrap failure
+was repaired by excluding compiler-supplied `Lean.*` modules from Mathlib
+cache roots. The subsequent fresh-install CI passed; no theorem changed in
+that repair.
 
-## GitHub publication verification
+## Resources and discovery
 
-The full local command was rerun successfully before the authorized publication on 2026-10-15, again compiling 19 modules and passing all 22 axiom audits. The recorded log above is from that rerun. `.github/workflows/vix-overlap-consistency.yml` runs the same complete verifier on pushes and pull requests that affect this project.
-
-CI installs the exact Lean 4.34.1 Linux release archive and checks its official SHA-256 `47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4`. Checkout is pinned to `3d3c42e5aac5ba805825da76410c181273ba90b1`. Dependencies and Mathlib artifacts are freshly retrieved over the network when absent. The Ubuntu 24.04 runner image is maintained rather than bit-pinned; compiler and dependency identities are independently checked by the verifier. Remote run outcomes are recorded by GitHub Actions and must not be inferred from this local pass.
-
-The first fresh-cache CI attempt exposed an orchestration bug: the cache command was given `Lean.*` imports as explicit Mathlib cache roots. Those modules belong to the compiler release. The verifier now requests only `Mathlib.*` roots while retaining their complete dependency closure. This changes dependency retrieval, not any mathematical declaration or proof. The subsequent GitHub run is the fresh-install regression check.
+Local builds were serial, single-threaded and `nice 19`, with Lean's internal
+allocation cap at 4096 MB. This cap is not a physical-memory measurement.
+No other task's process was modified. Exact hidden-certificate checks cover
+all 624 original rational equations and match all three 39-entry Lean data
+vectors. Those checks support reproducibility; the main evidence is the
+kernel-checked financial construction. Failed model-design approaches and
+search details are preserved in THEOREM.md, `notes/model-audit.md` and
+`notes/hidden-search.md`.

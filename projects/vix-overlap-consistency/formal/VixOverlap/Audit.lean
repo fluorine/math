@@ -28,3 +28,27 @@ import VixOverlap
 #print axioms VixOverlap.ScheduleCertificate.prefix_marginals_bit_mean
 #print axioms VixOverlap.Vanilla.nonneg_calls_identify_fiber_statistic
 #print axioms VixOverlap.Vanilla.active_count_identified
+
+#print VixOverlap.Broad.Admissible
+#print VixOverlap.Broad.FitsPanel
+#print VixOverlap.Broad.HasCompatibleLaw
+#check VixOverlap.Extension.financial_same_panel_compatibility
+#check VixOverlap.Extension.information_restriction_is_essential
+
+#print axioms VixOverlap.Extension.financial_same_panel_compatibility
+#print axioms VixOverlap.Extension.same_panel_compatible
+#print axioms VixOverlap.Extension.information_restriction_is_essential
+#print axioms VixOverlap.Extension.hidden_window_not_revealed
+#print axioms VixOverlap.Extension.raw_card
+#print axioms VixOverlap.Extension.model
+#print axioms VixOverlap.Extension.model_window_log_identity
+#print axioms VixOverlap.HiddenModel.model
+#print axioms VixOverlap.HiddenModel.model_admissible
+#print axioms VixOverlap.HiddenModel.model_windowBudget
+#print axioms VixOverlap.HiddenModel.model_window_log_identity
+#print axioms VixOverlap.HiddenQuotes.model_fitsPanel
+#print axioms VixOverlap.FiniteConditioning.avg_tower_hsum
+#print axioms VixOverlap.Mixture.model
+#print axioms VixOverlap.Broad.mix_fitsPanel
+#print axioms VixOverlap.Broad.mix_window_log_identity
+#print axioms VixOverlap.Hidden.certificate
