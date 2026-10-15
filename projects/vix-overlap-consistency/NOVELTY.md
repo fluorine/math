@@ -19,3 +19,32 @@ A final same-day refresh searched `"VIX" "three" "pairwise" "overlapping" consis
 General pairwise-versus-global incompatibility is classical: [Wainwright–Jordan, Example 4.1 and equation (4.10)](https://people.eecs.berkeley.edu/~jordan/sail/readings/wainwright-jordan-fnt.pdf) discuss binary cycles; [Sontag–Jaakkola, NeurIPS 2007, Theorem 2](https://proceedings.neurips.cc/paper/2007/file/2b323d6eb28422cef49b266557dd31ad-Paper.pdf) study projected cycle inequalities. We have not established that this particular inequality is equivalent or inequivalent to a triangle inequality. Do not claim a new general theory of marginal compatibility.
 
 Because the full schedule is revealed before returns, the candidate obstruction is a finite marginal problem. It does not establish a new information-revelation or tower obstruction. The potentially new content is the explicit ordinary-SPX/VIX embedding, same-class proper-subpanel laws, and particular exact family. This is worth proving as a scoped counterexample but is insufficient grounds to advertise a major unrestricted mathematical-finance theorem. The unrestricted problem remains unresolved.
+
+## Same-panel extension audit, 2026-10-15
+
+The local extension constructs a compatible hidden-information law for the
+same panel. Its precise contribution is resolving this panel's fate after
+removing early revelation, with an exact 39-state latent witness and a checked
+filtered mixture for the parameter family. This is a relevant disproof of a
+stronger interpretation of our example. It is not a general completeness
+theorem for pairwise tests.
+
+The qualitative information mechanism is already explicit in
+[Huang, Section 2.3](https://kspectra.ai/papers/common-budget-certification-spx-vix/):
+Proposition 2.11 characterizes the effect of revealing a mark, Example 2.12
+preserves stock martingality while changing the VIX budget, and Definition
+2.13 distinguishes preservation of conditional values from unconditional
+calibration. Those ideas are prior art. We do not claim to discover that VIX
+depends on the filtration. The new table addresses the specific three
+overlapping windows and unchanged all-strike panel defined here.
+
+The same-day extension refresh searched `"VIX" "hidden" "overlapping"
+"consistency" 2026`, the exact common-budget paper title, and the arXiv
+identifier. The author HTML was reread; it still displays September 2026
+without a revision identifier. The arXiv version page still lists only v1.
+Indexed SSRN metadata now reports “last revised 4 Sep 2026,” but the direct
+delivery URL returned an access error and the PDF was not independently read.
+This improves the metadata record without removing the source-access limit.
+No matching public resolution of this explicit panel was found as of
+2026-10-15. Novelty remains provisional; formal correctness and novelty are
+separate assessments.

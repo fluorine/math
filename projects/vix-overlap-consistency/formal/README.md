@@ -94,3 +94,21 @@ Lean internal allocation cap. Earlier 138 MB readings taken around
 `lake env lean` measured the wrapper and were not valid Lean-footprint figures.
 The definitive integrated build and headline axiom output belong in the
 project-level `VERIFICATION.md`.
+
+## Same-panel hidden-information extension
+
+The default verification now also imports `ExtensionHeadline`. Its full
+financial theorem constructs the same vanilla panel for every `0≤ε≤1` with
+hidden activity and fixing-time signals, retaining the original root budgets
+and common moment bound. `BroadContract` declares the broader class without
+an assumed existence field. `HiddenCertificate` checks exact integer data;
+`FiniteConditioning`, `HiddenModel`, and `HiddenQuotes` turn it into a complete
+calibrated finite financial law. `Mixture` proves branch revelation at event 1
+preserves all structural equations, ordinary quotes and window log identities.
+The entire family uses one 6592-state carrier.
+
+The one-command verifier also checks that the hidden-witness JSON matches the
+literal Lean data. This check needs only Python's standard library; SciPy is
+needed only to rerun numerical discovery. No continuous realization is
+imported or claimed. See `../EXTENSION.md` for the frozen broader contract and
+the difference from the published early-revealed architecture.

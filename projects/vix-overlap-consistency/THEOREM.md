@@ -57,8 +57,28 @@ These tests were not changed to fit a candidate. T4 follows from the constructed
 
 ## Original target and outcome
 
-The contract allowed either an exact same-class counterexample passing T1–T4 or a constructive completeness theorem. The family above supplies the counterexample outcome in the declared finite architecture, with every proper-subpanel witness and a proved separation margin. The support is the entire predeclared schedule/sign class, not an arbitrary solver grid. Extending the conclusion to unrestricted markets or continuous realization remains a separate unresolved task.
+The contract allowed either an exact same-class counterexample passing T1–T4 or a constructive completeness theorem. The family above supplies the counterexample outcome in the declared finite architecture, with every proper-subpanel witness and a proved separation margin. The support is the entire predeclared schedule/sign class, not an arbitrary solver grid. The local extension below disproves persistence of this panel's inconsistency in the declared broader finite class. General higher-order completeness for other panels and continuous realization remain separate unresolved tasks.
 
 ## Failed approach recorded before search
 
 Five activity cells with the first fixing at the reveal date make the first window count a prefix count. Under the full SPX panel it is already identified (at r=1/2, spot support values 3^u/2^n identify n). It cannot supply three independent window restrictions. The six-cell timing above moves the first fixing past one activity cell. This is a model-design correction before computation, not a response to an inconvenient candidate.
+
+## Local extension: removal of early revelation
+
+The published theorem above is unchanged. The separately frozen broader
+contract and constructive argument are in [EXTENSION.md](EXTENSION.md).
+The extension statement is: for every real `0≤ε≤1`, one finite filtered law
+fits this exact complete SPX/VIX panel, retaining `S0=S1=1`, the same root
+budgets, full unnormalized structural equations, tenor-three conditional-log
+VIX relation, and the common actual-coordinate moment bound. The class allows
+arbitrary finite carriers and filtrations. It does not require the activity
+schedule to be revealed early.
+
+The witness retains the original stock kernel and independent fair signs,
+with partial activity information supplied by three fixing signals. A fixed
+6592-state disjoint-union carrier realizes the entire parameter family. Its
+existence disproves persistence of this particular panel's obstruction after
+early revelation is removed. It does not prove a local-to-global theorem for
+other panels. The formal headline is
+`Extension.financial_same_panel_compatibility`; final build status is recorded
+separately in VERIFICATION.md.

@@ -1,4 +1,4 @@
-# Three-window vanilla inconsistency in a finite activity-schedule market
+# Information and consistency of three overlapping VIX windows
 
 The project constructs an exact family of ordinary SPX/VIX call panels in a
 fixed finite structural class. Every one- and two-window subpanel has a full
@@ -6,6 +6,14 @@ filtered martingale law. The three-window panel has none in that same class.
 The class is defined before the numerical search; all real probability weights
 on all 64 activity schedules are allowed. It is not a solver discretization of
 an unrestricted market.
+
+The local extension resolves the fate of this same panel in a broader finite
+filtered class: it is compatible when hidden activity and fixing-time signals
+are allowed. An exact construction retains the original stock kernel, root
+budgets and moment bound and fits the full panel for every `0≤ε≤1`.
+The original inconsistency therefore depends on the declared information
+architecture. See [EXTENSION.md](EXTENSION.md) for the broader contract and
+complete construction; it allows additional finite latent states and signals.
 
 The windows are [2,5], [3,6], and [4,7], with common tenor three in the declared
 time unit. The separation margin is `(1−30ε)/32` for every real
@@ -30,4 +38,11 @@ and exact Python reconstruction are separate from this proof entry point.
 
 This is a model-consistency result within the stated architecture. It does not
 claim executable arbitrage, arbitrary-state impossibility, continuous
-realization, or global minimality. The broader research question remains open.
+realization, or global minimality. The general question about a different
+three-window panel with an architecture-free obstruction remains open here.
+
+The original theorem was published and merged in
+[GitHub PR #2](https://github.com/shjvandekamp/math/pull/2), with the full
+[main-branch Lean CI passing](https://github.com/shjvandekamp/math/actions/runs/38745717506).
+The hidden-information extension is kept on local branch
+`research/vix-overlap-extension`; it has not been pushed.

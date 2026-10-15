@@ -1,6 +1,6 @@
 # Pairwise calibration and a three-window obstruction in a finite, early-revealed activity model
 
-**Status: the integrated financial theorem and the clean Lean verification have passed.** The one-command verification exited with status 0 after freshly compiling all 19 local modules. See [VERIFICATION.md](VERIFICATION.md) for the pinned environment and verification record. This manuscript states the checked theorem for the finite architecture below. Novelty remains provisional, and the unrestricted SPX/VIX consistency problem remains unresolved.
+**Status: both the published obstruction and the local same-panel compatibility extension are fully checked.** The complete one-command verification passed with 27 modules and 39 distinct axiom audits. The original theorem below is restricted to early-revealed activity. The final section and [EXTENSION.md](EXTENSION.md) construct a compatible law for the same panel with hidden activity and fixing-time signals. See [VERIFICATION.md](VERIFICATION.md) for build evidence. Novelty remains provisional, and the general higher-order consistency question for other panels remains unresolved here.
 
 ## Scope and economic mechanism
 
@@ -251,7 +251,7 @@ The proof components are:
 | Forward, log, and VIX second-moment relations | `ScheduleMoments` |
 | All-strike overlap tests and exact target means | `PairTests.mixed_overlap`, `PairTests.vix_squared_overlap`, `PairTests.mean_count`, `PairTests.vix_squared_mean` |
 
-The clean verification command, `scripts/verify.sh`, exited with status 0 after freshly compiling all 19 local modules. All 22 audited declarations report exactly `propext`, `Classical.choice`, and `Quot.sound`; the full conditional model, ordinary-call bridge, separator, and pair tests are included in the checked development. The exact JSON-to-Lean data check also passed. Full statements and axiom output are recorded in [notes/verification.log](notes/verification.log). Exact toolchain and dependency pins, the build command, exit status, and statement-audit findings are maintained in [VERIFICATION.md](VERIFICATION.md). The novelty assessment remains separate from proof verification.
+The published baseline verification command, `scripts/verify.sh`, exited with status 0 after freshly compiling all 19 local modules. Its 22 audited declarations report exactly `propext`, `Classical.choice`, and `Quot.sound`; the full conditional model, ordinary-call bridge, separator, and pair tests are included in the checked development. The exact JSON-to-Lean data check also passed. Full statements and axiom output are recorded in [notes/verification.log](notes/verification.log). Exact toolchain and dependency pins, the build command, exit status, and statement-audit findings are maintained in [VERIFICATION.md](VERIFICATION.md). The novelty assessment remains separate from proof verification.
 
 ## Novelty and financial interpretation
 
@@ -259,4 +259,33 @@ The provisional literature review reports **no matching public resolution found 
 
 Because the schedule is revealed early, the separator is a finite marginal-compatibility obstruction. It does not establish a new information-revelation or tower obstruction. The scope of any novelty claim must remain the explicit ordinary-SPX/VIX construction, its fixed-class proper-subpanel laws, and the particular exact family, subject to further literature scrutiny.
 
-The result is a model-consistency statement. No self-financing trading strategy or executable arbitrage has been represented or proved. A fitted pair law is not identified uniquely by its marginal quotes. The same vanilla panel may admit a model outside the early-revealed architecture: proving that it does not would require a separate argument over a larger class. No unrestricted continuous-state impossibility, exchange-settlement theorem, or continuous realization is claimed.
+The result is a model-consistency statement. No self-financing trading strategy or executable arbitrage has been represented or proved. A fitted pair law is not identified uniquely by its marginal quotes. The original theorem alone does not exclude models outside the early-revealed architecture. The extension below constructs one for this same panel. No unrestricted continuous-state impossibility, exchange-settlement theorem, or continuous realization is claimed.
+
+## Local extension: the same panel becomes compatible
+
+The later same-panel investigation answers the question left in the preceding
+paragraph constructively. For every `0≤ε≤1`, including the entire original
+obstruction interval, the unchanged panel admits a finite filtered model once
+early revelation is relaxed. The exact statement, 39-state latent witness,
+conditional-budget construction, all-strike quote argument, and proof of
+filtered mixture closure are given in [EXTENSION.md](EXTENSION.md).
+
+The mechanism is concrete. Retain the six active/frozen return cells and
+independent fair signs, but reveal only past activity and a signal at each
+fixing. The signals satisfy `yi=E[Wi|Hi]`. Hence VIX squared is `c yi/3`,
+while the realized window activity count remains `Wi`. The exact joint
+schedule/signal law reproduces all standing prefix-count laws and all three
+target signal marginals. The old separator constrains the realized counts
+under early revelation; it does not constrain these conditional expectations
+in the same way.
+
+Both endpoint models have the same root budgets and stock. Revealing the
+mixture branch at event 1 therefore preserves the full root equations, while
+all later equations are inherited branch by branch. This constructs the
+whole quoted family with the original common moment bound. The result
+demonstrates that the published inconsistency is specific to the information
+architecture. It is not an architecture-free three-window inconsistency.
+The general higher-order completeness question for other panels remains open
+in this project. The complete 27-module verification passed with exit status 0; the extension
+headline and its dependencies use only `propext`, `Classical.choice`, and
+`Quot.sound`. Build evidence is recorded in [VERIFICATION.md](VERIFICATION.md).
