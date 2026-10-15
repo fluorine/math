@@ -1,0 +1,52 @@
+name: VIX overlap consistency
+
+on:
+  push:
+    paths:
+      - projects/vix-overlap-consistency/**
+      - .github/workflows/vix-overlap-consistency.yml
+  pull_request:
+    paths:
+      - projects/vix-overlap-consistency/**
+      - .github/workflows/vix-overlap-consistency.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out sources
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Install pinned Lean compiler
+        shell: bash
+        run: |
+          set -euo pipefail
+          vix_archive="$RUNNER_TEMP/lean-4.34.1-linux.tar.zst"
+          vix_toolchain_dir="$RUNNER_TEMP/vix-lean-4.34.1"
+          curl --fail --location --silent --show-error --retry 3 \
+            --proto '=https' --tlsv1.2 \
+            https://github.com/leanprover/lean4/releases/download/v4.34.1/lean-4.34.1-linux.tar.zst \
+            --output "$vix_archive"
+          # Digest published with the official v4.34.1 Linux release asset.
+          printf '%s  %s\n' \
+            47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4 \
+            "$vix_archive" | sha256sum --check --strict
+          mkdir -p "$vix_toolchain_dir"
+          tar --zstd --extract --file "$vix_archive" \
+            --directory "$vix_toolchain_dir" --strip-components=1
+          printf 'VIX_LEAN=%s/bin/lean\n' "$vix_toolchain_dir" >> "$GITHUB_ENV"
+
+      - name: Verify certificates and complete Lean proof
+        shell: bash
+        run: projects/vix-overlap-consistency/scripts/verify.sh

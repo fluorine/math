@@ -67,3 +67,9 @@ The relevant Mathlib declarations for real logarithms, square roots and prime fa
 Builds were serial, single-threaded, and `nice 19`, with Lean's internal allocation cap set to 4,096 MB. Direct measurement of the final expectation module gave a peak macOS physical footprint of about 352 MiB; mapped maximum RSS was about 2.18 GB. Earlier Lake-wrapper footprint measurements were discarded because the wrapper spawns a Lean child. No other task's active process was modified.
 
 The numerical script discovers candidates only. `scripts/exactify.py` reconstructs rational data and checks it with Python fractions; its successful gap 1/32 check is supporting evidence, not the theorem. The final Lean certificate checks the data and its mathematical implications independently of the numerical LP. Failed model-design approaches are recorded in THEOREM.md and `notes/model-audit.md`.
+
+## GitHub publication verification
+
+The full local command was rerun successfully before the authorized publication on 2026-10-15, again compiling 19 modules and passing all 22 axiom audits. The recorded log above is from that rerun. `.github/workflows/vix-overlap-consistency.yml` runs the same complete verifier on pushes and pull requests that affect this project.
+
+CI installs the exact Lean 4.34.1 Linux release archive and checks its official SHA-256 `47bf4bbd78f70c2e9670598ab7124d92b6efb7330ff33e5fbb4030f6fd72e4e4`. Checkout is pinned to `3d3c42e5aac5ba805825da76410c181273ba90b1`. Dependencies and Mathlib artifacts are freshly retrieved over the network when absent. The Ubuntu 24.04 runner image is maintained rather than bit-pinned; compiler and dependency identities are independently checked by the verifier. Remote run outcomes are recorded by GitHub Actions and must not be inferred from this local pass.

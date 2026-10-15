@@ -67,3 +67,23 @@ of generic methods. The new proof has independent exact-arithmetic checks but
 is not formalized in Lean or human-refereed. Pinned upstream Lean files document
 prior-art constants. Full derivations, compact generators, source hashes and
 reproduction commands are included.
+
+## Three overlapping VIX windows in a finite activity market
+
+[Read the mathematical manuscript](projects/vix-overlap-consistency/MANUSCRIPT.md)
+· [Exact theorem and model](projects/vix-overlap-consistency/THEOREM.md)
+· [Lean verification](projects/vix-overlap-consistency/VERIFICATION.md)
+· [Novelty audit](projects/vix-overlap-consistency/NOVELTY.md)
+
+An explicit family of ordinary SPX/VIX call panels has a compatible filtered
+law for every one- and two-window subpanel, but none for the full three-window
+panel in one fixed finite activity-schedule market. The same standing SPX panel,
+information rules and admissible state space apply throughout. The exact
+separation margin is `(1−30ε)/32` for every real `0≤ε<1/30`.
+
+The complete finite-model theorem is checked in Lean 4.34.1, including the
+ordinary-quote bridge, positive stock martingale, all diagonal and tower rows,
+explicit witnesses, common bounds and the stated pairwise tests. The project
+includes exact certificates, a pinned one-command verifier and an independent
+statement audit. Novelty remains provisional. The theorem does not establish
+inconsistency in unrestricted SPX/VIX markets or executable arbitrage.

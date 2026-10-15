@@ -18,7 +18,7 @@ No unrestricted continuous-state impossibility, continuous realization, executab
 
 ## Repository and reproducibility
 
-The inspected checkout is `/Volumes/2tb/math`, remote `https://github.com/shjvandekamp/math.git`. Work is isolated in `/Volumes/2tb/math/.worktrees/vix-overlap-consistency`, branch `research/vix-overlap-consistency`, from commit `07078df`. The primary checkout's unrelated `.DS_Store` and other research worktrees were preserved. Nothing has been pushed or published.
+The inspected checkout is `/Volumes/2tb/math`, remote `https://github.com/shjvandekamp/math.git`. Work is isolated in `/Volumes/2tb/math/.worktrees/vix-overlap-consistency`, branch `research/vix-overlap-consistency`. It began from `07078df` and was rebased onto `db6e1d8` before publication. The primary checkout's unrelated `.DS_Store` and other research worktrees were preserved. The user authorized publishing this verified finite-model baseline on 2026-10-15; the broader extension is to continue locally.
 
 Project files include the theorem/model contract, manuscript, novelty audit, proof map, complete Lean sources, pinned manifest, numerical discovery script, exact JSON certificate, generator, verification entry point, build output, and independent review findings. The exact finite certificate is checked by Lean; Python discovery/reconstruction is not a proof oracle.
 
