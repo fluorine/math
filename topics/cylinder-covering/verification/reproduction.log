@@ -1,0 +1,44 @@
+PASS: 91 source SHA-256 hashes and 48 Git blob hashes.
+PASS: exact cap elimination and nonnegative square certificate, 0<e<=1.
+PASS: refined triangle supports, exact area, and uniform finite bounds.
+PASS: symmetric constant-cap triangle optimum and sharp 4e/N rate.
+PASS: exact integral coefficients and one-sided e^6 remainder <=8.
+PASS: uniform common-padding source comparison on d<=e^2, 0<e<=1/10.
+PASS: 36 independent constructor output checks (metric, vertices, area).
+PASS: power-sum recurrence and independent integer-sqrt checks, odd/even N.
+Angular source explicit-budget lower at tau=1/5 >= 0.513014901477832
+Global common-padding radial floor >= 0.499999957133058
+Global explicit-budget angular floor >= 0.499999989283264
+Published nilpotent apex count > 102400/3; grid ratio >= 637/1250.
+PASS: published rational product/log finite subcovers need >20 million cells.
+e=1/10, N=10000, cylinders=20000:
+  exact triangle R in [0.499947504745824, 0.499947504745984]
+  common-padding source sector lower >= 0.504347312079790
+  general theorem bound <= 0.499959469292064
+e=1/100, N=20000, cylinders=40000:
+  exact triangle R in [0.500000345647165, 0.500000345647166]
+  common-padding source sector lower >= 0.500002834956276
+e=1/1000, N=2000000, cylinders=4000000:
+  exact triangle R in [0.499999985334570, 0.499999985334571]
+  common-padding source sector lower >= 0.499999987833506
+Scope: global floors and published-recipe comparisons have the stated hypotheses.
+No global optimality, all-baseline dominance, or novelty claim is certified.
+PASS: verify.py matches last-run.txt.
+PASS: exact secant boundary, coupled elimination, quartic square certificate.
+PASS: uniform residual bound, closed coverage padding, and e/N leading rate.
+PASS: schedule saving on 0<e<=1/40 with margin >=e²/2400.
+PASS: sharper schedule quartic coefficient 9/2 and |R-J|<=2e/N for all N.
+PASS: N>=ceil(480/e) gives saving >=e²/240 throughout 0<e<=1/10.
+PASS: 36 independent secant generator metric/area/vertex checks.
+PASS: exact power-sum costs cross-checked with integer square roots, odd/even N.
+Published compatible-range ratio >= 0.499999999819155092; full count >=36,864,000.
+e=1/10, N=10000, cylinders=20000:
+  secant R in [0.499921585997001674, 0.499921585997001774]
+  continuous angular candidate eta=.001,tau=.2 is now covered by this proof.
+e=1/100, N=20000, cylinders=40000:
+  secant R in [0.499998863418315727, 0.499998863418315728]
+e=1/1000, N=2000000, cylinders=4000000:
+  secant R in [0.499999983836322736, 0.499999983836322737]
+PASS: secant_verify.py matches secant-last-run.txt.
+REPRODUCED: exact certificates and all source pins.
+Universal coverage rests on the written proof; no Lean check is claimed.

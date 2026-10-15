@@ -1,0 +1,15 @@
+PASS: exact secant boundary, coupled elimination, quartic square certificate.
+PASS: uniform residual bound, closed coverage padding, and e/N leading rate.
+PASS: schedule saving on 0<e<=1/40 with margin >=e²/2400.
+PASS: sharper schedule quartic coefficient 9/2 and |R-J|<=2e/N for all N.
+PASS: N>=ceil(480/e) gives saving >=e²/240 throughout 0<e<=1/10.
+PASS: 36 independent secant generator metric/area/vertex checks.
+PASS: exact power-sum costs cross-checked with integer square roots, odd/even N.
+Published compatible-range ratio >= 0.499999999819155092; full count >=36,864,000.
+e=1/10, N=10000, cylinders=20000:
+  secant R in [0.499921585997001674, 0.499921585997001774]
+  continuous angular candidate eta=.001,tau=.2 is now covered by this proof.
+e=1/100, N=20000, cylinders=40000:
+  secant R in [0.499998863418315727, 0.499998863418315728]
+e=1/1000, N=2000000, cylinders=4000000:
+  secant R in [0.499999983836322736, 0.499999983836322737]

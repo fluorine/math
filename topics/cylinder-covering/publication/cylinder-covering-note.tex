@@ -1,0 +1,1051 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,xcolor}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Amin}{A_{\min}}
+\newcommand{\Rsec}{R_{\mathrm{sec}}}
+\newcommand{\repo}[2]{\href{https://github.com/shjvandekamp/math/blob/main/topics/cylinder-covering/#1}{#2}}
+\hypersetup{pdftitle={A quartic overlap certificate and effective finite cylinder covers of a regular tetrahedron}}
+\title[Effective finite cylinder covers of a tetrahedron]{A quartic overlap certificate and effective finite\texorpdfstring{\\}{} cylinder covers of a regular tetrahedron}
+\date{15 October 2026}
+\begin{document}
+\begin{abstract}
+We give an explicit finite version of the angular cylinder construction
+for a regular tetrahedron, using the secant axes and matching angular
+boundaries of the OpenAI family-100 manuscripts. A polynomial
+simultaneous-failure identity permits a quartic radial correction
+$9e^4/16$. An explicit perturbation bound transfers this certificate to
+every finite positive-width angular partition and yields compact,
+nondegenerate triangular perpendicular bases covering the entire closed
+tetrahedron. For a uniform partition into $N$ intervals, the normalized
+area differs from its limiting integral by at most $2e/N$ for
+$0<e\le1/10$. In particular, $N\ge\ceil{480/e}$ guarantees a saving
+of at least $e^2/240$ below one half. On the schedule
+$N=\ceil{2/e^2}$ the actual area is
+$1/2-e^2/60+e^3/2+O(e^4)$, with an explicit quartic error bound.
+An exact rational certificate places a 20,000-cylinder example in
+$[0.499921585997001674,\,0.499921585997001774]$ times the minimum
+projection area. The comparison is with identified published recipes on
+their explicit sufficient ranges and prescribed count conventions;
+no global optimality or domination of every possible generic-method
+instance is asserted.
+\end{abstract}
+\maketitle
+
+\section{Scope, geometry, and the main theorem}
+
+The existence of a finite triangular-cylinder cover below half the minimum
+projection area is already established in the OpenAI family-100
+manuscripts~\cite{Angular,Radial,Ruled,Slope}. This note uses the angular
+paper's secant directions, shared sector boundaries, and first-crossing
+selection~\cite{Angular}. Its contribution is the quartic overlap identity
+in Lemma~\ref{lem:square} and the explicit finite perturbation estimate
+that follows it. These change the proved cap margins and parameter
+ranges within an existing geometric construction. In particular, neither
+the secant sectors themselves nor the original counterexample to the
+half-area conjecture are claimed as new here.
+
+All four source manuscripts and the cited formal source files are pinned
+to the OpenAI repository revision
+\texttt{1581d4cbdd69a0faf34b2089614fe2a814316a6a}. The public
+\repo{sources/manifest.json}{source manifest} records all 91 snapshot
+hashes. The complete package, including supplementary proofs and exact
+arithmetic code, is available at
+\href{https://github.com/shjvandekamp/math/tree/main/topics/cylinder-covering}{\texttt{shjvandekamp/math}, topic \texttt{cylinder-covering}}.
+
+\begin{definition}
+A cylinder with axis $v\ne0$ and compact perpendicular base $B\subset v^\perp$
+is the closed set $B+\R v$. Its cost is the ordinary two-dimensional area
+of $B$. The cost of a finite list of cylinders is the sum of its base
+areas, with multiplicity. For a convex body $K$, let $\Amin(K)$ be its
+minimum orthogonal projection area over all directions.
+\end{definition}
+
+Put $H=\sqrt2$ and fix the edge-two regular tetrahedron
+\begin{equation}\label{eq:body}
+ K=\{(x,y,Hs):0\le s\le1,\ |x|\le1-s,\ |y|\le s\}.
+\end{equation}
+Its vertices are $(\pm1,0,0)$ and $(0,\pm1,H)$, so every edge has
+length two. The two horizontal edge directions are the $x$- and
+$y$-axes. Angles below are measured from the corresponding unoriented
+horizontal edge line.
+
+\begin{lemma}[Projection normalization]\label{lem:normalization}
+The tetrahedron in \eqref{eq:body} satisfies $\Amin(K)=H$.
+\end{lemma}
+\begin{proof}
+The four outward face area vectors are $(0,\pm H,-1)$ and
+$(\pm H,0,1)$. For a unit vector $v$, the elementary polytope projection
+formula therefore gives
+\[
+ A(v)=\max(H|v_x|,|v_z|)+\max(H|v_y|,|v_z|).
+\]
+Indeed, half the sum of the absolute scalar products of the face area
+vectors with $v$ counts the projected area: almost every line parallel to
+$v$ through the projection meets two faces, and projected edges have area
+zero. Set $U=\max(|v_x|,|v_z|/H)$ and
+$V=\max(|v_y|,|v_z|/H)$. Then
+\[
+ (U+V)^2\ge v_x^2+v_y^2+2v_z^2/H^2=1.
+\]
+Thus $A(v)=H(U+V)\ge H$, with equality for the $x$-axis.
+\end{proof}
+
+Throughout the note an area ratio means total cylinder cost divided by
+$H$. Define the polynomials
+\begin{equation}\label{eq:polynomials}
+\begin{split}
+ G(q)&=\frac{1+q^2}{2},\qquad D(q)=\frac{1-q^2}{2},
+ \qquad h(q)=q^2G(q),\\
+ D_0(q)&=G(q)^2+2q^2,\qquad
+ C_e(q)=1+e^2h(q)+\frac9{16}e^4,
+ \qquad M_*=1+e^2+\frac9{16}e^4.
+\end{split}
+\end{equation}
+In particular, $1\le C_e(q)\le M_*$ on $[-1,1]$.
+
+\begin{theorem}[Effective triangular covers]\label{thm:main}
+For every integer $N\ge1$ and $0<e<1$, the explicit construction in
+Section~\ref{sec:construction} gives exactly $2N$ labeled cylinders with
+compact, nondegenerate triangular perpendicular bases covering every point
+of the closed tetrahedron $K$. On the equal grid, their maximum axis-angle
+tangent is
+\begin{equation}\label{eq:angle-main}
+ \sqrt3\,e(1-1/N).
+\end{equation}
+Write $\Rsec(e,N)$ for their normalized cost and put
+\begin{equation}\label{eq:J}
+ J(e)=\frac14\int_{-1}^1
+       \frac{C_e(q)^2}{\sqrt{1+e^2D_0(q)}}\,dq.
+\end{equation}
+For $0<e\le1/10$ the following hold:
+\begin{align}
+ |\Rsec(e,N)-J(e)|&\le\frac{2e}{N},\label{eq:main-error}\\
+ N\ge\ceil{480/e}\quad&\Longrightarrow\quad
+ \Rsec(e,N)\le\frac12-\frac{e^2}{240},\label{eq:main-count}\\
+ N\ge\ceil{2/e^2}\quad&\Longrightarrow\quad
+ \Rsec(e,N)\le\frac12-\frac{e^2}{60}
+                         +\frac{e^3}{2}+\frac92e^4.
+ \label{eq:main-schedule}
+\end{align}
+Consequently, the count $2N=2\ceil{2/e^2}$ gives
+\begin{equation}\label{eq:main-saving}
+ \Rsec(e,N)\le\frac12-\frac{73}{15000}e^2<\frac12
+ \qquad(0<e\le1/50).
+\end{equation}
+On this specified count schedule the actual asymptotic cost is
+\begin{equation}\label{eq:main-asymptotic}
+ \Rsec(e,\ceil{2/e^2})
+ =\frac12-\frac{e^2}{60}+\frac{e^3}{2}+O(e^4).
+\end{equation}
+Finally, at $e=1/10$ and $N=10000$, exact rational bounds give
+\begin{equation}\label{eq:benchmark}
+\begin{split}
+ 0.499921585997001674
+ &\le\Rsec(1/10,10000)\\
+ &\le0.499921585997001774<0.499922.
+\end{split}
+\end{equation}
+\end{theorem}
+
+The coverage assertion is proved for arbitrary positive-width partitions,
+with local padding. The quantitative estimates above concern the equal grid;
+a nonuniform version of \eqref{eq:main-error} is given below. The coefficient
+$1/2$ in \eqref{eq:main-asymptotic} describes this recipe, not an optimum
+over all cylinder covers or all compatible sector constructions.
+
+\section{The explicit finite construction}\label{sec:construction}
+
+Let $\mathcal P$ be a partition of $[-1,1]$ into $N$ closed intervals
+$I_i=[l_i,r_i]$ of positive width, in their natural order, with disjoint
+interiors. Set
+\begin{equation}\label{eq:cell-data}
+ d_i=r_i-l_i,\quad a_i=d_i/2,\quad c_i=(l_i+r_i)/2,
+ \quad A_i=\frac{1+l_ir_i}{2}=G(c_i)-\frac{a_i^2}{2}.
+\end{equation}
+For $0<e<1$, define
+\begin{equation}\label{eq:local-padding}
+ K_0=M_*(e+e^2/2)+2e^2,\qquad
+ \delta_i=\frac{K_0a_i+(M_*e^2/2)a_i^2}{1-e},\qquad
+ M_i=\max_{q\in I_i}C_e(q)+\delta_i.
+\end{equation}
+The maximum is explicitly attained at the endpoint of largest absolute
+value, since $h$ is even and increasing as a function of $|q|$.
+
+Take the intercept triangles
+\begin{equation}\label{eq:intercepts}
+\begin{split}
+ P_i&=\{(0,qt,Ht):q\in I_i,\ 0\le t\le M_i/2\},\\
+ Q_i&=\{(pt,0,H(1-t)):p\in I_i,\ 0\le t\le M_i/2\},
+\end{split}
+\end{equation}
+and respectively the axes
+\begin{equation}\label{eq:axes}
+ v_i=(1,eA_i,Hec_i),\qquad w_i=(-eA_i,1,Hec_i).
+\end{equation}
+The actual perpendicular bases are the orthogonal projections of $P_i$
+onto $v_i^\perp$ and of $Q_i$ onto $w_i^\perp$. The first coordinate of
+$v_i$ and the second coordinate of $w_i$ are one. Projection is therefore
+injective on the corresponding intercept plane, and neither positive-area
+triangle degenerates. Projection also changes every point by a multiple
+of the axis, so it leaves the associated cylinder unchanged. This defines
+the promised list of $2N$ compact triangular cylinders.
+
+For the equal grid $d=2/N$, every $\delta_i$ equals
+\begin{equation}\label{eq:uniform-padding}
+ \delta(e,d)=
+ \frac{d\{M_*(e+e^2/2)+2e^2+M_*e^2d/4\}}{2(1-e)}.
+\end{equation}
+In the angular paper's physical notation, $\tau=2e$,
+$\alpha_i=A_i/2$, and $\beta_i=c_i/2$. Thus \eqref{eq:axes} are
+exactly its secant axes, rather than new directions.
+
+\begin{proposition}[Exact cost and finite angle]\label{prop:cost}
+The normalized cost of the construction is
+\begin{equation}\label{eq:exact-cost}
+ \Rsec(e;\mathcal P)=\frac14\sum_i
+       \frac{d_iM_i^2}{\sqrt{1+e^2(A_i^2+2c_i^2)}}.
+\end{equation}
+For the equal grid its maximum axis-angle tangent is
+\eqref{eq:angle-main}, including the case $N=1$.
+\end{proposition}
+\begin{proof}
+Each intercept triangle has area $Hd_iM_i^2/8$. Orthogonal projection
+multiplies this by the absolute scalar product of the intercept-plane
+unit normal with the unit axis, namely
+$(1+e^2(A_i^2+2c_i^2))^{-1/2}$. Summing the two families and dividing
+by $H$ proves \eqref{eq:exact-cost}.
+
+The squared tangent from the corresponding horizontal edge is
+$e^2(A_i^2+2c_i^2)$. On an equal grid this increases with $|c_i|$:
+writing $z=c_i^2$, its factor is
+$((1+z)/2-a_i^2/2)^2+2z$, whose derivative is $A_i+2>0$.
+At either outer interval, $A_i=|c_i|=1-1/N$. This proves the formula.
+For $N=1$, both $A_i$ and $c_i$ vanish, so the directions are the
+horizontal equality directions themselves.
+\end{proof}
+
+\section{Closed-body selection and the overlap certificate}
+
+We first establish angular selection at every point, without assuming a
+monotone root map and without dividing by a possibly zero radius. This is
+the shared-boundary first-crossing argument of~\cite{Angular}, included
+here with its endpoint cases.
+
+\begin{lemma}[First crossing on a finite partition]\label{lem:crossing}
+For every $(x,y,Hs)\in K$ there are indices $i,j$ and nonnegative
+numbers $t_0,s_0$ such that
+\begin{align*}
+ t_0&=s-exc_i,& y_0&=y-exA_i,& l_it_0&\le y_0\le r_it_0,\\
+ s_0&=1-s+eyc_j,& x_0&=x+eyA_j,& l_js_0&\le x_0\le r_js_0.
+\end{align*}
+If either radius is zero, a cylinder of the construction already covers
+the point. Otherwise, putting
+\[
+ \rho=2t_0,\quad \sigma=2s_0,\quad q=y_0/t_0\in I_i,
+ \quad p=x_0/s_0\in I_j,\quad X=2x,\quad Y=2y,
+\]
+gives
+\begin{equation}\label{eq:coupled}
+ Y=\rho q+eXA_i,\qquad X=\sigma p-eYA_j,
+ \qquad \rho+\sigma=2+e(Yc_j-Xc_i).
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $q_0=-1<q_1<\cdots<q_N=1$ for the partition nodes. For
+$q\in I_i$, let $L_i(q)=A_i-qc_i$. Direct substitution at either
+endpoint gives $L_i(q)=D(q)$. The sector boundaries consequently match
+at common nodes. Moreover, $L_i$ interpolates the two nonnegative endpoint
+values of $D$, hence $L_i(q)\ge0$ throughout its interval.
+
+At the nodes put $F_k=sq_k+exD(q_k)$. Since
+$F_0=-s\le y\le s=F_N$, there is a first $k\ge1$ for which
+$F_k\ge y$. If $k=1$, $F_0\le y$ already; if $k>1$, minimality
+gives $F_{k-1}<y$. Thus in both cases
+$F_{k-1}\le y\le F_k$. Choose $I_i=[q_{k-1},q_k]$. Replacing
+$D(q)$ at these endpoints by $A_i-qc_i$ gives exactly
+\[
+ l_i(s-exc_i)\le y-exA_i\le r_i(s-exc_i).
+\]
+The outer inequality and $r_i-l_i>0$ imply $t_0=s-exc_i\ge0$.
+This also handles $y=F_0$; no monotonicity of the remaining node values
+has been used.
+
+For the upper family repeat the argument with
+$E_k=(1-s)q_k-eyD(q_k)$, whose endpoint values bracket $x$ because
+$|x|\le1-s$. It produces the second row of inequalities and
+$s_0=1-s+eyc_j\ge0$.
+
+If $t_0=0$, the bracketing forces $y_0=0$, and the original point is
+$xv_i$, on the cylinder through the tip $(0,0,0)$ of $P_i$. If
+$s_0=0$, then $x_0=0$, and the point is
+$(0,0,H)+yw_j$, on the cylinder through the tip of $Q_j$. In the
+remaining case both divisions in the statement are legitimate, and
+rearranging the definitions gives \eqref{eq:coupled}.
+Every step uses closed inequalities, so this proof covers angular nodes,
+all faces and edges, and all four vertices.
+\end{proof}
+
+For the positive-radius case of Lemma~\ref{lem:crossing}, put
+\begin{equation}\label{eq:weights}
+\begin{split}
+ \Lambda&=1+e^2A_iA_j,\\
+ w_\rho&=1-eqc_j+e^2A_j(A_i-qc_i),\\
+ w_\sigma&=1+epc_i+e^2A_i(A_j-pc_j).
+\end{split}
+\end{equation}
+The cell data satisfy $0\le A_i,A_j\le1$, and the interpolation just
+proved gives $L_i,L_j\ge0$. Therefore
+\begin{equation}\label{eq:weight-positivity}
+ w_\rho,w_\sigma\ge1-e>0.
+\end{equation}
+Solving the first two equations in \eqref{eq:coupled} yields
+\[
+ X=\frac{\sigma p-e\rho qA_j}{\Lambda},\qquad
+ Y=\frac{\rho q+e\sigma pA_i}{\Lambda}.
+\]
+Substituting these into its third equation gives the exact elimination
+identity
+\begin{equation}\label{eq:weighted-radii}
+ w_\rho\rho+w_\sigma\sigma=2\Lambda.
+\end{equation}
+
+\begin{lemma}[Quartic certificate in physical coordinates]\label{lem:square}
+For $p,q\in[-1,1]$, put
+\[
+ N_0=1+e^2G(p)G(q),\quad
+ A_-=1-epq+e^2G(p)D(q),\quad
+ B_+=1+epq+e^2G(q)D(p).
+\]
+Then
+\begin{equation}\label{eq:square}
+\begin{split}
+ A_-C_e(q)+B_+C_e(p)-2N_0
+ ={}&\frac{e^2}{2}
+ \left[p^2-q^2+\frac{epq(1+p^2+q^2)}2\right]^2\\
+ &+e^4G(p)G(q)\{p^2D(p)+q^2D(q)\}\\
+ &+\frac{e^4}{8}\{9-p^2q^2(1+p^2+q^2)^2\}\\
+ &+\frac9{16}e^6\{G(p)D(q)+G(q)D(p)\}\ge0.
+\end{split}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write $\Delta=p^2-q^2$ and $Z=1+p^2+q^2$. Expanding the left
+side before completing the square gives
+\[
+ \frac{e^2\Delta^2}{2}
+ +e^3pq\{h(p)-h(q)\}
+ +e^4G(p)G(q)\{p^2D(p)+q^2D(q)\}
+ +\frac9{16}e^4(A_-+B_+).
+\]
+Here $h(p)-h(q)=\Delta Z/2$ and
+$A_-+B_+=2+e^2\{G(p)D(q)+G(q)D(p)\}$. Completing the square
+proves the identity. Every displayed term on the right of
+\eqref{eq:square} is nonnegative. For the only factor requiring a
+bound, $p^2q^2\le1$ and $Z\le3$ already suffice; the exact
+nonnegative decomposition is
+\[
+ 9-p^2q^2Z^2
+ =9\{(1-p^2)+p^2(1-q^2)\}
+  +p^2q^2\{(1-p^2)+(1-q^2)\}(3+Z).
+\]
+The plus sign inside the square is the sign for the physical coordinates
+\eqref{eq:body} and \eqref{eq:coupled}.
+\end{proof}
+
+\begin{lemma}[Finite secant perturbation]\label{lem:perturbation}
+For the selected intervals and parameters above,
+\begin{equation}\label{eq:perturbation}
+ w_\rho C_e(q)+w_\sigma C_e(p)-2\Lambda
+ \ge-K_0(a_i+a_j)-\frac{M_*e^2}{2}(a_i^2+a_j^2).
+\end{equation}
+Consequently,
+\begin{equation}\label{eq:buffered-certificate}
+ w_\rho\{C_e(q)+\delta_i\}
+ +w_\sigma\{C_e(p)+\delta_j\}\ge2\Lambda.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Writing $b=q-c_i$, define $E_i(q)=(a_i^2-b^2)/2$. Elementary
+secant identities give
+\begin{equation}\label{eq:secant-errors}
+ L_i(q)=D(q)-E_i(q),\qquad 0\le E_i(q)\le a_i^2/2,
+ \qquad |A_i-G(q)|\le a_i.
+\end{equation}
+For the last bound,
+\[
+ |A_i-G(q)|=\left|-c_ib-\frac{a_i^2+b^2}{2}\right|
+ \le|c_i|a_i+a_i^2\le a_i,
+\]
+using $|c_i|+a_i\le1$. The same statements hold for $p\in I_j$.
+Since $D\le1/2$ and $G,A_i,A_j\le1$, they imply
+\begin{align}
+ |w_\rho-A_-|&\le ea_j+\frac{e^2}{2}(a_j+a_i^2),
+ \label{eq:weight-error1}\\
+ |w_\sigma-B_+|&\le ea_i+\frac{e^2}{2}(a_i+a_j^2),
+ \label{eq:weight-error2}\\
+ |\Lambda-N_0|&\le e^2(a_i+a_j).
+ \label{eq:denominator-error}
+\end{align}
+For example, the quadratic term in the first estimate is bounded by
+expanding
+\[
+ A_jL_i(q)-G(p)D(q)
+ =[A_j-G(p)]D(q)-A_jE_i(q).
+\]
+The linear term is bounded by $e|q|\,|c_j-p|\le ea_j$.
+The second estimate is identical with the roles exchanged, and the last
+follows from
+$A_iA_j-G(q)G(p)=(A_i-G(q))A_j+G(q)(A_j-G(p))$.
+
+Multiply \eqref{eq:weight-error1} and \eqref{eq:weight-error2} by
+the respective caps, use $C_e\le M_*$, and account for twice the
+denominator error. Lemma~\ref{lem:square} then gives
+\eqref{eq:perturbation}, with exactly the $K_0$ in
+\eqref{eq:local-padding}. Finally,
+\[
+ w_\rho\delta_i+w_\sigma\delta_j
+ \ge(1-e)(\delta_i+\delta_j)
+ =K_0(a_i+a_j)+\frac{M_*e^2}{2}(a_i^2+a_j^2).
+\]
+Adding this to \eqref{eq:perturbation} proves
+\eqref{eq:buffered-certificate}.
+\end{proof}
+
+\begin{proof}[Proof of the coverage assertion in Theorem~\ref{thm:main}]
+Choose the two selected intervals using Lemma~\ref{lem:crossing}. Its
+zero-radius cases already give coverage. Otherwise, the point belongs to
+the lower selected cylinder whenever $\rho\le M_i$, and to the upper
+selected cylinder whenever $\sigma\le M_j$, by
+\eqref{eq:intercepts}. If both cylinders missed it, then
+$\rho>M_i\ge C_e(q)+\delta_i$ and
+$\sigma>M_j\ge C_e(p)+\delta_j$. The strictly positive weights
+in \eqref{eq:weight-positivity} would give
+\[
+ w_\rho\rho+w_\sigma\sigma
+ > w_\rho\{C_e(q)+\delta_i\}
+  +w_\sigma\{C_e(p)+\delta_j\}\ge2\Lambda,
+\]
+contradicting \eqref{eq:weighted-radii}. Hence one of the two closed
+cylinders covers the point. Equality at a cap boundary is included.
+The argument applies to every point of $K$ and every positive-width
+partition, without an exceptional boundary set.
+\end{proof}
+
+\begin{remark}[Compatible caps beyond constant triangles]\label{rem:caps}
+The same proof applies to a cellwise cap $R_i(q)$ whenever
+$R_i(q)\ge C_e(q)+\delta_i$. Replace $0\le t\le M_i/2$ in
+\eqref{eq:intercepts} by $0\le t\le R_i(q)/2$. If the resulting
+intercept sets are compact, their projections are compact cylinder bases;
+they need not be triangles. Constant maxima were used above to obtain
+triangular bases and the simple exact area formula.
+\end{remark}
+
+\section{The limiting integral with an explicit remainder}\label{sec:integral}
+
+The next elementary calculation supplies every constant needed for the
+finite area estimates. It is included so that no asymptotic assertion is
+used as an effective error bound.
+
+\begin{lemma}\label{lem:integral}
+For $0<e\le1/10$,
+\begin{equation}\label{eq:J-upper}
+ J(e)\le\frac12-\frac{e^2}{60}+\frac{929}{1260}e^4+4e^6.
+\end{equation}
+Moreover,
+$J(e)=1/2-e^2/60+(929/1260)e^4+O(e^6)$ as $e\downarrow0$.
+\end{lemma}
+\begin{proof}
+Let $u=e^2$ and $b=9/16$. Taylor's theorem, using the negative third
+derivative, gives for every $z\ge0$
+\[
+ (1+z)^{-1/2}\le1-z/2+3z^2/8.
+\]
+Multiply this by
+\[
+ C_e(q)^2=1+2h(q)u+(h(q)^2+2b)u^2
+                 +2bh(q)u^3+b^2u^4.
+\]
+The constant, linear, and quadratic coefficients of the product integrate
+exactly to the first three terms of \eqref{eq:J-upper}. Explicitly,
+\[
+ \int_{-1}^1h(q)\,dq=\frac8{15},\qquad
+ \int_{-1}^1D_0(q)\,dq=\frac{34}{15},
+\]
+so $\frac14\int(2h-D_0/2)=-1/60$. Also
+\[
+ h^2-hD_0+\frac38D_0^2
+ =\frac{3+44q^2+162q^4-52q^6+19q^8}{128},
+\]
+whose integral divided by two is $881/2520$. Adding the constant
+contribution $2b=9/8$ gives $929/630$ for $2J$, or $929/1260$
+for $J$.
+
+The remaining four coefficients of the upper polynomial are
+\begin{align*}
+ c_3&=\tfrac34hD_0^2-\tfrac12D_0(h^2+2b)+2bh,\\
+ c_4&=\tfrac38D_0^2(h^2+2b)-bD_0h+b^2,\\
+ c_5&=\tfrac34bhD_0^2-\tfrac12b^2D_0,\qquad
+ c_6=\tfrac38b^2D_0^2.
+\end{align*}
+Using $0\le h\le1$, $0\le D_0\le3$, and dropping the negative
+terms gives respectively the pointwise upper bounds
+\[
+ \frac{63}{8},\quad\frac{1917}{256},\quad
+ \frac{243}{64},\quad\frac{2187}{2048}.
+\]
+For $u\le1/100$,
+\[
+ \frac{63}{8}+\frac{1917}{25600}
+ +\frac{243}{640000}+\frac{2187}{2048000000}<8.
+\]
+The factor $\frac14\int_{-1}^1$ therefore bounds the full remaining
+contribution by $4u^3$, proving \eqref{eq:J-upper}. Taylor's remainder
+is also uniformly bounded on $q\in[-1,1]$ and $e\le1/10$, since
+$0\le e^2D_0(q)\le3/100$. The same coefficient computation then
+gives the stated two-sided asymptotic expansion.
+\end{proof}
+
+\section{Finite error, an explicit count, and the cubic term}
+
+In this section $0<e\le1/10$, the grid is equal, and $d=2/N$.
+Write $\widehat M_i=\max_{I_i}C_e$, $\delta=\delta(e,d)$, and
+\[
+ g(q)=(1+e^2D_0(q))^{-1/2},\qquad
+ g_i^{\rm sec}=(1+e^2(A_i^2+2c_i^2))^{-1/2}.
+\]
+
+\begin{lemma}[All discretization errors]\label{lem:finite-error}
+For every $N\ge1$,
+\begin{equation}\label{eq:error-upper}
+\begin{split}
+ \Rsec(e,N)-J(e)\le{}&
+ \left(M_*+\frac38M_*^2\right)e^2d
+ +M_*\delta+\frac{\delta^2}{2}
+ +\frac{M_*^2e^2d^2}{16},
+\end{split}
+\end{equation}
+and
+\begin{equation}\label{eq:error-lower}
+ \Rsec(e,N)-J(e)\ge-\frac38M_*^2e^2d.
+\end{equation}
+\end{lemma}
+\begin{proof}
+There are four changes from the integral to the exact sum.
+First, $C_e$ has total variation $2e^2$ on $[-1,1]$. Thus
+\[
+ \sum_i\int_{I_i}(\widehat M_i-C_e(q))\,dq\le2e^2d.
+\]
+Since $\widehat M_i+C_e(q)\le2M_*$ and $g\le1$, replacing the
+cap by its cell maximum increases the normalized integral by at most
+$M_*e^2d$.
+
+Second, $|D_0'(q)|\le6$ and hence $|g'(q)|\le3e^2$. Because
+\[
+ \sum_i\int_{I_i}|q-c_i|\,dq=d/2,
+\]
+replacing $g(q)$ by $g(c_i)$ changes the integral, in absolute value,
+by at most $3M_*^2e^2d/8$.
+
+Third, with $a_i=d/2$,
+\[
+ D_0(c_i)-(A_i^2+2c_i^2)
+ =G(c_i)a_i^2-a_i^4/4\in[0,a_i^2].
+\]
+The derivative of $(1+e^2z)^{-1/2}$ in $z$ has absolute value at
+most $e^2/2$. Consequently
+\[
+ 0\le g_i^{\rm sec}-g(c_i)\le e^2d^2/8.
+\]
+Applying this to the unpadded maximum caps gives a nonnegative area
+increase at most $M_*^2e^2d^2/16$.
+
+Finally, adding the padding changes their normalized cost by
+\[
+ \frac14\sum_i d(2\widehat M_i\delta+\delta^2)g_i^{\rm sec}
+ \le M_*\delta+\delta^2/2.
+\]
+The four estimates prove \eqref{eq:error-upper}. Every change except
+the midpoint-weight substitution is nonnegative, which also proves
+\eqref{eq:error-lower}.
+\end{proof}
+
+\begin{proposition}[Uniform error and count bound]\label{prop:uniform}
+Equations \eqref{eq:main-error} and \eqref{eq:main-count} hold. More
+generally, for an arbitrary positive-width partition with the local
+padding \eqref{eq:local-padding},
+\begin{equation}\label{eq:nonuniform-error}
+ |\Rsec(e;\mathcal P)-J(e)|\le e\max_i d_i.
+\end{equation}
+\end{proposition}
+\begin{proof}
+The elementary bounds
+\begin{equation}\label{eq:numerical-bounds}
+ M_*<\frac{1011}{1000},\qquad M_*^2<\frac{1023}{1000},
+ \qquad M_*+\frac38M_*^2<\frac75
+\end{equation}
+hold throughout $e\le1/10$. We also have
+\begin{equation}\label{eq:padding-coarse}
+ \delta\le\frac34ed\qquad(0<d\le2).
+\end{equation}
+For an explicit verification of this last bound, subtract $ed/2$ in
+\eqref{eq:uniform-padding} and clear its denominator to obtain
+\[
+ \delta-\frac{ed}{2}
+ =\frac{ed\{(M_*-1)+e(M_*/2+3+M_*d/4)\}}{2(1-e)}.
+\]
+Here $(M_*-1)/e=e+9e^3/16$ is increasing. Substituting
+$e=1/10$, $d=2$ into the remaining upper coefficient gives
+\[
+ \frac{(M_*(1/10)-1)/(1/10)+M_*(1/10)+3}{2(1-1/10)}
+ <\frac52.
+\]
+Thus $0\le\delta-ed/2\le(5/2)e^2d\le ed/4$.
+
+Apply \eqref{eq:numerical-bounds}, \eqref{eq:padding-coarse},
+$e\le1/10$, and $ed\le1/5$ to \eqref{eq:error-upper}. Its entire
+right side is at most
+\[
+ \left(\frac7{50}+\frac{3033}{4000}
+       +\frac9{160}+\frac{1023}{80000}\right)ed
+ =\frac{77383}{80000}ed<ed.
+\]
+The absolute lower error in \eqref{eq:error-lower} is smaller than
+$ed$ as well. This proves \eqref{eq:main-error}.
+
+For a nonuniform partition set $d=\max_i d_i$. The same maximum-cap
+variation estimate is bounded by $2e^2d$. The midpoint estimate uses
+$\sum_i d_i^2\le2d$, and the secant estimate uses
+$\sum_i d_i^3\le2d^2$. Each local $\delta_i$ is at most
+$\delta(e,d)$, by its explicit positive-coefficient formula. The preceding
+proof therefore proves \eqref{eq:nonuniform-error} too.
+
+Finally,
+\[
+ \frac{929}{1260\cdot100}+\frac4{10000}<\frac1{120}.
+\]
+Lemma~\ref{lem:integral} gives $J(e)\le1/2-e^2/120$.
+If $N\ge480/e$, the finite error $2e/N$ is at most $e^2/240$,
+which proves \eqref{eq:main-count}.
+\end{proof}
+
+\begin{proposition}[The source count schedule]\label{prop:schedule}
+Equations \eqref{eq:main-schedule}, \eqref{eq:main-saving}, and
+\eqref{eq:main-asymptotic} hold.
+\end{proposition}
+\begin{proof}
+If $N\ge\ceil{2/e^2}$ then $d\le e^2$. This improves the padding
+bound to
+\begin{equation}\label{eq:padding-fine}
+ \delta\le\frac12ed+\frac{21}{10}e^2d
+          \le\frac{71}{100}e^3.
+\end{equation}
+To verify it, use $M_*\le1+(81/80)e^2$, $d\le e^2$, and
+$e\le1/10$ to get
+\[
+ M_*(1+e/2+ed/4)+2e\le1+\frac52e+\frac{11}{10}e^2.
+\]
+For example the higher-order coefficient is bounded by
+\[
+ \frac{81}{80}+
+ \left(\frac14+\frac{81}{160}\right)\frac1{10}
+ +\frac{81}{320\cdot1000}<\frac{11}{10}.
+\]
+The exact identity
+\[
+ (1-e)(1+21e/5)-(1+5e/2+11e^2/10)
+ =7e/10-53e^2/10\ge0
+\]
+now proves \eqref{eq:padding-fine} after division by $2(1-e)$.
+
+All remaining terms can be bounded by rational constants. In
+\eqref{eq:error-upper} use
+\begin{align*}
+ \left(M_*+\frac38M_*^2\right)e^2d&\le\frac75e^4,&
+ M_*\delta&\le\frac12e^3+\frac{109}{50}e^4,\\
+ \delta^2/2&\le\frac3{1000}e^4,&
+ M_*^2e^2d^2/16&\le\frac1{1000}e^4.
+\end{align*}
+For the second inequality, \eqref{eq:padding-fine} supplies the
+$e^3/2+(21/10)e^4$ part, and
+\[
+ (M_*-1)\delta
+ \le\frac{81}{80}e^2\frac{71}{100}e^3
+ <\frac2{25}e^4.
+\]
+The others follow directly from \eqref{eq:numerical-bounds},
+\eqref{eq:padding-fine}, and $e^2\le1/100$. With
+$4e^6\le e^4/25$, the total quartic coefficient from
+Lemma~\ref{lem:integral} and these inequalities is
+\[
+ \frac{929}{1260}+\frac75+\frac{109}{50}
+ +\frac3{1000}+\frac1{1000}+\frac1{25}<\frac92.
+\]
+This proves \eqref{eq:main-schedule}. If $e\le1/50$, then
+\[
+ \frac1{60}-\frac e2-\frac92e^2
+ \ge\frac1{60}-\frac1{100}-\frac9{5000}
+ =\frac{73}{15000},
+\]
+giving \eqref{eq:main-saving}.
+
+For the exact schedule $N=\ceil{2/e^2}$, one has
+$d=e^2+O(e^4)$. Formula \eqref{eq:uniform-padding} gives
+\[
+ \delta=ed/2+(7/4)e^2d+O(e^3d+e^2d^2)
+       =e^3/2+O(e^4).
+\]
+By the first three estimates in Lemma~\ref{lem:finite-error}, the
+unpadded maximum-cap secant sum differs from $J(e)$ by $O(e^2d)$.
+The coefficient of its linear padding term is
+\[
+ \frac12\sum_i d\widehat M_i g_i^{\rm sec}=1+O(e^2),
+\]
+since $\widehat M_i=1+O(e^2)$, $g_i^{\rm sec}=1+O(e^2)$
+uniformly, and $\sum_i d=2$. The quadratic padding term is
+$O(\delta^2)$. Together with Lemma~\ref{lem:integral}, these facts
+prove \eqref{eq:main-asymptotic}.
+\end{proof}
+
+In physical angular notation $\tau=2e$, the schedule bound becomes
+\[
+ \Rsec\le\frac12-\frac{\tau^2}{240}
+                   +\frac{\tau^3}{16}+\frac9{32}\tau^4,
+ \qquad N\ge\ceil{8/\tau^2}.
+\]
+The coefficient conversions matter when comparing statements written in
+different source coordinate systems.
+
+\section{An exact finite example and its arithmetic certificate}
+\label{sec:certificate}
+
+Set $e=1/10$, $N=10000$, and $d=1/5000$. Then
+\[
+ M_*=1.01005625,\qquad
+ \delta=0.00001400626791979166\ldots<0.00001401.
+\]
+The definition of $\delta$ is the exact rational expression
+\eqref{eq:uniform-padding}, not a decimal truncation. Its maximum axis
+tangent is $(\sqrt3/10)(9999/10000)$.
+
+Even without computing the finite sum, the estimates already proved give
+\begin{equation}\label{eq:analytic-benchmark}
+ \Rsec(1/10,10000)<0.499929.
+\end{equation}
+Indeed, the upper bound for $J(e)$ in \eqref{eq:J-upper} is less than
+$0.499911064$, the first term of \eqref{eq:error-upper} is less than
+$0.0000028$, its last term is less than $0.000000000026$, and
+$M_*\delta+\delta^2/2<0.000014164209$. Their sum is below the
+claimed value. This analytic estimate is distinct from the tighter
+exact-sum enclosure \eqref{eq:benchmark}.
+
+\subsection{Finite rational bounds}
+For $m\ge0$, define the rational Taylor polynomial
+\[
+ T_m(z)=\sum_{k=0}^m(-1)^k\frac{\binom{2k}{k}}{4^k}z^k.
+\]
+Taylor's integral remainder has the sign of $(-1)^{m+1}$ for
+$(1+z)^{-1/2}$ on $z\ge0$. Hence, for every nonnegative $z$,
+\begin{equation}\label{eq:taylor-enclosure}
+ T_9(z)\le(1+z)^{-1/2}\le T_8(z).
+\end{equation}
+For rational $e$, put $D_i=A_i^2+2c_i^2$ in the exact finite
+construction. The two rational numbers
+\begin{equation}\label{eq:rational-certificate}
+ L_N=\frac d4\sum_i M_i^2T_9(e^2D_i),\qquad
+ U_N=\frac d4\sum_i M_i^2T_8(e^2D_i)
+\end{equation}
+satisfy $L_N\le\Rsec(e,N)\le U_N$ by
+\eqref{eq:exact-cost} and \eqref{eq:taylor-enclosure}.
+Thus the numerical enclosure reduces to a finite rational calculation
+with specified polynomials and no floating-point acceptance criterion.
+
+There is no need to materialize all $N$ terms. On positive-midpoint cells
+the cap maximum is $C_e(c_i+d/2)$, so both the cap and the squared axis
+norm are polynomials in the index. For even $N$, the positive midpoints
+are $(2j-1)/N$, $1\le j\le N/2$; for odd $N$, they are $2j/N$,
+$1\le j\le(N-1)/2$, with a separately included central cell.
+The lower polynomial in \eqref{eq:rational-certificate} has degree at
+most 44 in $j$, and the upper polynomial has degree at most 40.
+Reflection accounts for the negative cells. The exact power sums
+$S_r(m)=\sum_{j=1}^m j^r$ can be evaluated recursively from
+\[
+ S_0(m)=m,\qquad
+ S_r(m)=\frac{(m+1)^{r+1}-1-
+                \sum_{k=0}^{r-1}\binom{r+1}{k}S_k(m)}{r+1}
+ \quad(r\ge1).
+\]
+This recurrence is simply the telescoping sum of
+$(j+1)^{r+1}-j^{r+1}$. It makes \eqref{eq:rational-certificate} a
+constant-degree rational certificate whose integer lengths grow with
+$\log N$ for fixed rational $e$.
+
+The separate implementation
+\repo{verification/secant_verify.py}{\texttt{verification/secant\_verify.py}}
+evaluates these bounds with exact fractions. It gives the following
+outward-rounded decimal enclosures:
+\begin{center}
+\small
+\begin{tabular}{@{}crl@{}}
+\toprule
+$e$ & Cylinders $2N$ & Certified normalized area interval\\
+\midrule
+$1/10$ & 20,000 & $[0.499921585997001674,\ 0.499921585997001774]$\\
+$1/100$ & 40,000 & $[0.499998863418315727,\ 0.499998863418315728]$\\
+$1/1000$ & 4,000,000 & $[0.499999983836322736,\ 0.499999983836322737]$\\
+\bottomrule
+\end{tabular}
+\end{center}
+In particular, the first row proves \eqref{eq:benchmark} and completes
+Theorem~\ref{thm:main}. The exact rationals in
+\eqref{eq:rational-certificate}, rather than the displayed decimal
+precision, are the underlying certificate.
+
+\subsection{What the independent verifier checks}
+The acceptance proof reconstructs the secant interpolation, the coupled
+elimination, the polynomial identity \eqref{eq:square}, and the exact
+perturbation before estimating it. It checks the rational inequalities in
+the finite error bounds and evaluates \eqref{eq:rational-certificate}.
+It uses the shared exact polynomial and power-sum primitives in
+\repo{verification/verify.py}{\texttt{verification/verify.py}}, but does
+not import the cylinder generator into those acceptance calculations.
+For $N=1,2,3,7$, the resulting sums are also checked against a direct sum
+of rational integer-square-root enclosures.
+
+The generator is imported separately for 36 representative output checks
+covering both families, $e=1/100,1/10$, and $N=1,2,3,10000$.
+These check the axes, intercept vertices, padding, parallel displacement
+under projection, perpendicularity, positive Gram determinants, and exact
+base areas. Coordinates are stored as $(x,y,z/\sqrt2)$, with metric
+$\operatorname{diag}(1,1,2)$; thus this check retains the physical metric
+rather than treating the scaled coordinates as Euclidean. These finite
+output checks supplement the universal argument in Section 3; they do not
+replace it with sampled coverage.
+
+The \repo{secant_construction.py}{indexed constructor} returns any one of
+the $2N$ cylinders from its index, using exact rational scaled coordinates
+and the exact area expression. For fixed rational $e$ it needs a constant
+number of rational values with bit lengths $O(\log N)$, rather than an
+explicit list of every cylinder.
+
+\subsection{A larger proved range for a source-form cap}
+At $e=1/10$, the source-form compatible cap with
+$\tau=1/5$ and $\eta=1/1000$ has twice its physical radial cutoff equal
+to
+\[
+ R_L(q)=1+e^2\{h(q)+1/125\}.
+\]
+Its excess over the quartic cap is independent of $q$:
+\[
+ R_L(q)-C_e(q)=\frac{19}{800000}=0.00002375>\delta(e,1/5000).
+\]
+Remark~\ref{rem:caps} therefore proves a closed-body cover with this
+continuous cap and the same 10,000 secant intervals. Its cell-maximum
+triangular enlargement also covers. This is a new admissibility proof at
+these parameters, rather than an assertion that they met the older
+paper's sufficient thresholds. The present triangular cap is smaller
+on every cell than that enlarged source-form cap and, with identical
+axes, has strictly smaller cost.
+
+\section{Comparison with the identified published ranges}
+\label{sec:comparison}
+
+The finite benchmark allows at most 20,000 cylinders. The maximum tangent
+is bounded by $(\sqrt3/10)(9999/10000)$ from the corresponding horizontal
+equality edges. The radial and generic estimates below allow even the
+slightly larger tangent budget $\sqrt3/10$, so also apply at this
+benchmark. The comparison concerns the identified source recipes on the
+explicit sufficient ranges and count conventions in their proofs. A
+sufficient threshold is not treated as a necessary condition for all
+geometrically valid covers.
+
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.46\textwidth}>{\raggedright\arraybackslash}p{0.48\textwidth}@{}}
+\toprule
+Published recipe and convention & Obstruction at the benchmark\\
+\midrule
+Radial linear, cubic, fractional, and square-root caps on their explicit
+source ranges; arbitrary partitions and tags, actual projected bases or
+larger enclosures
+& $R\ge1/2-1/23328000>0.49999995$, allowing retuned source tilt.\\
+Quantitative angular maximum caps, including the retained-mesh sufficient
+budget and the cubic-buffer family
+& $R\ge1/2-1/93312000$.\\
+General compatible angular family on the explicit proof witness
+& $R\ge1/2-1/5529600000$; the full list also needs at least 36,864,000 cylinders.\\
+Separate direct endpoint and squared constructions
+& At least 392,000,002 and 800,000,000 cylinders, respectively.\\
+Alternative local Cartesian certificate
+& Any resulting complete realization has $R>0.499999999996$.\\
+Rational or singular full retained-grid recipe
+& $R\ge637/1250=0.5096$.\\
+Rational product/logarithmic recipe with its published saving-error
+allocation
+& More than 20 million selected main cylinders in one family, including
+after finite-subcover selection.\\
+Nilpotent recipe with its prescribed apex lists
+& At least 34,134 cylinders from the apex lists alone.\\
+Shortened beams with the prescribed strip
+& A strip axis deviates by more than $\arctan(1/3)$, outside the angle
+budget even after tetrahedron symmetries.\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every listed area floor exceeds the new certified upper bound
+$0.499922$. The table summarizes proved comparisons in the public
+companion notes: the
+\repo{research/published-proof-ranges.md}{explicit proof-range audit},
+the \repo{research/published-radial-angular-comparison.md}{radial and
+angular actual-area comparison}, and the
+\repo{verification/published-generic-comparison.md}{generic realization
+and count comparison}. Those notes include the complete derivations and
+the precise source locations; their geometric count arguments are not
+replaced here by a claim about asymptotic coefficients.
+
+For clarity, two features of the comparison merit spelling out.
+First, the general compatible angular theorem uses the explicit
+witness~\cite{LeanSources}
+\begin{equation}\label{eq:old-general-range}
+ E\ge0,\qquad0<\eta\le1/480,\qquad0<\tau\le1/2,
+ \qquad(10+4E)\tau\le\eta.
+\end{equation}
+Its source area estimate is
+\[
+ \left|R-\left(\frac12+(2\eta-1/240)\tau^2\right)\right|
+ \le(6E+2)\tau^4.
+\]
+The source's extra expansion condition $E\tau^2\le1/16$ follows
+from \eqref{eq:old-general-range}. Since
+$6E+2\le2(10+4E)$ and $\tau\le1/2$, the positive
+$2\eta\tau^2$ absorbs this remainder. Also $\tau\le1/4800$.
+This proves the table's corresponding area floor. On each cell the
+constant angular coefficient must approximate $q/2$ with error at most
+$E\tau^2$ at both endpoints. The width is therefore at most
+$4E\tau^2$. Positive-width cells force $E>0$, and their full two-family
+count is at least
+\[
+ \frac1{E\tau^2}\ge\frac{(10+4E)^2}{E\eta^2}
+ \ge\frac{160}{\eta^2}\ge36{,}864{,}000,
+\]
+where $(10+4E)^2-160E=(4E-10)^2\ge0$. The separate direct
+endpoint and squared certificates use their own ranges, rather than
+being silently assigned \eqref{eq:old-general-range}.
+
+Second, immediate improvements of the older angular proof belong in
+the baseline. Retaining its actual mesh $\Delta$ gives the sufficient
+condition
+\[
+ 2(1-\tau)\eta\ge\frac74\tau+
+                       \frac{\Delta}{4\tau}+\frac\Delta4.
+\]
+On the same count schedule, $\Delta\sim\tau^2/4$ gives a canonical
+$e$-cubic coefficient $29/2$, and $\Delta=o(\tau^2)$ gives coefficient
+14. The coarser substitution $\Delta\le\tau^2$ gives coefficient 16.
+These are stronger prior-art corollaries than choosing only the larger
+printed cubic coefficient. The table's actual-area floor includes this
+optimized retained-mesh condition, not just one favorable printed example.
+
+None of these comparisons asserts that every possible witness of an
+existential smallness theorem obeys the exhibited numerical witness.
+Nor do they cover redesigned tile deletion, different product shapes,
+new error allocations, or new admissibility proofs for generic methods.
+The cap extension in Section~\ref{sec:certificate} itself demonstrates
+why that distinction is necessary. There is no global lower bound for
+all tetrahedron cylinder covers in this note.
+
+\section{Supplementary results, reproduction, and verification status}
+
+The repository also contains a different finite realization using frozen
+radial sweeps. Its complete proof is in
+\repo{THEOREM.md}{\texttt{THEOREM.md}}, with details in the
+\repo{research/finite-triangle-optimality.md}{finite-triangle optimality
+note}. Within its stated class---symmetric intercept triangles containing
+each full constant-maximum-cap frozen sweep---the enclosure is optimal
+and its count schedule has sharp cubic coefficient 2. These are
+supplementary results whose proofs are in the linked files, not additional
+theorems proved in this manuscript. The secant triangles used here do not
+contain each cell's full continuously tilted sweep, so that restricted
+lower bound does not apply. Sharpness of the constant $9/16$ within the
+constant-quartic continuous cap family is likewise proved separately in
+\repo{research/cap-analysis.md}{the cap analysis}; global cap optimality
+is not asserted.
+
+From the repository root, one command verifies all source pins and both
+exact verification outputs:
+\begin{quote}\small\ttfamily
+python3 topics/cylinder-covering/reproduce.py
+\end{quote}
+An optional query returns one indexed cylinder:
+\begin{quote}\small\ttfamily
+python3 topics/cylinder-covering/secant\_construction.py\par
+\hspace*{1em}--epsilon 1/10 --n 10000 --index 0
+\end{quote}
+The two displayed lines form one command. Only the Python standard
+library is required. The
+\repo{verification/secant-report.md}{independent certificate report} and
+\repo{verification/secant-last-run.txt}{saved secant verification output}
+document the checked identities, inequalities, and outward intervals.
+
+This package was developed with AI assistance using OpenAI Codex.
+The evidence for the new theorem consists of the universal written proof
+and the identified exact-arithmetic checks. It is not a claim of human
+peer review. The new theorem has not been formalized or kernel checked
+in Lean. Pinned Lean files are evidence for the cited prior-art definitions,
+proof witnesses, and area formulas; their presence is not a formal
+verification of the new quartic/secant theorem.
+
+\begin{thebibliography}{99}
+\bibitem{Angular}
+OpenAI,
+\emph{Finite angular cylinder covers below the half-area bound},
+27 September 2026, OpenAI math family 100.
+\href{https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026}{Pinned manuscript and source files}.
+
+\bibitem{Radial}
+OpenAI,
+\emph{Finite triangular approximation of radial sweeps},
+27 September 2026, OpenAI math family 100.
+\href{https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026}{Pinned manuscript and source files}.
+
+\bibitem{Ruled}
+OpenAI,
+\emph{Finite cylinder approximation of ruled sets},
+27 September 2026, OpenAI math family 100.
+\href{https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026}{Pinned manuscript and source files}.
+
+\bibitem{Slope}
+OpenAI,
+\emph{Slope-field perturbations of the two-cylinder covering},
+27 September 2026, OpenAI math family 100.
+\href{https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026}{Pinned manuscript and source files}.
+
+\bibitem{LeanSources}
+OpenAI,
+\emph{Cylinder-covering formal source files},
+repository revision\newline
+\texttt{1581d4cbdd69a0faf34b2089614fe2a814316a6a}.
+The pinned local
+\repo{sources/lean/OAI/Geometry/CylinderCovering/Angular/GeneralCoverage.lean}{general coverage},
+\repo{sources/lean/OAI/Geometry/CylinderCovering/Angular/GeneralAssembly.lean}{assembly and expansion},
+\repo{sources/lean/OAI/Geometry/CylinderCovering/Angular/GeneralDefinitions.lean}{admissibility definitions},
+and \repo{sources/lean/OAI/Geometry/CylinderCovering/Angular/GeneralVolume.lean}{physical area identity}
+give the explicit compatible-cap witness discussed in
+Section~\ref{sec:comparison}; other source locations are identified in the
+\repo{research/published-proof-ranges.md}{proof-range audit}.
+\end{thebibliography}
+\end{document}

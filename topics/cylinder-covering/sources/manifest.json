@@ -1,0 +1,510 @@
+{
+  "repository": "https://github.com/openai/math",
+  "revision": "1581d4cbdd69a0faf34b2089614fe2a814316a6a",
+  "checked_date": "2026-10-15",
+  "files": [
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/README.md",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/README.md",
+      "git_blob": "275e0ec74a56d4aa7f9257f8f43bf00a173151a4",
+      "sha256": "eea889085336a9626a1682f8b862d6e9b0f48fc10ab9690850a63f6464112e20"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/README.md",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/README.md",
+      "git_blob": "42cec2e4e9936144c138e88b69b671f002bfb79f",
+      "sha256": "468fa04859ad9a0d2310604e5146f41bce53e7be724a3b1880880dade7b93a0a"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/README.md",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/README.md",
+      "git_blob": "b275e36ffc1f1add64cb32f627a3e7a872be7c48",
+      "sha256": "a29a0ea828b1204dce0766ac1b261e188c333c34b9b7dcdfe4beca3d09e43054"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/README.md",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/README.md",
+      "git_blob": "3b80f916e2b72af29f60c8b78db7d90bf7cc4fbd",
+      "sha256": "af80de9cf252318ca91134d5cd0ad4b5a48824307de654273c20318a70ea626f"
+    },
+    {
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "CONTENTS.md",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/CONTENTS.md",
+      "sha256": "cc7c0b8a1cdedd845a777e77cf682657308503daf8346c1349e06e9259d063c2"
+    },
+    {
+      "path": "history.md",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/history.md",
+      "sha256": "41c2a2d470014b3628695c7aabf5fd0c93f6f687621fca172062f22b59ed6a1e"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/main.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/main.tex",
+      "git_blob": "6b86ec7fbaad9f903e29fdd674833d72165741a9",
+      "sha256": "623667cadddface296241cc733860a36447c7a844be98482ad8a3aa1cf249041"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/preamble.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/preamble.tex",
+      "git_blob": "817ed39741504733eb5e2ecfda55c0ae75d3fa19",
+      "sha256": "8ca595cc85523cc120c44aed02a617a29256692d67f7cfee908959d2923f0f60"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/references.bib",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/references.bib",
+      "git_blob": "bdf8cc05f842032f56447cc3b5b8847026e26d08",
+      "sha256": "303663ac280463aae585e85552f6bc7d9bac36df12765aefca90c8105ce36ece"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/main.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/main.tex",
+      "git_blob": "2f376d44bc46bec02b2495c4c83ec58de9e334e3",
+      "sha256": "60f8fe8654dbe60569af4541dbbd2c5b1b11373b56794ac2c6b4de328396a371"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/references.bib",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/references.bib",
+      "git_blob": "e8870e9d74ce0113ae891fdffee4d93446ab5475",
+      "sha256": "24d149125c66f8b3acce62e55c36e2ef302c1ac26364200910086ccc2858e950"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/beams.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/beams.tex",
+      "git_blob": "9cd86b62ed9bfe83afa4fbe476a4baca95171173",
+      "sha256": "d7b2366b1a2786e840b6253668ae2dbaaa0cfedf8559cfd5879da0abb3477b33"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/caps.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/caps.tex",
+      "git_blob": "8511718ed5cdd31d81f7d3d252418d9dfe4b4a00",
+      "sha256": "e80453d8a6a5c7179b98ff9d98f5ea333ab1cb6d07dff522a2d3b8f1fbe22fbc"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/coordinates.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/coordinates.tex",
+      "git_blob": "fb8074112145a0a6e1992d670a472e471fc8a382",
+      "sha256": "a7dce876c05f8eaae9224eb82a352754595e837991d288eb40bdc9c593cef392"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/footprints.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/footprints.tex",
+      "git_blob": "12f0bb4bfc4116732c524cf57f04c54d03572473",
+      "sha256": "900a7a2ed060a3ecd1802f1e46c45fd668f456ecbd43dd3860ce715ca62c1e73"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/freezing.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/freezing.tex",
+      "git_blob": "cc35894479df924324f8ababde8db2c8040ca92c",
+      "sha256": "aa241622129b16ff4de724ce2281377ad88d04c0ffab5d8b814315f9f847be48"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/introduction.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/introduction.tex",
+      "git_blob": "6431cb8c13433c65a5e21a2b6cc732e6cbc2294b",
+      "sha256": "9bc38e6aed6d18c93a37195d56d8be517ed40f5625c50687c82a9cdbe2d83f54"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/main.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/main.tex",
+      "git_blob": "cfbc65892ef271d96e19590f243ed870f9d7af28",
+      "sha256": "8beeb78ea592d1a394ccde27c034fb2b22340799620e628b9e0f00e22e111a21"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/projections.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/projections.tex",
+      "git_blob": "3194a37136351122a80cdc7fcc801828fac0f9d7",
+      "sha256": "ce06419f15d0ed97b7562919b80220f02cdbd3ea849e97473ea48607e2bd6a85"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/references.bib",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/references.bib",
+      "git_blob": "9353cfde06123d844c064c9c0eb7da2da360aec7",
+      "sha256": "482789cbd67ccc5ac212a681901553035f3690654fd20bf396c47c03dcdd1da8"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/tetrahedron.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/tetrahedron.tex",
+      "git_blob": "487f41937c7848420dd7b604ec7ae72befd75f69",
+      "sha256": "138a12230e6c78f5838da7821b533ac761a355ebdc90fd452f8e65577447e381"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/main.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/main.tex",
+      "git_blob": "a7c564ec23b7512a4b499f7ea2176a6a3f6dfb37",
+      "sha256": "7ebb6b508aa04d8187542741ac6dbe81d27385a5033ecd15a2dccf6b82b55b04"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/references.bib",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/references.bib",
+      "git_blob": "9ad24a2659e03ef1dec25949c982dce094052437",
+      "sha256": "407586be2a5829f894940a52275a21dadac58cba3fc74ac0da8d517e8f935a91"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/figures/construction.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/figures/construction.tex",
+      "git_blob": "4e230ff68eed99a5ea8159a83c2ff798bfca6ffb",
+      "sha256": "8248e6b49a488a4a3388ca55a81391ad9cddea383562953217f3abc6d31c2765"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/figures/shared-boundary-panel.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/figures/shared-boundary-panel.tex",
+      "git_blob": "b4e03b4d04668375ae571495ed6d4e66ed94eeb9",
+      "sha256": "c49e517fa379eca09e3dafd6a1ecb2fbd98ba204c1f20892a710f8d8eb64e6b6"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/alternative-estimates.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/alternative-estimates.tex",
+      "git_blob": "8cd6ac849d172060ba432badbc8e1c10135ad19e",
+      "sha256": "03dddc0ef8d942ab99c66692b65b0dbd015ac01e17119d146e7f77b9cfcd2564"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/angular-extensions.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/angular-extensions.tex",
+      "git_blob": "2e68bf3e20206f09b28981f9a39bfb01320b2228",
+      "sha256": "e8354acc442c2da4e442830ed6d0e0d9027319c42d90de8569eb120879bde500"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/area.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/area.tex",
+      "git_blob": "9c3d6a38de3d63576319ca9cb1aaa1be8ca114c8",
+      "sha256": "6880eb73332cbebd6660819af6053c7231a2ae82593fa563dea57a6c580637c7"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/construction.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/construction.tex",
+      "git_blob": "e0bb87eeb2b90de66566672672c939a57a43b72b",
+      "sha256": "028c3da94d3bda61e918277330ceac4df46b6224b9e90c5cae33c87bf76c0a5f"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/coverage.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/coverage.tex",
+      "git_blob": "1bfc03302c92e790d4b0d21609ae871424f72bff",
+      "sha256": "e8be6425d41b8649156871d655f62a4d637164bac8a42328e7496a5972dcbc76"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/cubic-buffer.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/cubic-buffer.tex",
+      "git_blob": "a4decda5ba21730faae327a781af1843d41e3ffb",
+      "sha256": "e566122d6f65a338a54ce7dc7892fe247629ab531fb99d80431700d4e6a68719"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/history.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/history.tex",
+      "git_blob": "02f084aa80738f08e3e96819ed97de8c70a00066",
+      "sha256": "c4bf0be3cf6b0dccb34a5c6e85dfa40b59ad64b86939e68f8fbc0feeac94f143"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/introduction.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/introduction.tex",
+      "git_blob": "1fbec22e026926799ddfa3efa75230557a0c9e11",
+      "sha256": "19c5b71d779403be3fd80bca70cfa2414d4a10286a0743e51fcb894fa309841d"
+    },
+    {
+      "path": "Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/scaling-specializations.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-angular-cylinder-covers-below-the-half-area-bound-September-27-2026/build/sections/scaling-specializations.tex",
+      "git_blob": "af7a54f277215e116800b16b75128dc16a212de4",
+      "sha256": "842f55e97e4fe9114e5627521387959eed62f08747b6ad3045f33730a1c5d8ae"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/figures/lattice.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/figures/lattice.tex",
+      "git_blob": "c21583ddec1976e3ce042a928f831b61e07dc51f",
+      "sha256": "34a95e0f56fb5787efc31a6afea00b72846b99dae77a3506f488b14de6fe8326"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/figures/sliding-rows.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/figures/sliding-rows.tex",
+      "git_blob": "7c5dc4cbebedc428f5bcf4fba1487da4c98368e5",
+      "sha256": "df537bae1ee470cb5e741cb89f199b4d89aa95b112120fc2ac85524b27bb7a30"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/comparison.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/comparison.tex",
+      "git_blob": "18763c4f1ca372201d8e55eb392a3259db9ef36e",
+      "sha256": "d75d71390754578fb14780a75d798b00c2e0da0dc7309787a8a358c105731a3d"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/finite-approximation.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/finite-approximation.tex",
+      "git_blob": "37637f3f2d09845c1fd4eb527d85d8d74f9c98e7",
+      "sha256": "52ee22debcd17ccba67681d45c3f3fb8d309b873979de481b6914ea7f4208443"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/introduction.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/introduction.tex",
+      "git_blob": "d7545325807f4063bef02593a83fcc5fecb2c63f",
+      "sha256": "11ba27f59d5a3293d7ca69fb36c008a915d854a5111f3f79c251b4164cea47f5"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/linear-coverings.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/linear-coverings.tex",
+      "git_blob": "618b98a4cc4ecab4f3d0f3d6fc8baf7eb0d089d2",
+      "sha256": "4337af0a88d8398422f34457e6b29a1ce2f26e133435002ca6f5b86172328f37"
+    },
+    {
+      "path": "Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/product-methods.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-cylinder-approximation-of-ruled-sets-September-27-2026/build/sections/product-methods.tex",
+      "git_blob": "2230a5a92185673923a8fcaae92ddba34a899b6e",
+      "sha256": "3ecf567c1c66c42b990195310ca08064600d10ffe6b773ac2b30f4eb494c1d2c"
+    },
+    {
+      "path": "Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/figures/triangle.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Finite-triangular-approximation-of-radial-sweeps-September-27-2026/build/figures/triangle.tex",
+      "git_blob": "74fe4cac4265b992934bc33a10e2673cc794ca27",
+      "sha256": "242bc455e20f7ee2597c1856fe2de88f83a49829dc458e78f548ffdcaee29d1f"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/figures/equality.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/figures/equality.tex",
+      "git_blob": "734c8db3a1945a9e26722de63de5ce5cbe3c1e9a",
+      "sha256": "dd4f0835f2bde2697855ced05a5a9bd964dae4ec6c0aa8a7453b951e6ccd0ce3"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/dictionary.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/dictionary.tex",
+      "git_blob": "975768e78a1431de9b7474f61216bd6a97133895",
+      "sha256": "01b21e177484bee77842fe291cb45e029869b3e918662232d4494a66872ee516"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/introduction.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/introduction.tex",
+      "git_blob": "151f23226892eaea865f0f4225d8a75aec1f1abe",
+      "sha256": "4534810859cf27af57696eb6fa0a69ef043bd92c51641ae13e13fb895ed45382"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/nilpotent.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/nilpotent.tex",
+      "git_blob": "52c3a398652e2d36607754684e2bd37f6cdb13d1",
+      "sha256": "8ecc5e25c219c3fadf31458ef75b03d87c50a7f7f12aa009c7cdecb7e6675224"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/projection.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/projection.tex",
+      "git_blob": "0d2b2762d32294ecebc6b214621fe21693e196a0",
+      "sha256": "7160ed01668168ace09e106fd2d70e7c36c16ae8a11c679e8253dc25f80b9153"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/rational.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/rational.tex",
+      "git_blob": "528bef118116432dcc864c1f6913cc6a67c61e1a",
+      "sha256": "2414b60dfcb632bf92dbf23aed8693bd315f53b78eb2670f248f936eb8454659"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/singular.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/singular.tex",
+      "git_blob": "d8b3284c37a3429418e20f998a6a9bac3ae22718",
+      "sha256": "4ae39d5e0ecfc49378fc91b079be6c2293c1402b621e7577a5e2d5fb4fd48b7f"
+    },
+    {
+      "path": "Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/threshold.tex",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/Slope-field-perturbations-of-the-two-cylinder-covering-September-27-2026/build/sections/threshold.tex",
+      "git_blob": "505f4f813e866ae2ae1efd7ce111a3f9ca20eccb",
+      "sha256": "49e2c4fe58f9e82262df4e36c74c6fd5dc98ad11dafd77aa111ece26c495b66d"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Results.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Results.lean",
+      "sha256": "ccde533a1843d688da24ce96262cc974954d61d164977906b74342131185c6e1"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Radial/OverlapQuantitative.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Radial/OverlapQuantitative.lean",
+      "sha256": "cd48f74441dd9d0a2f042edbab7b412deff604d3b1c7193a0280b4dddac29ba6"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Physical/FootprintRate.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Physical/FootprintRate.lean",
+      "sha256": "996163435bf1fe7ef1e7b4099b9cda94c6e32f6966f52553c7c495b5427643e2"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Nilpotent/RateCertificates.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Nilpotent/RateCertificates.lean",
+      "sha256": "8370e9c6bbb0580c658bba05e960b91e6312ba0c5d23d7dbdf6b5bedd854a616"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Radial/ZeroCapSeparation.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Radial/ZeroCapSeparation.lean",
+      "sha256": "0fbf2368d674fd2293c6c0b9250a93a55d4edbdb64edb7155c11fe37f6b274c1"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Caps/Certificates.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Caps/Certificates.lean",
+      "sha256": "9345dfee3aa011a29846a91cf74467a0cbf5c1a9bff65ed71ccddd7bbc8ea2be"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Caps/FiniteTheorem.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Caps/FiniteTheorem.lean",
+      "sha256": "9a36718e016e72c4b571755f3ad2cf2519f3b7beea5d2cd53a504afd61a1d718"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Nilpotent/RateCertificatesDefinitions.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Nilpotent/RateCertificatesDefinitions.lean",
+      "sha256": "a4a45418a9b24035485ddd3c02ad00725dd9532cfe609d7778b07e187a84bce4"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Nilpotent/RateUniform.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Nilpotent/RateUniform.lean",
+      "sha256": "3af9fc7613b89492fd652ab16d1c97e1e9a47ef882eca396436463aa02a94985"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Nilpotent/SmoothRateDefinitions.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Nilpotent/SmoothRateDefinitions.lean",
+      "sha256": "681b9f5b351a54aae5867fe6b086649ddad3f1cf366a9d2f555f50f05e77bff1"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Nilpotent/RatePhysical.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Nilpotent/RatePhysical.lean",
+      "sha256": "aef81c12692efd1022b7cf7436f3e5b11db7e0fd35e6dad9837f80be07582743"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Nilpotent/RateCost.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Nilpotent/RateCost.lean",
+      "sha256": "77b78ad2d82cfb2e69eea57e2e4d8093d9fb4846f065a6cb1c752a542f43c639"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Nilpotent/RetainedArea.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Nilpotent/RetainedArea.lean",
+      "sha256": "31a013bca6511cd0863347dc4a93cefe2f90e1556ea7de08954240fb675edf0d"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Nilpotent/RateAssembly.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Nilpotent/RateAssembly.lean",
+      "sha256": "66da7bd130d90090e79116a1be5c68c2ca21bc66dcb99e760e1ecb51f2bf0daa"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Radial/OverlapBounds.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Radial/OverlapBounds.lean",
+      "sha256": "cd34a16180f7a301589839f8130315043868dd41bc72e4cdd7339fe8e29ae635"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Radial/CapsDefinitions.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Radial/CapsDefinitions.lean",
+      "sha256": "7d49107c2fbe082c01a0a4dd25e551d9433802e272262251da39bcedb871873c"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Footprints/QuadraticPhysicalFootprints.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Footprints/QuadraticPhysicalFootprints.lean",
+      "sha256": "8ec26e44098e1545363244f0ba0e514ae7fd127d5327fedeb00df0c3628c2e24"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Physical/Triangles.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Physical/Triangles.lean",
+      "sha256": "5bb2c9b69fbeac9370612dbf200d25866a89247aa6b0a322fe7c8bd0d0ab6e68"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Footprints/Footprints.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Footprints/Footprints.lean",
+      "sha256": "ac7d470d852139882c031a0a435a56aca1303ab0e23eeb50188c28805793da46"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Footprints/Shapes.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Footprints/Shapes.lean",
+      "sha256": "1f5a321416f5f23fbe207060a49e5005e933e7f86d116149278e790b7dfbe5ea"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Footprints/CertificatesDefinitions.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Footprints/CertificatesDefinitions.lean",
+      "sha256": "568baf4462df967363efc24b088e9d3ebf328c5708a3b746e402ea40a1f9b23e"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/GeneralCoverage.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/GeneralCoverage.lean",
+      "sha256": "c093d3ba2cdb2d00064c8ec82710d0a072ede7eacc518da325d60b99e45712a7"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/SquaredDirect.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/SquaredDirect.lean",
+      "sha256": "3dd23f700ec92377be0a280a6c0c1e4ab899a9436591062404c3772c3d278a94"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/CartesianRemainder.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/CartesianRemainder.lean",
+      "sha256": "a6ad46dd93e22e98025575ba2bcd531afaa2592fa08678d2cebfbe8fc50a4020"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/GeneralDefinitions.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/GeneralDefinitions.lean",
+      "sha256": "303751933a349cc280765d2cc6b20bacd7c1323df5a928111c6f48ca0d8afd4e"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/GeneralVolume.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/GeneralVolume.lean",
+      "sha256": "6fac9e515536e68c3113338ad1e36878e24b1f9d42263cf287d66f0d0b7f7024"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/GeneralAssembly.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/GeneralAssembly.lean",
+      "sha256": "d777c055acfcec54b8271867a84d0e37c4a2c63e37dd137f7b3b3d54d9ea2382"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/OrdinaryCaps.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/OrdinaryCaps.lean",
+      "sha256": "8e31d7e4c2aae29eabf05e2a96b083fa62d94df8168dc5c70546b66474414912"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/OrdinaryCover.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/OrdinaryCover.lean",
+      "sha256": "a797ec7080fbeb3fb8a12322fde0952320a430e223c9a0988396591cab72cbeb"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/TableCover.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/TableCover.lean",
+      "sha256": "d2308491096a2889d43033150900eb63f16627a76a764ebfe6ebf6b7eb9fe040"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Angular/EndpointCover.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Angular/EndpointCover.lean",
+      "sha256": "13129688867913f50883bf1d2dbb040a5db4455cb712cf8d94e80538e5b216df"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Convexity/SquaredCapCover.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Convexity/SquaredCapCover.lean",
+      "sha256": "4b26e3223c5cc528ab3228298f88962f6363151816245fd314793a483727c461"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Convexity/GeneralCapArea.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Convexity/GeneralCapArea.lean",
+      "sha256": "02fb2347f79497e071f19aefbce580ebf10dcc08e8916583e1a86ddc60802608"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Cartesian/Cover.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Cartesian/Cover.lean",
+      "sha256": "3e9db24fd70db83d5f7a1097ea1463b4b399f67eb907a8546f38f70ef6a06404"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Cartesian/CoverEligibility.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Cartesian/CoverEligibility.lean",
+      "sha256": "955f86080743e701c05f6a148842bce38d8058a1c2fab8ecf2f017565fa3ba79"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Radial/CapCoverage.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Radial/CapCoverage.lean",
+      "sha256": "c6ad1a3396a5a3ba0eb1f402a7a16a4524e99dac59bf93b55692f6a8b8219d79"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Radial/SqrtCap.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Radial/SqrtCap.lean",
+      "sha256": "13af8801b13bf8ef8f129fee0810bbc2c635761dcd9a295ff3abd1b53f975709"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Radial/SqrtRealization.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Radial/SqrtRealization.lean",
+      "sha256": "935ccdda0cd5a12af62f69c73eb3ad890cda71368afcdd21630f041b014a7bd3"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Radial/CapVariants.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Radial/CapVariants.lean",
+      "sha256": "0c2e450eed5542fa74bd79812d2e2106f3b00e0f2ef08f0dd3245de7910e28fd"
+    },
+    {
+      "path": "lean/OAI/Geometry/CylinderCovering/Caps/Caps.lean",
+      "url": "https://raw.githubusercontent.com/openai/math/1581d4cbdd69a0faf34b2089614fe2a814316a6a/lean/OAI/Geometry/CylinderCovering/Caps/Caps.lean",
+      "sha256": "fc7b111077de55392a5b00c104c4219c579154754864f64aca4bc0ee2912d3d6"
+    }
+  ]
+}

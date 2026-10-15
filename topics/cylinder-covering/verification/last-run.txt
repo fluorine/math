@@ -1,0 +1,24 @@
+PASS: exact cap elimination and nonnegative square certificate, 0<e<=1.
+PASS: refined triangle supports, exact area, and uniform finite bounds.
+PASS: symmetric constant-cap triangle optimum and sharp 4e/N rate.
+PASS: exact integral coefficients and one-sided e^6 remainder <=8.
+PASS: uniform common-padding source comparison on d<=e^2, 0<e<=1/10.
+PASS: 36 independent constructor output checks (metric, vertices, area).
+PASS: power-sum recurrence and independent integer-sqrt checks, odd/even N.
+Angular source explicit-budget lower at tau=1/5 >= 0.513014901477832
+Global common-padding radial floor >= 0.499999957133058
+Global explicit-budget angular floor >= 0.499999989283264
+Published nilpotent apex count > 102400/3; grid ratio >= 637/1250.
+PASS: published rational product/log finite subcovers need >20 million cells.
+e=1/10, N=10000, cylinders=20000:
+  exact triangle R in [0.499947504745824, 0.499947504745984]
+  common-padding source sector lower >= 0.504347312079790
+  general theorem bound <= 0.499959469292064
+e=1/100, N=20000, cylinders=40000:
+  exact triangle R in [0.500000345647165, 0.500000345647166]
+  common-padding source sector lower >= 0.500002834956276
+e=1/1000, N=2000000, cylinders=4000000:
+  exact triangle R in [0.499999985334570, 0.499999985334571]
+  common-padding source sector lower >= 0.499999987833506
+Scope: global floors and published-recipe comparisons have the stated hypotheses.
+No global optimality, all-baseline dominance, or novelty claim is certified.

@@ -44,3 +44,23 @@ checked by Lean 4.34.1, including a direct theorem for every legal infinite-boar
 Breaker reply. The repository includes the mathematical argument, exact data,
 construction code, independent verifier, formal sources, negative controls and
 source attribution. No optimality claim is made.
+
+## Effective cylinder covers of a regular tetrahedron
+
+[Read the mathematical note](topics/cylinder-covering/output/pdf/cylinder-covering-note.pdf)
+· [Full proof and reproduction](topics/cylinder-covering/README.md)
+· [Exact verification](topics/cylinder-covering/verification/secant-report.md)
+· [Novelty and source comparison](topics/cylinder-covering/NOVELTY.md)
+
+An explicit cover by 20,000 triangular cylinders has normalized total base area
+below 0.499922. A quartic overlap identity and an explicit finite secant buffer
+prove coverage of the whole closed tetrahedron, with exact count, mesh/error
+bounds and independently certified rational area intervals. The package also
+contains a sharp finite enclosure theorem in a specified class.
+
+The published comparison uses the audited source sufficient ranges and count
+conventions; it is not global optimality over all covers or all new instances
+of generic methods. The new proof has independent exact-arithmetic checks but
+is not formalized in Lean or human-refereed. Pinned upstream Lean files document
+prior-art constants. Full derivations, compact generators, source hashes and
+reproduction commands are included.
