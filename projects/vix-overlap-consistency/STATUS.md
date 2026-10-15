@@ -5,6 +5,10 @@ same-panel compatibility extension are complete and kernel checked. The
 same panel becomes compatible when hidden activity and fixing-time signals
 are allowed. Mathematical novelty remains provisional.
 
+Further research stopped at the user's request on 2026-10-15. No subsequent
+exploratory claim is included as a proved result, and no research process is
+running in the background.
+
 ## Published baseline
 
 For every real `0≤ε<1/30`, the exact ordinary SPX/VIX panel has a compatible
@@ -53,7 +57,7 @@ printed lists, including repeated module audits). Every list contains exactly
 either headline theorem. The independent review found no material gap; its
 scope wording clarification was incorporated in EXTENSION.md.
 
-## Scope, novelty and remaining research
+## Scope, novelty and unresolved questions
 
 The same-panel extension is resolved by compatibility. The broader question
 whether a different ordinary vanilla panel exhibits a three-window
@@ -64,15 +68,16 @@ claim is made. Qualitative filtration sensitivity is already prior art.
 No matching public resolution of this exact construction was found as of
 2026-10-15, with the source-access limitations recorded in NOVELTY.md.
 
-## Local integration and reproduction
+## Publication and reproduction
 
 Worktree: `/Volumes/2tb/math/.worktrees/vix-overlap-consistency`.
 The compatibility extension is published through
 [PR #3](https://github.com/shjvandekamp/math/pull/3), branch
 `research/vix-overlap-extension`. Its first
 [full 27-module GitHub CI](https://github.com/shjvandekamp/math/actions/runs/38753211263)
-passed. Further research will continue on a separate local branch. The primary
-checkout's unrelated files and other research worktrees were preserved.
+passed. The unused exploration branch was removed after research stopped.
+The primary checkout's unrelated files and other research worktrees were
+preserved.
 
 From this project directory, run `scripts/verify.sh`. The pinned toolchain,
 manifest, proof map, exact tables, discovery scripts, manuscript, statement

@@ -261,7 +261,7 @@ Because the schedule is revealed early, the separator is a finite marginal-compa
 
 The result is a model-consistency statement. No self-financing trading strategy or executable arbitrage has been represented or proved. A fitted pair law is not identified uniquely by its marginal quotes. The original theorem alone does not exclude models outside the early-revealed architecture. The extension below constructs one for this same panel. No unrestricted continuous-state impossibility, exchange-settlement theorem, or continuous realization is claimed.
 
-## Local extension: the same panel becomes compatible
+## Compatibility extension: the same panel becomes compatible
 
 The later same-panel investigation answers the question left in the preceding
 paragraph constructively. For every `0≤ε≤1`, including the entire original

@@ -83,11 +83,18 @@ reproduction commands are included.
 
 An explicit family of ordinary SPX/VIX call panels has a compatible filtered
 law for every one- and two-window subpanel, but none for the full three-window
-panel in one fixed finite activity-schedule market. The same standing SPX panel,
-information rules and admissible state space apply throughout. The exact
+panel in one fixed finite market whose activity schedule is revealed early.
+The same standing SPX panel, information rules and admissible state space
+apply throughout. The exact
 separation margin is `(1−30ε)/32` for every real `0≤ε<1/30`.
 
-The complete finite-model theorem is checked in Lean 4.34.1, including the
+The compatibility extension constructs a law fitting the same full panel for
+every real `0≤ε≤1` when hidden activity, additional finite latent states and
+fixing-time signals are allowed. Its fixed 6592-state construction preserves
+the original stock-return kernel, root budgets and moment bound. Thus the
+original panel's obstruction depends on the information restriction.
+
+Both complete finite-model theorems are checked in Lean 4.34.1, including the
 ordinary-quote bridge, positive stock martingale, all diagonal and tower rows,
 explicit witnesses, common bounds and the stated pairwise tests. The project
 includes exact certificates, a pinned one-command verifier and an independent

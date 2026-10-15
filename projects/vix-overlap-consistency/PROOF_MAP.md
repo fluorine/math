@@ -41,7 +41,7 @@ literal tables; ordinary `decide` checks finite integer facts in the kernel,
 and algebraic proofs carry them to real expectations. No LP-duality theorem,
 external certificate oracle, or continuous-realization theorem is assumed.
 
-## Local same-panel extension
+## Same-panel compatibility extension
 
 | Obligation | Lean source and principal declaration |
 |---|---|
