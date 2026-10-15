@@ -108,7 +108,11 @@ def main() -> None:
     missing = [m for m in external if m.startswith("Mathlib.") and
                not (mathlib_build / (m.replace(".", "/") + ".olean")).is_file()]
     if missing:
-        run([lake, "exe", "cache", "get", *sorted(external)], env)
+        # Core Lean modules are supplied by the compiler, not the Mathlib
+        # source cache. Passing a Lean.* module as a cache root fails on a
+        # fresh installation even though its compiled module is present.
+        cache_roots = sorted(m for m in external if m.startswith("Mathlib."))
+        run([lake, "exe", "cache", "get", *cache_roots], env)
 
     env["LEAN_PATH"] = run([lake, "env", "printenv", "LEAN_PATH"], env, capture=True).strip()
     build = ROOT / ".lake" / "build" / "lib" / "lean"
