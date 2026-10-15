@@ -1,6 +1,6 @@
-X announcement draft — publish only after the repository push is approved.
-The link below is the intended public destination, not a claim that this
-revision has already been pushed. This file does not authorize posting to X.
+X announcement draft for the published repository.
+The reviewed package fe3e100 was pushed to main on 15 October 2026 after
+user approval. No X post has been sent; posting requires a separate instruction.
 
 EXTENDED POST
 

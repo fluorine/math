@@ -5,9 +5,10 @@ and a strictly stronger coupled-profile theorem. Both survived independent
 audit. Historical novelty remains provisional; see NOVELTY.md and RESULT.md.
 
 Branch: `research/sensitivity-20261015-01a13f19`; base `7566886`.
-Other worktrees and main are untouched. The user requested a public package
-for X and a possible push to `shjvandekamp/math`, with explicit permission
-requested only after the complete package is ready. No push has occurred.
+Other local worktrees and the local main checkout are untouched. The user
+approved publication after reviewing the complete package. Commit `fe3e100`
+was pushed without force to public `shjvandekamp/math` main on 15 October 2026.
+The remote commit and PDF blob were checked against the local copies.
 
 Host inspected: Apple arm64 Mac mini, macOS 26.3, 8 physical/logical cores,
 16 GiB memory; external volume had 368 GiB free. A pre-existing zstd process
@@ -49,7 +50,8 @@ The latter threshold alone was already available from source formulas.
 
 Reproduction passed using scripts/reproduce.py --fetch-sources. See
 checks/reproduction.log. No long-running computations or partial searches
-remain. No cloud compute, deployment, purchase, push, or remote merge occurred.
+remain. No cloud compute, purchase, or remote merge occurred. Publication used
+an ordinary fast-forward Git push after explicit user approval.
 
 Publication preparation adds a standalone typeset mathematical note, a deeper
 novelty audit, a public repository overview, and an X announcement draft.
@@ -69,19 +71,17 @@ is at the common no-16 contract and does not optimize the actual seed.
 
 Publication package: README.md, publication/sensitivity-note.tex,
 output/pdf/sensitivity-note.pdf, publication/NOVELTY_AUDIT.md, and
-publication/X_POST.txt. The intended next step is a non-forced Git push to
-the existing repository only after the user's requested approval. Posting
-to X is not authorized by a repository-push approval.
+publication/X_POST.txt. The repository is public and the announcement remains
+a draft. Posting to X requires a separate user instruction.
 
-Publication access check: a noninteractive HTTPS push dry run failed because
-Git had no usable GitHub password/token. GitHub CLI is also unauthenticated.
-An SSH read-only check stopped at host-key verification, without changing
-known hosts. GitHub authentication is required before a real push can run.
-The remote main was still the initial commit `7566886` when checked; do not
-force-push if it changes before approval. No remote refs have been written.
+Publication access: the initial HTTPS dry run lacked credentials. GitHub CLI
+was subsequently authenticated as `shjvandekamp` through GitHub's device flow,
+with HTTPS Git authentication configured. The repository was confirmed public,
+and remote main advanced from `7566886` to the approved package `fe3e100`.
+The earlier SSH check did not change known hosts.
 
 Optional next research: formalize the new combinatorial theorem in Lean,
 obtain external mathematical feedback, or seek better seed/profile parameters.
 No global optimum or unqualified historical priority is claimed. All
-required deliverables are local and scoped to this branch; git log records
-the local commit without modifying the shared main checkout.
+required deliverables are committed and published; git log preserves the
+research history without modifying the shared local main checkout.

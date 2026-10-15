@@ -97,7 +97,8 @@ No large tournament or Boolean truth table is materialized.
 
 See [VERIFICATION.md](proofs/VERIFICATION.md) and
 [reproduction.log](checks/reproduction.log) for audit scope and run output.
-No Lean build was run, and no remote branch was pushed or merged.
+No Lean build was run. The reviewed package was published to public main
+after user approval on 15 October 2026; see [STATE.md](STATE.md).
 
 ## Novelty and continuation
 
