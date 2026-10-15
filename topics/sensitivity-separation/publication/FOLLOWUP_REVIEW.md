@@ -35,6 +35,7 @@ kernel/axiom audit was performed.
 | One-side recurrences, zero-block witnesses, OR and composition | The stated arguments are valid and inherited. They do not constitute the contribution of this note. |
 | Published fixed-seed arithmetic | All saved seed integers and certified exponent intervals matched the independently implemented recurrence. |
 | Numerical importance | A strict but small improvement in proved upper bounds, with no exact-sensitivity or global-optimality claim. The sharper baseline below must be considered when describing its size. |
+| Later literature check | ProveIt Parts I–II (7 and 9 October 2026) report larger exponents and prove the two- and three-gate packing counts; see the [novelty audit addendum](NOVELTY_AUDIT.md#addendum-proveit-manuscripts-located-after-this-audit). |
 | Historical novelty | The first-difference mechanism is classical. No exact antecedent was found for the directed lemma or six/five-branch formulation in the inspected sources. Priority remains unresolved. |
 
 For the profile proof, the essential assumptions are nested child predicates,

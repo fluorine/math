@@ -42,6 +42,13 @@ The result target has 1,181 modules in its dependency closure; the main serial
 pass took 1,832 seconds and used at most 2.20 GiB resident memory in a child
 process. Six base modules were already checked and reused by that pass.
 
+A second, independent rebuild on 15 October 2026 used the official
+`lean-4.34.1-linux.tar.zst` release, which reports the same commit, on
+Linux x86_64. It ran the identical per-module `lean -j 1 -M 4096` commands,
+four modules at a time in dependency order. All 1,182 modules of the
+`Snaky.Audit` closure compiled. The theorem types and axiom lists were
+identical to those recorded in `kernel-audit.json`.
+
 The local runtime was obtained from the
 [official Lean 4.34.1 release](https://github.com/leanprover/lean4/releases/tag/v4.34.1):
 `lean-4.34.1-darwin_aarch64.tar.zst`, SHA-256

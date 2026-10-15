@@ -128,7 +128,11 @@ gated tournaments, OR balancing, and composition are established ideas.
 The precise claims here are the arbitrary-orientation head-coherence bound,
 its exact succinct family-132 instantiation, and the stronger coupled-profile
 inequality. The 15 October literature refresh found no matching theorem,
-but cannot guarantee priority. [NOVELTY.md](NOVELTY.md) and
+but cannot guarantee priority. A later check located ProveIt Parts I–II
+(7 and 9 October 2026), which report larger exponents and prove the two- and
+three-gate packing bounds; see the
+[novelty audit addendum](publication/NOVELTY_AUDIT.md#addendum-proveit-manuscripts-located-after-this-audit).
+[NOVELTY.md](NOVELTY.md) and
 [LITERATURE.md](sources/LITERATURE.md) record this boundary and antecedents.
 
 The requested mathematical construction no longer has a missing implication.

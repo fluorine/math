@@ -24,7 +24,10 @@ Snaky result. It retains the actual Maker history and safe cells that the
 current tactical template has forgotten, producing a uniform nineteen-move
 strategy. The contribution is the new composition and its verified bound;
 the imported tactics and proof infrastructure are explicitly credited in the
-[provenance record](reference/README.md).
+[provenance record](reference/README.md). The note also cites the classical
+Snaky literature and two related public projects not used here: Erebos Labs'
+Lean soundness code for Sieben's strategy and KaiaSage's independent draft
+20-move certificate.
 
 The result is an upper bound. It does not prove that nineteen is optimal.
 Novelty is relative to the [15 October 2026 audit](NOVELTY.md), rather than a
@@ -73,12 +76,15 @@ limits. It generates the proof modules from the committed certificate and
 checks them serially; no mathlib is needed. Generated modules and binaries are
 rebuildable outputs, not missing proof inputs.
 
-The PDF note was built with Tectonic 0.15.0. To regenerate it from the included
-standalone LaTeX source:
+The current PDF was built with XeLaTeX from TeX Live 2026; earlier versions
+used Tectonic 0.15.0, which also uses the XeTeX engine. To regenerate it from
+the included standalone LaTeX source:
 
 ```sh
 tectonic --outdir topics/snaky/output/pdf topics/snaky/publication/snaky-note.tex
 ```
+
+or run `xelatex` three times in `topics/snaky/publication`.
 
 [Construction tools and mechanism](constructor/README.md)
 · [Pinned source data and credits](reference/README.md)
