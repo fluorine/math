@@ -27,6 +27,14 @@ root height to 18 or deleting a required root response were rejected.
 on Z², including every reply outside the support. An independent adversarial
 review found no gap in the shape, turn, support, occupied-cell or bound semantics.
 
+Lean 4.34.1 also completed the full kernel check of this certificate and the
+direct infinite-board soundness theorem. The resulting statements are
+`Snaky.snaky_wins_plane_in_19 : Snaky.PlaneBlackWinsIn 19 [] []` and the
+corresponding 17×17 theorem. Both report only the standard axioms `propext`,
+`Classical.choice` and `Quot.sound`; neither depends on a proof placeholder,
+custom axiom or native decision procedure. See `formal/kernel-audit.json` for
+the exact theorem output and build evidence.
+
 ## Contribution and provenance
 
 The construction combines Sieben's public 20-move strategy and tactics from
@@ -53,11 +61,18 @@ python3 topics/snaky/reproduce.py
 
 Add `--reconstruct` to regenerate from the pinned public inputs and require
 byte-for-byte identity. No external Python packages or network are needed.
+The final run passed all 31 tests and both corruption controls, and reproduced
+the delivered certificate byte for byte.
 
-## Limits and remaining formal work
+For the full Lean kernel check, use the pinned compiler as described in
+`formal/README.md`:
 
-The completed proof is an independently checked certificate plus a mathematical
-soundness argument. A new Lean kernel build is in progress and is not yet
-claimed here. No optimality, 18-move impossibility, or infinite-board lower
-bound is asserted. Earlier search failure concerned a restricted construction
-mechanism. Nothing has been published or pushed remotely.
+```sh
+python3 topics/snaky/formal/build.py --lean /absolute/path/to/lean --target Snaky.Audit
+```
+
+## Scope
+
+No optimality, 18-move impossibility, or infinite-board lower bound is asserted.
+Earlier search failure concerned a restricted construction mechanism. Nothing
+has been published or pushed remotely.

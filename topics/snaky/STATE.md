@@ -1,8 +1,8 @@
 # Research state
 
-Updated 2026-10-15. **A complete 19-move certificate is independently verified.**
-Final packaging/reconstruction and additional Lean kernel verification are in
-progress. Do not restart strategic search or pursue 18 before finishing these.
+Updated 2026-10-15. **The 19-move result is complete, independently verified,
+fully checked by the Lean kernel, and reproduced byte for byte.** The proof
+covers both the empty infinite square board and the empty 17×17 board.
 
 ## Location and ownership
 
@@ -62,20 +62,29 @@ Formal checks use one thread and a 4,096 MB Lean memory cap. No paid/cloud compu
 - Adversarial semantic review found no gap in the direct plane soundness proof.
 - Unchanged upstream Lean base modules and new direct infinite-board soundness
   module `Snaky.Plane` compiled with Lean 4.34.1, without proof placeholders.
+- Full `Snaky.Result19` build succeeded: 1,181 modules in its dependency closure,
+  1,175 newly compiled in the final pass and six previously checked base modules.
+  The serial pass took 1,832 seconds; peak child RSS was 2,360,246,272 bytes.
+- `Snaky.Audit` printed the exact finite and infinite 19-move theorem types.
+  Both depend only on `propext`, `Classical.choice` and `Quot.sound`, with no
+  placeholders, custom axioms or native decision procedure.
+- Final `python3 topics/snaky/reproduce.py --reconstruct` exited successfully:
+  all 31 tests passed, both certificate corruptions were rejected, and the
+  reconstructed compact certificate was byte-for-byte identical. Construction
+  took 13.66 seconds in this final reproduction.
+- `formal/kernel-audit.json` records the completed evidence. `MANUSCRIPT.md`
+  gives the mathematical proof, construction, explicit substitutions and credits.
 
-## Active frontier
+## Final state
 
-1. Root has serial Lean build running in exec session 63065, target
-   `Snaky.Result19`. Progress: `formal/.build/kernel-progress.log`; resumable
-   module hash state: `formal/.build/state.json`. Generated Gen19 has 1,165
-   proof modules with 400,000-unit / 5-response-cell chunks to bound memory.
-2. Constructor writes the concise mathematical manuscript; verifier reviews
-   exact formal theorem semantics. Root integrates documentation and artifacts.
-3. After kernel success, build `Snaky.Audit` to inspect exact theorem statements
-   and axioms. Do not claim full kernel verification before that succeeds.
-4. Run final `python3 topics/snaky/reproduce.py --reconstruct` once after kernel
-   releases the computational slot; it must reproduce identical certificate bytes.
-5. Review final scoped changes, commit locally, update result/state and finish goal.
+The requested 19-move target is achieved. No search or proof build is left
+running. All delivered files are under `topics/snaky/` on the isolated research
+branch. No remote push or publication has occurred. The 18-move question and
+optimality remain outside this completed result.
+
+Ignored local build outputs and hashes remain under `formal/.build/`; generated
+`Gen19` uses 1,165 proof modules with 400,000-unit / 5-response-cell chunks to
+bound memory. They can be recreated with the documented build command.
 
 Failed elementary approach: retaining stones and skipping already-owned pivots
 alone does not establish 19, since genuine 20-move baseline transcripts remain.
@@ -88,10 +97,9 @@ locally at `/Volumes/2tb/math/.research-cache/unused-tactics-snaky19-20261015-a/
 and omitted from the committed artifact. Constructor intermediate card copies
 are likewise generated/ignored; the one delivered final copy is in `certificate/`.
 
-## Resume
+## Working location
 
-Read this file, `NOVELTY.md`, and agent-produced reports under `constructor/` and
-`verification/`. Reference source checkout is
+Read `RESULT.md` and `MANUSCRIPT.md` for the completed result. Reference source checkout is
 `/Volumes/2tb/math/.research-cache/gotrevor`, pinned to
 `b18ed32473a6a22ebfdda98da62d61b8b1590c1e`; it is not a second product checkout to edit.
 Use the isolated worktree above for all changes and local commits.

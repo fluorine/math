@@ -192,16 +192,22 @@ python3 topics/snaky/reproduce.py
 ```
 
 Adding `--reconstruct` regenerates the certificate from the pinned source
-files and requires byte-for-byte identity.
+files and requires byte-for-byte identity. The final reproduction passed all
+31 tests and both corruption controls, and regenerated identical bytes.
 
-The completed argument here is the independently checked data together with
-the soundness proof above. The direct plane soundness development
-`formal/Snaky/Plane.lean`, including `Snaky.cards_sound_plane_in`, has compiled.
-`formal/Snaky/Result19.lean` states `Snaky.snaky_wins_17x17_in_19` and
-`Snaky.snaky_wins_plane_in_19`. The full generated `Gen19` kernel check is
-still in progress at this manuscript revision; a completed kernel build is
-not yet claimed. The Python implementation and runtime remain part of the
-completed computational check's trust assumptions.
+Lean 4.34.1 completed the full kernel check of the generated certificate and
+the direct plane soundness development in `formal/Snaky/Plane.lean`.
+`formal/Snaky/Result19.lean` proves `Snaky.snaky_wins_17x17_in_19` and
+`Snaky.snaky_wins_plane_in_19 : Snaky.PlaneBlackWinsIn 19 [] []`.
+The latter theorem quantifies over every legal integer-coordinate Breaker
+reply directly. Both theorems report exactly `propext`, `Classical.choice`
+and `Quot.sound` as their axioms. Data checks use `decide +kernel`, with no
+proof placeholders, custom axioms or `native_decide`. This formal proof
+does not rely on the correctness of the Python constructor, verifier or
+generator: their output obligations are checked by the Lean kernel.
+Exact theorem output and build details appear in
+[`formal/kernel-audit.json`](formal/kernel-audit.json); the formal definitions,
+Lean kernel and compiler/runtime remain part of the formal trust boundary.
 
 ## 5. Attribution, novelty, and scope
 

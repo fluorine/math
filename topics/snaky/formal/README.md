@@ -35,9 +35,12 @@ invalidates its cached result. No mathlib or external Lean packages are needed.
 
 `Snaky.Audit` prints both exact theorem types and their axioms. All data checks
 use `decide +kernel`; no `native_decide`, proof placeholders or custom axioms
-are part of this development. Do not infer successful kernel checking merely
-from the presence of generated source files. The completed-build status is
-reported separately in `../RESULT.md` and the eventual kernel audit record.
+are part of this development. The complete build succeeded on 15 October 2026.
+Both final theorems report exactly `propext`, `Classical.choice` and `Quot.sound`
+as their axioms. Exact output and build metrics are in `kernel-audit.json`.
+The result target has 1,181 modules in its dependency closure; the main serial
+pass took 1,832 seconds and used at most 2.20 GiB resident memory in a child
+process. Six base modules were already checked and reused by that pass.
 
 The local runtime was obtained from the
 [official Lean 4.34.1 release](https://github.com/leanprover/lean4/releases/tag/v4.34.1):

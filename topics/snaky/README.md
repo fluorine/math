@@ -1,9 +1,9 @@
 # Snaky within 19 Maker moves
 
-**An independently checked certificate forces Snaky within 19 Maker moves.**
+**A Lean-checked certificate forces Snaky within 19 Maker moves on the infinite board.**
 This improves the public bound located by the 15 October 2026 audit, from 20.
 See `RESULT.md` for claims and limits,
-`STATE.md` for the current frontier, and `NOVELTY.md` for the pre-search audit.
+`MANUSCRIPT.md` for the mathematical argument, and `NOVELTY.md` for the pre-search audit.
 
 From the repository root, verify the final certificate and rejection controls:
 
