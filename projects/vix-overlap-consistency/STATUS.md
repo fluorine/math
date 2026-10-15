@@ -1,6 +1,6 @@
 # Research status
 
-2026-10-15: the published finite-architecture obstruction and the local
+2026-10-15: the published finite-architecture obstruction and the published
 same-panel compatibility extension are complete and kernel checked. The
 same panel becomes compatible when hidden activity and fixing-time signals
 are allowed. Mathematical novelty remains provisional.
@@ -21,7 +21,7 @@ The [full main-branch Linux CI](https://github.com/shjvandekamp/math/actions/run
 passed after a fresh dependency bootstrap. The publication log remains in
 `notes/verification.log` (19 modules, 22 audited declarations).
 
-## Completed local extension
+## Completed compatibility extension
 
 For every real `0≤ε≤1`, `Extension.financial_same_panel_compatibility`
 constructs a finite filtered model fitting exactly the same SPX and three VIX
@@ -67,9 +67,12 @@ No matching public resolution of this exact construction was found as of
 ## Local integration and reproduction
 
 Worktree: `/Volumes/2tb/math/.worktrees/vix-overlap-consistency`.
-Local branch: `research/vix-overlap-extension`, based on the published main
-commit above. The extension has not been pushed. The primary checkout's
-unrelated files and other research worktrees were preserved.
+The compatibility extension is published through
+[PR #3](https://github.com/shjvandekamp/math/pull/3), branch
+`research/vix-overlap-extension`. Its first
+[full 27-module GitHub CI](https://github.com/shjvandekamp/math/actions/runs/38753211263)
+passed. Further research will continue on a separate local branch. The primary
+checkout's unrelated files and other research worktrees were preserved.
 
 From this project directory, run `scripts/verify.sh`. The pinned toolchain,
 manifest, proof map, exact tables, discovery scripts, manuscript, statement

@@ -7,7 +7,7 @@ The class is defined before the numerical search; all real probability weights
 on all 64 activity schedules are allowed. It is not a solver discretization of
 an unrestricted market.
 
-The local extension resolves the fate of this same panel in a broader finite
+The compatibility extension resolves the fate of this same panel in a broader finite
 filtered class: it is compatible when hidden activity and fixing-time signals
 are allowed. An exact construction retains the original stock kernel, root
 budgets and moment bound and fits the full panel for every `0≤ε≤1`.
@@ -44,5 +44,7 @@ three-window panel with an architecture-free obstruction remains open here.
 The original theorem was published and merged in
 [GitHub PR #2](https://github.com/shjvandekamp/math/pull/2), with the full
 [main-branch Lean CI passing](https://github.com/shjvandekamp/math/actions/runs/38745717506).
-The hidden-information extension is kept on local branch
-`research/vix-overlap-extension`; it has not been pushed.
+The hidden-information extension is published through
+[GitHub PR #3](https://github.com/shjvandekamp/math/pull/3), with the expanded
+27-module verifier run by the same full Lean CI. Further research will
+continue on a separate local branch.

@@ -1,7 +1,7 @@
 # Verification record
 
 **PASS — 2026-10-15, exit status 0.** Both the published finite-architecture
-obstruction and the local same-panel compatibility theorem were checked in
+obstruction and the same-panel compatibility theorem were checked in
 one complete fresh local-source build: **27 modules, 39 distinct audited
 declarations** (43 printed lists including duplicates). Every audited list
 contains exactly `propext`, `Classical.choice`, and `Quot.sound`.
@@ -121,8 +121,11 @@ Its [main-branch CI run](https://github.com/shjvandekamp/math/actions/runs/38745
 and [PR CI run](https://github.com/shjvandekamp/math/actions/runs/38743905081)
 both passed. Each ran the complete baseline verifier: 19 local modules and
 22 audited declarations. `notes/verification.log` preserves the fresh local
-publication run. The new 27-module extension run is local only; it has not
-been pushed or represented as checked by GitHub.
+publication run. The compatibility extension is now published through
+[PR #3](https://github.com/shjvandekamp/math/pull/3). Its first
+[full 27-module Linux CI run](https://github.com/shjvandekamp/math/actions/runs/38753211263)
+passed on commit `916a761`; the PR records checks for the final publication
+head. Further research after this extension remains local.
 
 CI pins checkout to `3d3c42e5aac5ba805825da76410c181273ba90b1`, installs the
 Lean 4.34.1 Linux archive, and checks its official SHA-256

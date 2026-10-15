@@ -2,7 +2,8 @@
 
 Contract frozen on 2026-10-15 before extension computation. The verified finite
 activity result is the publication baseline, merged in GitHub PR #2. The
-extension is local. The frozen search contract is preserved below; the
+extension is published through [PR #3](https://github.com/shjvandekamp/math/pull/3).
+The frozen search contract is preserved below; the
 construction and its current verification status follow it.
 
 ## Unchanged observations
