@@ -110,3 +110,19 @@ Read `RESULT.md` and `MANUSCRIPT.md` for the completed result. Reference source 
 `/Volumes/2tb/math/.research-cache/gotrevor`, pinned to
 `b18ed32473a6a22ebfdda98da62d61b8b1590c1e`; it is not a second product checkout to edit.
 Use the isolated worktree above for all changes and local commits.
+
+
+## Publication completeness recheck
+
+On 15 October 2026, a separate publication check started from public main at
+`4749c87741c668bc2ea6541f5c417af8d7636203`. The exact certificate and recorded
+formal-source hashes matched the kernel audit. A fresh standard-library
+`reproduce.py --reconstruct` run passed all 31 tests and both corruption controls,
+and regenerated the identical 3,468-card certificate. The existing complete
+Lean kernel build was not repeated; no mathematical or formal source changed.
+
+The pinned upstream Sieben attribution and permission notice is now included
+locally as `reference/sieben-UPSTREAM-README.md`, with its hash and provenance.
+The repository is public. `publication/X_POST.txt` contains a 270-character
+standard-length announcement, counting the URL as 23 characters, plus detailed
+credits and a follow-up. It is ready-to-post text, not a posted X status.

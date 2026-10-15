@@ -8,8 +8,12 @@ SHA-256: `c15deef097541e2413cc543916e8d5773ffa398f5be66ca976c73f894c7fd832`.
 The strategy is Nándor Sieben's 20-move proof sequence, building on OpenAI's
 21-move strategy. Trevor Morris's repository contributes conversion into cards
 and a Lean proof. Its upstream attribution and permission statement is in
-`third_party/sieben/README.md`; the Apache-2.0 repository license is retained as
-`gotrevor-LICENSE`. The original sequence is at
+[`sieben-UPSTREAM-README.md`](sieben-UPSTREAM-README.md), copied unchanged from
+`third_party/sieben/README.md` at the same pinned revision. That notice records
+Sieben's permission to publish the sequence and Lean proof in Morris's
+repository; it is quoted as upstream provenance, not a new permission claim.
+Its SHA-256 is `e737e4cb87402717fd5875b34521dce6a5b1af937481670e70ce23afbddb76dc`.
+The Apache-2.0 repository license is retained as `gotrevor-LICENSE`. The original sequence is at
 [nandorsieben/Snaky](https://github.com/nandorsieben/Snaky/tree/a0a36dd4edffdccdb7c4b14849c81e83dd6a25aa).
 
 This reference is a baseline, not this project's final certificate or a new result.

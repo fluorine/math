@@ -2,14 +2,14 @@ ANNOUNCEMENT DRAFT — NOT POSTED
 
 Standard-length X post
 ----------------------
-Can Maker build Snaky while an opponent blocks one cell per turn?
+Can you force Snaky while an opponent blocks one cell per turn?
 
-We found a strategy that wins within 19 Maker moves, down from 20.
+We have a strategy winning within 19 Maker moves on the infinite board, improving the published bound of 20.
 
-Lean-verified and independently checked. Built on Sieben, Morris & OpenAI.
-
-Full proof and code:
+Lean-kernel checked. Full proof, certificate & code:
 https://github.com/shjvandekamp/math/tree/main/topics/snaky
+
+Comments welcome!
 
 Optional follow-up
 ------------------
