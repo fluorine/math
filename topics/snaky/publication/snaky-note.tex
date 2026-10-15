@@ -52,6 +52,12 @@ Other Maker stones are allowed: the six-cell condition specifies a winning
 subset. A move bound counts actual Maker claims, including the winning claim,
 and does not count alternating plies.
 
+Snaky arises in Harary's polyomino achievement games. Sieben proved that it
+wins in 41 dimensions~\cite{Sieben2004}, and Halupczok and Schlage-Puchta
+proved that it wins in three dimensions and has planar handicap number at
+most one~\cite{HSP2007}. OpenAI proved an ordinary planar win within 21 Maker
+moves~\cite{OpenAI}, and Sieben improved this to 20~\cite{Sieben}.
+
 \begin{theorem}\label{thm:main}
 From the empty board, Maker has a strategy that completes a copy of $F$ by
 Maker's nineteenth move against every legal Breaker strategy. This holds
@@ -264,8 +270,24 @@ public bound and found no matching nineteen-move result. This is a bounded
 audit, not proof that no unindexed or unpublished result exists. We establish
 an upper bound and claim neither optimality nor any global Breaker lower bound.
 
+Two further public projects concern the twenty-move bound, and we do not use
+either. Erebos Labs released Lean soundness code for Sieben's strategy on the
+infinite lattice~\cite{Erebos}. KaiaSage published an independent draft
+twenty-move certificate. Its research notes report that the plan studied there
+is refuted at nineteen moves~\cite{KaiaSage}.
+
 \begin{thebibliography}{9}
 \raggedright
+\bibitem{HSP2007}
+Immanuel Halupczok and Jan-Christoph Schlage-Puchta, \emph{Achieving Snaky},
+Integers \textbf{7} (2007), G02,
+\href{https://math.colgate.edu/~integers/hg2/hg2.pdf}{\nolinkurl{math.colgate.edu/~integers/hg2/hg2.pdf}}.
+
+\bibitem{Sieben2004}
+N\'andor Sieben, \emph{Snaky is a 41-dimensional winner}, Integers \textbf{4}
+(2004), G05,
+\href{https://math.colgate.edu/~integers/eg5/eg5.pdf}{\nolinkurl{math.colgate.edu/~integers/eg5/eg5.pdf}}.
+
 \bibitem{Sieben}
 N\'andor Sieben, \emph{Snaky}, twenty-move proof sequence,
 \href{https://github.com/nandorsieben/Snaky/tree/a0a36dd4edffdccdb7c4b14849c81e83dd6a25aa}{\nolinkurl{github.com/nandorsieben/Snaky}},
@@ -288,5 +310,16 @@ Bigospeedrun, public bounds tracker, \nolinkurl{src/lib/other-bounds.json},
 \href{https://github.com/bigospeedrun/site/blob/88d1855ba6843586579d8e031389ad94a475bb41/src/lib/other-bounds.json}{\nolinkurl{github.com/bigospeedrun/site}},
 revision \texttt{88d1855ba6843586579d8e031389ad94a475bb41}, inspected
 15 October 2026.
+
+\bibitem{Erebos}
+Erebos Labs, \emph{Snaky bounded soundness code and generators},
+\href{https://github.com/erebos-labs/snaky-bounded-lean/tree/239dae48c0f8e227595424a9318126e01508df3a}{\nolinkurl{github.com/erebos-labs/snaky-bounded-lean}},
+revision \texttt{239dae48c0f8e227595424a9318126e01508df3a}, 9 October 2026.
+
+\bibitem{KaiaSage}
+KaiaSage, \emph{Snaky in 21} and draft twenty-move certificate,
+\href{https://github.com/KaiaSage/snaky-demo/tree/db62e51521944b0a7101062567352532efcec069/research/snaky20}{\nolinkurl{github.com/KaiaSage/snaky-demo}},
+research branch revision \texttt{db62e51521944b0a7101062567352532efcec069},
+8 October 2026.
 \end{thebibliography}
 \end{document}

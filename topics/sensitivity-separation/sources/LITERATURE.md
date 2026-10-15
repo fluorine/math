@@ -82,3 +82,24 @@ targeted comparison did not locate this exact theorem. Claim only that
 explicit adaptation and application, with provisional novelty; do not
 claim invention of first-difference coloring, gated tournaments, OR balancing,
 or composition amplification.
+
+## Later addendum: ProveIt manuscripts
+
+Recorded 15 October 2026, after publication. These public, AI-assisted,
+unrefereed manuscripts refine the same family-132 construction and predate
+this note. They were missed by the searches above. Files were read at the
+pinned commits; their proofs were not independently verified.
+
+- Part I, *An explicit exponent above 65/32 for ordinary sensitivity versus
+  block sensitivity*, dated 7 October 2026, placed at
+  [`5476940edc3a2e7ea0c5426f013c6b5966451d73`](https://github.com/VladimirReshetnikov/ProveIt/tree/5476940edc3a2e7ea0c5426f013c6b5966451d73/Combinatorics/BooleanFunctions/Research/sensitivity-block-sensitivity).
+  Reports alpha = 2.0320827244....
+- Part II, *Threshold-Resolved Amplification for Boolean Sensitivity*, draft
+  dated 8 October 2026, placed 9 October at
+  [`18abb81b20977338c9c3c6511eaf333561709eca`](https://github.com/VladimirReshetnikov/ProveIt/tree/18abb81b20977338c9c3c6511eaf333561709eca/Combinatorics/BooleanFunctions/Research/sensitivity-block-sensitivity).
+  Reports 3667/1809 ≈ 2.0270868 and a target/gate packing lemma. Its TeX
+  source is in `docs/incoming/sensitivity_2027_research.zip` at commit
+  `2c7f4fd68bfd3fbaa84876ce271261cef38fc57c`.
+
+The comparison with this note is in the
+[novelty audit addendum](../publication/NOVELTY_AUDIT.md#addendum-proveit-manuscripts-located-after-this-audit).

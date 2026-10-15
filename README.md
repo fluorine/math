@@ -18,7 +18,10 @@ coherent-set maximum is seven for the fixed seed. Using this sharper bound
 in both analyses improves the certified exponent from approximately
 2.0154112468 to 2.0154115475 at unchanged dimension. The PDF includes the
 sharper bound and comparison; the linked review records the follow-up
-audit and its independently implemented certificate.
+audit and its independently implemented certificate. Earlier independent
+manuscripts in the ProveIt repository report larger exponents (about 2.0321
+and 2.0271) and part of the same target/gate counting; the note cites them
+and does not claim a competitive exponent.
 
 These are AI-assisted mathematical contributions offered for public scrutiny.
 The notes distinguish the additional arguments from inherited constructions,

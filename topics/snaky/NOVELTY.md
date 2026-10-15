@@ -24,6 +24,8 @@ Missing search results are not evidence that a problem is globally open.
 | [nandorsieben/Snaky](https://github.com/nandorsieben/Snaky/tree/a0a36dd4edffdccdb7c4b14849c81e83dd6a25aa) | `a0a36dd4edffdccdb7c4b14849c81e83dd6a25aa`, 2026-10-08 01:20:40 | `proof-sequence-20.html.gz` |
 | [bigospeedrun tracker](https://github.com/bigospeedrun/site/blob/88d1855ba6843586579d8e031389ad94a475bb41/src/lib/other-bounds.json) | `88d1855ba6843586579d8e031389ad94a475bb41`, 2026-10-15 10:22:45 | Family 187: baseline 21, improvement 20; evidence label “claimed” |
 | [openai/math](https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a) | `1581d4cbdd69a0faf34b2089614fe2a814316a6a`, 2026-10-12 21:55:24 | *Snaky in 21 Maker moves*, manuscript 2026-09-25; infinite-board formalization scope in `lean/docs/187.md` |
+| [erebos-labs/snaky-bounded-lean](https://github.com/erebos-labs/snaky-bounded-lean/tree/239dae48c0f8e227595424a9318126e01508df3a) | `239dae48c0f8e227595424a9318126e01508df3a`, 2026-10-09 02:59:29 | Lean soundness code for Sieben's strategy on the infinite lattice; “no claim of a new strategy, optimality, or a smaller finite-board bound” *(added in a later check)* |
+| [KaiaSage/snaky-demo](https://github.com/KaiaSage/snaky-demo/tree/db62e51521944b0a7101062567352532efcec069/research/snaky20), branch `claude/research-snaky-20` | `db62e51521944b0a7101062567352532efcec069`, 2026-10-08 23:07:29 | Independent draft 20-move certificate; its “Toward 19” notes say “The plan plus win-in-1 is refuted at 19” *(added in a later check)* |
 
 Inspected the requested historical revision
 `1173345102f9d39472e38db0fdd810f7bfd4ed4e` (2026-10-09 14:33:47 UTC), including

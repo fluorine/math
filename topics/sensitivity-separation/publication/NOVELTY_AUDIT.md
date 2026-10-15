@@ -14,6 +14,11 @@ these conclusions and the matched cap-seven comparison. The cap-fifteen
 formulas and original numerical comparison below are retained and identified
 as the original contract specialization.
 
+**Later correction:** this audit missed two earlier ProveIt manuscripts that
+overlap in part with the profile refinement. See the
+[addendum](#addendum-proveit-manuscripts-located-after-this-audit) below; it
+takes precedence over contrary statements in the rest of this file.
+
 **The defensible contribution is an elementary directed adaptation of a
 classical labelling method, together with a stronger local estimate for an
 existing Boolean-function construction.** The first-difference mechanism is
@@ -29,6 +34,47 @@ sensitivity and block sensitivity*, dated 25 September 2026, at commit
 `1581d4cbdd69a0faf34b2089614fe2a814316a6a`. Its family number is 132.
 The comparison is with that exact source, rather than with only the coarse
 bound highlighted in its main theorem.
+
+## Addendum: ProveIt manuscripts located after this audit
+
+Recorded 15 October 2026, after publication of the note. Vladimir
+Reshetnikov's public ProveIt repository contains two AI-assisted,
+unrefereed manuscripts that refine the same family-132 construction for
+**ordinary** sensitivity. Both predate this note. Their files were read
+at the pinned commits below; their proofs have **not** been independently
+verified here.
+
+| Manuscript | Date and pinned commit | Stated results relevant here |
+|---|---|---|
+| [Part I: *An explicit exponent above 65/32 for ordinary sensitivity versus block sensitivity*](https://github.com/VladimirReshetnikov/ProveIt/tree/5476940edc3a2e7ea0c5426f013c6b5966451d73/Combinatorics/BooleanFunctions/Research/sensitivity-block-sensitivity) | Dated 7 October 2026; `5476940edc3a2e7ea0c5426f013c6b5966451d73` | Exponent $\alpha=(\log100+646\log2)/(\log9+318\log2)=2.0320827244\ldots$, with level-dependent tournament sizes and four positions per row. Zero-side gate envelope $\max\{S_1(g)+J_1,3J_1\}$. Union-bound labels; explicit labellings listed as an open problem. |
+| [Part II: *Threshold-Resolved Amplification for Boolean Sensitivity*](https://github.com/VladimirReshetnikov/ProveIt/tree/18abb81b20977338c9c3c6511eaf333561709eca/Combinatorics/BooleanFunctions/Research/sensitivity-block-sensitivity) | Draft dated 8 October; posted 9 October 2026 at `18abb81b20977338c9c3c6511eaf333561709eca` | Exponent $3667/1809\approx2.0270868$. Joint target/gate budget lemma: two gate candidates leave at most $t-2$ targets, three at most $t-4$. Deterministic conditional-expectation labelling, impractical at its parameters. All target repairs charged to the ordinary profile $S_0(Q)$. |
+
+Consequences for the classification in Section 1:
+
+- **Exponent.** Both reported exponents exceed every value in this note's
+  fixed-seed comparison. The comparison remains a valid same-seed statement
+  but is not competitive and must not be presented as one.
+- **Baseline gate envelope.** The refinement $\max\{b+e,3e\}$ listed below
+  as an immediate consequence of the source also appears in Part I.
+- **Profile theorem: partial overlap.** The target counts in the two-joint-gate
+  and three-gate cases ($K-1$ and $K-3$, i.e. $t-2$ and $t-4$) are Part II's
+  packing lemma. Not located in Parts I–II:
+  - charging all but at most one target repair to the joint profile $c$;
+  - the one-gate coherent union with exceptional head reassignment, which
+    Part II explicitly declines in general;
+  - the ordinary-sink two-gate count $K-2$;
+  - the stronger-index joint candidate lists.
+
+  The six/five-branch formulas as a whole were not found there.
+- **Explicit labels.** Part I lists explicit labellings as open, and Part II's
+  deterministic procedure is not efficient. The first-difference generator
+  remains the only polylogarithmic-time labelling located. It serves the
+  family-132 regime, about $\sqrt M$ labels with cap below sixteen. It does
+  not directly supply Part I's four-label exclusion condition.
+
+The note's abstract, scope section, baseline and bibliography were updated
+to cite both manuscripts. As before, absence from these sources is not a
+priority certificate.
 
 ## 1. Classification of the claims
 

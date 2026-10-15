@@ -42,6 +42,10 @@ of the amplified exponent bound from
 $2.015411246837677710\ldots$ to $2.015411547511314020\ldots$,
 using the exact cap seven in both analyses. The former already follows from
 immediate refinements of the published proof with these explicit labels.
+Independent unrefereed manuscripts posted on 7 and 9 October 2026 report
+larger exponents, about $2.0321$ and $2.0271$, using different parameter
+schedules; the second also proves part of the target/gate counting used
+below.
 The contribution is a deterministic instantiation and a local proof
 refinement, not a new separation architecture or a record-exponent claim.
 \end{abstract}
@@ -83,6 +87,29 @@ published proof on the \emph{same seed}. An exponent exceeding $2.0154$
 already follows from that baseline.
 The sharper cyclic coherence bound and its exact seven-vertex witness are
 elementary corollaries; they are not separate methodological novelty claims.
+
+\emph{Related refinements.} Two AI-assisted, unrefereed manuscripts in the
+ProveIt repository refine the same source construction~\cite{ProveItI,ProveItII}.
+We have not independently verified them, and summarize only their stated
+results. The first, dated 7 October 2026, allows level-dependent tournament
+sizes with four positions per row and reports the exponent
+$2.0320827244\ldots$ for ordinary sensitivity. Its zero-side recurrence already contains the
+gate envelope $\max\{b+e,3e\}$ that we include in the baseline of
+Section~\ref{sec:baseline}. It obtains labels from a union bound and lists
+explicit labellings as an open problem. The second, a draft dated 8 October
+and posted 9 October, reports the exponent $3667/1809\approx2.0270868$ and a
+deterministic conditional-expectation labelling that is impractical at its
+parameters. Its joint target/gate budget lemma shows that two gate
+candidates leave at most $t-2$ target candidates, and three leave at most
+$t-4$. With $t=16$ these are the target counts in our fifth and sixth cases
+in Section~\ref{sec:cases}. Relative to those manuscripts, our additional profile
+ingredients are the charging of all but at most one target repair to a
+joint profile, the coherent unions in the one-gate and ordinary-sink cases,
+and the stronger-index joint candidate lists. Our labels serve the
+family-132 regime with about $\sqrt M$ labels; they do not directly supply
+the four-label exclusion condition of~\cite{ProveItI}. The fixed-seed
+comparison in Section~\ref{sec:numerical} is not competitive with the
+exponents above and is not offered as one.
 
 \section{Explicit labels for the exact tournament condition}
 \begin{definition}[Head coherence]\label{def:coherence}
@@ -420,7 +447,7 @@ candidates only the sink could be ordinary; with three, every failure
 is internal by Lemma~\ref{lem:candidates}.
 \end{proof}
 
-\subsection{All six ordinary zero cases}
+\subsection{All six ordinary zero cases}\label{sec:cases}
 The following table gives upper bounds for the combined repair cost.
 The possible overlap of repair coordinates only makes the union smaller.
 \begin{center}
@@ -661,12 +688,14 @@ $S_{j,b}\le2LM^{j+b}$. Substituting in~\eqref{eq:seed} with $C=M$
 gives~\eqref{eq:coarsebounds}, and $k/M^2>2$ gives the ratio.
 \end{proof}
 
-\subsection{The source-derived baseline used here}
+\subsection{The source-derived baseline used here}\label{sec:baseline}
 Before comparing numerical consequences of Theorem~\ref{thm:profiles},
 we include the following immediate improvements of the source proof
 in the baseline. Use $S_{0,0}\le d+1$ rather than $d+2$, and
 $|T|\le15$ rather than $16$, still charging every target repair to
 $a$. One or two gate candidates cost at most $b+e$; three cost $3e$.
+This gate envelope also appears in the zero-side recurrence
+of~\cite{ProveItI}.
 For simultaneous acceptance all gates cost $e$. Thus the immediate
 source-derived zero-side updates are
 \begin{equation}\label{eq:immediate}
@@ -697,7 +726,7 @@ above it the derivative has the sign of $\log(s_0/W)<0$.
 The two positive integers bracketing $s_1/s_0$ therefore suffice.
 Both immediate refinements and OR optimization belong to the baseline.
 
-\subsection{Certified comparison on one unchanged seed}
+\subsection{Certified comparison on one unchanged seed}\label{sec:numerical}
 The following finite result compares proved upper bounds on sensitivity,
 not exact sensitivity values. It changes neither the labels nor the
 Boolean function between the two analyses.
@@ -788,7 +817,8 @@ earlier cap-fifteen immediate baseline. It is kept unchanged here so that
 the Boolean function, block witnesses, and dimension remain identical.
 It is not asserted to optimize either cap-seven bound. There is no claim
 of a globally optimal exponent, minimal dimension, or simultaneous
-attainability of all profile bounds.
+attainability of all profile bounds. Larger exponents for the same
+question are reported in~\cite{ProveItI,ProveItII}.
 
 \begin{remark}[Comparison with the earlier certificate]
 The first version used cap fifteen in both analyses. Deleting the seven
@@ -869,8 +899,9 @@ The scope of the contribution is limited. The first-difference technique,
 the gated recursion, OR balancing, and composition are inherited methods.
 The label theorem supplies an elementary directed adaptation with exact
 uniform parameters. The profile theorem refines a local step of the
-published proof. No priority guarantee, record exponent, or optimality
-claim is made.
+published proof. Part of its target/gate counting also appears
+in~\cite{ProveItII}, as recorded in Section~1. No priority guarantee, record
+exponent, or optimality claim is made.
 
 \section*{AI assistance and verification status}
 The arguments, code, and draft were developed with OpenAI Codex using
@@ -915,6 +946,20 @@ sensitivity}, 25 September 2026, OpenAI math family 132.
 Pinned repository revision
 \texttt{1581d4cbdd69a0faf34b2089614fe2a814316a6a}.
 \href{https://github.com/openai/math/tree/1581d4cbdd69a0faf34b2089614fe2a814316a6a/preprints/A-superquadratic-separation-between-sensitivity-and-block-sensitivity-September-25-2026}{Manuscript and source files}.
+
+\bibitem{ProveItI}
+V. Reshetnikov (ProveIt repository; research companion prepared with ChatGPT),
+\emph{An explicit exponent above $65/32$ for ordinary sensitivity versus
+block sensitivity}, 7 October 2026, unrefereed. Placed at commit
+\texttt{5476940edc3a2e7ea0c5426f013c6b5966451d73},
+\href{https://github.com/VladimirReshetnikov/ProveIt/tree/5476940edc3a2e7ea0c5426f013c6b5966451d73/Combinatorics/BooleanFunctions/Research/sensitivity-block-sensitivity}{repository directory}.
+
+\bibitem{ProveItII}
+V. Reshetnikov (ProveIt repository; AI-assisted research draft),
+\emph{Threshold-Resolved Amplification for Boolean Sensitivity}, draft dated
+8 October 2026, unrefereed. Placed 9 October 2026 at commit
+\texttt{18abb81b20977338c9c3c6511eaf333561709eca},
+\href{https://github.com/VladimirReshetnikov/ProveIt/tree/18abb81b20977338c9c3c6511eaf333561709eca/Combinatorics/BooleanFunctions/Research/sensitivity-block-sensitivity}{repository directory}.
 
 \bibitem{Decimal}
 Python Software Foundation,

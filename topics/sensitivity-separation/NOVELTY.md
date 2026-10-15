@@ -5,6 +5,8 @@ The completed, deeper comparison is in
 the classical first-difference mechanism, the specific directed adaptation,
 immediate source-proof corollaries, and the additional profile arguments.
 This file preserves the original target and research-stage audit.
+Its search results predate the ProveIt manuscripts recorded in the
+[novelty audit addendum](publication/NOVELTY_AUDIT.md#addendum-proveit-manuscripts-located-after-this-audit).
 
 Initial status: research targets, not established results. The target/audit
 sections below were written before mathematical experiments. The final
