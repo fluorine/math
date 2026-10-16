@@ -1,0 +1,57 @@
+{
+  "direct_swapout_total": 19818058,
+  "policy": "root-approved verification-only closeout_guard; no zero-swap predicate",
+  "samples": [
+    {
+      "cpu_idle_percent": 41.86,
+      "reduce_search_concurrency": true,
+      "sampler_pid": 53736,
+      "summary": [
+        "Processes: 484 total, 6 running, 478 sleeping, 3849 threads ",
+        "2026/10/16 12:54:26",
+        "Load Avg: 8.67, 8.66, 7.88 ",
+        "CPU usage: 41.18% user, 16.95% sys, 41.86% idle ",
+        "SharedLibs: 335M resident, 85M data, 74M linkedit.",
+        "MemRegions: 0 total, 0B resident, 39M private, 1382M shared.",
+        "PhysMem: 15G used (2433M wired, 7998M compressor), 233M unused.",
+        "VM: 241T vsize, 5361M framework vsize, 14723535(56) swapins, 19815238(0) swapouts.",
+        "Networks: packets: 2523544351/1729G in, 1942130009/350G out.",
+        "Disks: 1248898497/129T read, 837024760/18T written."
+      ],
+      "swapin_delta": 56,
+      "swapin_since_previous_sample": 4093,
+      "swapin_total": 14723535,
+      "swapout_delta": 0,
+      "swapout_since_previous_sample": 11708,
+      "swapout_total": 19815238,
+      "utc": "2026-10-16T10:54:26.784334+00:00"
+    },
+    {
+      "cpu_idle_percent": 32.87,
+      "reduce_search_concurrency": true,
+      "sampler_pid": 53736,
+      "summary": [
+        "Processes: 484 total, 4 running, 480 sleeping, 3837 threads ",
+        "2026/10/16 12:54:56",
+        "Load Avg: 7.10, 8.28, 7.76 ",
+        "CPU usage: 47.93% user, 19.19% sys, 32.87% idle ",
+        "SharedLibs: 300M resident, 80M data, 70M linkedit.",
+        "MemRegions: 0 total, 0B resident, 46M private, 1368M shared.",
+        "PhysMem: 15G used (2428M wired, 6641M compressor), 84M unused.",
+        "VM: 241T vsize, 5361M framework vsize, 14726806(456) swapins, 19818058(0) swapouts.",
+        "Networks: packets: 2523562638/1729G in, 1942146487/350G out.",
+        "Disks: 1248914469/129T read, 837027393/18T written."
+      ],
+      "swapin_delta": 456,
+      "swapin_since_previous_sample": 3271,
+      "swapin_total": 14726806,
+      "swapout_delta": 0,
+      "swapout_since_previous_sample": 2820,
+      "swapout_total": 19818058,
+      "utc": "2026-10-16T10:54:56.854556+00:00"
+    }
+  ],
+  "scope": "One authorized negative publication-wrapper control; temporary manifest with wrong code hash must be rejected before any audit. Initial preparation failed before child because fresh output directory was absent; no test executed.",
+  "usable_memory_percent": 35,
+  "utc": "2026-10-16T10:55:03.021666+00:00"
+}

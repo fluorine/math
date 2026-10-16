@@ -1,0 +1,37 @@
+{
+  "case": "browser_twentieth_maker01",
+  "checker": "verification/browser_twentieth_maker01.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "98fd60920a6f67ed3560debaced2324bb5493cf1e5ba52406ace71d00d91241a",
+  "created_utc": "2026-10-16T10:55:37.610907+00:00",
+  "execution_field_differences": {
+    "cpu_seconds": {
+      "historical": 0.025743000000000002,
+      "replay": 0.024514000000000008
+    },
+    "elapsed_seconds": {
+      "historical": 0.02583195921033621,
+      "replay": 0.024565832689404488
+    },
+    "utc": {
+      "historical": "2026-10-16T07:25:48.367428+00:00",
+      "replay": "2026-10-16T10:55:37.555525+00:00"
+    }
+  },
+  "historical_report": "verification/browser_twentieth_maker01.json",
+  "historical_report_sha256": "748e13d9613d94a2017d12588bd5233e315aea7f834acad48e730e7b64bcb76e",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "330c23fa04b7a451bf027d2e17ca6dbe668967d1f4e4a1baf71c66cd1d545a93",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "ce817bb853c6bcb815643830344f74d73cf2759fdace54725e84a3ab081a48d3",
+      "old_sha256": "0bf3ab011fb8d4975a0416c09b30c365d992f887d923ba135d5aca8d1de0653e",
+      "path": "browser/01-twentieth-final-section.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    }
+  ]
+}

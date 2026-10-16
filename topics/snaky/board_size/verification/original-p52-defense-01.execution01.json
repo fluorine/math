@@ -1,0 +1,22 @@
+{
+  "launcher_exit": 0,
+  "guard_status": "finished",
+  "child_exit": 0,
+  "pid": 60165,
+  "events": [],
+  "elapsed_seconds": 0.21485608350485563,
+  "peak_rss_bytes": 25231360,
+  "artifacts": {
+    "verification/original-p52-defense-01.preflight01.json": "9daa534e869353014555d6e969c716646a3f3455f1741adffb8602d299194d1a",
+    "verification/original-p52-defense-01.launch01.json": "a007f3d0e5c735b2645b31425baa34aa618980a243b8c1eb7e9b63db609c7ecd",
+    "verification/original-p52-defense-01.guard01.json": "f086330220c4e910920a33f7cbe3ab35f6838e2185d0ea26767f98e00ea0d4fe",
+    "verification/original-p52-defense-01.launcher01.log": "a7b3896e4b92544d039118a17b459937c93787471476cce0ef7f84d45186d8a5",
+    "verification/original-p52-defense-01.json": "51d0885027969cbe0fafdeae9b009c187ad6438c7a6b84fbcf6d38ab1a9c4df1",
+    "verification/original-p52-defense-01.guard01.log": "d1ebf45f98e7596a889da5826d9c2bbc841634e4e81511ddc6869d925a1a3143"
+  },
+  "source_sha256_after": {
+    "verification/original_p52_defense.py": "dc4881010c5150a9dff2421fc5a9899cef183f2d1e866ebfb5e14b6f922a93d1",
+    "breaker/adaptive_run.py": "dd59dc64f76c0e93f5b963ef0e6a444e74ceb4003d126c3f42937430affb60aa",
+    "breaker/cpu_exec.py": "0819f781e2cd2e3ce29e499ecacca46373219d8ab7cbe263c0a59a91cbea6278"
+  }
+}

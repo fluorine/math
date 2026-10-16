@@ -46,6 +46,11 @@ code, independent checks, Lean 4.34.1 proof, audits and source attribution.
 Both certificates were reproduced byte for byte and fully kernel checked.
 Neither result claims optimality.
 
+A separate [board-size research closeout](topics/snaky/board_size/README.md)
+provides Lean proofs for conditional positions and local constructions, with
+[future research and lessons](topics/snaky/board_size/FUTURE_RESEARCH.md).
+The empty 14×14 Maker and empty 10×10 Breaker objectives remain open.
+
 ## Effective cylinder covers of a regular tetrahedron
 
 [Read the mathematical note](topics/cylinder-covering/output/pdf/cylinder-covering-note.pdf)

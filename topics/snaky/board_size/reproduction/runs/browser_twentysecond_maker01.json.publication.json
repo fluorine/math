@@ -1,0 +1,49 @@
+{
+  "case": "browser_twentysecond_maker01",
+  "checker": "verification/browser_twentysecond_maker01.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "830dd76c8a121a777e9ecb033bcb6dda00f1dbe7f1a7c9f075696efb52837b9e",
+  "created_utc": "2026-10-16T10:55:32.231524+00:00",
+  "execution_field_differences": {
+    "created_utc": {
+      "historical": "2026-10-16T09:12:18.995020+00:00",
+      "replay": "2026-10-16T10:55:31.975198+00:00"
+    },
+    "elapsed_seconds": {
+      "historical": 0.13406625017523766,
+      "replay": 0.14583416655659676
+    },
+    "process_cpu_seconds": {
+      "historical": 0.132951,
+      "replay": 0.14557599999999998
+    }
+  },
+  "historical_report": "verification/browser_twentysecond_maker01.json",
+  "historical_report_sha256": "f06ccf683b1aa33e8342863a13783be80f85b6a4a83761bd8926ea04f3e6ad55",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "1fc984659f691391b5cbf7924483df67f259e8f790256dfcbeaa6bff0f301169",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "ce817bb853c6bcb815643830344f74d73cf2759fdace54725e84a3ab081a48d3",
+      "old_sha256": "0bf3ab011fb8d4975a0416c09b30c365d992f887d923ba135d5aca8d1de0653e",
+      "path": "browser/01-twentieth-final-section.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    },
+    {
+      "new_sha256": "be06aa6bd4fa42224f22f9f2403fa08b0085c2fc91a7001a2de49ac689c2e4d5",
+      "old_sha256": "b91e3abea73da57d0e651d3088c644f0368431527bef55cd21ee55a655fe39ea",
+      "path": "browser/01-twentysecond-final-main.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    },
+    {
+      "new_sha256": "be06aa6bd4fa42224f22f9f2403fa08b0085c2fc91a7001a2de49ac689c2e4d5",
+      "old_sha256": "2c843176707a82304f8d7f9196d945c174ce94f85ffb769f3a4eee02476bb43e",
+      "path": "browser/01-twentysecond-final.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    }
+  ]
+}

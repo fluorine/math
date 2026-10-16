@@ -1,0 +1,436 @@
+{
+  "axiom_audit": "Snaky/GenMakerCloseout/verification/Snaky-C30Audit.guard01.log",
+  "axiom_audit_sha256": "9df6b03dbe22a90ae04fb48d18d91c5a537f1f0789d27770e80c4461fdbdb567",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "board": [
+    10,
+    10
+  ],
+  "checked_rows": 106,
+  "common_base_receipt": "closeout-base-reuse.json",
+  "common_base_receipt_sha256": "f2894dc589e75837cfc096e5c1555088e5d841dc5be5813f1915bf83bb70b636",
+  "controller_domain_cells": 22,
+  "entry_module": "Snaky.C30Audit",
+  "freshly_compiled_modules": 33,
+  "generator": "tools/c30_selected_data.py",
+  "generator_sha256": "91e94351f161ef980864a1c934aa864649e3d481fe3edfd7056468f104b5e8a9",
+  "guard_targets": 17,
+  "maker_claim_bound": 10,
+  "max_child_peak_rss_bytes": 494436352,
+  "modules": {
+    "Snaky.Bounded": {
+      "imports": [
+        "Snaky.Controls"
+      ],
+      "olean_sha256": "62012fe70b321f2d4c6a1bcdf9a04fb5bd3019961531baeaf1b5ad7941fb0cac",
+      "provenance": "validated previously compiled common base; not freshly rebuilt",
+      "source": "Snaky/Bounded.lean",
+      "source_sha256": "4af5a64267f3f731f83ceb522ddc1d6533dab7fc7a8ba32fdeec3aa0602b2db2"
+    },
+    "Snaky.C30Audit": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Audit.execution01.json",
+      "execution_sha256": "f5330ecdc5d895d982e2071a0a0d46100da26b1cff09609f3b5d3ff975a62717",
+      "imports": [
+        "Snaky.C30Result",
+        "Snaky.SelectedAttackControls"
+      ],
+      "olean_sha256": "08520e552c472bb7188efd0ed3e564926c0e67618ea99be8332aac31a47550f1",
+      "source": "Snaky/C30Audit.lean",
+      "source_sha256": "a64c723be7fbd07b165866006cf8782808deb729f6cc1b5af196709e50783e1f"
+    },
+    "Snaky.C30Check00": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check00.execution01.json",
+      "execution_sha256": "79e24579ca8573ba2c09c7fcc9ae4c3fb83d244aead4b013c42fd36ac718fe13",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "f195b678d1244d8f78b6b90c767fc0330b2ce822bfedbbbc0d4be8c84866bf95",
+      "source": "Snaky/C30Check00.lean",
+      "source_sha256": "ae716b81ec6d8d6e8db24efb67d0afe33df00f1257a9d2534f0f1f9f5414cac0"
+    },
+    "Snaky.C30Check01": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check01.execution01.json",
+      "execution_sha256": "48e929149e7e88ed4ce50f6f2a14cb75c2471779a73ff5206e7e055d6fec0d92",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "06f4fd40fc6954e68bf6229286348fb0219ab48a3bf0217e5c83ac34b54355e3",
+      "source": "Snaky/C30Check01.lean",
+      "source_sha256": "e5840a3a28b705697afae7c03118c55e8162a87221eca5f9a18a8587ef2ab848"
+    },
+    "Snaky.C30Check02": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check02.execution01.json",
+      "execution_sha256": "f3f6a48467cde6d837aff82e037cc4af408eca1dc24708819076c5908a03d026",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "0ab1c0f5982f616bf2c211d2cd45b88d337c58da99624e45fe1fb9aca106ef3f",
+      "source": "Snaky/C30Check02.lean",
+      "source_sha256": "404abeaada24ec896116bcbaadbe85211f41f4012121e21c623c4f9d5cd945cd"
+    },
+    "Snaky.C30Check03": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check03.execution01.json",
+      "execution_sha256": "808f0f4d59ee83bc43c5375ab50db5607c842f7457bb8caca6eeee9382fe17c0",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "f16c9a03ed092079ba9e51cec5f4a397a39890c4a766c6898c0008d8a210f9d7",
+      "source": "Snaky/C30Check03.lean",
+      "source_sha256": "b488d3c3b13f8b3f2a431a969723780dcc40b07c137159ce681672852aa5b858"
+    },
+    "Snaky.C30Check04": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check04.execution01.json",
+      "execution_sha256": "d7a1bd56dc9af62a8d08aed2cd97ea22f0e9b1e5d34e384f5996a160943f8e98",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "fc0efc8faa32cf8f726e258ff9b7fdee84d4764f6d4d46534bb44240d66a63d5",
+      "source": "Snaky/C30Check04.lean",
+      "source_sha256": "dce941489d4eccff3248ec7a2b0ba019ef267396b5703c3b34e49cb531b3d16b"
+    },
+    "Snaky.C30Check05": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check05.execution01.json",
+      "execution_sha256": "3b39fc053caf470edaab532ea25fbd0d0c4c84756b587081ffb14f1955d87b1d",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "d88b22730852ce7ee57e37f336dff38f81fea737e4595894a7613db7faa0112e",
+      "source": "Snaky/C30Check05.lean",
+      "source_sha256": "dd49533e55a76d71bdf28aafe13e5822cc60d1009a79ba89d920471dbfc9d09a"
+    },
+    "Snaky.C30Check06": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check06.execution01.json",
+      "execution_sha256": "0a69b59c33dc9f2f3b9b1d97b16ea03441bb637f0505b238ff729601ebe49c53",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "4618784281bdfd9d3222845664be769a2ebf48970ce64b73a087012f6ace3d53",
+      "source": "Snaky/C30Check06.lean",
+      "source_sha256": "79f6c83a52745b94786cbc7313db962b03295dfec084b1564229655fc7726d60"
+    },
+    "Snaky.C30Check07": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check07.execution01.json",
+      "execution_sha256": "34ccca89b634197357c6004fa32108dc0ad42769e146a59b797219063c6453b2",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "7537a4884ab1d848c61122bb69834bbef51caa6ff689c88356c4742c4e97b462",
+      "source": "Snaky/C30Check07.lean",
+      "source_sha256": "9dd624c340e49c88418d7bfc7aaf2c4e80731453091eced9e2c0c3e5f1f34b4b"
+    },
+    "Snaky.C30Check08": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check08.execution01.json",
+      "execution_sha256": "4d6510fc39a6b546d59d6e1a4cd3014df34d8635f88e444e2dfed0b7fc8e7ca8",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "7b5621d58bcddf0e94d5584e1ddf2774a2fcadd519c17182aa475063255354dc",
+      "source": "Snaky/C30Check08.lean",
+      "source_sha256": "8ee97b3150d8d88e6def3540f39127874552700cca5fc5d6b06a8c23504d2e74"
+    },
+    "Snaky.C30Check09": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check09.execution01.json",
+      "execution_sha256": "31e3033b92f4ffbe528c537515a9e9e9bb3865ecbac812259f2b5c1420068023",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "dca43d434f9467964cc10f4b3d59ae3ecf58008443c2307fcee7f8b2fea9b7e8",
+      "source": "Snaky/C30Check09.lean",
+      "source_sha256": "ee461c5d5936ee9c4fc65242c2219749d94fd61ef331f1400fff7677c8b6a421"
+    },
+    "Snaky.C30Check10": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check10.execution01.json",
+      "execution_sha256": "5042d2d9d245662690663d88207f4ba242c8d2e82ca9a32b3988399852a24cad",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "f3bd8bd246075618b6ef750c4d6c2bed696874a4bfb827fa4aa2c0fd7b5b0181",
+      "source": "Snaky/C30Check10.lean",
+      "source_sha256": "6175c2ade0e4c78e8961e29c2a4b752a6576e0e3c99b7a56dda7473bcc55626c"
+    },
+    "Snaky.C30Check11": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check11.execution01.json",
+      "execution_sha256": "665b3f9f428484986d172be6eb3bddf812a538b0589c459295d65ee53ee6204d",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "b903c969ff9ad08408e7574a25c508053829f1214e1efcd22c7f042cd185e74d",
+      "source": "Snaky/C30Check11.lean",
+      "source_sha256": "6a8ec3e131841c13eccfe3b94920004b47e28322590750bc998151f3629c2697"
+    },
+    "Snaky.C30Check12": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check12.execution01.json",
+      "execution_sha256": "09c0bd2b31da0929fa23dcb7ad2fa270a4cfa741a1f107cf51432f0fe2decc33",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "848f23ed74180fa1fcf1da2535ed3f38a3b5aac93a83599e1a6301bb9e0156a5",
+      "source": "Snaky/C30Check12.lean",
+      "source_sha256": "dd297a6b3db0bf5babe6b6354ca005824e2887598e55bd19df598d40e383b6bb"
+    },
+    "Snaky.C30Check13": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check13.execution01.json",
+      "execution_sha256": "9fb274269fc9a25ab3fbdb37890a913124f835d454cbaff2ebec3d2d3ef5ba6c",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "e42970a3939ac5c98255e751fd2641d3b50c93872548669cb71a79faad4d4187",
+      "source": "Snaky/C30Check13.lean",
+      "source_sha256": "45b282312d576bbcfb254170a5aa0056f0c9f5c33265237157dddfc8dacf5aa3"
+    },
+    "Snaky.C30Check14": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check14.execution01.json",
+      "execution_sha256": "76536a7ea7736e15fbc824c6ca82854a3541d95a4a9e3e7c0c382d20974208cd",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "2b178748c86ccc410f5daad83203bc709047b0bc0eba1a9f08d7a60ae9b65193",
+      "source": "Snaky/C30Check14.lean",
+      "source_sha256": "fa28ab03ca5d4345db8d2966272d5012f8bf6ae68d7228a470d99d6fb1e141c9"
+    },
+    "Snaky.C30Check15": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check15.execution01.json",
+      "execution_sha256": "a69bc339020a6eb9cebb1cbccf8319b7efbe2f3867d2b9f85d20c26124ac4c5c",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "2dd3528e9ad8d7c6ab8836b1156c068c7161965b6361ad773a3f49f10a8f5889",
+      "source": "Snaky/C30Check15.lean",
+      "source_sha256": "bd9c23069cba540e1b54363a24fce4e53e80bac80aea496ed2a9965b71f8da6c"
+    },
+    "Snaky.C30Check16": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check16.execution01.json",
+      "execution_sha256": "f811e8984ddde4cef98a74f3ced85de105042bcc0070bf9e1f7093a810c3d92a",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "36ea363fc3e741b2b843c8e80097493f3d32a5e95b245f3083f81c695b917672",
+      "source": "Snaky/C30Check16.lean",
+      "source_sha256": "22818ccd5b85f08c9ac825834f9863c5ebd386bd21812058740f88a49d5d74d2"
+    },
+    "Snaky.C30Check17": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check17.execution01.json",
+      "execution_sha256": "f0c42268a0513edf90c21b804f84ab9dd83038fbcedc7e840d3498ee8f0f1804",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "8b08b5b78ba6f401e19a97c78585a8ec384184326a4550574e1045d94b5f7a79",
+      "source": "Snaky/C30Check17.lean",
+      "source_sha256": "92d26694ca6d9432edaddc530e149a8838ae0b53245a107b1210871615387d0a"
+    },
+    "Snaky.C30Check18": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check18.execution01.json",
+      "execution_sha256": "6fea9f0d0881ebc913c59e7bba43331129785445dc3daea9f083edb2284452c4",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "51584ad25fea232b186d9fa04e0a54b35a6a668b51e326160d294db5786c69f6",
+      "source": "Snaky/C30Check18.lean",
+      "source_sha256": "4eed978f639cad6a181cc1b9aae0a8e315a428e1848e84036a68ad5eaffbc0fb"
+    },
+    "Snaky.C30Check19": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check19.execution01.json",
+      "execution_sha256": "a1a977988a60e8eee32b7d4062f4b04ebc6a2eb60d9fbb08d8f5c0ed03d41fbb",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "29646a8d11a215d0fbcc55fd3813e337338c6b8daaee9d3b44aa097d35a73143",
+      "source": "Snaky/C30Check19.lean",
+      "source_sha256": "8f6f93ab61b9083371f08647cec4efaea489ae959a0616598a63911d0000059b"
+    },
+    "Snaky.C30Check20": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check20.execution01.json",
+      "execution_sha256": "02914d159e3e78082137734425dfbd1673c09966168de88ad062ba5d8b61fbd2",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "f03b28658dc57005d692d222bf3f06f98554299955d6fbe5eeb2519a76d591da",
+      "source": "Snaky/C30Check20.lean",
+      "source_sha256": "4b7117b78c137b79685822f6766f3f34a5ec946613129824a6c559a563171785"
+    },
+    "Snaky.C30Check21": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check21.execution01.json",
+      "execution_sha256": "598b94a7b30e16117d482658a113eafb84dd97eaf5eeca8a07eea3e39044e017",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "a20cefe907cf8b72869b8344d6e84ef54b1d098d9b7094123110f514b9350895",
+      "source": "Snaky/C30Check21.lean",
+      "source_sha256": "7adbc620cb13efcb4b430f875bfbdc40180a3c9aa25c66769dea812b0fb25146"
+    },
+    "Snaky.C30Check22": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check22.execution01.json",
+      "execution_sha256": "4b0af539421b7bba728652f8a6084b3d6ab9de77dec510018977d287ab2062e5",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "5b664b06b0e562d5d47a05d142a76e03f0784176f50357c16d97e5f6653d1a01",
+      "source": "Snaky/C30Check22.lean",
+      "source_sha256": "8541a1a47cc78ae1e027cd9fb904059022a2a49bd71384f3e3462eeb5ce14754"
+    },
+    "Snaky.C30Check23": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check23.execution01.json",
+      "execution_sha256": "537a38d8384521b60daf3c902b392f27fbcc4acb17b3d47ee52555e781cb408c",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "a161f75c92af92406ed6dd840c46700a1afcada6b210bfd2b52005fa23f32786",
+      "source": "Snaky/C30Check23.lean",
+      "source_sha256": "3aa0b25e185b3054cf1ca403a1de515ad7713478e914fb5d09cca356976c5132"
+    },
+    "Snaky.C30Check24": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check24.execution01.json",
+      "execution_sha256": "5f0345166e8882696ba9169a3139a0e6f6382f1275b8e476ae27806acea1ee39",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "a0381048d4df4badc55bae7733001da8bcac04a7b8e44c079f564c3ca596f70e",
+      "source": "Snaky/C30Check24.lean",
+      "source_sha256": "c8c4ff8e6198d57ba193e3a13d74a5ec7f648b926eb819494a4ed08e85401bd8"
+    },
+    "Snaky.C30Check25": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check25.execution01.json",
+      "execution_sha256": "e738ce65614988d76585ef3327af2cbb7ec8dc413f574de3f80b7aa82db4e53e",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "5245ac02ab61466e9988e20766db2d16f5b6203ff54db88fb11ec5d92667289b",
+      "source": "Snaky/C30Check25.lean",
+      "source_sha256": "2c50612ed8c34fcc2d9aa4e060ae9d5732ced479c3ff21ea56c0d7a86dc808ab"
+    },
+    "Snaky.C30Check26": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Check26.execution01.json",
+      "execution_sha256": "0ad9358d0982faa71a6d1757cc0777a1c6d06f96dce1b67344a2d95fcb1befeb",
+      "imports": [
+        "Snaky.C30Data"
+      ],
+      "olean_sha256": "9d9c78a9845b3d123e07e983e656db9b915130c2300bc940290c0f34ecdf05ec",
+      "source": "Snaky/C30Check26.lean",
+      "source_sha256": "8d0cd5659e43647a76cfb76f94798b9f1a527ca83bc5d5e233a1d745d624e4ef"
+    },
+    "Snaky.C30Checks": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Checks.execution01.json",
+      "execution_sha256": "4005abeb859040720745bf1cd544700f5570ecde7eba8ca127fcf41ca29c27c7",
+      "imports": [
+        "Snaky.C30Check00",
+        "Snaky.C30Check01",
+        "Snaky.C30Check02",
+        "Snaky.C30Check03",
+        "Snaky.C30Check04",
+        "Snaky.C30Check05",
+        "Snaky.C30Check06",
+        "Snaky.C30Check07",
+        "Snaky.C30Check08",
+        "Snaky.C30Check09",
+        "Snaky.C30Check10",
+        "Snaky.C30Check11",
+        "Snaky.C30Check12",
+        "Snaky.C30Check13",
+        "Snaky.C30Check14",
+        "Snaky.C30Check15",
+        "Snaky.C30Check16",
+        "Snaky.C30Check17",
+        "Snaky.C30Check18",
+        "Snaky.C30Check19",
+        "Snaky.C30Check20",
+        "Snaky.C30Check21",
+        "Snaky.C30Check22",
+        "Snaky.C30Check23",
+        "Snaky.C30Check24",
+        "Snaky.C30Check25",
+        "Snaky.C30Check26"
+      ],
+      "olean_sha256": "ea591500df7b39f5f9f7f86295ea6f15f871796984bb6f1022ade6b0ab856c92",
+      "source": "Snaky/C30Checks.lean",
+      "source_sha256": "c660b00f43128734e5146b4cdd246e564dc4b3b2dd393bac3d67d5543a6e77a1"
+    },
+    "Snaky.C30Data": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Data.execution01.json",
+      "execution_sha256": "3f8f6b90aaac87ba0176002993d9eb56a2603a011b663e6975d262c1d93babf7",
+      "imports": [
+        "Snaky.SelectedAttack"
+      ],
+      "olean_sha256": "762af2231e9306f96d6246372be6811f46f5bd376f633aea864821579a21892f",
+      "source": "Snaky/C30Data.lean",
+      "source_sha256": "4bd63ac7115ac9ff45a410371ee8bc6ad3ab6dad84bd81c32b57b15786026f4f"
+    },
+    "Snaky.C30Result": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-C30Result.execution01.json",
+      "execution_sha256": "720fbf296045b002b7f378320ab78e612900ae42bb3b34eaaadbf90b775d976f",
+      "imports": [
+        "Snaky.C30Checks"
+      ],
+      "olean_sha256": "d6dfd92dd716fe762baa2d008734be443ad7bafb6597c6db6c67174c08f9aa8d",
+      "source": "Snaky/C30Result.lean",
+      "source_sha256": "cd40d953eaf4b3c022ba1910f194ede5be8a045a83d1095c536edd19adaa73f3"
+    },
+    "Snaky.Controls": {
+      "imports": [
+        "Snaky.Game"
+      ],
+      "olean_sha256": "82325d836b257d38f29319f5c0b6caf19af0955f43a38e4662d84051d52745b3",
+      "provenance": "validated previously compiled common base; not freshly rebuilt",
+      "source": "Snaky/Controls.lean",
+      "source_sha256": "6e3bd76dda6d241e14a972a1c8a6f78479913ff1b7ca068617fc99fc393ee981"
+    },
+    "Snaky.Game": {
+      "imports": [],
+      "olean_sha256": "2fe84939fdbd5903ac06c3318571c08ff89719944de59eda109be3603568a52b",
+      "provenance": "validated previously compiled common base; not freshly rebuilt",
+      "source": "Snaky/Game.lean",
+      "source_sha256": "6c50131917d312e5fc1b9f65476ff0d12462c049585a0e14969b8b9f59e137f5"
+    },
+    "Snaky.SelectedAttack": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-SelectedAttack.execution02.json",
+      "execution_sha256": "c9d89ed0fdaa5207d2b4acd4de716091f9c3b91ed0f42436fce1d5fb9bb8645d",
+      "imports": [
+        "Snaky.Bounded"
+      ],
+      "olean_sha256": "c4b9a9f23e0413a84834bdd6cb69d3dcceada6e0f30631470b580687d82cc83b",
+      "source": "Snaky/SelectedAttack.lean",
+      "source_sha256": "88cbabbc1e07fb45e5a279c7c60b88565538029018530440d8995f66d8568be5"
+    },
+    "Snaky.SelectedAttackControls": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-SelectedAttackControls.execution01.json",
+      "execution_sha256": "f4452e0247675fa127faec755df020edfdd76c15f5022272323858ead4eb5c10",
+      "imports": [
+        "Snaky.SelectedAttack"
+      ],
+      "olean_sha256": "e99dd3476c64b32717d7010de44670eab7d35fcce9491a99c57067f6f4e2d0eb",
+      "source": "Snaky/SelectedAttackControls.lean",
+      "source_sha256": "d5e6e6c0e84bb26d10e664fc876db082ff5be3455b8f19e7df9617457ead7f89"
+    }
+  },
+  "old_breaker": [
+    34,
+    36,
+    38,
+    55,
+    56,
+    58,
+    74,
+    77,
+    94
+  ],
+  "old_maker": [
+    37,
+    44,
+    45,
+    46,
+    47,
+    57,
+    67,
+    75,
+    84
+  ],
+  "provenance_sha256": "7eb4039daf3a36b1257c835d53b48346f252c543b077cde933d068d29f0500f4",
+  "schema": "snaky-c30-selected-kernel-acceptance-v1",
+  "scope": "BlackWinsIn for the explicit seventeen selected guard targets against every legal physical reply, including outside the controller domain. This is not a physical Snaky victory theorem.",
+  "status": "kernel_checked_selected_target_theorem",
+  "successful_compile_wall_seconds": 19.673802498728037,
+  "utc": "2026-10-16T10:38:18.009781+00:00"
+}

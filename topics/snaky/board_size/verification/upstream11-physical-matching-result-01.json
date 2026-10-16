@@ -1,0 +1,3448 @@
+{
+  "accepted_dependencies_sha256": {
+    "breaker/adaptive_run.py": "dd59dc64f76c0e93f5b963ef0e6a444e74ceb4003d126c3f42937430affb60aa",
+    "breaker/check_pairing.py": "f24d5a389197f5010afc88036e0b849c3f31caadb60c142f29c1b3c684191056",
+    "breaker/cpu_exec.py": "0819f781e2cd2e3ce29e499ecacca46373219d8ab7cbe263c0a59a91cbea6278",
+    "breaker/hypergraph.py": "19aa54842d59e5b1c0da5f0277c1ad20096d04966241b1eaad7551ff23614faa",
+    "breaker/post_m31_joint_matching.py": "87c28217bc7e8735f972f8b875e570bb085dffd4ee435a46abda94800a77120f",
+    "breaker/reply_pairing.py": "9a6c9695c223ff03e3e66e470446cb0c3c5724b0762506482522df58b6186a1b",
+    "breaker/static_pairing.py": "6132d522f6a72ae7f8ec2f4f1714c7a5f31335dba9c4f44b59020ce9fcb39266",
+    "browser/05-eighteenth-final.txt": "58a32fc2329febfec52fe37755913b4352f7f8f70969e275399ca0f8a9a266b0",
+    "browser/05-nineteenth-final-section.txt": "a5689231df0ce2fa892c9c821eae3ae09afc2008201b4a84a33649ecba9f34b8",
+    "browser/05-nineteenth-final.txt": "94d3bf62b1556e3c8fb5c1e79ae339068ad22bcffeca660ae66a13b03fb4a180",
+    "verification/browser-eighteenth-full-pairing05-01.json": "c8679a8fab93fdbbbd749981d7ec89fbcf43441b617e55fa94cd9ae554e5cbd0",
+    "verification/browser-eighteenth-full-pairing05-01.pairing.json": "315547489b51a54b1ec79ede7a47fa6c8fca9d025f043d80531c6b37237c2130",
+    "verification/browser-nineteenth-physical12-05-01.json": "4ff192c91a7130bb21806fe470eb765221011f2e147fc3e4b5f4b9ef571a6c97",
+    "verification/browser-seventeenth-composition05-01.json": "2263c092bb013af533132927cffb76d76e536f2dfb0b38c10475276d4588d4a8",
+    "verification/browser_eighteenth_full_pairing05.py": "94b7252d34d43048b1877606921d8774a914de9fae1a94e7bec3212cb9a1a164",
+    "verification/browser_nineteenth_physical12_05.py": "950513fff32dd56bc1a909460542487aaade3cffce1b86bf89fdb5d874e24d36",
+    "verification/browser_seventeenth_composition05.py": "eb3d8b705f0e52cf55f04020a10d0097ac7150c7819520b7246ac82f316937b8",
+    "verification/check_repaired13_physical_matching.py": "05bf0a9a7006fab493befd1bb1e5f1f38a3e749df0551b0e9bdb9bd63547987b"
+  },
+  "binding": {
+    "accepted_successor": {
+      "breaker": [
+        14,
+        34,
+        36,
+        38,
+        41,
+        43,
+        55,
+        56,
+        58,
+        74,
+        77,
+        94
+      ],
+      "maker": [
+        11,
+        21,
+        31,
+        37,
+        44,
+        45,
+        46,
+        47,
+        57,
+        67,
+        75,
+        84
+      ],
+      "turn": "Maker"
+    },
+    "actual_prefix": [
+      {
+        "breaker": 14,
+        "maker": 11
+      },
+      {
+        "breaker": 43,
+        "maker": 21
+      }
+    ],
+    "coordinate_convention": "cell=10*y+x, zero-based",
+    "distinct_residual_count": 144,
+    "fixed_pairs": [],
+    "forbidden_pairs": [],
+    "free_cells": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      35,
+      39,
+      40,
+      41,
+      42,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      76,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      85,
+      86,
+      87,
+      88,
+      89,
+      90,
+      91,
+      92,
+      93,
+      95,
+      96,
+      97,
+      98,
+      99
+    ],
+    "literal_target_count": 432,
+    "literal_target_sha256": "06b3a966ff46af6b36a59e88f562e985f752690959a4a1f27dd17a657ca282ed",
+    "live_target_count": 144,
+    "original_state": {
+      "breaker": [
+        34,
+        36,
+        38,
+        55,
+        56,
+        58,
+        74,
+        77,
+        94
+      ],
+      "maker": [
+        37,
+        44,
+        45,
+        46,
+        47,
+        57,
+        67,
+        75,
+        84
+      ],
+      "turn": "Maker"
+    },
+    "physical_targets": [
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          0,
+          10,
+          11,
+          21,
+          31,
+          41
+        ],
+        "required_free": [
+          0,
+          10,
+          31,
+          41
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          0,
+          10,
+          20,
+          30,
+          31,
+          41
+        ],
+        "required_free": [
+          0,
+          10,
+          20,
+          30,
+          31,
+          41
+        ]
+      },
+      {
+        "maker_owned": [
+          11
+        ],
+        "physical_target": [
+          1,
+          2,
+          3,
+          4,
+          10,
+          11
+        ],
+        "required_free": [
+          1,
+          2,
+          3,
+          4,
+          10
+        ]
+      },
+      {
+        "maker_owned": [
+          11
+        ],
+        "physical_target": [
+          1,
+          10,
+          11,
+          20,
+          30,
+          40
+        ],
+        "required_free": [
+          1,
+          10,
+          20,
+          30,
+          40
+        ]
+      },
+      {
+        "maker_owned": [
+          11
+        ],
+        "physical_target": [
+          1,
+          11,
+          12,
+          22,
+          32,
+          42
+        ],
+        "required_free": [
+          1,
+          12,
+          22,
+          32,
+          42
+        ]
+      },
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          1,
+          11,
+          21,
+          30,
+          31,
+          40
+        ],
+        "required_free": [
+          1,
+          30,
+          31,
+          40
+        ]
+      },
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          1,
+          11,
+          21,
+          31,
+          32,
+          42
+        ],
+        "required_free": [
+          1,
+          31,
+          32,
+          42
+        ]
+      },
+      {
+        "maker_owned": [
+          11
+        ],
+        "physical_target": [
+          2,
+          3,
+          4,
+          5,
+          11,
+          12
+        ],
+        "required_free": [
+          2,
+          3,
+          4,
+          5,
+          12
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          2,
+          3,
+          4,
+          5,
+          15,
+          16
+        ],
+        "required_free": [
+          2,
+          3,
+          4,
+          5,
+          15,
+          16
+        ]
+      },
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          2,
+          11,
+          12,
+          21,
+          31,
+          41
+        ],
+        "required_free": [
+          2,
+          12,
+          31,
+          41
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          2,
+          12,
+          22,
+          31,
+          32,
+          41
+        ],
+        "required_free": [
+          2,
+          12,
+          22,
+          31,
+          32,
+          41
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          3,
+          4,
+          5,
+          6,
+          12,
+          13
+        ],
+        "required_free": [
+          3,
+          4,
+          5,
+          6,
+          12,
+          13
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          3,
+          4,
+          5,
+          6,
+          16,
+          17
+        ],
+        "required_free": [
+          3,
+          4,
+          5,
+          6,
+          16,
+          17
+        ]
+      },
+      {
+        "maker_owned": [
+          11
+        ],
+        "physical_target": [
+          3,
+          4,
+          10,
+          11,
+          12,
+          13
+        ],
+        "required_free": [
+          3,
+          4,
+          10,
+          12,
+          13
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          3,
+          12,
+          13,
+          22,
+          32,
+          42
+        ],
+        "required_free": [
+          3,
+          12,
+          13,
+          22,
+          32,
+          42
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          3,
+          13,
+          23,
+          32,
+          33,
+          42
+        ],
+        "required_free": [
+          3,
+          13,
+          23,
+          32,
+          33,
+          42
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          4,
+          5,
+          6,
+          7,
+          17,
+          18
+        ],
+        "required_free": [
+          4,
+          5,
+          6,
+          7,
+          17,
+          18
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          4,
+          5,
+          15,
+          16,
+          17,
+          18
+        ],
+        "required_free": [
+          4,
+          5,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          5,
+          6,
+          7,
+          8,
+          18,
+          19
+        ],
+        "required_free": [
+          5,
+          6,
+          7,
+          8,
+          18,
+          19
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          5,
+          6,
+          16,
+          17,
+          18,
+          19
+        ],
+        "required_free": [
+          5,
+          6,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          6,
+          7,
+          8,
+          9,
+          15,
+          16
+        ],
+        "required_free": [
+          6,
+          7,
+          8,
+          9,
+          15,
+          16
+        ]
+      },
+      {
+        "maker_owned": [
+          45
+        ],
+        "physical_target": [
+          6,
+          15,
+          16,
+          25,
+          35,
+          45
+        ],
+        "required_free": [
+          6,
+          15,
+          16,
+          25,
+          35
+        ]
+      },
+      {
+        "maker_owned": [
+          37,
+          47
+        ],
+        "physical_target": [
+          6,
+          16,
+          17,
+          27,
+          37,
+          47
+        ],
+        "required_free": [
+          6,
+          16,
+          17,
+          27
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          8,
+          9,
+          15,
+          16,
+          17,
+          18
+        ],
+        "required_free": [
+          8,
+          9,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "maker_owned": [
+          37,
+          47
+        ],
+        "physical_target": [
+          8,
+          17,
+          18,
+          27,
+          37,
+          47
+        ],
+        "required_free": [
+          8,
+          17,
+          18,
+          27
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          8,
+          18,
+          19,
+          29,
+          39,
+          49
+        ],
+        "required_free": [
+          8,
+          18,
+          19,
+          29,
+          39,
+          49
+        ]
+      },
+      {
+        "maker_owned": [
+          11
+        ],
+        "physical_target": [
+          10,
+          11,
+          12,
+          13,
+          23,
+          24
+        ],
+        "required_free": [
+          10,
+          12,
+          13,
+          23,
+          24
+        ]
+      },
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          10,
+          11,
+          21,
+          22,
+          23,
+          24
+        ],
+        "required_free": [
+          10,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "maker_owned": [
+          21
+        ],
+        "physical_target": [
+          10,
+          20,
+          21,
+          31,
+          41,
+          51
+        ],
+        "required_free": [
+          10,
+          20,
+          31,
+          41,
+          51
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          10,
+          20,
+          30,
+          40,
+          41,
+          51
+        ],
+        "required_free": [
+          10,
+          20,
+          30,
+          40,
+          41,
+          51
+        ]
+      },
+      {
+        "maker_owned": [
+          11
+        ],
+        "physical_target": [
+          11,
+          12,
+          22,
+          23,
+          24,
+          25
+        ],
+        "required_free": [
+          12,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          11,
+          20,
+          21,
+          30,
+          40,
+          50
+        ],
+        "required_free": [
+          20,
+          30,
+          40,
+          50
+        ]
+      },
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          11,
+          21,
+          22,
+          32,
+          42,
+          52
+        ],
+        "required_free": [
+          22,
+          32,
+          42,
+          52
+        ]
+      },
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          11,
+          21,
+          31,
+          40,
+          41,
+          50
+        ],
+        "required_free": [
+          31,
+          40,
+          41,
+          50
+        ]
+      },
+      {
+        "maker_owned": [
+          11,
+          21
+        ],
+        "physical_target": [
+          11,
+          21,
+          31,
+          41,
+          42,
+          52
+        ],
+        "required_free": [
+          31,
+          41,
+          42,
+          52
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          12,
+          13,
+          23,
+          24,
+          25,
+          26
+        ],
+        "required_free": [
+          12,
+          13,
+          23,
+          24,
+          25,
+          26
+        ]
+      },
+      {
+        "maker_owned": [
+          21
+        ],
+        "physical_target": [
+          12,
+          21,
+          22,
+          31,
+          41,
+          51
+        ],
+        "required_free": [
+          12,
+          22,
+          31,
+          41,
+          51
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          12,
+          22,
+          32,
+          41,
+          42,
+          51
+        ],
+        "required_free": [
+          12,
+          22,
+          32,
+          41,
+          42,
+          51
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          13,
+          22,
+          23,
+          32,
+          42,
+          52
+        ],
+        "required_free": [
+          13,
+          22,
+          23,
+          32,
+          42,
+          52
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          15,
+          16,
+          17,
+          18,
+          24,
+          25
+        ],
+        "required_free": [
+          15,
+          16,
+          17,
+          18,
+          24,
+          25
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          15,
+          16,
+          17,
+          18,
+          28,
+          29
+        ],
+        "required_free": [
+          15,
+          16,
+          17,
+          18,
+          28,
+          29
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          15,
+          16,
+          22,
+          23,
+          24,
+          25
+        ],
+        "required_free": [
+          15,
+          16,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          15,
+          16,
+          26,
+          27,
+          28,
+          29
+        ],
+        "required_free": [
+          15,
+          16,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "maker_owned": [
+          44,
+          45
+        ],
+        "physical_target": [
+          15,
+          25,
+          35,
+          44,
+          45,
+          54
+        ],
+        "required_free": [
+          15,
+          25,
+          35,
+          54
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          16,
+          17,
+          18,
+          19,
+          25,
+          26
+        ],
+        "required_free": [
+          16,
+          17,
+          18,
+          19,
+          25,
+          26
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          16,
+          17,
+          23,
+          24,
+          25,
+          26
+        ],
+        "required_free": [
+          16,
+          17,
+          23,
+          24,
+          25,
+          26
+        ]
+      },
+      {
+        "maker_owned": [
+          37,
+          47,
+          57
+        ],
+        "physical_target": [
+          16,
+          26,
+          27,
+          37,
+          47,
+          57
+        ],
+        "required_free": [
+          16,
+          26,
+          27
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          17,
+          18,
+          24,
+          25,
+          26,
+          27
+        ],
+        "required_free": [
+          17,
+          18,
+          24,
+          25,
+          26,
+          27
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          18,
+          19,
+          25,
+          26,
+          27,
+          28
+        ],
+        "required_free": [
+          18,
+          19,
+          25,
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "maker_owned": [
+          37,
+          47,
+          57
+        ],
+        "physical_target": [
+          18,
+          27,
+          28,
+          37,
+          47,
+          57
+        ],
+        "required_free": [
+          18,
+          27,
+          28
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          18,
+          28,
+          29,
+          39,
+          49,
+          59
+        ],
+        "required_free": [
+          18,
+          28,
+          29,
+          39,
+          49,
+          59
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          20,
+          30,
+          31,
+          41,
+          51,
+          61
+        ],
+        "required_free": [
+          20,
+          30,
+          31,
+          41,
+          51,
+          61
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          20,
+          30,
+          40,
+          50,
+          51,
+          61
+        ],
+        "required_free": [
+          20,
+          30,
+          40,
+          50,
+          51,
+          61
+        ]
+      },
+      {
+        "maker_owned": [
+          21
+        ],
+        "physical_target": [
+          21,
+          22,
+          23,
+          24,
+          30,
+          31
+        ],
+        "required_free": [
+          22,
+          23,
+          24,
+          30,
+          31
+        ]
+      },
+      {
+        "maker_owned": [
+          21
+        ],
+        "physical_target": [
+          21,
+          30,
+          31,
+          40,
+          50,
+          60
+        ],
+        "required_free": [
+          30,
+          31,
+          40,
+          50,
+          60
+        ]
+      },
+      {
+        "maker_owned": [
+          21
+        ],
+        "physical_target": [
+          21,
+          31,
+          32,
+          42,
+          52,
+          62
+        ],
+        "required_free": [
+          31,
+          32,
+          42,
+          52,
+          62
+        ]
+      },
+      {
+        "maker_owned": [
+          21
+        ],
+        "physical_target": [
+          21,
+          31,
+          41,
+          50,
+          51,
+          60
+        ],
+        "required_free": [
+          31,
+          41,
+          50,
+          51,
+          60
+        ]
+      },
+      {
+        "maker_owned": [
+          21
+        ],
+        "physical_target": [
+          21,
+          31,
+          41,
+          51,
+          52,
+          62
+        ],
+        "required_free": [
+          31,
+          41,
+          51,
+          52,
+          62
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          22,
+          23,
+          24,
+          25,
+          31,
+          32
+        ],
+        "required_free": [
+          22,
+          23,
+          24,
+          25,
+          31,
+          32
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          22,
+          31,
+          32,
+          41,
+          51,
+          61
+        ],
+        "required_free": [
+          22,
+          31,
+          32,
+          41,
+          51,
+          61
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          22,
+          32,
+          42,
+          51,
+          52,
+          61
+        ],
+        "required_free": [
+          22,
+          32,
+          42,
+          51,
+          52,
+          61
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          22,
+          32,
+          42,
+          52,
+          53,
+          63
+        ],
+        "required_free": [
+          22,
+          32,
+          42,
+          52,
+          53,
+          63
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          23,
+          24,
+          25,
+          26,
+          32,
+          33
+        ],
+        "required_free": [
+          23,
+          24,
+          25,
+          26,
+          32,
+          33
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          23,
+          24,
+          30,
+          31,
+          32,
+          33
+        ],
+        "required_free": [
+          23,
+          24,
+          30,
+          31,
+          32,
+          33
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          23,
+          32,
+          33,
+          42,
+          52,
+          62
+        ],
+        "required_free": [
+          23,
+          32,
+          33,
+          42,
+          52,
+          62
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          30,
+          40,
+          41,
+          51,
+          61,
+          71
+        ],
+        "required_free": [
+          30,
+          40,
+          41,
+          51,
+          61,
+          71
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          30,
+          40,
+          50,
+          60,
+          61,
+          71
+        ],
+        "required_free": [
+          30,
+          40,
+          50,
+          60,
+          61,
+          71
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          31,
+          40,
+          41,
+          50,
+          60,
+          70
+        ],
+        "required_free": [
+          31,
+          40,
+          41,
+          50,
+          60,
+          70
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          31,
+          41,
+          42,
+          52,
+          62,
+          72
+        ],
+        "required_free": [
+          31,
+          41,
+          42,
+          52,
+          62,
+          72
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          31,
+          41,
+          51,
+          60,
+          61,
+          70
+        ],
+        "required_free": [
+          31,
+          41,
+          51,
+          60,
+          61,
+          70
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          31,
+          41,
+          51,
+          61,
+          62,
+          72
+        ],
+        "required_free": [
+          31,
+          41,
+          51,
+          61,
+          62,
+          72
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          32,
+          41,
+          42,
+          51,
+          61,
+          71
+        ],
+        "required_free": [
+          32,
+          41,
+          42,
+          51,
+          61,
+          71
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          32,
+          42,
+          52,
+          61,
+          62,
+          71
+        ],
+        "required_free": [
+          32,
+          42,
+          52,
+          61,
+          62,
+          71
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          32,
+          42,
+          52,
+          62,
+          63,
+          73
+        ],
+        "required_free": [
+          32,
+          42,
+          52,
+          62,
+          63,
+          73
+        ]
+      },
+      {
+        "maker_owned": [
+          37,
+          47,
+          57,
+          67
+        ],
+        "physical_target": [
+          37,
+          47,
+          57,
+          66,
+          67,
+          76
+        ],
+        "required_free": [
+          66,
+          76
+        ]
+      },
+      {
+        "maker_owned": [
+          37,
+          47,
+          57,
+          67
+        ],
+        "physical_target": [
+          37,
+          47,
+          57,
+          67,
+          68,
+          78
+        ],
+        "required_free": [
+          68,
+          78
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          39,
+          49,
+          59,
+          68,
+          69,
+          78
+        ],
+        "required_free": [
+          39,
+          49,
+          59,
+          68,
+          69,
+          78
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          40,
+          41,
+          51,
+          52,
+          53,
+          54
+        ],
+        "required_free": [
+          40,
+          41,
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          40,
+          50,
+          51,
+          61,
+          71,
+          81
+        ],
+        "required_free": [
+          40,
+          50,
+          51,
+          61,
+          71,
+          81
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          40,
+          50,
+          60,
+          70,
+          71,
+          81
+        ],
+        "required_free": [
+          40,
+          50,
+          60,
+          70,
+          71,
+          81
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          41,
+          50,
+          51,
+          60,
+          70,
+          80
+        ],
+        "required_free": [
+          41,
+          50,
+          51,
+          60,
+          70,
+          80
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          41,
+          51,
+          52,
+          62,
+          72,
+          82
+        ],
+        "required_free": [
+          41,
+          51,
+          52,
+          62,
+          72,
+          82
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          41,
+          51,
+          61,
+          70,
+          71,
+          80
+        ],
+        "required_free": [
+          41,
+          51,
+          61,
+          70,
+          71,
+          80
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          41,
+          51,
+          61,
+          71,
+          72,
+          82
+        ],
+        "required_free": [
+          41,
+          51,
+          61,
+          71,
+          72,
+          82
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          42,
+          51,
+          52,
+          61,
+          71,
+          81
+        ],
+        "required_free": [
+          42,
+          51,
+          52,
+          61,
+          71,
+          81
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          42,
+          52,
+          53,
+          63,
+          73,
+          83
+        ],
+        "required_free": [
+          42,
+          52,
+          53,
+          63,
+          73,
+          83
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          42,
+          52,
+          62,
+          71,
+          72,
+          81
+        ],
+        "required_free": [
+          42,
+          52,
+          62,
+          71,
+          72,
+          81
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          42,
+          52,
+          62,
+          72,
+          73,
+          83
+        ],
+        "required_free": [
+          42,
+          52,
+          62,
+          72,
+          73,
+          83
+        ]
+      },
+      {
+        "maker_owned": [
+          44,
+          45,
+          46,
+          47
+        ],
+        "physical_target": [
+          44,
+          45,
+          46,
+          47,
+          53,
+          54
+        ],
+        "required_free": [
+          53,
+          54
+        ]
+      },
+      {
+        "maker_owned": [
+          44,
+          45
+        ],
+        "physical_target": [
+          44,
+          45,
+          51,
+          52,
+          53,
+          54
+        ],
+        "required_free": [
+          51,
+          52,
+          53,
+          54
+        ]
+      },
+      {
+        "maker_owned": [
+          44
+        ],
+        "physical_target": [
+          44,
+          53,
+          54,
+          63,
+          73,
+          83
+        ],
+        "required_free": [
+          53,
+          54,
+          63,
+          73,
+          83
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          49,
+          59,
+          69,
+          78,
+          79,
+          88
+        ],
+        "required_free": [
+          49,
+          59,
+          69,
+          78,
+          79,
+          88
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          50,
+          51,
+          52,
+          53,
+          63,
+          64
+        ],
+        "required_free": [
+          50,
+          51,
+          52,
+          53,
+          63,
+          64
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          50,
+          51,
+          61,
+          62,
+          63,
+          64
+        ],
+        "required_free": [
+          50,
+          51,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          50,
+          60,
+          61,
+          71,
+          81,
+          91
+        ],
+        "required_free": [
+          50,
+          60,
+          61,
+          71,
+          81,
+          91
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          50,
+          60,
+          70,
+          80,
+          81,
+          91
+        ],
+        "required_free": [
+          50,
+          60,
+          70,
+          80,
+          81,
+          91
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          51,
+          52,
+          53,
+          54,
+          60,
+          61
+        ],
+        "required_free": [
+          51,
+          52,
+          53,
+          54,
+          60,
+          61
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          51,
+          52,
+          53,
+          54,
+          64,
+          65
+        ],
+        "required_free": [
+          51,
+          52,
+          53,
+          54,
+          64,
+          65
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          51,
+          52,
+          62,
+          63,
+          64,
+          65
+        ],
+        "required_free": [
+          51,
+          52,
+          62,
+          63,
+          64,
+          65
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          51,
+          60,
+          61,
+          70,
+          80,
+          90
+        ],
+        "required_free": [
+          51,
+          60,
+          61,
+          70,
+          80,
+          90
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          51,
+          61,
+          62,
+          72,
+          82,
+          92
+        ],
+        "required_free": [
+          51,
+          61,
+          62,
+          72,
+          82,
+          92
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          51,
+          61,
+          71,
+          80,
+          81,
+          90
+        ],
+        "required_free": [
+          51,
+          61,
+          71,
+          80,
+          81,
+          90
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          51,
+          61,
+          71,
+          81,
+          82,
+          92
+        ],
+        "required_free": [
+          51,
+          61,
+          71,
+          81,
+          82,
+          92
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          52,
+          53,
+          63,
+          64,
+          65,
+          66
+        ],
+        "required_free": [
+          52,
+          53,
+          63,
+          64,
+          65,
+          66
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          52,
+          61,
+          62,
+          71,
+          81,
+          91
+        ],
+        "required_free": [
+          52,
+          61,
+          62,
+          71,
+          81,
+          91
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          52,
+          62,
+          63,
+          73,
+          83,
+          93
+        ],
+        "required_free": [
+          52,
+          62,
+          63,
+          73,
+          83,
+          93
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          52,
+          62,
+          72,
+          81,
+          82,
+          91
+        ],
+        "required_free": [
+          52,
+          62,
+          72,
+          81,
+          82,
+          91
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          52,
+          62,
+          72,
+          82,
+          83,
+          93
+        ],
+        "required_free": [
+          52,
+          62,
+          72,
+          82,
+          83,
+          93
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          53,
+          54,
+          60,
+          61,
+          62,
+          63
+        ],
+        "required_free": [
+          53,
+          54,
+          60,
+          61,
+          62,
+          63
+        ]
+      },
+      {
+        "maker_owned": [
+          67
+        ],
+        "physical_target": [
+          53,
+          54,
+          64,
+          65,
+          66,
+          67
+        ],
+        "required_free": [
+          53,
+          54,
+          64,
+          65,
+          66
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          53,
+          62,
+          63,
+          72,
+          82,
+          92
+        ],
+        "required_free": [
+          53,
+          62,
+          63,
+          72,
+          82,
+          92
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          53,
+          63,
+          73,
+          82,
+          83,
+          92
+        ],
+        "required_free": [
+          53,
+          63,
+          73,
+          82,
+          83,
+          92
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          54,
+          63,
+          64,
+          73,
+          83,
+          93
+        ],
+        "required_free": [
+          54,
+          63,
+          64,
+          73,
+          83,
+          93
+        ]
+      },
+      {
+        "maker_owned": [
+          75
+        ],
+        "physical_target": [
+          54,
+          64,
+          65,
+          75,
+          85,
+          95
+        ],
+        "required_free": [
+          54,
+          64,
+          65,
+          85,
+          95
+        ]
+      },
+      {
+        "maker_owned": [
+          57,
+          67
+        ],
+        "physical_target": [
+          57,
+          66,
+          67,
+          76,
+          86,
+          96
+        ],
+        "required_free": [
+          66,
+          76,
+          86,
+          96
+        ]
+      },
+      {
+        "maker_owned": [
+          57,
+          67
+        ],
+        "physical_target": [
+          57,
+          67,
+          68,
+          78,
+          88,
+          98
+        ],
+        "required_free": [
+          68,
+          78,
+          88,
+          98
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          59,
+          68,
+          69,
+          78,
+          88,
+          98
+        ],
+        "required_free": [
+          59,
+          68,
+          69,
+          78,
+          88,
+          98
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          59,
+          69,
+          79,
+          88,
+          89,
+          98
+        ],
+        "required_free": [
+          59,
+          69,
+          79,
+          88,
+          89,
+          98
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          61,
+          62,
+          63,
+          64,
+          70,
+          71
+        ],
+        "required_free": [
+          61,
+          62,
+          63,
+          64,
+          70,
+          71
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          62,
+          63,
+          64,
+          65,
+          71,
+          72
+        ],
+        "required_free": [
+          62,
+          63,
+          64,
+          65,
+          71,
+          72
+        ]
+      },
+      {
+        "maker_owned": [
+          75
+        ],
+        "physical_target": [
+          62,
+          63,
+          64,
+          65,
+          75,
+          76
+        ],
+        "required_free": [
+          62,
+          63,
+          64,
+          65,
+          76
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          63,
+          64,
+          65,
+          66,
+          72,
+          73
+        ],
+        "required_free": [
+          63,
+          64,
+          65,
+          66,
+          72,
+          73
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          63,
+          64,
+          70,
+          71,
+          72,
+          73
+        ],
+        "required_free": [
+          63,
+          64,
+          70,
+          71,
+          72,
+          73
+        ]
+      },
+      {
+        "maker_owned": [
+          67
+        ],
+        "physical_target": [
+          65,
+          66,
+          67,
+          68,
+          78,
+          79
+        ],
+        "required_free": [
+          65,
+          66,
+          68,
+          78,
+          79
+        ]
+      },
+      {
+        "maker_owned": [
+          67,
+          75
+        ],
+        "physical_target": [
+          66,
+          67,
+          68,
+          69,
+          75,
+          76
+        ],
+        "required_free": [
+          66,
+          68,
+          69,
+          76
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          70,
+          71,
+          72,
+          73,
+          83,
+          84
+        ],
+        "required_free": [
+          70,
+          71,
+          72,
+          73,
+          83
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          70,
+          71,
+          81,
+          82,
+          83,
+          84
+        ],
+        "required_free": [
+          70,
+          71,
+          81,
+          82,
+          83
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          71,
+          72,
+          82,
+          83,
+          84,
+          85
+        ],
+        "required_free": [
+          71,
+          72,
+          82,
+          83,
+          85
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          72,
+          73,
+          83,
+          84,
+          85,
+          86
+        ],
+        "required_free": [
+          72,
+          73,
+          83,
+          85,
+          86
+        ]
+      },
+      {
+        "maker_owned": [
+          75,
+          84
+        ],
+        "physical_target": [
+          75,
+          76,
+          82,
+          83,
+          84,
+          85
+        ],
+        "required_free": [
+          76,
+          82,
+          83,
+          85
+        ]
+      },
+      {
+        "maker_owned": [
+          75
+        ],
+        "physical_target": [
+          75,
+          76,
+          86,
+          87,
+          88,
+          89
+        ],
+        "required_free": [
+          76,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          78,
+          79,
+          85,
+          86,
+          87,
+          88
+        ],
+        "required_free": [
+          78,
+          79,
+          85,
+          86,
+          87,
+          88
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          81,
+          82,
+          83,
+          84,
+          90,
+          91
+        ],
+        "required_free": [
+          81,
+          82,
+          83,
+          90,
+          91
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          82,
+          83,
+          84,
+          85,
+          91,
+          92
+        ],
+        "required_free": [
+          82,
+          83,
+          85,
+          91,
+          92
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          82,
+          83,
+          84,
+          85,
+          95,
+          96
+        ],
+        "required_free": [
+          82,
+          83,
+          85,
+          95,
+          96
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          83,
+          84,
+          85,
+          86,
+          92,
+          93
+        ],
+        "required_free": [
+          83,
+          85,
+          86,
+          92,
+          93
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          83,
+          84,
+          85,
+          86,
+          96,
+          97
+        ],
+        "required_free": [
+          83,
+          85,
+          86,
+          96,
+          97
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          83,
+          84,
+          90,
+          91,
+          92,
+          93
+        ],
+        "required_free": [
+          83,
+          90,
+          91,
+          92,
+          93
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          84,
+          85,
+          86,
+          87,
+          97,
+          98
+        ],
+        "required_free": [
+          85,
+          86,
+          87,
+          97,
+          98
+        ]
+      },
+      {
+        "maker_owned": [
+          84
+        ],
+        "physical_target": [
+          84,
+          85,
+          95,
+          96,
+          97,
+          98
+        ],
+        "required_free": [
+          85,
+          95,
+          96,
+          97,
+          98
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          85,
+          86,
+          87,
+          88,
+          98,
+          99
+        ],
+        "required_free": [
+          85,
+          86,
+          87,
+          88,
+          98,
+          99
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          85,
+          86,
+          96,
+          97,
+          98,
+          99
+        ],
+        "required_free": [
+          85,
+          86,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          86,
+          87,
+          88,
+          89,
+          95,
+          96
+        ],
+        "required_free": [
+          86,
+          87,
+          88,
+          89,
+          95,
+          96
+        ]
+      },
+      {
+        "maker_owned": [],
+        "physical_target": [
+          88,
+          89,
+          95,
+          96,
+          97,
+          98
+        ],
+        "required_free": [
+          88,
+          89,
+          95,
+          96,
+          97,
+          98
+        ]
+      }
+    ],
+    "previous35_diagnostic": {
+      "all_missing_contain41": true,
+      "covered_live_targets": 135,
+      "missing_targets": [
+        [
+          0,
+          10,
+          11,
+          21,
+          31,
+          41
+        ],
+        [
+          0,
+          10,
+          20,
+          30,
+          31,
+          41
+        ],
+        [
+          2,
+          11,
+          12,
+          21,
+          31,
+          41
+        ],
+        [
+          11,
+          21,
+          31,
+          41,
+          42,
+          52
+        ],
+        [
+          21,
+          31,
+          41,
+          50,
+          51,
+          60
+        ],
+        [
+          21,
+          31,
+          41,
+          51,
+          52,
+          62
+        ],
+        [
+          22,
+          31,
+          32,
+          41,
+          51,
+          61
+        ],
+        [
+          30,
+          40,
+          41,
+          51,
+          61,
+          71
+        ],
+        [
+          41,
+          51,
+          61,
+          71,
+          72,
+          82
+        ]
+      ],
+      "pairs": [
+        [
+          1,
+          30
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          19
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          12,
+          22
+        ],
+        [
+          15,
+          25
+        ],
+        [
+          16,
+          26
+        ],
+        [
+          17,
+          27
+        ],
+        [
+          18,
+          28
+        ],
+        [
+          20,
+          51
+        ],
+        [
+          23,
+          24
+        ],
+        [
+          29,
+          39
+        ],
+        [
+          32,
+          42
+        ],
+        [
+          33,
+          52
+        ],
+        [
+          40,
+          50
+        ],
+        [
+          53,
+          54
+        ],
+        [
+          59,
+          69
+        ],
+        [
+          60,
+          70
+        ],
+        [
+          61,
+          80
+        ],
+        [
+          62,
+          72
+        ],
+        [
+          63,
+          64
+        ],
+        [
+          65,
+          95
+        ],
+        [
+          66,
+          76
+        ],
+        [
+          68,
+          78
+        ],
+        [
+          71,
+          81
+        ],
+        [
+          73,
+          83
+        ],
+        [
+          79,
+          89
+        ],
+        [
+          82,
+          85
+        ],
+        [
+          86,
+          88
+        ],
+        [
+          87,
+          98
+        ],
+        [
+          90,
+          91
+        ],
+        [
+          92,
+          93
+        ],
+        [
+          96,
+          97
+        ]
+      ],
+      "still_disjoint_and_fresh": true
+    },
+    "projected_away_cells": [],
+    "removed_claims": {
+      "breaker": [
+        41
+      ],
+      "maker": [
+        31
+      ]
+    },
+    "residual_size_counts": {
+      "2": 3,
+      "3": 2,
+      "4": 17,
+      "5": 33,
+      "6": 89
+    },
+    "size": 10,
+    "state": {
+      "breaker": [
+        14,
+        34,
+        36,
+        38,
+        43,
+        55,
+        56,
+        58,
+        74,
+        77,
+        94
+      ],
+      "maker": [
+        11,
+        21,
+        37,
+        44,
+        45,
+        46,
+        47,
+        57,
+        67,
+        75,
+        84
+      ],
+      "turn": "Maker"
+    },
+    "two_cell_requirements": [
+      [
+        53,
+        54
+      ],
+      [
+        66,
+        76
+      ],
+      [
+        68,
+        78
+      ]
+    ]
+  },
+  "certificate": {
+    "breaker": [
+      14,
+      34,
+      36,
+      38,
+      43,
+      55,
+      56,
+      58,
+      74,
+      77,
+      94
+    ],
+    "maker": [
+      11,
+      21,
+      37,
+      44,
+      45,
+      46,
+      47,
+      57,
+      67,
+      75,
+      84
+    ],
+    "pairs": [
+      [
+        1,
+        3
+      ],
+      [
+        4,
+        5
+      ],
+      [
+        6,
+        19
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        12,
+        13
+      ],
+      [
+        15,
+        25
+      ],
+      [
+        16,
+        26
+      ],
+      [
+        17,
+        27
+      ],
+      [
+        18,
+        28
+      ],
+      [
+        22,
+        23
+      ],
+      [
+        24,
+        33
+      ],
+      [
+        29,
+        49
+      ],
+      [
+        30,
+        40
+      ],
+      [
+        31,
+        41
+      ],
+      [
+        32,
+        42
+      ],
+      [
+        50,
+        52
+      ],
+      [
+        51,
+        61
+      ],
+      [
+        53,
+        54
+      ],
+      [
+        59,
+        79
+      ],
+      [
+        60,
+        80
+      ],
+      [
+        62,
+        72
+      ],
+      [
+        63,
+        73
+      ],
+      [
+        64,
+        65
+      ],
+      [
+        66,
+        76
+      ],
+      [
+        68,
+        78
+      ],
+      [
+        70,
+        71
+      ],
+      [
+        81,
+        91
+      ],
+      [
+        82,
+        83
+      ],
+      [
+        85,
+        86
+      ],
+      [
+        88,
+        89
+      ],
+      [
+        92,
+        93
+      ],
+      [
+        95,
+        96
+      ]
+    ],
+    "schema": "snaky-static-pairing-v1",
+    "size": 10
+  },
+  "certificate_path": "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/verification/upstream11-physical-matching-result-01.pairing.json",
+  "checker_sha256": "55d8aa997fc9360c2b41697061a0663505518b7342afd027b3c5cce935fbaf60",
+  "created_utc": "2026-10-16T06:24:17.466663+00:00",
+  "elapsed_seconds": 0.04330904129892588,
+  "formula_sha256": "935f0b4854d92cc28b9cebcf63e7da8f34c0873d051d6c32a998164fa5424363",
+  "independent_pairing_check": {
+    "empty_board": false,
+    "live_placements": 144,
+    "pairs": 32,
+    "placements": 432,
+    "size": 10,
+    "status": "valid_pairing"
+  },
+  "instance_sha256": "5bbd8781ee8ab27ea90ee52cba3319780db45138decb8af63fa1840c868028a8",
+  "pair_variable_count": 622,
+  "process_cpu_seconds": 0.04216,
+  "schema": "snaky-upstream11-full-matching-independent-v1",
+  "scope": "Exact11M/11B physical Maker turn after M11/B14,M21/B43. No upstream S9 or empty10 claim.",
+  "solver_exit_code": 0,
+  "solver_guard_sha256": "d02baf1e06c40d72fa3ea9da435dcb4cb514da29f92688ee6f0ab473f925056b",
+  "solver_guard_status": "finished",
+  "solver_output_sha256": "e32523585f8ded77d8e90ca61ee6c072d875c0380588a2808ee9c6e154e03992",
+  "solver_pid": 37696,
+  "solver_started": true,
+  "source_sha256": {
+    "breaker/adaptive_run.py": "dd59dc64f76c0e93f5b963ef0e6a444e74ceb4003d126c3f42937430affb60aa",
+    "breaker/check_pairing.py": "f24d5a389197f5010afc88036e0b849c3f31caadb60c142f29c1b3c684191056",
+    "breaker/cpu_exec.py": "0819f781e2cd2e3ce29e499ecacca46373219d8ab7cbe263c0a59a91cbea6278",
+    "breaker/hypergraph.py": "19aa54842d59e5b1c0da5f0277c1ad20096d04966241b1eaad7551ff23614faa",
+    "breaker/static_pairing.py": "6132d522f6a72ae7f8ec2f4f1714c7a5f31335dba9c4f44b59020ce9fcb39266",
+    "breaker/upstream11_physical_matching.py": "6d9cf0ac8c319d12ac0d168a86238e1f8f79c8e4dbda2cd113f4e19d1bb0bca0",
+    "verification/check_post_m31_joint_matching.py": "a0bcfc9c88a36224f16817a4442528ce2da69b3253b1ae6090b328d98ede8bc6",
+    "verification/check_repaired13_physical_matching.py": "05bf0a9a7006fab493befd1bb1e5f1f38a3e749df0551b0e9bdb9bd63547987b",
+    "verification/post-m31-joint-matching-result-01.json": "69df417b3a66aebb14b6203fec1355d03c740ae9165b08fc3fd2147526981c30",
+    "verification/post-m31-joint-matching-result-01.pairing.json": "5d57788fd23e96a8e46a16cfd83d723dadbe75f90f2a2089e0f486854906b2bf"
+  },
+  "status": "verified_conditional_upstream11_full_physical_pairing"
+}

@@ -1,0 +1,43 @@
+{
+  "case": "n32_reserved_controller",
+  "checker": "verification/n32_reserved_controller.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "106a5f8441554e68440ba24ff0338c0c22f2c802d1d4b393dd4a6dc0800c12fc",
+  "created_utc": "2026-10-16T10:55:36.230742+00:00",
+  "execution_field_differences": {
+    "cpu_seconds": {
+      "historical": 0.8843430000000001,
+      "replay": 0.8862209999999999
+    },
+    "elapsed_seconds": {
+      "historical": 0.8881494589149952,
+      "replay": 0.8872598754242063
+    },
+    "utc": {
+      "historical": "2026-10-16T08:57:58.963721+00:00",
+      "replay": "2026-10-16T10:55:36.163477+00:00"
+    }
+  },
+  "historical_report": "verification/n32_reserved_controller.json",
+  "historical_report_sha256": "00c41e71a3c4c22a0c2e44b97f9c444bc5963401b39494ec3e62ea2563454f60",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "fb5387c5d41001599306a0a61b7a281e04cf3dc02dc96670a9238bef19cd6604",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "ddabbbd813ffb6db2eec9dc34f254eed2247cdd11ba6d5fe49a8b5b9f74deaf2",
+      "old_sha256": "64ee91082072b2356f7a84336b7408bd4c22b324bec287009a2c2684479f9f57",
+      "path": "browser/02-twentysecond-final.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    },
+    {
+      "new_sha256": "84697b05e54b610ea66d4da91151c3c25fbdec880e2db5e7eebd2d65d23729c2",
+      "old_sha256": "84697b05e54b610ea66d4da91151c3c25fbdec880e2db5e7eebd2d65d23729c2",
+      "path": "browser/02-twentysecond-prompt.txt",
+      "transformation": "submitted mathematical prompt; appended browser chrome removed"
+    }
+  ]
+}

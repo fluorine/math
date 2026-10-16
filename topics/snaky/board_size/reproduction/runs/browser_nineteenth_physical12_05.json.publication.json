@@ -1,0 +1,49 @@
+{
+  "case": "browser_nineteenth_physical12_05",
+  "checker": "verification/browser_nineteenth_physical12_05.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "950513fff32dd56bc1a909460542487aaade3cffce1b86bf89fdb5d874e24d36",
+  "created_utc": "2026-10-16T10:55:34.654170+00:00",
+  "execution_field_differences": {
+    "created_utc": {
+      "historical": "2026-10-16T05:44:19.007927+00:00",
+      "replay": "2026-10-16T10:55:34.594713+00:00"
+    },
+    "elapsed_seconds": {
+      "historical": 0.5579097494482994,
+      "replay": 0.5192952090874314
+    },
+    "process_cpu_seconds": {
+      "historical": 0.538594,
+      "replay": 0.515752
+    }
+  },
+  "historical_report": "verification/browser-nineteenth-physical12-05-01.json",
+  "historical_report_sha256": "4ff192c91a7130bb21806fe470eb765221011f2e147fc3e4b5f4b9ef571a6c97",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "cbaedf6e9a51d447f9585f1bd6546bfbd43830c506eb0d163a17958b98fd1d68",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "9c4a0abf500236f5c8fb275bd9b66a023a33473ebb44984f541fbfe770fec8be",
+      "old_sha256": "58a32fc2329febfec52fe37755913b4352f7f8f70969e275399ca0f8a9a266b0",
+      "path": "browser/05-eighteenth-final.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    },
+    {
+      "new_sha256": "71d28ea06f19bcf610a2cb79b6d6f17f7a9e152c83c0f3ef53570b4c4743b8b4",
+      "old_sha256": "a5689231df0ce2fa892c9c821eae3ae09afc2008201b4a84a33649ecba9f34b8",
+      "path": "browser/05-nineteenth-final-section.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    },
+    {
+      "new_sha256": "71d28ea06f19bcf610a2cb79b6d6f17f7a9e152c83c0f3ef53570b4c4743b8b4",
+      "old_sha256": "94d3bf62b1556e3c8fb5c1e79ae339068ad22bcffeca660ae66a13b03fb4a180",
+      "path": "browser/05-nineteenth-final.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    }
+  ]
+}

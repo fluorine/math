@@ -1,0 +1,20 @@
+{"event": "cpu_exec_ready", "pid": 73067, "argv": ["/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean", "-j", "1", "-M", "512", "-R", "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/formal", "-o", "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/formal/.build/maker-closeout/lib/Snaky/C30Audit.olean", "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/formal/Snaky/C30Audit.lean"], "resolved_executable": "/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean", "inherited_cpu_limits": [9223372036854775807, 9223372036854775807], "applied_cpu_limits": [60, 60], "limit_units": "CPU seconds; soft and hard limits equal", "launcher_sha256": "0819f781e2cd2e3ce29e499ecacca46373219d8ab7cbe263c0a59a91cbea6278"}
+Snaky.C30Selected.selected_guards_win_in_ten :
+  Snaky.BlackWinsIn Snaky.C30Selected.guards 100 10 Snaky.C30Selected.initialMaker Snaky.C30Selected.initialBreaker
+Snaky.C30Selected.selected_contract :
+  Snaky.C30Selected.guards.length = 17 ∧
+    Snaky.C30Selected.core.length = 22 ∧
+      Snaky.C30Selected.core.Nodup ∧
+        Snaky.C30Selected.initialMaker.length = 9 ∧
+          Snaky.C30Selected.initialBreaker.length = 9 ∧
+            Snaky.C30Selected.initialMaker.Nodup ∧
+              Snaky.C30Selected.initialBreaker.Nodup ∧
+                (∀ (x : Nat),
+                    x ∈ Snaky.C30Selected.initialMaker →
+                      x < 100 ∧ ¬x ∈ Snaky.C30Selected.initialBreaker ∧ ¬x ∈ Snaky.C30Selected.core) ∧
+                  ∀ (x : Nat), x ∈ Snaky.C30Selected.initialBreaker → x < 100 ∧ ¬x ∈ Snaky.C30Selected.core
+'Snaky.SelectedAttack.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.C30Selected.tree_ok' depends on axioms: [propext, Quot.sound]
+'Snaky.C30Selected.selected_guards_win_in_ten' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.C30Selected.selected_contract' depends on axioms: [propext, Quot.sound]
+'Snaky.SelectedAttack.Controls.domino_wins' depends on axioms: [propext, Classical.choice, Quot.sound]

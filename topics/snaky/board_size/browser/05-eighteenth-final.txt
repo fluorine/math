@@ -1,0 +1,241 @@
+A complete conditional pairing defense: 31 fresh pairs
+
+The repaired 13-Maker/13-Breaker state admits a single disjoint pairing cover of every currently live physical Snaky.
+
+The matching below covers all 96 unassigned targets and every surviving responsibility of the three old pairs it replaces. It therefore gives a complete physical response policy from this exact state—not merely preservation of the 64-target assignment.
+
+This is a hand-derived certificate and proof for independent local checking. It has not yet received that independent acceptance, and it makes no empty-board claim.
+
+1. The matching
+
+Keep exactly the actual ownership supplied:
+
+\[ \begin{aligned} M_\star={}&\{11,21,31,32,37,44,45,46,47,57,67,75,84\},\\ B_\star={}&\{1,14,24,34,36,38,43,55,56,58,74,77,94\}. \end{aligned} \]
+
+Install
+
+\[ \boxed{ \begin{aligned} \Pi=\{& \{0,10\},\{2,12\},\{3,13\},\{4,15\},\{5,6\}, \{7,9\},\{8,17\},\\ &\{16,27\},\{18,28\},\{19,26\},\{25,35\},\{39,49\},\\ &\{40,50\},\{41,51\},\{42,52\},\{53,54\},\{59,69\},\\ &\{60,80\},\{61,81\},\{62,72\},\{63,64\},\{65,95\},\\ &\{66,76\},\{68,78\},\{70,71\},\{73,93\},\{82,83\},\\ &\{85,86\},\{88,89\},\{90,91\},\{96,97\} \}. \end{aligned} } \tag{1} \]
+
+Literal list:
+
+Platte tekst
+[
+ [0,10], [2,12], [3,13], [4,15], [5,6],
+ [7,9], [8,17], [16,27], [18,28], [19,26],
+ [25,35], [39,49], [40,50], [41,51], [42,52],
+ [53,54], [59,69], [60,80], [61,81], [62,72],
+ [63,64], [65,95], [66,76], [68,78], [70,71],
+ [73,93], [82,83], [85,86], [88,89], [90,91],
+ [96,97]
+]
+
+All 62 endpoints are distinct and avoid \(M_\star\cup B_\star\). The twelve physically fresh but unpaired cells are exactly
+
+\[ \boxed{\{20,22,23,29,30,33,48,79,87,92,98,99\}.} \tag{2} \]
+
+Thus the freshness count is
+
+\[ 26\text{ occupied}+62\text{ paired}+12\text{ unpaired}=100. \]
+Changes to the old five-pair assignment
+
+Retain
+
+\[ \{42,52\},\qquad\{53,54\}. \]
+
+Release
+
+\[ \boxed{\{12,22\},\qquad\{23,33\},\qquad\{30,41\}.} \tag{3} \]
+
+The remaining 29 pairs of \(\Pi\) are new. In particular, the separate \(30\!-\!41\) reservation is explicitly replaced—not silently borrowed. Section 3 accounts for all its surviving targets.
+
+The important freedom is that the old abstract pair contracts need not remain. For example, 12 is now paired with 2, and 41 with 51. The proof is against the full physical target family.
+
+2. Explicit coverage certificate for the 96 unassigned targets
+
+Number the 96 targets in your latest message
+
+\[ T_1,\ldots,T_{96} \]
+
+in exactly their displayed order. Thus
+
+\[ T_1=\{0,10,11,21,31,41\}, \]
+
+and
+
+\[ T_{96}=\{88,89,95,96,97,98\}. \]
+
+For every row below, the pair in the left column is a subset of every full six-cell target indexed in the right column.
+
+Pair of \(\Pi\)	Targets covered
+\(0\!-\!10\)	1
+\(2\!-\!12\)	2, 4
+\(3\!-\!13\)	5, 7
+\(4\!-\!15\)	3, 9
+\(5\!-\!6\)	6, 8, 10, 11
+\(7\!-\!9\)	12
+\(8\!-\!17\)	15, 16
+\(16\!-\!27\)	14, 22, 25
+\(18\!-\!28\)	21, 26, 27, 28
+\(19\!-\!26\)	24
+\(25\!-\!35\)	13, 23
+\(39\!-\!49\)	17, 41
+\(40\!-\!50\)	19, 20, 29, 30, 34, 35, 42, 43
+\(41\!-\!51\)	18, 31, 32, 33, 36, 37, 38, 44, 45, 46, 47
+\(42\!-\!52\)	Retained old responsibility; see Section 3
+\(53\!-\!54\)	Retained old responsibility
+\(59\!-\!69\)	48, 70
+\(60\!-\!80\)	52, 54
+\(61\!-\!81\)	51, 56, 57, 59
+\(62\!-\!72\)	55, 61, 62, 63
+\(63\!-\!64\)	49, 50, 53, 58, 65, 71, 72, 73, 74, 75
+\(65\!-\!95\)	66
+\(66\!-\!76\)	39, 67, 77
+\(68\!-\!78\)	40, 68, 69, 76
+\(70\!-\!71\)	78, 79
+\(73\!-\!93\)	60
+\(82\!-\!83\)	64, 80, 82, 85, 86, 87
+\(85\!-\!86\)	81, 84, 88, 89, 91, 93, 94
+\(88\!-\!89\)	83, 95, 96
+\(90\!-\!91\)	90
+\(96\!-\!97\)	92
+
+Every index from 1 through 96 occurs exactly once in this witness assignment.
+
+For clarity, several of the less immediate assignments are:
+
+\[ \begin{aligned} T_{24}&=\{16,17,18,19,25,26\} &&\supseteq\{19,26\},\\ T_{60}&=\{52,62,63,73,83,93\} &&\supseteq\{73,93\},\\ T_{66}&=\{54,64,65,75,85,95\} &&\supseteq\{65,95\},\\ T_{90}&=\{83,84,90,91,92,93\} &&\supseteq\{90,91\},\\ T_{92}&=\{84,85,95,96,97,98\} &&\supseteq\{96,97\}. \end{aligned} \]
+
+No projected target is used in this table. Every witness pair lies in the listed full physical Snaky.
+
+3. Complete accounting for the released old pairs
+
+It remains to ensure that replacing the three pairs in (3) does not expose previously assigned targets.
+
+The following table lists every currently live literal target containing one of those released pairs, together with a new covering pair. The old full-target enumeration is filtered using the current actual \(B_\star\); its earlier free-cell labels are not used. 
+Geplakte tekst
+
+Released pair	Currently live full target	New pair
+\(12\!-\!22\)	\(\{2,12,22,31,32,41\}\)	\(2\!-\!12\)
+\(12\!-\!22\)	\(\{3,12,13,22,32,42\}\)	\(3\!-\!13\)
+\(12\!-\!22\)	\(\{12,21,22,31,41,51\}\)	\(41\!-\!51\)
+\(12\!-\!22\)	\(\{12,22,32,41,42,51\}\)	\(41\!-\!51\)
+\(23\!-\!33\)	\(\{3,13,23,32,33,42\}\)	\(3\!-\!13\)
+\(23\!-\!33\)	\(\{23,32,33,42,52,62\}\)	\(42\!-\!52\)
+\(30\!-\!41\)	\(\{0,10,20,30,31,41\}\)	\(0\!-\!10\)
+\(30\!-\!41\)	\(\{10,20,30,40,41,51\}\)	\(41\!-\!51\)
+\(30\!-\!41\)	\(\{20,30,31,41,51,61\}\)	\(41\!-\!51\)
+\(30\!-\!41\)	\(\{30,40,41,51,61,71\}\)	\(41\!-\!51\)
+Geometric completeness of this short table
+
+For \(12\!-\!22\), the two cells lie in one column. A vertical copy can place them on its four-cell segment or its two-cell segment. After removing off-board copies and copies hit by \(B_\star\), precisely the four displayed targets remain. Horizontal copies through both cells are off-board or hit at 14 or 24.
+
+The same classification for \(23\!-\!33\) leaves precisely the two displayed live copies; the other in-board placements meet 24, 34, 36 or 43.
+
+For the diagonal pair \(30\!-\!41\), the four live vertical copies are exactly the displayed four. The in-board horizontal copy
+
+\[ \{30,31,41,42,43,44\} \]
+
+is dead at 43; the other horizontal possibilities extend off-board.
+
+Therefore no responsibility of a released pair is omitted.
+
+4. Why these two tables cover all 432 physical targets
+
+Let \(E\) be any contained physical Snaky.
+
+If
+
+\[ E\cap B_\star\ne\varnothing, \]
+
+it is permanently blocked.
+
+Otherwise, \(E\) also avoided the earlier nine-cell Breaker set, since that set is a subset of \(B_\star\). Hence it belongs to the original 194 live targets.
+
+By the accepted partition in your brief, such an \(E\) is either:
+
+one of the displayed 96 unassigned targets; or
+covered by one of the old five pairs.
+
+In the first case, Section 2 gives a pair of \(\Pi\) contained in \(E\).
+
+In the second case:
+
+if the covering old pair is \(42\!-\!52\) or \(53\!-\!54\), it remains in \(\Pi\);
+if it is one of the three released pairs, Section 3 gives its replacement witness.
+
+Thus
+
+\[ \boxed{ \forall E\in\mathcal E_{10},\qquad E\cap B_\star\ne\varnothing \quad\text{or}\quad \exists e\in\Pi:\ e\subseteq E. } \tag{4} \]
+
+This is the full physical covering assertion. It does not depend on any old selected guard remaining enforceable.
+
+5. Complete actual response policy
+
+From the stated Maker-turn position, use the fixed matching \(\Pi\) throughout. No subsequent switch is needed.
+
+After every actual Maker claim \(x\):
+
+Check physical victory immediately.
+If the board is exhausted without a Maker win, terminate.
+If \(x\) is an endpoint of a pair \(\{x,y\}\in\Pi\) and \(y\) is physically free, claim \(y\).
+Otherwise claim the least-ID physically free cell.
+
+The least-ID choice is just a deterministic legal filler. It has no geometric significance.
+
+Invariant
+
+At every completed physical round, for each \(e\in\Pi\),
+
+\[ \boxed{ e\cap B\ne\varnothing \quad\text{or}\quad e\cap(M\cup B)=\varnothing. } \tag{5} \]
+
+In words: every pair is either already Breaker-hit or still entirely free.
+
+Initially, every pair is entirely free.
+
+Suppose Maker claims \(x\).
+
+If \(x\) enters an unhit pair, its mate is fresh. The prescribed response hits that pair.
+If its pair was already Breaker-hit, or \(x\) was unpaired, any fresh filler is safe.
+A filler hitting another pair only makes that pair permanently Breaker-hit.
+
+All pairs other than those touched retain their status. Thus (5) is inductive.
+
+Immediate wins are impossible under this policy
+
+Consider a target \(E\) not initially blocked by \(B_\star\). By (4), it contains a pair \(e\in\Pi\).
+
+Immediately before any Maker claim:
+
+if \(e\) is Breaker-hit, \(E\) cannot become Maker-owned;
+otherwise both cells of \(e\) are free, and one Maker claim cannot acquire both.
+
+Therefore no Maker claim completes \(E\). This checks victory at the correct instant, before the response.
+
+Occupied replies and exhaustion
+
+The policy never claims an occupied mate. A pair whose mate is already Breaker-owned is already protective, so the policy uses a fresh filler instead.
+
+An unhit pair cannot have one endpoint already Maker-owned at a completed round, by (5). Thus the problematic case “fresh entry whose mate is old Maker-owned” cannot arise.
+
+If no fresh physical cell remains after a nonwinning Maker claim, no Breaker response is required. If the final physical claim is Breaker’s, the game ends safely as well. There is no pass or dummy history.
+
+Since each actual claim consumes a fresh physical cell, the finite-board game terminates. This proves a full conditional Breaker strategy, not just one-round coverage.
+
+6. What this closes
+
+The result supplies a physical pairing leaf for the exact accepted repair
+
+\[ 11/14,\quad21/43,\quad31/24,\quad32/1 \]
+
+from the earlier conditional state.
+
+It does not preserve the obsolete commitments \(12\!-\!22\), \(23\!-\!33\), or \(30\!-\!41\). Instead, it replaces them with a complete physical certificate whose released responsibilities are explicitly checked.
+
+The twelve unpaired cells in (2) carry no hidden reservation. Maker may claim them in any order; the policy handles those moves by actual fillers.
+
+Narrow conclusion
+\[ \boxed{ \text{The supplied repaired 13M/13B position has the explicit 31-pair defense (1).} } \]
+
+The remaining independent acceptance task is finite: verify pair freshness/disjointness, the 96-target witness table, and the ten released-pair incidences. The proof then gives every future physical response.
+
+This closes that named conditional node. It does not supply the other branches needed for an empty-board 10×10 strategy.

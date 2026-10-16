@@ -1,0 +1,16 @@
+Snaky.P52.not_blackWins : ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.P52.maker Snaky.P52.breaker
+'Snaky.P52.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.P52.missing_pair_rejected :
+  ¬Snaky.Breaker.OuterOK 100 Snaky.P52.maker Snaky.P52.breaker Snaky.P52.reserved
+      (Snaky.Breaker.mateOfPairs (List.filter (fun p => p != (0, 1)) Snaky.P52.outsidePairs))
+Snaky.P52.self_reply_rejected :
+  ¬Snaky.Breaker.SwitchOK Snaky.P52.reserved Snaky.P52.guards (fun u => if u = 16 then 16 else Snaky.P52.reply u)
+      Snaky.P52.localMate
+Snaky.P52Continued.Endpoint52.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.P52Continued.Endpoint52.maker
+      Snaky.P52Continued.Endpoint52.breaker
+'Snaky.P52Continued.Endpoint52.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.P52Continued.Endpoint53.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.P52Continued.Endpoint53.maker
+      Snaky.P52Continued.Endpoint53.breaker
+'Snaky.P52Continued.Endpoint53.not_blackWins' depends on axioms: [propext, Quot.sound]

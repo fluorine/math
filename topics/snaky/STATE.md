@@ -1,5 +1,35 @@
 # Research state
 
+Updated 16 October 2026. The 19- and 24-move publications remain complete and
+unchanged. The separate board-size research is complete and stopped at the
+user's request, with its verified results and remaining avenues collected in
+[board_size/README.md](board_size/README.md) and
+[board_size/FUTURE_RESEARCH.md](board_size/FUTURE_RESEARCH.md).
+
+The empty 14×14 Maker and empty 10×10 Breaker objectives remain **OPEN**.
+Conditional positions must not be presented as empty-board strategies. The
+18-move search remains checkpointed and paused; no 18-move result is claimed.
+No X post is requested. Final publication is authorized; no new broad search
+is part of this closeout.
+
+The final `Snaky.BoardSizeAudit` covers 2,455 modules and prints 41 axiom
+checks, all within `propext`, `Classical.choice` and `Quot.sound`. The complete
+imported environment also passed Lean 4.34.1 `leanchecker --fresh`; see the
+[final audit](formal/kernel-audit-board-size.json) and
+[fresh replay receipt](formal/kernel-fresh-board-size.json). All thirteen
+finite publication replays passed separately. Their scope is distinguished
+from the Lean theorems in the research handoff.
+
+All Snaky search, proof-checking and monitoring jobs owned by this work are
+stopped. No further browser question or Snaky automation is queued. Future
+research entries are saved proposals, not scheduled work. The local 18-move
+checkpoint `e8abb61` remains preserved on the research branches.
+
+The historical publication record follows. Its resource limits and active
+worktree descriptions refer to that earlier phase.
+
+---
+
 Updated 2026-10-15. **The 19-move result is complete, independently verified,
 fully checked by the Lean kernel, and reproduced byte for byte.** The proof
 covers both the empty infinite square board and the empty 17×17 board.

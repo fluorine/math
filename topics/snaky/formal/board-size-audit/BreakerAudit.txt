@@ -1,0 +1,33 @@
+Snaky.BreakerLRow.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 14 14 Snaky.snaky) 196 Snaky.BreakerLRow.maker Snaky.BreakerLRow.breaker
+'Snaky.BreakerLRow.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerLCap.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 14 14 Snaky.snaky) 196 Snaky.BreakerLCap.maker Snaky.BreakerLCap.breaker
+'Snaky.BreakerLCap.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerS11.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.BreakerS11.maker Snaky.BreakerS11.breaker
+'Snaky.BreakerS11.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerS13.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.BreakerS13.maker Snaky.BreakerS13.breaker
+'Snaky.BreakerS13.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerPostM31.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.BreakerPostM31.maker Snaky.BreakerPostM31.breaker
+'Snaky.BreakerPostM31.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerP53Leaf.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.BreakerP53Leaf.maker Snaky.BreakerP53Leaf.breaker
+'Snaky.BreakerP53Leaf.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerC30.not_blackWins (z : Nat) (hz : z ∈ Snaky.BreakerC30.entries) :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 (z :: Snaky.BreakerC30.maker₀) Snaky.BreakerC30.breaker
+'Snaky.BreakerC30.not_blackWins' depends on axioms: [propext, Classical.choice, Quot.sound]
+Snaky.BreakerN33.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 14 14 Snaky.snaky) 196 Snaky.BreakerN33.maker Snaky.BreakerN33.breaker
+'Snaky.BreakerN33.not_blackWins' depends on axioms: [propext, Classical.choice, Quot.sound]
+Snaky.BreakerN32.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 14 14 Snaky.snaky) 196 Snaky.BreakerN32.maker Snaky.BreakerN32.breaker
+'Snaky.BreakerN32.not_blackWins' depends on axioms: [propext, Classical.choice, Quot.sound]
+Snaky.BreakerAdmission35.not_blackWins (u : Nat) (hu : u ∈ Snaky.BreakerAdmission35.entries) :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 (Snaky.BreakerAdmission35.maker u)
+      Snaky.BreakerAdmission35.breaker
+'Snaky.BreakerAdmission35.not_blackWins' depends on axioms: [propext, Quot.sound]
+'Snaky.Breaker.product_not_blackWins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.Breaker.partial_matching_not_blackWins' depends on axioms: [propext, Quot.sound]

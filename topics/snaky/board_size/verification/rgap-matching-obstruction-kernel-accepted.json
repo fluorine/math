@@ -1,0 +1,41 @@
+{
+  "all_children_peak_rss_bytes": 428916736,
+  "axioms": [
+    "propext"
+  ],
+  "elapsed_guard_seconds": 0.6566176246851683,
+  "events": [],
+  "execution": {
+    "path": "verification/rgap-matching-obstruction-kernel-01.execution04.json",
+    "sha256": "5e1a379c58cab43161d283cadd82b3cced6413995fb141205ab738c2e81b46d0"
+  },
+  "guard_log": {
+    "path": "verification/rgap-matching-obstruction-kernel-01.guard04.log",
+    "sha256": "10c4f082c7ff1142e82adda9f494aa7682a04e92ca4217bb2a269b4df888d283"
+  },
+  "limits": {
+    "cpu_seconds": 10,
+    "lean_memory_mb": 512,
+    "rss_mib": 650,
+    "threads": 1,
+    "wall_seconds": 30
+  },
+  "olean": {
+    "path": "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/../formal/.build/rgap-obstruction/RGapMatchingObstruction.olean",
+    "sha256": "f0f76b28c15eb80e9431ec4481e86f08ed275114b904b4da9e05862843a1b429"
+  },
+  "prior_attempts_preserved": {
+    "01": "RSS cap150MiB, no diagnostics",
+    "02": "RSS cap350MiB, no diagnostics",
+    "03": "normal compiler exit1; named parameters removed by rfl elaboration; no accepted theorem"
+  },
+  "sampled_peak_rss_bytes": 419987456,
+  "schema": "snaky-rgap-matching-obstruction-kernel-v1",
+  "scope": "No globally fixed-point-free involution on Nat protects all five literal guards. Partners outside the nine labels are allowed. Static matching only; no adaptive or physical winner claim.",
+  "source": {
+    "path": "../formal/Snaky/RGapMatchingObstruction.lean",
+    "sha256": "972e526c3eeb2ed51053d2351fb0396a13048560035a3e84ff9ccab22a7d6eb4"
+  },
+  "status": "kernel_accepted",
+  "theorem": "Snaky.RGapMatchingObstruction.no_static_matching"
+}

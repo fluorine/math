@@ -1,0 +1,72 @@
+{
+  "all_children_peak_rss_bytes": 21774336,
+  "command": [
+    "/usr/bin/nice",
+    "-n",
+    "19",
+    "/opt/homebrew/Cellar/python@3.12/3.12.12_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/breaker/cpu_exec.py",
+    "--cpu-seconds",
+    "5",
+    "--",
+    "/opt/homebrew/Cellar/python@3.12/3.12.12_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "-c",
+    "import json,sys,tempfile,hashlib;from pathlib import Path;import reproduce as r\nm=json.loads(r.MANIFEST.read_text());f=next(x for x in m['files'] if x['path'].endswith('.py'));f['publication_sha256']='0'*64\nwith tempfile.TemporaryDirectory() as t:\n p=Path(t)/'inputs.json';p.write_text(json.dumps(m));r.MANIFEST=p;sys.argv=['reproduce.py',m['checks'][0]['name'],'--output',str(Path(t)/'unexpected.json')]\n try:r.main();raise AssertionError('changed code pin accepted')\n except ValueError as e:\n  assert str(e)=='changed input: '+f['path'];out={'status':'passed','control':'changed code pin rejected before audit','changed_path':f['path'],'reason':str(e),'no_report_written':not (Path(t)/'unexpected.json').exists(),'runner_sha256':hashlib.sha256(Path(r.__file__).read_bytes()).hexdigest()};assert out['no_report_written'];Path('reproduction/wrapper-negative-control.json').write_text(json.dumps(out,indent=2)+'\\n');print(json.dumps(out))"
+  ],
+  "elapsed_seconds": 0.22518412489444017,
+  "events": [],
+  "exit_code": 0,
+  "final_swapout_total": 19818058,
+  "guard_sha256": "3850867fc8cb761e7a6958d1b4ea66938afdea263fb8dcd90dbff6f5a7306fe4",
+  "initial_global_sample": {
+    "cpu_idle_percent": 32.87,
+    "reduce_search_concurrency": true,
+    "sampler_pid": 53736,
+    "summary": [
+      "Processes: 484 total, 4 running, 480 sleeping, 3837 threads ",
+      "2026/10/16 12:54:56",
+      "Load Avg: 7.10, 8.28, 7.76 ",
+      "CPU usage: 47.93% user, 19.19% sys, 32.87% idle ",
+      "SharedLibs: 300M resident, 80M data, 70M linkedit.",
+      "MemRegions: 0 total, 0B resident, 46M private, 1368M shared.",
+      "PhysMem: 15G used (2428M wired, 6641M compressor), 84M unused.",
+      "VM: 241T vsize, 5361M framework vsize, 14726806(456) swapins, 19818058(0) swapouts.",
+      "Networks: packets: 2523562638/1729G in, 1942146487/350G out.",
+      "Disks: 1248914469/129T read, 837027393/18T written."
+    ],
+    "swapin_delta": 456,
+    "swapin_since_previous_sample": 3271,
+    "swapin_total": 14726806,
+    "swapout_delta": 0,
+    "swapout_since_previous_sample": 2820,
+    "swapout_total": 19818058,
+    "utc": "2026-10-16T10:54:56.854556+00:00"
+  },
+  "initial_memory_free_percent": 35,
+  "initial_swapout_total": 19818058,
+  "log": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/execution/wrapper-negative-control.guard01.log",
+  "page_size": 16384,
+  "pid": 84109,
+  "rss_cap_bytes": 104857600,
+  "sampled_peak_rss_bytes": 1441792,
+  "samples": [
+    {
+      "cpu_idle_percent": 32.87,
+      "elapsed_seconds": 0.0001000426709651947,
+      "global_sample_utc": "2026-10-16T10:54:56.854556+00:00",
+      "memory_free_percent": 35,
+      "rss_bytes": 1441792,
+      "swapout_since_direct_sample": 0,
+      "swapout_total": 19818058
+    }
+  ],
+  "schema": "snaky-external-run-guard-v1",
+  "started_utc": "2026-10-16T10:55:03.134772+00:00",
+  "status": "finished",
+  "supervisor_pid": 84104,
+  "swap_burst_bytes": 67108864,
+  "wall_seconds": 30.0,
+  "watcher": "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/resource-samples-20261015.jsonl"
+}

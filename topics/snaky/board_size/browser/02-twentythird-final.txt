@@ -1,0 +1,2635 @@
+New root attack: 
+𝑀
+(
+12
+,
+6
+)
+M(12,6)
+
+At either 
+𝑁
+30
+N30 or 
+𝑁
+31
+N31, play
+
+𝑀
+(
+12
+,
+6
+)
+.
+M(12,6).
+	​
+
+
+There is a complete ordinary winning card against 119 of the 135 replies at 
+𝑁
+30
+N30 and 117 of the 133 replies at 
+𝑁
+31
+N31. Its remaining frontier consists of the same 16 explicitly listed replies at both positions.
+
+In particular,
+
+𝑀
+(
+12
+,
+6
+)
+/
+𝐵
+(
+12
+,
+4
+)
+ is Maker-winning at both parents
+.
+M(12,6)/B(12,4) is Maker-winning at both parents.
+	​
+
+
+That child does not merely lack a static pairing: the forcing mechanism below defeats unrestricted subsequent Breaker play.
+
+I also obtain a six-cell defensive component for the left-side restoration from 
+𝑁
+31
+N31 to 
+𝑁
+30
+N30. It covers every entry into that component, rather than assuming the arrow 
+𝑀
+(
+4
+,
+10
+)
+/
+𝐵
+(
+4
+,
+11
+)
+M(4,10)/B(4,11).
+
+These results do not yet settle either parent. The attachment’s distinction between the accepted 
+𝑁
+33
+N33 defense and the pending 
+𝑁
+32
+N32 proposal remains unchanged. 
+Geplakte tekst
+
+1. The Maker card: owned requirements and fresh support
+
+The card requires only these seven already-owned Maker cells:
+
+𝑂
+=
+{
+(
+9
+,
+8
+)
+,
+(
+10
+,
+6
+)
+,
+(
+10
+,
+7
+)
+,
+(
+10
+,
+8
+)
+,
+(
+10
+,
+9
+)
+,
+(
+12
+,
+10
+)
+,
+(
+13
+,
+6
+)
+}
+.
+O={(9,8),(10,6),(10,7),(10,8),(10,9),(12,10),(13,6)}.
+	​
+
+
+They belong to both supplied Maker sets.
+
+Use the following names for initially free cells:
+
+\begin{array}{c|c@{\qquad}c|c} q&(12,6)&X&(11,5)\\ Y&(11,6)&r&(13,5)\\ t&(14,5)&s&(13,7)\\ e&(14,7)&k&(12,8)\\ j&(12,7)&z&(13,4)\\ d&(12,9)&a&(11,8)\\ b&(13,8)&h&(14,9)\\ g&(14,8)&c&(13,9)\\ i&(14,10)&& \end{array}
+
+Let
+
+	
+𝐸
+=
+{
+𝑋
+,
+𝑌
+,
+𝑟
+,
+𝑡
+,
+𝑠
+,
+𝑒
+,
+𝑘
+,
+𝑗
+,
+𝑧
+,
+𝑑
+,
+𝑎
+,
+𝑏
+,
+ℎ
+,
+𝑔
+,
+𝑐
+,
+𝑖
+}
+.
+		
+(1)
+E={X,Y,r,t,s,e,k,j,z,d,a,b,h,g,c,i}.
+(1)
+
+Thus the complete fresh support is 
+{
+𝑞
+}
+∪
+𝐸
+{q}∪E, containing 17 cells.
+
+After the root 
+𝑀
+𝑞
+Mq, the winning card applies whenever Breaker’s reply 
+𝛽
+β satisfies
+
+	
+𝛽
+∉
+𝐸
+.
+		
+(2)
+β∈
+/
+E.
+	​
+
+(2)
+
+The cell 
+𝛽
+β remains an actual permanent Breaker stone throughout the argument. No continuation uses it.
+
+2. All ten full physical witnesses
+
+Here are the complete literal targets used by the card. The body and hook descriptions also establish their Snaky geometry.
+
+Name	Full six-cell target	Body and hook
+
+𝑇
+𝑋
+T
+X
+	​
+
+	
+{
+(
+10
+,
+6
+)
+,
+(
+10
+,
+7
+)
+,
+(
+10
+,
+8
+)
+,
+(
+10
+,
+9
+)
+,
+𝑋
+,
+𝑌
+}
+{(10,6),(10,7),(10,8),(10,9),X,Y}	Column 10, rows 6–9; hook 
+𝑋
+,
+𝑌
+X,Y.
+
+𝑇
+𝑡
+T
+t
+	​
+
+	
+{
+(
+10
+,
+6
+)
+,
+𝑌
+,
+𝑞
+,
+(
+13
+,
+6
+)
+,
+𝑟
+,
+𝑡
+}
+{(10,6),Y,q,(13,6),r,t}	Row 6, columns 10–13; hook 
+𝑟
+,
+𝑡
+r,t.
+
+𝑇
+𝑒
+T
+e
+	​
+
+	
+{
+(
+10
+,
+6
+)
+,
+𝑌
+,
+𝑞
+,
+(
+13
+,
+6
+)
+,
+𝑠
+,
+𝑒
+}
+{(10,6),Y,q,(13,6),s,e}	Row 6, columns 10–13; hook 
+𝑠
+,
+𝑒
+s,e.
+
+𝑇
+𝑧
+T
+z
+	​
+
+	
+{
+𝑧
+,
+𝑟
+,
+(
+13
+,
+6
+)
+,
+𝑠
+,
+𝑗
+,
+𝑘
+}
+{z,r,(13,6),s,j,k}	Column 13, rows 4–7; hook 
+𝑗
+,
+𝑘
+j,k.
+
+𝑇
+𝑑
+T
+d
+	​
+
+	
+{
+𝑗
+,
+𝑘
+,
+𝑑
+,
+(
+12
+,
+10
+)
+,
+(
+13
+,
+6
+)
+,
+𝑠
+}
+{j,k,d,(12,10),(13,6),s}	Column 12, rows 7–10; hook 
+(
+13
+,
+6
+)
+,
+𝑠
+(13,6),s.
+
+𝑇
+𝑎
+T
+a
+	​
+
+	
+{
+(
+9
+,
+8
+)
+,
+(
+10
+,
+8
+)
+,
+𝑎
+,
+𝑘
+,
+𝑗
+,
+𝑠
+}
+{(9,8),(10,8),a,k,j,s}	Row 8, columns 9–12; hook 
+𝑗
+,
+𝑠
+j,s.
+
+𝑇
+𝑏
+𝑑
+T
+bd
+	​
+
+	
+{
+𝑟
+,
+(
+13
+,
+6
+)
+,
+𝑠
+,
+𝑏
+,
+𝑘
+,
+𝑑
+}
+{r,(13,6),s,b,k,d}	Column 13, rows 5–8; hook 
+𝑘
+,
+𝑑
+k,d.
+
+𝑇
+𝑔
+ℎ
+T
+gh
+	​
+
+	
+{
+𝑟
+,
+(
+13
+,
+6
+)
+,
+𝑠
+,
+𝑏
+,
+𝑔
+,
+ℎ
+}
+{r,(13,6),s,b,g,h}	Column 13, rows 5–8; hook 
+𝑔
+,
+ℎ
+g,h.
+
+𝑇
+𝐿
+T
+L
+	​
+
+	
+{
+(
+10
+,
+8
+)
+,
+𝑎
+,
+𝑘
+,
+𝑏
+,
+𝑐
+,
+ℎ
+}
+{(10,8),a,k,b,c,h}	Row 8, columns 10–13; hook 
+𝑐
+,
+ℎ
+c,h.
+
+𝑇
+𝑅
+T
+R
+	​
+
+	
+{
+(
+13
+,
+6
+)
+,
+𝑠
+,
+𝑏
+,
+𝑐
+,
+ℎ
+,
+𝑖
+}
+{(13,6),s,b,c,h,i}	Column 13, rows 6–9; hook 
+ℎ
+,
+𝑖
+h,i.
+
+Every cell is contained in the fixed board. Every required old cell belongs to 
+𝑂
+O. In particular, this mechanism uses the genuinely free cell 
+𝑌
+=
+(
+11
+,
+6
+)
+Y=(11,6); it is unavailable at 
+𝑁
+32
+N32, where 
+𝑌
+Y is already Breaker-owned.
+
+3. Complete continuation against every reply satisfying (2)
+
+After
+
+𝑀
+𝑞
+/
+𝐵
+𝛽
+,
+𝛽
+∉
+𝐸
+,
+Mq/Bβ,β∈
+/
+E,
+
+proceed as follows. At every step, an already completed Maker target ends the game immediately.
+
+3.1 Three immediate forced responses
+
+Play 
+𝑀
+𝑌
+MY.
+
+The only missing cell of 
+𝑇
+𝑋
+T
+X
+	​
+
+ is now 
+𝑋
+X. Therefore:
+
+𝑀
+𝑌
+⟹
+{
+𝐵
+𝑋
+,
+	
+continue
+,
+
+
+any other reply
+,
+	
+𝑀
+𝑋
+ wins on 
+𝑇
+𝑋
+.
+MY⟹{
+BX,
+any other reply,
+	​
+
+continue,
+MX wins on T
+X
+	​
+
+.
+	​
+
+
+After the actual response 
+𝐵
+𝑋
+BX, play 
+𝑀
+𝑟
+Mr. The target 
+𝑇
+𝑡
+T
+t
+	​
+
+ is missing only 
+𝑡
+t:
+
+𝑀
+𝑟
+⟹
+{
+𝐵
+𝑡
+,
+	
+continue
+,
+
+
+any other reply
+,
+	
+𝑀
+𝑡
+ wins on 
+𝑇
+𝑡
+.
+Mr⟹{
+Bt,
+any other reply,
+	​
+
+continue,
+Mt wins on T
+t
+	​
+
+.
+	​
+
+
+After 
+𝐵
+𝑡
+Bt, play 
+𝑀
+𝑠
+Ms. The target 
+𝑇
+𝑒
+T
+e
+	​
+
+ is missing only 
+𝑒
+e:
+
+𝑀
+𝑠
+⟹
+{
+𝐵
+𝑒
+,
+	
+continue
+,
+
+
+any other reply
+,
+	
+𝑀
+𝑒
+ wins on 
+𝑇
+𝑒
+.
+Ms⟹{
+Be,
+any other reply,
+	​
+
+continue,
+Me wins on T
+e
+	​
+
+.
+	​
+
+
+Thus every nonterminal continuation has the exact added colors
+
+	
+𝑀
+a
+d
+d
+=
+{
+𝑞
+,
+𝑌
+,
+𝑟
+,
+𝑠
+}
+,
+𝐵
+a
+d
+d
+=
+{
+𝛽
+,
+𝑋
+,
+𝑡
+,
+𝑒
+}
+.
+		
+(3)
+M
+add
+	​
+
+={q,Y,r,s},B
+add
+	​
+
+={β,X,t,e}.
+(3)
+3.2 The acquisition of 
+𝑘
+=
+(
+12
+,
+8
+)
+k=(12,8)
+
+Play 
+𝑀
+𝑘
+Mk, and call Breaker’s actual reply 
+𝜂
+η.
+
+If 
+𝜂
+≠
+𝑗
+η
+
+=j
+
+Play 
+𝑀
+𝑗
+Mj.
+
+The three targets 
+𝑇
+𝑧
+,
+𝑇
+𝑑
+,
+𝑇
+𝑎
+T
+z
+	​
+
+,T
+d
+	​
+
+,T
+a
+	​
+
+ now have respective winning cells
+
+𝑧
+,
+𝑑
+,
+𝑎
+.
+z,d,a.
+
+The preceding reply 
+𝜂
+η could have occupied at most one of these three cells. Breaker’s next reply 
+𝜃
+θ can occupy at most one more.
+
+Choose any cell
+
+𝑥
+∈
+{
+𝑧
+,
+𝑑
+,
+𝑎
+}
+∖
+{
+𝜂
+,
+𝜃
+}
+x∈{z,d,a}∖{η,θ}
+
+and play 
+𝑀
+𝑥
+Mx. This wins on 
+𝑇
+𝑧
+,
+𝑇
+𝑑
+,
+T
+z
+	​
+
+,T
+d
+	​
+
+, or 
+𝑇
+𝑎
+T
+a
+	​
+
+, respectively.
+
+For a deterministic rule, choose the first available cell in the order 
+𝑧
+,
+𝑑
+,
+𝑎
+z,d,a.
+
+The exact terminal colors in this branch are
+
+𝑀
+t
+e
+r
+m
+=
+𝑀
+b
+a
+s
+e
+∪
+{
+𝑞
+,
+𝑌
+,
+𝑟
+,
+𝑠
+,
+𝑘
+,
+𝑗
+,
+𝑥
+}
+,
+M
+term
+	​
+
+=M
+base
+	​
+
+∪{q,Y,r,s,k,j,x},
+	
+𝐵
+t
+e
+r
+m
+=
+𝐵
+b
+a
+s
+e
+∪
+{
+𝛽
+,
+𝑋
+,
+𝑡
+,
+𝑒
+,
+𝜂
+,
+𝜃
+}
+.
+		
+(4)
+B
+term
+	​
+
+=B
+base
+	​
+
+∪{β,X,t,e,η,θ}.
+(4)
+
+All outside replies in (4) remain present.
+
+If 
+𝜂
+=
+𝑗
+η=j
+
+Continue with Section 3.3.
+
+Consequently, 
+𝐵
+𝑗
+Bj is the only response to 
+𝑀
+𝑘
+Mk that avoids the displayed short win. This is a proved forcing choice, not an assumed fixed response.
+
+3.3 Two further immediate responses, then a double threat
+
+After the actual prefix
+
+𝑀
+𝑞
+/
+𝐵
+𝛽
+,
+ 
+𝑀
+𝑌
+/
+𝐵
+𝑋
+,
+ 
+𝑀
+𝑟
+/
+𝐵
+𝑡
+,
+ 
+𝑀
+𝑠
+/
+𝐵
+𝑒
+,
+ 
+𝑀
+𝑘
+/
+𝐵
+𝑗
+,
+Mq/Bβ, MY/BX, Mr/Bt, Ms/Be, Mk/Bj,
+
+play 
+𝑀
+𝑏
+Mb.
+
+The target 
+𝑇
+𝑏
+𝑑
+T
+bd
+	​
+
+ is missing only 
+𝑑
+d, so Breaker must take 
+𝐵
+𝑑
+Bd, or Maker takes 
+𝑑
+d and wins.
+
+After 
+𝐵
+𝑑
+Bd, play 
+𝑀
+ℎ
+Mh.
+
+The target 
+𝑇
+𝑔
+ℎ
+T
+gh
+	​
+
+ is missing only 
+𝑔
+g, so Breaker must take 
+𝐵
+𝑔
+Bg, or Maker takes 
+𝑔
+g and wins.
+
+After 
+𝐵
+𝑔
+Bg, play 
+𝑀
+𝑐
+Mc. This creates two distinct immediate wins:
+
+𝑀
+𝑎
+ completes 
+𝑇
+𝐿
+,
+𝑀
+𝑖
+ completes 
+𝑇
+𝑅
+.
+Ma completes T
+L
+	​
+
+,Mi completes T
+R
+	​
+
+.
+
+If Breaker’s final reply is 
+𝑎
+a, take 
+𝑖
+i. For every other reply, take 
+𝑎
+a.
+
+The exact terminal colors on this longest branch are
+
+𝑀
+t
+e
+r
+m
+=
+𝑀
+b
+a
+s
+e
+∪
+{
+𝑞
+,
+𝑌
+,
+𝑟
+,
+𝑠
+,
+𝑘
+,
+𝑏
+,
+ℎ
+,
+𝑐
+,
+𝜉
+}
+,
+M
+term
+	​
+
+=M
+base
+	​
+
+∪{q,Y,r,s,k,b,h,c,ξ},
+	
+𝐵
+t
+e
+r
+m
+=
+𝐵
+b
+a
+s
+e
+∪
+{
+𝛽
+,
+𝑋
+,
+𝑡
+,
+𝑒
+,
+𝑗
+,
+𝑑
+,
+𝑔
+,
+𝛿
+}
+,
+		
+(5)
+B
+term
+	​
+
+=B
+base
+	​
+
+∪{β,X,t,e,j,d,g,δ},
+(5)
+
+where
+
+𝜉
+=
+{
+𝑖
+,
+	
+𝛿
+=
+𝑎
+,
+
+
+𝑎
+,
+	
+𝛿
+≠
+𝑎
+.
+ξ={
+i,
+a,
+	​
+
+δ=a,
+δ
+
+=a.
+	​
+
+
+The terminal full witness is 
+𝑇
+𝑅
+T
+R
+	​
+
+ or 
+𝑇
+𝐿
+T
+L
+	​
+
+, respectively.
+
+Why no outside reply is omitted
+
+Before the 
+𝑘
+k-step, every nonprescribed reply loses immediately on the stated full target. At the 
+𝑘
+k-step, every reply other than 
+𝑗
+j is handled by the three-completion argument. After 
+𝐵
+𝑗
+Bj, every deviation from 
+𝐵
+𝑑
+,
+𝐵
+𝑔
+Bd,Bg loses immediately. The final double threat covers every legal reply.
+
+No reply is removed from the board, and no cell’s availability is inferred from an abstract outside-response symbol.
+
+4. Exact unresolved root frontier
+
+The card leaves precisely the following replies unresolved by this construction:
+
+Reply	Coordinate	Reply	Coordinate
+
+𝑋
+X	
+(
+11
+,
+5
+)
+(11,5)	
+𝑌
+Y	
+(
+11
+,
+6
+)
+(11,6)
+
+𝑎
+a	
+(
+11
+,
+8
+)
+(11,8)	
+𝑗
+j	
+(
+12
+,
+7
+)
+(12,7)
+
+𝑘
+k	
+(
+12
+,
+8
+)
+(12,8)	
+𝑑
+d	
+(
+12
+,
+9
+)
+(12,9)
+
+𝑧
+z	
+(
+13
+,
+4
+)
+(13,4)	
+𝑟
+r	
+(
+13
+,
+5
+)
+(13,5)
+
+𝑠
+s	
+(
+13
+,
+7
+)
+(13,7)	
+𝑏
+b	
+(
+13
+,
+8
+)
+(13,8)
+
+𝑐
+c	
+(
+13
+,
+9
+)
+(13,9)	
+𝑡
+t	
+(
+14
+,
+5
+)
+(14,5)
+
+𝑒
+e	
+(
+14
+,
+7
+)
+(14,7)	
+𝑔
+g	
+(
+14
+,
+8
+)
+(14,8)
+
+ℎ
+h	
+(
+14
+,
+9
+)
+(14,9)	
+𝑖
+i	
+(
+14
+,
+10
+)
+(14,10)
+
+For each 
+𝛽
+β in this table, the exact unresolved physical state is
+
+	
+𝑀
+′
+=
+𝑀
+b
+a
+s
+e
+∪
+{
+(
+12
+,
+6
+)
+}
+,
+𝐵
+′
+=
+𝐵
+b
+a
+s
+e
+∪
+{
+𝛽
+}
+,
+Maker to move
+.
+		
+(6)
+M
+′
+=M
+base
+	​
+
+∪{(12,6)},B
+′
+=B
+base
+	​
+
+∪{β},Maker to move.
+	​
+
+(6)
+
+At 
+𝑁
+30
+N30, these are sixteen 31+31 states. At 
+𝑁
+31
+N31, they are sixteen 32+32 states. Equation (6) retains every supplied old color and uniquely specifies every state; no symmetry identification is made.
+
+The counting is therefore:
+
+𝑁
+30
+:
+135
+−
+16
+=
+119
+ winning replies
+,
+N30:135−16=119 winning replies,
+𝑁
+31
+:
+133
+−
+16
+=
+117
+ winning replies
+.
+N31:133−16=117 winning replies.
+
+This is the frontier of this card, not a claim that all sixteen exceptions are defensible or that the frontier is minimal.
+
+A concrete failure of the naive 
+𝑁
+32
+N32 lift
+
+Simply adjoining the pair 
+{
+𝑋
+,
+𝑌
+}
+{X,Y} to the old 
+𝑁
+32
+N32 mechanism is unsound. Its inherited responses allow
+
+𝑀
+𝑞
+/
+𝐵
+(
+12
+,
+5
+)
+,
+𝑀
+𝑟
+/
+𝐵
+𝑠
+,
+𝑀
+𝑡
+/
+𝐵
+(
+14
+,
+6
+)
+,
+𝑀
+𝑌
+,
+Mq/B(12,5),Mr/Bs,Mt/B(14,6),MY,
+
+and the last move completes the literal target
+
+𝑇
+𝑡
+=
+{
+(
+10
+,
+6
+)
+,
+(
+11
+,
+6
+)
+,
+(
+12
+,
+6
+)
+,
+(
+13
+,
+6
+)
+,
+(
+13
+,
+5
+)
+,
+(
+14
+,
+5
+)
+}
+.
+T
+t
+	​
+
+={(10,6),(11,6),(12,6),(13,6),(13,5),(14,5)}.
+	​
+
+
+That witness has four initially missing cells, and the line acquires exactly those four. The problem is not the forced pair 
+𝑋
+𝑌
+XY: 
+𝑇
+𝑡
+T
+t
+	​
+
+ does not contain 
+𝑋
+X.
+
+The longer card above strengthens this policy counterexample to an unrestricted conditional win for every initial reply outside (1), including both 
+(
+12
+,
+5
+)
+(12,5) and 
+(
+12
+,
+4
+)
+(12,4).
+
+5. A separate six-cell component for the 
+𝑁
+30
+N30 left side
+
+The left restoration has a compact repair independent of the new upper-right attack.
+
+Write
+
+\begin{array}{c|c@{\qquad}c|c} A_0&(4,10)&A_1&(4,11)\\ U&(2,10)&V&(3,10)\\ W&(3,9)&Z&(3,11). \end{array}
+
+Reserve
+
+𝐿
+=
+{
+𝐴
+0
+,
+𝐴
+1
+,
+𝑈
+,
+𝑉
+,
+𝑊
+,
+𝑍
+}
+.
+L={A
+0
+	​
+
+,A
+1
+	​
+
+,U,V,W,Z}.
+
+Release the two supplied pairing domains
+
+	
+𝑈
+𝑉
+=
+{
+(
+2
+,
+10
+)
+,
+(
+3
+,
+10
+)
+}
+,
+𝑊
+𝑍
+=
+{
+(
+3
+,
+9
+)
+,
+(
+3
+,
+11
+)
+}
+.
+		
+(7)
+UV={(2,10),(3,10)},WZ={(3,9),(3,11)}.
+(7)
+
+They occur literally in the supplied 
+𝑃
+P. 
+Geplakte tekst
+
+The component protects the four traces
+
+	
+𝐴
+0
+𝐴
+1
+,
+𝐴
+0
+𝑈
+𝑉
+,
+𝑊
+𝑉
+𝑍
+,
+𝐴
+1
+𝑉
+𝑍
+.
+		
+(8)
+A
+0
+	​
+
+A
+1
+	​
+
+,A
+0
+	​
+
+UV,WVZ,A
+1
+	​
+
+VZ.
+	​
+
+(8)
+
+Juxtaposition here denotes a set, not an ordered word.
+
+5.1 Complete first-entry table
+
+While 
+𝐿
+L is untouched, moves assigned to disjoint components leave this component untouched.
+
+On its first Maker entry, use:
+
+Maker entry	Actual Breaker claim	Permanent local pairs
+
+𝐴
+0
+A
+0
+	​
+
+	
+𝐴
+1
+A
+1
+	​
+
+	
+𝑈
+𝑉
+,
+ 
+𝑊
+𝑍
+UV, WZ
+
+𝐴
+1
+A
+1
+	​
+
+	
+𝐴
+0
+A
+0
+	​
+
+	
+𝑉
+𝑍
+VZ
+
+𝑈
+U	
+𝐴
+0
+A
+0
+	​
+
+	
+𝑉
+𝑍
+VZ
+
+𝑉
+V	
+𝐴
+1
+A
+1
+	​
+
+	
+𝐴
+0
+𝑈
+,
+ 
+𝑊
+𝑍
+A
+0
+	​
+
+U, WZ
+
+𝑊
+W	
+𝐴
+1
+A
+1
+	​
+
+	
+𝐴
+0
+𝑈
+,
+ 
+𝑉
+𝑍
+A
+0
+	​
+
+U, VZ
+
+𝑍
+Z	
+𝐴
+1
+A
+1
+	​
+
+	
+𝐴
+0
+𝑈
+,
+ 
+𝑊
+𝑉
+A
+0
+	​
+
+U, WV
+
+Every pair is fresh at commitment and avoids the actual Maker entry and Breaker claim. Each row either physically blocks a trace in (8) or contains a pair in it.
+
+An unmatched global filler may activate the untouched component by the actual claim 
+𝐵
+𝐴
+1
+BA
+1
+	​
+
+, followed by commitment to 
+𝑈
+𝑉
+,
+𝑊
+𝑍
+UV,WZ.
+
+After commitment, use ordinary mate responses. Any subsequent filler is a real fresh claim.
+
+5.2 Physical coverage of the released domains
+
+Keep these five supplied pairs unchanged:
+
+	
+𝐹
+1
+	
+=
+{
+(
+2
+,
+8
+)
+,
+(
+2
+,
+9
+)
+}
+,
+
+
+𝐹
+2
+	
+=
+{
+(
+2
+,
+11
+)
+,
+(
+2
+,
+12
+)
+}
+,
+
+
+𝐹
+3
+	
+=
+{
+(
+3
+,
+7
+)
+,
+(
+3
+,
+8
+)
+}
+,
+
+
+𝐹
+4
+	
+=
+{
+(
+3
+,
+12
+)
+,
+(
+3
+,
+13
+)
+}
+,
+
+
+𝐹
+5
+	
+=
+{
+(
+4
+,
+12
+)
+,
+(
+5
+,
+12
+)
+}
+.
+		
+(9)
+F
+1
+	​
+
+F
+2
+	​
+
+F
+3
+	​
+
+F
+4
+	​
+
+F
+5
+	​
+
+	​
+
+={(2,8),(2,9)},
+={(2,11),(2,12)},
+={(3,7),(3,8)},
+={(3,12),(3,13)},
+={(4,12),(5,12)}.
+	​
+
+(9)
+
+Every full Snaky containing the released pair 
+𝑊
+𝑍
+WZ also contains 
+𝑉
+V. The two endpoints have distance two in one column; they must belong to the same vertical four-cell body, which includes the intervening cell. Thus the trace 
+𝑊
+𝑉
+𝑍
+WVZ replaces every protection formerly supplied by 
+𝑊
+𝑍
+WZ.
+
+For 
+𝑈
+𝑉
+UV, the complete live exposure is:
+
+Full-target type	Protection
+Row 10 body, columns 2–5; hook 
+{
+(
+1
+,
+9
+)
+,
+(
+2
+,
+9
+)
+}
+{(1,9),(2,9)}	Contains 
+𝐴
+0
+𝑈
+𝑉
+A
+0
+	​
+
+UV.
+Same body; hook 
+{
+(
+1
+,
+11
+)
+,
+(
+2
+,
+11
+)
+}
+{(1,11),(2,11)}	Contains 
+𝐴
+0
+𝑈
+𝑉
+A
+0
+	​
+
+UV.
+Column 2 body, rows 7–10; hook 
+{
+𝑉
+,
+𝑍
+}
+{V,Z}	Contains 
+𝐹
+1
+F
+1
+	​
+
+.
+Column 2 body, rows 10–13; hook 
+{
+𝑊
+,
+𝑉
+}
+{W,V}	Contains 
+𝐹
+2
+F
+2
+	​
+
+.
+Column 3 body, rows 7–10; hook 
+{
+𝑈
+,
+(
+2
+,
+11
+)
+}
+{U,(2,11)}	Contains 
+𝐹
+3
+F
+3
+	​
+
+.
+Column 3 body, rows 10–13; hook 
+{
+(
+2
+,
+9
+)
+,
+𝑈
+}
+{(2,9),U}	Contains 
+𝐹
+4
+F
+4
+	​
+
+.
+
+The other body/hook placements meet old Breaker stones or the board boundary.
+
+Therefore every target that can lose its last protection when (7) is released is covered by (8) or one of (9).
+
+5.3 All newly revived targets through 
+𝐴
+1
+=
+(
+4
+,
+11
+)
+A
+1
+	​
+
+=(4,11)
+
+Freeing the former Breaker cell 
+𝐴
+1
+A
+1
+	​
+
+ gives twelve live full targets. Their exhaustive classification is:
+
+Placement of 
+𝐴
+1
+A
+1
+	​
+
+	Number	Protection
+Row 11 body, columns 1–4; hook 
+{
+𝐴
+0
+,
+(
+5
+,
+10
+)
+}
+{A
+0
+	​
+
+,(5,10)}	1	
+𝐴
+0
+𝐴
+1
+A
+0
+	​
+
+A
+1
+	​
+
+.
+Same body; hook 
+{
+(
+4
+,
+12
+)
+,
+(
+5
+,
+12
+)
+}
+{(4,12),(5,12)}	1	
+𝐹
+5
+F
+5
+	​
+
+.
+Column 4 body, rows 10–13; any of its four live hooks	4	
+𝐴
+0
+𝐴
+1
+A
+0
+	​
+
+A
+1
+	​
+
+.
+Column 4 body, rows 11–14; hook 
+{
+𝑉
+,
+𝑍
+}
+{V,Z}	1	
+𝐴
+1
+𝑉
+𝑍
+A
+1
+	​
+
+VZ.
+
+𝐴
+1
+A
+1
+	​
+
+ in the hook of the row 12 body, columns 4–7	1	
+𝐹
+5
+F
+5
+	​
+
+.
+Hook 
+{
+𝐴
+0
+,
+𝐴
+1
+}
+{A
+0
+	​
+
+,A
+1
+	​
+
+}, column 3 body, rows 7–10	1	
+𝐹
+3
+F
+3
+	​
+
+.
+Hook 
+{
+𝐴
+0
+,
+𝐴
+1
+}
+{A
+0
+	​
+
+,A
+1
+	​
+
+}, column 5 body, rows 7–10	1	
+𝐴
+0
+𝐴
+1
+A
+0
+	​
+
+A
+1
+	​
+
+.
+Hook 
+{
+𝐴
+0
+,
+𝐴
+1
+}
+{A
+0
+	​
+
+,A
+1
+	​
+
+}, column 3 body, rows 11–14	1	
+𝐹
+4
+F
+4
+	​
+
+.
+Hook 
+{
+𝐴
+1
+,
+(
+4
+,
+12
+)
+}
+{A
+1
+	​
+
+,(4,12)}, column 3 body, rows 8–11	1	
+𝑊
+𝑉
+𝑍
+WVZ.
+
+The exceptional bottom-reaching target in this table is explicitly
+
+	
+{
+(
+4
+,
+11
+)
+,
+(
+4
+,
+12
+)
+,
+(
+4
+,
+13
+)
+,
+(
+4
+,
+14
+)
+,
+(
+3
+,
+10
+)
+,
+(
+3
+,
+11
+)
+}
+.
+		
+(10)
+{(4,11),(4,12),(4,13),(4,14),(3,10),(3,11)}.
+	​
+
+(10)
+
+This is why merely adding the pair 
+{
+𝐴
+0
+,
+𝐴
+1
+}
+{A
+0
+	​
+
+,A
+1
+	​
+
+} is insufficient. The trace 
+𝐴
+1
+𝑉
+𝑍
+A
+1
+	​
+
+VZ handles (10).
+
+The immediate forced-arrow witness is also explicit:
+
+{
+(
+5
+,
+7
+)
+,
+(
+5
+,
+8
+)
+,
+(
+5
+,
+9
+)
+,
+(
+5
+,
+10
+)
+,
+𝐴
+0
+,
+𝐴
+1
+}
+.
+{(5,7),(5,8),(5,9),(5,10),A
+0
+	​
+
+,A
+1
+	​
+
+}.
+
+Its four column-five cells are old Maker stones.
+
+5.4 Exact scope of this component
+
+This is a complete defense of its assigned physical obligations, including every first entry into 
+𝐿
+L. It is not, by itself, a full 
+𝑁
+30
+N30 defense.
+
+It provides the following admissible interface for a future parent construction:
+
+Replace the two domains in (7) by this six-cell component; retain the five pairs in (9); keep every other component’s response support disjoint from 
+𝐿
+L.
+
+Every newly revived target through 
+𝐴
+1
+A
+1
+	​
+
+, and every target exposed by releasing (7), is then protected. On the entry 
+𝑀
+𝐴
+0
+MA
+0
+	​
+
+, the component reproduces the actual response 
+𝐵
+𝐴
+1
+BA
+1
+	​
+
+ and restores the original two pairs. The other five entries are handled without assuming that arrow.
+
+Safety holds before each response: the component is initially pristine, every trace has at least two cells, and each first-entry row immediately blocks or pairs every residual trace. After commitment, the standard mate invariant prevents completion at the instant of every Maker claim, including the final legal claim.
+
+What remains unresolved
+
+The new Maker construction reduces 
+𝑀
+(
+12
+,
+6
+)
+M(12,6) to the sixteen exact states in (6); it does not settle those states. Its positive branches are full physical wins and do not depend on the pending 
+𝑁
+32
+N32 audit.
+
+The left-side restoration now has an explicit six-cell replacement interface. Therefore a compatible full defense at 
+𝑁
+31
+N31 need not rely solely on the known forced first arrow to address the left-side alternatives at 
+𝑁
+30
+N30.
+
+The principal new parent-level object is the 17-cell Maker card: seven actual owned requirements, all ten terminal witnesses above, and a complete response policy for every root reply outside the sixteen-cell frontier.

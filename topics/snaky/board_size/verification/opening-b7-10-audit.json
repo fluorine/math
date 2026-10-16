@@ -1,0 +1,40 @@
+{
+  "status": "independently_verified_conditional_tactic",
+  "certificate": "topics/snaky/board_size/opening-cover-initial-b7-10.cards.txt",
+  "certificate_sha256": "b30f0615135a0265cd64d5b8a809ce7eb567a8c55c192a0b889bd33ab6928f60",
+  "verifier_sha256": "7c79e9c5c6031125f0e606349b94c34e378c087d7405afd5ec86c6e3c7068e39",
+  "ordinary_verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10",
+  "maker": [
+    [
+      7,
+      7
+    ]
+  ],
+  "breaker": [
+    [
+      7,
+      10
+    ]
+  ],
+  "board": [
+    1,
+    1,
+    14,
+    14
+  ],
+  "already_winning": false,
+  "root_height": 15,
+  "root_required": [
+    [
+      7,
+      7
+    ]
+  ],
+  "root_support_cells": 98,
+  "cards_checked": 350,
+  "all_library_cards_checked": false,
+  "inside_reply_checks": 4966,
+  "empty_board_result": false,
+  "lean_kernel_checked": false,
+  "elapsed_seconds": 6.0778754170000004
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "control": "changed code pin rejected before audit",
+  "changed_path": "breaker/check_pairing.py",
+  "reason": "changed input: breaker/check_pairing.py",
+  "no_report_written": true,
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13"
+}

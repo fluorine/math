@@ -1,0 +1,2209 @@
+Complete defenses at both continued endpoints
+
+Both continued endpoints admit a full-physical Breaker defense. The six-cell switch proposed in the update works after coordinated changes to its outside pairing. The essential changes are
+
+(
+13
+,
+14
+)
+,
+(
+21
+,
+23
+)
+,
+(
+8
+,
+9
+)
+⟶
+(
+7
+,
+8
+)
+.
+(13,14),(21,23),(8,9)⟶(7,8).
+	​
+
+
+The construction below uses that proposed switch, with explicit completion pairs added to its leaves. 
+Geplakte tekst
+
+The strategy is not a static matching at the endpoint. Breaker answers outside entries by fixed mates. On the first Maker entry into 
+𝑅
+=
+{
+16
+,
+17
+,
+18
+,
+26
+,
+27
+,
+28
+}
+R={16,17,18,26,27,28}, Breaker makes the prescribed switch, after which a full fresh matching covers every remaining live physical target.
+
+I call the continued states 
+𝐸
+52
+E
+52
+	​
+
+ and 
+𝐸
+53
+E
+53
+	​
+
+, to distinguish them from the original 11+11 frontiers.
+
+Exact states defended
+Platte tekst
+E52:
+Maker   = {22,32,37,42,43,44,45,46,47,53,57,63,67,75,76,78,84}
+Breaker = {12,31,33,34,36,38,52,54,55,56,58,66,68,73,74,77,94}
+
+E53:
+Maker   = {22,32,37,41,42,43,44,45,46,47,51,57,61,67,75,76,78,84}
+Breaker = {12,31,33,34,36,38,50,52,53,55,56,58,66,68,71,74,77,94}
+
+Maker is to move. There are respectively 66 and 64 fresh cells. All six cells of 
+𝑅
+R are fresh in both states.
+
+1. Exact outside pairings
+
+Use the following 19 common covering pairs:
+
+Platte tekst
+Qcommon = {
+ (1,3),   (4,5),   (6,19),  (7,8),
+ (13,14), (15,25), (21,23), (29,49),
+ (30,40), (59,79), (60,80), (62,72),
+ (64,65), (81,91), (82,83), (85,86),
+ (88,89), (92,93), (95,96)
+}.
+
+Complete the covering part separately for the two states:
+
+𝑄
+52
+	
+=
+𝑄
+c
+o
+m
+m
+o
+n
+∪
+{
+(
+41
+,
+50
+)
+,
+(
+51
+,
+61
+)
+,
+(
+70
+,
+71
+)
+}
+,
+
+
+𝑄
+53
+	
+=
+𝑄
+c
+o
+m
+m
+o
+n
+∪
+{
+(
+63
+,
+73
+)
+}
+.
+Q
+52
+	​
+
+Q
+53
+	​
+
+	​
+
+=Q
+common
+	​
+
+∪{(41,50),(51,61),(70,71)},
+=Q
+common
+	​
+
+∪{(63,73)}.
+	​
+
+
+Thus 
+𝑄
+52
+Q
+52
+	​
+
+ has 22 pairs and 
+𝑄
+53
+Q
+53
+	​
+
+ has 20 pairs.
+
+The remaining fresh cells outside 
+𝑅
+R are paired as follows. These extra pairs make the response rule total; they are not needed for the covering argument.
+
+Platte tekst
+F52 = {
+ (0,2), (9,10), (11,20), (24,35),
+ (39,48), (69,87), (90,97), (98,99)
+}.
+
+F53 = {
+ (0,2), (9,10), (11,20), (24,35),
+ (39,48), (54,69), (70,87), (90,97), (98,99)
+}.
+
+Define
+
+𝑂
+52
+=
+𝑄
+52
+∪
+𝐹
+52
+,
+𝑂
+53
+=
+𝑄
+53
+∪
+𝐹
+53
+.
+O
+52
+	​
+
+=Q
+52
+	​
+
+∪F
+52
+	​
+
+,O
+53
+	​
+
+=Q
+53
+	​
+
+∪F
+53
+	​
+
+.
+
+These are perfect matchings of the fresh cells outside 
+𝑅
+R:
+
+State	Outside pairs	Outside endpoints	Fresh cells in 
+𝑅
+R
+
+𝐸
+52
+E
+52
+	​
+
+	30	60	6
+
+𝐸
+53
+E
+53
+	​
+
+	29	58	6
+
+Every endpoint is fresh at its stated position, the pairs are disjoint, and no outside pair touches 
+𝑅
+R.
+
+2. The complete six-cell switch
+
+Before Maker enters 
+𝑅
+R, answer every outside move by its mate in 
+𝑂
+52
+O
+52
+	​
+
+ or 
+𝑂
+53
+O
+53
+	​
+
+, as appropriate.
+
+For the first entry into 
+𝑅
+R, use this table:
+
+First Maker claim in 
+𝑅
+R	Breaker reply	Two fresh pairs installed on the remaining four cells of 
+𝑅
+R
+16	17	
+(
+26
+,
+27
+)
+,
+(
+18
+,
+28
+)
+(26,27),(18,28)
+17	16	
+(
+18
+,
+27
+)
+,
+(
+26
+,
+28
+)
+(18,27),(26,28)
+18	27	
+(
+16
+,
+17
+)
+,
+(
+26
+,
+28
+)
+(16,17),(26,28)
+26	27	
+(
+16
+,
+17
+)
+,
+(
+18
+,
+28
+)
+(16,17),(18,28)
+27	17	
+(
+16
+,
+26
+)
+,
+(
+18
+,
+28
+)
+(16,26),(18,28)
+28	27	
+(
+16
+,
+17
+)
+,
+(
+18
+,
+26
+)
+(16,17),(18,26)
+
+After this response, combine the two displayed pairs with every still-fresh outside pair. Follow the resulting global mate strategy for the rest of the game.
+
+This is a total policy: there are no unspecified Maker-entry cases and no discretionary fillers.
+
+What the switch guarantees
+
+The useful local invariant is slightly stronger than the selected family in the proposal. Define
+
+Γ
+0
+	
+=
+{
+16
+,
+17
+}
+,
+
+
+Γ
+1
+	
+=
+{
+16
+,
+26
+,
+27
+}
+,
+
+
+Γ
+2
+	
+=
+{
+17
+,
+18
+,
+27
+}
+,
+
+
+Γ
+3
+	
+=
+{
+18
+,
+27
+,
+28
+}
+.
+Γ
+0
+	​
+
+Γ
+1
+	​
+
+Γ
+2
+	​
+
+Γ
+3
+	​
+
+	​
+
+={16,17},
+={16,26,27},
+={17,18,27},
+={18,27,28}.
+	​
+
+
+The switch prevents Maker from owning any 
+Γ
+𝑗
+Γ
+j
+	​
+
+.
+
+These sets are protection conditions, not asserted physical winning targets. Their role is one-way: a full physical Snaky containing one of them cannot be completed if that condition is prevented.
+
+The verification of the table is short and exhaustive.
+
+After M16/B17, 
+Γ
+0
+,
+Γ
+2
+Γ
+0
+	​
+
+,Γ
+2
+	​
+
+ are blocked; 
+Γ
+1
+Γ
+1
+	​
+
+ contains 
+(
+26
+,
+27
+)
+(26,27), and 
+Γ
+3
+Γ
+3
+	​
+
+ contains 
+(
+18
+,
+28
+)
+(18,28).
+After M17/B16, 
+Γ
+0
+,
+Γ
+1
+Γ
+0
+	​
+
+,Γ
+1
+	​
+
+ are blocked; both remaining sets contain 
+(
+18
+,
+27
+)
+(18,27).
+After M18/B27, M26/B27, or M28/B27, all three triples are blocked, and 
+Γ
+0
+Γ
+0
+	​
+
+ is protected by 
+(
+16
+,
+17
+)
+(16,17).
+After M27/B17, 
+Γ
+0
+,
+Γ
+2
+Γ
+0
+	​
+
+,Γ
+2
+	​
+
+ are blocked; the other two sets contain 
+(
+16
+,
+26
+)
+(16,26) and 
+(
+18
+,
+28
+)
+(18,28), respectively.
+
+The second pair in each row where only one is needed for coverage simply completes the local perfect matching.
+
+3. The full-board covering claim
+
+For either endpoint 
+𝐸
+E, the central claim is
+
+	
+𝑇
+∩
+𝐵
+𝐸
+=
+∅
+ 
+⟹
+ 
+[
+∃
+𝑝
+∈
+𝑄
+𝐸
+:
+ 
+𝑝
+⊆
+𝑇
+]
+ or 
+[
+∃
+𝑗
+∈
+{
+0
+,
+1
+,
+2
+,
+3
+}
+:
+ 
+Γ
+𝑗
+⊆
+𝑇
+]
+		
+(1)
+T∩B
+E
+	​
+
+=∅ ⟹ [∃p∈Q
+E
+	​
+
+: p⊆T] or [∃j∈{0,1,2,3}: Γ
+j
+	​
+
+⊆T]
+	​
+
+(1)
+
+for every contained physical Snaky 
+𝑇
+T.
+
+I prove this by transferring the supplied 
+𝑃
+P-certificate and accounting explicitly for every changed domain. The starting points are the accepted 
+𝑃
+P-certificate and the accepted 18-gap inventory at S9. 
+Geplakte tekst
+ 
+Geplakte tekst
+
+Geometry used for the incidence lists
+
+Every horizontal Snaky consists of
+
+(
+𝑎
+,
+𝑦
+)
+,
+(
+𝑎
++
+1
+,
+𝑦
+)
+,
+(
+𝑎
++
+2
+,
+𝑦
+)
+,
+(
+𝑎
++
+3
+,
+𝑦
+)
+(a,y),(a+1,y),(a+2,y),(a+3,y)
+
+together with either
+
+(
+𝑎
+−
+1
+,
+𝑦
++
+𝜀
+)
+,
+(
+𝑎
+,
+𝑦
++
+𝜀
+)
+(a−1,y+ε),(a,y+ε)
+
+or
+
+(
+𝑎
++
+3
+,
+𝑦
++
+𝜀
+)
+,
+(
+𝑎
++
+4
+,
+𝑦
++
+𝜀
+)
+,
+𝜀
+∈
+{
+−
+1
+,
+1
+}
+.
+(a+3,y+ε),(a+4,y+ε),ε∈{−1,1}.
+
+Vertical Snakies are obtained by interchanging coordinates. Placements leaving the board or meeting the stated Breaker set are discarded.
+
+This four-run/hook description gives the finite incidence lists below.
+
+4. Old gaps and pairs consumed by the forcing prefixes
+
+Let 
+𝑃
+f
+r
+e
+s
+h
+P
+fresh
+	​
+
+ be the pairs of 
+𝑃
+P whose two endpoints remain fresh at the relevant endpoint.
+
+A target containing an old pair with a Breaker endpoint is already blocked. Therefore the only lost old pairs that can create new live obligations are those touched by Maker but not Breaker:
+
+𝐸
+52
+	
+(
+22
+,
+23
+)
+,
+ 
+(
+32
+,
+42
+)
+
+
+𝐸
+53
+	
+(
+22
+,
+23
+)
+,
+ 
+(
+32
+,
+42
+)
+,
+ 
+(
+51
+,
+61
+)
+.
+E
+52
+	​
+
+E
+53
+	​
+
+	​
+
+(22,23), (32,42)
+(22,23), (32,42), (51,61).
+	​
+
+
+Their live incidences are completely accounted for as follows.
+
+The damaged pair 
+(
+22
+,
+23
+)
+(22,23)
+
+At either endpoint its live physical incidences are exactly
+
+{
+13
+,
+14
+,
+20
+,
+21
+,
+22
+,
+23
+}
+,
+
+
+{
+10
+,
+11
+,
+21
+,
+22
+,
+23
+,
+24
+}
+,
+
+
+{
+14
+,
+15
+,
+21
+,
+22
+,
+23
+,
+24
+}
+,
+
+
+{
+13
+,
+14
+,
+15
+,
+16
+,
+22
+,
+23
+}
+,
+
+
+{
+15
+,
+16
+,
+22
+,
+23
+,
+24
+,
+25
+}
+.
+{13,14,20,21,22,23},
+{10,11,21,22,23,24},
+{14,15,21,22,23,24},
+{13,14,15,16,22,23},
+{15,16,22,23,24,25}.
+	​
+
+
+The last contains the retained pair 
+(
+15
+,
+25
+)
+(15,25). The first four appear in the repair table below.
+
+For exhaustiveness, the horizontal four-run containing both 22 and 23 starts in column 0, 1 or 2. If they form the hook, the only live body is 
+{
+13
+,
+14
+,
+15
+,
+16
+}
+{13,14,15,16}. The vertical crossing placements meet B52 or B33.
+
+The damaged pair 
+(
+32
+,
+42
+)
+(32,42)
+
+At 
+𝐸
+52
+E
+52
+	​
+
+, its only live incidence is
+
+{
+32
+,
+41
+,
+42
+,
+51
+,
+61
+,
+71
+}
+,
+{32,41,42,51,61,71},
+
+which contains the retained pair 
+(
+51
+,
+61
+)
+(51,61).
+
+At 
+𝐸
+53
+E
+53
+	​
+
+, it has no live incidence.
+
+Indeed, vertical four-runs containing the pair meet B12 or B52. The lower hook cases meet B31 or B33. The two upper hook bodies are
+
+{
+41
+,
+51
+,
+61
+,
+71
+}
+,
+{
+43
+,
+53
+,
+63
+,
+73
+}
+.
+{41,51,61,71},{43,53,63,73}.
+
+The first survives only at 
+𝐸
+52
+E
+52
+	​
+
+; the second is blocked by B73 at 
+𝐸
+52
+E
+52
+	​
+
+ and B53 at 
+𝐸
+53
+E
+53
+	​
+
+. Horizontal crossing placements are blocked as well.
+
+The damaged pair 
+(
+51
+,
+61
+)
+(51,61) at 
+𝐸
+53
+E
+53
+	​
+
+
+Its only live incidences are
+
+{
+51
+,
+60
+,
+61
+,
+70
+,
+80
+,
+90
+}
+,
+{
+51
+,
+61
+,
+62
+,
+72
+,
+82
+,
+92
+}
+.
+{51,60,61,70,80,90},{51,61,62,72,82,92}.
+
+They contain 
+(
+60
+,
+80
+)
+(60,80) and 
+(
+62
+,
+72
+)
+(62,72), respectively.
+
+The other placements meet B31, B71, B50 or B52.
+
+Repairing the remaining exceptions
+
+From the accepted 18-gap inventory, seven upper gaps survive at both endpoints. The only additional surviving old gap is
+
+{
+41
+,
+42
+,
+43
+,
+44
+,
+50
+,
+51
+}
+{41,42,43,44,50,51}
+
+at 
+𝐸
+52
+E
+52
+	​
+
+; B50 blocks it at 
+𝐸
+53
+E
+53
+	​
+
+.
+
+Together with the four new exceptions from 
+(
+22
+,
+23
+)
+(22,23), all remaining obligations are covered as follows:
+
+Full physical target	Protection in the new construction
+
+{
+2
+,
+3
+,
+13
+,
+14
+,
+15
+,
+16
+}
+{2,3,13,14,15,16}	
+(
+13
+,
+14
+)
+(13,14)
+
+{
+6
+,
+7
+,
+13
+,
+14
+,
+15
+,
+16
+}
+{6,7,13,14,15,16}	
+(
+13
+,
+14
+)
+(13,14)
+
+{
+3
+,
+4
+,
+14
+,
+15
+,
+16
+,
+17
+}
+{3,4,14,15,16,17}	
+Γ
+0
+Γ
+0
+	​
+
+
+
+{
+7
+,
+8
+,
+14
+,
+15
+,
+16
+,
+17
+}
+{7,8,14,15,16,17}	
+(
+7
+,
+8
+)
+(7,8)
+
+{
+14
+,
+15
+,
+16
+,
+17
+,
+23
+,
+24
+}
+{14,15,16,17,23,24}	
+Γ
+0
+Γ
+0
+	​
+
+
+
+{
+13
+,
+14
+,
+24
+,
+25
+,
+26
+,
+27
+}
+{13,14,24,25,26,27}	
+(
+13
+,
+14
+)
+(13,14)
+
+{
+5
+,
+6
+,
+7
+,
+8
+,
+14
+,
+15
+}
+{5,6,7,8,14,15}	
+(
+7
+,
+8
+)
+(7,8)
+
+{
+13
+,
+14
+,
+20
+,
+21
+,
+22
+,
+23
+}
+{13,14,20,21,22,23}	
+(
+13
+,
+14
+)
+(13,14), also 
+(
+21
+,
+23
+)
+(21,23)
+
+{
+10
+,
+11
+,
+21
+,
+22
+,
+23
+,
+24
+}
+{10,11,21,22,23,24}	
+(
+21
+,
+23
+)
+(21,23)
+
+{
+14
+,
+15
+,
+21
+,
+22
+,
+23
+,
+24
+}
+{14,15,21,22,23,24}	
+(
+21
+,
+23
+)
+(21,23)
+
+{
+13
+,
+14
+,
+15
+,
+16
+,
+22
+,
+23
+}
+{13,14,15,16,22,23}	
+(
+13
+,
+14
+)
+(13,14)
+
+{
+41
+,
+42
+,
+43
+,
+44
+,
+50
+,
+51
+}
+{41,42,43,44,50,51}, at 
+𝐸
+52
+E
+52
+	​
+
+ only	
+(
+41
+,
+50
+)
+(41,50)
+
+Thus the central prefix does not leave an unaccounted-for obligation when its former pairs are retired.
+
+5. Every crossing incidence of the three released 
+𝑅
+R-pairs
+
+The construction releases
+
+(
+16
+,
+26
+)
+,
+(
+17
+,
+27
+)
+,
+(
+18
+,
+28
+)
+.
+(16,26),(17,27),(18,28).
+
+The following are all their live physical incidences at either endpoint. Each is covered by an outside pair or by one of the four protected 
+Γ
+𝑗
+Γ
+j
+	​
+
+.
+
+Released pair	Full live physical target	Replacement protection
+
+(
+16
+,
+26
+)
+(16,26)	
+{
+16
+,
+26
+,
+27
+,
+37
+,
+47
+,
+57
+}
+{16,26,27,37,47,57}	
+Γ
+1
+Γ
+1
+	​
+
+
+
+(
+16
+,
+26
+)
+(16,26)	
+{
+13
+,
+14
+,
+15
+,
+16
+,
+26
+,
+27
+}
+{13,14,15,16,26,27}	
+(
+13
+,
+14
+)
+(13,14)
+
+(
+16
+,
+26
+)
+(16,26)	
+{
+16
+,
+17
+,
+18
+,
+19
+,
+25
+,
+26
+}
+{16,17,18,19,25,26}	
+Γ
+0
+Γ
+0
+	​
+
+
+
+(
+16
+,
+26
+)
+(16,26)	
+{
+16
+,
+17
+,
+23
+,
+24
+,
+25
+,
+26
+}
+{16,17,23,24,25,26}	
+Γ
+0
+Γ
+0
+	​
+
+
+
+(
+16
+,
+26
+)
+(16,26)	
+{
+15
+,
+16
+,
+26
+,
+27
+,
+28
+,
+29
+}
+{15,16,26,27,28,29}	
+Γ
+1
+Γ
+1
+	​
+
+
+
+(
+17
+,
+27
+)
+(17,27)	
+{
+6
+,
+16
+,
+17
+,
+27
+,
+37
+,
+47
+}
+{6,16,17,27,37,47}	
+Γ
+0
+Γ
+0
+	​
+
+
+
+(
+17
+,
+27
+)
+(17,27)	
+{
+8
+,
+17
+,
+18
+,
+27
+,
+37
+,
+47
+}
+{8,17,18,27,37,47}	
+Γ
+2
+Γ
+2
+	​
+
+
+
+(
+17
+,
+27
+)
+(17,27)	
+{
+14
+,
+15
+,
+16
+,
+17
+,
+27
+,
+28
+}
+{14,15,16,17,27,28}	
+Γ
+0
+Γ
+0
+	​
+
+
+
+(
+17
+,
+27
+)
+(17,27)	
+{
+17
+,
+18
+,
+24
+,
+25
+,
+26
+,
+27
+}
+{17,18,24,25,26,27}	
+Γ
+2
+Γ
+2
+	​
+
+
+
+(
+18
+,
+28
+)
+(18,28)	
+{
+18
+,
+27
+,
+28
+,
+37
+,
+47
+,
+57
+}
+{18,27,28,37,47,57}	
+Γ
+3
+Γ
+3
+	​
+
+
+
+(
+18
+,
+28
+)
+(18,28)	
+{
+18
+,
+28
+,
+29
+,
+39
+,
+49
+,
+59
+}
+{18,28,29,39,49,59}	
+(
+29
+,
+49
+)
+(29,49)
+
+(
+18
+,
+28
+)
+(18,28)	
+{
+15
+,
+16
+,
+17
+,
+18
+,
+28
+,
+29
+}
+{15,16,17,18,28,29}	
+Γ
+0
+Γ
+0
+	​
+
+
+
+(
+18
+,
+28
+)
+(18,28)	
+{
+18
+,
+19
+,
+25
+,
+26
+,
+27
+,
+28
+}
+{18,19,25,26,27,28}	
+Γ
+3
+Γ
+3
+	​
+
+
+Here are the exhaustive orientation checks behind the table.
+
+For 
+(
+16
+,
+26
+)
+(16,26), any vertical four-run containing the pair meets B36. If the pair is the upper hook, the body in column 5 meets B55, while the body in column 7 gives the first listed target. The four horizontal crossing placements give the other four rows.
+
+For 
+(
+17
+,
+27
+)
+(17,27), the column-seven four-run starting at row 0 has both contained hooks blocked by B36 or B38. The run starting at row 1 has two live upper hooks, giving the first two rows, while its lower hooks meet B56 or B58. Hook-body placements in columns 6 and 8 are blocked. The two contained horizontal crossing placements give the remaining rows.
+
+For 
+(
+18
+,
+28
+)
+(18,28), vertical four-runs meet B38. Its two upper-hook bodies, in columns 7 and 9, give the first two rows. There are two contained horizontal crossing placements, giving the last two.
+
+This is the required accounting for crossings: the controller does not simply discard targets using only part of 
+𝑅
+R.
+
+6. Repairing the released pair 
+(
+8
+,
+9
+)
+(8,9)
+
+Replacing 
+(
+8
+,
+9
+)
+(8,9) by 
+(
+7
+,
+8
+)
+(7,8) is also fully accounted for.
+
+The only physical Snakies containing 
+(
+8
+,
+9
+)
+(8,9) are
+
+{
+6
+,
+7
+,
+8
+,
+9
+,
+15
+,
+16
+}
+,
+{
+8
+,
+9
+,
+15
+,
+16
+,
+17
+,
+18
+}
+.
+{6,7,8,9,15,16},{8,9,15,16,17,18}.
+
+The first contains the new outside pair 
+(
+7
+,
+8
+)
+(7,8). The second contains 
+Γ
+0
+=
+{
+16
+,
+17
+}
+Γ
+0
+	​
+
+={16,17}.
+
+There are no other contained placements: the horizontal body must be 
+{
+6
+,
+7
+,
+8
+,
+9
+}
+{6,7,8,9}, or the pair is the hook of 
+{
+15
+,
+16
+,
+17
+,
+18
+}
+{15,16,17,18}. Vertical crossing placements would extend beyond the top boundary.
+
+This exchange repairs
+
+{
+5
+,
+6
+,
+7
+,
+8
+,
+14
+,
+15
+}
+{5,6,7,8,14,15}
+
+without leaving the former 
+(
+8
+,
+9
+)
+(8,9) obligations uncovered.
+
+Combining Sections 4–6 proves the full-board covering implication (1). Every old pair was either retained, retired with a Breaker endpoint, or explicitly replaced with all its live incidences accounted for.
+
+7. Why arbitrary Maker interleavings are safe
+
+The policy does not require Maker to enter 
+𝑅
+R early or in a particular order.
+
+Before the first 
+𝑅
+R-entry
+
+All six cells of 
+𝑅
+R remain fresh, because the outside matching is disjoint from 
+𝑅
+R. Each outside pair is either:
+
+both fresh
+,
+or
+one Maker cell and one Breaker cell
+.
+both fresh,orone Maker cell and one Breaker cell.
+
+Therefore the mate of any fresh outside Maker claim is fresh.
+
+Consider a live target during this phase. By (1), it contains an outside covering pair or a protected 
+Γ
+𝑗
+Γ
+j
+	​
+
+.
+
+If it contains an outside pair, that pair is either already Breaker-blocked or cannot be wholly acquired by Maker in one claim. If it contains a 
+Γ
+𝑗
+Γ
+j
+	​
+
+, Maker has no cells of 
+𝑅
+R, so it cannot be complete.
+
+This argument retains all earlier outside Maker ownership. In particular, a target using just one endpoint of a retired outside pair is not discarded; it remains protected by whichever pair or 
+Γ
+𝑗
+Γ
+j
+	​
+
+ was assigned to it in (1).
+
+On the first 
+𝑅
+R-entry
+
+At that moment all of 
+𝑅
+R was fresh immediately before Maker’s claim. Every 
+Γ
+𝑗
+Γ
+j
+	​
+
+ has at least two cells, so this single claim cannot complete any 
+Γ
+𝑗
+Γ
+j
+	​
+
+, and therefore cannot complete a target relying on one.
+
+The table’s Breaker reply is fresh. Afterwards, every 
+Γ
+𝑗
+Γ
+j
+	​
+
+ is either Breaker-blocked or contains one of the two installed local pairs.
+
+Consequently,
+
+the remaining outside pairs 
+∪
+ the two local pairs
+the remaining outside pairs ∪ the two local pairs
+	​
+
+
+is a full fresh covering matching of the actual colored physical position.
+
+For example, if 
+𝑘
+k outside pairs were consumed before the switch, the installed matching has
+
+32
+−
+𝑘
+ pairs at 
+𝐸
+52
+,
+31
+−
+𝑘
+ pairs at 
+𝐸
+53
+.
+32−k pairs at E
+52
+	​
+
+,31−k pairs at E
+53
+	​
+
+.
+
+These cover all remaining fresh cells.
+
+After the switch
+
+The ordinary mate invariant applies to the full physical board. Every live target contains a pair that is either wholly fresh or subsequently receives a Breaker endpoint.
+
+Thus Maker cannot complete a target on the claim preceding its mate response. The argument does not assume that Breaker can answer after a completed Snaky.
+
+The stated strategy needs no fillers. Once the global matching leaf is installed, the usual more permissive mate-or-fresh-filler invariant is also available. No arbitrary filler into the inactive controller is needed or licensed by the prefix policy.
+
+8. Exhaustion and the precise conclusion
+
+There are 66 fresh cells at 
+𝐸
+52
+E
+52
+	​
+
+ and 64 at 
+𝐸
+53
+E
+53
+	​
+
+. The strategy consumes them in complete Maker–Breaker rounds: 33 rounds and 32 rounds, respectively, unless play ends earlier.
+
+Maker cannot avoid 
+𝑅
+R indefinitely: the outside cells occur in finitely many pairs and are consumed two per round. If all outside pairs are exhausted first, the six fresh cells of 
+𝑅
+R remain, and the switch still supplies a legal reply followed by two paired rounds.
+
+Immediate-win safety was established before every reply. In particular, the final Maker claim cannot complete a target; its fresh mate remains for Breaker’s last claim.
+
+What has been resolved
+
+The proposed selected controller can therefore be promoted to a complete conditional physical defense at both 
+𝐸
+52
+E
+52
+	​
+
+ and 
+𝐸
+53
+E
+53
+	​
+
+. Its missing ingredient was not another controller state, but coordinated coverage outside 
+𝑅
+R:
+
+(
+13
+,
+14
+)
+,
+(
+21
+,
+23
+)
+,
+(
+7
+,
+8
+)
+,
+and, at 
+𝐸
+52
+,
+ 
+(
+41
+,
+50
+)
+.
+(13,14),(21,23),(7,8),and, at E
+52
+	​
+
+, (41,50).
+	​
+
+
+The construction also explains why these defenses are compatible with a static obstruction at entry: the first controller response claims 16, 17 or 27, and the full static matching is installed only after that claim.
+
+The remaining issue is upstream. Maker is not obliged to follow either forcing prefix all the way to these endpoints. These defenses defeat every subsequent Maker continuation from the two exact continued states, but do not by themselves decide either original 11+11 frontier, S9, or either empty-board objective.

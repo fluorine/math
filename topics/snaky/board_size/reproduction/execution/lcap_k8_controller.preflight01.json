@@ -1,0 +1,57 @@
+{
+  "direct_swapout_total": 19890742,
+  "policy": "root-approved verification-only closeout_guard; no zero-swap predicate",
+  "samples": [
+    {
+      "cpu_idle_percent": 32.87,
+      "reduce_search_concurrency": true,
+      "sampler_pid": 53736,
+      "summary": [
+        "Processes: 484 total, 4 running, 480 sleeping, 3837 threads ",
+        "2026/10/16 12:54:56",
+        "Load Avg: 7.10, 8.28, 7.76 ",
+        "CPU usage: 47.93% user, 19.19% sys, 32.87% idle ",
+        "SharedLibs: 300M resident, 80M data, 70M linkedit.",
+        "MemRegions: 0 total, 0B resident, 46M private, 1368M shared.",
+        "PhysMem: 15G used (2428M wired, 6641M compressor), 84M unused.",
+        "VM: 241T vsize, 5361M framework vsize, 14726806(456) swapins, 19818058(0) swapouts.",
+        "Networks: packets: 2523562638/1729G in, 1942146487/350G out.",
+        "Disks: 1248914469/129T read, 837027393/18T written."
+      ],
+      "swapin_delta": 456,
+      "swapin_since_previous_sample": 3271,
+      "swapin_total": 14726806,
+      "swapout_delta": 0,
+      "swapout_since_previous_sample": 2820,
+      "swapout_total": 19818058,
+      "utc": "2026-10-16T10:54:56.854556+00:00"
+    },
+    {
+      "cpu_idle_percent": 47.14,
+      "reduce_search_concurrency": true,
+      "sampler_pid": 53736,
+      "summary": [
+        "Processes: 497 total, 7 running, 490 sleeping, 3929 threads ",
+        "2026/10/16 12:55:26",
+        "Load Avg: 7.84, 8.35, 7.80 ",
+        "CPU usage: 35.38% user, 17.46% sys, 47.14% idle ",
+        "SharedLibs: 302M resident, 85M data, 70M linkedit.",
+        "MemRegions: 0 total, 0B resident, 33M private, 1294M shared.",
+        "PhysMem: 15G used (2413M wired, 8003M compressor), 27M unused.",
+        "VM: 246T vsize, 5361M framework vsize, 14781008(216) swapins, 19884994(0) swapouts.",
+        "Networks: packets: 2523582261/1729G in, 1942162355/350G out.",
+        "Disks: 1248971352/129T read, 837053008/18T written."
+      ],
+      "swapin_delta": 216,
+      "swapin_since_previous_sample": 54202,
+      "swapin_total": 14781008,
+      "swapout_delta": 0,
+      "swapout_since_previous_sample": 66936,
+      "swapout_total": 19884994,
+      "utc": "2026-10-16T10:55:26.744342+00:00"
+    }
+  ],
+  "scope": "One of thirteen necessary publication finite replays, approved by primary after full wrapper review. Mathematical checker code unchanged. Sanitized math-only text pins explicit; all mathematical output must exactly equal historical accepted report. No solver or search.",
+  "usable_memory_percent": 46,
+  "utc": "2026-10-16T10:55:37.065453+00:00"
+}

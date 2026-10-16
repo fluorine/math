@@ -1,0 +1,43 @@
+{
+  "case": "original_p52_defense",
+  "checker": "verification/original_p52_defense.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "dc4881010c5150a9dff2421fc5a9899cef183f2d1e866ebfb5e14b6f922a93d1",
+  "created_utc": "2026-10-16T10:55:30.822689+00:00",
+  "execution_field_differences": {
+    "created_utc": {
+      "historical": "2026-10-16T09:21:46.546599+00:00",
+      "replay": "2026-10-16T10:55:30.819133+00:00"
+    },
+    "elapsed_seconds": {
+      "historical": 0.07725079078227282,
+      "replay": 0.07301916647702456
+    },
+    "process_cpu_seconds": {
+      "historical": 0.075924,
+      "replay": 0.07301800000000001
+    }
+  },
+  "historical_report": "verification/original-p52-defense-01.json",
+  "historical_report_sha256": "51d0885027969cbe0fafdeae9b009c187ad6438c7a6b84fbcf6d38ab1a9c4df1",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "1bbb11d576216e021b173cd270b4bfe5f67df95c284b9df821ad267725300926",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "fc3e50b8d87f9b983e39fa0c8e9f490de6dbd80ee22574820f0f3c4e47cd3fc8",
+      "old_sha256": "29c714362a9554d4a65610a0e43665905cc82ebd69248acd7b27ed5a2e4e12f0",
+      "path": "browser/05-twentyfourth-final-main.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    },
+    {
+      "new_sha256": "fc3e50b8d87f9b983e39fa0c8e9f490de6dbd80ee22574820f0f3c4e47cd3fc8",
+      "old_sha256": "a88958d771391867ec192d388ca6f709ad70c9d198afa93fee93b3f944b404f5",
+      "path": "browser/05-twentyfourth-final.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    }
+  ]
+}

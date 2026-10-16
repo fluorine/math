@@ -12,6 +12,19 @@ verification evidence, source credits and reproduction commands. Both results
 passed independent checks, corruption controls, exact reconstruction and the
 Lean 4.34.1 kernel audit.
 
+## Board-size research closeout
+
+The [board-size package](board_size/README.md) collects the checked results of
+research on empty 14×14 and 10×10 boards. **Both empty-board objectives remain
+open.** The new Lean results concern explicitly colored positions, bounded
+continuations, local defensive constructions and conditional coverage lemmas.
+They do not change either published move-bound theorem above.
+
+See the [future research and lessons](board_size/FUTURE_RESEARCH.md) for the
+remaining obstacles, useful methods and approaches that failed. The
+[formal build guide](formal/README.md#board-size-closeout) gives the separate
+kernel-checking command and the exact public audit target.
+
 ## Common game conventions
 
 Maker moves first. The players alternate, each claiming one previously

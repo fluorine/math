@@ -1,0 +1,43 @@
+{
+  "case": "n33_k10_controller",
+  "checker": "verification/n33_k10_controller.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "578824d775a25e8e82e65b50f28efc4a0e0213ae46f140ad9a9e0561d20458cb",
+  "created_utc": "2026-10-16T10:55:36.829565+00:00",
+  "execution_field_differences": {
+    "cpu_seconds": {
+      "historical": 0.16965000000000002,
+      "replay": 0.168528
+    },
+    "elapsed_seconds": {
+      "historical": 0.17232224997133017,
+      "replay": 0.16863554157316685
+    },
+    "utc": {
+      "historical": "2026-10-16T08:01:03.288508+00:00",
+      "replay": "2026-10-16T10:55:36.820673+00:00"
+    }
+  },
+  "historical_report": "verification/n33_k10_controller.json",
+  "historical_report_sha256": "a313b81fbb08c72e3ffe7c17552dc336ace699eafa50bf77146c6b0b511fa61f",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "646d0b4b9d705c491afc3efb302575475cf83e4e5e46633f89da1596f7bbd4e2",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "2a66900aa66fbb00e9504fef3a965acf8e53e04f2586f2afaf6501c0e55b4744",
+      "old_sha256": "65be13967a79d3fd206b111c8f3e987d47dc7a11b9a1349743fab179a430cf5f",
+      "path": "browser/02-twentyfirst-final.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    },
+    {
+      "new_sha256": "e20e6692b7b80c1e1ccb11b882cde0e4f8ef9f25c0927c80611d7b349c957996",
+      "old_sha256": "e20e6692b7b80c1e1ccb11b882cde0e4f8ef9f25c0927c80611d7b349c957996",
+      "path": "browser/02-twentyfirst-prompt.txt",
+      "transformation": "submitted mathematical prompt; appended browser chrome removed"
+    }
+  ]
+}

@@ -1,0 +1,2389 @@
+A smaller exact interface, and one complete repair within it
+
+I do not obtain a complete P53 defense here. I obtain three concrete results:
+
+The accepted P52 construction leaves exactly four P53 targets unprotected, rather than the 16 gaps of the original partial matching.
+Two seemingly harmless retained exterior pairs permit a literal five-claim Maker win, regardless of what central controller is added.
+At the resulting critical interface, B42 is a complete defensive reply: an explicit 37-pair perfect matching follows. The repair survives arbitrary interleavings of nine specified exterior pairs.
+
+I then give an exact finite reduction that retains the crossing-cell ownership, rather than replacing the remaining problem by an unjustifiably stronger guard game.
+
+The starting position throughout is the original P53:
+
+𝑀
+0
+	
+=
+{
+32
+,
+37
+,
+43
+,
+44
+,
+45
+,
+46
+,
+47
+,
+57
+,
+67
+,
+75
+,
+84
+}
+,
+
+
+𝐵
+0
+	
+=
+{
+33
+,
+34
+,
+36
+,
+38
+,
+53
+,
+55
+,
+56
+,
+58
+,
+74
+,
+77
+,
+94
+}
+.
+M
+0
+	​
+
+B
+0
+	​
+
+	​
+
+={32,37,43,44,45,46,47,57,67,75,84},
+={33,34,36,38,53,55,56,58,74,77,94}.
+	​
+
+
+The supplied brief records P52 as accepted and P53 as unresolved; the constructions below do not infer a P53 outcome from the reported bounded searches. 
+Geplakte tekst
+
+1. Only four targets separate the accepted P52 framework from P53
+
+Let 
+𝑄
+∗
+Q
+∗
+	​
+
+ be the accepted P52 covering matching with 
+(
+53
+,
+54
+)
+(53,54) deleted:
+
+Platte tekst
+Q* = {
+ (3,4),   (5,6),   (7,8),   (10,20), (11,21),
+ (12,22), (13,14), (15,25), (23,24), (29,49),
+ (30,40), (31,42), (41,50), (51,61), (59,79),
+ (60,80), (62,72), (63,73), (64,65), (66,76),
+ (68,78), (70,71), (81,91), (82,83), (85,86),
+ (88,89), (92,93), (95,96)
+}.
+
+Retain the four upper protection sets
+
+Γ
+=
+{
+{
+16
+,
+17
+}
+,
+{
+16
+,
+26
+,
+27
+}
+,
+{
+17
+,
+18
+,
+27
+}
+,
+{
+18
+,
+27
+,
+28
+}
+}
+.
+Γ={{16,17},{16,26,27},{17,18,27},{18,27,28}}.
+
+These are the supplied P52 constants, with no changed endpoints. 
+Geplakte tekst
+ 
+Geplakte tekst
+
+All 28 pairs are fresh at P53. They are disjoint from
+
+𝑅
+=
+{
+16
+,
+17
+,
+18
+,
+26
+,
+27
+,
+28
+}
+.
+R={16,17,18,26,27,28}.
+Exact four-target exception family
+
+Every P53-live physical target contains a pair of 
+𝑄
+∗
+Q
+∗
+	​
+
+ or a member of 
+Γ
+Γ, except precisely:
+
+	
+𝐸
+1
+	
+=
+{
+13
+,
+22
+,
+23
+,
+32
+,
+42
+,
+52
+}
+,
+
+
+𝐸
+2
+	
+=
+{
+21
+,
+31
+,
+41
+,
+51
+,
+52
+,
+62
+}
+,
+
+
+𝐸
+3
+	
+=
+{
+32
+,
+42
+,
+52
+,
+61
+,
+62
+,
+71
+}
+,
+
+
+𝐸
+4
+	
+=
+{
+42
+,
+43
+,
+44
+,
+45
+,
+51
+,
+52
+}
+.
+		
+(1)
+E
+1
+	​
+
+E
+2
+	​
+
+E
+3
+	​
+
+E
+4
+	​
+
+	​
+
+={13,22,23,32,42,52},
+={21,31,41,51,52,62},
+={32,42,52,61,62,71},
+={42,43,44,45,51,52}.
+	​
+
+(1)
+
+Thus the combined framework protects 151 of the 155 live targets. This is not yet a defense: all four exceptions contain 52, but Maker may acquire their other cells while Breaker follows the old mates.
+
+Exhaustiveness
+
+For the remainder, write 
+𝑇
+𝑖
+T
+i
+	​
+
+ for the 
+𝑖
+i-th target in the supplied ordered list of 155, counting from one. In particular,
+
+𝑇
+59
+=
+𝐸
+1
+,
+𝑇
+82
+=
+𝐸
+2
+,
+𝑇
+95
+=
+𝐸
+3
+,
+𝑇
+107
+=
+𝐸
+4
+.
+T
+59
+	​
+
+=E
+1
+	​
+
+,T
+82
+	​
+
+=E
+2
+	​
+
+,T
+95
+	​
+
+=E
+3
+	​
+
+,T
+107
+	​
+
+=E
+4
+	​
+
+.
+
+This indexing refers to the supplied literal list, not to a new geometry enumeration. 
+Geplakte tekst
+
+A P53-live target avoiding 52 was live at P52. Its accepted protector cannot have been 
+(
+53
+,
+54
+)
+(53,54), because it avoids the actual Breaker cell 53.
+
+The targets containing 52 are exactly the following 19. The other 15 have these protectors:
+
+Targets	Pair in 
+𝑄
+∗
+Q
+∗
+	​
+
+
+
+𝑇
+47
+,
+𝑇
+49
+T
+47
+	​
+
+,T
+49
+	​
+
+	
+(
+11
+,
+21
+)
+(11,21)
+
+𝑇
+80
+,
+𝑇
+91
+T
+80
+	​
+
+,T
+91
+	​
+
+	
+(
+31
+,
+42
+)
+(31,42)
+
+𝑇
+85
+,
+𝑇
+108
+T
+85
+	​
+
+,T
+108
+	​
+
+	
+(
+51
+,
+61
+)
+(51,61)
+
+𝑇
+96
+,
+𝑇
+121
+T
+96
+	​
+
+,T
+121
+	​
+
+	
+(
+63
+,
+73
+)
+(63,73)
+
+𝑇
+104
+,
+𝑇
+109
+,
+𝑇
+110
+,
+𝑇
+122
+,
+𝑇
+123
+T
+104
+	​
+
+,T
+109
+	​
+
+,T
+110
+	​
+
+,T
+122
+	​
+
+,T
+123
+	​
+
+	
+(
+62
+,
+72
+)
+(62,72)
+
+𝑇
+115
+T
+115
+	​
+
+	
+(
+64
+,
+65
+)
+(64,65)
+
+𝑇
+120
+T
+120
+	​
+
+	
+(
+81
+,
+91
+)
+(81,91)
+
+The remaining four are exactly (1), and none contains a 
+Γ
+Γ-set.
+
+2. A physical obstruction to retaining two exterior pairs
+
+Consider the following clearly defined restricted class:
+
+Until Maker enters the central controller, Breaker keeps both 
+(
+13
+,
+14
+)
+(13,14) and 
+(
+23
+,
+24
+)
+(23,24) as ordinary exterior mate pairs. After their consumption, the central controller may be arbitrary.
+
+Every strategy in this class loses physically. A larger central domain alone does not repair it.
+
+Maker plays
+
+𝑀
+13
+/
+𝐵
+14
+,
+𝑀
+23
+/
+𝐵
+24
+,
+𝑀
+42.
+M13/B14,M23/B24,M42.
+
+At this point, B31 is forced by
+
+{
+31
+,
+32
+,
+42
+,
+43
+,
+44
+,
+45
+}
+.
+{31,32,42,43,44,45}.
+
+Any other reply loses immediately to M31.
+
+After B31, Maker plays 52. There are now two distinct physical completions:
+
+Completion cell
+	
+Full physical target
+
+
+22
+	
+{
+13
+,
+22
+,
+23
+,
+32
+,
+42
+,
+52
+}
+
+
+51
+	
+{
+42
+,
+43
+,
+44
+,
+45
+,
+51
+,
+52
+}
+.
+Completion cell
+22
+51
+	​
+
+Full physical target
+{13,22,23,32,42,52}
+{42,43,44,45,51,52}.
+	​
+
+	​
+
+
+Breaker can take at most one; Maker takes the other.
+
+This is a five-claim Maker strategy
+
+13
+,
+ 
+23
+,
+ 
+42
+,
+ 
+52
+,
+ 
+22
+ or 
+51
+,
+13, 23, 42, 52, 22 or 51,
+
+with a shorter win if Breaker declines B31. No selected guard is being used as a winning target.
+
+A sharper reply classification at the second entry
+
+After
+
+𝑀
+13
+/
+𝐵
+14
+,
+𝑀
+23
+,
+M13/B14,M23,
+
+there are 75 legal Breaker replies. Every reply outside
+
+	
+{
+22
+,
+31
+,
+42
+,
+51
+,
+52
+}
+		
+(2)
+{22,31,42,51,52}
+	​
+
+(2)
+
+loses by the same physical argument.
+
+Indeed, following such a reply 
+𝛽
+β, Maker plays 42. Either Breaker declines 31 and Maker wins at 31, or Breaker takes 31 and M52 creates the two completions 22 and 51.
+
+Thus 70 of the 75 replies are eliminated at this exact interface.
+
+Importantly, this does not eliminate B14 after the first M13. It eliminates keeping B24 as the next automatic response.
+
+3. B42 is a complete repair at that interface
+
+At
+
+𝑀
+13
+/
+𝐵
+14
+,
+𝑀
+23
+,
+M13/B14,M23,
+
+reply B42.
+
+The resulting full state is
+
+	
+𝑀
+=
+𝑀
+0
+∪
+{
+13
+,
+23
+}
+,
+𝐵
+=
+𝐵
+0
+∪
+{
+14
+,
+42
+}
+,
+		
+(3)
+M=M
+0
+	​
+
+∪{13,23},B=B
+0
+	​
+
+∪{14,42},
+(3)
+
+with Maker to move and 74 fresh cells.
+
+Use this 30-pair covering matching:
+
+Platte tekst
+Qleaf = {
+ (1,3),   (4,5),   (6,19),  (8,9),
+ (10,11), (12,22), (15,35), (16,26),
+ (17,27), (18,28), (20,30), (21,31),
+ (24,25), (29,49), (40,50), (51,61),
+ (59,79), (60,80), (62,72), (63,73),
+ (64,65), (66,76), (68,78), (70,71),
+ (81,91), (82,83), (85,86), (88,89),
+ (92,93), (95,96)
+}.
+
+The remaining 14 fresh cells are
+
+{
+0
+,
+2
+,
+7
+,
+39
+,
+41
+,
+48
+,
+52
+,
+54
+,
+69
+,
+87
+,
+90
+,
+97
+,
+98
+,
+99
+}
+.
+{0,2,7,39,41,48,52,54,69,87,90,97,98,99}.
+
+Complete them with
+
+Platte tekst
+Fleaf = {
+ (0,2), (7,41), (39,48), (52,54),
+ (69,87), (90,97), (98,99)
+}.
+
+Then
+
+𝑄
+l
+e
+a
+f
+∪
+𝐹
+l
+e
+a
+f
+Q
+leaf
+	​
+
+∪F
+leaf
+	​
+
+	​
+
+
+is a 37-pair perfect matching of the actual remaining fresh cells. Breaker subsequently takes the mate of every Maker claim.
+
+Full-target coverage proof
+
+Use the supplied 29-pair P53 baseline and its exact 16-gap inventory. Every one of those 16 gaps contains 14 or 42, so all are blocked at (3). 
+Geplakte tekst
+
+The only baseline pairs removed in constructing 
+𝑄
+l
+e
+a
+f
+Q
+leaf
+	​
+
+ are
+
+(
+12
+,
+13
+)
+,
+(
+15
+,
+25
+)
+,
+(
+22
+,
+23
+)
+,
+(
+30
+,
+40
+)
+,
+(
+31
+,
+41
+)
+,
+(
+50
+,
+52
+)
+.
+(12,13),(15,25),(22,23),(30,40),(31,41),(50,52).
+
+Every other baseline pair is retained. The complete live-incidence repair ledger is:
+
+Removed pair	All its live incidences at (3), and replacement pairs
+
+(
+12
+,
+13
+)
+(12,13)	
+𝑇
+17
+:
+(
+4
+,
+5
+)
+T
+17
+	​
+
+:(4,5); 
+𝑇
+19
+,
+𝑇
+39
+:
+(
+10
+,
+11
+)
+T
+19
+	​
+
+,T
+39
+	​
+
+:(10,11); 
+𝑇
+52
+:
+(
+24
+,
+25
+)
+T
+52
+	​
+
+:(24,25)
+
+(
+15
+,
+25
+)
+(15,25)	
+𝑇
+33
+,
+𝑇
+68
+:
+(
+15
+,
+35
+)
+T
+33
+	​
+
+,T
+68
+	​
+
+:(15,35); 
+𝑇
+64
+,
+𝑇
+66
+:
+(
+24
+,
+25
+)
+T
+64
+	​
+
+,T
+66
+	​
+
+:(24,25)
+
+(
+22
+,
+23
+)
+(22,23)	
+𝑇
+40
+:
+(
+10
+,
+11
+)
+T
+40
+	​
+
+:(10,11); 
+𝑇
+45
+:
+(
+12
+,
+22
+)
+T
+45
+	​
+
+:(12,22); 
+𝑇
+66
+,
+𝑇
+83
+:
+(
+24
+,
+25
+)
+T
+66
+	​
+
+,T
+83
+	​
+
+:(24,25); 
+𝑇
+78
+:
+(
+21
+,
+31
+)
+T
+78
+	​
+
+:(21,31)
+
+(
+30
+,
+40
+)
+(30,40)	
+𝑇
+8
+:
+(
+10
+,
+11
+)
+T
+8
+	​
+
+:(10,11); 
+𝑇
+10
+,
+𝑇
+79
+:
+(
+21
+,
+31
+)
+T
+10
+	​
+
+,T
+79
+	​
+
+:(21,31); 
+𝑇
+42
+,
+𝑇
+46
+,
+𝑇
+77
+:
+(
+20
+,
+30
+)
+T
+42
+	​
+
+,T
+46
+	​
+
+,T
+77
+	​
+
+:(20,30); 
+𝑇
+87
+:
+(
+51
+,
+61
+)
+T
+87
+	​
+
+:(51,61); 
+𝑇
+88
+:
+(
+40
+,
+50
+)
+T
+88
+	​
+
+:(40,50)
+
+(
+31
+,
+41
+)
+(31,41)	
+𝑇
+3
+:
+(
+10
+,
+11
+)
+T
+3
+	​
+
+:(10,11); 
+𝑇
+4
+:
+(
+20
+,
+30
+)
+T
+4
+	​
+
+:(20,30); 
+𝑇
+15
+,
+𝑇
+41
+,
+𝑇
+48
+,
+𝑇
+81
+,
+𝑇
+82
+:
+(
+21
+,
+31
+)
+T
+15
+	​
+
+,T
+41
+	​
+
+,T
+48
+	​
+
+,T
+81
+	​
+
+,T
+82
+	​
+
+:(21,31); 
+𝑇
+16
+,
+𝑇
+53
+:
+(
+12
+,
+22
+)
+T
+16
+	​
+
+,T
+53
+	​
+
+:(12,22); 
+𝑇
+76
+,
+𝑇
+84
+,
+𝑇
+92
+,
+𝑇
+93
+:
+(
+51
+,
+61
+)
+T
+76
+	​
+
+,T
+84
+	​
+
+,T
+92
+	​
+
+,T
+93
+	​
+
+:(51,61); 
+𝑇
+90
+:
+(
+40
+,
+50
+)
+T
+90
+	​
+
+:(40,50)
+
+(
+50
+,
+52
+)
+(50,52)	No live incidence.
+
+The last assertion also follows directly from geometry: a Snaky containing both 50 and 52 must contain them in its horizontal four-run, which then contains the permanent Breaker cell 53.
+
+For clarity, two easily missed crossing repairs in this ledger are
+
+{
+10
+,
+20
+,
+30
+,
+40
+,
+41
+,
+51
+}
+	
+⊇
+{
+20
+,
+30
+}
+,
+
+
+{
+21
+,
+22
+,
+23
+,
+24
+,
+30
+,
+31
+}
+	
+⊇
+{
+21
+,
+31
+}
+.
+{10,20,30,40,41,51}
+{21,22,23,24,30,31}
+	​
+
+⊇{20,30},
+⊇{21,31}.
+	​
+
+
+This is why the coordinated pairs are 
+(
+20
+,
+30
+)
+,
+(
+21
+,
+31
+)
+(20,30),(21,31), not 
+(
+21
+,
+30
+)
+,
+(
+31
+,
+41
+)
+(21,30),(31,41).
+
+Every surviving target is therefore either covered by a retained baseline pair or appears in the repair ledger.
+
+Immediate and final claims
+
+Every endpoint of the perfect matching is initially fresh. Before each subsequent Maker move, a pair is either wholly fresh or has a Breaker endpoint. A single Maker claim cannot acquire both endpoints of a fresh covering pair.
+
+Therefore Maker cannot complete a physical target before the mate response. The 74 fresh cells are consumed in 37 complete rounds, and the same argument applies to the final Maker claim.
+
+This establishes a complete defense from (3), not from P53 against arbitrary first and second entries.
+
+4. The repair survives a specified class of exterior interleavings
+
+The following nine pairs may be consumed by ordinary mate exchanges, in any order and either orientation, before M13 or between the displayed core rounds:
+
+Platte tekst
+N = {
+ (39,48), (59,79), (66,76),
+ (68,78), (69,87), (85,86),
+ (88,89), (95,96), (98,99)
+}.
+
+Every pair of 
+𝑁
+N is retained in 
+𝑄
+l
+e
+a
+f
+∪
+𝐹
+l
+e
+a
+f
+Q
+leaf
+	​
+
+∪F
+leaf
+	​
+
+.
+
+If 
+𝑘
+k such pairs have been consumed, retire those pairs from the leaf. The resulting matching has 
+37
+−
+𝑘
+37−k pairs on the remaining fresh cells.
+
+The general reduction below proves that these exchanges cannot advance any of the residual crossing obligations. Targets protected by one of the exterior pairs remain safe by the mate invariant. In particular, this is not an assumption that the singleton incidences of 66, 76, 68 or 78 disappear.
+
+This gives a uniform physical leaf for the corrected interface, including arbitrary interleavings of the two current outer threat pairs.
+
+5. The minimal whole-pair interface of the four exceptions
+
+The fresh-cell support of 
+𝐸
+1
+,
+…
+,
+𝐸
+4
+E
+1
+	​
+
+,…,E
+4
+	​
+
+ is
+
+𝑆
+=
+{
+13
+,
+21
+,
+22
+,
+23
+,
+31
+,
+41
+,
+42
+,
+51
+,
+52
+,
+61
+,
+62
+,
+71
+}
+.
+S={13,21,22,23,31,41,42,51,52,61,62,71}.
+
+Close 
+𝑆
+S under taking mates in 
+𝑄
+∗
+Q
+∗
+	​
+
+. The result is exactly
+
+	
+𝐼
+=
+{
+11
+,
+12
+,
+13
+,
+14
+,
+21
+,
+22
+,
+23
+,
+24
+,
+31
+,
+41
+,
+42
+,
+50
+,
+51
+,
+52
+,
+61
+,
+62
+,
+70
+,
+71
+,
+72
+}
+.
+		
+(4)
+I={11,12,13,14,21,22,23,24,31,41,42,50,51,52,61,62,70,71,72}.
+	​
+
+(4)
+
+It consists of the nine complete pairs
+
+(
+11
+,
+21
+)
+,
+(
+12
+,
+22
+)
+,
+(
+13
+,
+14
+)
+,
+(
+23
+,
+24
+)
+,
+(
+31
+,
+42
+)
+,
+
+
+(
+41
+,
+50
+)
+,
+(
+51
+,
+61
+)
+,
+(
+62
+,
+72
+)
+,
+(
+70
+,
+71
+)
+,
+(11,21),(12,22),(13,14),(23,24),(31,42),
+(41,50),(51,61),(62,72),(70,71),
+	​
+
+
+plus the exceptional cell 52.
+
+This is the unique smallest union of whole 
+𝑄
+∗
+Q
+∗
+	​
+
+-pairs and unpaired cells containing the fresh support of all four exceptions. That is a precise minimality statement within this pairing framework, not a claim of globally minimal controller size.
+
+A central controller that simply excludes these interfaces is insufficient: Section 2 already proves that retaining both 
+(
+13
+,
+14
+)
+(13,14) and 
+(
+23
+,
+24
+)
+(23,24) automatically is losing.
+
+To allow coordination with the upper switch, take the joint core
+
+𝐶
+=
+𝐼
+∪
+𝑅
+∪
+{
+54
+}
+.
+C=I∪R∪{54}.
+
+Explicitly,
+
+Platte tekst
+C = {
+ 11,12,13,14,16,17,18,
+ 21,22,23,24,26,27,28,
+ 31,41,42,50,51,52,54,
+ 61,62,70,71,72
+}.
+
+There are 26 fresh core cells. Cell 54 is included as a physical reserve cell; it is not declared Maker-owned or treated as a pass.
+
+Crucially, the proposed reduction below does not require this joint core to obey the old upper-switch table or to prevent ownership of 
+{
+51
+,
+61
+}
+{51,61}. Its actual colors are tracked.
+
+6. An exact exterior pairing and all remaining crossing obligations
+
+Outside 
+𝐶
+C, use these 19 covering pairs:
+
+Platte tekst
+Qoutside = {
+ (3,4),   (5,6),   (7,8),   (10,20), (15,25),
+ (29,49), (30,40), (59,79), (60,80), (63,73),
+ (64,65), (66,76), (68,78), (81,91), (82,83),
+ (85,86), (88,89), (92,93), (95,96)
+}.
+
+Add
+
+Platte tekst
+Foutside = {
+ (0,1), (2,9), (19,35), (39,48),
+ (69,87), (90,97), (98,99)
+}.
+
+Their union 
+𝑂
+O is a 26-pair perfect matching of the 52 fresh cells outside 
+𝐶
+C.
+
+The 81 targets protected by 
+𝑂
+O
+
+Here is a disjoint coverage ledger for exactly 81 of the 155 initially live targets:
+
+Exterior pair	Targets assigned to it
+
+(
+0
+,
+1
+)
+(0,1)	1, 2
+
+(
+10
+,
+20
+)
+(10,20)	4, 8, 41, 42
+
+(
+3
+,
+4
+)
+(3,4)	5, 6, 12, 13, 17, 18, 19, 20
+
+(
+30
+,
+40
+)
+(30,40)	10, 46, 77, 79, 87, 88
+
+(
+5
+,
+6
+)
+(5,6)	22, 23, 27, 28, 29, 30
+
+(
+7
+,
+8
+)
+(7,8)	31, 35
+
+(
+15
+,
+25
+)
+(15,25)	26, 33, 51, 63, 64, 66, 68
+
+(
+29
+,
+49
+)
+(29,49)	38, 75
+
+(
+63
+,
+73
+)
+(63,73)	96, 121, 124, 134
+
+(
+66
+,
+76
+)
+(66,76)	97, 126, 136
+
+(
+68
+,
+78
+)
+(68,78)	98, 99, 127, 128, 135
+
+(
+60
+,
+80
+)
+(60,80)	103, 114, 116
+
+(
+59
+,
+79
+)
+(59,79)	111, 129
+
+(
+81
+,
+91
+)
+(81,91)	113, 120, 122, 144
+
+(
+64
+,
+65
+)
+(64,65)	115, 125, 131, 132, 133
+
+(
+82
+,
+83
+)
+(82,83)	123, 138, 139, 141, 145, 146
+
+(
+85
+,
+86
+)
+(85,86)	140, 143, 147, 148, 150, 152, 153
+
+(
+88
+,
+89
+)
+(88,89)	142, 154, 155
+
+(
+92
+,
+93
+)
+(92,93)	149
+
+(
+95
+,
+96
+)
+(95,96)	151
+The exact residual family
+
+The other 74 physical targets are:
+
+Platte tekst
+J = {
+   3,  7,  9, 11, 14, 15, 16, 21, 24, 25,
+  32, 34, 36, 37, 39, 40, 43, 44, 45, 47,
+  48, 49, 50, 52, 53, 54, 55, 56, 57, 58,
+  59, 60, 61, 62, 65, 67, 69, 70, 71, 72,
+  73, 74, 76, 78, 80, 81, 82, 83, 84, 85,
+  86, 89, 90, 91, 92, 93, 94, 95,100,101,
+ 102,104,105,106,107,108,109,110,112,117,
+ 118,119,130,137
+}.
+
+This list, together with the fixed source indexing, specifies all crossing obligations, not just selected boundary targets. The ledger and 
+𝐽
+J partition the supplied 155-target list. Initially blocked targets remain blocked because old ownership is permanent.
+
+For each 
+𝑖
+∈
+𝐽
+i∈J, retain the two sets
+
+	
+𝐴
+𝑖
+=
+𝑇
+𝑖
+∩
+𝐶
+,
+𝐷
+𝑖
+=
+𝑇
+𝑖
+∖
+(
+𝑀
+0
+∪
+𝐶
+)
+.
+		
+(5)
+A
+i
+	​
+
+=T
+i
+	​
+
+∩C,D
+i
+	​
+
+=T
+i
+	​
+
+∖(M
+0
+	​
+
+∪C).
+(5)
+
+The physical completion condition is exactly
+
+	
+𝐴
+𝑖
+⊆
+𝑀
+𝐶
+and
+𝐷
+𝑖
+⊆
+𝑀
+o
+u
+t
+s
+i
+d
+e
+.
+		
+(6)
+A
+i
+	​
+
+⊆M
+C
+	​
+
+andD
+i
+	​
+
+⊆M
+outside
+	​
+
+.
+	​
+
+(6)
+
+Do not replace (6) by 
+𝐴
+𝑖
+⊆
+𝑀
+𝐶
+A
+i
+	​
+
+⊆M
+C
+	​
+
+.
+
+For example,
+
+𝑇
+112
+=
+{
+50
+,
+51
+,
+61
+,
+62
+,
+63
+,
+64
+}
+T
+112
+	​
+
+={50,51,61,62,63,64}
+
+has
+
+𝐴
+112
+=
+{
+50
+,
+51
+,
+61
+,
+62
+}
+,
+𝐷
+112
+=
+{
+63
+,
+64
+}
+.
+A
+112
+	​
+
+={50,51,61,62},D
+112
+	​
+
+={63,64}.
+
+Maker owning its four core cells is not a physical win. A Breaker stone at either 63 or 64 blocks it. This is exactly the kind of distinction lost by unconditional projection.
+
+7. Only 17 exterior pairs carry residual information
+
+Among the 26 exterior pairs, precisely these 17 have an endpoint in a target indexed by 
+𝐽
+J:
+
+Platte tekst
+Boundary pairs = {
+ (0,1),   (2,9),   (3,4),   (5,6),   (7,8),
+ (10,20), (15,25), (19,35), (29,49), (30,40),
+ (60,80), (63,73), (64,65), (81,91), (82,83),
+ (90,97), (92,93)
+}.
+
+The other nine are exactly 
+𝑁
+N from Section 4. No target in the residual family contains either endpoint of any pair in 
+𝑁
+N.
+
+That statement is stronger and more useful than saying that the two outer threats have separate reserved pairs. It proves their residual neutrality only after accounting for every physical target in the 81-target ledger.
+
+Thus the remaining information is:
+
+actual ownership on the 26 core cells;
+actual endpoint ownership on 17 boundary pairs;
+the remaining availability of nine residual-neutral pairs.
+
+No physical ownership is reset. The neutral-pair compression is justified by the absence of their endpoints from every residual target.
+
+8. A finite response model that allows coordinated boundary captures
+
+The following is an exact algorithm for a specified, larger response class. It avoids the losing assumption that every exterior pair must remain an automatic mate domain in both directions forever.
+
+At each Maker-turn node, an exterior pair may have one of these states:
+
+	
+𝐹
+𝐹
+,
+ 
+𝐵
+𝐹
+,
+ 
+𝐹
+𝐵
+,
+ 
+𝐵
+𝑀
+,
+ 
+𝑀
+𝐵
+,
+ 
+𝐵
+𝐵
+,
+		
+(7)
+FF, BF, FB, BM, MB, BB,
+(7)
+
+where 
+𝐹
+F means fresh. States with two Maker endpoints are forbidden by the response policy.
+
+The transitions are:
+
+Maker enters a wholly fresh exterior pair. Test physical completion immediately using (6). If there is no win, Breaker takes the mate.
+
+Maker enters the fresh endpoint of a pair already containing a Breaker stone. Test physical completion immediately. Breaker then has a free response: any fresh core cell or any fresh exterior endpoint is allowed.
+
+Maker enters the core. Test physical completion immediately. Breaker may claim any fresh core cell or any fresh exterior endpoint.
+
+The third rule permits a genuine coordinated boundary capture. For example, Breaker may claim 63 or 64 while repairing a core exposure, rather than pretending that the outside cells of 
+𝑇
+112
+T
+112
+	​
+
+ are already Maker-owned or that 
+(
+51
+,
+61
+)
+(51,61) must remain protected.
+
+A Breaker claim into an untouched exterior pair changes 
+𝐹
+𝐹
+FF to 
+𝐵
+𝐹
+BF or 
+𝐹
+𝐵
+FB. Its old full-pair obligations are then blocked, while every singleton incidence remains tracked by (5)–(6).
+
+Why the 81 discarded targets stay safe
+
+Before a Maker move, an exterior pair is wholly fresh or contains a Breaker stone. Therefore a target containing a whole exterior pair cannot be completed by one Maker claim.
+
+This remains true when Breaker proactively captures one endpoint and later allows Maker to claim the other. Thus the ledger remains valid throughout this response model, including all boundary captures.
+
+Exact compression of the nine neutral pairs
+
+For the nine neutral pairs, only two counts are needed:
+
+𝑢
+=
+number wholly fresh
+,
+𝑠
+=
+number with one fresh endpoint and one Breaker endpoint
+.
+u=number wholly fresh,s=number with one fresh endpoint and one Breaker endpoint.
+
+Fully consumed neutral pairs need no further information.
+
+A Maker entry into a wholly fresh neutral pair consumes a complete mate round, changing 
+𝑢
+u to 
+𝑢
+−
+1
+u−1. An entry into a neutral singleton reduces 
+𝑠
+s by one and leaves Breaker a free response. A Breaker capture of a fresh neutral endpoint updates 
+𝑢
+,
+𝑠
+u,s accordingly.
+
+Because neutral endpoints occur in no 
+𝑇
+𝑖
+T
+i
+	​
+
+ with 
+𝑖
+∈
+𝐽
+i∈J, their identities and orientations cannot affect (6). Their full-pair incidences remain protected by the invariant above.
+
+This includes the exact physical semantics of 
+(
+66
+,
+76
+)
+(66,76) and 
+(
+68
+,
+78
+)
+(68,78), rather than discarding their singleton incidences without proof.
+
+Recursive criterion
+
+Let 
+𝑊
+(
+𝑠
+)
+W(s) denote the existence of a Breaker defense within this response model from a Maker-turn state 
+𝑠
+s.
+
+For every legal Maker claim 
+𝑥
+x:
+
+Form the actual post-claim state.
+If any condition (6) holds, that branch is a Maker win before any reply.
+Otherwise use the allowed response set specified above.
+Require at least one legal response leading to a state with 
+𝑊
+=
+1
+W=1.
+
+Equivalently,
+
+	
+𝑊
+(
+𝑠
+)
+=
+⋀
+𝑥
+ fresh
+[
+¬
+Win
+⁡
+𝑀
+(
+𝑠
++
+𝑥
+)
+ 
+∧
+ 
+⋁
+𝑦
+∈
+Allowed
+⁡
+(
+𝑠
+,
+𝑥
+)
+𝑊
+(
+𝑠
++
+𝑥
++
+𝑦
+)
+]
+,
+		
+(8)
+W(s)=
+x fresh
+⋀
+	​
+
+	​
+
+¬Win
+M
+	​
+
+(s+x) ∧ 
+y∈Allowed(s,x)
+⋁
+	​
+
+W(s+x+y)
+	​
+
+,
+(8)
+
+with the usual terminal convention that exhaustion without a Maker target is a Breaker win.
+
+Every transition decreases the number of fresh physical cells. Therefore (8) is a finite recurrence, with no waiting loop and no virtual pass.
+
+The static object in Section 3 supplies a proved winning leaf of this recurrence. Its use after other boundary histories still requires the stated matching endpoints to be fresh or its consumed neutral pairs to be retired; the algorithm does not identify those histories with the pristine leaf.
+
+I have not evaluated (8) at its P53 root and do not assert its value. It is exact for this response class, not a claim that every unrestricted Breaker strategy has this form.
+
+9. What is now isolated
+
+The principal new structural fact is that the accepted P52 framework does not fail diffusely across the board. Its P53 failure is concentrated in the four physical targets (1), whose smallest whole-pair closure is the 19-cell set (4).
+
+The explicit attack shows why that interface must include coordination with the upper-left pairs: keeping both 
+(
+13
+,
+14
+)
+(13,14) and 
+(
+23
+,
+24
+)
+(23,24) as automatic exterior replies is physically losing, regardless of the sophistication of the central controller.
+
+The corrected reply
+
+𝑀
+13
+/
+𝐵
+14
+,
+𝑀
+23
+/
+𝐵
+42
+M13/B14,M23/B42
+	​
+
+
+has a complete 37-pair defense, including the stated neutral interleavings. It repairs the concrete failure rather than merely recording it.
+
+What remains unresolved is a total choice of responses on the joint core and its boundary states. The reduction above retains exactly the 74 residual physical obligations, all 17 relevant boundary-pair states, and the physical tempo supplied by the nine neutral pairs. It does not impose a gratuitous 
+{
+51
+,
+61
+}
+{51,61} guard or promote a projected completion to a Snaky win.
+
+P53, its ancestors, and the empty-board objectives remain unresolved by this response.

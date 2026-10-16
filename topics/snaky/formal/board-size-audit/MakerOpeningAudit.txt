@@ -1,0 +1,11 @@
+Snaky.MakerOpening.opening_66_wins_in_nineteen : Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 19 [90] [75]
+Snaky.MakerOpening.opening_710_wins_in_fifteen :
+  Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 15 [90] [132]
+'Snaky.MakerOpeningCheck.hint_of_parts' depends on axioms: [propext]
+'Snaky.MakerOpeningCheck.hint_avoid' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerOpeningCheck.reply_of_hint' depends on axioms: [propext, Quot.sound]
+'Snaky.GenMakerOpening.tree_ok' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerOpening.opening66_placed' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerOpening.opening710_placed' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerOpening.opening_66_wins_in_nineteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.MakerOpening.opening_710_wins_in_fifteen' depends on axioms: [propext, Classical.choice, Quot.sound]

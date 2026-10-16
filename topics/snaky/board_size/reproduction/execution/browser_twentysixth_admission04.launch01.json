@@ -1,0 +1,54 @@
+{
+  "argv": [
+    "/opt/homebrew/Cellar/python@3.12/3.12.12_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/../formal/tools/closeout_guard.py",
+    "--seconds",
+    "60",
+    "--rss-mib",
+    "150",
+    "--watch",
+    "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/resource-samples-20261015.jsonl",
+    "--output",
+    "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/execution/browser_twentysixth_admission04.guard01.json",
+    "--",
+    "/usr/bin/nice",
+    "-n",
+    "19",
+    "/opt/homebrew/Cellar/python@3.12/3.12.12_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/breaker/cpu_exec.py",
+    "--cpu-seconds",
+    "15",
+    "--",
+    "/opt/homebrew/Cellar/python@3.12/3.12.12_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduce.py",
+    "browser_twentysixth_admission04",
+    "--output",
+    "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/runs/browser_twentysixth_admission04.json"
+  ],
+  "cwd": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size",
+  "environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "limits": {
+    "guard_wall": 60,
+    "outer_cpu": 15,
+    "rss_mib": 150
+  },
+  "preflight_sha256": "196521e2e042c60472114d00692accb02f38ed5b5cc266202e3efc2c35702228",
+  "python_sha256": "51041dcef59a872d4e411dfd26f6264f70bd67294bebbe52a707490726f0d1a6",
+  "scope": "One of thirteen necessary publication finite replays, approved by primary after full wrapper review. Mathematical checker code unchanged. Sanitized math-only text pins explicit; all mathematical output must exactly equal historical accepted report. No solver or search.",
+  "source_sha256": {
+    "../formal/tools/closeout_guard.py": "3850867fc8cb761e7a6958d1b4ea66938afdea263fb8dcd90dbff6f5a7306fe4",
+    "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduce.py": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+    "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/inputs.json": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+    "breaker/cpu_exec.py": "0819f781e2cd2e3ce29e499ecacca46373219d8ab7cbe263c0a59a91cbea6278"
+  },
+  "utc": "2026-10-16T10:55:31.272859+00:00"
+}

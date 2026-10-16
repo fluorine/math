@@ -1,0 +1,148 @@
+{
+  "status": "reused_previously_kernel_checked_unchanged_baseline",
+  "utc": "2026-10-16T09:52:48.761681+00:00",
+  "lean": "Lean (version 4.34.1, arm64-apple-darwin24.6.0, commit 5045d0056413266e57c625dcd7c365b10e377c52, Release)",
+  "runtime_sha256": "1b370cfcbf44e80d1b004ab1b1ab9a4c73951f9f7c242140bcff9bc577576554",
+  "old_state_sha256": "220c05c9966fb82e358c7701f224e846d00587477e0cf62beedc7e492aba3d63",
+  "records": [
+    {
+      "module": "Snaky.Game",
+      "source_sha256": "6c50131917d312e5fc1b9f65476ff0d12462c049585a0e14969b8b9f59e137f5",
+      "olean_sha256": "2fe84939fdbd5903ac06c3318571c08ff89719944de59eda109be3603568a52b",
+      "digest": "1101ead56bc20e2469497a3d671bd895a82e996379a4f9ecf4256cfe6dcb59a9",
+      "previous_record": {
+        "module": "Snaky.Game",
+        "digest": "1101ead56bc20e2469497a3d671bd895a82e996379a4f9ecf4256cfe6dcb59a9",
+        "seconds": 4.9187,
+        "command": [
+          "/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean",
+          "-j",
+          "1",
+          "-M",
+          "4096",
+          "-R",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal",
+          "-o",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/.build/lib/Snaky/Game.olean",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/Snaky/Game.lean"
+        ]
+      }
+    },
+    {
+      "module": "Snaky.Cards",
+      "source_sha256": "e32e0963fd44957fff82b5a95f252d61762c53086b7fb6dbaf4e1bd8b9c0c63a",
+      "olean_sha256": "1852b0be62592da3ff6b96ccfb625243f93f12910da8c00980439bef6722bf79",
+      "digest": "82242b786aa0c3a4d63dba437611c7b88d02dcc8d6a5cd77969678b3ec29f80f",
+      "previous_record": {
+        "module": "Snaky.Cards",
+        "digest": "82242b786aa0c3a4d63dba437611c7b88d02dcc8d6a5cd77969678b3ec29f80f",
+        "seconds": 0.5254,
+        "command": [
+          "/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean",
+          "-j",
+          "1",
+          "-M",
+          "4096",
+          "-R",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal",
+          "-o",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/.build/lib/Snaky/Cards.olean",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/Snaky/Cards.lean"
+        ]
+      }
+    },
+    {
+      "module": "Snaky.Controls",
+      "source_sha256": "6e3bd76dda6d241e14a972a1c8a6f78479913ff1b7ca068617fc99fc393ee981",
+      "olean_sha256": "82325d836b257d38f29319f5c0b6caf19af0955f43a38e4662d84051d52745b3",
+      "digest": "0a07081de095830aaaecf83465af7ab7b24293a14a765084bae0e739e8397eba",
+      "previous_record": {
+        "module": "Snaky.Controls",
+        "digest": "0a07081de095830aaaecf83465af7ab7b24293a14a765084bae0e739e8397eba",
+        "seconds": 0.4212,
+        "command": [
+          "/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean",
+          "-j",
+          "1",
+          "-M",
+          "4096",
+          "-R",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal",
+          "-o",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/.build/lib/Snaky/Controls.olean",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/Snaky/Controls.lean"
+        ]
+      }
+    },
+    {
+      "module": "Snaky.Bounded",
+      "source_sha256": "4af5a64267f3f731f83ceb522ddc1d6533dab7fc7a8ba32fdeec3aa0602b2db2",
+      "olean_sha256": "62012fe70b321f2d4c6a1bcdf9a04fb5bd3019961531baeaf1b5ad7941fb0cac",
+      "digest": "1bab078d771beaf987b40de0e2ebbb8099051b1f257e234cbdae497004592ed5",
+      "previous_record": {
+        "module": "Snaky.Bounded",
+        "digest": "1bab078d771beaf987b40de0e2ebbb8099051b1f257e234cbdae497004592ed5",
+        "seconds": 0.4485,
+        "command": [
+          "/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean",
+          "-j",
+          "1",
+          "-M",
+          "4096",
+          "-R",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal",
+          "-o",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/.build/lib/Snaky/Bounded.olean",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/Snaky/Bounded.lean"
+        ]
+      }
+    },
+    {
+      "module": "Snaky.CardsSound",
+      "source_sha256": "abe03c08cda6e631ac6df6e07a474fdb74a5fa3245077a561c1af474c49b0f65",
+      "olean_sha256": "406bb2d0021e13d84b4849936afa111373023774a5b001236ae1cb4ede0dceec",
+      "digest": "31d316dd71e6ab10a6aa0d850c3f5afe20149fd14988bee9eb4c4952654b86ce",
+      "previous_record": {
+        "module": "Snaky.CardsSound",
+        "digest": "31d316dd71e6ab10a6aa0d850c3f5afe20149fd14988bee9eb4c4952654b86ce",
+        "seconds": 1.9932,
+        "command": [
+          "/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean",
+          "-j",
+          "1",
+          "-M",
+          "4096",
+          "-R",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal",
+          "-o",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/.build/lib/Snaky/CardsSound.olean",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/Snaky/CardsSound.lean"
+        ]
+      }
+    },
+    {
+      "module": "Snaky.Plane",
+      "source_sha256": "c4e2bccd2762b144874119eb45aa752985657e967f447b469c8b00865ed47469",
+      "olean_sha256": "29cd77ebb4204d0079d9bf4ae11b01b833f1716779a8cb57058c3887a3aba248",
+      "digest": "1dae052674ea6092267990a94704b5a307aa7f1d261c30a8d0f119d610ccce61",
+      "previous_record": {
+        "module": "Snaky.Plane",
+        "digest": "1dae052674ea6092267990a94704b5a307aa7f1d261c30a8d0f119d610ccce61",
+        "seconds": 2.3509,
+        "command": [
+          "/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean",
+          "-j",
+          "1",
+          "-M",
+          "4096",
+          "-R",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal",
+          "-o",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/.build/lib/Snaky/Plane.olean",
+          "/Volumes/2tb/math/.worktrees/snaky19-20261015-a/topics/snaky/formal/Snaky/Plane.lean"
+        ]
+      }
+    }
+  ],
+  "note": "Unchanged baseline modules reused from the accepted 19/24 proof worktree. New closeout modules are compiled afresh. This is not a claim of a fresh baseline rebuild."
+}

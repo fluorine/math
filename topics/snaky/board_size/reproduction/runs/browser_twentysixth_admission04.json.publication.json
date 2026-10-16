@@ -1,0 +1,49 @@
+{
+  "case": "browser_twentysixth_admission04",
+  "checker": "verification/browser_twentysixth_admission04.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "f40450bd29999059b56c5462c915840d9c3ea1d4998bee81572de265696b07c2",
+  "created_utc": "2026-10-16T10:55:31.646042+00:00",
+  "execution_field_differences": {
+    "created_utc": {
+      "historical": "2026-10-16T10:32:09.082904+00:00",
+      "replay": "2026-10-16T10:55:31.571317+00:00"
+    },
+    "elapsed_seconds": {
+      "historical": 0.1506986664608121,
+      "replay": 0.14413479156792164
+    },
+    "process_cpu_seconds": {
+      "historical": 0.14834399999999998,
+      "replay": 0.14407599999999998
+    }
+  },
+  "historical_report": "verification/browser_twentysixth_admission04.json",
+  "historical_report_sha256": "0520e70ef225c078d0667d1f0ada0d8888aef9f5327de4a38a387acd25016872",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "341c9b41d412ec62b36209d5af069c1d7a1adc146026b98ba78ef7df7227d725",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "b8c53b5be163716ce7ae609ee3289e206ac6c96954f7a1af47cb470426d647ce",
+      "old_sha256": "61b1ff50ebbc0cc2efe4271e2a811edc68a786cfdd66c4311113dca33a3b2288",
+      "path": "browser/04-twentysixth-final-main.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    },
+    {
+      "new_sha256": "b8c53b5be163716ce7ae609ee3289e206ac6c96954f7a1af47cb470426d647ce",
+      "old_sha256": "80aabe4174c1accbedc57e9ea9f4dd9a7ad16c1680168c774040d26e9386310a",
+      "path": "browser/04-twentysixth-final.txt",
+      "transformation": "last final mathematical response from browser/04-twentysixth-final-main.txt"
+    },
+    {
+      "new_sha256": "d043b614a820753de45b094a9a755f15f03c2ffaf6076ca2ec29e8c03207b64e",
+      "old_sha256": "d043b614a820753de45b094a9a755f15f03c2ffaf6076ca2ec29e8c03207b64e",
+      "path": "browser/04-twentysixth-prompt.txt",
+      "transformation": "submitted mathematical prompt; appended browser chrome removed"
+    }
+  ]
+}

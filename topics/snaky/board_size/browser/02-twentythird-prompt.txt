@@ -1,0 +1,4284 @@
+RESEARCH FOLLOW-UP 23: move the full physical defense upstream, with explicit history.
+
+Your N32 24-cell proposal is saved and is now undergoing independent LOCAL audit. It is NOT yet accepted. The earlier N33 defense is independently accepted, but neither empty board is solved. No remote computation: mathematical inference only, with all programs, enumeration, solvers and proof checking on our Mac mini. Do not commission code or experiments. Give explicit coordinates and falsifiable lemmas.
+
+NEW EXACT TARGET: construct a complete physical Breaker defense at N30 (30 Maker/30 Breaker stones, Maker to move), or at N31 if that is a decisive intermediate. A defense only after the known forced moves is not a defense of the parent: cover all alternative Maker moves and arbitrary interleavings. If a real Maker win is available, supply an all-reply strategy instead. Seek a compact controller with reserved domains and literal target coverage, not a generic recommendation to search.
+
+The independently checked two-arrow continuation is M(4,10)/B(4,11), then M(11,5)/B(11,6), reaching N32. Other Breaker replies at each arrow allow immediate full Snaky wins; all266 deviations were checked. This only transfers a WIN from the leaf to parent; it does NOT transfer a leaf defense backward.
+
+Full N30 state (coordinates1..14 on one fixed board):
+{
+  "board": [
+    1,
+    1,
+    14,
+    14
+  ],
+  "breaker": [
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      9,
+      12
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      11,
+      7
+    ],
+    [
+      11,
+      9
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      2
+    ],
+    [
+      13,
+      10
+    ]
+  ],
+  "maker": [
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      8,
+      11
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      10,
+      8
+    ],
+    [
+      10,
+      9
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      13,
+      6
+    ]
+  ],
+  "status": "OPEN",
+  "turn": "Maker"
+}
+Full N31 state:
+{
+  "board": [
+    1,
+    1,
+    14,
+    14
+  ],
+  "breaker": [
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      9,
+      12
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      11,
+      7
+    ],
+    [
+      11,
+      9
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      2
+    ],
+    [
+      13,
+      10
+    ]
+  ],
+  "maker": [
+    [
+      4,
+      10
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      8,
+      11
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      10,
+      8
+    ],
+    [
+      10,
+      9
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      13,
+      6
+    ]
+  ],
+  "status": "OPEN",
+  "turn": "Maker"
+}
+Full N32 state:
+{
+  "board": [
+    1,
+    1,
+    14,
+    14
+  ],
+  "breaker": [
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      7
+    ],
+    [
+      4,
+      8
+    ],
+    [
+      4,
+      9
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      5,
+      11
+    ],
+    [
+      6,
+      4
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      6,
+      9
+    ],
+    [
+      6,
+      10
+    ],
+    [
+      7,
+      3
+    ],
+    [
+      7,
+      9
+    ],
+    [
+      7,
+      11
+    ],
+    [
+      8,
+      3
+    ],
+    [
+      8,
+      5
+    ],
+    [
+      8,
+      7
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      4
+    ],
+    [
+      9,
+      6
+    ],
+    [
+      9,
+      7
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      9,
+      12
+    ],
+    [
+      10,
+      5
+    ],
+    [
+      11,
+      6
+    ],
+    [
+      11,
+      7
+    ],
+    [
+      11,
+      9
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      2
+    ],
+    [
+      13,
+      10
+    ]
+  ],
+  "maker": [
+    [
+      4,
+      10
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      5,
+      7
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      5,
+      9
+    ],
+    [
+      5,
+      10
+    ],
+    [
+      6,
+      5
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      6,
+      8
+    ],
+    [
+      7,
+      4
+    ],
+    [
+      7,
+      5
+    ],
+    [
+      7,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      4
+    ],
+    [
+      8,
+      6
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      8,
+      10
+    ],
+    [
+      8,
+      11
+    ],
+    [
+      9,
+      8
+    ],
+    [
+      9,
+      11
+    ],
+    [
+      10,
+      4
+    ],
+    [
+      10,
+      6
+    ],
+    [
+      10,
+      7
+    ],
+    [
+      10,
+      8
+    ],
+    [
+      10,
+      9
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      5
+    ],
+    [
+      11,
+      10
+    ],
+    [
+      12,
+      10
+    ],
+    [
+      13,
+      6
+    ]
+  ],
+  "status": "OPEN",
+  "turn": "Maker"
+}
+
+Requested output: an explicit ordinary-play defense for every first Maker entry at N30/N31, with all actual old stones retained, sound handling of revived targets when previous Breaker claims become free, no prescribed response after an immediate Maker win, actual filler choices, all reserved supports and unchanged exterior components. If impossible within your construction, return the smallest literal counterexample and a corrected admissible interface. A selected projected-game loss is not a physical Maker win. No requirement on move count.
+
+SELF-CONTAINED ORIGINAL RULES, accepted pairing data and exact N32 baseline follow:
+Your K10 + Q two-stage defense at N33 has been collected and is undergoing an independent local audit. Do not call it verified yet. The earlier K8 + Q full physical defense at L_cap HAS now passed our independent check, including all 1,040 literal targets, waiting/filler semantics and final claims.
+
+Please investigate the actual parent N32, one full round earlier, while that audit runs. Aim for a full conditional physical strategy: either a Breaker defense against every future Maker move or an all-reply Maker forcing mechanism. Both empty14 Maker and empty10 Breaker goals remain OPEN; a conditional N32 result alone is not an empty-board theorem. Do not run or commission remote computational experiments. All solvers and certificate checks remain local on our Mac mini. Use mathematical reasoning and explicit coordinates only.
+
+Rules: board {(x,y):1<=x,y<=14}; target is every contained translated D4 image of H={(0,0),(1,0),(2,0),(3,0),(3,1),(4,1)}. Maker and Breaker alternate one fresh physical claim. This equal-color state is Maker to move. Maker wins immediately on acquiring a full target, including the last legal claim. No passes or virtual claims; retain all old colors. There are 1,040 full targets.
+
+Exact N32 full colors (all unlisted cells free):
+{"board": [1, 1, 14, 14], "breaker": [[4, 5], [4, 7], [4, 8], [4, 9], [4, 11], [5, 6], [5, 11], [6, 4], [6, 7], [6, 9], [6, 10], [7, 3], [7, 9], [7, 11], [8, 3], [8, 5], [8, 7], [8, 9], [9, 4], [9, 6], [9, 7], [9, 9], [9, 10], [9, 12], [10, 5], [11, 6], [11, 7], [11, 9], [11, 11], [11, 12], [12, 2], [13, 10]], "maker": [[4, 10], [5, 5], [5, 7], [5, 8], [5, 9], [5, 10], [6, 5], [6, 6], [6, 8], [7, 4], [7, 5], [7, 6], [7, 7], [7, 8], [8, 4], [8, 6], [8, 8], [8, 10], [8, 11], [9, 8], [9, 11], [10, 4], [10, 6], [10, 7], [10, 8], [10, 9], [10, 10], [10, 11], [11, 5], [11, 10], [12, 10], [13, 6]], "status": "OPEN", "turn": "Maker"}
+
+N33 is exactly N32 + Maker(13,7), Breaker(13,5). L_cap is exactly N33 + Maker(12,8), Breaker(12,7). L_row is L_cap + Maker(11,8), Breaker(12,9). L_row has an independently checked full 54-pair defense. Its full pair list P is:
+[[[1, 1], [1, 2]], [[2, 1], [1, 5]], [[3, 1], [5, 1]], [[4, 1], [4, 2]], [[6, 1], [7, 1]], [[8, 1], [9, 1]], [[10, 1], [10, 3]], [[11, 1], [7, 2]], [[12, 1], [13, 1]], [[2, 2], [3, 2]], [[5, 2], [6, 2]], [[8, 2], [9, 2]], [[10, 2], [11, 2]], [[13, 2], [13, 4]], [[14, 2], [14, 3]], [[1, 3], [4, 4]], [[2, 3], [1, 6]], [[3, 3], [4, 3]], [[5, 3], [5, 4]], [[11, 3], [12, 3]], [[1, 4], [2, 7]], [[2, 4], [3, 4]], [[11, 4], [12, 4]], [[2, 5], [2, 6]], [[3, 5], [3, 6]], [[12, 5], [12, 6]], [[14, 5], [14, 6]], [[1, 7], [1, 8]], [[3, 7], [3, 8]], [[14, 7], [13, 8]], [[2, 8], [2, 9]], [[14, 8], [14, 10]], [[1, 9], [1, 10]], [[3, 9], [3, 11]], [[13, 9], [14, 9]], [[2, 10], [3, 10]], [[1, 11], [1, 13]], [[2, 11], [2, 12]], [[12, 11], [12, 12]], [[13, 11], [13, 12]], [[14, 11], [14, 12]], [[3, 12], [3, 13]], [[4, 12], [5, 12]], [[6, 12], [7, 12]], [[8, 12], [7, 14]], [[10, 12], [10, 13]], [[4, 13], [5, 13]], [[8, 13], [9, 13]], [[11, 13], [12, 13]], [[13, 13], [10, 14]], [[14, 13], [13, 14]], [[4, 14], [5, 14]], [[8, 14], [9, 14]], [[11, 14], [12, 14]]]
+
+For the accepted L_cap controller, let a=(11,8), b=(13,8), c=(13,9), d=(12,9), e=(14,7), g=(14,8), h=(14,9), i=(14,10). Q = P minus {b,e}, {c,h}, {g,i}; its 51 exterior pairs are disjoint from K8={a,b,c,d,e,g,h,i}. Every no-Q live target is protected by the K8 controller. While K8 is pristine, answer an exterior entry at its free Q-mate; an exterior move with no required free mate triggers Bd and commitment to Q plus {be,ch,gi}. On first K8 entry: a→d with {be,ch,gi}; b→d with {ae,ch,gi}; c→d with {ab,hi}; e→d with {ab,ch,gi}; g→d with {ab,hi}; h→d with {ae,bc,gi}; i→d with {ae,bc,gh}; d→b with {ac,gi}. After commitment, answer free mates, otherwise an actual arbitrary fresh filler. Full pair coverage and invariant prove indefinite defense including arbitrary exterior interleavings.
+
+Your new N33 proposal (NOT yet accepted) reserves K10=K8+{j=(12,7),k=(12,8)} with the same Q. First entry k responds j and transitions to the K8 waiting phase. Other first entries x respond k and commit: for x in {a,d,e,g,j}, {bc,hi}; x=b: {cd,hi}; x=c: {bd,hi}; x=h: {bc,gi}; x=i: {bc,gh}. An exterior filler trigger also responds k and commits {bc,hi}. You listed ten full no-Q obligations, with K10 traces {a,k,b,e}, {a,k,b,c,h}, {b,c,h,i}, {e,g,h,i}, {b,g,h,i}, {a,k,c,d}, {b,c,d}, {b,k,d}, {j,k,d}, {a,k,j}. Their actual physical target binding is currently being independently regenerated. Thus the tempting N32 M(13,7) route may be answered by B(13,5), but this does not settle N32.
+
+A natural mechanism to examine is K12=K10+{(13,5),(13,7)}: all 12 cells are initially free at N32 and disjoint from Q. You must recompute all physical obligations newly revived by removing B(13,5). Do not assume the N33 ten-target list remains complete. If this reserve is insufficient, exhibit a literal target/counterreply and give a sound enlargement or a different mechanism; arbitrary old colors cannot be discarded.
+
+Existing failed routes: the long row-eight and crossed-column descendants T_cross and T_blocked both have complete independently checked physical pairing defenses. The N33 preparation M(12,8) covers127/129 replies with verified tactical cards, but its two exceptions lead to defended L_cap and L_row. Bounded search failures are only UNKNOWN, not game losses. Seeking the same previously defeated hook does not establish a new forcing mechanism.
+
+Requested output: an explicit finite controller/table or complete Maker strategy at exact N32, with every entry case, actual fresh response, literal full-target witnesses/coverage, and proof of safety before each Breaker response. If using a reserved-domain product, explain arbitrary prior exterior histories, commitment, real filler rules, and final legal claims. If you cannot close it, give a precise obstruction to your proposed controller class and the smallest explicit unresolved physical frontier or new lemma that would close it. Please distinguish a full physical defense from a selected-trace defense and an inability of one fixed policy from an unrestricted game outcome.
+
+
+YOUR N32 PROPOSAL, UNVERIFIED LOCAL AUDIT PENDING:
+ChatGPT zei:
+Result: a 24-cell controller for 
+𝑁
+32
+N32
+
+I obtain a complete hand-derived Breaker defense at the stated 
+𝑁
+32
+N32 position. It uses 46 unchanged exterior pairs, a reserved domain of 24 initially free cells, and explicit responses for every reserved entry and every exterior filler case.
+
+The natural 
+𝐾
+12
++
+𝑄
+K
+12
+	​
+
++Q waiting rule does fail. The repair changes the upper-right pair assignments rather than assuming that the newly freed cell 
+(
+13
+,
+5
+)
+(13,5) is harmless.
+
+The only supplied coverage result used below is the accepted 
+𝐿
+r
+o
+w
+L
+row
+	​
+
+ pairing 
+𝑃
+P. The necessary intermediate target classifications and controller tables are proved below; acceptance of the pending 
+𝑁
+33
+N33 controller is not a premise. This new construction still requires your independent audit.
+
+1. Coordinates and exterior domains
+
+Retain the names
+
+\begin{array}{c|c@{\qquad}c|c} a&(11,8)&b&(13,8)\\ c&(13,9)&d&(12,9)\\ e&(14,7)&g&(14,8)\\ h&(14,9)&i&(14,10)\\ j&(12,7)&k&(12,8)\\ r&(13,5)&s&(13,7). \end{array}
+
+Thus 
+𝐾
+12
+=
+{
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+,
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+,
+𝑗
+,
+𝑘
+,
+𝑟
+,
+𝑠
+}
+K
+12
+	​
+
+={a,b,c,d,e,g,h,i,j,k,r,s}.
+
+Introduce twelve additional reserved cells:
+
+\begin{array}{c|c@{\qquad}c|c} m&(11,4)&n&(12,4)\\ p&(12,5)&q&(12,6)\\ t&(14,5)&u&(14,6)\\ v&(13,2)&w&(13,3)\\ z&(13,4)&\alpha&(14,2)\\ \beta&(14,3)&\gamma&(14,4). \end{array}
+
+Reserve exactly
+
+𝐷
+=
+𝐾
+12
+∪
+{
+𝑚
+,
+𝑛
+,
+𝑝
+,
+𝑞
+,
+𝑡
+,
+𝑢
+,
+𝑣
+,
+𝑤
+,
+𝑧
+,
+𝛼
+,
+𝛽
+,
+𝛾
+}
+.
+D=K
+12
+	​
+
+∪{m,n,p,q,t,u,v,w,z,α,β,γ}.
+	​
+
+
+All 24 cells are initially free at 
+𝑁
+32
+N32.
+
+In pair lists below, juxtaposition denotes an unordered pair: for example, 
+𝑝
+𝑚
+=
+{
+(
+12
+,
+5
+)
+,
+(
+11
+,
+4
+)
+}
+pm={(12,5),(11,4)}.
+
+Define the fixed exterior matching
+
+	
+𝑅
+=
+𝑃
+∖
+{
+𝑏
+𝑒
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+,
+𝑚
+𝑛
+,
+𝑝
+𝑞
+,
+𝑡
+𝑢
+,
+𝑣
+𝑧
+,
+𝛼
+𝛽
+}
+.
+		
+(1)
+R=P∖{be,ch,gi,mn,pq,tu,vz,αβ}.
+	​
+
+(1)
+
+These are precisely entries 
+14
+,
+15
+,
+23
+,
+26
+,
+27
+,
+30
+,
+32
+,
+35
+14,15,23,26,27,30,32,35 of the supplied 
+𝑃
+P. Consequently, 
+𝑅
+R consists of 46 literal supplied pairs and is disjoint from 
+𝐷
+D.
+
+It is useful to retain
+
+	
+𝑄
+=
+𝑅
+∪
+{
+𝑚
+𝑛
+,
+𝑝
+𝑞
+,
+𝑡
+𝑢
+,
+𝑣
+𝑧
+,
+𝛼
+𝛽
+}
+,
+𝑄
+0
+=
+(
+𝑄
+∖
+{
+𝑣
+𝑧
+}
+)
+∪
+{
+𝑤
+𝑧
+}
+.
+		
+(2)
+Q=R∪{mn,pq,tu,vz,αβ},Q
+0
+	​
+
+=(Q∖{vz})∪{wz}.
+(2)
+
+The 16 initially free cells outside both 
+𝐷
+D and the endpoints of 
+𝑅
+R are
+
+{
+	
+(
+14
+,
+1
+)
+,
+(
+6
+,
+3
+)
+,
+(
+9
+,
+3
+)
+,
+(
+9
+,
+5
+)
+,
+(
+4
+,
+6
+)
+,
+(
+7
+,
+10
+)
+,
+(
+6
+,
+11
+)
+,
+(
+1
+,
+12
+)
+,
+
+
+	
+(
+2
+,
+13
+)
+,
+(
+6
+,
+13
+)
+,
+(
+7
+,
+13
+)
+,
+(
+1
+,
+14
+)
+,
+(
+2
+,
+14
+)
+,
+(
+3
+,
+14
+)
+,
+(
+6
+,
+14
+)
+,
+(
+14
+,
+14
+)
+}
+.
+{
+	​
+
+(14,1),(6,3),(9,3),(9,5),(4,6),(7,10),(6,11),(1,12),
+(2,13),(6,13),(7,13),(1,14),(2,14),(3,14),(6,14),(14,14)}.
+	​
+
+
+Thus all 132 initially free cells have an explicit place in the construction.
+
+2. The initial waiting rule and every first-entry response
+
+Define
+
+	
+𝐶
+0
+=
+{
+𝑎
+𝑘
+,
+𝑏
+𝑐
+,
+𝑔
+𝑖
+,
+𝑠
+𝑑
+}
+.
+		
+(3)
+C
+0
+	​
+
+={ak,bc,gi,sd}.
+(3)
+
+While 
+𝐷
+D is untouched, answer an exterior Maker entry at its free 
+𝑅
+R-mate. If there is no required free mate, make the actual claim 
+𝐵
+𝑟
+Br and commit to
+
+	
+𝑄
+∪
+𝐶
+0
+.
+		
+(4)
+Q∪C
+0
+	​
+
+.
+(4)
+
+On the first Maker entry into 
+𝐷
+D, use the following table. All referenced subsidiary phases are specified in Section 3.
+
+First entry	Actual Breaker response	Continuation
+
+𝑟
+r	
+𝑠
+s	Commit to 
+𝑅
+∪
+{
+𝛼
+𝛽
+,
+𝑝
+𝑚
+,
+𝑛
+𝑧
+,
+𝑣
+𝑤
+,
+𝑞
+𝑗
+,
+𝑢
+𝑒
+,
+𝑎
+𝑘
+}
+R∪{αβ,pm,nz,vw,qj,ue,ak}.
+
+𝑠
+s	
+𝑟
+r	Enter phase 
+𝐹
+𝑠
+(
+𝑄
+)
+F
+s
+	​
+
+(Q).
+
+𝑘
+k	
+𝑟
+r	Enter phase 
+𝐹
+𝑘
+(
+𝑄
+)
+F
+k
+	​
+
+(Q).
+
+𝑥
+∈
+{
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+,
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+,
+𝑗
+}
+x∈{a,b,c,d,e,g,h,i,j}	
+𝑟
+r	Commit to 
+𝑄
+Q plus the row for 
+𝑥
+x in Table A below.
+
+𝑝
+p	
+𝑛
+n	Commit to 
+𝑅
+∪
+{
+𝑤
+𝑧
+,
+𝛽
+𝛾
+,
+𝑞
+𝑚
+,
+𝑟
+𝑡
+,
+𝑗
+𝑘
+,
+𝑎
+𝑐
+,
+𝑠
+𝑏
+,
+𝑒
+𝑔
+}
+R∪{wz,βγ,qm,rt,jk,ac,sb,eg}.
+
+𝑚
+m	
+𝑛
+n	Commit to 
+𝑅
+∪
+{
+𝑤
+𝑧
+,
+𝛽
+𝛾
+,
+𝑝
+𝑞
+,
+𝑟
+𝑡
+,
+𝑗
+𝑘
+,
+𝑎
+𝑐
+,
+𝑠
+𝑏
+,
+𝑒
+𝑔
+}
+R∪{wz,βγ,pq,rt,jk,ac,sb,eg}.
+
+𝑡
+t	
+𝑛
+n	Commit to 
+𝑅
+∪
+{
+𝑤
+𝑧
+,
+𝛽
+𝛾
+,
+𝑝
+𝑚
+,
+𝑗
+𝑘
+,
+𝑎
+𝑐
+,
+𝑠
+𝑏
+,
+𝑒
+𝑔
+}
+R∪{wz,βγ,pm,jk,ac,sb,eg}.
+
+𝑞
+q	
+𝑝
+p	Enter the guarded 
+𝐾
+12
+K
+12
+	​
+
+ phase of Section 3.4, with exterior 
+𝑄
+0
+Q
+0
+	​
+
+.
+
+𝑛
+n	
+𝑚
+m	Enter the same guarded phase, with exterior 
+𝑄
+0
+Q
+0
+	​
+
+.
+
+𝑢
+u	
+𝑡
+t	Enter the same guarded phase, with exterior 
+𝑄
+0
+Q
+0
+	​
+
+.
+
+𝑣
+v	
+𝑟
+r	Commit to 
+𝑄
+0
+∪
+𝐶
+0
+Q
+0
+	​
+
+∪C
+0
+	​
+
+.
+
+𝑧
+z	
+𝑟
+r	Commit to 
+(
+𝑄
+∖
+{
+𝑣
+𝑧
+}
+)
+∪
+{
+𝑣
+𝑤
+}
+∪
+𝐶
+0
+(Q∖{vz})∪{vw}∪C
+0
+	​
+
+.
+
+𝑤
+w or 
+𝛾
+γ	
+𝑟
+r	Commit to 
+𝑄
+∪
+𝐶
+0
+Q∪C
+0
+	​
+
+.
+
+𝛼
+α	
+𝑟
+r	Commit to 
+(
+𝑄
+∖
+{
+𝑣
+𝑧
+,
+𝛼
+𝛽
+}
+)
+∪
+{
+𝑤
+𝑧
+,
+𝛽
+𝛾
+}
+∪
+𝐶
+0
+(Q∖{vz,αβ})∪{wz,βγ}∪C
+0
+	​
+
+.
+
+𝛽
+β	
+𝑟
+r	Commit to 
+(
+𝑄
+∖
+{
+𝑣
+𝑧
+,
+𝛼
+𝛽
+}
+)
+∪
+{
+𝑤
+𝑧
+,
+𝛼
+𝛾
+}
+∪
+𝐶
+0
+(Q∖{vz,αβ})∪{wz,αγ}∪C
+0
+	​
+
+.
+
+This covers all 24 entries.
+
+Table A: after 
+𝑀
+𝑥
+/
+𝐵
+𝑟
+Mx/Br
+Entry 
+𝑥
+x	Added pairs
+
+𝑎
+a	
+𝑠
+𝑘
+,
+𝑐
+𝑑
+,
+𝑏
+ℎ
+,
+𝑒
+𝑔
+sk,cd,bh,eg
+
+𝑏
+b	
+𝑎
+𝑘
+,
+𝑠
+𝑑
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+ak,sd,ch,gi
+
+𝑐
+c	
+𝑠
+𝑏
+,
+𝑎
+𝑘
+,
+𝑗
+𝑑
+,
+𝑔
+𝑖
+sb,ak,jd,gi
+
+𝑑
+d	
+𝑠
+𝑏
+,
+𝑗
+𝑘
+,
+𝑎
+𝑐
+,
+𝑔
+𝑖
+sb,jk,ac,gi
+
+𝑒
+,
+ℎ
+,
+e,h, or 
+𝑗
+j	
+𝑎
+𝑘
+,
+𝑏
+𝑐
+,
+𝑔
+𝑖
+,
+𝑠
+𝑑
+ak,bc,gi,sd
+
+𝑔
+g	
+𝑠
+𝑘
+,
+𝑐
+𝑑
+,
+𝑎
+𝑏
+,
+ℎ
+𝑖
+sk,cd,ab,hi
+
+𝑖
+i	
+𝑠
+𝑑
+,
+𝑎
+𝑘
+,
+𝑏
+ℎ
+,
+𝑒
+𝑔
+sd,ak,bh,eg
+
+All new pair endpoints in the main table and Table A belong to the reserved domain. They avoid the actual Maker entry and Breaker response.
+
+Permanent policy after commitment
+
+For the selected pair family, answer a Maker claim at its mate whenever that mate is free. Otherwise take the lexicographically least free physical cell, ordered first by 
+𝑥
+x, then by 
+𝑦
+y.
+
+A pair already containing a Breaker stone is simply an already blocked protection; it need not be played again. Every filler remains an actual permanent Breaker stone.
+
+3. Complete subsidiary phases
+
+These phases are parameterized by an exterior pair family 
+𝐽
+J, which will be 
+𝑄
+Q or 
+𝑄
+0
+Q
+0
+	​
+
+. The geometric justification for using either appears in Sections 4–7.
+
+In each waiting phase, answer an exterior entry at its free 
+𝐽
+J-mate. An exterior entry with no required free mate triggers the explicitly specified commitment. There are no unspecified waiting-phase fillers.
+
+3.1 Phase 
+𝐹
+𝑠
+(
+𝐽
+)
+F
+s
+	​
+
+(J)
+
+Here 
+𝑠
+s is Maker-owned, 
+𝑟
+r is Breaker-owned, and
+
+{
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+,
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+,
+𝑗
+,
+𝑘
+}
+{a,b,c,d,e,g,h,i,j,k}
+
+is untouched.
+
+An exterior filler trigger takes 
+𝐵
+𝑘
+Bk and commits to
+
+𝐽
+∪
+{
+𝑏
+𝑐
+,
+ℎ
+𝑖
+}
+.
+J∪{bc,hi}.
+
+On first entry 
+𝑘
+k, take 
+𝐵
+𝑗
+Bj and enter the eight-cell phase in Section 3.3.
+
+Every other first entry takes 
+𝐵
+𝑘
+Bk and commits as follows:
+
+Entry	Added pairs
+
+𝑎
+,
+𝑑
+,
+𝑒
+,
+𝑔
+,
+a,d,e,g, or 
+𝑗
+j	
+𝑏
+𝑐
+,
+ℎ
+𝑖
+bc,hi
+
+𝑏
+b	
+𝑐
+𝑑
+,
+ℎ
+𝑖
+cd,hi
+
+𝑐
+c	
+𝑏
+𝑑
+,
+ℎ
+𝑖
+bd,hi
+
+ℎ
+h	
+𝑏
+𝑐
+,
+𝑔
+𝑖
+bc,gi
+
+𝑖
+i	
+𝑏
+𝑐
+,
+𝑔
+ℎ
+bc,gh
+
+This is a direct finite controller for the required intermediate position, rather than an assumption about its pending audit.
+
+3.2 Phase 
+𝐹
+𝑘
+(
+𝐽
+)
+F
+k
+	​
+
+(J)
+
+Here 
+𝑘
+k is Maker-owned, 
+𝑟
+r is Breaker-owned, and
+
+{
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+,
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+,
+𝑗
+,
+𝑠
+}
+{a,b,c,d,e,g,h,i,j,s}
+
+is untouched.
+
+An exterior filler trigger takes 
+𝐵
+𝑑
+Bd and commits to
+
+𝐽
+∪
+{
+𝑎
+𝑠
+,
+𝑏
+𝑐
+,
+𝑔
+𝑖
+}
+.
+J∪{as,bc,gi}.
+
+On first entry 
+𝑑
+d, take 
+𝐵
+𝑠
+Bs and commit to 
+𝐽
+∪
+{
+𝑎
+𝑐
+}
+J∪{ac}.
+
+For every other first entry, take 
+𝐵
+𝑑
+Bd:
+
+Entry	Added pairs
+
+𝑠
+s	
+𝑎
+𝑗
+,
+𝑏
+𝑒
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+aj,be,ch,gi
+
+𝑎
+a	
+𝑠
+𝑗
+,
+𝑏
+𝑒
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+sj,be,ch,gi
+
+𝑏
+b	
+𝑎
+𝑠
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+as,ch,gi
+
+𝑐
+,
+𝑒
+,
+c,e, or 
+𝑔
+g	
+𝑎
+𝑏
+,
+𝑠
+𝑗
+,
+ℎ
+𝑖
+ab,sj,hi
+
+ℎ
+h or 
+𝑗
+j	
+𝑎
+𝑠
+,
+𝑏
+𝑐
+,
+𝑔
+𝑖
+as,bc,gi
+
+𝑖
+i	
+𝑎
+𝑠
+,
+𝑏
+𝑐
+,
+𝑔
+ℎ
+as,bc,gh
+3.3 Eight-cell phase
+
+Here 
+𝑠
+,
+𝑘
+s,k are Maker-owned, 
+𝑟
+,
+𝑗
+r,j are Breaker-owned, and 
+𝐾
+8
+K
+8
+	​
+
+ is untouched.
+
+An exterior filler trigger takes 
+𝐵
+𝑑
+Bd and commits to
+
+𝐽
+∪
+{
+𝑏
+𝑒
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+}
+.
+J∪{be,ch,gi}.
+
+The entry table is:
+
+Entry	Breaker response	Added pairs
+
+𝑎
+a	
+𝑑
+d	
+𝑏
+𝑒
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+be,ch,gi
+
+𝑏
+b	
+𝑑
+d	
+𝑎
+𝑒
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+ae,ch,gi
+
+𝑐
+c	
+𝑑
+d	
+𝑎
+𝑏
+,
+ℎ
+𝑖
+ab,hi
+
+𝑒
+e	
+𝑑
+d	
+𝑎
+𝑏
+,
+𝑐
+ℎ
+,
+𝑔
+𝑖
+ab,ch,gi
+
+𝑔
+g	
+𝑑
+d	
+𝑎
+𝑏
+,
+ℎ
+𝑖
+ab,hi
+
+ℎ
+h	
+𝑑
+d	
+𝑎
+𝑒
+,
+𝑏
+𝑐
+,
+𝑔
+𝑖
+ae,bc,gi
+
+𝑖
+i	
+𝑑
+d	
+𝑎
+𝑒
+,
+𝑏
+𝑐
+,
+𝑔
+ℎ
+ae,bc,gh
+
+𝑑
+d	
+𝑏
+b	
+𝑎
+𝑐
+,
+𝑔
+𝑖
+ac,gi
+3.4 Guarded 
+𝐾
+12
+K
+12
+	​
+
+ phase
+
+This phase is used only after one of the actual prefixes
+
+	
+𝑀
+𝑞
+/
+𝐵
+𝑝
+,
+𝑀
+𝑛
+/
+𝐵
+𝑚
+,
+𝑀
+𝑢
+/
+𝐵
+𝑡
+.
+		
+(5)
+Mq/Bp,Mn/Bm,Mu/Bt.
+(5)
+
+Its exterior family is 
+𝑄
+0
+Q
+0
+	​
+
+, and all twelve cells of 
+𝐾
+12
+K
+12
+	​
+
+ are still free.
+
+The guard is an actual Breaker stone, not a pristine assumption: one of 
+𝑝
+,
+𝑚
+,
+𝑡
+p,m,t is permanently Breaker-owned.
+
+An exterior filler trigger takes 
+𝐵
+𝑟
+Br and commits to 
+𝑄
+0
+∪
+𝐶
+0
+Q
+0
+	​
+
+∪C
+0
+	​
+
+.
+
+On first entry:
+
+Entry	Breaker response	Continuation
+
+𝑟
+r	
+𝑠
+s	Commit to 
+𝑄
+0
+∪
+{
+𝑎
+𝑘
+,
+𝑗
+𝑑
+,
+𝑒
+ℎ
+}
+Q
+0
+	​
+
+∪{ak,jd,eh}.
+
+𝑠
+s	
+𝑟
+r	Enter 
+𝐹
+𝑠
+(
+𝑄
+0
+)
+F
+s
+	​
+
+(Q
+0
+	​
+
+).
+
+𝑘
+k	
+𝑟
+r	Enter 
+𝐹
+𝑘
+(
+𝑄
+0
+)
+F
+k
+	​
+
+(Q
+0
+	​
+
+).
+
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+,
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+,
+𝑗
+a,b,c,d,e,g,h,i,j	
+𝑟
+r	Commit to 
+𝑄
+0
+Q
+0
+	​
+
+ plus Table A.
+
+The original pair in (5) has one Maker and one Breaker endpoint. It is retained only as an already blocked protection, not falsely treated as fresh.
+
+4. The ten lower-right obligations when 
+𝑟
+r is Breaker-owned
+
+Let 
+𝑀
+𝑁
+,
+𝐵
+𝑁
+M
+N
+	​
+
+,B
+N
+	​
+
+ be the supplied 
+𝑁
+32
+N32 colors.
+
+When 
+𝑟
+r is Breaker-owned, the live targets containing no pair of 
+𝑄
+Q are exactly the following ten full Snakies. Their intersections with 
+𝐾
+12
+K
+12
+	​
+
+ are shown separately; any other free support remains physically present.
+
+Target	Four-cell body	Two-cell hook	
+𝐾
+12
+K
+12
+	​
+
+-intersection
+
+𝑊
+1
+W
+1
+	​
+
+	Row 8, columns 10–13	
+{
+𝑠
+,
+𝑒
+}
+{s,e}	
+𝑠
+,
+𝑎
+,
+𝑘
+,
+𝑏
+,
+𝑒
+s,a,k,b,e
+
+𝑊
+2
+W
+2
+	​
+
+	Row 8, columns 10–13	
+{
+𝑐
+,
+ℎ
+}
+{c,h}	
+𝑎
+,
+𝑘
+,
+𝑏
+,
+𝑐
+,
+ℎ
+a,k,b,c,h
+
+𝑊
+3
+W
+3
+	​
+
+	Column 13, rows 6–9	
+{
+ℎ
+,
+𝑖
+}
+{h,i}	
+𝑠
+,
+𝑏
+,
+𝑐
+,
+ℎ
+,
+𝑖
+s,b,c,h,i
+
+𝑊
+4
+W
+4
+	​
+
+	Column 14, rows 7–10	
+{
+(
+13
+,
+6
+)
+,
+𝑠
+}
+{(13,6),s}	
+𝑠
+,
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+s,e,g,h,i
+
+𝑊
+5
+W
+5
+	​
+
+	Column 14, rows 8–11	
+{
+𝑠
+,
+𝑏
+}
+{s,b}	
+𝑠
+,
+𝑏
+,
+𝑔
+,
+ℎ
+,
+𝑖
+s,b,g,h,i
+
+𝑊
+6
+W
+6
+	​
+
+	Row 8, columns 9–12	
+{
+𝑑
+,
+𝑐
+}
+{d,c}	
+𝑎
+,
+𝑘
+,
+𝑐
+,
+𝑑
+a,k,c,d
+
+𝑊
+7
+W
+7
+	​
+
+	Column 13, rows 6–9	
+{
+𝑑
+,
+(
+12
+,
+10
+)
+}
+{d,(12,10)}	
+𝑠
+,
+𝑏
+,
+𝑐
+,
+𝑑
+s,b,c,d
+
+𝑊
+8
+W
+8
+	​
+
+	Column 12, rows 8–11	
+{
+𝑠
+,
+𝑏
+}
+{s,b}	
+𝑠
+,
+𝑏
+,
+𝑘
+,
+𝑑
+s,b,k,d
+
+𝑊
+9
+W
+9
+	​
+
+	Column 12, rows 7–10	
+{
+(
+13
+,
+6
+)
+,
+𝑠
+}
+{(13,6),s}	
+𝑠
+,
+𝑗
+,
+𝑘
+,
+𝑑
+s,j,k,d
+
+𝑊
+10
+W
+10
+	​
+
+	Row 8, columns 9–12	
+{
+𝑗
+,
+𝑠
+}
+{j,s}	
+𝑠
+,
+𝑎
+,
+𝑘
+,
+𝑗
+s,a,k,j
+
+In particular, 
+𝑊
+5
+W
+5
+	​
+
+ additionally uses the initially free cell 
+(
+14
+,
+11
+)
+(14,11), and 
+𝑊
+8
+W
+8
+	​
+
+ additionally uses 
+(
+12
+,
+11
+)
+(12,11). Neither is assumed Maker-owned. Preventing their displayed core intersections is sufficient.
+
+Why this list is complete
+
+A target avoiding 
+𝑗
+,
+𝑑
+,
+𝑟
+j,d,r is live at the supplied 
+𝐿
+r
+o
+w
+L
+row
+	​
+
+ position, so it contains a pair of 
+𝑃
+P. If it contains no 
+𝑄
+Q-pair, it must contain 
+𝑏
+𝑒
+,
+𝑐
+ℎ
+,
+be,ch, or 
+𝑔
+𝑖
+gi.
+
+The complete physical enumeration of targets containing these three pairs leaves 
+𝑊
+1
+,
+…
+,
+𝑊
+5
+W
+1
+	​
+
+,…,W
+5
+	​
+
+. The other four possibilities have the following bodies and hooks and retain an exterior pair:
+
+Body	Hook	Retained pair
+Column 14, rows 4–7	
+{
+𝑠
+,
+𝑏
+}
+{s,b}	
+𝑡
+𝑢
+tu
+Column 14, rows 5–8	
+{
+𝑏
+,
+𝑐
+}
+{b,c}	
+𝑡
+𝑢
+tu
+Column 14, rows 9–12	
+{
+𝑏
+,
+𝑐
+}
+{b,c}	
+{
+(
+14
+,
+11
+)
+,
+(
+14
+,
+12
+)
+}
+{(14,11),(14,12)}
+Column 14, rows 8–11	
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+{(13,11),(13,12)}	That hook pair
+
+For targets containing 
+𝑗
+j or 
+𝑑
+d, a horizontal body is blocked by the old column-eleven stones. A vertical body lies in column twelve. Starts at rows four or five contain 
+𝑝
+𝑞
+pq; start six has all hooks blocked when 
+𝑟
+r is Breaker-owned; start seven gives 
+𝑊
+9
+W
+9
+	​
+
+; start eight gives 
+𝑊
+8
+W
+8
+	​
+
+ or the pair 
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+{(13,11),(13,12)}; start nine contains 
+{
+(
+12
+,
+11
+)
+,
+(
+12
+,
+12
+)
+}
+{(12,11),(12,12)}.
+
+The surviving horizontal hooks give 
+𝑊
+6
+,
+𝑊
+10
+W
+6
+	​
+
+,W
+10
+	​
+
+, and the surviving vertical hook gives 
+𝑊
+7
+W
+7
+	​
+
+. The remaining hooks meet the supplied old Breaker stones or are off-board.
+
+This establishes the ten-target classification independently of the pending audit.
+
+Verification of the core tables
+
+The default 
+𝐶
+0
+C
+0
+	​
+
+ and every row of Table A contain a pair in each of the ten displayed intersections, after excluding the actual Maker entry.
+
+The subsidiary tables can be checked on smaller residual families:
+
+In 
+𝐹
+𝑠
+F
+s
+	​
+
+, after 
+𝐵
+𝑘
+Bk, only
+𝑏
+𝑐
+ℎ
+𝑖
+,
+𝑒
+𝑔
+ℎ
+𝑖
+,
+𝑏
+𝑔
+ℎ
+𝑖
+,
+𝑏
+𝑐
+𝑑
+bchi,eghi,bghi,bcd
+remain.
+In the eight-cell phase, after 
+𝐵
+𝑑
+Bd, only
+𝑎
+𝑏
+𝑒
+,
+𝑎
+𝑏
+𝑐
+ℎ
+,
+𝑏
+𝑐
+ℎ
+𝑖
+,
+𝑒
+𝑔
+ℎ
+𝑖
+,
+𝑏
+𝑔
+ℎ
+𝑖
+abe,abch,bchi,eghi,bghi
+remain. After entry 
+𝑑
+d and response 
+𝐵
+𝑏
+Bb, only 
+𝑒
+𝑔
+ℎ
+𝑖
+eghi and 
+𝑎
+𝑐
+ac remain.
+In 
+𝐹
+𝑘
+F
+k
+	​
+
+, after 
+𝐵
+𝑑
+Bd, the residual family is
+𝑠
+𝑎
+𝑏
+𝑒
+,
+𝑎
+𝑏
+𝑐
+ℎ
+,
+𝑠
+𝑏
+𝑐
+ℎ
+𝑖
+,
+𝑠
+𝑒
+𝑔
+ℎ
+𝑖
+,
+𝑠
+𝑏
+𝑔
+ℎ
+𝑖
+,
+𝑠
+𝑎
+𝑗
+.
+sabe,abch,sbchi,seghi,sbghi,saj.
+After entry 
+𝑑
+d and response 
+𝐵
+𝑠
+Bs, the pair 
+𝑎
+𝑐
+ac protects both remaining targets.
+
+These are direct pair-containment checks. They do not identify projected wins with physical wins.
+
+5. All targets revived by freeing 
+𝑟
+=
+(
+13
+,
+5
+)
+r=(13,5)
+
+The upper cap is the genuinely new part.
+
+Define two full Snakies:
+
+	
+𝐻
+=
+	
+{
+(
+10
+,
+4
+)
+,
+𝑚
+,
+(
+11
+,
+5
+)
+,
+𝑝
+,
+𝑟
+,
+𝑡
+}
+,
+
+
+𝑈
+=
+	
+{
+(
+11
+,
+2
+)
+,
+(
+11
+,
+3
+)
+,
+𝑚
+,
+(
+11
+,
+5
+)
+,
+𝑝
+,
+𝑞
+}
+.
+		
+(6)
+H=
+U=
+	​
+
+{(10,4),m,(11,5),p,r,t},
+{(11,2),(11,3),m,(11,5),p,q}.
+	​
+
+(6)
+
+Here 
+𝐻
+H has its horizontal body in row five, columns eleven through fourteen. Target 
+𝑈
+U has its vertical body in column eleven, rows two through five.
+
+For completeness, the following table describes all 22 live targets containing 
+𝑟
+r at 
+𝑁
+32
+N32. Each listed body/hook choice is a full six-cell physical target.
+
+Role of 
+𝑟
+r	Four-cell body or bodies	All surviving hook choices
+Horizontal body	Row 5, columns 11–14	
+{
+(
+10
+,
+4
+)
+,
+𝑚
+}
+{(10,4),m}, giving 
+𝐻
+H
+Horizontal hook	Row 4, columns 10–13	
+{
+𝑟
+,
+𝑡
+}
+{r,t}
+Vertical body	Column 13, rows 2–5	
+{
+(
+14
+,
+1
+)
+,
+𝛼
+}
+,
+ 
+𝑝
+𝑞
+,
+ 
+𝑡
+𝑢
+{(14,1),α}, pq, tu
+Vertical body	Column 13, rows 3–6	
+𝛼
+𝛽
+,
+ 
+𝑞
+𝑗
+,
+ 
+𝑢
+𝑒
+αβ, qj, ue
+Vertical body	Column 13, rows 4–7	
+{
+(
+12
+,
+3
+)
+,
+𝑛
+}
+,
+ 
+𝛽
+𝛾
+,
+ 
+𝑗
+𝑘
+,
+ 
+𝑒
+𝑔
+{(12,3),n}, βγ, jk, eg
+Vertical body	Column 13, rows 5–8	
+𝑛
+𝑝
+,
+ 
+𝛾
+𝑡
+,
+ 
+𝑘
+𝑑
+,
+ 
+𝑔
+ℎ
+np, γt, kd, gh
+Vertical hook 
+𝑧
+𝑟
+zr	Column 14 rows 1–4; column 12 rows 5–8; column 14 rows 5–8	
+𝑧
+𝑟
+zr in each case
+Vertical hook 
+{
+𝑟
+,
+(
+13
+,
+6
+)
+}
+{r,(13,6)}	Column 14 rows 2–5; column 12 rows 6–9; column 14 rows 6–9	
+{
+𝑟
+,
+(
+13
+,
+6
+)
+}
+{r,(13,6)} in each case
+
+The counts are 
+1
++
+1
++
+3
++
+3
++
+4
++
+4
++
+3
++
+3
+=
+22
+1+1+3+3+4+4+3+3=22.
+
+The excluded horizontal possibilities meet, among others, 
+(
+10
+,
+5
+)
+,
+(
+9
+,
+4
+)
+,
+(
+9
+,
+6
+)
+,
+(
+11
+,
+6
+)
+(10,5),(9,4),(9,6),(11,6), or leave the board. The excluded upper column-twelve hooks meet 
+(
+12
+,
+2
+)
+(12,2). Thus the table retains the actual boundary and old-color restrictions.
+
+Why the original 
+𝐾
+12
+K
+12
+	​
+
+ waiting rule fails
+
+The only 
+𝐾
+12
+K
+12
+	​
+
+-cell of 
+𝐻
+H is 
+𝑟
+r. Its other three initially free cells are 
+𝑝
+,
+𝑡
+,
+𝑚
+p,t,m.
+
+Consequently, the original exterior-mate rule admits
+
+𝑀
+𝑝
+/
+𝐵
+𝑞
+,
+𝑀
+𝑡
+/
+𝐵
+𝑢
+,
+𝑀
+𝑚
+/
+𝐵
+𝑛
+,
+𝑀
+𝑟
+,
+Mp/Bq,Mt/Bu,Mm/Bn,Mr,
+
+where the final claim completes the full target 
+𝐻
+H.
+
+This is why the three relevant exterior pair domains are released in the new construction.
+
+6. The upper-cap exchanges
+6.1 Two useful pair replacements
+
+Every physical Snaky containing both 
+𝑣
+=
+(
+13
+,
+2
+)
+v=(13,2) and 
+𝑧
+=
+(
+13
+,
+4
+)
+z=(13,4) contains 
+𝑤
+=
+(
+13
+,
+3
+)
+w=(13,3). The two original endpoints must lie in the same vertical four-cell body. Hence either replacement
+
+	
+𝑣
+𝑧
+⟼
+𝑣
+𝑤
+or
+𝑣
+𝑧
+⟼
+𝑤
+𝑧
+		
+(7)
+vz⟼vworvz⟼wz
+(7)
+
+preserves coverage of every target previously protected by 
+𝑣
+𝑧
+vz.
+
+For 
+𝛼
+𝛽
+=
+{
+(
+14
+,
+2
+)
+,
+(
+14
+,
+3
+)
+}
+αβ={(14,2),(14,3)}, a containing target either has both endpoints in a vertical body, which also contains 
+𝛾
+=
+(
+14
+,
+4
+)
+γ=(14,4), or uses them as the hook of the column-thirteen body in rows three through six, which contains 
+𝑤
+𝑧
+wz. Mixed horizontal body/hook placements would extend beyond column fourteen.
+
+Therefore, once 
+𝑤
+𝑧
+wz is present, either
+
+	
+𝛼
+𝛽
+⟼
+𝛽
+𝛾
+or
+𝛼
+𝛽
+⟼
+𝛼
+𝛾
+		
+(8)
+αβ⟼βγorαβ⟼αγ
+(8)
+
+preserves coverage.
+
+These facts justify all six top-entry rows 
+𝑣
+,
+𝑤
+,
+𝑧
+,
+𝛼
+,
+𝛽
+,
+𝛾
+v,w,z,α,β,γ in the main controller.
+
+6.2 The common 52-pair cap near-cover
+
+Suppose Breaker has actually claimed 
+𝑛
+=
+(
+12
+,
+4
+)
+n=(12,4). Set
+
+	
+𝐶
+=
+𝑅
+∪
+{
+𝑤
+𝑧
+,
+𝛽
+𝛾
+,
+𝑗
+𝑘
+,
+𝑎
+𝑐
+,
+𝑠
+𝑏
+,
+𝑒
+𝑔
+}
+.
+		
+(9)
+C=R∪{wz,βγ,jk,ac,sb,eg}.
+	​
+
+(9)
+
+This has 52 pairs.
+
+Coverage lemma. Every live physical Snaky contains a pair of 
+𝐶
+C, except possibly the two full targets 
+𝐻
+,
+𝑈
+H,U in (6).
+
+Here is the complete exposure accounting.
+
+The pairs 
+𝑗
+𝑘
+,
+𝑎
+𝑐
+,
+𝑠
+𝑏
+,
+𝑒
+𝑔
+jk,ac,sb,eg cover all ten lower-right targets in Section 4. The old pair 
+𝑚
+𝑛
+mn needs no replacement because 
+𝑛
+n is now an actual Breaker stone. Replacements (7)–(8) handle 
+𝑣
+𝑧
+,
+𝛼
+𝛽
+vz,αβ.
+
+For the released pair 
+𝑝
+𝑞
+pq:
+
+A column-twelve body starting at row three or four contains 
+𝑛
+n, so is blocked.
+A body starting at row five contains 
+𝑗
+𝑘
+jk.
+If 
+𝑝
+𝑞
+pq is a hook, the surviving column-thirteen bodies contain 
+𝑤
+𝑧
+wz or 
+𝑠
+𝑏
+sb. The upper column-eleven body gives exactly 
+𝑈
+U.
+The other column-eleven and horizontal placements meet old Breaker stones or the boundary.
+
+For the released pair 
+𝑡
+𝑢
+tu:
+
+A column-fourteen body starting at row three contains 
+𝛽
+𝛾
+βγ.
+At start four, the two possible hooks contain 
+𝑤
+𝑧
+wz or 
+𝑠
+𝑏
+sb.
+At start five, the body contains 
+𝑒
+𝑔
+eg.
+As a hook, 
+𝑡
+𝑢
+tu accompanies a column-thirteen body containing 
+𝑤
+𝑧
+wz or 
+𝑠
+𝑏
+sb.
+
+Finally, use the complete 
+𝑟
+r-table in Section 5. The horizontal-hook target contains 
+𝑛
+n and is blocked. Column-thirteen starts two and three contain 
+𝑤
+𝑧
+wz. At start four, the left upper hook is blocked by 
+𝑛
+n, while the other hooks contain 
+𝛽
+𝛾
+,
+𝑗
+𝑘
+,
+βγ,jk, or 
+𝑒
+𝑔
+eg. Start five contains 
+𝑠
+𝑏
+sb. The six vertical-hook targets contain 
+𝛽
+𝛾
+,
+𝑗
+𝑘
+,
+βγ,jk, or 
+𝑒
+𝑔
+eg.
+
+Only 
+𝐻
+H remains from that table. This proves the lemma.
+
+Closing the two exceptions for all three entries
+
+The main controller answers each of 
+𝑀
+𝑝
+,
+𝑀
+𝑚
+,
+𝑀
+𝑡
+Mp,Mm,Mt with the actual claim 
+𝐵
+𝑛
+Bn.
+
+Entry	Extra pairs beyond 
+𝐶
+C	Coverage of 
+𝐻
+H	Coverage of 
+𝑈
+U
+
+𝑝
+p	
+𝑞
+𝑚
+,
+𝑟
+𝑡
+qm,rt	
+𝑟
+𝑡
+rt	
+𝑞
+𝑚
+qm
+
+𝑚
+m	
+𝑝
+𝑞
+,
+𝑟
+𝑡
+pq,rt	
+𝑟
+𝑡
+rt	
+𝑝
+𝑞
+pq
+
+𝑡
+t	
+𝑝
+𝑚
+pm	
+𝑝
+𝑚
+pm	
+𝑝
+𝑚
+pm
+
+All extra endpoints are free when prescribed. Thus these are complete physical matching commitments, with respectively 54, 54 and 53 pairs when reached without earlier exterior play.
+
+6.3 The 
+𝑀
+𝑟
+/
+𝐵
+𝑠
+Mr/Bs exchange
+
+After first entry 
+𝑟
+r, take 
+𝐵
+𝑠
+Bs and use
+
+	
+𝑅
+∪
+{
+𝛼
+𝛽
+,
+𝑝
+𝑚
+,
+𝑛
+𝑧
+,
+𝑣
+𝑤
+,
+𝑞
+𝑗
+,
+𝑢
+𝑒
+,
+𝑎
+𝑘
+}
+.
+		
+(10)
+R∪{αβ,pm,nz,vw,qj,ue,ak}.
+	​
+
+(10)
+
+This is a fresh 53-pair matching at the exact 
+33
++
+33
+33+33 state 
+𝑁
+32
++
+𝑀
+𝑟
+/
+𝐵
+𝑠
+N32+Mr/Bs.
+
+The following accounts for every released exterior pair:
+
+Released pair	Why its formerly protected live targets remain covered
+
+𝑣
+𝑧
+vz	Replacement 
+𝑣
+𝑤
+vw, by (7).
+
+𝑚
+𝑛
+mn	A horizontal body containing both contains 
+𝑛
+𝑧
+nz. A surviving vertical body/hook placement contains 
+𝑝
+𝑚
+pm.
+
+𝑝
+𝑞
+pq	Column-twelve starts four and five contain 
+𝑞
+𝑗
+qj. At start three, the upper hooks contain either the retained pair 
+{
+(
+11
+,
+3
+)
+,
+(
+12
+,
+3
+)
+}
+{(11,3),(12,3)} or 
+𝑣
+𝑤
+vw; the lower hook is blocked by 
+𝑠
+s. As a hook, the surviving targets contain 
+𝑝
+𝑚
+pm or 
+𝑣
+𝑤
+vw.
+
+𝑡
+𝑢
+tu	Column-fourteen starts four and five contain 
+𝑢
+𝑒
+ue. At start three, the upper hook contains 
+𝑣
+𝑤
+vw, while the lower hook is blocked by 
+𝑠
+s. As a hook, the upper column-thirteen body contains 
+𝑣
+𝑤
+vw, and the lower one is blocked by 
+𝑠
+s.
+
+The pair 
+𝛼
+𝛽
+αβ is restored.
+
+Among 
+𝑊
+1
+,
+…
+,
+𝑊
+10
+W
+1
+	​
+
+,…,W
+10
+	​
+
+, the actual stone 
+𝐵
+𝑠
+Bs blocks all except 
+𝑊
+2
+,
+𝑊
+6
+W
+2
+	​
+
+,W
+6
+	​
+
+; both contain 
+𝑎
+𝑘
+ak.
+
+For the 
+𝑟
+r-table, 
+𝐻
+H contains 
+𝑝
+𝑚
+pm, and the horizontal-hook target contains 
+𝑛
+𝑧
+nz. Column-thirteen start two contains 
+𝑣
+𝑤
+vw; start three is protected by 
+𝛼
+𝛽
+,
+𝑞
+𝑗
+,
+αβ,qj, or 
+𝑢
+𝑒
+ue. Starts four and five are blocked by 
+𝑠
+s. The remaining vertical-hook targets contain 
+𝛼
+𝛽
+,
+𝑞
+𝑗
+,
+αβ,qj, or 
+𝑢
+𝑒
+ue.
+
+This proves full physical coverage for (10), including targets containing the newly acquired Maker stone 
+𝑟
+r.
+
+7. Why the guarded 
+𝐾
+12
+K
+12
+	​
+
+ phase is sound
+
+After one of the actual prefixes (5), the target 
+𝐻
+H has a permanent Breaker stone. The exterior 
+𝑄
+0
+Q
+0
+	​
+
+ still protects every target previously protected by 
+𝑄
+Q, by replacement (7).
+
+While 
+𝐾
+12
+K
+12
+	​
+
+ is untouched, every remaining target not protected by 
+𝑄
+0
+Q
+0
+	​
+
+ requires at least two cells of 
+𝐾
+12
+K
+12
+	​
+
+. In the 
+𝑟
+r-table, starts two and three are protected by 
+𝑤
+𝑧
+wz; the problematic horizontal target 
+𝐻
+H is blocked; all remaining unprotected cases require 
+𝑟
+r together with 
+𝑠
+s or further reserved cells.
+
+Consequently, no first 
+𝐾
+12
+K
+12
+	​
+
+-entry can win immediately.
+
+If Breaker replies 
+𝐵
+𝑟
+Br, the ten-target family of Section 4 is the only residual obligation, and the stated tables apply.
+
+For the special entry 
+𝑀
+𝑟
+/
+𝐵
+𝑠
+Mr/Bs, 
+𝑊
+2
+,
+𝑊
+6
+W
+2
+	​
+
+,W
+6
+	​
+
+ are covered by 
+𝑎
+𝑘
+ak. The 
+𝑟
+r-table is covered by the existing 
+𝑄
+0
+Q
+0
+	​
+
+-pairs, the actual 
+𝐵
+𝑠
+Bs, and the two additional pairs 
+𝑗
+𝑑
+,
+𝑒
+ℎ
+jd,eh. Specifically, these last two protect the column-twelve and column-fourteen bodies in rows six through nine. Target 
+𝐻
+H remains blocked by the actual earlier claim 
+𝐵
+𝑝
+,
+𝐵
+𝑚
+,
+Bp,Bm, or 
+𝐵
+𝑡
+Bt.
+
+Thus every continuation in Section 3.4 is a full physical defense.
+
+8. Arbitrary interleavings, immediate wins and exhaustion
+
+The remaining issue is execution, rather than pair containment.
+
+Initial waiting safety
+
+Every initially live target either contains a pair of 
+𝑅
+R or contains at least two cells of 
+𝐷
+D.
+
+For targets avoiding 
+𝑟
+,
+𝑗
+,
+𝑑
+r,j,d, this follows from the supplied 
+𝑃
+P-coverage: a removed protecting pair lies entirely in 
+𝐷
+D. The additional 
+𝑗
+,
+𝑑
+j,d targets are the ten classified targets or retain a 
+𝑄
+Q-pair. The complete 
+𝑟
+r-table shows the same property for every newly revived target; in particular, the formerly dangerous 
+𝐻
+H now has four reserved cells 
+𝑟
+,
+𝑚
+,
+𝑝
+,
+𝑡
+r,m,p,t.
+
+Therefore exterior play cannot complete an unprotected target while 
+𝐷
+D is untouched. Nor can the first claim in 
+𝐷
+D complete one.
+
+Exterior-pair invariant
+
+Throughout a waiting phase, each exterior pair is either untouched or has a Breaker endpoint. When Maker first claims an untouched pair endpoint, its mate is still free at the instant of that claim, so Maker has not completed a target protected by that pair before Breaker responds.
+
+All non-activating waiting responses are actual exterior mates. Thus they do not consume reserved response support.
+
+An exterior move without a required free mate triggers the specified actual reserved claim and ends that waiting phase. There is no appeal to an always-available abstract outside reply.
+
+Freshness at transitions
+
+At first entry into 
+𝐷
+D, every other cell of 
+𝐷
+D is free. Every newly installed pair in the main table avoids the entry and the response.
+
+The subsidiary transitions likewise preserve the explicitly stated inner pristine domain:
+
+𝐹
+𝑠
+→
+𝑀
+𝑘
+/
+𝐵
+𝑗
+𝐾
+8
+,
+F
+s
+	​
+
+Mk/Bj
+	​
+
+K
+8
+	​
+
+,
+
+and the guarded phase enters 
+𝐹
+𝑠
+F
+s
+	​
+
+ or 
+𝐹
+𝑘
+F
+k
+	​
+
+ only while their respective ten-cell domains are untouched.
+
+Previously touched exterior pairs are not assumed fresh at commitment. Their Breaker endpoints already block every target they protect. Untouched exterior pairs and all newly installed pairs remain disjoint and fresh.
+
+Safety inside subsidiary phases
+
+The residual families displayed in Section 4 justify safety before the next response:
+
+In 
+𝐹
+𝑠
+F
+s
+	​
+
+, every unprotected target requires at least three untouched domain cells.
+In 
+𝐹
+𝑘
+F
+k
+	​
+
+, every unprotected target requires at least three.
+In the eight-cell phase, the smallest requirement is 
+{
+𝑏
+,
+𝑑
+}
+{b,d}, coming from 
+𝑊
+8
+W
+8
+	​
+
+.
+In the guarded 
+𝐾
+12
+K
+12
+	​
+
+ phase, every unprotected target requires at least two.
+
+Thus neither an exterior move nor the first reserved entry completes a target before the response table is applied.
+
+After commitment
+
+Every live target is either physically blocked or contains a protecting pair. The mate rule prevents Maker from acquiring both endpoints of any unblocked pair. Arbitrary subsequent fillers only add Breaker stones.
+
+This proves safety at the instant of every Maker claim, including the final legal claim. No subsequent response is needed to undo an already completed target, and no pass or virtual claim is used.
+
+Conclusion
+
+The original twelve-cell waiting product is insufficient, but the enlarged construction closes that defect:
+
+46 fixed exterior pairs 
++
+ 24 reserved cells 
++
+ the tables above
+.
+46 fixed exterior pairs + 24 reserved cells + the tables above.
+	​
+
+
+Every initial reserved entry, every exterior interleaving, every waiting-phase filler trigger, and every eventual matching commitment has an explicit physical response. The new upper-cap pair exchanges are what allow the controller to handle 
+𝑀
+(
+13
+,
+5
+)
+M(13,5), 
+𝑀
+(
+12
+,
+5
+)
+M(12,5), 
+𝑀
+(
+11
+,
+4
+)
+M(11,4), and 
+𝑀
+(
+14
+,
+5
+)
+M(14,5) without preserving the failed original mate policy.
+
+Subject to checking the stated geometric classifications and tables, this is a full conditional Breaker defense at exact 
+𝑁
+32
+N32. It is not an empty-board result, and it is not yet an independently accepted certificate.

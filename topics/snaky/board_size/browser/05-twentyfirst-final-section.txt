@@ -1,0 +1,3147 @@
+Results and scope
+
+There are two concrete advances.
+
+First, after S9/M43, only B52 and B53 remain possible defensive replies. Every other legal reply has an explicit physical Maker win below. In particular, B54 loses, not merely to a matching obstruction.
+
+Second, the supplied S11 matching leaves exactly 18 S9 targets uncovered. This gives a full-board bookkeeping reduction, an exact rule for interleaving the outer exchanges, and a finite prefix dispatcher with explicitly specified colored frontier states.
+
+These results do not yet establish a complete defense at S9. The two resulting central states remain unresolved here.
+
+1. An exact 18-target defect certificate at S9
+
+Let 
+𝑃
+P be the supplied, independently checked 32-pair matching.
+
+Every endpoint of 
+𝑃
+P is fresh at S9. Moreover, every S9-live target avoiding both 14 and 43 contains a pair of 
+𝑃
+P: such a target was live at the supplied S11 leaf, and the geometric covering property does not depend on Maker already owning 11 and 21.
+
+The following is the exact remaining list.
+
+Defects containing 14
+Label	Full physical target
+
+𝐴
+1
+A
+1
+	​
+
+	
+{
+2
+,
+3
+,
+13
+,
+14
+,
+15
+,
+16
+}
+{2,3,13,14,15,16}
+
+𝐴
+2
+A
+2
+	​
+
+	
+{
+6
+,
+7
+,
+13
+,
+14
+,
+15
+,
+16
+}
+{6,7,13,14,15,16}
+
+𝐴
+3
+A
+3
+	​
+
+	
+{
+3
+,
+4
+,
+14
+,
+15
+,
+16
+,
+17
+}
+{3,4,14,15,16,17}
+
+𝐴
+4
+A
+4
+	​
+
+	
+{
+7
+,
+8
+,
+14
+,
+15
+,
+16
+,
+17
+}
+{7,8,14,15,16,17}
+
+𝐴
+5
+A
+5
+	​
+
+	
+{
+14
+,
+15
+,
+16
+,
+17
+,
+23
+,
+24
+}
+{14,15,16,17,23,24}
+
+𝐴
+6
+A
+6
+	​
+
+	
+{
+13
+,
+14
+,
+24
+,
+25
+,
+26
+,
+27
+}
+{13,14,24,25,26,27}
+
+𝐴
+7
+A
+7
+	​
+
+	
+{
+5
+,
+6
+,
+7
+,
+8
+,
+14
+,
+15
+}
+{5,6,7,8,14,15}
+
+𝐴
+8
+A
+8
+	​
+
+	
+{
+4
+,
+13
+,
+14
+,
+23
+,
+33
+,
+43
+}
+{4,13,14,23,33,43}
+
+All six cells of each 
+𝐴
+𝑖
+A
+i
+	​
+
+ are fresh at S9.
+
+Additional defects containing 43
+Label	Full physical target	Initially fresh part
+
+𝐶
+1
+C
+1
+	​
+
+	
+{
+41
+,
+42
+,
+43
+,
+44
+,
+50
+,
+51
+}
+{41,42,43,44,50,51}	
+{
+41
+,
+42
+,
+43
+,
+50
+,
+51
+}
+{41,42,43,50,51}
+
+𝐶
+2
+C
+2
+	​
+
+	
+{
+42
+,
+43
+,
+44
+,
+45
+,
+51
+,
+52
+}
+{42,43,44,45,51,52}	
+{
+42
+,
+43
+,
+51
+,
+52
+}
+{42,43,51,52}
+
+𝐶
+3
+C
+3
+	​
+
+	
+{
+32
+,
+33
+,
+43
+,
+44
+,
+45
+,
+46
+}
+{32,33,43,44,45,46}	
+{
+32
+,
+33
+,
+43
+}
+{32,33,43}
+
+𝐶
+4
+C
+4
+	​
+
+	
+{
+43
+,
+44
+,
+45
+,
+46
+,
+52
+,
+53
+}
+{43,44,45,46,52,53}	
+{
+43
+,
+52
+,
+53
+}
+{43,52,53}
+
+𝐶
+5
+C
+5
+	​
+
+	
+{
+30
+,
+31
+,
+32
+,
+33
+,
+43
+,
+44
+}
+{30,31,32,33,43,44}	
+{
+30
+,
+31
+,
+32
+,
+33
+,
+43
+}
+{30,31,32,33,43}
+
+𝐶
+6
+C
+6
+	​
+
+	
+{
+13
+,
+23
+,
+33
+,
+42
+,
+43
+,
+52
+}
+{13,23,33,42,43,52}	All six cells
+
+𝐶
+7
+C
+7
+	​
+
+	
+{
+13
+,
+23
+,
+33
+,
+43
+,
+44
+,
+54
+}
+{13,23,33,43,44,54}	
+{
+13
+,
+23
+,
+33
+,
+43
+,
+54
+}
+{13,23,33,43,54}
+
+𝐶
+8
+C
+8
+	​
+
+	
+{
+23
+,
+33
+,
+43
+,
+52
+,
+53
+,
+62
+}
+{23,33,43,52,53,62}	All six cells
+
+𝐶
+9
+C
+9
+	​
+
+	
+{
+22
+,
+32
+,
+33
+,
+43
+,
+53
+,
+63
+}
+{22,32,33,43,53,63}	All six cells
+
+𝐶
+10
+C
+10
+	​
+
+	
+{
+2
+,
+12
+,
+22
+,
+32
+,
+33
+,
+43
+}
+{2,12,22,32,33,43}	All six cells
+
+Write
+
+𝑅
+=
+{
+𝐴
+1
+,
+…
+,
+𝐴
+8
+,
+𝐶
+1
+,
+…
+,
+𝐶
+10
+}
+.
+R={A
+1
+	​
+
+,…,A
+8
+	​
+
+,C
+1
+	​
+
+,…,C
+10
+	​
+
+}.
+
+The exact covering statement is
+
+𝑇
+∩
+𝐵
+0
+=
+∅
+⟹
+[
+𝑇
+∈
+𝑅
+ 
+⟺
+ 
+𝑇
+ contains no pair of 
+𝑃
+]
+.
+T∩B
+0
+	​
+
+=∅⟹[T∈R ⟺ T contains no pair of P].
+	​
+
+
+Thus 
+𝑃
+P covers 176 of the 194 S9-live physical targets.
+
+Exhaustiveness of this list
+
+A horizontal Snaky consists of a four-run
+
+(
+𝑎
+,
+𝑦
+)
+,
+(
+𝑎
++
+1
+,
+𝑦
+)
+,
+(
+𝑎
++
+2
+,
+𝑦
+)
+,
+(
+𝑎
++
+3
+,
+𝑦
+)
+(a,y),(a+1,y),(a+2,y),(a+3,y)
+
+and one of the four hooks
+
+{
+(
+𝑎
+−
+1
+,
+𝑦
++
+𝜀
+)
+,
+(
+𝑎
+,
+𝑦
++
+𝜀
+)
+}
+,
+{
+(
+𝑎
++
+3
+,
+𝑦
++
+𝜀
+)
+,
+(
+𝑎
++
+4
+,
+𝑦
++
+𝜀
+)
+}
+,
+𝜀
+=
+±
+1.
+{(a−1,y+ε),(a,y+ε)},{(a+3,y+ε),(a+4,y+ε)},ε=±1.
+
+Vertical targets are obtained by interchanging coordinates. Out-of-board placements and placements meeting 
+𝐵
+0
+B
+0
+	​
+
+ are discarded.
+
+Applying these cases gives:
+
+Specified cell and role	Live placements	Placements without a 
+𝑃
+P-pair
+14 in a horizontal four-run	16	
+𝐴
+1
+,
+…
+,
+𝐴
+5
+A
+1
+	​
+
+,…,A
+5
+	​
+
+
+14 in a horizontal hook	8	
+𝐴
+6
+,
+𝐴
+7
+A
+6
+	​
+
+,A
+7
+	​
+
+
+14 in a vertical four-run	0	None
+14 in a vertical hook	3	
+𝐴
+8
+A
+8
+	​
+
+
+43 in a horizontal four-run	7	
+𝐶
+1
+,
+…
+,
+𝐶
+4
+C
+1
+	​
+
+,…,C
+4
+	​
+
+
+43 in a horizontal hook	2	
+𝐶
+5
+C
+5
+	​
+
+
+43 in a vertical four-run	12	
+𝐴
+8
+,
+𝐶
+6
+,
+𝐶
+7
+,
+𝐶
+8
+,
+𝐶
+9
+A
+8
+	​
+
+,C
+6
+	​
+
+,C
+7
+	​
+
+,C
+8
+	​
+
+,C
+9
+	​
+
+
+43 in a vertical hook	4	
+𝐶
+10
+C
+10
+	​
+
+
+There are precisely two live targets containing both 14 and 43:
+
+𝐴
+8
+,
+{
+14
+,
+23
+,
+24
+,
+33
+,
+43
+,
+53
+}
+.
+A
+8
+	​
+
+,{14,23,24,33,43,53}.
+
+The latter contains 
+(
+24
+,
+33
+)
+(24,33).
+
+Consequently the newly live family has
+
+27
++
+25
+−
+2
+=
+50
+27+25−2=50
+
+targets, of which exactly 18 lack a 
+𝑃
+P-pair.
+
+For example, among horizontal four-runs containing 14, runs starting at columns 1 and 2 already contain 
+(
+12
+,
+13
+)
+(12,13). The additional covered cases use 
+(
+22
+,
+23
+)
+(22,23), 
+(
+16
+,
+26
+)
+(16,26), or 
+(
+17
+,
+27
+)
+(17,27). The analogous four-run/hook cases for 43 account for the second half of the table.
+
+2. A full-physical interleaving lemma
+
+The following 14 pairs of 
+𝑃
+P have neither endpoint in any target of 
+𝑅
+R:
+
+Platte tekst
+O = {
+ (18,28), (29,49), (59,79), (60,80),
+ (64,65), (66,76), (68,78), (70,71),
+ (81,91), (82,83), (85,86), (88,89),
+ (92,93), (95,96)
+}.
+
+In particular, both mandatory outer pairs
+
+(
+66
+,
+76
+)
+,
+(
+68
+,
+78
+)
+(66,76),(68,78)
+
+belong to this family.
+
+Exact statement
+
+Take any subset of these pairs, in any order and either orientation. Whenever Maker enters one, Breaker claims its mate.
+
+After any such history, let 
+𝑃
+r
+e
+m
+P
+rem
+	​
+
+ be 
+𝑃
+P with the completed pairs removed. Then:
+
+	
+All endpoints of 
+𝑃
+r
+e
+m
+ are fresh
+;
+
+
+	
+every currently live target outside 
+𝑅
+ contains a pair of 
+𝑃
+r
+e
+m
+;
+
+
+	
+every target in 
+𝑅
+ has exactly its original colors.
+	​
+
+All endpoints of P
+rem
+	​
+
+ are fresh;
+every currently live target outside R contains a pair of P
+rem
+	​
+
+;
+every target in R has exactly its original colors.
+	​
+
+	​
+
+
+In particular, the uncovered family remains exactly the same 18 literal targets, not a projected replacement family.
+
+Why singleton incidences are not discarded
+
+Suppose a physical target uses Maker’s newly acquired outer endpoint but not its mate. That does not justify discarding the target.
+
+Instead, use its original covering certificate. The target is outside 
+𝑅
+R, so it contains some pair 
+𝑝
+∈
+𝑃
+p∈P. If 
+𝑝
+p has been retired, the target contains a Breaker stone. Otherwise 
+𝑝
+p is still fresh and retained.
+
+This argument covers singleton incidences without assuming they are harmless individually.
+
+It also explains the limit of the lemma: an arbitrary later change to an outer pair is not authorized by this reduction. Any such change still needs replacement coverage. The permitted exchanges above retain or retire the original pair; they do not silently release its domain.
+
+3. A family of complete matching leaves with arbitrary outer interleavings
+
+The cells initially unpaired by 
+𝑃
+P are
+
+𝑈
+0
+=
+{
+0
+,
+2
+,
+7
+,
+10
+,
+11
+,
+14
+,
+20
+,
+21
+,
+35
+,
+39
+,
+43
+,
+48
+,
+69
+,
+87
+,
+90
+,
+97
+,
+98
+,
+99
+}
+.
+U
+0
+	​
+
+={0,2,7,10,11,14,20,21,35,39,43,48,69,87,90,97,98,99}.
+
+Define the 16 unpaired entries other than the two guards:
+
+𝑈
+=
+{
+0
+,
+2
+,
+7
+,
+10
+,
+11
+,
+20
+,
+21
+,
+35
+,
+39
+,
+48
+,
+69
+,
+87
+,
+90
+,
+97
+,
+98
+,
+99
+}
+.
+U={0,2,7,10,11,20,21,35,39,48,69,87,90,97,98,99}.
+
+For any distinct 
+𝑢
+,
+𝑣
+∈
+𝑈
+u,v∈U, the following prefix has a complete physical matching leaf:
+
+𝑀
+𝑢
+/
+𝐵
+43
+,
+𝑀
+𝑣
+/
+𝐵
+14.
+Mu/B43,Mv/B14.
+	​
+
+
+Any number of the exchanges from 
+𝑂
+O may occur before the first of these rounds or between them, in arbitrary order and orientation.
+
+This supplies 240 ordered choices of 
+(
+𝑢
+,
+𝑣
+)
+(u,v), together with all those outer interleavings.
+
+Exact colored leaf and matching
+
+Let the interleaved exchanges be
+
+𝑀
+𝑎
+𝑖
+/
+𝐵
+𝑏
+𝑖
+,
+{
+𝑎
+𝑖
+,
+𝑏
+𝑖
+}
+∈
+𝑂
+,
+Ma
+i
+	​
+
+/Bb
+i
+	​
+
+,{a
+i
+	​
+
+,b
+i
+	​
+
+}∈O,
+
+using 
+𝑘
+k distinct pairs. The resulting full state is
+
+𝑀
+′
+=
+𝑀
+0
+∪
+{
+𝑢
+,
+𝑣
+}
+∪
+{
+𝑎
+1
+,
+…
+,
+𝑎
+𝑘
+}
+,
+M
+′
+=M
+0
+	​
+
+∪{u,v}∪{a
+1
+	​
+
+,…,a
+k
+	​
+
+},
+𝐵
+′
+=
+𝐵
+0
+∪
+{
+43
+,
+14
+}
+∪
+{
+𝑏
+1
+,
+…
+,
+𝑏
+𝑘
+}
+.
+B
+′
+=B
+0
+	​
+
+∪{43,14}∪{b
+1
+	​
+
+,…,b
+k
+	​
+
+}.
+
+A covering matching is exactly
+
+𝑃
+′
+=
+𝑃
+∖
+{
+{
+𝑎
+𝑖
+,
+𝑏
+𝑖
+}
+:
+1
+≤
+𝑖
+≤
+𝑘
+}
+.
+P
+′
+=P∖{{a
+i
+	​
+
+,b
+i
+	​
+
+}:1≤i≤k}.
+
+To obtain a perfect matching, sort the 14 cells
+
+𝑈
+0
+∖
+{
+𝑢
+,
+𝑣
+,
+14
+,
+43
+}
+U
+0
+	​
+
+∖{u,v,14,43}
+
+and pair consecutive cells in that sorted list. Add those seven pairs to 
+𝑃
+′
+P
+′
+.
+
+This gives a perfect matching of all 
+78
+−
+2
+𝑘
+78−2k fresh cells, with 
+39
+−
+𝑘
+39−k pairs.
+
+Immediate-win safety before reaching the leaf
+
+Before B43, an outer exchange changes no target of 
+𝑅
+R. A first unpaired claim 
+𝑢
+u cannot complete one: the 
+𝐴
+𝑖
+A
+i
+	​
+
+ initially require six fresh cells, while every 
+𝐶
+𝑖
+C
+i
+	​
+
+ still lacks 43.
+
+After B43, only 
+𝐴
+1
+,
+…
+,
+𝐴
+7
+A
+1
+	​
+
+,…,A
+7
+	​
+
+ can remain as defects. Before B14, Maker has acquired at most two of their initially fresh cells through 
+𝑢
+,
+𝑣
+u,v, and no outer exchange touches them. Therefore the claim 
+𝑀
+𝑣
+Mv cannot complete one.
+
+Every target outside 
+𝑅
+R remains protected by the fresh-pair/retired-pair argument throughout.
+
+The order 
+𝐵
+14
+B14 followed by 
+𝐵
+43
+B43 also works for this particular family. Installing 43 first is more useful for the next reduction, because it leaves only seven defects.
+
+This is a complete defense for the stated family of histories, not a claim that Maker must select two entries in 
+𝑈
+U.
+
+4. A finite prefix dispatcher for all first moves
+
+The 18-target list yields a sound way to defer many first-entry queries without erasing their physical colors.
+
+At a Breaker-completed node, let
+
+𝑅
+𝐵
+=
+{
+𝑇
+∈
+𝑅
+:
+𝑇
+∩
+𝐵
+=
+∅
+}
+.
+R
+B
+	​
+
+={T∈R:T∩B=∅}.
+
+Use the following prefix dispatcher.
+
+If 
+𝑅
+𝐵
+R
+B
+	​
+
+ is empty, the remaining fresh pairs of 
+𝑃
+P already give a full matching leaf.
+If Maker claims a fresh 
+𝑢
+∈
+𝑈
+u∈U, claim 43 if it is still fresh; otherwise claim 14.
+If Maker enters an untouched 
+𝑃
+P-pair at a cell belonging to no target of 
+𝑅
+𝐵
+R
+B
+	​
+
+, claim its mate.
+Otherwise stop at that exact, fully colored position for a correction controller. Do not pretend that the ordinary mate reply has been justified.
+
+This dispatcher is finite: every mate exchange retires a pair, and two unpaired entries install both guards.
+
+Exact initial partition
+
+At S9, 35 first moves permit the neutral mate response immediately:
+
+𝑁
+=
+{
+	
+1
+,
+9
+,
+18
+,
+19
+,
+28
+,
+29
+,
+40
+,
+49
+,
+59
+,
+60
+,
+61
+,
+64
+,
+65
+,
+66
+,
+68
+,
+
+
+	
+70
+,
+71
+,
+72
+,
+73
+,
+76
+,
+78
+,
+79
+,
+80
+,
+81
+,
+82
+,
+83
+,
+85
+,
+86
+,
+88
+,
+89
+,
+91
+,
+92
+,
+93
+,
+95
+,
+96
+}
+.
+N={
+	​
+
+1,9,18,19,28,29,40,49,59,60,61,64,65,66,68,
+70,71,72,73,76,78,79,80,81,82,83,85,86,88,89,91,92,93,95,96}.
+	​
+
+
+Another 16 first moves, namely 
+𝑈
+U, permit the guard response B43.
+
+The remaining 31 first-entry labels are
+
+𝐶
+0
+=
+{
+	
+3
+,
+4
+,
+5
+,
+6
+,
+8
+,
+12
+,
+13
+,
+14
+,
+15
+,
+16
+,
+17
+,
+22
+,
+23
+,
+24
+,
+25
+,
+26
+,
+27
+,
+
+
+	
+30
+,
+31
+,
+32
+,
+33
+,
+41
+,
+42
+,
+43
+,
+50
+,
+51
+,
+52
+,
+53
+,
+54
+,
+62
+,
+63
+}
+.
+C
+0
+	​
+
+={
+	​
+
+3,4,5,6,8,12,13,14,15,16,17,22,23,24,25,26,27,
+30,31,32,33,41,42,43,50,51,52,53,54,62,63}.
+	​
+
+
+Thus
+
+82
+=
+35
++
+16
++
+31.
+82=35+16+31.
+
+Two entries in 
+𝐶
+0
+C
+0
+	​
+
+ already have a mandatory reply:
+
+𝑀
+53
+⇒
+𝐵
+54
+,
+𝑀
+54
+⇒
+𝐵
+53
+,
+M53⇒B54,M54⇒B53,
+
+using 
+{
+44
+,
+45
+,
+46
+,
+47
+,
+53
+,
+54
+}
+{44,45,46,47,53,54}. They are correction states, not permission to ignore that threat.
+
+The seven neutral entries not belonging to the outer family have particularly transparent effects:
+
+Maker / mate reply	Defects thereby blocked
+
+1
+/
+3
+1/3	
+𝐴
+1
+,
+𝐴
+3
+A
+1
+	​
+
+,A
+3
+	​
+
+
+
+9
+/
+8
+9/8	
+𝐴
+4
+,
+𝐴
+7
+A
+4
+	​
+
+,A
+7
+	​
+
+
+
+19
+/
+6
+19/6	
+𝐴
+2
+,
+𝐴
+7
+A
+2
+	​
+
+,A
+7
+	​
+
+
+
+40
+/
+30
+40/30	
+𝐶
+5
+C
+5
+	​
+
+
+
+61
+/
+51
+61/51	
+𝐶
+1
+,
+𝐶
+2
+C
+1
+	​
+
+,C
+2
+	​
+
+
+
+72
+/
+62
+72/62	
+𝐶
+8
+C
+8
+	​
+
+
+
+73
+/
+63
+73/63	
+𝐶
+9
+C
+9
+	​
+
+
+Their Maker endpoints occur in no original defect. Their Breaker endpoints eliminate the listed defects.
+
+After installing B43
+
+Only 
+𝐴
+1
+,
+…
+,
+𝐴
+7
+A
+1
+	​
+
+,…,A
+7
+	​
+
+ remain possible defects. The correction-entry labels shrink to
+
+𝐶
+43
+=
+{
+3
+,
+4
+,
+5
+,
+6
+,
+8
+,
+13
+,
+14
+,
+15
+,
+16
+,
+17
+,
+23
+,
+24
+,
+25
+,
+26
+,
+27
+}
+.
+C
+43
+	​
+
+={3,4,5,6,8,13,14,15,16,17,23,24,25,26,27}.
+	​
+
+
+Other paired entries can be answered by their mates when they lie outside the currently unblocked defect support. A further unpaired entry from 
+𝑈
+U permits B14 and the full matching leaf.
+
+The exact colored frontier—not an identification of different boards
+
+Suppose the dispatcher has made mate exchanges 
+𝑀
+𝑎
+𝑖
+/
+𝐵
+𝑏
+𝑖
+Ma
+i
+	​
+
+/Bb
+i
+	​
+
+. At a correction entry 
+𝑀
+𝑥
+Mx, the state is one of these two forms:
+
+Before a guard is installed:
+	
+𝑀
+=
+𝑀
+0
+∪
+{
+𝑎
+𝑖
+}
+∪
+{
+𝑥
+}
+,
+𝐵
+=
+𝐵
+0
+∪
+{
+𝑏
+𝑖
+}
+;
+
+
+After 
+𝑀
+𝑢
+/
+𝐵
+43
+:
+	
+𝑀
+=
+𝑀
+0
+∪
+{
+𝑎
+𝑖
+}
+∪
+{
+𝑢
+,
+𝑥
+}
+,
+𝐵
+=
+𝐵
+0
+∪
+{
+𝑏
+𝑖
+}
+∪
+{
+43
+}
+.
+Before a guard is installed:
+After Mu/B43:
+	​
+
+M=M
+0
+	​
+
+∪{a
+i
+	​
+
+}∪{x},B=B
+0
+	​
+
+∪{b
+i
+	​
+
+};
+M=M
+0
+	​
+
+∪{a
+i
+	​
+
+}∪{u,x},B=B
+0
+	​
+
+∪{b
+i
+	​
+
+}∪{43}.
+	​
+
+
+Each earlier 
+𝑎
+𝑖
+a
+i
+	​
+
+ must have been outside the then-unblocked defect support when claimed.
+
+These are full colored states. The history sets 
+{
+𝑎
+𝑖
+}
+,
+{
+𝑏
+𝑖
+}
+{a
+i
+	​
+
+},{b
+i
+	​
+
+} must remain in a certificate query. The counts 31 and 15 are counts of correction-entry labels, not a claim that all histories collapse to 46 identical physical positions.
+
+No Maker win occurs before this frontier. In the first form, neutral exchanges have advanced no surviving defect. In the second, every surviving defect is an 
+𝐴
+𝑖
+A
+i
+	​
+
+, with at most the one earlier unpaired claim 
+𝑢
+u contributing to it. The correction claim therefore does not itself complete a defect. Other targets still have the pair invariant.
+
+5. Only one original pair can be damaged at a correction entry
+
+There is a useful exact bound on the correction object.
+
+Immediately before a correction entry, every pair of 
+𝑃
+P is either untouched or retired with a Breaker endpoint. After Maker claims 
+𝑥
+x, at most one additional pair is damaged:
+
+𝑝
+𝑥
+=
+{
+𝑥
+,
+mate
+⁡
+𝑃
+(
+𝑥
+)
+}
+,
+p
+x
+	​
+
+={x,mate
+P
+	​
+
+(x)},
+
+when 
+𝑥
+x is paired.
+
+After any proposed legal Breaker reply 
+𝑦
+y, retain all pairs of 
+𝑃
+P whose endpoints are still fresh. Every live physical target not covered by those retained pairs belongs to
+
+𝑅
+𝐵
+∪
+{
+𝑦
+}
+∪
+{
+live physical incidences of 
+𝑝
+𝑥
+ having no retained pair
+}
+.
+R
+B∪{y}
+	​
+
+∪{live physical incidences of p
+x
+	​
+
+ having no retained pair}.
+	​
+
+
+If 
+𝑥
+x was unpaired, or 
+𝑦
+y blocks 
+𝑝
+𝑥
+p
+x
+	​
+
+, the second part is empty.
+
+This follows because a live target cannot rely on a retired pair containing a Breaker stone. Any lost covering pair must therefore be the single pair touched by 
+𝑀
+𝑥
+Mx.
+
+This is a finite physical correction object, rather than permission to discard the damaged pair’s singleton incidences. The next section gives two literal instances.
+
+6. M43 rules out 79 of its 81 replies
+
+Here is the full physical reply classification obtained by a forcing tree.
+
+Replies outside 
+{
+52
+,
+53
+,
+54
+}
+{52,53,54} lose
+
+After
+
+𝑀
+43
+/
+𝐵
+𝛽
+,
+𝛽
+∉
+{
+52
+,
+53
+,
+54
+}
+,
+M43/Bβ,β∈
+/
+{52,53,54},
+
+Maker claims 53.
+
+There are now distinct immediate completions:
+
+52
+	
+:
+{
+43
+,
+44
+,
+45
+,
+46
+,
+52
+,
+53
+}
+,
+
+
+54
+	
+:
+{
+44
+,
+45
+,
+46
+,
+47
+,
+53
+,
+54
+}
+.
+52
+54
+	​
+
+:{43,44,45,46,52,53},
+:{44,45,46,47,53,54}.
+	​
+
+
+Both endpoints are fresh. Breaker can claim at most one, and Maker claims the other.
+
+Thus 78 of the 81 legal replies to M43 lose by this three-claim Maker tree.
+
+B54 also loses
+
+Use this complete policy:
+
+𝑀
+43
+/
+𝐵
+54
+,
+𝑀
+32.
+M43/B54,M32.
+
+If Breaker does not claim 33, Maker claims 33 and completes
+
+{
+32
+,
+33
+,
+43
+,
+44
+,
+45
+,
+46
+}
+.
+{32,33,43,44,45,46}.
+
+After the forced B33, Maker claims 42. If Breaker does not claim 31, Maker claims 31 and completes
+
+{
+31
+,
+32
+,
+42
+,
+43
+,
+44
+,
+45
+}
+.
+{31,32,42,43,44,45}.
+
+After the forced B31, Maker claims 52. The two distinct completions are now
+
+51
+	
+:
+{
+42
+,
+43
+,
+44
+,
+45
+,
+51
+,
+52
+}
+,
+
+
+53
+	
+:
+{
+43
+,
+44
+,
+45
+,
+46
+,
+52
+,
+53
+}
+.
+51
+53
+	​
+
+:{42,43,44,45,51,52},
+:{43,44,45,46,52,53}.
+	​
+
+
+Maker takes whichever endpoint Breaker leaves.
+
+Every named cell is fresh when required. This wins within five Maker claims from S9 on the B54 branch.
+
+Therefore
+
+𝑆
+9
+/
+𝑀
+43
+ can only be defended, if at all, by B52 or B53.
+S9/M43 can only be defended, if at all, by B52 or B53.
+	​
+
+
+The entire argument survives arbitrary prior exchanges from 
+𝑂
+O: none of their endpoints occurs in these witnesses.
+
+Both surviving replies admit the same forced second round
+
+Against either B52 or B53, Maker may choose 32, forcing B33 by 
+𝐶
+3
+C
+3
+	​
+
+.
+
+This gives exactly two full colored states:
+
+𝑀
+⋆
+=
+{
+32
+,
+37
+,
+43
+,
+44
+,
+45
+,
+46
+,
+47
+,
+57
+,
+67
+,
+75
+,
+84
+}
+,
+M
+⋆
+={32,37,43,44,45,46,47,57,67,75,84},
+
+and
+
+𝐵
+52
+	
+=
+{
+33
+,
+34
+,
+36
+,
+38
+,
+52
+,
+55
+,
+56
+,
+58
+,
+74
+,
+77
+,
+94
+}
+,
+
+
+𝐵
+53
+	
+=
+{
+33
+,
+34
+,
+36
+,
+38
+,
+53
+,
+55
+,
+56
+,
+58
+,
+74
+,
+77
+,
+94
+}
+.
+B
+52
+B
+53
+	​
+
+={33,34,36,38,52,55,56,58,74,77,94},
+={33,34,36,38,53,55,56,58,74,77,94}.
+	​
+
+
+Maker is to move in both. Neither outcome is established here.
+
+7. Exact full-board correction objects at those two states
+
+Define the following eight physical targets:
+
+Label	Full physical target
+
+𝐷
+1
+D
+1
+	​
+
+	
+{
+1
+,
+11
+,
+12
+,
+22
+,
+32
+,
+42
+}
+{1,11,12,22,32,42}
+
+𝐷
+2
+D
+2
+	​
+
+	
+{
+12
+,
+22
+,
+32
+,
+41
+,
+42
+,
+51
+}
+{12,22,32,41,42,51}
+
+𝐷
+3
+D
+3
+	​
+
+	
+{
+11
+,
+21
+,
+22
+,
+32
+,
+42
+,
+52
+}
+{11,21,22,32,42,52}
+
+𝐷
+4
+D
+4
+	​
+
+	
+{
+21
+,
+31
+,
+32
+,
+42
+,
+52
+,
+62
+}
+{21,31,32,42,52,62}
+
+𝐷
+5
+D
+5
+	​
+
+	
+{
+32
+,
+42
+,
+52
+,
+61
+,
+62
+,
+71
+}
+{32,42,52,61,62,71}
+
+𝐷
+6
+D
+6
+	​
+
+	
+{
+1
+,
+11
+,
+21
+,
+31
+,
+32
+,
+42
+}
+{1,11,21,31,32,42}
+
+𝐷
+7
+D
+7
+	​
+
+	
+{
+31
+,
+32
+,
+42
+,
+43
+,
+44
+,
+45
+}
+{31,32,42,43,44,45}
+
+𝐷
+8
+D
+8
+	​
+
+	
+{
+12
+,
+22
+,
+32
+,
+42
+,
+43
+,
+53
+}
+{12,22,32,42,43,53}
+State 
+(
+𝑀
+⋆
+,
+𝐵
+52
+)
+(M
+⋆
+,B
+52
+): 29 fresh pairs and exactly 13 defects
+
+Retain
+
+𝑃
+52
+=
+𝑃
+∖
+{
+(
+24
+,
+33
+)
+,
+(
+32
+,
+42
+)
+,
+(
+50
+,
+52
+)
+}
+.
+P
+52
+=P∖{(24,33),(32,42),(50,52)}.
+
+These are 29 disjoint fresh pairs. The exact uncovered live family is
+
+𝑅
+52
+=
+{
+𝐴
+1
+,
+…
+,
+𝐴
+7
+,
+ 
+𝐶
+1
+,
+ 
+𝐷
+1
+,
+𝐷
+2
+,
+𝐷
+6
+,
+𝐷
+7
+,
+𝐷
+8
+}
+.
+R
+52
+={A
+1
+	​
+
+,…,A
+7
+	​
+
+, C
+1
+	​
+
+, D
+1
+	​
+
+,D
+2
+	​
+
+,D
+6
+	​
+
+,D
+7
+	​
+
+,D
+8
+	​
+
+}.
+	​
+
+
+Every other live full Snaky contains a pair of 
+𝑃
+52
+P
+52
+.
+
+State 
+(
+𝑀
+⋆
+,
+𝐵
+53
+)
+(M
+⋆
+,B
+53
+): 29 fresh pairs and exactly 16 defects
+
+Retain
+
+𝑃
+53
+=
+𝑃
+∖
+{
+(
+24
+,
+33
+)
+,
+(
+32
+,
+42
+)
+,
+(
+53
+,
+54
+)
+}
+.
+P
+53
+=P∖{(24,33),(32,42),(53,54)}.
+
+The exact uncovered live family is
+
+𝑅
+53
+=
+{
+𝐴
+1
+,
+…
+,
+𝐴
+7
+,
+ 
+𝐶
+1
+,
+𝐶
+2
+,
+ 
+𝐷
+1
+,
+…
+,
+𝐷
+7
+}
+.
+R
+53
+={A
+1
+	​
+
+,…,A
+7
+	​
+
+, C
+1
+	​
+
+,C
+2
+	​
+
+, D
+1
+	​
+
+,…,D
+7
+	​
+
+}.
+	​
+
+
+Every other live full Snaky contains a pair of 
+𝑃
+53
+P
+53
+.
+
+Why these are exhaustive physical correction lists
+
+In each state, two deleted pairs have a Breaker endpoint. Their full-pair incidences are blocked. The sole damaged pair is 
+(
+32
+,
+42
+)
+(32,42), with 32 Maker-owned and 42 fresh.
+
+For that pair, vertical four-runs can start only at rows 1, 2 or 3. The pair can also be the hook of a vertical Snaky; the horizontal possibilities are fixed by its common column.
+
+At 
+𝐵
+52
+B
+52
+, runs containing 52 and hooks containing 33 are blocked. Among the remaining incidences, the ones not already covered by 
+(
+12
+,
+13
+)
+(12,13), 
+(
+51
+,
+61
+)
+(51,61), or 
+(
+63
+,
+73
+)
+(63,73) are precisely
+
+𝐷
+1
+,
+𝐷
+2
+,
+𝐷
+6
+,
+𝐷
+7
+,
+𝐷
+8
+.
+D
+1
+	​
+
+,D
+2
+	​
+
+,D
+6
+	​
+
+,D
+7
+	​
+
+,D
+8
+	​
+
+.
+
+At 
+𝐵
+53
+B
+53
+, the corresponding uncovered incidences are precisely
+
+𝐷
+1
+,
+…
+,
+𝐷
+7
+.
+D
+1
+	​
+
+,…,D
+7
+	​
+
+.
+
+Combining this incidence list with the surviving members of 
+𝑅
+R proves both full-board statements.
+
+Mandatory static-matching changes at 
+𝐵
+53
+B
+53
+
+Any fresh static matching covering 
+(
+𝑀
+⋆
+,
+𝐵
+53
+)
+(M
+⋆
+,B
+53
+), whether or not derived from 
+𝑃
+P, must contain
+
+(
+31
+,
+42
+)
+,
+(
+51
+,
+52
+)
+,
+(
+41
+,
+50
+)
+,
+(
+12
+,
+22
+)
+,
+(
+11
+,
+21
+)
+.
+(31,42),(51,52),(41,50),(12,22),(11,21).
+	​
+
+
+The forcing chain is literal:
+
+𝐷
+7
+D
+7
+	​
+
+ has fresh part 
+{
+31
+,
+42
+}
+{31,42}, forcing 
+(
+31
+,
+42
+)
+(31,42).
+𝐶
+2
+C
+2
+	​
+
+ has fresh part 
+{
+42
+,
+51
+,
+52
+}
+{42,51,52}. Since 42 is paired outside that target, 
+(
+51
+,
+52
+)
+(51,52) is forced.
+𝐶
+1
+C
+1
+	​
+
+ has fresh part 
+{
+41
+,
+42
+,
+50
+,
+51
+}
+{41,42,50,51}, forcing 
+(
+41
+,
+50
+)
+(41,50).
+𝐷
+2
+D
+2
+	​
+
+ then forces 
+(
+12
+,
+22
+)
+(12,22).
+𝐷
+3
+D
+3
+	​
+
+ then forces 
+(
+11
+,
+21
+)
+(11,21).
+
+Finally, 
+𝐷
+5
+D
+5
+	​
+
+ requires a pair entirely inside
+
+{
+61
+,
+62
+,
+71
+}
+.
+{61,62,71}.
+
+Thus a static repair at this state necessarily releases, among others, the old domains
+
+(
+31
+,
+41
+)
+,
+ 
+(
+50
+,
+52
+)
+,
+ 
+(
+51
+,
+61
+)
+,
+ 
+(
+12
+,
+13
+)
+,
+ 
+(
+22
+,
+23
+)
+.
+(31,41), (50,52), (51,61), (12,13), (22,23).
+
+These forced new pairs are constraints, not an asserted complete matching. Every released incidence must still be covered.
+
+8. Safety, fillers and the remaining boundary
+
+For every matching leaf above, the ordinary invariant is sufficient: a pair is either wholly fresh or retired with a Breaker endpoint. A Maker claim cannot acquire both endpoints of a fresh pair at once. Hence a target with a covering pair cannot be completed before the reply.
+
+A legal Breaker filler can hit an untouched pair and retire it. That blocks its full-pair incidences; it does not remove the obligation to cover targets using only the other endpoint. The covering argument in Sections 2 and 5 retains exactly those obligations. Completing the unpaired cells to a perfect matching gives a deterministic alternative requiring no fillers.
+
+Exhaustion causes no exception. Immediate completion is tested on every Maker claim, and the invariant rules it out before any reply is invoked.
+
+The resulting structural picture is:
+
+Outer exchanges can be handled without changing the 18-defect problem. An unpaired entry permits installing 43, reducing it to seven defects. But Maker can take 43 first; that branch requires B52 or B53, followed by a genuine change to the central pairing structure.
+
+The two states in Section 7 and the explicitly colored dispatcher frontier are the remaining correction objects. They are not yet a complete S9 defense, and none of these conditional results resolves the empty-board problem.

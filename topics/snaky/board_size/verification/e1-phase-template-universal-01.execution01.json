@@ -1,0 +1,159 @@
+{
+  "child_log_sha256": "c8372a4f8d21a73f37321e6bdd6eecb1c72cb45b92dd4210f67a741015663aae",
+  "elapsed_seconds": 2.1668537501245737,
+  "guard_exit_code": 0,
+  "guard_report": {
+    "all_children_peak_rss_bytes": 85819392,
+    "command": [
+      "nice",
+      "-n",
+      "19",
+      "/opt/homebrew/bin/python3.12",
+      "-B",
+      "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/breaker/cpu_exec.py",
+      "--cpu-seconds",
+      "15",
+      "--",
+      "/opt/homebrew/bin/python3.12",
+      "-B",
+      "verification/e1_phase_template_universal.py",
+      "--output",
+      "verification/e1-phase-template-universal-01.json"
+    ],
+    "elapsed_seconds": 2.1001073326915503,
+    "events": [],
+    "exit_code": 0,
+    "final_swapout_total": 18875158,
+    "guard_sha256": "dd59dc64f76c0e93f5b963ef0e6a444e74ceb4003d126c3f42937430affb60aa",
+    "initial_global_sample": {
+      "cpu_idle_percent": 52.88,
+      "reduce_search_concurrency": false,
+      "sampler_pid": 53736,
+      "summary": [
+        "Processes: 556 total, 3 running, 553 sleeping, 3799 threads ",
+        "2026/10/16 11:34:25",
+        "Load Avg: 5.05, 6.14, 6.26 ",
+        "CPU usage: 39.63% user, 7.48% sys, 52.88% idle ",
+        "SharedLibs: 458M resident, 122M data, 89M linkedit.",
+        "MemRegions: 0 total, 0B resident, 46M private, 1013M shared.",
+        "PhysMem: 15G used (2265M wired, 6780M compressor), 122M unused.",
+        "VM: 265T vsize, 5361M framework vsize, 13944480(0) swapins, 18875158(0) swapouts.",
+        "Networks: packets: 2520944177/1728G in, 1939920036/349G out.",
+        "Disks: 1245052736/129T read, 836212760/18T written."
+      ],
+      "swapin_delta": 0,
+      "swapin_since_previous_sample": 236,
+      "swapin_total": 13944480,
+      "swapout_delta": 0,
+      "swapout_since_previous_sample": 0,
+      "swapout_total": 18875158,
+      "utc": "2026-10-16T09:34:25.873601+00:00"
+    },
+    "initial_swapout_total": 18875158,
+    "log": "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/verification/e1-phase-template-universal-01.guard01.log",
+    "pid": 61419,
+    "rss_cap_bytes": 157286400,
+    "sampled_peak_rss_bytes": 85819392,
+    "samples": [
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 0.0001787906512618065,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 5062656,
+        "swapout_since_direct_sample": 0,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 0.2089460827410221,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 85819392,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 0.4208478322252631,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 65912832,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 0.6309574991464615,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 65912832,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 0.8411812903359532,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 65929216,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 1.0512899151071906,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 65929216,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 1.2627740828320384,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 65929216,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 1.470438415184617,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 65929216,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 1.680532249622047,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 65945600,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      },
+      {
+        "cpu_idle_percent": 52.88,
+        "elapsed_seconds": 1.8899832498282194,
+        "global_sample_utc": "2026-10-16T09:34:25.873601+00:00",
+        "rss_bytes": 65994752,
+        "swapout_since_direct_sample": null,
+        "swapout_total": 18875158
+      }
+    ],
+    "schema": "snaky-external-run-guard-v1",
+    "started_utc": "2026-10-16T09:34:27.869857+00:00",
+    "status": "finished",
+    "supervisor_pid": 61417,
+    "wall_seconds": 60.0,
+    "watcher": "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/resource-samples-20261015.jsonl"
+  },
+  "guard_sha256": "ce7d7e6bba79db95e1554300f19a24caa5513bf54c6b1b775d4dc6f4e7d795f9",
+  "launcher_log_sha256": "cfccba30fc9ba96deb001c6bd2e535f6aff0504e292985ae2c52a75c28e2fe2b",
+  "manifest_sha256": "94581c89c5320a6f57813cc9992d6038e7693f436a190313fccda75d586af07c",
+  "outputs_sha256": {
+    "verification/e1-phase-template-universal-01.json": "c437e5c196161365d87beeaa2dae1b4eff88db7876be3a522fe8de3c1663fda3"
+  },
+  "schema": "snaky-e1-universal-template-execution-v1",
+  "source_sha256_after": {
+    "breaker/adaptive_run.py": "dd59dc64f76c0e93f5b963ef0e6a444e74ceb4003d126c3f42937430affb60aa",
+    "breaker/cpu_exec.py": "0819f781e2cd2e3ce29e499ecacca46373219d8ab7cbe263c0a59a91cbea6278",
+    "breaker/e1_phase_template_universal.md": "442d6e59f6f894872f1a1476871e6b4d5c30f3c5778d80b918e45927594b19ce",
+    "verification/e1_phase_template_universal.py": "c5103aea775f701496dce0f8caccdd598c25637876fa0f98f25651b5916af125"
+  }
+}

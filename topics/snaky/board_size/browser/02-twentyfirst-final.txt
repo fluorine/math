@@ -1,0 +1,2706 @@
+A complete proposed 
+𝐾
+10
++
+𝑄
+K
+10
+	​
+
++Q defense
+
+The ten-cell enlargement works with the supplied exterior pairing unchanged.
+
+At the first reserved-cell entry other than 
+(
+12
+,
+8
+)
+(12,8), Breaker takes 
+(
+12
+,
+8
+)
+(12,8) and commits to a matching. If Maker first enters at 
+(
+12
+,
+8
+)
+(12,8), Breaker takes 
+(
+12
+,
+7
+)
+(12,7) and uses a second finite response table.
+
+The proof below derives both stages directly from the supplied 
+𝐿
+r
+o
+w
+L
+row
+	​
+
+ certificate and the physical target geometry. It does not assume acceptance of the pending 
+𝐾
+8
+K
+8
+	​
+
+ controller. This is a new hand-derived certificate for independent local checking.
+
+1. Reserved domains
+
+Keep your names and introduce 
+𝑗
+,
+𝑘
+j,k:
+
+\begin{array}{c|c@{\qquad}c|c} a&(11,8)&b&(13,8)\\ c&(13,9)&d&(12,9)\\ e&(14,7)&g&(14,8)\\ h&(14,9)&i&(14,10)\\ j&(12,7)&k&(12,8). \end{array}
+
+Reserve
+
+𝐾
+=
+{
+𝑎
+,
+𝑏
+,
+𝑐
+,
+𝑑
+,
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+,
+𝑗
+,
+𝑘
+}
+,
+𝐾
+8
+=
+𝐾
+∖
+{
+𝑗
+,
+𝑘
+}
+.
+K={a,b,c,d,e,g,h,i,j,k},K
+8
+	​
+
+=K∖{j,k}.
+
+All ten cells are initially free at 
+𝑁
+33
+N33.
+
+Let 
+𝑃
+P be exactly the supplied 54-pair certificate, and set
+
+𝑄
+=
+𝑃
+∖
+{
+{
+𝑏
+,
+𝑒
+}
+,
+{
+𝑐
+,
+ℎ
+}
+,
+{
+𝑔
+,
+𝑖
+}
+}
+.
+Q=P∖{{b,e},{c,h},{g,i}}.
+	​
+
+
+Thus 
+𝑄
+Q consists of the supplied pairs other than entries 30, 32 and 35. Its 51 pair domains are disjoint from 
+𝐾
+K.
+
+The following five exterior pairs will be used explicitly in the geometric proof:
+
+	
+	
+{
+(
+12
+,
+5
+)
+,
+(
+12
+,
+6
+)
+}
+,
+{
+(
+14
+,
+5
+)
+,
+(
+14
+,
+6
+)
+}
+,
+
+
+	
+{
+(
+12
+,
+11
+)
+,
+(
+12
+,
+12
+)
+}
+,
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+,
+{
+(
+14
+,
+11
+)
+,
+(
+14
+,
+12
+)
+}
+.
+		
+(1)
+	​
+
+{(12,5),(12,6)},{(14,5),(14,6)},
+{(12,11),(12,12)},{(13,11),(13,12)},{(14,11),(14,12)}.
+	​
+
+(1)
+
+All five occur literally in the supplied 
+𝑄
+Q; none is an additional admission condition.
+
+For completeness, the 18 initially free cells outside both 
+𝐾
+K and the endpoints of 
+𝑄
+Q are
+
+𝑅
+=
+{
+	
+(
+14
+,
+1
+)
+,
+(
+6
+,
+3
+)
+,
+(
+9
+,
+3
+)
+,
+(
+13
+,
+3
+)
+,
+(
+14
+,
+4
+)
+,
+(
+9
+,
+5
+)
+,
+(
+4
+,
+6
+)
+,
+
+
+	
+(
+7
+,
+10
+)
+,
+(
+6
+,
+11
+)
+,
+(
+1
+,
+12
+)
+,
+(
+2
+,
+13
+)
+,
+(
+6
+,
+13
+)
+,
+(
+7
+,
+13
+)
+,
+
+
+	
+(
+1
+,
+14
+)
+,
+(
+2
+,
+14
+)
+,
+(
+3
+,
+14
+)
+,
+(
+6
+,
+14
+)
+,
+(
+14
+,
+14
+)
+}
+.
+R={
+	​
+
+(14,1),(6,3),(9,3),(13,3),(14,4),(9,5),(4,6),
+(7,10),(6,11),(1,12),(2,13),(6,13),(7,13),
+(1,14),(2,14),(3,14),(6,14),(14,14)}.
+	​
+
+
+Consequently, all 130 initially free cells are partitioned into the 102 exterior-pair endpoints, the ten reserved cells, and these 18 unmatched cells.
+
+2. Exact physical obligations outside 
+𝑄
+Q
+
+Geometric lemma. At the exact 
+𝑁
+33
+N33 position, the live full Snakies containing no pair of 
+𝑄
+Q are exactly the following ten targets.
+
+Each row specifies the union of its complete four-cell body and complete two-cell hook.
+
+Target	Four-cell body	Two-cell hook	Intersection with 
+𝐾
+K
+
+𝑊
+1
+W
+1
+	​
+
+	Row 8, columns 10–13	
+{
+(
+13
+,
+7
+)
+,
+(
+14
+,
+7
+)
+}
+{(13,7),(14,7)}	
+{
+𝑎
+,
+𝑘
+,
+𝑏
+,
+𝑒
+}
+{a,k,b,e}
+
+𝑊
+2
+W
+2
+	​
+
+	Row 8, columns 10–13	
+{
+(
+13
+,
+9
+)
+,
+(
+14
+,
+9
+)
+}
+{(13,9),(14,9)}	
+{
+𝑎
+,
+𝑘
+,
+𝑏
+,
+𝑐
+,
+ℎ
+}
+{a,k,b,c,h}
+
+𝑊
+3
+W
+3
+	​
+
+	Column 13, rows 6–9	
+{
+(
+14
+,
+9
+)
+,
+(
+14
+,
+10
+)
+}
+{(14,9),(14,10)}	
+{
+𝑏
+,
+𝑐
+,
+ℎ
+,
+𝑖
+}
+{b,c,h,i}
+
+𝑊
+4
+W
+4
+	​
+
+	Column 14, rows 7–10	
+{
+(
+13
+,
+6
+)
+,
+(
+13
+,
+7
+)
+}
+{(13,6),(13,7)}	
+{
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+}
+{e,g,h,i}
+
+𝑊
+5
+W
+5
+	​
+
+	Column 14, rows 8–11	
+{
+(
+13
+,
+7
+)
+,
+(
+13
+,
+8
+)
+}
+{(13,7),(13,8)}	
+{
+𝑏
+,
+𝑔
+,
+ℎ
+,
+𝑖
+}
+{b,g,h,i}
+
+𝑊
+6
+W
+6
+	​
+
+	Row 8, columns 9–12	
+{
+(
+12
+,
+9
+)
+,
+(
+13
+,
+9
+)
+}
+{(12,9),(13,9)}	
+{
+𝑎
+,
+𝑘
+,
+𝑐
+,
+𝑑
+}
+{a,k,c,d}
+
+𝑊
+7
+W
+7
+	​
+
+	Column 13, rows 6–9	
+{
+(
+12
+,
+9
+)
+,
+(
+12
+,
+10
+)
+}
+{(12,9),(12,10)}	
+{
+𝑏
+,
+𝑐
+,
+𝑑
+}
+{b,c,d}
+
+𝑊
+8
+W
+8
+	​
+
+	Column 12, rows 8–11	
+{
+(
+13
+,
+7
+)
+,
+(
+13
+,
+8
+)
+}
+{(13,7),(13,8)}	
+{
+𝑏
+,
+𝑘
+,
+𝑑
+}
+{b,k,d}
+
+𝑊
+9
+W
+9
+	​
+
+	Column 12, rows 7–10	
+{
+(
+13
+,
+6
+)
+,
+(
+13
+,
+7
+)
+}
+{(13,6),(13,7)}	
+{
+𝑗
+,
+𝑘
+,
+𝑑
+}
+{j,k,d}
+
+𝑊
+10
+W
+10
+	​
+
+	Row 8, columns 9–12	
+{
+(
+12
+,
+7
+)
+,
+(
+13
+,
+7
+)
+}
+{(12,7),(13,7)}	
+{
+𝑎
+,
+𝑘
+,
+𝑗
+}
+{a,k,j}
+
+Two targets also have an initially free cell outside 
+𝐾
+K:
+
+	
+𝑊
+5
+∖
+(
+𝑀
+𝑁
+∪
+𝐾
+)
+=
+{
+(
+14
+,
+11
+)
+}
+,
+𝑊
+8
+∖
+(
+𝑀
+𝑁
+∪
+𝐾
+)
+=
+{
+(
+12
+,
+11
+)
+}
+.
+		
+(2)
+W
+5
+	​
+
+∖(M
+N
+	​
+
+∪K)={(14,11)},W
+8
+	​
+
+∖(M
+N
+	​
+
+∪K)={(12,11)}.
+(2)
+
+Those cells remain in their original 
+𝑄
+Q-pair domains. They are not treated as physically Maker-owned or removed. The controller prevents Maker from acquiring the displayed 
+𝐾
+K-intersection, which is sufficient regardless of how those outside cells are eventually colored.
+
+The geometric lemma is proved in Section 5. First, here is the complete policy.
+
+3. Total ordinary controller
+
+There are two waiting phases, followed by permanent commitment to a pairing system.
+
+Phase I: before the first entry into 
+𝐾
+K
+
+While no cell of 
+𝐾
+K has been claimed:
+
+If Maker claims an exterior cell whose 
+𝑄
+Q-mate is free, Breaker claims that actual mate and remains in Phase I.
+If Maker claims an exterior cell without a required free 
+𝑄
+Q-mate, Breaker claims 
+𝑘
+=
+(
+12
+,
+8
+)
+k=(12,8) and commits to
+	
+𝑄
+∪
+{
+{
+𝑏
+,
+𝑐
+}
+,
+{
+ℎ
+,
+𝑖
+}
+}
+.
+		
+(3)
+Q∪{{b,c},{h,i}}.
+(3)
+If Maker claims 
+𝑥
+∈
+𝐾
+∖
+{
+𝑘
+}
+x∈K∖{k}, Breaker claims 
+𝑘
+=
+(
+12
+,
+8
+)
+k=(12,8) and commits to 
+𝑄
+Q plus the pairs in Table I.
+If Maker claims 
+𝑘
+=
+(
+12
+,
+8
+)
+k=(12,8), Breaker claims 
+𝑗
+=
+(
+12
+,
+7
+)
+j=(12,7) and enters Phase II.
+
+Here and below, “without a required free mate” includes an unmatched cell or a cell whose mate is already Breaker-owned. The maintained invariant excludes a legal fresh claim whose mate is already Maker-owned.
+
+Table I: commitment after 
+𝑀
+𝑥
+/
+𝐵
+𝑘
+Mx/Bk
+First 
+𝐾
+K-entry 
+𝑥
+x	Added pairs
+
+𝑎
+,
+𝑑
+,
+𝑒
+,
+𝑔
+,
+a,d,e,g, or 
+𝑗
+j	
+{
+𝑏
+,
+𝑐
+}
+,
+{
+ℎ
+,
+𝑖
+}
+{b,c},{h,i}
+
+𝑏
+b	
+{
+𝑐
+,
+𝑑
+}
+,
+{
+ℎ
+,
+𝑖
+}
+{c,d},{h,i}
+
+𝑐
+c	
+{
+𝑏
+,
+𝑑
+}
+,
+{
+ℎ
+,
+𝑖
+}
+{b,d},{h,i}
+
+ℎ
+h	
+{
+𝑏
+,
+𝑐
+}
+,
+{
+𝑔
+,
+𝑖
+}
+{b,c},{g,i}
+
+𝑖
+i	
+{
+𝑏
+,
+𝑐
+}
+,
+{
+𝑔
+,
+ℎ
+}
+{b,c},{g,h}
+
+These five rows cover all nine possible first entries other than 
+𝑘
+k. Every added pair is fresh and disjoint from 
+𝑄
+Q, from the other added pairs, and from the actual claims 
+𝑀
+𝑥
+,
+𝐵
+𝑘
+Mx,Bk.
+
+Phase II: after 
+𝑀
+𝑘
+/
+𝐵
+𝑗
+Mk/Bj
+
+At entry into this phase, the eight cells of 
+𝐾
+8
+K
+8
+	​
+
+ are still free. Earlier exterior claims, if any, remain permanently owned.
+
+While 
+𝐾
+8
+K
+8
+	​
+
+ is untouched:
+
+If Maker claims an exterior cell whose 
+𝑄
+Q-mate is free, Breaker claims that mate and remains in Phase II.
+If Maker claims an exterior cell without a required free 
+𝑄
+Q-mate, Breaker claims 
+𝑑
+=
+(
+12
+,
+9
+)
+d=(12,9) and commits to
+	
+𝑄
+∪
+{
+{
+𝑏
+,
+𝑒
+}
+,
+{
+𝑐
+,
+ℎ
+}
+,
+{
+𝑔
+,
+𝑖
+}
+}
+=
+𝑃
+.
+		
+(4)
+Q∪{{b,e},{c,h},{g,i}}=P.
+(4)
+On the first entry 
+𝑥
+∈
+𝐾
+8
+x∈K
+8
+	​
+
+, use Table II and commit to 
+𝑄
+Q plus its added pairs.
+Table II: commitment after the first 
+𝐾
+8
+K
+8
+	​
+
+-entry
+Maker entry 
+𝑥
+x	Actual Breaker response	Added pairs
+
+𝑎
+a	
+𝑑
+d	
+{
+𝑏
+,
+𝑒
+}
+,
+{
+𝑐
+,
+ℎ
+}
+,
+{
+𝑔
+,
+𝑖
+}
+{b,e},{c,h},{g,i}
+
+𝑏
+b	
+𝑑
+d	
+{
+𝑎
+,
+𝑒
+}
+,
+{
+𝑐
+,
+ℎ
+}
+,
+{
+𝑔
+,
+𝑖
+}
+{a,e},{c,h},{g,i}
+
+𝑐
+c	
+𝑑
+d	
+{
+𝑎
+,
+𝑏
+}
+,
+{
+ℎ
+,
+𝑖
+}
+{a,b},{h,i}
+
+𝑒
+e	
+𝑑
+d	
+{
+𝑎
+,
+𝑏
+}
+,
+{
+𝑐
+,
+ℎ
+}
+,
+{
+𝑔
+,
+𝑖
+}
+{a,b},{c,h},{g,i}
+
+𝑔
+g	
+𝑑
+d	
+{
+𝑎
+,
+𝑏
+}
+,
+{
+ℎ
+,
+𝑖
+}
+{a,b},{h,i}
+
+ℎ
+h	
+𝑑
+d	
+{
+𝑎
+,
+𝑒
+}
+,
+{
+𝑏
+,
+𝑐
+}
+,
+{
+𝑔
+,
+𝑖
+}
+{a,e},{b,c},{g,i}
+
+𝑖
+i	
+𝑑
+d	
+{
+𝑎
+,
+𝑒
+}
+,
+{
+𝑏
+,
+𝑐
+}
+,
+{
+𝑔
+,
+ℎ
+}
+{a,e},{b,c},{g,h}
+
+𝑑
+d	
+𝑏
+b	
+{
+𝑎
+,
+𝑐
+}
+,
+{
+𝑔
+,
+𝑖
+}
+{a,c},{g,i}
+
+Again, every response and added-pair endpoint is fresh when prescribed.
+
+After commitment: all subsequent replies
+
+Let 
+𝐹
+=
+𝑄
+∪
+𝑆
+F=Q∪S be the selected pair system.
+
+After each legal Maker claim, Breaker takes its 
+𝐹
+F-mate if that mate is free. Otherwise Breaker takes the lexicographically least free physical cell, ordered first by 
+𝑥
+x, then by 
+𝑦
+y.
+
+This is the only unrestricted filler rule. It is used after commitment, when there is no remaining pristine-domain requirement. A filler may occupy a pair endpoint; that only blocks every target containing that pair.
+
+There are no passes or virtual replies.
+
+4. Why the tables defeat every obligation
+4.1 The first-stage commitment
+
+After Breaker claims 
+𝑘
+k, the targets
+
+𝑊
+1
+,
+𝑊
+2
+,
+𝑊
+6
+,
+𝑊
+8
+,
+𝑊
+9
+,
+𝑊
+10
+W
+1
+	​
+
+,W
+2
+	​
+
+,W
+6
+	​
+
+,W
+8
+	​
+
+,W
+9
+	​
+
+,W
+10
+	​
+
+
+are physically blocked.
+
+The only possibly live targets outside 
+𝑄
+Q are 
+𝑊
+3
+,
+𝑊
+4
+,
+𝑊
+5
+,
+𝑊
+7
+W
+3
+	​
+
+,W
+4
+	​
+
+,W
+5
+	​
+
+,W
+7
+	​
+
+. Their relevant core subsets are
+
+	
+{
+𝑏
+,
+𝑐
+,
+ℎ
+,
+𝑖
+}
+,
+{
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+}
+,
+{
+𝑏
+,
+𝑔
+,
+ℎ
+,
+𝑖
+}
+,
+{
+𝑏
+,
+𝑐
+,
+𝑑
+}
+.
+		
+(5)
+{b,c,h,i},{e,g,h,i},{b,g,h,i},{b,c,d}.
+	​
+
+(5)
+
+Every row of Table I contains a pair in each of these four sets.
+
+For example, after first entry 
+𝑏
+b, the pair 
+{
+𝑐
+,
+𝑑
+}
+{c,d} covers 
+𝑊
+7
+W
+7
+	​
+
+, while 
+{
+ℎ
+,
+𝑖
+}
+{h,i} covers the other three. After first entry 
+ℎ
+h, the pair 
+{
+𝑏
+,
+𝑐
+}
+{b,c} covers 
+𝑊
+3
+,
+𝑊
+7
+W
+3
+	​
+
+,W
+7
+	​
+
+, and 
+{
+𝑔
+,
+𝑖
+}
+{g,i} covers 
+𝑊
+4
+,
+𝑊
+5
+W
+4
+	​
+
+,W
+5
+	​
+
+.
+
+The default exterior-triggered commitment (3) covers the same four sets.
+
+Thus every first-stage commitment gives a full physical pairing defense, not merely a defense of selected projected targets.
+
+4.2 The second-stage commitment when 
+𝑥
+≠
+𝑑
+x
+
+=d
+
+After 
+𝑀
+𝑘
+/
+𝐵
+𝑗
+Mk/Bj, the targets 
+𝑊
+9
+,
+𝑊
+10
+W
+9
+	​
+
+,W
+10
+	​
+
+ are blocked by the actual stone 
+𝐵
+𝑗
+Bj.
+
+If Breaker subsequently claims 
+𝑑
+d, then 
+𝑊
+6
+,
+𝑊
+7
+,
+𝑊
+8
+W
+6
+	​
+
+,W
+7
+	​
+
+,W
+8
+	​
+
+ are blocked as well. The remaining five obligations have core subsets
+
+	
+{
+𝑎
+,
+𝑏
+,
+𝑒
+}
+,
+{
+𝑎
+,
+𝑏
+,
+𝑐
+,
+ℎ
+}
+,
+{
+𝑏
+,
+𝑐
+,
+ℎ
+,
+𝑖
+}
+,
+{
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+}
+,
+{
+𝑏
+,
+𝑔
+,
+ℎ
+,
+𝑖
+}
+.
+		
+(6)
+{a,b,e},{a,b,c,h},{b,c,h,i},{e,g,h,i},{b,g,h,i}.
+	​
+
+(6)
+
+Each of the first seven rows of Table II covers every set in (6).
+
+The exterior-triggered commitment (4) also covers all five: use respectively
+
+{
+𝑏
+,
+𝑒
+}
+,
+{
+𝑐
+,
+ℎ
+}
+,
+{
+𝑐
+,
+ℎ
+}
+,
+{
+𝑔
+,
+𝑖
+}
+,
+{
+𝑔
+,
+𝑖
+}
+.
+{b,e},{c,h},{c,h},{g,i},{g,i}.
+4.3 The second-stage commitment when 
+𝑥
+=
+𝑑
+x=d
+
+After
+
+𝑀
+𝑘
+/
+𝐵
+𝑗
+,
+𝑀
+𝑑
+/
+𝐵
+𝑏
+,
+Mk/Bj,Md/Bb,
+
+the actual Breaker stones 
+𝑗
+,
+𝑏
+j,b block every 
+𝑊
+𝑟
+W
+r
+	​
+
+ except 
+𝑊
+4
+,
+𝑊
+6
+W
+4
+	​
+
+,W
+6
+	​
+
+.
+
+Their remaining required core cells are
+
+𝑊
+4
+:
+{
+𝑒
+,
+𝑔
+,
+ℎ
+,
+𝑖
+}
+,
+𝑊
+6
+:
+{
+𝑎
+,
+𝑐
+}
+.
+W
+4
+	​
+
+:{e,g,h,i},W
+6
+	​
+
+:{a,c}.
+
+The added pairs
+
+{
+𝑔
+,
+𝑖
+}
+,
+{
+𝑎
+,
+𝑐
+}
+{g,i},{a,c}
+
+cover these two targets.
+
+This proves the last row of Table II directly, without importing the pending controller.
+
+4.4 Safety before every Breaker response
+
+For each exterior pair, maintain:
+
+	
+either both endpoints are free, or the pair has a Breaker endpoint.
+		
+(7)
+either both endpoints are free, or the pair has a Breaker endpoint.
+(7)
+
+At the moment of a Maker claim in a previously untouched pair, its other endpoint remains free. Therefore Maker has not completed any target protected by that pair, even before the prescribed response.
+
+During Phase I, every 
+𝑊
+𝑟
+W
+r
+	​
+
+ requires at least three cells of the untouched 
+𝐾
+K. An exterior move cannot complete it, and the first 
+𝐾
+K-entry cannot complete it either.
+
+During Phase II, 
+𝑊
+9
+,
+𝑊
+10
+W
+9
+	​
+
+,W
+10
+	​
+
+ are already blocked. Each remaining 
+𝑊
+𝑟
+W
+r
+	​
+
+ requires at least two cells of the untouched 
+𝐾
+8
+K
+8
+	​
+
+. The smallest core requirement is
+
+𝑊
+8
+∩
+𝐾
+8
+=
+{
+𝑏
+,
+𝑑
+}
+.
+W
+8
+	​
+
+∩K
+8
+	​
+
+={b,d}.
+
+Consequently, neither an exterior move nor the first 
+𝐾
+8
+K
+8
+	​
+
+-entry completes any remaining target. This remains true even if Maker has previously acquired the outside cell 
+(
+12
+,
+11
+)
+(12,11) of 
+𝑊
+8
+W
+8
+	​
+
+, or 
+(
+14
+,
+11
+)
+(14,11) of 
+𝑊
+5
+W
+5
+	​
+
+.
+
+After commitment, every initially live target either has an actual Breaker stone or contains a protecting pair. Maker never obtains both endpoints of a protecting pair. This proves safety at the instant of each Maker claim, including the final legal Maker claim.
+
+4.5 Arbitrary exterior interleavings and old colors
+
+While either phase is waiting, every non-activating Breaker response is an actual 
+𝑄
+Q-mate outside the reserved domain. Hence the claimed pristine condition is maintained by the policy itself.
+
+An exterior move requiring a filler does not consume an unspecified reserved cell. It triggers the explicitly prescribed claim 
+𝐵
+𝑘
+Bk or 
+𝐵
+𝑑
+Bd, immediately ending the waiting phase.
+
+A previously touched 
+𝑄
+Q-pair is not falsely treated as fresh at commitment. If it has a Breaker endpoint, its targets are already blocked; otherwise its endpoints are still free. All exterior Maker and Breaker claims remain on the board.
+
+Thus the argument applies to arbitrary legal interleavings, not just to consecutive play inside 
+𝐾
+K.
+
+5. Proof that the ten-target list is exhaustive
+
+Write the supplied initial colors as 
+𝑀
+𝑁
+,
+𝐵
+𝑁
+M
+N
+	​
+
+,B
+N
+	​
+
+. Relative to 
+𝑁
+33
+N33, the accepted 
+𝐿
+r
+o
+w
+L
+row
+	​
+
+ state adds
+
+𝑀
+𝑘
+,
+ 
+𝑀
+𝑎
+,
+𝐵
+𝑗
+,
+ 
+𝐵
+𝑑
+.
+Mk, Ma,Bj, Bd.
+
+Coverage by a fresh matching depends on the live target family and the literal pair endpoints, not on treating the two additional Maker stones as permanently present at 
+𝑁
+33
+N33. All endpoints of 
+𝑃
+P, and hence of 
+𝑄
+Q, are initially free at 
+𝑁
+33
+N33.
+
+5.1 Targets avoiding 
+𝑗
+,
+𝑑
+j,d
+
+A 
+𝐵
+𝑁
+B
+N
+	​
+
+-free target avoiding 
+𝑗
+,
+𝑑
+j,d is live at 
+𝐿
+r
+o
+w
+L
+row
+	​
+
+. By the supplied coverage premise, it contains a pair of 
+𝑃
+P.
+
+If it contains no pair of 
+𝑄
+Q, it must contain one of
+
+{
+𝑏
+,
+𝑒
+}
+,
+{
+𝑐
+,
+ℎ
+}
+,
+{
+𝑔
+,
+𝑖
+}
+.
+{b,e},{c,h},{g,i}.
+
+Here are all live physical targets containing one of these three pairs.
+
+Removed pair	Four-cell body	Two-cell hook	Outcome
+
+{
+𝑏
+,
+𝑒
+}
+{b,e}	Row 8, columns 10–13	
+{
+(
+13
+,
+7
+)
+,
+(
+14
+,
+7
+)
+}
+{(13,7),(14,7)}	
+𝑊
+1
+W
+1
+	​
+
+
+
+{
+𝑏
+,
+𝑒
+}
+{b,e}	Column 14, rows 4–7	
+{
+(
+13
+,
+7
+)
+,
+(
+13
+,
+8
+)
+}
+{(13,7),(13,8)}	Contains 
+𝑄
+Q-pair 
+{
+(
+14
+,
+5
+)
+,
+(
+14
+,
+6
+)
+}
+{(14,5),(14,6)}
+
+{
+𝑏
+,
+𝑒
+}
+{b,e}	Column 14, rows 5–8	
+{
+(
+13
+,
+8
+)
+,
+(
+13
+,
+9
+)
+}
+{(13,8),(13,9)}	Contains the same 
+𝑄
+Q-pair
+
+{
+𝑐
+,
+ℎ
+}
+{c,h}	Row 8, columns 10–13	
+{
+(
+13
+,
+9
+)
+,
+(
+14
+,
+9
+)
+}
+{(13,9),(14,9)}	
+𝑊
+2
+W
+2
+	​
+
+
+
+{
+𝑐
+,
+ℎ
+}
+{c,h}	Column 13, rows 6–9	
+{
+(
+14
+,
+9
+)
+,
+(
+14
+,
+10
+)
+}
+{(14,9),(14,10)}	
+𝑊
+3
+W
+3
+	​
+
+
+
+{
+𝑐
+,
+ℎ
+}
+{c,h}	Column 14, rows 9–12	
+{
+(
+13
+,
+8
+)
+,
+(
+13
+,
+9
+)
+}
+{(13,8),(13,9)}	Contains 
+𝑄
+Q-pair 
+{
+(
+14
+,
+11
+)
+,
+(
+14
+,
+12
+)
+}
+{(14,11),(14,12)}
+
+{
+𝑔
+,
+𝑖
+}
+{g,i}	Column 14, rows 7–10	
+{
+(
+13
+,
+6
+)
+,
+(
+13
+,
+7
+)
+}
+{(13,6),(13,7)}	
+𝑊
+4
+W
+4
+	​
+
+
+
+{
+𝑔
+,
+𝑖
+}
+{g,i}	Column 14, rows 8–11	
+{
+(
+13
+,
+7
+)
+,
+(
+13
+,
+8
+)
+}
+{(13,7),(13,8)}	
+𝑊
+5
+W
+5
+	​
+
+
+
+{
+𝑔
+,
+𝑖
+}
+{g,i}	Column 14, rows 8–11	
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+{(13,11),(13,12)}	Contains that hook as a 
+𝑄
+Q-pair
+
+The exhaustion follows from the body-and-hook geometry:
+
+For the diagonal pair 
+𝑏
+,
+𝑒
+b,e, a horizontal body gives only the row-eight target; the row-seven alternative is blocked or off-board. A vertical body in column fourteen gives the two listed targets. The possible column-thirteen bodies meet 
+𝐵
+(
+13
+,
+10
+)
+B(13,10).
+
+For the adjacent horizontal pair 
+𝑐
+,
+ℎ
+c,h, a horizontal body in row nine is blocked by 
+𝐵
+(
+11
+,
+9
+)
+B(11,9). A horizontal hook gives the displayed row-eight target; the row-ten alternative meets 
+𝐵
+(
+13
+,
+10
+)
+B(13,10). The two surviving vertical body/hook placements are displayed.
+
+For 
+𝑔
+,
+𝑖
+g,i, which are distance two apart in column fourteen, both must belong to the vertical four-cell body. Its start is row seven or eight. The right-hand hooks are off-board, and the omitted lower hook for the row-seven body meets 
+𝐵
+(
+13
+,
+10
+)
+B(13,10).
+
+Therefore the only no-
+𝑄
+Q targets avoiding 
+𝑗
+,
+𝑑
+j,d are 
+𝑊
+1
+,
+…
+,
+𝑊
+5
+W
+1
+	​
+
+,…,W
+5
+	​
+
+.
+
+5.2 Targets containing 
+𝑗
+j or 
+𝑑
+d: four-cell bodies
+
+Neither 
+𝑗
+=
+(
+12
+,
+7
+)
+j=(12,7) nor 
+𝑑
+=
+(
+12
+,
+9
+)
+d=(12,9) can belong to a live horizontal four-cell body. In both relevant rows, column eleven is an old Breaker cell and only columns twelve through fourteen remain to its right.
+
+Their possible vertical bodies lie in column twelve:
+
+Body starting row	Reason or surviving obligation
+4 or 5	The body contains 
+{
+(
+12
+,
+5
+)
+,
+(
+12
+,
+6
+)
+}
+∈
+𝑄
+{(12,5),(12,6)}∈Q.
+6	Every hook is blocked. The four options meet respectively 
+(
+11
+,
+6
+)
+,
+(
+13
+,
+5
+)
+,
+(
+11
+,
+9
+)
+,
+(
+13
+,
+10
+)
+(11,6),(13,5),(11,9),(13,10), all old Breaker cells.
+7	The unique live hook is 
+{
+(
+13
+,
+6
+)
+,
+(
+13
+,
+7
+)
+}
+{(13,6),(13,7)}, giving 
+𝑊
+9
+W
+9
+	​
+
+.
+8	The live hooks give 
+𝑊
+8
+W
+8
+	​
+
+, or the hook 
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+∈
+𝑄
+{(13,11),(13,12)}∈Q.
+9	The body contains 
+{
+(
+12
+,
+11
+)
+,
+(
+12
+,
+12
+)
+}
+∈
+𝑄
+{(12,11),(12,12)}∈Q.
+
+Starts four through seven cover every body containing 
+𝑗
+j; starts six through nine cover every body containing 
+𝑑
+d.
+
+5.3 Targets containing 
+𝑗
+j or 
+𝑑
+d: hooks
+
+If 
+𝑗
+j is in a horizontal hook, its column-eleven neighbor is blocked. The remaining hook is
+
+{
+(
+12
+,
+7
+)
+,
+(
+13
+,
+7
+)
+}
+.
+{(12,7),(13,7)}.
+
+The only live contained body is row eight, columns nine through twelve, giving 
+𝑊
+10
+W
+10
+	​
+
+. The row-six alternative meets 
+𝐵
+(
+9
+,
+6
+)
+B(9,6), and the opposite-end bodies are off-board.
+
+If 
+𝑗
+j is in a vertical hook, the possible bodies lie in columns eleven or thirteen. Every such column-eleven body meets an old blocker; the column-thirteen alternatives meet 
+(
+13
+,
+5
+)
+(13,5) or 
+(
+13
+,
+10
+)
+(13,10). None survives.
+
+If 
+𝑑
+d is in a horizontal hook, the column-eleven neighbor is again blocked. The hook
+
+{
+(
+12
+,
+9
+)
+,
+(
+13
+,
+9
+)
+}
+{(12,9),(13,9)}
+
+has only the live row-eight body, giving 
+𝑊
+6
+W
+6
+	​
+
+. The row-ten alternative meets 
+𝐵
+(
+9
+,
+10
+)
+B(9,10).
+
+Finally, when 
+𝑑
+d is in a vertical hook, the only surviving body is column thirteen, rows six through nine, with hook
+
+{
+(
+12
+,
+9
+)
+,
+(
+12
+,
+10
+)
+}
+.
+{(12,9),(12,10)}.
+
+This is 
+𝑊
+7
+W
+7
+	​
+
+. Every alternative meets the existing column-eleven blockers or 
+(
+13
+,
+5
+)
+,
+(
+13
+,
+10
+)
+(13,5),(13,10).
+
+Thus the additional no-
+𝑄
+Q targets are precisely
+
+𝑊
+6
+,
+𝑊
+7
+,
+𝑊
+8
+,
+𝑊
+9
+,
+𝑊
+10
+.
+W
+6
+	​
+
+,W
+7
+	​
+
+,W
+8
+	​
+
+,W
+9
+	​
+
+,W
+10
+	​
+
+.
+
+Each of the ten listed targets is live at 
+𝑁
+33
+N33. None contains a pair of 
+𝑄
+Q: 
+𝑄
+Q is disjoint from 
+𝐾
+K, and the only initially free exterior cells occurring in these targets are the single cells in (2), never both endpoints of a 
+𝑄
+Q-pair. This proves exactness.
+
+6. Literal exterior matching
+
+Here is 
+𝑄
+Q explicitly, without the three released pairs:
+
+JSON
+[
+  [[1,1],[1,2]],
+  [[2,1],[1,5]],
+  [[3,1],[5,1]],
+  [[4,1],[4,2]],
+  [[6,1],[7,1]],
+  [[8,1],[9,1]],
+  [[10,1],[10,3]],
+  [[11,1],[7,2]],
+  [[12,1],[13,1]],
+  [[2,2],[3,2]],
+  [[5,2],[6,2]],
+  [[8,2],[9,2]],
+  [[10,2],[11,2]],
+  [[13,2],[13,4]],
+  [[14,2],[14,3]],
+  [[1,3],[4,4]],
+  [[2,3],[1,6]],
+  [[3,3],[4,3]],
+  [[5,3],[5,4]],
+  [[11,3],[12,3]],
+  [[1,4],[2,7]],
+  [[2,4],[3,4]],
+  [[11,4],[12,4]],
+  [[2,5],[2,6]],
+  [[3,5],[3,6]],
+  [[12,5],[12,6]],
+  [[14,5],[14,6]],
+  [[1,7],[1,8]],
+  [[3,7],[3,8]],
+  [[2,8],[2,9]],
+  [[1,9],[1,10]],
+  [[3,9],[3,11]],
+  [[2,10],[3,10]],
+  [[1,11],[1,13]],
+  [[2,11],[2,12]],
+  [[12,11],[12,12]],
+  [[13,11],[13,12]],
+  [[14,11],[14,12]],
+  [[3,12],[3,13]],
+  [[4,12],[5,12]],
+  [[6,12],[7,12]],
+  [[8,12],[7,14]],
+  [[10,12],[10,13]],
+  [[4,13],[5,13]],
+  [[8,13],[9,13]],
+  [[11,13],[12,13]],
+  [[13,13],[10,14]],
+  [[14,13],[13,14]],
+  [[4,14],[5,14]],
+  [[8,14],[9,14]],
+  [[11,14],[12,14]]
+]
+Conclusion
+
+The resulting certificate has 51 fixed exterior pairs, a ten-cell reserved domain, two waiting phases, and explicit pairing commitments for every entry and filler case.
+
+Using the supplied 
+𝐿
+r
+o
+w
+L
+row
+	​
+
+ coverage as the input lemma, the argument establishes a full physical Breaker defense at the exact 
+𝑁
+33
+N33 state: every live target is either protected by 
+𝑄
+Q, one of the ten listed obligations handled by the tables, or subsequently blocked by an actual Breaker claim.
+
+The enlarged controller remains a new object awaiting your independent acceptance. Its conclusion is conditional to 
+𝑁
+33
+N33, not an empty-board theorem.

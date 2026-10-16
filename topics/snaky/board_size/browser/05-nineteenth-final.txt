@@ -1,0 +1,936 @@
+S12 is Maker-winning: play 41, not 32
+
+A complete Breaker defense at S12 does not exist. Maker can win by their fourth claim from S12, against every sequence of legal Breaker replies. The first move is M41.
+
+This is a physical winning strategy, not merely an obstruction to a particular matching. Every winning continuation below completes a literal six-cell Snaky.
+
+1. The relevant fixed-board region
+
+Everything happens in the strip
+
+𝐷
+=
+{
+0
+,
+1
+,
+2
+}
+×
+{
+0
+,
+…
+,
+6
+}
+.
+D={0,1,2}×{0,…,6}.
+
+At S12, the only occupied cells in this strip are Maker’s 11, 21, 31. There are no Breaker stones in it, and every other cell of the strip is fresh.
+
+Maker starts with 41, producing the four-cell column
+
+{
+11
+,
+21
+,
+31
+,
+41
+}
+.
+{11,21,31,41}.
+
+Write 
+𝛽
+β for Breaker’s first response. Maker’s second move is
+
+{
+1
+,
+	
+𝛽
+=
+51
+,
+
+
+51
+,
+	
+𝛽
+≠
+51.
+{
+1,
+51,
+	​
+
+β=51,
+β
+
+=51.
+	​
+
+	​
+
+
+Both choices are fresh in their respective cases.
+
+The resulting five-cell column supplies disjoint forks. Here a fork 
+(
+ℓ
+,
+𝑐
+,
+𝑟
+)
+(ℓ,c,r) means that Maker already owns the four body cells of two physical Snakies whose remaining cells are respectively
+
+{
+ℓ
+,
+𝑐
+}
+and
+{
+𝑐
+,
+𝑟
+}
+.
+{ℓ,c}and{c,r}.
+
+If all three fork cells are fresh, claiming 
+𝑐
+c creates two distinct immediate completions. Breaker cannot prevent both.
+
+2. Case 
+𝛽
+≠
+51
+β
+
+=51: Maker plays 51
+
+Maker now owns
+
+𝑅
+=
+{
+11
+,
+21
+,
+31
+,
+41
+,
+51
+}
+.
+R={11,21,31,41,51}.
+
+There are four pairwise disjoint fork triples:
+
+Fork 
+(
+ℓ
+,
+𝑐
+,
+𝑟
+)
+(ℓ,c,r)	Physical Snaky completed with 
+𝑐
+,
+ℓ
+c,ℓ	Physical Snaky completed with 
+𝑐
+,
+𝑟
+c,r
+
+(
+0
+,
+10
+,
+20
+)
+(0,10,20)	
+{
+0
+,
+10
+,
+11
+,
+21
+,
+31
+,
+41
+}
+{0,10,11,21,31,41}	
+{
+10
+,
+20
+,
+21
+,
+31
+,
+41
+,
+51
+}
+{10,20,21,31,41,51}
+
+(
+2
+,
+12
+,
+22
+)
+(2,12,22)	
+{
+2
+,
+11
+,
+12
+,
+21
+,
+31
+,
+41
+}
+{2,11,12,21,31,41}	
+{
+12
+,
+21
+,
+22
+,
+31
+,
+41
+,
+51
+}
+{12,21,22,31,41,51}
+
+(
+40
+,
+50
+,
+60
+)
+(40,50,60)	
+{
+11
+,
+21
+,
+31
+,
+40
+,
+41
+,
+50
+}
+{11,21,31,40,41,50}	
+{
+21
+,
+31
+,
+41
+,
+50
+,
+51
+,
+60
+}
+{21,31,41,50,51,60}
+
+(
+42
+,
+52
+,
+62
+)
+(42,52,62)	
+{
+11
+,
+21
+,
+31
+,
+41
+,
+42
+,
+52
+}
+{11,21,31,41,42,52}	
+{
+21
+,
+31
+,
+41
+,
+51
+,
+52
+,
+62
+}
+{21,31,41,51,52,62}
+
+Let 
+𝛾
+γ be Breaker’s response to M51.
+
+All twelve fork cells were fresh at S12. Neither of Maker’s new claims, 41 and 51, belongs to a fork triple. Because the four triples are disjoint, the two Breaker claims 
+𝛽
+,
+𝛾
+β,γ can intersect at most two of them.
+
+Consequently, at least two fork triples are still entirely fresh.
+
+Maker selects the first entirely fresh triple in the displayed order and claims its centre 
+𝑐
+c. If Breaker’s next reply is 
+𝛿
+δ, Maker then claims
+
+{
+𝑟
+,
+	
+𝛿
+=
+ℓ
+,
+
+
+ℓ
+,
+	
+𝛿
+≠
+ℓ
+.
+{
+r,
+ℓ,
+	​
+
+δ=ℓ,
+δ
+
+=ℓ.
+	​
+
+
+The selected endpoint is fresh, and the corresponding target in the table is completed immediately.
+
+Thus this case wins on Maker’s fourth claim:
+
+41
+,
+51
+,
+𝑐
+,
+ℓ
+ or 
+𝑟
+.
+41,51,c,ℓ or r.
+3. Case 
+𝛽
+=
+51
+β=51: Maker plays 1
+
+Maker instead owns
+
+𝑅
+′
+=
+{
+1
+,
+11
+,
+21
+,
+31
+,
+41
+}
+.
+R
+′
+={1,11,21,31,41}.
+
+Two disjoint forks suffice:
+
+Fork 
+(
+ℓ
+,
+𝑐
+,
+𝑟
+)
+(ℓ,c,r)	Physical Snaky completed with 
+𝑐
+,
+ℓ
+c,ℓ	Physical Snaky completed with 
+𝑐
+,
+𝑟
+c,r
+
+(
+30
+,
+40
+,
+50
+)
+(30,40,50)	
+{
+1
+,
+11
+,
+21
+,
+30
+,
+31
+,
+40
+}
+{1,11,21,30,31,40}	
+{
+11
+,
+21
+,
+31
+,
+40
+,
+41
+,
+50
+}
+{11,21,31,40,41,50}
+
+(
+32
+,
+42
+,
+52
+)
+(32,42,52)	
+{
+1
+,
+11
+,
+21
+,
+31
+,
+32
+,
+42
+}
+{1,11,21,31,32,42}	
+{
+11
+,
+21
+,
+31
+,
+41
+,
+42
+,
+52
+}
+{11,21,31,41,42,52}
+
+Breaker’s first claim, 51, belongs to neither triple.
+
+Let 
+𝛾
+γ be Breaker’s response to M1. Since the triples are disjoint, 
+𝛾
+γ can intersect at most one. Therefore at least one triple remains entirely fresh.
+
+Maker selects the first entirely fresh triple in the displayed order, claims its centre, and then claims whichever endpoint Breaker does not take. The corresponding physical Snaky is completed.
+
+This case also wins on Maker’s fourth claim:
+
+41
+,
+1
+,
+𝑐
+,
+ℓ
+ or 
+𝑟
+.
+41,1,c,ℓ or r.
+The complete response-dependent policy
+
+The argument can therefore be recorded as one finite policy:
+
+Claim 41.
+After Breaker’s reply 
+𝛽
+β, claim 1 if 
+𝛽
+=
+51
+β=51; otherwise claim 51.
+After Breaker’s next reply, choose the first untouched fork in the applicable table and claim its centre.
+After Breaker’s next reply, claim the left endpoint unless Breaker just claimed it; otherwise claim the right endpoint.
+
+The disjointness arguments prove that the required untouched fork always exists. No restriction is imposed on any Breaker reply.
+
+4. Literal D4 verification of the target witnesses
+
+For completeness, all table entries follow from two explicit families of isometries of the given base
+
+𝐻
+=
+{
+(
+0
+,
+0
+)
+,
+(
+1
+,
+0
+)
+,
+(
+2
+,
+0
+)
+,
+(
+3
+,
+0
+)
+,
+(
+3
+,
+1
+)
+,
+(
+4
+,
+1
+)
+}
+.
+H={(0,0),(1,0),(2,0),(3,0),(3,1),(4,1)}.
+
+For 
+𝜎
+∈
+{
+−
+1
+,
++
+1
+}
+σ∈{−1,+1}, define
+
+𝜙
+𝑗
+,
+𝜎
+(
+𝑥
+,
+𝑦
+)
+=
+(
+1
++
+𝜎
+𝑦
+,
+ 
+𝑗
++
+𝑥
+)
+.
+ϕ
+j,σ
+	​
+
+(x,y)=(1+σy, j+x).
+
+Its image of 
+𝐻
+H is
+
+𝜙
+𝑗
+,
+𝜎
+(
+𝐻
+)
+=
+{
+	
+(
+1
+,
+𝑗
+)
+,
+(
+1
+,
+𝑗
++
+1
+)
+,
+(
+1
+,
+𝑗
++
+2
+)
+,
+(
+1
+,
+𝑗
++
+3
+)
+,
+
+
+	
+(
+1
++
+𝜎
+,
+𝑗
++
+3
+)
+,
+(
+1
++
+𝜎
+,
+𝑗
++
+4
+)
+}
+.
+ϕ
+j,σ
+	​
+
+(H)={
+	​
+
+(1,j),(1,j+1),(1,j+2),(1,j+3),
+(1+σ,j+3),(1+σ,j+4)}.
+	​
+
+
+This is a vertical four-cell body with a lower hook. The tables use 
+𝑗
+=
+0
+,
+1
+,
+2
+j=0,1,2.
+
+Similarly, define
+
+𝜓
+𝑗
+,
+𝜎
+(
+𝑥
+,
+𝑦
+)
+=
+(
+1
++
+𝜎
+𝑦
+,
+ 
+𝑗
++
+3
+−
+𝑥
+)
+.
+ψ
+j,σ
+	​
+
+(x,y)=(1+σy, j+3−x).
+
+Its image is
+
+𝜓
+𝑗
+,
+𝜎
+(
+𝐻
+)
+=
+{
+	
+(
+1
+,
+𝑗
+)
+,
+(
+1
+,
+𝑗
++
+1
+)
+,
+(
+1
+,
+𝑗
++
+2
+)
+,
+(
+1
+,
+𝑗
++
+3
+)
+,
+
+
+	
+(
+1
++
+𝜎
+,
+𝑗
+)
+,
+(
+1
++
+𝜎
+,
+𝑗
+−
+1
+)
+}
+.
+ψ
+j,σ
+	​
+
+(H)={
+	​
+
+(1,j),(1,j+1),(1,j+2),(1,j+3),
+(1+σ,j),(1+σ,j−1)}.
+	​
+
+
+This is the corresponding upper-hook orientation. The tables use 
+𝑗
+=
+1
+,
+2
+j=1,2.
+
+The linear parts of both maps belong to 
+𝐷
+4
+D
+4
+	​
+
+. Every listed image lies in the fixed strip 
+𝐷
+D, hence entirely in the physical board. In particular:
+
+The first two rows of the four-fork table use 
+𝜓
+1
+,
+𝜎
+(
+𝐻
+)
+ψ
+1,σ
+	​
+
+(H) and 
+𝜓
+2
+,
+𝜎
+(
+𝐻
+)
+ψ
+2,σ
+	​
+
+(H).
+Its last two rows use 
+𝜙
+1
+,
+𝜎
+(
+𝐻
+)
+ϕ
+1,σ
+	​
+
+(H) and 
+𝜙
+2
+,
+𝜎
+(
+𝐻
+)
+ϕ
+2,σ
+	​
+
+(H).
+The two-fork table uses 
+𝜙
+0
+,
+𝜎
+(
+𝐻
+)
+ϕ
+0,σ
+	​
+
+(H) and 
+𝜙
+1
+,
+𝜎
+(
+𝐻
+)
+ϕ
+1,σ
+	​
+
+(H).
+
+Thus the tables contain ten distinct full physical targets, with two targets repeated between the cases. None is a projection or an enlarged substitute for a Snaky.
+
+5. Legality, unrestricted replies, and scope
+
+Freshness and ownership. The initial three body cells are Maker-owned. Cell 41 and both potential extensions, 1 and 51, are initially fresh. The second move explicitly avoids Breaker’s first claim. Every selected fork is untouched by all Breaker claims to that point and disjoint from Maker’s preceding new claims, so its centre and endpoints are fresh. No old ownership is changed or discarded.
+
+Prior Breaker stones and fillers. All initial Breaker stones lie outside the working strip. Subsequent Breaker claims may be anywhere on the board. A claim outside the fork triples simply intersects none of them; the counting argument already includes such replies. There is no assumption that Breaker cooperates or remains within a local controller domain.
+
+Immediate wins. After the centre claim, both displayed targets have exactly one missing cell, and those cells are distinct. Breaker can claim at most one. Maker’s endpoint claim completes the other target, and the game ends immediately, without a further Breaker response. Any earlier physical Maker win would only shorten the strategy.
+
+Exhaustion. S12 has 76 fresh cells. The strategy uses at most four Maker claims and three Breaker claims, so there are still 69 fresh cells when the stated terminal win occurs. Exhaustion cannot interfere.
+
+Consequence for the upstream program
+
+The entry M41 prevents any total Breaker controller at S12—not just a controller assembled from pairing leaves. Any upstream Breaker construction must avoid allowing this position with Maker to move.
+
+This does not contradict the accepted M32/B1 leaf. At that leaf, 1 is already Breaker-owned, and the accepted matching contains (41,51). If Maker subsequently claims 41 there, Breaker answers 51, blocking both extensions used in the argument above.
+
+The exact distinction is therefore:
+
+At S12, M32/B1 reaches the accepted defense, but M41 forces a physical Maker win.
+At S12, M32/B1 reaches the accepted defense, but M41 forces a physical Maker win.
+	​
+
+
+This rules out the displayed prefix ending M31/B24 as part of a complete Breaker strategy against arbitrary Maker play. It does not settle S9 under different Breaker choices, or the empty 
+10
+×
+10
+10×10 game.

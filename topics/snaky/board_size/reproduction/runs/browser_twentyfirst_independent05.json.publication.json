@@ -1,0 +1,37 @@
+{
+  "case": "browser_twentyfirst_independent05",
+  "checker": "verification/browser_twentyfirst_independent05.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "07e2b3d4e818d39a71cfdad4dbc560cd4bdac2f95f40918834b6146ae500bb19",
+  "created_utc": "2026-10-16T10:55:35.031067+00:00",
+  "execution_field_differences": {
+    "created_utc": {
+      "historical": "2026-10-16T07:36:37.053226+00:00",
+      "replay": "2026-10-16T10:55:35.014529+00:00"
+    },
+    "elapsed_seconds": {
+      "historical": 0.06315620802342892,
+      "replay": 0.06340962555259466
+    },
+    "process_cpu_seconds": {
+      "historical": 0.061806000000000014,
+      "replay": 0.062765
+    }
+  },
+  "historical_report": "verification/browser_twentyfirst_independent05.json",
+  "historical_report_sha256": "56d03252b70a863dd35137507b7e594e0d62af0f05854365a814aa73ab5ef45b",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "eb247319187b7e3a653442e9e5a38c2e6eb099e87d5428cde425083afce3e337",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "0073196646065b07b9fe4f9e16266f2f2034a5357241fcf4d672e258e61f28b6",
+      "old_sha256": "b634e970c955ddf7171db6d8cbfb04d8d4b0593e95e163f6ab6a513062e87cf7",
+      "path": "browser/05-twentyfirst-final-section.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    }
+  ]
+}

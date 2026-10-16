@@ -1,0 +1,22 @@
+Snaky.E1.e1_source_replacement (mask mode : Nat) (hm : mask < 512) (hv : Snaky.E1.validRow mask = true)
+  (hmode : mode < 3) {K F : List Nat} (hc : Snaky.E1.Compatible (Snaky.E1.config mask mode) K)
+  (hF : F ∈ Snaky.placements 10 10 Snaky.snaky) (he : Snaky.E1.eligible F = true)
+  (hactive : (Snaky.E1.traceOf F).Subset K) :
+  ∃ p,
+    p ∈ (Snaky.E1.config mask mode).pairs ∧
+      p.fst ∈ Snaky.E1.traceOf F ∧ p.snd ∈ Snaky.E1.traceOf F ∧ p.fst ∈ K ∧ p.snd ∈ K
+Snaky.E1.e1_physical_incidence_replacement (mask mode : Nat) (hm : mask < 512) (hv : Snaky.E1.validRow mask = true)
+  (hmode : mode < 3) {K F E : List Nat} (hc : Snaky.E1.Compatible (Snaky.E1.config mask mode) K)
+  (hF : F ∈ Snaky.placements 10 10 Snaky.snaky) (he : Snaky.E1.eligible F = true)
+  (hactive : (Snaky.E1.traceOf F).Subset K) (hinc : (Snaky.E1.traceOf F).Subset E) :
+  ∃ p, p ∈ (Snaky.E1.config mask mode).pairs ∧ p.fst ∈ K ∧ p.snd ∈ K ∧ p.fst ∈ E ∧ p.snd ∈ E
+Snaky.E1.config_matching (mask mode : Nat) :
+  (List.flatMap (fun p => [p.fst, p.snd]) (Snaky.E1.config mask mode).pairs).Nodup ∧
+    ∀ (p : Snaky.E1.Pair), p ∈ (Snaky.E1.config mask mode).pairs → p.fst < 100 ∧ p.snd < 100 ∧ p.fst ≠ p.snd
+Snaky.E1.source_dimensions :
+  (Snaky.placements 10 10 Snaky.snaky).length = 432 ∧
+    (List.filter Snaky.E1.eligible (Snaky.placements 10 10 Snaky.snaky)).length = 240 ∧ Snaky.E1.sources.length = 240
+'Snaky.E1.e1_source_replacement' depends on axioms: [propext, Quot.sound]
+'Snaky.E1.e1_physical_incidence_replacement' depends on axioms: [propext, Quot.sound]
+'Snaky.E1.config_matching' does not depend on any axioms
+'Snaky.E1.source_dimensions' depends on axioms: [propext]

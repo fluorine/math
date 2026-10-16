@@ -1,0 +1,155 @@
+Snaky.BreakerLRow.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 14 14 Snaky.snaky) 196 Snaky.BreakerLRow.maker Snaky.BreakerLRow.breaker
+'Snaky.BreakerLRow.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerLCap.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 14 14 Snaky.snaky) 196 Snaky.BreakerLCap.maker Snaky.BreakerLCap.breaker
+'Snaky.BreakerLCap.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerS11.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.BreakerS11.maker Snaky.BreakerS11.breaker
+'Snaky.BreakerS11.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerS13.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.BreakerS13.maker Snaky.BreakerS13.breaker
+'Snaky.BreakerS13.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerPostM31.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.BreakerPostM31.maker Snaky.BreakerPostM31.breaker
+'Snaky.BreakerPostM31.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerP53Leaf.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.BreakerP53Leaf.maker Snaky.BreakerP53Leaf.breaker
+'Snaky.BreakerP53Leaf.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.BreakerC30.not_blackWins (z : Nat) (hz : z ∈ Snaky.BreakerC30.entries) :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 (z :: Snaky.BreakerC30.maker₀) Snaky.BreakerC30.breaker
+'Snaky.BreakerC30.not_blackWins' depends on axioms: [propext, Classical.choice, Quot.sound]
+Snaky.BreakerN33.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 14 14 Snaky.snaky) 196 Snaky.BreakerN33.maker Snaky.BreakerN33.breaker
+'Snaky.BreakerN33.not_blackWins' depends on axioms: [propext, Classical.choice, Quot.sound]
+Snaky.BreakerN32.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 14 14 Snaky.snaky) 196 Snaky.BreakerN32.maker Snaky.BreakerN32.breaker
+'Snaky.BreakerN32.not_blackWins' depends on axioms: [propext, Classical.choice, Quot.sound]
+Snaky.BreakerAdmission35.not_blackWins (u : Nat) (hu : u ∈ Snaky.BreakerAdmission35.entries) :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 (Snaky.BreakerAdmission35.maker u)
+      Snaky.BreakerAdmission35.breaker
+'Snaky.BreakerAdmission35.not_blackWins' depends on axioms: [propext, Quot.sound]
+'Snaky.Breaker.product_not_blackWins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.Breaker.partial_matching_not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.P52.not_blackWins : ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.P52.maker Snaky.P52.breaker
+'Snaky.P52.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.P52.missing_pair_rejected :
+  ¬Snaky.Breaker.OuterOK 100 Snaky.P52.maker Snaky.P52.breaker Snaky.P52.reserved
+      (Snaky.Breaker.mateOfPairs (List.filter (fun p => p != (0, 1)) Snaky.P52.outsidePairs))
+Snaky.P52.self_reply_rejected :
+  ¬Snaky.Breaker.SwitchOK Snaky.P52.reserved Snaky.P52.guards (fun u => if u = 16 then 16 else Snaky.P52.reply u)
+      Snaky.P52.localMate
+Snaky.P52Continued.Endpoint52.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.P52Continued.Endpoint52.maker
+      Snaky.P52Continued.Endpoint52.breaker
+'Snaky.P52Continued.Endpoint52.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.P52Continued.Endpoint53.not_blackWins :
+  ¬Snaky.BlackWins (Snaky.placements 10 10 Snaky.snaky) 100 Snaky.P52Continued.Endpoint53.maker
+      Snaky.P52Continued.Endpoint53.breaker
+'Snaky.P52Continued.Endpoint53.not_blackWins' depends on axioms: [propext, Quot.sound]
+Snaky.E1.e1_source_replacement (mask mode : Nat) (hm : mask < 512) (hv : Snaky.E1.validRow mask = true)
+  (hmode : mode < 3) {K F : List Nat} (hc : Snaky.E1.Compatible (Snaky.E1.config mask mode) K)
+  (hF : F ∈ Snaky.placements 10 10 Snaky.snaky) (he : Snaky.E1.eligible F = true)
+  (hactive : (Snaky.E1.traceOf F).Subset K) :
+  ∃ p,
+    p ∈ (Snaky.E1.config mask mode).pairs ∧
+      p.fst ∈ Snaky.E1.traceOf F ∧ p.snd ∈ Snaky.E1.traceOf F ∧ p.fst ∈ K ∧ p.snd ∈ K
+Snaky.E1.e1_physical_incidence_replacement (mask mode : Nat) (hm : mask < 512) (hv : Snaky.E1.validRow mask = true)
+  (hmode : mode < 3) {K F E : List Nat} (hc : Snaky.E1.Compatible (Snaky.E1.config mask mode) K)
+  (hF : F ∈ Snaky.placements 10 10 Snaky.snaky) (he : Snaky.E1.eligible F = true)
+  (hactive : (Snaky.E1.traceOf F).Subset K) (hinc : (Snaky.E1.traceOf F).Subset E) :
+  ∃ p, p ∈ (Snaky.E1.config mask mode).pairs ∧ p.fst ∈ K ∧ p.snd ∈ K ∧ p.fst ∈ E ∧ p.snd ∈ E
+Snaky.E1.config_matching (mask mode : Nat) :
+  (List.flatMap (fun p => [p.fst, p.snd]) (Snaky.E1.config mask mode).pairs).Nodup ∧
+    ∀ (p : Snaky.E1.Pair), p ∈ (Snaky.E1.config mask mode).pairs → p.fst < 100 ∧ p.snd < 100 ∧ p.fst ≠ p.snd
+Snaky.E1.source_dimensions :
+  (Snaky.placements 10 10 Snaky.snaky).length = 432 ∧
+    (List.filter Snaky.E1.eligible (Snaky.placements 10 10 Snaky.snaky)).length = 240 ∧ Snaky.E1.sources.length = 240
+'Snaky.E1.e1_source_replacement' depends on axioms: [propext, Quot.sound]
+'Snaky.E1.e1_physical_incidence_replacement' depends on axioms: [propext, Quot.sound]
+'Snaky.E1.config_matching' does not depend on any axioms
+'Snaky.E1.source_dimensions' depends on axioms: [propext]
+Snaky.MakerCloseout.continuation_wins_in_eight {M W : List Nat}
+  (h : Snaky.Placed 14 14 Snaky.MakerCloseout.continuation Snaky.MakerCloseout.frame M W) :
+  Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 8 M W
+Snaky.MakerCloseout.n30_after_q_wins (b : Fin 196)
+  (hM : ¬↑b ∈ Snaky.MakerCloseout.initialClaim :: Snaky.MakerCloseout.n30Maker)
+  (hW : ¬↑b ∈ Snaky.MakerCloseout.n30Breaker) (hE : ¬↑b ∈ Snaky.MakerCloseout.exceptions) :
+  Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 8
+    (Snaky.MakerCloseout.initialClaim :: Snaky.MakerCloseout.n30Maker) (↑b :: Snaky.MakerCloseout.n30Breaker)
+Snaky.MakerCloseout.n31_after_q_wins (b : Fin 196)
+  (hM : ¬↑b ∈ Snaky.MakerCloseout.initialClaim :: Snaky.MakerCloseout.n31Maker)
+  (hW : ¬↑b ∈ Snaky.MakerCloseout.n31Breaker) (hE : ¬↑b ∈ Snaky.MakerCloseout.exceptions) :
+  Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 8
+    (Snaky.MakerCloseout.initialClaim :: Snaky.MakerCloseout.n31Maker) (↑b :: Snaky.MakerCloseout.n31Breaker)
+Snaky.MakerCloseout.initial_reply_counts :
+  (Snaky.MakerCloseout.legalReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker).length = 135 ∧
+    (Snaky.MakerCloseout.coveredReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker).length = 119 ∧
+      (Snaky.MakerCloseout.remainingReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker).length = 16 ∧
+        (Snaky.MakerCloseout.legalReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker).length = 133 ∧
+          (Snaky.MakerCloseout.coveredReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker).length =
+              117 ∧
+            (Snaky.MakerCloseout.remainingReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker).length =
+                16 ∧
+              Snaky.MakerCloseout.exceptions.length = 16 ∧ Snaky.MakerCloseout.exceptions.Nodup
+Snaky.MakerCloseout.initial_reply_partition (b : Fin 196) :
+  (↑b ∈ Snaky.MakerCloseout.remainingReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker ↔
+      ↑b ∈ Snaky.MakerCloseout.exceptions) ∧
+    (↑b ∈ Snaky.MakerCloseout.remainingReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker ↔
+        ↑b ∈ Snaky.MakerCloseout.exceptions) ∧
+      (↑b ∈ Snaky.MakerCloseout.legalReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker ↔
+          ↑b ∈ Snaky.MakerCloseout.coveredReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker ∨
+            ↑b ∈ Snaky.MakerCloseout.exceptions) ∧
+        (↑b ∈ Snaky.MakerCloseout.legalReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker ↔
+          ↑b ∈ Snaky.MakerCloseout.coveredReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker ∨
+            ↑b ∈ Snaky.MakerCloseout.exceptions)
+Snaky.MakerCloseout.n30_full_state :
+  Snaky.MakerCloseout.physicalState 30 Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker
+Snaky.MakerCloseout.n31_full_state :
+  Snaky.MakerCloseout.physicalState 31 Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker
+'Snaky.GenMakerCloseout.tree_ok' depends on axioms: [propext]
+'Snaky.MakerCloseout.continuation_wins_in_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.MakerCloseout.n30_after_q_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.MakerCloseout.n31_after_q_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.MakerCloseout.initial_reply_counts' depends on axioms: [propext]
+'Snaky.MakerCloseout.initial_reply_partition' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerCloseout.n30_full_state' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerCloseout.n31_full_state' depends on axioms: [propext, Quot.sound]
+Snaky.C30Selected.selected_guards_win_in_ten :
+  Snaky.BlackWinsIn Snaky.C30Selected.guards 100 10 Snaky.C30Selected.initialMaker Snaky.C30Selected.initialBreaker
+Snaky.C30Selected.selected_contract :
+  Snaky.C30Selected.guards.length = 17 ∧
+    Snaky.C30Selected.core.length = 22 ∧
+      Snaky.C30Selected.core.Nodup ∧
+        Snaky.C30Selected.initialMaker.length = 9 ∧
+          Snaky.C30Selected.initialBreaker.length = 9 ∧
+            Snaky.C30Selected.initialMaker.Nodup ∧
+              Snaky.C30Selected.initialBreaker.Nodup ∧
+                (∀ (x : Nat),
+                    x ∈ Snaky.C30Selected.initialMaker →
+                      x < 100 ∧ ¬x ∈ Snaky.C30Selected.initialBreaker ∧ ¬x ∈ Snaky.C30Selected.core) ∧
+                  ∀ (x : Nat), x ∈ Snaky.C30Selected.initialBreaker → x < 100 ∧ ¬x ∈ Snaky.C30Selected.core
+'Snaky.SelectedAttack.sound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.C30Selected.tree_ok' depends on axioms: [propext, Quot.sound]
+'Snaky.C30Selected.selected_guards_win_in_ten' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.C30Selected.selected_contract' depends on axioms: [propext, Quot.sound]
+'Snaky.SelectedAttack.Controls.domino_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+Snaky.MakerOpening.opening_66_wins_in_nineteen : Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 19 [90] [75]
+Snaky.MakerOpening.opening_710_wins_in_fifteen :
+  Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 15 [90] [132]
+'Snaky.MakerOpeningCheck.hint_of_parts' depends on axioms: [propext]
+'Snaky.MakerOpeningCheck.hint_avoid' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerOpeningCheck.reply_of_hint' depends on axioms: [propext, Quot.sound]
+'Snaky.GenMakerOpening.tree_ok' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerOpening.opening66_placed' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerOpening.opening710_placed' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerOpening.opening_66_wins_in_nineteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.MakerOpening.opening_710_wins_in_fifteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+Snaky.RGapMatchingObstruction.no_static_matching (mate : Nat → Nat) (inv : ∀ (x : Nat), mate (mate x) = x)
+  (noFixed : ∀ (x : Nat), mate x ≠ x) :
+  ¬(Snaky.RGapMatchingObstruction.Protects mate [1, 5] ∧
+      Snaky.RGapMatchingObstruction.Protects mate [0, 1, 2] ∧
+        Snaky.RGapMatchingObstruction.Protects mate [1, 2, 3, 4] ∧
+          Snaky.RGapMatchingObstruction.Protects mate [3, 5, 6, 7] ∧
+            Snaky.RGapMatchingObstruction.Protects mate [2, 3, 6, 8])
+'Snaky.RGapMatchingObstruction.no_static_matching' depends on axioms: [propext]

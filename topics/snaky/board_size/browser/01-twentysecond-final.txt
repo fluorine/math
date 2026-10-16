@@ -1,0 +1,3922 @@
+Result: a safe pair exchange reduces the physical remainder to 15 targets
+
+Starting from the accepted 41-pair matching, I obtain a 63-pair matching covering 370 of the 385 initial live full Snakies. The remaining 15 targets are listed explicitly below. This uses the accepted baseline, not acceptance of the previous nine-cell proposal. 
+Geplakte tekst
+
+There are two additional conclusions.
+
+First, adding pairs cannot improve this particular matching: each of its 15 uncovered targets has at most one unmatched fresh cell.
+
+Second, a history-dependent switch can repair a threatened uncovered target without sacrificing any of the 370 protected targets. I give the exact physical history, changed pairs, and affected-target audit. This illustrates how actual Breaker stones permit a switch that would not be justified in the pristine projected game.
+
+This does not settle the conditional position. The objects below are new hand-derived proposals for local checking, not claimed independently accepted results.
+
+1. The 63-pair matching
+
+Let 
+𝑀
+0
+,
+𝐵
+0
+M
+0
+	​
+
+,B
+0
+	​
+
+ be precisely the supplied 
+27
++
+27
+27+27 position. All its colors remain permanent. 
+Geplakte tekst
+
+Retain every accepted pair except
+
+{
+(
+13
+,
+9
+)
+,
+(
+13
+,
+11
+)
+}
+,
+{
+(
+13
+,
+10
+)
+,
+(
+14
+,
+10
+)
+}
+.
+{(13,9),(13,11)},{(13,10),(14,10)}.
+
+Add these 24 pairs:
+
+Platte tekst
+[(13,9),  (13,10)]
+[(11,10), (14,10)]
+[(13,11), (13,12)]
+
+[(1,12),  (2,12)]
+[(4,12),  (5,12)]
+[(7,12),  (8,12)]
+[(10,12), (11,12)]
+[(12,12), (14,12)]
+
+[(1,13),  (2,13)]
+[(4,13),  (5,13)]
+[(7,13),  (8,13)]
+[(9,13),  (10,13)]
+
+[(1,14),  (2,14)]
+[(4,14),  (5,14)]
+[(7,14),  (8,14)]
+[(9,14),  (10,14)]
+
+[(11,13), (11,14)]
+[(12,13), (12,14)]
+[(13,13), (13,14)]
+[(14,13), (14,14)]
+
+[(3,12),  (3,13)]
+[(6,12),  (6,13)]
+
+[(5,10),  (6,14)]
+[(8,10),  (9,12)]
+
+Call the resulting matching 
+𝑃
+P. It has
+
+41
+−
+2
++
+24
+=
+63
+41−2+24=63
+
+pairs. Every endpoint is initially fresh, and the pairs are disjoint.
+
+For a direct endpoint audit, its 16 unmatched fresh cells are exactly
+
+𝑈
+f
+r
+e
+e
+=
+{
+	
+(
+1
+,
+1
+)
+,
+(
+4
+,
+1
+)
+,
+(
+7
+,
+1
+)
+,
+(
+14
+,
+1
+)
+,
+(
+14
+,
+2
+)
+,
+
+
+	
+(
+1
+,
+3
+)
+,
+(
+4
+,
+3
+)
+,
+(
+8
+,
+3
+)
+,
+(
+14
+,
+3
+)
+,
+(
+8
+,
+5
+)
+,
+
+
+	
+(
+3
+,
+6
+)
+,
+(
+6
+,
+6
+)
+,
+(
+1
+,
+8
+)
+,
+(
+3
+,
+10
+)
+,
+(
+9
+,
+10
+)
+,
+(
+3
+,
+14
+)
+}
+.
+U
+free
+	​
+
+={
+	​
+
+(1,1),(4,1),(7,1),(14,1),(14,2),
+(1,3),(4,3),(8,3),(14,3),(8,5),
+(3,6),(6,6),(1,8),(3,10),(9,10),(3,14)}.
+	​
+
+
+Thus 
+54
+54 old stones, 
+126
+126 paired endpoints, and these 
+16
+16 cells account for all 
+196
+196 physical cells.
+
+Protected-subset response rule
+
+When Maker claims one endpoint of a pair whose mate is free, Breaker claims that mate. Otherwise Breaker makes a real fresh filler claim.
+
+This protects every target containing a pair of 
+𝑃
+P, through arbitrary interleavings. A Breaker filler in a paired cell only makes that pair permanently safe. No outside move is a pass.
+
+The rule is not asserted to protect the 15 exceptions.
+
+2. Why the upper exchange exposes no old protected target
+
+Write
+
+𝑅
+𝑦
+(
+𝑠
+)
+=
+{
+(
+𝑠
+,
+𝑦
+)
+,
+(
+𝑠
++
+1
+,
+𝑦
+)
+,
+(
+𝑠
++
+2
+,
+𝑦
+)
+,
+(
+𝑠
++
+3
+,
+𝑦
+)
+}
+,
+R
+y
+	​
+
+(s)={(s,y),(s+1,y),(s+2,y),(s+3,y)},
+𝐶
+𝑥
+(
+𝑡
+)
+=
+{
+(
+𝑥
+,
+𝑡
+)
+,
+(
+𝑥
+,
+𝑡
++
+1
+)
+,
+(
+𝑥
+,
+𝑡
++
+2
+)
+,
+(
+𝑥
+,
+𝑡
++
+3
+)
+}
+.
+C
+x
+	​
+
+(t)={(x,t),(x,t+1),(x,t+2),(x,t+3)}.
+
+Each body-plus-hook entry below specifies a full six-cell Snaky.
+
+Removing 
+{
+(
+13
+,
+9
+)
+,
+(
+13
+,
+11
+)
+}
+{(13,9),(13,11)}
+
+Both cells must lie in a vertical body. The only possible bodies are 
+𝐶
+13
+(
+8
+)
+C
+13
+	​
+
+(8) and 
+𝐶
+13
+(
+9
+)
+C
+13
+	​
+
+(9). Their eight live full targets have these hooks:
+
+Body	All live hooks
+
+𝐶
+13
+(
+8
+)
+C
+13
+	​
+
+(8)	
+{
+(
+12
+,
+7
+)
+,
+(
+12
+,
+8
+)
+}
+{(12,7),(12,8)}, 
+{
+(
+14
+,
+7
+)
+,
+(
+14
+,
+8
+)
+}
+{(14,7),(14,8)}, 
+{
+(
+12
+,
+11
+)
+,
+(
+12
+,
+12
+)
+}
+{(12,11),(12,12)}, 
+{
+(
+14
+,
+11
+)
+,
+(
+14
+,
+12
+)
+}
+{(14,11),(14,12)}
+
+𝐶
+13
+(
+9
+)
+C
+13
+	​
+
+(9)	
+{
+(
+12
+,
+8
+)
+,
+(
+12
+,
+9
+)
+}
+{(12,8),(12,9)}, 
+{
+(
+14
+,
+8
+)
+,
+(
+14
+,
+9
+)
+}
+{(14,8),(14,9)}, 
+{
+(
+12
+,
+12
+)
+,
+(
+12
+,
+13
+)
+}
+{(12,12),(12,13)}, 
+{
+(
+14
+,
+12
+)
+,
+(
+14
+,
+13
+)
+}
+{(14,12),(14,13)}
+
+Every one contains the replacement pair
+
+{
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+}
+{(13,9),(13,10)}
+
+in its body.
+
+Removing 
+{
+(
+13
+,
+10
+)
+,
+(
+14
+,
+10
+)
+}
+{(13,10),(14,10)}
+
+There are exactly six live full targets containing this pair:
+
+Body	Hook	Pair that now protects it
+
+𝑅
+10
+(
+11
+)
+R
+10
+	​
+
+(11)	
+{
+(
+10
+,
+11
+)
+,
+(
+11
+,
+11
+)
+}
+{(10,11),(11,11)}	New 
+{
+(
+11
+,
+10
+)
+,
+(
+14
+,
+10
+)
+}
+{(11,10),(14,10)}
+
+𝑅
+11
+(
+10
+)
+R
+11
+	​
+
+(10)	
+{
+(
+13
+,
+10
+)
+,
+(
+14
+,
+10
+)
+}
+{(13,10),(14,10)}	Retained 
+{
+(
+11
+,
+11
+)
+,
+(
+12
+,
+11
+)
+}
+{(11,11),(12,11)}
+
+𝐶
+13
+(
+7
+)
+C
+13
+	​
+
+(7)	
+{
+(
+14
+,
+10
+)
+,
+(
+14
+,
+11
+)
+}
+{(14,10),(14,11)}	Retained 
+{
+(
+13
+,
+7
+)
+,
+(
+13
+,
+8
+)
+}
+{(13,7),(13,8)}
+
+𝐶
+14
+(
+7
+)
+C
+14
+	​
+
+(7)	
+{
+(
+13
+,
+10
+)
+,
+(
+13
+,
+11
+)
+}
+{(13,10),(13,11)}	Retained 
+{
+(
+14
+,
+7
+)
+,
+(
+14
+,
+8
+)
+}
+{(14,7),(14,8)}
+
+𝐶
+13
+(
+10
+)
+C
+13
+	​
+
+(10)	
+{
+(
+14
+,
+9
+)
+,
+(
+14
+,
+10
+)
+}
+{(14,9),(14,10)}	New 
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+{(13,11),(13,12)}
+
+𝐶
+14
+(
+10
+)
+C
+14
+	​
+
+(10)	
+{
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+}
+{(13,9),(13,10)}	New 
+{
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+}
+{(13,9),(13,10)}
+
+This list is exhaustive: the removed horizontal pair can lie in a horizontal body, a horizontal hook, or at the common row of a vertical body and hook. The table covers those cases.
+
+Therefore all 253 targets protected by the accepted matching remain protected.
+
+The exchange also removes the unique two-bottom-cell obligation 
+𝑊
+𝑅
+W
+R
+	​
+
+, because 
+𝑊
+𝑅
+W
+R
+	​
+
+ contains the new upper pair
+
+{
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+}
+.
+{(13,9),(13,10)}.
+	​
+
+
+The obligation is not transferred to virtual bottom ownership.
+
+3. The complete 15-target remainder
+
+For each target, the last column gives its unmatched fresh cells under 
+𝑃
+P. A dash means that every fresh cell in the target is paired, with its mate outside that target.
+
+ID	Four-cell body	Two-cell hook	Unmatched fresh cells
+
+𝑇
+1
+T
+1
+	​
+
+	
+𝐶
+2
+(
+10
+)
+C
+2
+	​
+
+(10)	
+{
+(
+3
+,
+13
+)
+,
+(
+3
+,
+14
+)
+}
+{(3,13),(3,14)}	
+(
+3
+,
+14
+)
+(3,14)
+
+𝑇
+2
+T
+2
+	​
+
+	
+𝐶
+7
+(
+10
+)
+C
+7
+	​
+
+(10)	
+{
+(
+6
+,
+13
+)
+,
+(
+6
+,
+14
+)
+}
+{(6,13),(6,14)}	—
+
+𝑇
+3
+T
+3
+	​
+
+	
+𝐶
+8
+(
+10
+)
+C
+8
+	​
+
+(10)	
+{
+(
+9
+,
+13
+)
+,
+(
+9
+,
+14
+)
+}
+{(9,13),(9,14)}	—
+
+𝑇
+4
+T
+4
+	​
+
+	
+𝐶
+9
+(
+10
+)
+C
+9
+	​
+
+(10)	
+{
+(
+8
+,
+13
+)
+,
+(
+8
+,
+14
+)
+}
+{(8,13),(8,14)}	
+(
+9
+,
+10
+)
+(9,10)
+
+𝑇
+5
+T
+5
+	​
+
+	
+𝐶
+11
+(
+10
+)
+C
+11
+	​
+
+(10)	
+{
+(
+10
+,
+13
+)
+,
+(
+10
+,
+14
+)
+}
+{(10,13),(10,14)}	—
+
+𝑇
+6
+T
+6
+	​
+
+	
+𝐶
+2
+(
+11
+)
+C
+2
+	​
+
+(11)	
+{
+(
+3
+,
+10
+)
+,
+(
+3
+,
+11
+)
+}
+{(3,10),(3,11)}	
+(
+3
+,
+10
+)
+(3,10)
+
+𝑇
+7
+T
+7
+	​
+
+	
+𝐶
+4
+(
+11
+)
+C
+4
+	​
+
+(11)	
+{
+(
+3
+,
+10
+)
+,
+(
+3
+,
+11
+)
+}
+{(3,10),(3,11)}	
+(
+3
+,
+10
+)
+(3,10)
+
+𝑇
+8
+T
+8
+	​
+
+	
+𝐶
+5
+(
+11
+)
+C
+5
+	​
+
+(11)	
+{
+(
+6
+,
+10
+)
+,
+(
+6
+,
+11
+)
+}
+{(6,10),(6,11)}	—
+
+𝑇
+9
+T
+9
+	​
+
+	
+𝐶
+7
+(
+11
+)
+C
+7
+	​
+
+(11)	
+{
+(
+8
+,
+10
+)
+,
+(
+8
+,
+11
+)
+}
+{(8,10),(8,11)}	—
+
+𝑇
+10
+T
+10
+	​
+
+	
+𝐶
+8
+(
+11
+)
+C
+8
+	​
+
+(11)	
+{
+(
+7
+,
+10
+)
+,
+(
+7
+,
+11
+)
+}
+{(7,10),(7,11)}	—
+
+𝑇
+11
+T
+11
+	​
+
+	
+𝐶
+8
+(
+11
+)
+C
+8
+	​
+
+(11)	
+{
+(
+9
+,
+10
+)
+,
+(
+9
+,
+11
+)
+}
+{(9,10),(9,11)}	
+(
+9
+,
+10
+)
+(9,10)
+
+𝑇
+12
+T
+12
+	​
+
+	
+𝐶
+10
+(
+11
+)
+C
+10
+	​
+
+(11)	
+{
+(
+9
+,
+10
+)
+,
+(
+9
+,
+11
+)
+}
+{(9,10),(9,11)}	
+(
+9
+,
+10
+)
+(9,10)
+
+𝑇
+13
+T
+13
+	​
+
+	
+𝐶
+10
+(
+11
+)
+C
+10
+	​
+
+(11)	
+{
+(
+11
+,
+10
+)
+,
+(
+11
+,
+11
+)
+}
+{(11,10),(11,11)}	—
+
+𝑇
+14
+T
+14
+	​
+
+	
+𝑅
+13
+(
+10
+)
+R
+13
+	​
+
+(10)	
+{
+(
+9
+,
+12
+)
+,
+(
+10
+,
+12
+)
+}
+{(9,12),(10,12)}	—
+
+𝑇
+15
+T
+15
+	​
+
+	
+𝑅
+13
+(
+10
+)
+R
+13
+	​
+
+(10)	
+{
+(
+13
+,
+12
+)
+,
+(
+14
+,
+12
+)
+}
+{(13,12),(14,12)}	—
+
+Every listed target is initially live and contains no pair of 
+𝑃
+P.
+
+For example, the last two are literally
+
+𝑇
+14
+=
+	
+{
+(
+10
+,
+13
+)
+,
+(
+11
+,
+13
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+13
+)
+,
+(
+9
+,
+12
+)
+,
+(
+10
+,
+12
+)
+}
+,
+
+
+𝑇
+15
+=
+	
+{
+(
+10
+,
+13
+)
+,
+(
+11
+,
+13
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+13
+)
+,
+(
+13
+,
+12
+)
+,
+(
+14
+,
+12
+)
+}
+.
+T
+14
+	​
+
+=
+T
+15
+	​
+
+=
+	​
+
+{(10,13),(11,13),(12,13),(13,13),(9,12),(10,12)},
+{(10,13),(11,13),(12,13),(13,13),(13,12),(14,12)}.
+	​
+
+
+The old anchors are retained wherever they occur. In particular, 
+𝑇
+6
+,
+𝑇
+7
+T
+6
+	​
+
+,T
+7
+	​
+
+ use 
+𝑀
+0
+(
+3
+,
+11
+)
+M
+0
+	​
+
+(3,11), while 
+𝑇
+4
+,
+𝑇
+11
+,
+𝑇
+12
+T
+4
+	​
+
+,T
+11
+	​
+
+,T
+12
+	​
+
+ use 
+𝑀
+0
+(
+9
+,
+11
+)
+M
+0
+	​
+
+(9,11).
+
+The accepted witnesses 
+𝑊
+3
+W
+3
+	​
+
+ and 
+𝑊
+9
+W
+9
+	​
+
+ are not exceptions:
+
+𝑊
+3
+⊇
+{
+(
+3
+,
+12
+)
+,
+(
+3
+,
+13
+)
+}
+,
+𝑊
+9
+⊇
+{
+(
+8
+,
+10
+)
+,
+(
+9
+,
+12
+)
+}
+.
+W
+3
+	​
+
+⊇{(3,12),(3,13)},W
+9
+	​
+
+⊇{(8,10),(9,12)}.
+4. Exhaustiveness of the remainder
+
+This audits the newly treated lower region rather than reproving the accepted upper-strip result.
+
+The 132 targets uncovered by the original matching split into four geometric classes:
+
+Class	Initial count	Still uncovered by 
+𝑃
+P
+Entirely in rows 12–14	80	
+𝑇
+14
+,
+𝑇
+15
+T
+14
+	​
+
+,T
+15
+	​
+
+: 2
+Horizontal body in row 12, hook in row 11	14	0
+Vertical body beginning in row 10	23	
+𝑇
+1
+,
+…
+,
+𝑇
+5
+T
+1
+	​
+
+,…,T
+5
+	​
+
+: 5
+Vertical body beginning in row 11	15	
+𝑇
+6
+,
+…
+,
+𝑇
+13
+T
+6
+	​
+
+,…,T
+13
+	​
+
+: 8
+Total	132	15
+
+Here are the explicit coverage checks.
+
+Horizontal bodies in row 12
+
+Every four-cell interval in row 12 contains one of
+
+{
+(
+1
+,
+12
+)
+,
+(
+2
+,
+12
+)
+}
+,
+{
+(
+4
+,
+12
+)
+,
+(
+5
+,
+12
+)
+}
+,
+{
+(
+7
+,
+12
+)
+,
+(
+8
+,
+12
+)
+}
+,
+
+
+{
+(
+10
+,
+12
+)
+,
+(
+11
+,
+12
+)
+}
+,
+{
+(
+12
+,
+12
+)
+,
+(
+14
+,
+12
+)
+}
+.
+{(1,12),(2,12)},{(4,12),(5,12)},{(7,12),(8,12)},
+{(10,12),(11,12)},{(12,12),(14,12)}.
+	​
+
+
+This covers all 14 crossing targets in that class, and every purely bottom target whose body is in row 12.
+
+Bodies in rows 13 and 14
+
+Every four-cell body starting at 
+𝑠
+≤
+9
+s≤9 contains one of that row’s horizontal pairs.
+
+Only starts 10 and 11 need hook checks:
+
+Body	Hook placement	Protection
+
+𝑅
+13
+(
+10
+)
+R
+13
+	​
+
+(10)	Upper left	
+𝑇
+14
+T
+14
+	​
+
+
+
+𝑅
+13
+(
+10
+)
+R
+13
+	​
+
+(10)	Upper right	
+𝑇
+15
+T
+15
+	​
+
+
+
+𝑅
+13
+(
+10
+)
+R
+13
+	​
+
+(10)	Lower left	Pair 
+{
+(
+9
+,
+14
+)
+,
+(
+10
+,
+14
+)
+}
+{(9,14),(10,14)}
+
+𝑅
+13
+(
+10
+)
+R
+13
+	​
+
+(10)	Lower right	Pair 
+{
+(
+13
+,
+13
+)
+,
+(
+13
+,
+14
+)
+}
+{(13,13),(13,14)}
+
+𝑅
+13
+(
+11
+)
+R
+13
+	​
+
+(11)	Upper left	Pair 
+{
+(
+10
+,
+12
+)
+,
+(
+11
+,
+12
+)
+}
+{(10,12),(11,12)}
+
+𝑅
+13
+(
+11
+)
+R
+13
+	​
+
+(11)	Lower left	Pair 
+{
+(
+11
+,
+13
+)
+,
+(
+11
+,
+14
+)
+}
+{(11,13),(11,14)}
+
+𝑅
+14
+(
+10
+)
+R
+14
+	​
+
+(10)	Upper left	Pair 
+{
+(
+9
+,
+13
+)
+,
+(
+10
+,
+13
+)
+}
+{(9,13),(10,13)}
+
+𝑅
+14
+(
+10
+)
+R
+14
+	​
+
+(10)	Upper right	Pair 
+{
+(
+13
+,
+13
+)
+,
+(
+13
+,
+14
+)
+}
+{(13,13),(13,14)}
+
+𝑅
+14
+(
+11
+)
+R
+14
+	​
+
+(11)	Upper left	Pair 
+{
+(
+11
+,
+13
+)
+,
+(
+11
+,
+14
+)
+}
+{(11,13),(11,14)}
+
+The other hook placements leave the board.
+
+Vertical bodies beginning in row 10
+
+Apart from 
+𝑊
+𝑅
+W
+R
+	​
+
+, the original uncovered targets in this class are exactly
+
+𝐶
+𝑥
+(
+10
+)
+∪
+{
+(
+𝑗
+,
+13
+)
+,
+(
+𝑗
+,
+14
+)
+}
+,
+C
+x
+	​
+
+(10)∪{(j,13),(j,14)},
+
+where
+
+𝑥
+∈
+{
+1
+,
+2
+,
+3
+,
+5
+,
+6
+,
+7
+,
+8
+,
+9
+,
+11
+,
+12
+,
+13
+,
+14
+}
+,
+𝑗
+=
+𝑥
+±
+1
+∈
+[
+1
+,
+14
+]
+.
+x∈{1,2,3,5,6,7,8,9,11,12,13,14},j=x±1∈[1,14].
+
+There are 22 of them. Their complete coverage is:
+
+Body column 
+𝑥
+x	Left hook, when contained	Right hook, when contained
+1	—	Row-13 pair at columns 1,2
+2	Row-13 pair at columns 1,2	
+𝑇
+1
+T
+1
+	​
+
+
+3	Pair 
+(
+3
+,
+12
+)
+,
+(
+3
+,
+13
+)
+(3,12),(3,13)	Same pair
+5	Row-13 pair at columns 4,5	Pair 
+(
+5
+,
+10
+)
+,
+(
+6
+,
+14
+)
+(5,10),(6,14)
+6	Pair 
+(
+6
+,
+12
+)
+,
+(
+6
+,
+13
+)
+(6,12),(6,13)	Same pair
+7	
+𝑇
+2
+T
+2
+	​
+
+	Row-13 pair at columns 7,8
+8	Row-13 pair at columns 7,8	
+𝑇
+3
+T
+3
+	​
+
+
+9	
+𝑇
+4
+T
+4
+	​
+
+	Row-13 pair at columns 9,10
+11	
+𝑇
+5
+T
+5
+	​
+
+	Pair 
+(
+12
+,
+13
+)
+,
+(
+12
+,
+14
+)
+(12,13),(12,14)
+12	Pair 
+(
+11
+,
+13
+)
+,
+(
+11
+,
+14
+)
+(11,13),(11,14)	Pair 
+(
+13
+,
+13
+)
+,
+(
+13
+,
+14
+)
+(13,13),(13,14)
+13	Pair 
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+(13,11),(13,12)	Same pair
+14	Pair 
+(
+13
+,
+13
+)
+,
+(
+13
+,
+14
+)
+(13,13),(13,14)	—
+
+The remaining target 
+𝑊
+𝑅
+W
+R
+	​
+
+ is covered by 
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+(13,9),(13,10).
+
+Vertical bodies beginning in row 11
+
+The original 15 targets in this class have body/hook-column pairs
+
+(
+2
+,
+3
+)
+,
+(
+3
+,
+2
+)
+,
+(
+4
+,
+3
+)
+,
+(
+5
+,
+6
+)
+,
+(
+6
+,
+5
+)
+,
+(
+7
+,
+8
+)
+,
+
+
+(
+8
+,
+7
+)
+,
+(
+8
+,
+9
+)
+,
+(
+9
+,
+8
+)
+,
+(
+10
+,
+9
+)
+,
+(
+10
+,
+11
+)
+,
+
+
+(
+12
+,
+13
+)
+,
+(
+13
+,
+12
+)
+,
+(
+13
+,
+14
+)
+,
+(
+14
+,
+13
+)
+,
+(2,3),(3,2),(4,3),(5,6),(6,5),(7,8),
+(8,7),(8,9),(9,8),(10,9),(10,11),
+(12,13),(13,12),(13,14),(14,13),
+	​
+
+
+where 
+(
+𝑥
+,
+𝑗
+)
+(x,j) denotes
+
+𝐶
+𝑥
+(
+11
+)
+∪
+{
+(
+𝑗
+,
+10
+)
+,
+(
+𝑗
+,
+11
+)
+}
+.
+C
+x
+	​
+
+(11)∪{(j,10),(j,11)}.
+
+The seven eliminated cases are:
+
+(
+𝑥
+,
+𝑗
+)
+(x,j)	Protecting pair
+
+(
+3
+,
+2
+)
+(3,2)	
+(
+3
+,
+12
+)
+,
+(
+3
+,
+13
+)
+(3,12),(3,13)
+
+(
+6
+,
+5
+)
+(6,5)	
+(
+6
+,
+12
+)
+,
+(
+6
+,
+13
+)
+(6,12),(6,13)
+
+(
+9
+,
+8
+)
+(9,8)	
+(
+8
+,
+10
+)
+,
+(
+9
+,
+12
+)
+(8,10),(9,12)
+
+(
+12
+,
+13
+)
+(12,13)	
+(
+12
+,
+13
+)
+,
+(
+12
+,
+14
+)
+(12,13),(12,14)
+
+(
+13
+,
+12
+)
+(13,12), 
+(
+13
+,
+14
+)
+(13,14)	
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+(13,11),(13,12)
+
+(
+14
+,
+13
+)
+(14,13)	
+(
+14
+,
+13
+)
+,
+(
+14
+,
+14
+)
+(14,13),(14,14)
+
+The other eight are 
+𝑇
+6
+,
+…
+,
+𝑇
+13
+T
+6
+	​
+
+,…,T
+13
+	​
+
+.
+
+Consequently,
+
+253
++
+(
+80
+−
+2
+)
++
+14
++
+(
+23
+−
+5
+)
++
+(
+15
+−
+8
+)
+=
+370
+.
+253+(80−2)+14+(23−5)+(15−8)=
+370
+	​
+
+.
+5. The remainder must be tracked with actual pair responses
+
+The 15 targets are not simultaneously mandatory bottom traces after an entry. Actual mate responses remove different parts of the remainder.
+
+The following table records exact deletions. Its columns specify which listed targets are destroyed when Breaker owns the indicated endpoint.
+
+Active pair	Breaker owns first endpoint	Breaker owns second endpoint
+
+(
+6
+,
+10
+)
+,
+(
+7
+,
+10
+)
+(6,10),(7,10)	
+𝑇
+8
+T
+8
+	​
+
+	
+𝑇
+2
+,
+𝑇
+10
+T
+2
+	​
+
+,T
+10
+	​
+
+
+
+(
+4
+,
+11
+)
+,
+(
+5
+,
+11
+)
+(4,11),(5,11)	
+𝑇
+7
+T
+7
+	​
+
+	
+𝑇
+8
+T
+8
+	​
+
+
+
+(
+6
+,
+11
+)
+,
+(
+7
+,
+11
+)
+(6,11),(7,11)	
+𝑇
+8
+T
+8
+	​
+
+	
+𝑇
+2
+,
+𝑇
+9
+,
+𝑇
+10
+T
+2
+	​
+
+,T
+9
+	​
+
+,T
+10
+	​
+
+
+
+(
+8
+,
+11
+)
+,
+(
+10
+,
+11
+)
+(8,11),(10,11)	
+𝑇
+3
+,
+𝑇
+9
+,
+𝑇
+10
+,
+𝑇
+11
+T
+3
+	​
+
+,T
+9
+	​
+
+,T
+10
+	​
+
+,T
+11
+	​
+
+	
+𝑇
+12
+,
+𝑇
+13
+T
+12
+	​
+
+,T
+13
+	​
+
+
+
+(
+7
+,
+12
+)
+,
+(
+8
+,
+12
+)
+(7,12),(8,12)	
+𝑇
+2
+,
+𝑇
+9
+T
+2
+	​
+
+,T
+9
+	​
+
+	
+𝑇
+3
+,
+𝑇
+10
+,
+𝑇
+11
+T
+3
+	​
+
+,T
+10
+	​
+
+,T
+11
+	​
+
+
+
+(
+9
+,
+13
+)
+,
+(
+10
+,
+13
+)
+(9,13),(10,13)	
+𝑇
+3
+,
+𝑇
+4
+T
+3
+	​
+
+,T
+4
+	​
+
+	
+𝑇
+5
+,
+𝑇
+12
+,
+𝑇
+13
+,
+𝑇
+14
+,
+𝑇
+15
+T
+5
+	​
+
+,T
+12
+	​
+
+,T
+13
+	​
+
+,T
+14
+	​
+
+,T
+15
+	​
+
+
+
+(
+8
+,
+10
+)
+,
+(
+9
+,
+12
+)
+(8,10),(9,12)	
+𝑇
+3
+,
+𝑇
+9
+T
+3
+	​
+
+,T
+9
+	​
+
+	
+𝑇
+4
+,
+𝑇
+14
+T
+4
+	​
+
+,T
+14
+	​
+
+
+For example,
+
+𝑀
+(
+9
+,
+13
+)
+,
+ 
+𝐵
+(
+10
+,
+13
+)
+M(9,13), B(10,13)
+
+destroys five exceptions, including both central-row targets 
+𝑇
+14
+,
+𝑇
+15
+T
+14
+	​
+
+,T
+15
+	​
+
+. The opposite entry destroys 
+𝑇
+3
+,
+𝑇
+4
+T
+3
+	​
+
+,T
+4
+	​
+
+ instead.
+
+The last row is a genuine upper/lower coupling:
+
+𝑀
+(
+9
+,
+12
+)
+,
+ 
+𝐵
+(
+8
+,
+10
+)
+M(9,12), B(8,10)
+
+kills 
+𝑇
+3
+,
+𝑇
+9
+T
+3
+	​
+
+,T
+9
+	​
+
+, whereas
+
+𝑀
+(
+8
+,
+10
+)
+,
+ 
+𝐵
+(
+9
+,
+12
+)
+M(8,10), B(9,12)
+
+kills 
+𝑇
+4
+,
+𝑇
+14
+T
+4
+	​
+
+,T
+14
+	​
+
+.
+
+For any actual additional Breaker set 
+𝐷
+D, the live exceptional family is exactly
+
+{
+𝑇
+𝑖
+:
+𝑇
+𝑖
+∩
+𝐷
+=
+∅
+}
+,
+{T
+i
+	​
+
+:T
+i
+	​
+
+∩D=∅},
+
+as long as the matching protection of the other targets is maintained. No future Maker support is granted by this description.
+
+A precise obstruction to disjoint completion
+
+The unmatched-cell column in Section 3 proves:
+
+No disjoint matching added on the 16 unmatched fresh cells can cover even one of 
+𝑇
+1
+,
+…
+,
+𝑇
+15
+T
+1
+	​
+
+,…,T
+15
+	​
+
+.
+
+Thus a complete controller cannot consist of these 63 fixed response obligations plus an independent component confined to those 16 cells. It must share state with, or change, existing pairs.
+
+That conclusion is stronger than failure of a chosen filler order.
+
+6. A safe history-dependent override
+
+The following lemma demonstrates an actual compatible switch. It is conditional on the stated history; it is not an all-entry root policy.
+
+Consider these four physical rounds:
+
+Maker	Breaker
+
+(
+10
+,
+13
+)
+(10,13)	
+(
+9
+,
+13
+)
+(9,13)
+
+(
+11
+,
+13
+)
+(11,13)	
+(
+11
+,
+14
+)
+(11,14)
+
+(
+12
+,
+13
+)
+(12,13)	
+(
+12
+,
+14
+)
+(12,14)
+
+(
+13
+,
+13
+)
+(13,13)	
+(
+13
+,
+14
+)
+(13,14)
+
+These are mate responses in 
+𝑃
+P.
+
+Now Maker claims
+
+(
+13
+,
+12
+)
+.
+(13,12).
+
+Taking its old mate 
+(
+13
+,
+11
+)
+(13,11) would permit Maker to finish 
+𝑇
+15
+T
+15
+	​
+
+ at 
+(
+14
+,
+12
+)
+(14,12). Instead, make the physical reply
+
+𝐵
+(
+14
+,
+12
+)
+.
+B(14,12).
+	​
+
+
+After that reply, replace the remaining pair
+
+{
+(
+14
+,
+9
+)
+,
+(
+14
+,
+11
+)
+}
+{(14,9),(14,11)}
+
+by
+
+{
+(
+13
+,
+11
+)
+,
+(
+14
+,
+9
+)
+}
+.
+{(13,11),(14,9)}.
+	​
+
+
+Retire the pairs containing the newly occupied cells. All other pairs remain unchanged. In particular, the pair 
+(
+10
+,
+12
+)
+,
+(
+11
+,
+12
+)
+(10,12),(11,12) remains active.
+
+Exact resulting colors
+
+The resulting 
+32
++
+32
+32+32 Maker-turn state is
+
+𝑀
+′
+=
+𝑀
+0
+∪
+{
+	
+(
+10
+,
+13
+)
+,
+(
+11
+,
+13
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+13
+)
+,
+(
+13
+,
+12
+)
+}
+,
+
+
+𝐵
+′
+=
+𝐵
+0
+∪
+{
+	
+(
+9
+,
+13
+)
+,
+(
+11
+,
+14
+)
+,
+(
+12
+,
+14
+)
+,
+(
+13
+,
+14
+)
+,
+(
+14
+,
+12
+)
+}
+.
+M
+′
+=M
+0
+	​
+
+∪{
+B
+′
+=B
+0
+	​
+
+∪{
+	​
+
+(10,13),(11,13),(12,13),(13,13),(13,12)},
+(9,13),(11,14),(12,14),(13,14),(14,12)}.
+	​
+
+
+The new pair 
+(
+13
+,
+11
+)
+,
+(
+14
+,
+9
+)
+(13,11),(14,9) is fresh. The released cells 
+(
+12
+,
+12
+)
+(12,12) and 
+(
+14
+,
+11
+)
+(14,11) remain physically free; neither is granted to either player.
+
+Complete audit of the nontrivial releases
+
+The pair 
+(
+12
+,
+12
+)
+,
+(
+14
+,
+12
+)
+(12,12),(14,12) needs no replacement: Breaker now owns 
+(
+14
+,
+12
+)
+(14,12), so every target containing that pair is dead.
+
+The only other nontrivial releases are
+
+𝐺
+=
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+,
+𝐷
+=
+{
+(
+14
+,
+9
+)
+,
+(
+14
+,
+11
+)
+}
+.
+G={(13,11),(13,12)},D={(14,9),(14,11)}.
+
+Every initially live target containing 
+𝐺
+G falls into the following exhaustive table:
+
+Body	Hook or hooks	Protection after the switch
+
+𝐶
+13
+(
+9
+)
+C
+13
+	​
+
+(9)	All four hooks	Pair 
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+(13,9),(13,10) in the body
+
+𝐶
+13
+(
+10
+)
+C
+13
+	​
+
+(10)	
+{
+(
+12
+,
+9
+)
+,
+(
+12
+,
+10
+)
+}
+{(12,9),(12,10)}	Retained hook pair
+
+𝐶
+13
+(
+10
+)
+C
+13
+	​
+
+(10)	
+{
+(
+14
+,
+9
+)
+,
+(
+14
+,
+10
+)
+}
+{(14,9),(14,10)}	New pair 
+(
+13
+,
+11
+)
+,
+(
+14
+,
+9
+)
+(13,11),(14,9)
+
+𝐶
+13
+(
+10
+)
+C
+13
+	​
+
+(10)	
+{
+(
+12
+,
+13
+)
+,
+(
+12
+,
+14
+)
+}
+{(12,13),(12,14)}	Breaker owns 
+(
+12
+,
+14
+)
+(12,14)
+
+𝐶
+13
+(
+10
+)
+C
+13
+	​
+
+(10)	
+{
+(
+14
+,
+13
+)
+,
+(
+14
+,
+14
+)
+}
+{(14,13),(14,14)}	Retained hook pair
+
+𝐶
+13
+(
+11
+)
+C
+13
+	​
+
+(11)	Either contained hook	Breaker owns body cell 
+(
+13
+,
+14
+)
+(13,14)
+
+𝐶
+12
+(
+8
+)
+C
+12
+	​
+
+(8)	
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+{(13,11),(13,12)}	Body pair 
+(
+12
+,
+9
+)
+,
+(
+12
+,
+10
+)
+(12,9),(12,10)
+
+𝐶
+14
+(
+8
+)
+C
+14
+	​
+
+(8)	
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+{(13,11),(13,12)}	New pair 
+(
+13
+,
+11
+)
+,
+(
+14
+,
+9
+)
+(13,11),(14,9)
+
+𝑅
+11
+(
+10
+)
+R
+11
+	​
+
+(10)	
+{
+(
+13
+,
+12
+)
+,
+(
+14
+,
+12
+)
+}
+{(13,12),(14,12)}	Breaker owns 
+(
+14
+,
+12
+)
+(14,12)
+
+𝑅
+12
+(
+10
+)
+R
+12
+	​
+
+(10)	
+{
+(
+13
+,
+11
+)
+,
+(
+14
+,
+11
+)
+}
+{(13,11),(14,11)}	Body pair 
+(
+10
+,
+12
+)
+,
+(
+11
+,
+12
+)
+(10,12),(11,12)
+
+For the released pair 
+𝐷
+D, the only possible bodies are 
+𝐶
+14
+(
+8
+)
+C
+14
+	​
+
+(8) and 
+𝐶
+14
+(
+9
+)
+C
+14
+	​
+
+(9):
+
+Body	Hook	Protection after the switch
+
+𝐶
+14
+(
+8
+)
+C
+14
+	​
+
+(8)	
+{
+(
+13
+,
+7
+)
+,
+(
+13
+,
+8
+)
+}
+{(13,7),(13,8)}	Retained hook pair
+
+𝐶
+14
+(
+8
+)
+C
+14
+	​
+
+(8)	
+{
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+{(13,11),(13,12)}	New pair 
+(
+13
+,
+11
+)
+,
+(
+14
+,
+9
+)
+(13,11),(14,9)
+
+𝐶
+14
+(
+9
+)
+C
+14
+	​
+
+(9)	Either contained hook	Breaker owns body cell 
+(
+14
+,
+12
+)
+(14,12)
+
+This audits every target that could lose protection through the switch. Therefore:
+
+At this exact history, the override preserves protection of all 370 formerly protected targets.
+
+In addition, the actual Breaker stones destroy 
+𝑇
+3
+,
+𝑇
+4
+,
+𝑇
+15
+T
+3
+	​
+
+,T
+4
+	​
+
+,T
+15
+	​
+
+. The exact live exceptional remainder is now
+
+{
+𝑇
+1
+,
+𝑇
+2
+,
+𝑇
+5
+,
+𝑇
+6
+,
+𝑇
+7
+,
+𝑇
+8
+,
+𝑇
+9
+,
+𝑇
+10
+,
+𝑇
+11
+,
+𝑇
+12
+,
+𝑇
+13
+,
+𝑇
+14
+}
+.
+{T
+1
+	​
+
+,T
+2
+	​
+
+,T
+5
+	​
+
+,T
+6
+	​
+
+,T
+7
+	​
+
+,T
+8
+	​
+
+,T
+9
+	​
+
+,T
+10
+	​
+
+,T
+11
+	​
+
+,T
+12
+	​
+
+,T
+13
+	​
+
+,T
+14
+	​
+
+}.
+	​
+
+
+The switch depends essentially on the real earlier stones at 
+(
+12
+,
+14
+)
+(12,14) and 
+(
+13
+,
+14
+)
+(13,14), and on the new claim 
+(
+14
+,
+12
+)
+(14,12). Applying it in a pristine projected state would not have the same justification.
+
+What this establishes
+
+The new object is a 370-target protected-subset strategy with a complete 15-target physical remainder, together with an exact history-dependent override that preserves every formerly protected target.
+
+It also identifies the architectural obstruction: the remainder cannot be handled by allocating only the unmatched cells. A complete defense must share decisions with existing pairs. The explicit override shows that such sharing can be legitimate once actual upper and lower responses have destroyed the targets that would otherwise be exposed.
+
+There is still no all-reply Maker win or full Breaker defense here. The conditional root remains open in this argument; the reduced problem is the listed physical interface and its permitted pair changes, rather than the original simultaneous bottom-trace projection.

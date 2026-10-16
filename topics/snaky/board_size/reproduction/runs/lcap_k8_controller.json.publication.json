@@ -1,0 +1,37 @@
+{
+  "case": "lcap_k8_controller",
+  "checker": "verification/lcap_k8_controller.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "3e526e80082e733216301de30dbd052d898e10f38dc713dd8269ebf9b9dc3535",
+  "created_utc": "2026-10-16T10:55:37.261516+00:00",
+  "execution_field_differences": {
+    "cpu_seconds": {
+      "historical": 0.04119500000000001,
+      "replay": 0.03719700000000001
+    },
+    "elapsed_seconds": {
+      "historical": 0.04320091754198074,
+      "replay": 0.03733241744339466
+    },
+    "utc": {
+      "historical": "2026-10-16T07:16:39.172463+00:00",
+      "replay": "2026-10-16T10:55:37.254914+00:00"
+    }
+  },
+  "historical_report": "verification/lcap_k8_controller.json",
+  "historical_report_sha256": "6923ff233b8b7fa0faeaecf65c03118eccf7c6e5f2f12739d1581d70409630cf",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "4059a6cb5d34a11e85eaf64f403e1a14a3a77aacfd2f2527e65665f2efeb0a05",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "f0e5ed540407f34bd72c40fd4c958677d9881ed6a9812e36eac83042546f38f5",
+      "old_sha256": "d8d730b249e68792a5733c27027b792ff8bccdf30d8d8aa9f2bb0b9eb3f48ecb",
+      "path": "browser/02-twentieth-final-section.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    }
+  ]
+}

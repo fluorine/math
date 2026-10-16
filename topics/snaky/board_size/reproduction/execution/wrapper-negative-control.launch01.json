@@ -1,0 +1,52 @@
+{
+  "argv": [
+    "/opt/homebrew/Cellar/python@3.12/3.12.12_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/../formal/tools/closeout_guard.py",
+    "--seconds",
+    "30",
+    "--rss-mib",
+    "100",
+    "--watch",
+    "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/resource-samples-20261015.jsonl",
+    "--output",
+    "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/execution/wrapper-negative-control.guard01.json",
+    "--",
+    "/usr/bin/nice",
+    "-n",
+    "19",
+    "/opt/homebrew/Cellar/python@3.12/3.12.12_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/board_size/breaker/cpu_exec.py",
+    "--cpu-seconds",
+    "5",
+    "--",
+    "/opt/homebrew/Cellar/python@3.12/3.12.12_2/Frameworks/Python.framework/Versions/3.12/bin/python3.12",
+    "-B",
+    "-c",
+    "import json,sys,tempfile,hashlib;from pathlib import Path;import reproduce as r\nm=json.loads(r.MANIFEST.read_text());f=next(x for x in m['files'] if x['path'].endswith('.py'));f['publication_sha256']='0'*64\nwith tempfile.TemporaryDirectory() as t:\n p=Path(t)/'inputs.json';p.write_text(json.dumps(m));r.MANIFEST=p;sys.argv=['reproduce.py',m['checks'][0]['name'],'--output',str(Path(t)/'unexpected.json')]\n try:r.main();raise AssertionError('changed code pin accepted')\n except ValueError as e:\n  assert str(e)=='changed input: '+f['path'];out={'status':'passed','control':'changed code pin rejected before audit','changed_path':f['path'],'reason':str(e),'no_report_written':not (Path(t)/'unexpected.json').exists(),'runner_sha256':hashlib.sha256(Path(r.__file__).read_bytes()).hexdigest()};assert out['no_report_written'];Path('reproduction/wrapper-negative-control.json').write_text(json.dumps(out,indent=2)+'\\n');print(json.dumps(out))"
+  ],
+  "cwd": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size",
+  "environment": {
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "limits": {
+    "guard_wall": 30,
+    "outer_cpu": 5,
+    "rss_mib": 100
+  },
+  "preflight_sha256": "d6d00acd5140aa37e5c5fc339ba1b8876322ff7165c76d309c60281ed104968e",
+  "python_sha256": "51041dcef59a872d4e411dfd26f6264f70bd67294bebbe52a707490726f0d1a6",
+  "scope": "One authorized negative publication-wrapper control; temporary manifest with wrong code hash must be rejected before any audit. Initial preparation failed before child because fresh output directory was absent; no test executed.",
+  "source_sha256": {
+    "../formal/tools/closeout_guard.py": "3850867fc8cb761e7a6958d1b4ea66938afdea263fb8dcd90dbff6f5a7306fe4",
+    "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduce.py": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+    "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/inputs.json": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+    "breaker/cpu_exec.py": "0819f781e2cd2e3ce29e499ecacca46373219d8ab7cbe263c0a59a91cbea6278"
+  },
+  "utc": "2026-10-16T10:55:03.021666+00:00"
+}

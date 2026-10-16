@@ -1,0 +1,232 @@
+Follow-up 25: P52 is independently accepted; resolve the sibling P53 by a complete physical object.
+
+This is mathematical inference only. Do not run code, solvers, search jobs or proof checking remotely. All such work is performed locally on the Mac mini. You cannot inspect our repository. Everything needed is supplied below; propose precise, falsifiable constructions, proofs, or counterexamples.
+
+Exact game: the board is {(x,y):0<=x,y<=9}; ID=10*y+x. Maker and Breaker alternate fresh single-cell claims, Maker first, no passes. Maker wins immediately on claiming all cells of any contained D4 image/translate of H={(0,0),(1,0),(2,0),(3,0),(3,1),(4,1)}. Check wins before any Breaker response, including the last legal Maker claim. Retain every old color. There are exactly432 full targets. A selected smaller guard is protection machinery, never automatically a physical Maker target.
+
+Target theorem: a complete conditional Breaker defense of the exact original11+11 P53 state below, Maker to move, with78 fresh cells. The larger research objective is an empty10 Breaker theorem; this conditional state alone would not prove it. A complete all-reply physical Maker win is also useful if this target is false. Merely following our old forced-exchange line is insufficient: Maker can choose a different move at every turn.
+
+Verified new fact: your previous P52 proposal passed a separately reviewed finite checker, retaining all432 targets and exact11+11 ownership. It checked146 live targets, all78 first moves,14816 targetwise exterior histories,6582 surviving-history switch checks,13 rejection controls, immediate wins and exhaustion. Report SHA25651d0885027969cbe0fafdeae9b009c187ad6438c7a6b84fbcf6d38ab1a9c4df1. Source is included at the end. This is now an accepted complete P52 defense. No ancestor or P53 inference is made.
+
+P53 remains OPEN. The exact6 local search just exhausted its reviewed recurrence on this full state without producing a card; that is a bounded negative with an always-available outside response, not an unrestricted game theorem. The78-entry reply-then-static-matching survey has now completed: every entry returned UNSAT, with independent complete formula reconstruction and strict result replay. No independently checked UNSAT refutation was produced. Thus these are restricted-family solver observations, not a theorem about adaptive play. No positive matching leaf was found.
+
+The important difference from P52 is the permanent Breaker stone53 instead of52. In P53, M51 may force B52 through the full target{42,43,44,45,51,52} after the appropriate actual acquisitions; importing the P52 pair51-61 without checking all exposures is invalid. Earlier static matching failure was only an unproved solver observation. The accepted continued P53 endpoint after42/31,51/52,41/50,22/12,61/71,76/66,78/68 has a full defense, but the seven Maker choices are not mandatory. Do not silently assume them.
+
+Please seek an all-entry adaptive controller, possibly with a larger jointly reserved domain containing both the six-cell upper switch and central/left cells. Every waiting phase must keep reserved cells pristine or explicitly track actual colors; every released exterior pair requires full-target coverage. A table of actual replies plus successor domains/matchings, together with a proof of arbitrary exterior interleavings, is ideal. If that fails, give a concrete obstruction to a clearly named restricted class, and a different physical construction or exact finite algorithm that avoids it. Do not call selected-guard completion a physical Maker win.
+
+Deliver a complete object if possible. Otherwise identify the smallest genuine unresolved interface, with exact coordinates and all crossing obligations, and distinguish proved lemmas from conjectural steps. Follow promising algebraic/geometric implications far enough to reduce the unresolved case count materially.
+
+Exact accepted P53 data (the baseline matching is partial, not a defense):
+{"actual_prefix":[{"breaker":53,"maker":43},{"breaker":33,"maker":32}],"complete_static_matching":false,"covered_live_targets":139,"expected_gap_labels":["A1","A2","A3","A4","A5","A6","A7","C1","C2","D1","D2","D3","D4","D5","D6","D7"],"first_breaker_reply":53,"full_game_result":null,"live_target_count":155,"removed_pairs":[[24,33],[32,42],[53,54]],"retained_pairs":[[1,3],[4,5],[6,19],[8,9],[12,13],[15,25],[16,26],[17,27],[18,28],[22,23],[29,49],[30,40],[31,41],[50,52],[51,61],[59,79],[60,80],[62,72],[63,73],[64,65],[66,76],[68,78],[70,71],[81,91],[82,83],[85,86],[88,89],[92,93],[95,96]],"state":{"breaker":[33,34,36,38,53,55,56,58,74,77,94],"maker":[32,37,43,44,45,46,47,57,67,75,84],"turn":"Maker"},"state_sha256":"9b36657c1dc1bc3210f078eb74b1ccfd213d891816493995009737013e3aab1d","uncovered_count":16,"uncovered_live_targets":[{"breaker_hits":[],"covering_pairs":[],"maker_owned":[32],"required_free":[1,11,12,22,42],"target":[1,11,12,22,32,42]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[32],"required_free":[1,11,21,31,42],"target":[1,11,21,31,32,42]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[],"required_free":[2,3,13,14,15,16],"target":[2,3,13,14,15,16]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[],"required_free":[3,4,14,15,16,17],"target":[3,4,14,15,16,17]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[],"required_free":[5,6,7,8,14,15],"target":[5,6,7,8,14,15]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[],"required_free":[6,7,13,14,15,16],"target":[6,7,13,14,15,16]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[],"required_free":[7,8,14,15,16,17],"target":[7,8,14,15,16,17]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[32],"required_free":[11,21,22,42,52],"target":[11,21,22,32,42,52]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[32],"required_free":[12,22,41,42,51],"target":[12,22,32,41,42,51]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[],"required_free":[13,14,24,25,26,27],"target":[13,14,24,25,26,27]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[],"required_free":[14,15,16,17,23,24],"target":[14,15,16,17,23,24]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[32],"required_free":[21,31,42,52,62],"target":[21,31,32,42,52,62]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[32,43,44,45],"required_free":[31,42],"target":[31,32,42,43,44,45]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[32],"required_free":[42,52,61,62,71],"target":[32,42,52,61,62,71]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[43,44],"required_free":[41,42,50,51],"target":[41,42,43,44,50,51]},{"breaker_hits":[],"covering_pairs":[],"maker_owned":[43,44,45],"required_free":[42,51,52],"target":[42,43,44,45,51,52]}]}
+
+All155 live full physical targets at P53 (exact geometry, retained old colors):
+[[0,1,2,3,13,14],[0,1,11,12,13,14],[0,10,11,21,31,41],[0,10,20,30,31,41],[1,2,3,4,10,11],[1,2,3,4,14,15],[1,2,12,13,14,15],[1,10,11,20,30,40],[1,11,12,22,32,42],[1,11,21,30,31,40],[1,11,21,31,32,42],[2,3,4,5,11,12],[2,3,4,5,15,16],[2,3,13,14,15,16],[2,11,12,21,31,41],[2,12,22,31,32,41],[3,4,5,6,12,13],[3,4,5,6,16,17],[3,4,10,11,12,13],[3,4,14,15,16,17],[3,12,13,22,32,42],[4,5,6,7,13,14],[4,5,6,7,17,18],[4,5,11,12,13,14],[4,5,15,16,17,18],[4,14,15,25,35,45],[5,6,7,8,14,15],[5,6,7,8,18,19],[5,6,12,13,14,15],[5,6,16,17,18,19],[6,7,8,9,15,16],[6,7,13,14,15,16],[6,15,16,25,35,45],[6,16,17,27,37,47],[7,8,14,15,16,17],[8,9,15,16,17,18],[8,17,18,27,37,47],[8,18,19,29,39,49],[10,11,12,13,23,24],[10,11,21,22,23,24],[10,20,21,31,41,51],[10,20,30,40,41,51],[11,12,13,14,20,21],[11,12,13,14,24,25],[11,12,22,23,24,25],[11,20,21,30,40,50],[11,21,22,32,42,52],[11,21,31,40,41,50],[11,21,31,41,42,52],[12,13,14,15,21,22],[12,13,14,15,25,26],[12,13,23,24,25,26],[12,21,22,31,41,51],[12,22,32,41,42,51],[13,14,15,16,22,23],[13,14,15,16,26,27],[13,14,20,21,22,23],[13,14,24,25,26,27],[13,22,23,32,42,52],[14,15,16,17,23,24],[14,15,16,17,27,28],[14,15,21,22,23,24],[14,15,25,26,27,28],[15,16,17,18,24,25],[15,16,17,18,28,29],[15,16,22,23,24,25],[15,16,26,27,28,29],[15,25,35,44,45,54],[16,17,18,19,25,26],[16,17,23,24,25,26],[16,26,27,37,47,57],[17,18,24,25,26,27],[18,19,25,26,27,28],[18,27,28,37,47,57],[18,28,29,39,49,59],[20,30,31,41,51,61],[20,30,40,50,51,61],[21,22,23,24,30,31],[21,30,31,40,50,60],[21,31,32,42,52,62],[21,31,41,50,51,60],[21,31,41,51,52,62],[22,23,24,25,31,32],[22,31,32,41,51,61],[22,32,42,51,52,61],[30,31,41,42,43,44],[30,40,41,51,61,71],[30,40,50,60,61,71],[31,32,42,43,44,45],[31,40,41,50,60,70],[31,41,42,52,62,72],[31,41,51,60,61,70],[31,41,51,61,62,72],[32,41,42,51,61,71],[32,42,52,61,62,71],[32,42,52,62,63,73],[37,47,57,66,67,76],[37,47,57,67,68,78],[39,49,59,68,69,78],[40,50,51,61,71,81],[40,50,60,70,71,81],[41,42,43,44,50,51],[41,50,51,60,70,80],[41,51,52,62,72,82],[41,51,61,70,71,80],[41,51,61,71,72,82],[42,43,44,45,51,52],[42,51,52,61,71,81],[42,52,62,71,72,81],[42,52,62,72,73,83],[49,59,69,78,79,88],[50,51,61,62,63,64],[50,60,61,71,81,91],[50,60,70,80,81,91],[51,52,62,63,64,65],[51,60,61,70,80,90],[51,61,62,72,82,92],[51,61,71,80,81,90],[51,61,71,81,82,92],[52,61,62,71,81,91],[52,62,63,73,83,93],[52,62,72,81,82,91],[52,62,72,82,83,93],[54,63,64,73,83,93],[54,64,65,75,85,95],[57,66,67,76,86,96],[57,67,68,78,88,98],[59,68,69,78,88,98],[59,69,79,88,89,98],[61,62,63,64,70,71],[62,63,64,65,71,72],[62,63,64,65,75,76],[63,64,65,66,72,73],[63,64,70,71,72,73],[65,66,67,68,78,79],[66,67,68,69,75,76],[70,71,72,73,83,84],[70,71,81,82,83,84],[71,72,82,83,84,85],[72,73,83,84,85,86],[75,76,82,83,84,85],[75,76,86,87,88,89],[78,79,85,86,87,88],[81,82,83,84,90,91],[82,83,84,85,91,92],[82,83,84,85,95,96],[83,84,85,86,92,93],[83,84,85,86,96,97],[83,84,90,91,92,93],[84,85,86,87,97,98],[84,85,95,96,97,98],[85,86,87,88,98,99],[85,86,96,97,98,99],[86,87,88,89,95,96],[88,89,95,96,97,98]]
+
+Accepted P52 source, supplied as mathematical context; you must not execute it remotely:
+```python
+#!/usr/bin/env python3
+"""Finite full-target audit of the proposed original 11+11 P52 defense.
+
+Reuses frozen independent geometry and matching validators, not a constructor.
+All exterior histories are checked target by target; disjoint consumed pairs
+cannot affect that target or the pristine six-cell reserved domain.
+"""
+import argparse
+from copy import deepcopy
+from datetime import datetime, timezone
+import hashlib
+from itertools import product
+import json
+from pathlib import Path
+import time
+
+from continued_endpoint_defenses import literal_targets, matching, local_table, R, GAMMA, ROWS
+
+BASE = Path(__file__).resolve().parents[1]
+PINS = {
+    'browser/05-twentyfourth-final.txt': 'a88958d771391867ec192d388ca6f709ad70c9d198afa93fee93b3f944b404f5',
+    'browser/05-twentyfourth-final-main.txt': '29c714362a9554d4a65610a0e43665905cc82ebd69248acd7b27ed5a2e4e12f0',
+    'verification/continued_endpoint_defenses.py': 'cee9f08d63d4a0e8a28c18967da1917504d2e975a95b7310aa43cdf1c26ed187',
+    'verification/browser_twentyfirst_independent05.json': '56d03252b70a863dd35137507b7e594e0d62af0f05854365a814aa73ab5ef45b',
+}
+M = frozenset((32,37,43,44,45,46,47,57,67,75,84))
+B = frozenset((33,34,36,38,52,55,56,58,74,77,94))
+Q = ((3,4),(5,6),(7,8),(10,20),(11,21),(12,22),(13,14),(15,25),
+     (23,24),(29,49),(30,40),(31,42),(41,50),(51,61),(53,54),(59,79),
+     (60,80),(62,72),(63,73),(64,65),(66,76),(68,78),(70,71),(81,91),
+     (82,83),(85,86),(88,89),(92,93),(95,96))
+FILL = ((0,1),(2,9),(19,35),(39,48),(69,87),(90,97),(98,99))
+V = frozenset(range(100))
+
+
+def need(ok, why):
+    if not ok:
+        raise ValueError(why)
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def bind(state):
+    need(state == dict(maker=sorted(M), breaker=sorted(B), turn='Maker'),
+         'wrong original full ownership')
+    need(len(M) == len(B) == 11 and not M & B, 'bad original counts')
+
+
+def coverage(edges, pairs, breaker, guards=GAMMA):
+    rows = []
+    for e in edges:
+        if e & breaker:
+            continue
+        ps = [sorted(p) for p in pairs if p <= e]
+        gs = [sorted(g) for g in guards if g <= e]
+        need(ps or gs, 'unprotected full target '+str(sorted(e)))
+        rows.append(dict(target=sorted(e), exterior_pairs=ps, reserved_guards=gs))
+    return rows
+
+
+def audit(state, edges, tick):
+    bind(state); local_table(ROWS)
+    free = V-M-B
+    need(len(free) == 78 and R <= free, 'wrong fresh inventory')
+    cover = matching(Q, free-R)
+    outer = matching(Q+FILL, free-R, free-R)
+    need(len(cover) == 29 and len(outer) == 36, 'wrong pair counts')
+    ledger = coverage(edges, cover, B)
+    live = tuple(e for e in edges if not e & B)
+    entries = []
+    for u in sorted(free):
+        tick()
+        need(not any(e <= M|{u} for e in live), 'first Maker claim wins')
+        if u in R:
+            v, raw = ROWS[u]
+            local = matching(raw, R-{u,v}, R-{u,v})
+            pairs = matching(tuple(tuple(p) for p in outer+local), free-{u,v}, free-{u,v})
+            surviving = [e for e in live if v not in e]
+            need(all(any(p <= e for p in pairs) for e in surviving), 'switch leaves a full target unprotected')
+            action = dict(kind='switch', pairs=[sorted(p) for p in pairs], live_targets=len(surviving))
+        else:
+            pair = next(p for p in outer if u in p)
+            v = next(iter(pair-{u}))
+            action = dict(kind='mate_and_wait')
+        need(v in free-{u}, 'reply not physically fresh')
+        entries.append(dict(maker=u, breaker=v, **action))
+    # Enumerate every orientation of the outside pairs touching each target.
+    # Unmentioned consumed pairs are disjoint from that target and R. Their
+    # possible ownership cannot invalidate a target's fresh covering pair.
+    histories = blocked = switches = 0
+    digest = hashlib.sha256()
+    for e in live:
+        relevant = [tuple(sorted(p)) for p in outer if p & e]
+        for choices in product(range(3), repeat=len(relevant)):
+            tick(); hm, hb = set(M), set(B)
+            for pair, choice in zip(relevant, choices):
+                if choice:
+                    hm.add(pair[choice-1]); hb.add(pair[2-choice])
+            need(M <= hm and B <= hb and not hm & hb and not R & (hm|hb), 'lost physical history')
+            histories += 1; digest.update(bytes(sorted(e))+bytes(choices))
+            if e & hb:
+                blocked += 1
+                continue
+            need(not e <= hm, 'waiting target completed')
+            # A waiting exterior move changes a pair from untouched to consumed.
+            # Before its actual reply it must not complete e either.
+            for pair in relevant:
+                if not set(pair) & (hm|hb):
+                    for u in pair:
+                        need(not e <= hm|{u}, 'exterior claim wins before mate')
+            for u, (v, raw) in ROWS.items():
+                need(not e <= hm|{u}, 'reserved entry wins before reply')
+                if v not in e:
+                    available = V-hm-hb-{u,v}
+                    need(any(p <= e and p <= available for p in outer+tuple(map(frozenset,raw))),
+                         'outside history invalidates switch')
+                switches += 1
+    return dict(state=state, fresh_cells=78, live_targets=len(live),
+        covering_pairs=Q, outside_perfect_matching=Q+FILL,
+        coverage_ledger=ledger, first_entries=entries,
+        targetwise_histories=histories, blocked_histories=blocked,
+        live_history_switch_checks=switches, history_sha256=digest.hexdigest(),
+        exhaustion=[dict(outside_pairs_left=r,before_switch_free=2*r+6,
+                         after_switch_free=2*r+4) for r in range(37)])
+
+
+def controls(state, edges):
+    names = []
+    def reject(name, fn):
+        try:
+            fn()
+        except ValueError:
+            names.append(name)
+        else:
+            raise ValueError('control accepted '+name)
+    for color in ('maker','breaker'):
+        changed = deepcopy(state); changed[color].pop()
+        reject('lost_old_'+color, lambda: bind(changed))
+    wrong = deepcopy(state); wrong['breaker'].remove(52); wrong['breaker'].append(53); wrong['breaker'].sort()
+    reject('wrong_original_branch', lambda: bind(wrong))
+    reject('missing_switch_row', lambda: local_table({u:r for u,r in ROWS.items() if u != 17}))
+    wrong = deepcopy(ROWS); wrong[17] = (17, wrong[17][1])
+    reject('stale_switch_reply', lambda: local_table(wrong))
+    wrong = deepcopy(ROWS); wrong[16] = (18,((17,26),(27,28)))
+    reject('lost_local_guard', lambda: local_table(wrong))
+    reject('missing_outside_mate', lambda: matching(Q+FILL[:-1], V-M-B-R, V-M-B-R))
+    reject('pair_intrudes_reserved_domain', lambda: matching(Q+((0,16),), V-M-B-R))
+    reject('overlapping_pair', lambda: matching(Q+(Q[0],), V-M-B-R))
+    for pair in ((13,14),(31,42),(41,50)):
+        bad = tuple(frozenset(p) for p in Q if p != pair)
+        reject('dropped_pair_'+str(pair), lambda: coverage(edges,bad,B))
+    reject('lost_reserved_guards', lambda: coverage(edges,tuple(map(frozenset,Q)),B,()))
+    return names
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__)
+    ap.add_argument('--output',type=Path,required=True); args=ap.parse_args()
+    need(not args.output.exists(), 'fresh report required')
+    cpu, wall = time.process_time(), time.monotonic()
+    def tick():
+        if time.process_time()-cpu >= 8 or time.monotonic()-wall >= 25:
+            raise TimeoutError('finite P52 audit cap')
+    result = dict(schema='snaky-original-P52-defense-v1',status='pending',
+        checker_sha256=sha(__file__),input_sha256=PINS,
+        P53_resolved=False, earlier_parent_resolved=False,empty_board_result=False)
+    try:
+        for p,h in PINS.items():
+            need(sha(BASE/p)==h,'changed input '+p)
+        accepted=json.loads((BASE/'verification/browser_twentyfirst_independent05.json').read_text())
+        need(accepted['status']=='verified_physical_M43_reply_reduction_and_two_frontier_inventories',
+             'wrong original frontier source')
+        state=next(row['state'] for row in accepted['frontiers'] if row['first_breaker_reply']==52)
+        edges=literal_targets()
+        result.update(defense=audit(state,edges,tick),negative_controls=controls(state,edges),
+                      literal_targets=len(edges),status='verified_complete_original_P52_defense')
+    except (ValueError,KeyError,TypeError,OSError,TimeoutError) as error:
+        result.update(status='incomplete' if isinstance(error,TimeoutError) else 'rejected',reason=str(error))
+    result.update(process_cpu_seconds=time.process_time()-cpu,elapsed_seconds=time.monotonic()-wall,
+                  created_utc=datetime.now(timezone.utc).isoformat())
+    with args.output.open('x') as f:
+        json.dump(result,f,sort_keys=True,indent=2); f.write('\n')
+    print(json.dumps({k:result[k] for k in ('status','process_cpu_seconds','elapsed_seconds')}))
+    return int(result['status']!='verified_complete_original_P52_defense')
+
+
+if __name__=='__main__':
+    raise SystemExit(main())
+
+```
+
+The imported switch constants, provided explicitly:
+```python
+R = frozenset((16, 17, 18, 26, 27, 28))
+GAMMA = tuple(map(frozenset, ((16,17), (16,26,27), (17,18,27), (18,27,28))))
+ROWS = {
+    16: (17, ((26,27),(18,28))),
+    17: (16, ((18,27),(26,28))),
+    18: (27, ((16,17),(26,28))),
+    26: (27, ((16,17),(18,28))),
+    27: (17, ((16,26),(18,28))),
+    28: (27, ((16,17),(18,26))),
+}
+```

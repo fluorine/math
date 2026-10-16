@@ -1,0 +1,393 @@
+Browser01 — round 23: turn the accepted 15-exception interface into a complete adaptive policy, or give a precise obstruction
+
+Please continue by mathematical reasoning only. Do not run code, a solver, remote computation, or an experiment, and do not ask another service to do so. We can independently check a concrete finite object locally afterward. The facts marked accepted below have already passed an independent literal audit; any new policy or counterplay you give remains a proposal until separately checked.
+
+The question is at ONE exact conditional 14×14 position. We now have 63 disjoint pairs protecting 370 of 385 live physical Snakies, exactly 15 uncovered physical targets, and one accepted history-dependent pair switch. Please aim for a complete adaptive all-entry Breaker policy extending this interface. If that is not achievable, give explicit Maker counterplay against a precisely stated proposed extension, or a small rigorous obstruction that identifies what that extension must change. A single cooperative line or one repaired exception is not a complete policy.
+
+1. Exact rules and scope
+
+The board is V={(x,y):1≤x≤14,1≤y≤14}. Coordinates below are ordered (x,y), with x the column and y the row. They are NOT the zero-based cell IDs used in any other question.
+
+Maker and Breaker alternately claim one physically fresh cell. Maker moves next in the displayed state. Existing ownership is permanent; there are no passes, recolorings, virtual stones, offboard cells, or simultaneous claims. Maker wins immediately when its stones contain all six cells of a Snaky, including on its final possible claim, before any later Breaker reply. Breaker wins by preventing this until the finite board is exhausted.
+
+The target shape is H={(0,0),(1,0),(2,0),(3,0),(3,1),(4,1)}. Every translation of every rotation/reflection of H that fits wholly in V is a target. There are eight distinct orientations and 1,040 distinct full targets. A full target remains live exactly when it avoids actual Breaker stones. Old Maker cells remain part of it; they must not be discarded when discussing physical wins.
+
+This position is called R_gap followed by M(6,3)/B(5,3). Those names are labels only: the complete colors below define the problem. It has 27 Maker stones, 27 Breaker stones, and 142 fresh cells. A full solution here would be a conditional defense, not an empty-board theorem or a proof that Maker is forced to reach this state.
+
+2. Accepted facts, and facts we are not claiming
+
+An independent checker regenerated all 1,040 targets, preserved all old colors, checked the exact matching and all 15 exceptions, checked the exact five-round switch below, and passed nine rejection controls. The lead reviewed and accepted its scoped result.
+
+Accepted:
+• The 63 pairs below are disjoint and wholly fresh.
+• They protect 370 of the 385 currently live full targets.
+• The other 15 targets are exactly T1–T15 below.
+• Each exception contains at most one unmatched fresh cell. Therefore adding pairs disjoint from all 63 fixed pairs cannot cover even one exception.
+• The stated five-round switch preserves every initially protected target, retains full physical colors, and leaves exactly 12 exceptions at its resulting state.
+
+Not established:
+• A strategy for every Maker entry, every ordering of exception acquisitions, or every possible filler history.
+• Impossibility of a different static matching, a different adaptive policy, or a different partition.
+• A full Maker win at this state, or a game result at any ancestor.
+
+One unrestricted full-physical static matching query at this exact 27+27 state previously returned an unproved UNSAT observation. An earlier conservative reply-to-matching table restricted to the pristine bottom 42 cells also returned unproved UNSAT observations for all 42 entries. Neither is a checked impossibility theorem, and neither captures the present history-dependent pair exchanges. Please do not repeat those restricted tasks as the answer.
+
+3. Complete actual initial colors
+
+M0 = {(3,11), (4,4), (4,7), (4,8), (4,9), (5,5), (5,6), (5,8), (6,3), (6,5), (6,8), (7,2), (7,3), (7,5), (7,6), (7,7), (7,8), (8,6), (8,8), (9,8), (9,11), (10,5), (10,6), (10,7), (10,8), (10,9), (11,5)}
+
+B0 = {(3,7), (3,9), (4,5), (4,6), (4,10), (5,3), (5,4), (5,7), (5,9), (6,4), (6,7), (6,9), (7,4), (7,9), (8,4), (8,7), (8,9), (9,3), (9,5), (9,6), (9,7), (9,9), (10,10), (11,4), (11,6), (11,7), (11,9)}
+
+In particular, (3,11) and (9,11) are already Maker-owned; (5,3) is already Breaker-owned. Everything in V outside M0∪B0 is fresh. Do not replace this by an empty bottom rectangle or reset either old anchor.
+
+4. The full accepted matching P
+
+The names P01,…,P63 are pair labels, not board cells. Each displayed set is an unordered pair.
+
+P01 = {(2,1),(3,1)}
+P02 = {(5,1),(6,1)}
+P03 = {(8,1),(9,1)}
+P04 = {(10,1),(11,1)}
+P05 = {(12,1),(13,1)}
+P06 = {(1,2),(2,2)}
+P07 = {(3,2),(4,2)}
+P08 = {(5,2),(6,2)}
+P09 = {(8,2),(9,2)}
+P10 = {(12,2),(13,2)}
+P11 = {(2,3),(3,3)}
+P12 = {(12,3),(13,3)}
+P13 = {(10,2),(10,3)}
+P14 = {(11,2),(11,3)}
+P15 = {(9,4),(10,4)}
+P16 = {(1,4),(1,5)}
+P17 = {(2,4),(2,5)}
+P18 = {(3,4),(3,5)}
+P19 = {(12,4),(12,5)}
+P20 = {(13,4),(13,5)}
+P21 = {(14,4),(14,5)}
+P22 = {(13,6),(14,6)}
+P23 = {(1,6),(1,7)}
+P24 = {(2,6),(2,7)}
+P25 = {(12,6),(12,7)}
+P26 = {(13,7),(13,8)}
+P27 = {(14,7),(14,8)}
+P28 = {(2,8),(3,8)}
+P29 = {(11,8),(12,8)}
+P30 = {(1,9),(1,10)}
+P31 = {(2,9),(2,10)}
+P32 = {(12,9),(12,10)}
+P33 = {(14,9),(14,11)}
+P34 = {(6,10),(7,10)}
+P35 = {(1,11),(2,11)}
+P36 = {(4,11),(5,11)}
+P37 = {(6,11),(7,11)}
+P38 = {(8,11),(10,11)}
+P39 = {(11,11),(12,11)}
+P40 = {(13,9),(13,10)}
+P41 = {(11,10),(14,10)}
+P42 = {(13,11),(13,12)}
+P43 = {(1,12),(2,12)}
+P44 = {(4,12),(5,12)}
+P45 = {(7,12),(8,12)}
+P46 = {(10,12),(11,12)}
+P47 = {(12,12),(14,12)}
+P48 = {(1,13),(2,13)}
+P49 = {(4,13),(5,13)}
+P50 = {(7,13),(8,13)}
+P51 = {(9,13),(10,13)}
+P52 = {(1,14),(2,14)}
+P53 = {(4,14),(5,14)}
+P54 = {(7,14),(8,14)}
+P55 = {(9,14),(10,14)}
+P56 = {(11,13),(11,14)}
+P57 = {(12,13),(12,14)}
+P58 = {(13,13),(13,14)}
+P59 = {(14,13),(14,14)}
+P60 = {(3,12),(3,13)}
+P61 = {(6,12),(6,13)}
+P62 = {(5,10),(6,14)}
+P63 = {(8,10),(9,12)}
+
+The exact 16 initially unmatched fresh cells are
+U0 = {(1,1), (1,3), (1,8), (3,6), (3,10), (3,14), (4,1), (4,3), (6,6), (7,1), (8,3), (8,5), (9,10), (14,1), (14,2), (14,3)}.
+
+For provenance, the earlier accepted 41-pair matching is obtained from this list by retaining P01–P39 and replacing all P40–P63 by these two old pairs:
+  {(13,9),(13,11)} and {(13,10),(14,10)}.
+Equivalently, the current construction removes exactly those two old pairs and adds P40–P63. Every full target protected by the old 41 pairs remains protected; old coverage was 253 of the same 385 live targets.
+
+Define the protected family precisely:
+  G = {E: E is a full Snaky, E∩B0=∅, and some p∈P satisfies p⊆E}.
+Thus |G|=370. The problem is not a free choice of 15 local triples: G remains a physical protection obligation throughout any repair.
+
+5. The exact 15 exceptions, with old colors and mate couplings
+
+Notation C_x(s)={(x,s),(x,s+1),(x,s+2),(x,s+3)} and
+R_y(s)={(s,y),(s+1,y),(s+2,y),(s+3,y)}.
+The following entries give the FULL six-cell target, its initially Maker-owned cells, its still-required physical cells, and its unmatched fresh cells. For every paired required cell, the final line gives its current mate. These mate endpoints may lie outside the target and are still real board cells.
+
+T1 = C_2(10) ∪ {(3,13), (3,14)}
+  Full target: {(2,10), (2,11), (2,12), (2,13), (3,13), (3,14)}
+  Already Maker-owned: {}
+  Still required: {(2,10), (2,11), (2,12), (2,13), (3,13), (3,14)}
+  Unmatched fresh: {(3,14)}
+  Current mates: (2,10)→(2,9); (2,11)→(1,11); (2,12)→(1,12); (2,13)→(1,13); (3,13)→(3,12)
+
+T2 = C_7(10) ∪ {(6,13), (6,14)}
+  Full target: {(6,13), (6,14), (7,10), (7,11), (7,12), (7,13)}
+  Already Maker-owned: {}
+  Still required: {(6,13), (6,14), (7,10), (7,11), (7,12), (7,13)}
+  Unmatched fresh: {}
+  Current mates: (6,13)→(6,12); (6,14)→(5,10); (7,10)→(6,10); (7,11)→(6,11); (7,12)→(8,12); (7,13)→(8,13)
+
+T3 = C_8(10) ∪ {(9,13), (9,14)}
+  Full target: {(8,10), (8,11), (8,12), (8,13), (9,13), (9,14)}
+  Already Maker-owned: {}
+  Still required: {(8,10), (8,11), (8,12), (8,13), (9,13), (9,14)}
+  Unmatched fresh: {}
+  Current mates: (8,10)→(9,12); (8,11)→(10,11); (8,12)→(7,12); (8,13)→(7,13); (9,13)→(10,13); (9,14)→(10,14)
+
+T4 = C_9(10) ∪ {(8,13), (8,14)}
+  Full target: {(8,13), (8,14), (9,10), (9,11), (9,12), (9,13)}
+  Already Maker-owned: {(9,11)}
+  Still required: {(8,13), (8,14), (9,10), (9,12), (9,13)}
+  Unmatched fresh: {(9,10)}
+  Current mates: (8,13)→(7,13); (8,14)→(7,14); (9,12)→(8,10); (9,13)→(10,13)
+
+T5 = C_11(10) ∪ {(10,13), (10,14)}
+  Full target: {(10,13), (10,14), (11,10), (11,11), (11,12), (11,13)}
+  Already Maker-owned: {}
+  Still required: {(10,13), (10,14), (11,10), (11,11), (11,12), (11,13)}
+  Unmatched fresh: {}
+  Current mates: (10,13)→(9,13); (10,14)→(9,14); (11,10)→(14,10); (11,11)→(12,11); (11,12)→(10,12); (11,13)→(11,14)
+
+T6 = C_2(11) ∪ {(3,10), (3,11)}
+  Full target: {(2,11), (2,12), (2,13), (2,14), (3,10), (3,11)}
+  Already Maker-owned: {(3,11)}
+  Still required: {(2,11), (2,12), (2,13), (2,14), (3,10)}
+  Unmatched fresh: {(3,10)}
+  Current mates: (2,11)→(1,11); (2,12)→(1,12); (2,13)→(1,13); (2,14)→(1,14)
+
+T7 = C_4(11) ∪ {(3,10), (3,11)}
+  Full target: {(3,10), (3,11), (4,11), (4,12), (4,13), (4,14)}
+  Already Maker-owned: {(3,11)}
+  Still required: {(3,10), (4,11), (4,12), (4,13), (4,14)}
+  Unmatched fresh: {(3,10)}
+  Current mates: (4,11)→(5,11); (4,12)→(5,12); (4,13)→(5,13); (4,14)→(5,14)
+
+T8 = C_5(11) ∪ {(6,10), (6,11)}
+  Full target: {(5,11), (5,12), (5,13), (5,14), (6,10), (6,11)}
+  Already Maker-owned: {}
+  Still required: {(5,11), (5,12), (5,13), (5,14), (6,10), (6,11)}
+  Unmatched fresh: {}
+  Current mates: (5,11)→(4,11); (5,12)→(4,12); (5,13)→(4,13); (5,14)→(4,14); (6,10)→(7,10); (6,11)→(7,11)
+
+T9 = C_7(11) ∪ {(8,10), (8,11)}
+  Full target: {(7,11), (7,12), (7,13), (7,14), (8,10), (8,11)}
+  Already Maker-owned: {}
+  Still required: {(7,11), (7,12), (7,13), (7,14), (8,10), (8,11)}
+  Unmatched fresh: {}
+  Current mates: (7,11)→(6,11); (7,12)→(8,12); (7,13)→(8,13); (7,14)→(8,14); (8,10)→(9,12); (8,11)→(10,11)
+
+T10 = C_8(11) ∪ {(7,10), (7,11)}
+  Full target: {(7,10), (7,11), (8,11), (8,12), (8,13), (8,14)}
+  Already Maker-owned: {}
+  Still required: {(7,10), (7,11), (8,11), (8,12), (8,13), (8,14)}
+  Unmatched fresh: {}
+  Current mates: (7,10)→(6,10); (7,11)→(6,11); (8,11)→(10,11); (8,12)→(7,12); (8,13)→(7,13); (8,14)→(7,14)
+
+T11 = C_8(11) ∪ {(9,10), (9,11)}
+  Full target: {(8,11), (8,12), (8,13), (8,14), (9,10), (9,11)}
+  Already Maker-owned: {(9,11)}
+  Still required: {(8,11), (8,12), (8,13), (8,14), (9,10)}
+  Unmatched fresh: {(9,10)}
+  Current mates: (8,11)→(10,11); (8,12)→(7,12); (8,13)→(7,13); (8,14)→(7,14)
+
+T12 = C_10(11) ∪ {(9,10), (9,11)}
+  Full target: {(9,10), (9,11), (10,11), (10,12), (10,13), (10,14)}
+  Already Maker-owned: {(9,11)}
+  Still required: {(9,10), (10,11), (10,12), (10,13), (10,14)}
+  Unmatched fresh: {(9,10)}
+  Current mates: (10,11)→(8,11); (10,12)→(11,12); (10,13)→(9,13); (10,14)→(9,14)
+
+T13 = C_10(11) ∪ {(11,10), (11,11)}
+  Full target: {(10,11), (10,12), (10,13), (10,14), (11,10), (11,11)}
+  Already Maker-owned: {}
+  Still required: {(10,11), (10,12), (10,13), (10,14), (11,10), (11,11)}
+  Unmatched fresh: {}
+  Current mates: (10,11)→(8,11); (10,12)→(11,12); (10,13)→(9,13); (10,14)→(9,14); (11,10)→(14,10); (11,11)→(12,11)
+
+T14 = R_13(10) ∪ {(9,12), (10,12)}
+  Full target: {(9,12), (10,12), (10,13), (11,13), (12,13), (13,13)}
+  Already Maker-owned: {}
+  Still required: {(9,12), (10,12), (10,13), (11,13), (12,13), (13,13)}
+  Unmatched fresh: {}
+  Current mates: (9,12)→(8,10); (10,12)→(11,12); (10,13)→(9,13); (11,13)→(11,14); (12,13)→(12,14); (13,13)→(13,14)
+
+T15 = R_13(10) ∪ {(13,12), (14,12)}
+  Full target: {(10,13), (11,13), (12,13), (13,12), (13,13), (14,12)}
+  Already Maker-owned: {}
+  Still required: {(10,13), (11,13), (12,13), (13,12), (13,13), (14,12)}
+  Unmatched fresh: {}
+  Current mates: (10,13)→(9,13); (11,13)→(11,14); (12,13)→(12,14); (13,12)→(13,11); (13,13)→(13,14); (14,12)→(12,12)
+
+Each listed target avoids B0 and contains no whole pair of P. The mate of every paired required cell lies outside that target. T4,T6,T7,T11,T12 have one old Maker anchor; their remaining requirements have size five, not six. The other ten targets need six new claims initially. Two targets may share required cells or have mates in one another, so separate solutions for each Ti do not automatically compose.
+
+All 1,040 targets are accounted for: 655 already meet B0, 370 are in G, and the remaining 15 are exactly this list. There are no omitted crossing targets or unmentioned exterior completion requirements.
+
+The additive obstruction is elementary and scoped. Any new pair disjoint from every pair in P must lie in U0. Every Ti has |Ti∩U0|≤1, so no such pair can be contained in Ti. This rules out additive repair while retaining all 63 pairs; it does not rule out releasing/replacing pairs or taking a strategically useful Breaker stone.
+
+6. The invariant a valid adaptive extension must preserve
+
+For the family G, an ordinary pairing policy is safe: if Maker enters a still-fresh pair, Breaker takes its fresh mate; if a Breaker filler occupies a pair endpoint, that pair can be retired because every target relying on it is now Breaker-blocked. Every originally blocked target stays blocked.
+
+At the start of each Maker turn, a sufficient invariant is:
+  For every E∈G, either E∩B≠∅, or E contains a still-fresh pair from the current disjoint active matching.
+Then Maker cannot complete E on its next single claim. After a non-mate reply or a pair exchange, this statement must be restored using the ACTUAL new B and actual remaining fresh cells. Saying that a released pair is “no longer needed” requires checking all live targets that depended on it, not just the exception being repaired.
+
+The exceptions need additional adaptive protection. A legal Breaker reply cannot repair a target that Maker has just completed: check every full target immediately after each Maker claim. Multiple simultaneous one-cell threats require separate treatment. Arbitrary waiting entries and all unmatched-cell entries remain legal Maker moves; the policy must say what happens there too.
+
+A small patch is welcome if untouched parts have a proved total response rule and all patch-boundary targets retain protection. A targetwise proof may omit exterior history only when the omitted pair is disjoint from the target and every patch domain used in its proof. “Extra Breaker stones only help” does not authorize deleting actual Maker stones or assuming a reserved patch is still pristine.
+
+7. Accepted five-round history-dependent switch
+
+Starting from the complete 27+27 state above, the following exact history is legal and has no earlier Maker win:
+
+  round 1: M(10,13), B(9,13)    [P51 mate]
+  round 2: M(11,13), B(11,14)   [P56 mate]
+  round 3: M(12,13), B(12,14)   [P57 mate]
+  round 4: M(13,13), B(13,14)   [P58 mate]
+  round 5: M(13,12), B(14,12)  [override, not P42's mate]
+
+At round 5, the old nominal mate is (13,11). Taking it would let Maker claim (14,12) and immediately complete
+  T15={(10,13),(11,13),(12,13),(13,12),(13,13),(14,12)}.
+So B(14,12) addresses a real physical threat, not a projected one.
+
+After the actual B(14,12):
+• Retire the four consumed pairs P51,P56,P57,P58.
+• Retire P42={(13,11),(13,12)} because Maker owns (13,12).
+• Retire P47={(12,12),(14,12)} because Breaker owns (14,12).
+• Release the still-fresh P33={(14,9),(14,11)}.
+• Add N={(13,11),(14,9)}.
+• Keep every other pair unchanged.
+
+Thus the exact resulting matching is
+  P' = (P \ {P33,P42,P47,P51,P56,P57,P58}) ∪ {N},
+with 57 fresh disjoint pairs. In particular P46={(10,12),(11,12)} and P63={(8,10),(9,12)} are retained.
+
+The resulting actual colors are exactly
+  M5 = M0 ∪ {(10,13),(11,13),(12,13),(13,13),(13,12)}
+  B5 = B0 ∪ {(9,13),(11,14),(12,14),(13,14),(14,12)}.
+There are 32 stones of each color. The newly released cells (12,12) and (14,11) remain physically free; they are not hypothetical Breaker stones. The full unmatched fresh set is U0∪{(12,12),(14,11)}, of size 18.
+
+All 370 members of G remain blocked by B5 or contain a fresh pair in P'. All 1,040 full targets were checked at this state. There are 330 live targets: 318 contain a fresh pair, and the exact remaining 12 exceptions are T1,T2,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14. T3,T4,T15 are killed by actual B5.
+
+The 12 surviving FULL targets are the same Ti already listed, not renamed or cropped shapes. For clarity, their exact still-required cells at this new state are:
+
+  T1: {(2,10), (2,11), (2,12), (2,13), (3,13), (3,14)}
+  T2: {(6,13), (6,14), (7,10), (7,11), (7,12), (7,13)}
+  T5: {(10,14), (11,10), (11,11), (11,12)}
+  T6: {(2,11), (2,12), (2,13), (2,14), (3,10)}
+  T7: {(3,10), (4,11), (4,12), (4,13), (4,14)}
+  T8: {(5,11), (5,12), (5,13), (5,14), (6,10), (6,11)}
+  T9: {(7,11), (7,12), (7,13), (7,14), (8,10), (8,11)}
+  T10: {(7,10), (7,11), (8,11), (8,12), (8,13), (8,14)}
+  T11: {(8,11), (8,12), (8,13), (8,14), (9,10)}
+  T12: {(9,10), (10,11), (10,12), (10,14)}
+  T13: {(10,11), (10,12), (10,14), (11,10), (11,11)}
+  T14: {(9,12), (10,12)}
+
+A concrete follow-up visible directly from these colors: T14 now needs exactly (9,12) and (10,12). If Maker next claims one, the other must be blocked before Maker's following claim, unless Maker already wins immediately for another reason. The fixed P' mates instead send (9,12) to (8,10) and (10,12) to (11,12). Thus simply installing P' forever is not a defense. A next repair must account for this two-cell physical threat and for all earlier protected targets. This is a deduction from the displayed state, not a claim that we have solved either continuation.
+
+8. Useful excerpts from the accepted release audit
+
+The following complete affected-target lists explain why the fifth-round override is safe. All cells and blockers below refer to the exact M5/B5 state above. A target is protected by either the listed actual Breaker hit or a retained/new whole pair. An omitted protector column means the actual Breaker hit is enough.
+
+Released pair {(13,11),(13,12)}:
+  E={(10,11), (11,11), (12,11), (13,11), (13,12), (14,12)}; actual B hits={(14,12)}; fresh protector(s)={(11,11),(12,11)}.
+  E={(10,12), (11,12), (12,12), (13,11), (13,12), (14,11)}; actual B hits=none; fresh protector(s)={(10,12),(11,12)}.
+  E={(12,8), (12,9), (12,10), (12,11), (13,11), (13,12)}; actual B hits=none; fresh protector(s)={(12,9),(12,10)}.
+  E={(12,8), (12,9), (13,9), (13,10), (13,11), (13,12)}; actual B hits=none; fresh protector(s)={(13,9),(13,10)}.
+  E={(12,9), (12,10), (13,10), (13,11), (13,12), (13,13)}; actual B hits=none; fresh protector(s)={(12,9),(12,10)}.
+  E={(12,10), (12,11), (13,11), (13,12), (13,13), (13,14)}; actual B hits={(13,14)}; fresh protector(s)=none.
+  E={(12,12), (12,13), (13,9), (13,10), (13,11), (13,12)}; actual B hits=none; fresh protector(s)={(13,9),(13,10)}.
+  E={(12,13), (12,14), (13,10), (13,11), (13,12), (13,13)}; actual B hits={(12,14)}; fresh protector(s)=none.
+  E={(13,9), (13,10), (13,11), (13,12), (14,8), (14,9)}; actual B hits=none; fresh protector(s)={(13,9),(13,10)}, {(13,11),(14,9)}.
+  E={(13,9), (13,10), (13,11), (13,12), (14,12), (14,13)}; actual B hits={(14,12)}; fresh protector(s)={(13,9),(13,10)}.
+  E={(13,10), (13,11), (13,12), (13,13), (14,9), (14,10)}; actual B hits=none; fresh protector(s)={(13,11),(14,9)}.
+  E={(13,10), (13,11), (13,12), (13,13), (14,13), (14,14)}; actual B hits=none; fresh protector(s)={(14,13),(14,14)}.
+  E={(13,11), (13,12), (13,13), (13,14), (14,10), (14,11)}; actual B hits={(13,14)}; fresh protector(s)=none.
+  E={(13,11), (13,12), (14,8), (14,9), (14,10), (14,11)}; actual B hits=none; fresh protector(s)={(13,11),(14,9)}.
+
+Released pair {(14,9),(14,11)}:
+  E={(13,7), (13,8), (14,8), (14,9), (14,10), (14,11)}; actual B hits=none; fresh protector(s)={(13,7),(13,8)}.
+  E={(13,8), (13,9), (14,9), (14,10), (14,11), (14,12)}; actual B hits={(14,12)}; fresh protector(s)=none.
+  E={(13,11), (13,12), (14,8), (14,9), (14,10), (14,11)}; actual B hits=none; fresh protector(s)={(13,11),(14,9)}.
+  E={(13,12), (13,13), (14,9), (14,10), (14,11), (14,12)}; actual B hits={(14,12)}; fresh protector(s)=none.
+
+These are all initial live incidences of the two nontrivially released pairs, not selected examples. The remaining pair retirements each acquired an actual Breaker endpoint. In particular the new pair N is necessary for the displayed patch: removing it exposes the previously protected target
+  {(13,10),(13,11),(13,12),(13,13),(14,9),(14,10)}.
+At M5/B5, none of that target's cells is Breaker-owned.
+
+The independent checker used these exact forms of test (reproduced as specification, not a request to execute code):
+
+  before every actual reply:
+      reject if any full_target <= actual_Maker_after_claim
+
+  after each round, for every E in the initial protected family G:
+      hits = E intersect actual_Breaker
+      protectors = {p in active_pairs : p subset E}
+      require hits or protectors
+
+  for every active pair p:
+      require two distinct endpoints
+      require p subset (V minus actual_Maker minus actual_Breaker)
+      require no endpoint shared with another active pair
+
+  after the five-round switch:
+      require all original M0 and B0 stones remain
+      require actual colors equal the stated M5 and B5
+      require live_targets minus pair_covered_targets
+              equals exactly {T1,T2,T5,T6,T7,T8,T9,T10,T11,T12,T13,T14}
+
+Nine rejection controls caught a missing old Maker anchor, missing actual B(5,3), overlapping pairs, an occupied pair endpoint, a dropped residual target, a wrong early mate, the omitted new protector N, retaining P33 alongside N, and falsely labeling the partial cover complete.
+
+9. What we want you to return
+
+First preference: an explicit finite adaptive policy for ALL legal Maker continuations from M0/B0, using the 63-pair interface as a starting certificate rather than an immutable restriction. You may change pairs, reserve a carefully justified domain, or strengthen a small local guard family, but every released dependency and actual color must remain accounted for.
+
+A suitable answer would be a finite ranked repair table or state machine. For each mode, give:
+  (a) its exact actual-history predicate, active pairs, and any reserved fresh domain;
+  (b) the complete set of Maker-entry cases, including ordinary pair entries, unpaired entries, and entries that create simultaneous threats;
+  (c) one legal physical Breaker response for every case;
+  (d) the next mode or an explicit ordinary matching leaf;
+  (e) a proof that every full target remains blocked or protected, and that no Maker completion occurs before the response;
+  (f) termination/exhaustion or a precise invariant establishing indefinite legal defense on this finite board.
+
+For a generic row, state the exact quantifiers and why it covers all displayed cases. Give one deterministic filler rule when a filler is necessary, and prove its legality and safety at every history where it is used. If your proof permits several filler choices, specify whether every choice is safe; do not quietly assume one favorable choice later. A static matching leaf must be wholly fresh at its exact state and protect every then-live full target, including any exception still alive.
+
+In particular, a purported extension should deal with both forced T14 replies at M5/B5 and explain why different Maker orders or interference before round 5 do not invalidate its reservation. Repairing the single shown line again is not enough. Nor is it enough to solve each Ti in isolation if their prescribed replies or consumed pairs conflict.
+
+If a full policy is out of reach, the second preference is a precise falsifiable alternative:
+  • State a concrete extension rule completely, then give a legal Maker counterplay against that rule with actual replies and a full terminal Snaky.
+  • Or give a small all-reply Maker tree against a rigorously specified restricted repair family, covering every legal response that family allows.
+  • Or identify the smallest explicit set of actual histories requiring incompatible pair repairs, with the exact protected physical witnesses that cause the conflict.
+
+Distinguish carefully:
+  “this deterministic extension loses”;
+  “no policy in this precisely defined restricted class works”;
+  “Maker wins against every legal Breaker continuation.”
+Only the last requires a full all-reply physical Maker certificate. A line against one cooperative sequence or one chosen filler proves neither of the latter two statements.
+
+Please make the output a finite object we can check: literal cells and pairs, explicit rows/branch conditions, exact full targets for every threat, and a concise invariant proof. If you cannot complete the object, return the exact unresolved mode and the concrete missing replies rather than an assurance that a repair should exist.
+
+10. Acceptance provenance and delivery scope
+
+The accepted independent report is named browser_twentysecond_maker01.json with SHA256
+f06ccf683b1aa33e8342863a13783be80f85b6a4a83761bd8926ea04f3e6ad55.
+Its reviewed source has SHA256
+830dd76c8a121a777e9ecb033bcb6dda00f1dbe7f1a7c9f075696efb52837b9e.
+The accepted earlier 41-pair/27+27 binding report has SHA256
+748e13d9613d94a2017d12588bd5233e315aea7f834acad48e730e7b64bcb76e.
+These hashes identify evidence; you do not need repository access because all required rules, colors, pairs, exceptions, and the accepted switch are provided above.
+
+Do not infer any physical result from a game obtained by deleting outside requirements or treating already occupied stones as fresh. Do not mix in the unrelated 10×10 S9 or P52/P53 states. Keep this one 14×14, 27+27 interface focused. Any new full defense remains a candidate pending our independent finite audit. Please reason by hand only; no remote computation or solver work is requested.

@@ -1,0 +1,20 @@
+{
+  "all_children_peak_rss_bytes": 21774336,
+  "child_exit_code": 0,
+  "child_log_sha256": "c5c79cc52834751bd7173d01acff589400c60dc1667d29f7be883454d56e069b",
+  "child_pid": 84109,
+  "control": {
+    "path": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/wrapper-negative-control.json",
+    "sha256": "3e47c1631a7225963c31fccc381cb8365d57ae03219c4d51d6712c2c904faca3"
+  },
+  "elapsed_seconds": 0.22518412489444017,
+  "events": [],
+  "guard": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/execution/wrapper-negative-control.guard01.json",
+  "guard_sha256": "ea01d5df1abc27b752361614cfc816c57118be6071f80405083e71fad4edf999",
+  "guard_status": "finished",
+  "launcher_exit_code": 0,
+  "launcher_log_sha256": "193ebaeeb4a750cf977e700f42087e50722f1dffca0af6664bf8616d890afce3",
+  "manifest": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/execution/wrapper-negative-control.launch01.json",
+  "manifest_sha256": "3fbe9a391480698ec2fbadb8813ded78397008b32b47d28a0cc4d692c7d61c00",
+  "sampled_peak_rss_bytes": 1441792
+}

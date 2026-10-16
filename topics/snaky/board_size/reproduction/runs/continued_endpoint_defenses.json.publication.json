@@ -1,0 +1,37 @@
+{
+  "case": "continued_endpoint_defenses",
+  "checker": "verification/continued_endpoint_defenses.py",
+  "checker_exit_code": 0,
+  "checker_sha256": "cee9f08d63d4a0e8a28c18967da1917504d2e975a95b7310aa43cdf1c26ed187",
+  "created_utc": "2026-10-16T10:55:30.470789+00:00",
+  "execution_field_differences": {
+    "created_utc": {
+      "historical": "2026-10-16T08:57:51.184530+00:00",
+      "replay": "2026-10-16T10:55:30.466458+00:00"
+    },
+    "elapsed_seconds": {
+      "historical": 0.07136212475597858,
+      "replay": 0.059544000774621964
+    },
+    "process_cpu_seconds": {
+      "historical": 0.06400899999999998,
+      "replay": 0.059404
+    }
+  },
+  "historical_report": "verification/continued-endpoint-defenses-01.json",
+  "historical_report_sha256": "77095635e6b24b225506937d660d5be09e58467228e34969ecb04135e7cde80e",
+  "manifest_sha256": "cb8ffcf3e11043ff38b32044dcad443a5455cd00172ee8fe531905edb1c9e855",
+  "mathematical_difference": null,
+  "replay_report_sha256": "e349081a3692881c37dd2ba75ebba2bf98b37dc17ce947cddd89105b34fb1409",
+  "runner_sha256": "5eaf0dfeb2df49d2ad5dcde57392d005812156d5ba3305caf872d4db7b6e5a13",
+  "schema": "snaky-publication-finite-replay-v1",
+  "status": "publication_replay_mathematically_identical",
+  "text_pin_substitutions": [
+    {
+      "new_sha256": "6407075dc8928b43cebc3db3deaea8f62ed05e44c4eb691794a6d8c2a921f1fe",
+      "old_sha256": "533b089f64e772a2fa9d0c823705ee68bd09cab195e94369af49a7fd4aa84379",
+      "path": "browser/05-twentythird-final.txt",
+      "transformation": "last final mathematical response; browser chrome removed"
+    }
+  ]
+}

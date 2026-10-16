@@ -1,0 +1,24 @@
+{
+  "all_children_peak_rss_bytes": 48627712,
+  "child_exit_code": 0,
+  "child_log_sha256": "97984caf97836c111f9ef5e54feb2af8b9a47f4f17ca51a5f68cd47899246fa6",
+  "child_pid": 84530,
+  "elapsed_seconds": 0.8425343744456768,
+  "events": [],
+  "guard": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/execution/browser_nineteenth_physical12_05.guard01.json",
+  "guard_sha256": "7e412e627c1bf7712eb45808d2e6b405ae5e74046a6a19a961014616241a4496",
+  "guard_status": "finished",
+  "launcher_exit_code": 0,
+  "launcher_log_sha256": "3d4852d9d917ad88456752407e56e65026665cd0fff30d9f6ae1c40483354ca5",
+  "manifest": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/execution/browser_nineteenth_physical12_05.launch01.json",
+  "manifest_sha256": "c1c6ffee056371adb66f432dfc7c4dd4502c475e993ec3d4b779dff3d3c4f476",
+  "publication": {
+    "path": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/runs/browser_nineteenth_physical12_05.json.publication.json",
+    "sha256": "58abc6be8847349b49483dc3319c618b00897d01c0cf9dc40ff9cd6ced32972a"
+  },
+  "report": {
+    "path": "/Volumes/2tb/math/.worktrees/snaky-closeout-publication-20261016/topics/snaky/board_size/reproduction/runs/browser_nineteenth_physical12_05.json",
+    "sha256": "cbaedf6e9a51d447f9585f1bd6546bfbd43830c506eb0d163a17958b98fd1d68"
+  },
+  "sampled_peak_rss_bytes": 37945344
+}

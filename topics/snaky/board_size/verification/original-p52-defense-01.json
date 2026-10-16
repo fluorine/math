@@ -1,0 +1,4530 @@
+{
+  "P53_resolved": false,
+  "checker_sha256": "dc4881010c5150a9dff2421fc5a9899cef183f2d1e866ebfb5e14b6f922a93d1",
+  "created_utc": "2026-10-16T09:21:46.546599+00:00",
+  "defense": {
+    "blocked_histories": 13719,
+    "coverage_ledger": [
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          0,
+          1,
+          2,
+          3,
+          13,
+          14
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          0,
+          1,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            11,
+            21
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          0,
+          10,
+          11,
+          21,
+          31,
+          41
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            10,
+            20
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          0,
+          10,
+          20,
+          30,
+          31,
+          41
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            3,
+            4
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          1,
+          2,
+          3,
+          4,
+          10,
+          11
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            3,
+            4
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          1,
+          2,
+          3,
+          4,
+          14,
+          15
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          1,
+          2,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            10,
+            20
+          ],
+          [
+            30,
+            40
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          1,
+          10,
+          11,
+          20,
+          30,
+          40
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            12,
+            22
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          1,
+          11,
+          12,
+          22,
+          32,
+          42
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            11,
+            21
+          ],
+          [
+            30,
+            40
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          1,
+          11,
+          21,
+          30,
+          31,
+          40
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            11,
+            21
+          ],
+          [
+            31,
+            42
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          1,
+          11,
+          21,
+          31,
+          32,
+          42
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            3,
+            4
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          2,
+          3,
+          4,
+          5,
+          11,
+          12
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            3,
+            4
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          2,
+          3,
+          4,
+          5,
+          15,
+          16
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          2,
+          3,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            11,
+            21
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          2,
+          11,
+          12,
+          21,
+          31,
+          41
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            12,
+            22
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          2,
+          12,
+          22,
+          31,
+          32,
+          41
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          3,
+          4,
+          5,
+          6,
+          12,
+          13
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ]
+        ],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          3,
+          4,
+          5,
+          6,
+          16,
+          17
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            3,
+            4
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          3,
+          4,
+          10,
+          11,
+          12,
+          13
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            3,
+            4
+          ]
+        ],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          3,
+          4,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            12,
+            22
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          3,
+          12,
+          13,
+          22,
+          32,
+          42
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            5,
+            6
+          ],
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          4,
+          5,
+          6,
+          7,
+          13,
+          14
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            5,
+            6
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          4,
+          5,
+          6,
+          7,
+          17,
+          18
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          4,
+          5,
+          11,
+          12,
+          13,
+          14
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          4,
+          5,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            15,
+            25
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          4,
+          14,
+          15,
+          25,
+          35,
+          45
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          5,
+          6,
+          7,
+          8,
+          14,
+          15
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          5,
+          6,
+          7,
+          8,
+          18,
+          19
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            5,
+            6
+          ],
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          5,
+          6,
+          12,
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            5,
+            6
+          ]
+        ],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          5,
+          6,
+          16,
+          17,
+          18,
+          19
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            7,
+            8
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          6,
+          7,
+          8,
+          9,
+          15,
+          16
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          6,
+          7,
+          13,
+          14,
+          15,
+          16
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            15,
+            25
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          6,
+          15,
+          16,
+          25,
+          35,
+          45
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          6,
+          16,
+          17,
+          27,
+          37,
+          47
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            7,
+            8
+          ]
+        ],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          7,
+          8,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          8,
+          9,
+          15,
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            17,
+            18,
+            27
+          ]
+        ],
+        "target": [
+          8,
+          17,
+          18,
+          27,
+          37,
+          47
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            29,
+            49
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          8,
+          18,
+          19,
+          29,
+          39,
+          49
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          10,
+          11,
+          12,
+          13,
+          23,
+          24
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            11,
+            21
+          ],
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          10,
+          11,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            10,
+            20
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          10,
+          20,
+          21,
+          31,
+          41,
+          51
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            10,
+            20
+          ],
+          [
+            30,
+            40
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          10,
+          20,
+          30,
+          40,
+          41,
+          51
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            11,
+            21
+          ],
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          11,
+          12,
+          13,
+          14,
+          20,
+          21
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          11,
+          12,
+          13,
+          14,
+          24,
+          25
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            12,
+            22
+          ],
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          11,
+          12,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            11,
+            21
+          ],
+          [
+            30,
+            40
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          11,
+          20,
+          21,
+          30,
+          40,
+          50
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            11,
+            21
+          ],
+          [
+            41,
+            50
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          11,
+          21,
+          31,
+          40,
+          41,
+          50
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            12,
+            22
+          ],
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          12,
+          13,
+          14,
+          15,
+          21,
+          22
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ],
+          [
+            15,
+            25
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          12,
+          13,
+          14,
+          15,
+          25,
+          26
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          12,
+          13,
+          23,
+          24,
+          25,
+          26
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            12,
+            22
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          12,
+          21,
+          22,
+          31,
+          41,
+          51
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            12,
+            22
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          12,
+          22,
+          32,
+          41,
+          42,
+          51
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            12,
+            22
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          12,
+          22,
+          32,
+          42,
+          43,
+          53
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          13,
+          14,
+          15,
+          16,
+          22,
+          23
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [
+          [
+            16,
+            26,
+            27
+          ]
+        ],
+        "target": [
+          13,
+          14,
+          15,
+          16,
+          26,
+          27
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          13,
+          14,
+          20,
+          21,
+          22,
+          23
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            13,
+            14
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          13,
+          14,
+          24,
+          25,
+          26,
+          27
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          14,
+          15,
+          16,
+          17,
+          23,
+          24
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          14,
+          15,
+          16,
+          17,
+          27,
+          28
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          14,
+          15,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            15,
+            25
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          14,
+          15,
+          25,
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            15,
+            25
+          ]
+        ],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          15,
+          16,
+          17,
+          18,
+          24,
+          25
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          15,
+          16,
+          17,
+          18,
+          28,
+          29
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            15,
+            25
+          ],
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          15,
+          16,
+          22,
+          23,
+          24,
+          25
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            16,
+            26,
+            27
+          ]
+        ],
+        "target": [
+          15,
+          16,
+          26,
+          27,
+          28,
+          29
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            15,
+            25
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          15,
+          25,
+          35,
+          44,
+          45,
+          54
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          16,
+          17,
+          18,
+          19,
+          25,
+          26
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [
+          [
+            16,
+            17
+          ]
+        ],
+        "target": [
+          16,
+          17,
+          23,
+          24,
+          25,
+          26
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            16,
+            26,
+            27
+          ]
+        ],
+        "target": [
+          16,
+          26,
+          27,
+          37,
+          47,
+          57
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            17,
+            18,
+            27
+          ]
+        ],
+        "target": [
+          17,
+          18,
+          24,
+          25,
+          26,
+          27
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            18,
+            27,
+            28
+          ]
+        ],
+        "target": [
+          18,
+          19,
+          25,
+          26,
+          27,
+          28
+        ]
+      },
+      {
+        "exterior_pairs": [],
+        "reserved_guards": [
+          [
+            18,
+            27,
+            28
+          ]
+        ],
+        "target": [
+          18,
+          27,
+          28,
+          37,
+          47,
+          57
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            29,
+            49
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          18,
+          28,
+          29,
+          39,
+          49,
+          59
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          20,
+          30,
+          31,
+          41,
+          51,
+          61
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            30,
+            40
+          ],
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          20,
+          30,
+          40,
+          50,
+          51,
+          61
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          21,
+          22,
+          23,
+          24,
+          30,
+          31
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            30,
+            40
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          21,
+          30,
+          31,
+          40,
+          50,
+          60
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            41,
+            50
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          21,
+          31,
+          41,
+          50,
+          51,
+          60
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            23,
+            24
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          22,
+          23,
+          24,
+          25,
+          31,
+          32
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          22,
+          31,
+          32,
+          41,
+          51,
+          61
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            31,
+            42
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          30,
+          31,
+          41,
+          42,
+          43,
+          44
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            30,
+            40
+          ],
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          30,
+          40,
+          41,
+          51,
+          61,
+          71
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            30,
+            40
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          30,
+          40,
+          50,
+          60,
+          61,
+          71
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            31,
+            42
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          31,
+          32,
+          42,
+          43,
+          44,
+          45
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            41,
+            50
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          31,
+          40,
+          41,
+          50,
+          60,
+          70
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          31,
+          41,
+          51,
+          60,
+          61,
+          70
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ],
+          [
+            62,
+            72
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          31,
+          41,
+          51,
+          61,
+          62,
+          72
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          32,
+          41,
+          42,
+          51,
+          61,
+          71
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            63,
+            73
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          32,
+          42,
+          43,
+          53,
+          63,
+          73
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            66,
+            76
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          37,
+          47,
+          57,
+          66,
+          67,
+          76
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            68,
+            78
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          37,
+          47,
+          57,
+          67,
+          68,
+          78
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            68,
+            78
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          39,
+          49,
+          59,
+          68,
+          69,
+          78
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            53,
+            54
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          40,
+          41,
+          42,
+          43,
+          53,
+          54
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          40,
+          50,
+          51,
+          61,
+          71,
+          81
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            70,
+            71
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          40,
+          50,
+          60,
+          70,
+          71,
+          81
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            41,
+            50
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          41,
+          42,
+          43,
+          44,
+          50,
+          51
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            41,
+            50
+          ],
+          [
+            60,
+            80
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          41,
+          50,
+          51,
+          60,
+          70,
+          80
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ],
+          [
+            70,
+            71
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          41,
+          51,
+          61,
+          70,
+          71,
+          80
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          41,
+          51,
+          61,
+          71,
+          72,
+          82
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            63,
+            73
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          43,
+          53,
+          63,
+          72,
+          73,
+          82
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            53,
+            54
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          44,
+          45,
+          46,
+          47,
+          53,
+          54
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            53,
+            54
+          ],
+          [
+            63,
+            73
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          44,
+          53,
+          54,
+          63,
+          73,
+          83
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            59,
+            79
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          49,
+          59,
+          69,
+          78,
+          79,
+          88
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          50,
+          51,
+          61,
+          62,
+          63,
+          64
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            81,
+            91
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          50,
+          60,
+          61,
+          71,
+          81,
+          91
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            60,
+            80
+          ],
+          [
+            81,
+            91
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          50,
+          60,
+          70,
+          80,
+          81,
+          91
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ],
+          [
+            60,
+            80
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          51,
+          60,
+          61,
+          70,
+          80,
+          90
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ],
+          [
+            62,
+            72
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          51,
+          61,
+          62,
+          72,
+          82,
+          92
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          51,
+          61,
+          71,
+          80,
+          81,
+          90
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            51,
+            61
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          51,
+          61,
+          71,
+          81,
+          82,
+          92
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            53,
+            54
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          53,
+          54,
+          60,
+          61,
+          62,
+          63
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            53,
+            54
+          ],
+          [
+            64,
+            65
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          53,
+          54,
+          64,
+          65,
+          66,
+          67
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            62,
+            72
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          53,
+          62,
+          63,
+          72,
+          82,
+          92
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            63,
+            73
+          ],
+          [
+            82,
+            83
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          53,
+          63,
+          73,
+          82,
+          83,
+          92
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            63,
+            73
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          54,
+          63,
+          64,
+          73,
+          83,
+          93
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            64,
+            65
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          54,
+          64,
+          65,
+          75,
+          85,
+          95
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            66,
+            76
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          57,
+          66,
+          67,
+          76,
+          86,
+          96
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            68,
+            78
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          57,
+          67,
+          68,
+          78,
+          88,
+          98
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            68,
+            78
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          59,
+          68,
+          69,
+          78,
+          88,
+          98
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            59,
+            79
+          ],
+          [
+            88,
+            89
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          59,
+          69,
+          79,
+          88,
+          89,
+          98
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            70,
+            71
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          61,
+          62,
+          63,
+          64,
+          70,
+          71
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            62,
+            72
+          ],
+          [
+            64,
+            65
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          62,
+          63,
+          64,
+          65,
+          71,
+          72
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            64,
+            65
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          62,
+          63,
+          64,
+          65,
+          75,
+          76
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            63,
+            73
+          ],
+          [
+            64,
+            65
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          63,
+          64,
+          65,
+          66,
+          72,
+          73
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            63,
+            73
+          ],
+          [
+            70,
+            71
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          63,
+          64,
+          70,
+          71,
+          72,
+          73
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            68,
+            78
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          65,
+          66,
+          67,
+          68,
+          78,
+          79
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            66,
+            76
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          66,
+          67,
+          68,
+          69,
+          75,
+          76
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            70,
+            71
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          70,
+          71,
+          72,
+          73,
+          83,
+          84
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            70,
+            71
+          ],
+          [
+            82,
+            83
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          70,
+          71,
+          81,
+          82,
+          83,
+          84
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            82,
+            83
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          71,
+          72,
+          82,
+          83,
+          84,
+          85
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            85,
+            86
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          72,
+          73,
+          83,
+          84,
+          85,
+          86
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            82,
+            83
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          75,
+          76,
+          82,
+          83,
+          84,
+          85
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            88,
+            89
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          75,
+          76,
+          86,
+          87,
+          88,
+          89
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            85,
+            86
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          78,
+          79,
+          85,
+          86,
+          87,
+          88
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            81,
+            91
+          ],
+          [
+            82,
+            83
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          81,
+          82,
+          83,
+          84,
+          90,
+          91
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            82,
+            83
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          82,
+          83,
+          84,
+          85,
+          91,
+          92
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            82,
+            83
+          ],
+          [
+            95,
+            96
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          82,
+          83,
+          84,
+          85,
+          95,
+          96
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            85,
+            86
+          ],
+          [
+            92,
+            93
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          83,
+          84,
+          85,
+          86,
+          92,
+          93
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            85,
+            86
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          83,
+          84,
+          85,
+          86,
+          96,
+          97
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            92,
+            93
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          83,
+          84,
+          90,
+          91,
+          92,
+          93
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            85,
+            86
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          84,
+          85,
+          86,
+          87,
+          97,
+          98
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            95,
+            96
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          84,
+          85,
+          95,
+          96,
+          97,
+          98
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            85,
+            86
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          85,
+          86,
+          87,
+          88,
+          98,
+          99
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            85,
+            86
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          85,
+          86,
+          96,
+          97,
+          98,
+          99
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            88,
+            89
+          ],
+          [
+            95,
+            96
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          86,
+          87,
+          88,
+          89,
+          95,
+          96
+        ]
+      },
+      {
+        "exterior_pairs": [
+          [
+            88,
+            89
+          ],
+          [
+            95,
+            96
+          ]
+        ],
+        "reserved_guards": [],
+        "target": [
+          88,
+          89,
+          95,
+          96,
+          97,
+          98
+        ]
+      }
+    ],
+    "covering_pairs": [
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        11,
+        21
+      ],
+      [
+        12,
+        22
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        15,
+        25
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        29,
+        49
+      ],
+      [
+        30,
+        40
+      ],
+      [
+        31,
+        42
+      ],
+      [
+        41,
+        50
+      ],
+      [
+        51,
+        61
+      ],
+      [
+        53,
+        54
+      ],
+      [
+        59,
+        79
+      ],
+      [
+        60,
+        80
+      ],
+      [
+        62,
+        72
+      ],
+      [
+        63,
+        73
+      ],
+      [
+        64,
+        65
+      ],
+      [
+        66,
+        76
+      ],
+      [
+        68,
+        78
+      ],
+      [
+        70,
+        71
+      ],
+      [
+        81,
+        91
+      ],
+      [
+        82,
+        83
+      ],
+      [
+        85,
+        86
+      ],
+      [
+        88,
+        89
+      ],
+      [
+        92,
+        93
+      ],
+      [
+        95,
+        96
+      ]
+    ],
+    "exhaustion": [
+      {
+        "after_switch_free": 4,
+        "before_switch_free": 6,
+        "outside_pairs_left": 0
+      },
+      {
+        "after_switch_free": 6,
+        "before_switch_free": 8,
+        "outside_pairs_left": 1
+      },
+      {
+        "after_switch_free": 8,
+        "before_switch_free": 10,
+        "outside_pairs_left": 2
+      },
+      {
+        "after_switch_free": 10,
+        "before_switch_free": 12,
+        "outside_pairs_left": 3
+      },
+      {
+        "after_switch_free": 12,
+        "before_switch_free": 14,
+        "outside_pairs_left": 4
+      },
+      {
+        "after_switch_free": 14,
+        "before_switch_free": 16,
+        "outside_pairs_left": 5
+      },
+      {
+        "after_switch_free": 16,
+        "before_switch_free": 18,
+        "outside_pairs_left": 6
+      },
+      {
+        "after_switch_free": 18,
+        "before_switch_free": 20,
+        "outside_pairs_left": 7
+      },
+      {
+        "after_switch_free": 20,
+        "before_switch_free": 22,
+        "outside_pairs_left": 8
+      },
+      {
+        "after_switch_free": 22,
+        "before_switch_free": 24,
+        "outside_pairs_left": 9
+      },
+      {
+        "after_switch_free": 24,
+        "before_switch_free": 26,
+        "outside_pairs_left": 10
+      },
+      {
+        "after_switch_free": 26,
+        "before_switch_free": 28,
+        "outside_pairs_left": 11
+      },
+      {
+        "after_switch_free": 28,
+        "before_switch_free": 30,
+        "outside_pairs_left": 12
+      },
+      {
+        "after_switch_free": 30,
+        "before_switch_free": 32,
+        "outside_pairs_left": 13
+      },
+      {
+        "after_switch_free": 32,
+        "before_switch_free": 34,
+        "outside_pairs_left": 14
+      },
+      {
+        "after_switch_free": 34,
+        "before_switch_free": 36,
+        "outside_pairs_left": 15
+      },
+      {
+        "after_switch_free": 36,
+        "before_switch_free": 38,
+        "outside_pairs_left": 16
+      },
+      {
+        "after_switch_free": 38,
+        "before_switch_free": 40,
+        "outside_pairs_left": 17
+      },
+      {
+        "after_switch_free": 40,
+        "before_switch_free": 42,
+        "outside_pairs_left": 18
+      },
+      {
+        "after_switch_free": 42,
+        "before_switch_free": 44,
+        "outside_pairs_left": 19
+      },
+      {
+        "after_switch_free": 44,
+        "before_switch_free": 46,
+        "outside_pairs_left": 20
+      },
+      {
+        "after_switch_free": 46,
+        "before_switch_free": 48,
+        "outside_pairs_left": 21
+      },
+      {
+        "after_switch_free": 48,
+        "before_switch_free": 50,
+        "outside_pairs_left": 22
+      },
+      {
+        "after_switch_free": 50,
+        "before_switch_free": 52,
+        "outside_pairs_left": 23
+      },
+      {
+        "after_switch_free": 52,
+        "before_switch_free": 54,
+        "outside_pairs_left": 24
+      },
+      {
+        "after_switch_free": 54,
+        "before_switch_free": 56,
+        "outside_pairs_left": 25
+      },
+      {
+        "after_switch_free": 56,
+        "before_switch_free": 58,
+        "outside_pairs_left": 26
+      },
+      {
+        "after_switch_free": 58,
+        "before_switch_free": 60,
+        "outside_pairs_left": 27
+      },
+      {
+        "after_switch_free": 60,
+        "before_switch_free": 62,
+        "outside_pairs_left": 28
+      },
+      {
+        "after_switch_free": 62,
+        "before_switch_free": 64,
+        "outside_pairs_left": 29
+      },
+      {
+        "after_switch_free": 64,
+        "before_switch_free": 66,
+        "outside_pairs_left": 30
+      },
+      {
+        "after_switch_free": 66,
+        "before_switch_free": 68,
+        "outside_pairs_left": 31
+      },
+      {
+        "after_switch_free": 68,
+        "before_switch_free": 70,
+        "outside_pairs_left": 32
+      },
+      {
+        "after_switch_free": 70,
+        "before_switch_free": 72,
+        "outside_pairs_left": 33
+      },
+      {
+        "after_switch_free": 72,
+        "before_switch_free": 74,
+        "outside_pairs_left": 34
+      },
+      {
+        "after_switch_free": 74,
+        "before_switch_free": 76,
+        "outside_pairs_left": 35
+      },
+      {
+        "after_switch_free": 76,
+        "before_switch_free": 78,
+        "outside_pairs_left": 36
+      }
+    ],
+    "first_entries": [
+      {
+        "breaker": 1,
+        "kind": "mate_and_wait",
+        "maker": 0
+      },
+      {
+        "breaker": 0,
+        "kind": "mate_and_wait",
+        "maker": 1
+      },
+      {
+        "breaker": 9,
+        "kind": "mate_and_wait",
+        "maker": 2
+      },
+      {
+        "breaker": 4,
+        "kind": "mate_and_wait",
+        "maker": 3
+      },
+      {
+        "breaker": 3,
+        "kind": "mate_and_wait",
+        "maker": 4
+      },
+      {
+        "breaker": 6,
+        "kind": "mate_and_wait",
+        "maker": 5
+      },
+      {
+        "breaker": 5,
+        "kind": "mate_and_wait",
+        "maker": 6
+      },
+      {
+        "breaker": 8,
+        "kind": "mate_and_wait",
+        "maker": 7
+      },
+      {
+        "breaker": 7,
+        "kind": "mate_and_wait",
+        "maker": 8
+      },
+      {
+        "breaker": 2,
+        "kind": "mate_and_wait",
+        "maker": 9
+      },
+      {
+        "breaker": 20,
+        "kind": "mate_and_wait",
+        "maker": 10
+      },
+      {
+        "breaker": 21,
+        "kind": "mate_and_wait",
+        "maker": 11
+      },
+      {
+        "breaker": 22,
+        "kind": "mate_and_wait",
+        "maker": 12
+      },
+      {
+        "breaker": 14,
+        "kind": "mate_and_wait",
+        "maker": 13
+      },
+      {
+        "breaker": 13,
+        "kind": "mate_and_wait",
+        "maker": 14
+      },
+      {
+        "breaker": 25,
+        "kind": "mate_and_wait",
+        "maker": 15
+      },
+      {
+        "breaker": 17,
+        "kind": "switch",
+        "live_targets": 130,
+        "maker": 16,
+        "pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            11,
+            21
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            23,
+            24
+          ],
+          [
+            29,
+            49
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            31,
+            42
+          ],
+          [
+            41,
+            50
+          ],
+          [
+            51,
+            61
+          ],
+          [
+            53,
+            54
+          ],
+          [
+            59,
+            79
+          ],
+          [
+            60,
+            80
+          ],
+          [
+            62,
+            72
+          ],
+          [
+            63,
+            73
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            66,
+            76
+          ],
+          [
+            68,
+            78
+          ],
+          [
+            70,
+            71
+          ],
+          [
+            81,
+            91
+          ],
+          [
+            82,
+            83
+          ],
+          [
+            85,
+            86
+          ],
+          [
+            88,
+            89
+          ],
+          [
+            92,
+            93
+          ],
+          [
+            95,
+            96
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            19,
+            35
+          ],
+          [
+            39,
+            48
+          ],
+          [
+            69,
+            87
+          ],
+          [
+            90,
+            97
+          ],
+          [
+            98,
+            99
+          ],
+          [
+            26,
+            27
+          ],
+          [
+            18,
+            28
+          ]
+        ]
+      },
+      {
+        "breaker": 16,
+        "kind": "switch",
+        "live_targets": 123,
+        "maker": 17,
+        "pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            11,
+            21
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            23,
+            24
+          ],
+          [
+            29,
+            49
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            31,
+            42
+          ],
+          [
+            41,
+            50
+          ],
+          [
+            51,
+            61
+          ],
+          [
+            53,
+            54
+          ],
+          [
+            59,
+            79
+          ],
+          [
+            60,
+            80
+          ],
+          [
+            62,
+            72
+          ],
+          [
+            63,
+            73
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            66,
+            76
+          ],
+          [
+            68,
+            78
+          ],
+          [
+            70,
+            71
+          ],
+          [
+            81,
+            91
+          ],
+          [
+            82,
+            83
+          ],
+          [
+            85,
+            86
+          ],
+          [
+            88,
+            89
+          ],
+          [
+            92,
+            93
+          ],
+          [
+            95,
+            96
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            19,
+            35
+          ],
+          [
+            39,
+            48
+          ],
+          [
+            69,
+            87
+          ],
+          [
+            90,
+            97
+          ],
+          [
+            98,
+            99
+          ],
+          [
+            18,
+            27
+          ],
+          [
+            26,
+            28
+          ]
+        ]
+      },
+      {
+        "breaker": 27,
+        "kind": "switch",
+        "live_targets": 135,
+        "maker": 18,
+        "pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            11,
+            21
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            23,
+            24
+          ],
+          [
+            29,
+            49
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            31,
+            42
+          ],
+          [
+            41,
+            50
+          ],
+          [
+            51,
+            61
+          ],
+          [
+            53,
+            54
+          ],
+          [
+            59,
+            79
+          ],
+          [
+            60,
+            80
+          ],
+          [
+            62,
+            72
+          ],
+          [
+            63,
+            73
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            66,
+            76
+          ],
+          [
+            68,
+            78
+          ],
+          [
+            70,
+            71
+          ],
+          [
+            81,
+            91
+          ],
+          [
+            82,
+            83
+          ],
+          [
+            85,
+            86
+          ],
+          [
+            88,
+            89
+          ],
+          [
+            92,
+            93
+          ],
+          [
+            95,
+            96
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            19,
+            35
+          ],
+          [
+            39,
+            48
+          ],
+          [
+            69,
+            87
+          ],
+          [
+            90,
+            97
+          ],
+          [
+            98,
+            99
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            26,
+            28
+          ]
+        ]
+      },
+      {
+        "breaker": 35,
+        "kind": "mate_and_wait",
+        "maker": 19
+      },
+      {
+        "breaker": 10,
+        "kind": "mate_and_wait",
+        "maker": 20
+      },
+      {
+        "breaker": 11,
+        "kind": "mate_and_wait",
+        "maker": 21
+      },
+      {
+        "breaker": 12,
+        "kind": "mate_and_wait",
+        "maker": 22
+      },
+      {
+        "breaker": 24,
+        "kind": "mate_and_wait",
+        "maker": 23
+      },
+      {
+        "breaker": 23,
+        "kind": "mate_and_wait",
+        "maker": 24
+      },
+      {
+        "breaker": 15,
+        "kind": "mate_and_wait",
+        "maker": 25
+      },
+      {
+        "breaker": 27,
+        "kind": "switch",
+        "live_targets": 135,
+        "maker": 26,
+        "pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            11,
+            21
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            23,
+            24
+          ],
+          [
+            29,
+            49
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            31,
+            42
+          ],
+          [
+            41,
+            50
+          ],
+          [
+            51,
+            61
+          ],
+          [
+            53,
+            54
+          ],
+          [
+            59,
+            79
+          ],
+          [
+            60,
+            80
+          ],
+          [
+            62,
+            72
+          ],
+          [
+            63,
+            73
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            66,
+            76
+          ],
+          [
+            68,
+            78
+          ],
+          [
+            70,
+            71
+          ],
+          [
+            81,
+            91
+          ],
+          [
+            82,
+            83
+          ],
+          [
+            85,
+            86
+          ],
+          [
+            88,
+            89
+          ],
+          [
+            92,
+            93
+          ],
+          [
+            95,
+            96
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            19,
+            35
+          ],
+          [
+            39,
+            48
+          ],
+          [
+            69,
+            87
+          ],
+          [
+            90,
+            97
+          ],
+          [
+            98,
+            99
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            18,
+            28
+          ]
+        ]
+      },
+      {
+        "breaker": 17,
+        "kind": "switch",
+        "live_targets": 130,
+        "maker": 27,
+        "pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            11,
+            21
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            23,
+            24
+          ],
+          [
+            29,
+            49
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            31,
+            42
+          ],
+          [
+            41,
+            50
+          ],
+          [
+            51,
+            61
+          ],
+          [
+            53,
+            54
+          ],
+          [
+            59,
+            79
+          ],
+          [
+            60,
+            80
+          ],
+          [
+            62,
+            72
+          ],
+          [
+            63,
+            73
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            66,
+            76
+          ],
+          [
+            68,
+            78
+          ],
+          [
+            70,
+            71
+          ],
+          [
+            81,
+            91
+          ],
+          [
+            82,
+            83
+          ],
+          [
+            85,
+            86
+          ],
+          [
+            88,
+            89
+          ],
+          [
+            92,
+            93
+          ],
+          [
+            95,
+            96
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            19,
+            35
+          ],
+          [
+            39,
+            48
+          ],
+          [
+            69,
+            87
+          ],
+          [
+            90,
+            97
+          ],
+          [
+            98,
+            99
+          ],
+          [
+            16,
+            26
+          ],
+          [
+            18,
+            28
+          ]
+        ]
+      },
+      {
+        "breaker": 27,
+        "kind": "switch",
+        "live_targets": 135,
+        "maker": 28,
+        "pairs": [
+          [
+            3,
+            4
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            10,
+            20
+          ],
+          [
+            11,
+            21
+          ],
+          [
+            12,
+            22
+          ],
+          [
+            13,
+            14
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            23,
+            24
+          ],
+          [
+            29,
+            49
+          ],
+          [
+            30,
+            40
+          ],
+          [
+            31,
+            42
+          ],
+          [
+            41,
+            50
+          ],
+          [
+            51,
+            61
+          ],
+          [
+            53,
+            54
+          ],
+          [
+            59,
+            79
+          ],
+          [
+            60,
+            80
+          ],
+          [
+            62,
+            72
+          ],
+          [
+            63,
+            73
+          ],
+          [
+            64,
+            65
+          ],
+          [
+            66,
+            76
+          ],
+          [
+            68,
+            78
+          ],
+          [
+            70,
+            71
+          ],
+          [
+            81,
+            91
+          ],
+          [
+            82,
+            83
+          ],
+          [
+            85,
+            86
+          ],
+          [
+            88,
+            89
+          ],
+          [
+            92,
+            93
+          ],
+          [
+            95,
+            96
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            9
+          ],
+          [
+            19,
+            35
+          ],
+          [
+            39,
+            48
+          ],
+          [
+            69,
+            87
+          ],
+          [
+            90,
+            97
+          ],
+          [
+            98,
+            99
+          ],
+          [
+            16,
+            17
+          ],
+          [
+            18,
+            26
+          ]
+        ]
+      },
+      {
+        "breaker": 49,
+        "kind": "mate_and_wait",
+        "maker": 29
+      },
+      {
+        "breaker": 40,
+        "kind": "mate_and_wait",
+        "maker": 30
+      },
+      {
+        "breaker": 42,
+        "kind": "mate_and_wait",
+        "maker": 31
+      },
+      {
+        "breaker": 19,
+        "kind": "mate_and_wait",
+        "maker": 35
+      },
+      {
+        "breaker": 48,
+        "kind": "mate_and_wait",
+        "maker": 39
+      },
+      {
+        "breaker": 30,
+        "kind": "mate_and_wait",
+        "maker": 40
+      },
+      {
+        "breaker": 50,
+        "kind": "mate_and_wait",
+        "maker": 41
+      },
+      {
+        "breaker": 31,
+        "kind": "mate_and_wait",
+        "maker": 42
+      },
+      {
+        "breaker": 39,
+        "kind": "mate_and_wait",
+        "maker": 48
+      },
+      {
+        "breaker": 29,
+        "kind": "mate_and_wait",
+        "maker": 49
+      },
+      {
+        "breaker": 41,
+        "kind": "mate_and_wait",
+        "maker": 50
+      },
+      {
+        "breaker": 61,
+        "kind": "mate_and_wait",
+        "maker": 51
+      },
+      {
+        "breaker": 54,
+        "kind": "mate_and_wait",
+        "maker": 53
+      },
+      {
+        "breaker": 53,
+        "kind": "mate_and_wait",
+        "maker": 54
+      },
+      {
+        "breaker": 79,
+        "kind": "mate_and_wait",
+        "maker": 59
+      },
+      {
+        "breaker": 80,
+        "kind": "mate_and_wait",
+        "maker": 60
+      },
+      {
+        "breaker": 51,
+        "kind": "mate_and_wait",
+        "maker": 61
+      },
+      {
+        "breaker": 72,
+        "kind": "mate_and_wait",
+        "maker": 62
+      },
+      {
+        "breaker": 73,
+        "kind": "mate_and_wait",
+        "maker": 63
+      },
+      {
+        "breaker": 65,
+        "kind": "mate_and_wait",
+        "maker": 64
+      },
+      {
+        "breaker": 64,
+        "kind": "mate_and_wait",
+        "maker": 65
+      },
+      {
+        "breaker": 76,
+        "kind": "mate_and_wait",
+        "maker": 66
+      },
+      {
+        "breaker": 78,
+        "kind": "mate_and_wait",
+        "maker": 68
+      },
+      {
+        "breaker": 87,
+        "kind": "mate_and_wait",
+        "maker": 69
+      },
+      {
+        "breaker": 71,
+        "kind": "mate_and_wait",
+        "maker": 70
+      },
+      {
+        "breaker": 70,
+        "kind": "mate_and_wait",
+        "maker": 71
+      },
+      {
+        "breaker": 62,
+        "kind": "mate_and_wait",
+        "maker": 72
+      },
+      {
+        "breaker": 63,
+        "kind": "mate_and_wait",
+        "maker": 73
+      },
+      {
+        "breaker": 66,
+        "kind": "mate_and_wait",
+        "maker": 76
+      },
+      {
+        "breaker": 68,
+        "kind": "mate_and_wait",
+        "maker": 78
+      },
+      {
+        "breaker": 59,
+        "kind": "mate_and_wait",
+        "maker": 79
+      },
+      {
+        "breaker": 60,
+        "kind": "mate_and_wait",
+        "maker": 80
+      },
+      {
+        "breaker": 91,
+        "kind": "mate_and_wait",
+        "maker": 81
+      },
+      {
+        "breaker": 83,
+        "kind": "mate_and_wait",
+        "maker": 82
+      },
+      {
+        "breaker": 82,
+        "kind": "mate_and_wait",
+        "maker": 83
+      },
+      {
+        "breaker": 86,
+        "kind": "mate_and_wait",
+        "maker": 85
+      },
+      {
+        "breaker": 85,
+        "kind": "mate_and_wait",
+        "maker": 86
+      },
+      {
+        "breaker": 69,
+        "kind": "mate_and_wait",
+        "maker": 87
+      },
+      {
+        "breaker": 89,
+        "kind": "mate_and_wait",
+        "maker": 88
+      },
+      {
+        "breaker": 88,
+        "kind": "mate_and_wait",
+        "maker": 89
+      },
+      {
+        "breaker": 97,
+        "kind": "mate_and_wait",
+        "maker": 90
+      },
+      {
+        "breaker": 81,
+        "kind": "mate_and_wait",
+        "maker": 91
+      },
+      {
+        "breaker": 93,
+        "kind": "mate_and_wait",
+        "maker": 92
+      },
+      {
+        "breaker": 92,
+        "kind": "mate_and_wait",
+        "maker": 93
+      },
+      {
+        "breaker": 96,
+        "kind": "mate_and_wait",
+        "maker": 95
+      },
+      {
+        "breaker": 95,
+        "kind": "mate_and_wait",
+        "maker": 96
+      },
+      {
+        "breaker": 90,
+        "kind": "mate_and_wait",
+        "maker": 97
+      },
+      {
+        "breaker": 99,
+        "kind": "mate_and_wait",
+        "maker": 98
+      },
+      {
+        "breaker": 98,
+        "kind": "mate_and_wait",
+        "maker": 99
+      }
+    ],
+    "fresh_cells": 78,
+    "history_sha256": "4d30473bee463b89119a554c98014b28d0e8cb656cd32e9d28a695518e911125",
+    "live_history_switch_checks": 6582,
+    "live_targets": 146,
+    "outside_perfect_matching": [
+      [
+        3,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        10,
+        20
+      ],
+      [
+        11,
+        21
+      ],
+      [
+        12,
+        22
+      ],
+      [
+        13,
+        14
+      ],
+      [
+        15,
+        25
+      ],
+      [
+        23,
+        24
+      ],
+      [
+        29,
+        49
+      ],
+      [
+        30,
+        40
+      ],
+      [
+        31,
+        42
+      ],
+      [
+        41,
+        50
+      ],
+      [
+        51,
+        61
+      ],
+      [
+        53,
+        54
+      ],
+      [
+        59,
+        79
+      ],
+      [
+        60,
+        80
+      ],
+      [
+        62,
+        72
+      ],
+      [
+        63,
+        73
+      ],
+      [
+        64,
+        65
+      ],
+      [
+        66,
+        76
+      ],
+      [
+        68,
+        78
+      ],
+      [
+        70,
+        71
+      ],
+      [
+        81,
+        91
+      ],
+      [
+        82,
+        83
+      ],
+      [
+        85,
+        86
+      ],
+      [
+        88,
+        89
+      ],
+      [
+        92,
+        93
+      ],
+      [
+        95,
+        96
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        19,
+        35
+      ],
+      [
+        39,
+        48
+      ],
+      [
+        69,
+        87
+      ],
+      [
+        90,
+        97
+      ],
+      [
+        98,
+        99
+      ]
+    ],
+    "state": {
+      "breaker": [
+        33,
+        34,
+        36,
+        38,
+        52,
+        55,
+        56,
+        58,
+        74,
+        77,
+        94
+      ],
+      "maker": [
+        32,
+        37,
+        43,
+        44,
+        45,
+        46,
+        47,
+        57,
+        67,
+        75,
+        84
+      ],
+      "turn": "Maker"
+    },
+    "targetwise_histories": 14816
+  },
+  "earlier_parent_resolved": false,
+  "elapsed_seconds": 0.07725079078227282,
+  "empty_board_result": false,
+  "input_sha256": {
+    "browser/05-twentyfourth-final-main.txt": "29c714362a9554d4a65610a0e43665905cc82ebd69248acd7b27ed5a2e4e12f0",
+    "browser/05-twentyfourth-final.txt": "a88958d771391867ec192d388ca6f709ad70c9d198afa93fee93b3f944b404f5",
+    "verification/browser_twentyfirst_independent05.json": "56d03252b70a863dd35137507b7e594e0d62af0f05854365a814aa73ab5ef45b",
+    "verification/continued_endpoint_defenses.py": "cee9f08d63d4a0e8a28c18967da1917504d2e975a95b7310aa43cdf1c26ed187"
+  },
+  "literal_targets": 432,
+  "negative_controls": [
+    "lost_old_maker",
+    "lost_old_breaker",
+    "wrong_original_branch",
+    "missing_switch_row",
+    "stale_switch_reply",
+    "lost_local_guard",
+    "missing_outside_mate",
+    "pair_intrudes_reserved_domain",
+    "overlapping_pair",
+    "dropped_pair_(13, 14)",
+    "dropped_pair_(31, 42)",
+    "dropped_pair_(41, 50)",
+    "lost_reserved_guards"
+  ],
+  "process_cpu_seconds": 0.075924,
+  "schema": "snaky-original-P52-defense-v1",
+  "status": "verified_complete_original_P52_defense"
+}

@@ -1,0 +1,40 @@
+{
+  "status": "independently_verified_conditional_tactic",
+  "certificate": "topics/snaky/board_size/cover-empty14-d8-b16.cards.txt",
+  "certificate_sha256": "0562d22136cd204c985f6b9530cefba3d16185ca3448f81ef8c509892428e6d3",
+  "verifier_sha256": "7c79e9c5c6031125f0e606349b94c34e378c087d7405afd5ec86c6e3c7068e39",
+  "ordinary_verifier_sha256": "04bafdca67b5211139b73cb547e33e8261750578bfc729cdd9f1587d84295a10",
+  "maker": [
+    [
+      7,
+      7
+    ]
+  ],
+  "breaker": [
+    [
+      6,
+      6
+    ]
+  ],
+  "board": [
+    1,
+    1,
+    14,
+    14
+  ],
+  "already_winning": false,
+  "root_height": 19,
+  "root_required": [
+    [
+      7,
+      7
+    ]
+  ],
+  "root_support_cells": 134,
+  "cards_checked": 28721,
+  "all_library_cards_checked": true,
+  "inside_reply_checks": 394902,
+  "empty_board_result": false,
+  "lean_kernel_checked": false,
+  "elapsed_seconds": 12.406310792000001
+}

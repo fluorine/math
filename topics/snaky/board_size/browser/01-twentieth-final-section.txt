@@ -1,0 +1,2266 @@
+Result: an all-length obstruction covering the upper eleven rows
+
+I have not closed the 
+𝐵
+(
+5
+,
+3
+)
+B(5,3) branch with a Maker win. The new result is a 41-pair counterplay certificate at that exact 
+27
++
+27
+27+27 state. It covers every live Snaky contained in
+
+𝑈
+=
+[
+1
+,
+14
+]
+×
+[
+1
+,
+11
+]
+.
+U=[1,14]×[1,11].
+
+The certificate also covers every full-board Snaky having at most one cell below 
+𝑈
+U. Consequently:
+
+Against this legal pairing controller, a Maker-winning witness must contain at least two newly acquired cells in rows 12–14. Rearranging the northern acquisition, reversing its forcing arrow, or changing direction through the retained right-hand stones cannot close the branch without entering that bottom strip.
+
+This is not a complete physical Breaker defense. Three explicit uncovered witnesses appear below. The pairing and its coverage argument are hand-derived proposals for independent local checking.
+
+1. Exact position to which the certificate applies
+
+Let 
+𝑀
+∗
+,
+𝐵
+∗
+M
+∗
+	​
+
+,B
+∗
+	​
+
+ be the supplied first-stage state:
+
+𝑀
+∗
+=
+𝑀
+𝑅
+g
+a
+p
+∪
+{
+(
+6
+,
+3
+)
+}
+,
+𝐵
+∗
+=
+𝐵
+𝑅
+g
+a
+p
+∪
+{
+(
+5
+,
+3
+)
+}
+.
+M
+∗
+	​
+
+=M
+R
+gap
+	​
+
+	​
+
+∪{(6,3)},B
+∗
+	​
+
+=B
+R
+gap
+	​
+
+	​
+
+∪{(5,3)}.
+
+Maker is to move at 
+27
++
+27
+27+27. Every original stone is retained. In particular, both lower anchors
+
+(
+3
+,
+11
+)
+,
+(
+9
+,
+11
+)
+(3,11),(9,11)
+
+are included in the protected region; this is not a certificate obtained by ignoring those stones.
+
+All endpoints of the following pairs are free at this exact state.
+
+2. The 41 fresh disjoint pairs
+
+Pairs are numbered by their order in this array.
+
+JSON
+[
+  [[2,1],[3,1]],
+  [[5,1],[6,1]],
+  [[8,1],[9,1]],
+  [[10,1],[11,1]],
+  [[12,1],[13,1]],
+
+  [[1,2],[2,2]],
+  [[3,2],[4,2]],
+  [[5,2],[6,2]],
+  [[8,2],[9,2]],
+  [[12,2],[13,2]],
+
+  [[2,3],[3,3]],
+  [[12,3],[13,3]],
+
+  [[10,2],[10,3]],
+  [[11,2],[11,3]],
+  [[9,4],[10,4]],
+
+  [[1,4],[1,5]],
+  [[2,4],[2,5]],
+  [[3,4],[3,5]],
+  [[12,4],[12,5]],
+  [[13,4],[13,5]],
+  [[14,4],[14,5]],
+
+  [[13,6],[14,6]],
+
+  [[1,6],[1,7]],
+  [[2,6],[2,7]],
+  [[12,6],[12,7]],
+
+  [[13,7],[13,8]],
+  [[14,7],[14,8]],
+
+  [[2,8],[3,8]],
+  [[11,8],[12,8]],
+
+  [[1,9],[1,10]],
+  [[2,9],[2,10]],
+  [[12,9],[12,10]],
+
+  [[13,9],[13,11]],
+  [[14,9],[14,11]],
+
+  [[6,10],[7,10]],
+  [[13,10],[14,10]],
+
+  [[1,11],[2,11]],
+  [[4,11],[5,11]],
+  [[6,11],[7,11]],
+  [[8,11],[10,11]],
+  [[11,11],[12,11]]
+]
+
+These use 82 distinct free cells. For an additional endpoint check, the free cells of 
+𝑈
+U not used by the matching are exactly:
+
+Row	Unpaired free columns
+1	
+1
+,
+4
+,
+7
+,
+14
+1,4,7,14
+2	
+14
+14
+3	
+1
+,
+4
+,
+8
+,
+14
+1,4,8,14
+5	
+8
+8
+6	
+3
+,
+6
+3,6
+8	
+1
+1
+10	
+3
+,
+5
+,
+8
+,
+9
+,
+11
+3,5,8,9,11
+
+There are 18 such cells. Thus the 100 free cells of 
+𝑈
+U split into the 82 paired endpoints and these 18 unpaired cells.
+
+Ordinary physical response rule
+
+After each Maker claim, provided Maker has not already won, Breaker takes its paired mate when that mate is free. Otherwise Breaker takes the lexicographically least remaining free physical cell, ordering by 
+𝑥
+x, then 
+𝑦
+y.
+
+Every filler is retained in the actual Breaker set. No outside move is treated as a pass.
+
+After every Breaker turn, any listed pair containing a Maker stone also contains a Breaker stone. Hence Maker cannot complete a listed pair, including by an immediate winning claim before exhaustion. Additional Breaker fillers cannot invalidate that protection.
+
+3. Coverage proof for every horizontal-body Snaky in 
+𝑈
+U
+
+Write
+
+𝑅
+𝑦
+(
+𝑎
+)
+=
+{
+(
+𝑎
+,
+𝑦
+)
+,
+(
+𝑎
++
+1
+,
+𝑦
+)
+,
+(
+𝑎
++
+2
+,
+𝑦
+)
+,
+(
+𝑎
++
+3
+,
+𝑦
+)
+}
+.
+R
+y
+	​
+
+(a)={(a,y),(a+1,y),(a+2,y),(a+3,y)}.
+
+For a horizontal body 
+𝑅
+𝑦
+(
+𝑎
+)
+R
+y
+	​
+
+(a), its possible hooks are
+
+{
+(
+𝑎
+−
+1
+,
+𝑦
+±
+1
+)
+,
+(
+𝑎
+,
+𝑦
+±
+1
+)
+}
+,
+{
+(
+𝑎
++
+3
+,
+𝑦
+±
+1
+)
+,
+(
+𝑎
++
+4
+,
+𝑦
+±
+1
+)
+}
+,
+{(a−1,y±1),(a,y±1)},{(a+3,y±1),(a+4,y±1)},
+
+when contained in the board.
+
+The following table exhausts the horizontal bodies that can participate in a live Snaky in 
+𝑈
+U.
+
+Body row	Possible live body starts	Coverage
+1	
+1
+,
+…
+,
+11
+1,…,11	Every body contains one of pairs 1–5.
+2	
+1
+,
+…
+,
+11
+1,…,11	Every body except 
+𝑅
+2
+(
+9
+)
+R
+2
+	​
+
+(9) contains one of pairs 6–10. The exception is handled below.
+3	
+1
+,
+10
+,
+11
+1,10,11	Pair 11 covers start 1; pair 12 covers starts 10 and 11.
+4	None	The only Breaker-free four-run is 
+𝑅
+4
+(
+1
+)
+R
+4
+	​
+
+(1), and all its contained hooks are blocked.
+5	
+10
+10	Its three live hooks are handled below.
+6	None	The only Breaker-free four-run is 
+𝑅
+6
+(
+5
+)
+R
+6
+	​
+
+(5), and all four hooks are blocked.
+7	None	Every four-run meets an old Breaker stone.
+8	
+2
+,
+9
+,
+10
+2,9,10	Pair 28 covers start 2; pair 29 covers starts 9 and 10.
+9	None	Every four-run meets an old Breaker stone.
+10	
+5
+,
+6
+,
+11
+5,6,11	Pair 35 covers starts 5 and 6; pair 36 covers start 11.
+11	
+1
+,
+…
+,
+11
+1,…,11	Every body contains one of pairs 37–41.
+The row-two exception: three full targets
+
+For 
+𝑅
+2
+(
+9
+)
+R
+2
+	​
+
+(9), the lower-left hook contains the old Breaker cell 
+(
+9
+,
+3
+)
+(9,3). The remaining three full targets are:
+
+𝐴
+1
+=
+	
+{
+(
+9
+,
+2
+)
+,
+(
+10
+,
+2
+)
+,
+(
+11
+,
+2
+)
+,
+(
+12
+,
+2
+)
+,
+(
+8
+,
+1
+)
+,
+(
+9
+,
+1
+)
+}
+,
+
+
+𝐴
+2
+=
+	
+{
+(
+9
+,
+2
+)
+,
+(
+10
+,
+2
+)
+,
+(
+11
+,
+2
+)
+,
+(
+12
+,
+2
+)
+,
+(
+12
+,
+1
+)
+,
+(
+13
+,
+1
+)
+}
+,
+
+
+𝐴
+3
+=
+	
+{
+(
+9
+,
+2
+)
+,
+(
+10
+,
+2
+)
+,
+(
+11
+,
+2
+)
+,
+(
+12
+,
+2
+)
+,
+(
+12
+,
+3
+)
+,
+(
+13
+,
+3
+)
+}
+.
+A
+1
+	​
+
+=
+A
+2
+	​
+
+=
+A
+3
+	​
+
+=
+	​
+
+{(9,2),(10,2),(11,2),(12,2),(8,1),(9,1)},
+{(9,2),(10,2),(11,2),(12,2),(12,1),(13,1)},
+{(9,2),(10,2),(11,2),(12,2),(12,3),(13,3)}.
+	​
+
+
+They contain pairs 3, 5, and 12, respectively.
+
+The row-five exception: three full targets
+
+The only live horizontal body in row 5 is
+
+𝑅
+5
+(
+10
+)
+=
+{
+(
+10
+,
+5
+)
+,
+(
+11
+,
+5
+)
+,
+(
+12
+,
+5
+)
+,
+(
+13
+,
+5
+)
+}
+.
+R
+5
+	​
+
+(10)={(10,5),(11,5),(12,5),(13,5)}.
+
+Its lower-left hook is blocked by 
+(
+9
+,
+6
+)
+(9,6). Its other three full targets are:
+
+𝐴
+4
+=
+	
+{
+(
+10
+,
+5
+)
+,
+(
+11
+,
+5
+)
+,
+(
+12
+,
+5
+)
+,
+(
+13
+,
+5
+)
+,
+(
+9
+,
+4
+)
+,
+(
+10
+,
+4
+)
+}
+,
+
+
+𝐴
+5
+=
+	
+{
+(
+10
+,
+5
+)
+,
+(
+11
+,
+5
+)
+,
+(
+12
+,
+5
+)
+,
+(
+13
+,
+5
+)
+,
+(
+13
+,
+4
+)
+,
+(
+14
+,
+4
+)
+}
+,
+
+
+𝐴
+6
+=
+	
+{
+(
+10
+,
+5
+)
+,
+(
+11
+,
+5
+)
+,
+(
+12
+,
+5
+)
+,
+(
+13
+,
+5
+)
+,
+(
+13
+,
+6
+)
+,
+(
+14
+,
+6
+)
+}
+.
+A
+4
+	​
+
+=
+A
+5
+	​
+
+=
+A
+6
+	​
+
+=
+	​
+
+{(10,5),(11,5),(12,5),(13,5),(9,4),(10,4)},
+{(10,5),(11,5),(12,5),(13,5),(13,4),(14,4)},
+{(10,5),(11,5),(12,5),(13,5),(13,6),(14,6)}.
+	​
+
+
+They contain pairs 15, 20, and 22, respectively. Notice that pair 20 crosses between the body and hook of 
+𝐴
+5
+A
+5
+	​
+
+:
+
+𝑃
+20
+=
+{
+(
+13
+,
+4
+)
+,
+(
+13
+,
+5
+)
+}
+.
+P
+20
+	​
+
+={(13,4),(13,5)}.
+
+Thus the certificate explicitly handles the proposed change of direction through the retained 
+(
+10
+,
+5
+)
+,
+(
+11
+,
+5
+)
+(10,5),(11,5) stones.
+
+Why the other apparently useful bodies are dead
+
+The exclusions in the table use permanent colors, not future replies.
+
+For 
+𝑅
+4
+(
+1
+)
+R
+4
+	​
+
+(1), the only geometrically contained hooks contain either 
+𝐵
+(
+5
+,
+3
+)
+B(5,3) or 
+𝐵
+(
+4
+,
+5
+)
+B(4,5).
+
+For 
+𝑅
+5
+(
+5
+)
+R
+5
+	​
+
+(5), its four hooks respectively contain 
+𝐵
+(
+5
+,
+4
+)
+B(5,4), 
+𝐵
+(
+8
+,
+4
+)
+B(8,4), 
+𝐵
+(
+4
+,
+6
+)
+B(4,6), and 
+𝐵
+(
+9
+,
+6
+)
+B(9,6). For 
+𝑅
+5
+(
+11
+)
+R
+5
+	​
+
+(11), the contained hooks hit 
+𝐵
+(
+11
+,
+4
+)
+B(11,4) or 
+𝐵
+(
+11
+,
+6
+)
+B(11,6); the other end would leave the board.
+
+For 
+𝑅
+6
+(
+5
+)
+R
+6
+	​
+
+(5), the four hooks hit 
+𝐵
+(
+4
+,
+5
+)
+B(4,5), 
+𝐵
+(
+9
+,
+5
+)
+B(9,5), 
+𝐵
+(
+5
+,
+7
+)
+B(5,7), and 
+𝐵
+(
+8
+,
+7
+)
+B(8,7).
+
+In row 8, direct inspection of the four hook placements leaves precisely starts 
+2
+,
+9
+,
+10
+2,9,10. In particular, extending the retained run through 
+(
+11
+,
+8
+)
+(11,8) does not evade pair 29:
+
+𝑃
+29
+=
+{
+(
+11
+,
+8
+)
+,
+(
+12
+,
+8
+)
+}
+.
+P
+29
+	​
+
+={(11,8),(12,8)}.
+4. Coverage proof for every vertical-body Snaky in 
+𝑈
+U
+
+Write
+
+𝐶
+𝑥
+(
+𝑏
+)
+=
+{
+(
+𝑥
+,
+𝑏
+)
+,
+(
+𝑥
+,
+𝑏
++
+1
+)
+,
+(
+𝑥
+,
+𝑏
++
+2
+)
+,
+(
+𝑥
+,
+𝑏
++
+3
+)
+}
+.
+C
+x
+	​
+
+(b)={(x,b),(x,b+1),(x,b+2),(x,b+3)}.
+
+Its possible hooks are
+
+{
+(
+𝑥
+±
+1
+,
+𝑏
+−
+1
+)
+,
+(
+𝑥
+±
+1
+,
+𝑏
+)
+}
+,
+{
+(
+𝑥
+±
+1
+,
+𝑏
++
+3
+)
+,
+(
+𝑥
+±
+1
+,
+𝑏
++
+4
+)
+}
+.
+{(x±1,b−1),(x±1,b)},{(x±1,b+3),(x±1,b+4)}.
+The five open columns
+
+For columns 
+1
+,
+2
+,
+12
+1,2,12, the matching contains vertical pairs at row levels
+
+(
+4
+,
+5
+)
+,
+(
+6
+,
+7
+)
+,
+(
+9
+,
+10
+)
+.
+(4,5),(6,7),(9,10).
+
+Therefore every body starting at 
+𝑏
+=
+2
+,
+…
+,
+8
+b=2,…,8 contains a pair.
+
+For columns 
+13
+,
+14
+13,14, the vertical pairs have row levels
+
+(
+4
+,
+5
+)
+,
+(
+7
+,
+8
+)
+,
+(
+9
+,
+11
+)
+.
+(4,5),(7,8),(9,11).
+
+Again, every body starting at 
+𝑏
+=
+2
+,
+…
+,
+8
+b=2,…,8 contains a pair. The last, non-adjacent pair covers the body on rows 
+8
+,
+9
+,
+10
+,
+11
+8,9,10,11.
+
+Bodies starting at 
+𝑏
+=
+1
+b=1 are covered through their lower hooks:
+
+Body	Surviving hook coverage
+
+𝐶
+1
+(
+1
+)
+C
+1
+	​
+
+(1)	Pair 17 in column 2
+
+𝐶
+2
+(
+1
+)
+C
+2
+	​
+
+(1)	Pair 16 or 18
+
+𝐶
+12
+(
+1
+)
+C
+12
+	​
+
+(1)	Pair 20; the column-11 hook is blocked
+
+𝐶
+13
+(
+1
+)
+C
+13
+	​
+
+(1)	Pair 19 or 21
+
+𝐶
+14
+(
+1
+)
+C
+14
+	​
+
+(1)	Pair 20
+Columns 3 and 4
+
+Column 3 has only the possible body starts 
+1
+,
+2
+,
+3
+1,2,3 in 
+𝑈
+U, because of 
+𝐵
+(
+3
+,
+7
+)
+B(3,7) and 
+𝐵
+(
+3
+,
+9
+)
+B(3,9).
+
+For 
+𝐶
+3
+(
+1
+)
+C
+3
+	​
+
+(1), the column-2 hook is pair 17, while the column-4 hook contains 
+𝐵
+(
+4
+,
+5
+)
+B(4,5). Bodies 
+𝐶
+3
+(
+2
+)
+C
+3
+	​
+
+(2) and 
+𝐶
+3
+(
+3
+)
+C
+3
+	​
+
+(3) contain pair 18.
+
+Column 4 has only 
+𝐶
+4
+(
+1
+)
+C
+4
+	​
+
+(1). Its column-3 hook is pair 18; its other hook contains 
+𝐵
+(
+5
+,
+4
+)
+B(5,4).
+
+Thus the familiar left escape
+
+{
+(
+4
+,
+1
+)
+,
+(
+4
+,
+2
+)
+,
+(
+4
+,
+3
+)
+,
+(
+4
+,
+4
+)
+,
+(
+3
+,
+4
+)
+,
+(
+3
+,
+5
+)
+}
+{(4,1),(4,2),(4,3),(4,4),(3,4),(3,5)}
+
+is covered here. The construction does not stop at the earlier upper-left support boundary.
+
+The retained column-10 body
+
+The only live vertical targets in column 10 have bodies 
+𝐶
+10
+(
+2
+)
+C
+10
+	​
+
+(2) or 
+𝐶
+10
+(
+3
+)
+C
+10
+	​
+
+(3).
+
+Every target with body 
+𝐶
+10
+(
+2
+)
+C
+10
+	​
+
+(2) contains pair 13:
+
+{
+(
+10
+,
+2
+)
+,
+(
+10
+,
+3
+)
+}
+.
+{(10,2),(10,3)}.
+
+For 
+𝐶
+10
+(
+3
+)
+C
+10
+	​
+
+(3), only the upper column-11 hook survives. The full target is
+
+𝐴
+7
+=
+{
+(
+10
+,
+3
+)
+,
+(
+10
+,
+4
+)
+,
+(
+10
+,
+5
+)
+,
+(
+10
+,
+6
+)
+,
+(
+11
+,
+2
+)
+,
+(
+11
+,
+3
+)
+}
+,
+A
+7
+	​
+
+={(10,3),(10,4),(10,5),(10,6),(11,2),(11,3)},
+
+and it contains pair 14.
+
+The other Breaker-free column-10 bodies are dead:
+
+Body	Permanent obstruction to every contained hook
+
+𝐶
+10
+(
+1
+)
+C
+10
+	​
+
+(1)	
+𝐵
+(
+9
+,
+5
+)
+B(9,5) or 
+𝐵
+(
+11
+,
+4
+)
+B(11,4); the upper end leaves the board
+
+𝐶
+10
+(
+4
+)
+C
+10
+	​
+
+(4)	
+𝐵
+(
+9
+,
+3
+)
+,
+𝐵
+(
+11
+,
+4
+)
+,
+𝐵
+(
+9
+,
+7
+)
+,
+𝐵
+(
+11
+,
+7
+)
+B(9,3),B(11,4),B(9,7),B(11,7)
+
+𝐶
+10
+(
+5
+)
+C
+10
+	​
+
+(5)	
+𝐵
+(
+9
+,
+5
+)
+,
+𝐵
+(
+11
+,
+4
+)
+,
+𝐵
+(
+9
+,
+9
+)
+,
+𝐵
+(
+11
+,
+9
+)
+B(9,5),B(11,4),B(9,9),B(11,9)
+
+𝐶
+10
+(
+6
+)
+C
+10
+	​
+
+(6)	
+𝐵
+(
+9
+,
+5
+)
+,
+𝐵
+(
+11
+,
+6
+)
+,
+𝐵
+(
+9
+,
+9
+)
+,
+𝐵
+(
+11
+,
+9
+)
+B(9,5),B(11,6),B(9,9),B(11,9)
+
+The old body 
+𝐶
+7
+(
+5
+)
+C
+7
+	​
+
+(5) is likewise dead: its four hooks hit
+
+𝐵
+(
+6
+,
+4
+)
+,
+ 
+𝐵
+(
+8
+,
+4
+)
+,
+ 
+𝐵
+(
+6
+,
+9
+)
+,
+ 
+𝐵
+(
+8
+,
+9
+)
+.
+B(6,4), B(8,4), B(6,9), B(8,9).
+
+Columns 
+5
+,
+6
+,
+8
+,
+9
+,
+11
+5,6,8,9,11 have no Breaker-free four-cell vertical body inside 
+𝑈
+U. This completes the vertical coverage.
+
+5. The exact frontier is stronger than “leave row 11”
+
+The proof gives more than coverage of targets entirely contained in 
+𝑈
+U.
+
+Every horizontal body in row 11 contains a pair. Therefore a horizontal Snaky with its body in row 11 remains covered even when its hook enters row 12.
+
+For a vertical body on rows 
+8
+,
+…
+,
+11
+8,…,11, every live possibility contains a pair in its body. Consequently its hook may enter row 12 without escaping protection.
+
+The same is true for every live vertical body on rows 
+9
+,
+…
+,
+12
+9,…,12:
+
+In columns 
+1
+,
+2
+,
+12
+1,2,12, it contains the pair on rows 
+9
+,
+10
+9,10.
+In columns 
+13
+,
+14
+13,14, it contains the pair on rows 
+9
+,
+11
+9,11.
+In every other column, that body meets an old Breaker stone.
+
+Hence every uncovered full Snaky must have one of the following body locations:
+
+horizontal body:
+	
+𝑦
+∈
+{
+12
+,
+13
+,
+14
+}
+,
+
+
+vertical body:
+	
+𝑦
+=
+10
+,
+…
+,
+13
+ or 
+𝑦
+=
+11
+,
+…
+,
+14.
+horizontal body:
+vertical body:
+	​
+
+y∈{12,13,14},
+y=10,…,13 or y=11,…,14.
+	​
+
+	​
+
+
+In particular, every uncovered target has at least two cells in rows 12–14. All such cells are initially free at 
+𝑀
+∗
+,
+𝐵
+∗
+M
+∗
+	​
+
+,B
+∗
+	​
+
+.
+
+This is an obstruction to an entire class of acquisitions, not just to the six listed cards or a particular ordering of their moves.
+
+6. Concrete counterreply to the old second preparation
+
+From the exact 
+𝐵
+(
+5
+,
+3
+)
+B(5,3) state, consider
+
+𝑀
+(
+8
+,
+2
+)
+.
+M(8,2).
+
+The controller replies
+
+𝐵
+(
+9
+,
+2
+)
+B(9,2)
+	​
+
+
+using pair 9.
+
+The resulting full-colored state is:
+
+JSON
+{
+  "board": [1,1,14,14],
+  "turn": "Maker",
+  "status": "OPEN",
+  "stones_each": 28,
+  "maker": [
+    [3,11],
+    [4,4],[4,7],[4,8],[4,9],
+    [5,5],[5,6],[5,8],
+    [6,3],[6,5],[6,8],
+    [7,2],[7,3],[7,5],[7,6],[7,7],[7,8],
+    [8,2],[8,6],[8,8],
+    [9,8],[9,11],
+    [10,5],[10,6],[10,7],[10,8],[10,9],
+    [11,5]
+  ],
+  "breaker": [
+    [3,7],[3,9],
+    [4,5],[4,6],[4,10],
+    [5,3],[5,4],[5,7],[5,9],
+    [6,4],[6,7],[6,9],
+    [7,4],[7,9],
+    [8,4],[8,7],[8,9],
+    [9,2],[9,3],[9,5],[9,6],[9,7],[9,9],
+    [10,10],
+    [11,4],[11,6],[11,7],[11,9]
+  ]
+}
+
+At this state, remove pair 9 from the active list: every target that contained that pair now meets 
+𝐵
+(
+9
+,
+2
+)
+B(9,2). The remaining 40 pairs are still fresh and disjoint, and retain the entire coverage proved above.
+
+This is the one new unresolved full-colored state emitted here. Its status is not changed to Breaker win.
+
+Nor is the obstruction tied to selecting that particular preparation. At the 
+27
++
+27
+27+27 parent, the same controller handles every Maker entry. For example, it answers 
+𝑀
+(
+6
+,
+2
+)
+M(6,2) with 
+𝐵
+(
+5
+,
+2
+)
+B(5,2), and 
+𝑀
+(
+10
+,
+2
+)
+M(10,2) with 
+𝐵
+(
+10
+,
+3
+)
+B(10,3). Those responses are parts of the same regional defense, not isolated counterlines.
+
+7. Explicit uncovered physical witnesses
+
+The matching is not a full-board defense. Its uncovered targets include the following.
+
+Escape through the retained 
+(
+3
+,
+11
+)
+(3,11)
+𝑊
+3
+=
+{
+(
+2
+,
+10
+)
+,
+(
+2
+,
+11
+)
+,
+(
+3
+,
+11
+)
+,
+(
+3
+,
+12
+)
+,
+(
+3
+,
+13
+)
+,
+(
+3
+,
+14
+)
+}
+.
+W
+3
+	​
+
+={(2,10),(2,11),(3,11),(3,12),(3,13),(3,14)}.
+
+Its body is 
+𝐶
+3
+(
+11
+)
+C
+3
+	​
+
+(11); its hook is 
+{
+(
+2
+,
+10
+)
+,
+(
+2
+,
+11
+)
+}
+{(2,10),(2,11)}. The original Maker stone 
+(
+3
+,
+11
+)
+(3,11) is retained.
+
+No listed pair lies in 
+𝑊
+3
+W
+3
+	​
+
+. In particular, 
+(
+2
+,
+10
+)
+(2,10) is paired with 
+(
+2
+,
+9
+)
+(2,9), while 
+(
+2
+,
+11
+)
+(2,11) is paired with 
+(
+1
+,
+11
+)
+(1,11).
+
+Independent escape through the retained 
+(
+9
+,
+11
+)
+(9,11)
+𝑊
+9
+=
+{
+(
+8
+,
+10
+)
+,
+(
+8
+,
+11
+)
+,
+(
+9
+,
+11
+)
+,
+(
+9
+,
+12
+)
+,
+(
+9
+,
+13
+)
+,
+(
+9
+,
+14
+)
+}
+.
+W
+9
+	​
+
+={(8,10),(8,11),(9,11),(9,12),(9,13),(9,14)}.
+
+Its body is 
+𝐶
+9
+(
+11
+)
+C
+9
+	​
+
+(11), with hook 
+{
+(
+8
+,
+10
+)
+,
+(
+8
+,
+11
+)
+}
+{(8,10),(8,11)}. Again, no listed pair is contained in it.
+
+An uncovered target with exactly two bottom-strip cells
+𝑊
+𝑅
+=
+{
+(
+12
+,
+10
+)
+,
+(
+12
+,
+11
+)
+,
+(
+12
+,
+12
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+}
+.
+W
+R
+	​
+
+={(12,10),(12,11),(12,12),(12,13),(13,9),(13,10)}.
+
+Its body is 
+𝐶
+12
+(
+10
+)
+C
+12
+	​
+
+(10), with upper hook 
+{
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+}
+{(13,9),(13,10)}. Its only cells below 
+𝑈
+U are
+
+(
+12
+,
+12
+)
+,
+(
+12
+,
+13
+)
+.
+(12,12),(12,13).
+
+All six cells are initially free. Its four cells inside 
+𝑈
+U are paired to cells outside this target, so it contains no listed pair.
+
+These are coverage counterexamples, not acquired Maker gadgets or winning policies.
+
+Conclusion
+
+The conditional game at 
+𝐵
+(
+5
+,
+3
+)
+B(5,3) remains unresolved here. The completed object is a legal, all-entry pairing controller protecting every Snaky in the upper eleven rows, together with a stronger full-board boundary statement.
+
+Subject to local checking, this sharply falsifies any repair of the old acquisition that stays above row 12—even one using the retained right-hand cluster or both row-11 anchors. A successful Maker construction against this controller must actually acquire bottom-strip support; merely requiring that support in another conditional card would not close the branch.

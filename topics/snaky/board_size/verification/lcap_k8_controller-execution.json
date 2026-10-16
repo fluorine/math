@@ -1,0 +1,85 @@
+{
+  "artifact_sha256": {
+    "topics/snaky/board_size/verification/lcap_k8_controller-guard.json": "eab8ef5fe9fc1712b6b6cb4cd9ea8d3030af78584428df6f330c2bc2ae2d028a",
+    "topics/snaky/board_size/verification/lcap_k8_controller-guard.log": "536fa263601b0bc9211c1ad18b5999e368f9899e5fed19c6af9bf2f9e1047661",
+    "topics/snaky/board_size/verification/lcap_k8_controller-launch.json": "02eea9f29365efc3d99547ba10fbdb6c64ecf3f303f2d75091e849fb572061d1",
+    "topics/snaky/board_size/verification/lcap_k8_controller-preflight-01.json": "645786f43d6e9635cf099b5d428757fb35b2474eadc80c33007794970f81ae33",
+    "topics/snaky/board_size/verification/lcap_k8_controller-run.log": "5bb2c59a9b66341d806c8c3787fc363140056942bd7c81f45911be2efb698e75",
+    "topics/snaky/board_size/verification/lcap_k8_controller.json": "6923ff233b8b7fa0faeaecf65c03118eccf7c6e5f2f12739d1581d70409630cf",
+    "topics/snaky/board_size/verification/lcap_k8_controller.py": "3e526e80082e733216301de30dbd052d898e10f38dc713dd8269ebf9b9dc3535"
+  },
+  "resources": {
+    "all_children_peak_rss_bytes": 26804224,
+    "command": [
+      "/usr/bin/nice",
+      "-n",
+      "19",
+      "/opt/homebrew/bin/python3.12",
+      "-B",
+      "topics/snaky/board_size/breaker/cpu_exec.py",
+      "--cpu-seconds",
+      "10",
+      "--",
+      "/opt/homebrew/bin/python3.12",
+      "-B",
+      "topics/snaky/board_size/verification/lcap_k8_controller.py",
+      "--output",
+      "topics/snaky/board_size/verification/lcap_k8_controller.json"
+    ],
+    "elapsed_seconds": 0.21447029151022434,
+    "events": [],
+    "exit_code": 0,
+    "final_swapout_total": 18693886,
+    "guard_sha256": "dd59dc64f76c0e93f5b963ef0e6a444e74ceb4003d126c3f42937430affb60aa",
+    "initial_global_sample": {
+      "cpu_idle_percent": 60.4,
+      "reduce_search_concurrency": false,
+      "sampler_pid": 78410,
+      "summary": [
+        "Processes: 463 total, 3 running, 460 sleeping, 3496 threads ",
+        "2026/10/16 09:16:25",
+        "Load Avg: 4.33, 4.68, 4.87 ",
+        "CPU usage: 33.44% user, 6.14% sys, 60.40% idle ",
+        "SharedLibs: 273M resident, 70M data, 66M linkedit.",
+        "MemRegions: 0 total, 0B resident, 116M private, 888M shared.",
+        "PhysMem: 15G used (2190M wired, 3193M compressor), 159M unused.",
+        "VM: 226T vsize, 5361M framework vsize, 13812797(0) swapins, 18693886(0) swapouts.",
+        "Networks: packets: 2519047068/1727G in, 1938341187/349G out.",
+        "Disks: 1240629441/129T read, 835455552/18T written."
+      ],
+      "swapin_delta": 0,
+      "swapin_since_previous_sample": 27,
+      "swapin_total": 13812797,
+      "swapout_delta": 0,
+      "swapout_since_previous_sample": 0,
+      "swapout_total": 18693886,
+      "utc": "2026-10-16T07:16:25.251171+00:00"
+    },
+    "initial_swapout_total": 18693886,
+    "log": "topics/snaky/board_size/verification/lcap_k8_controller-guard.log",
+    "pid": 46537,
+    "rss_cap_bytes": 104857600,
+    "sampled_peak_rss_bytes": 4390912,
+    "samples": [
+      {
+        "cpu_idle_percent": 60.4,
+        "elapsed_seconds": 0.00025908276438713074,
+        "global_sample_utc": "2026-10-16T07:16:25.251171+00:00",
+        "rss_bytes": 4390912,
+        "swapout_since_direct_sample": 0,
+        "swapout_total": 18693886
+      }
+    ],
+    "schema": "snaky-external-run-guard-v1",
+    "started_utc": "2026-10-16T07:16:39.027899+00:00",
+    "status": "finished",
+    "supervisor_pid": 46535,
+    "wall_seconds": 30.0,
+    "watcher": "topics/snaky/board_size/resource-samples-20261015.jsonl"
+  },
+  "result_status": "independently_verified_full_conditional_breaker_controller",
+  "schema": "snaky-lcap-k8-controller-execution-v1",
+  "supervisor_exit_code": 0,
+  "supervisor_pid": 46535,
+  "utc": "2026-10-16T07:16:39.259493+00:00"
+}

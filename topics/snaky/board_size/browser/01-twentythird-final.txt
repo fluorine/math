@@ -1,0 +1,3172 @@
+Result: the accepted switch cannot be continued by fresh-matching repairs alone
+
+At the accepted 
+𝑀
+5
+/
+𝐵
+5
+M
+5
+	​
+
+/B
+5
+	​
+
+ state, Maker’s move 
+(
+10
+,
+12
+)
+(10,12) forces a choice: every reply other than 
+(
+9
+,
+12
+)
+(9,12) loses immediately on Maker’s next claim, while 
+𝐵
+(
+9
+,
+12
+)
+B(9,12) produces a position in which no fresh disjoint matching can protect all of 
+𝐺
+G. This impossibility allows arbitrary exchanges anywhere on the board; it is not restricted to retaining particular exterior pairs.
+
+I also obtain a separate, complete counterplay against the class of policies that follow the original mates until an exception becomes a one-cell threat. That counterplay uses the retained 
+(
+3
+,
+11
+)
+(3,11) anchor and ends in a physical two-completion fork.
+
+These results do not establish a full Maker win or a full Breaker defense at the conditional root. They identify two necessary changes to an extension: earlier intervention on the left, and protection more general than a fresh matching after one of the forced right-hand continuations.
+
+Throughout, 
+𝑀
+0
+,
+𝐵
+0
+,
+𝑃
+M
+0
+	​
+
+,B
+0
+	​
+
+,P, and 
+𝐺
+G are exactly the supplied initial colors, accepted 63 pairs, and 370-target protected family. No original stone is removed. The acceptance of that starting interface is supplied in the brief; the deductions below are new proposals for local checking. 
+Geplakte tekst
+ 
+Geplakte tekst
+
+1. The forced continuation that defeats every fresh-matching repair
+
+The accepted five-round history gives
+
+𝑀
+5
+=
+𝑀
+0
+∪
+{
+	
+(
+10
+,
+13
+)
+,
+(
+11
+,
+13
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+13
+)
+,
+(
+13
+,
+12
+)
+}
+,
+
+
+𝐵
+5
+=
+𝐵
+0
+∪
+{
+	
+(
+9
+,
+13
+)
+,
+(
+11
+,
+14
+)
+,
+(
+12
+,
+14
+)
+,
+(
+13
+,
+14
+)
+,
+(
+14
+,
+12
+)
+}
+.
+M
+5
+	​
+
+=M
+0
+	​
+
+∪{
+B
+5
+	​
+
+=B
+0
+	​
+
+∪{
+	​
+
+(10,13),(11,13),(12,13),(13,13),(13,12)},
+(9,13),(11,14),(12,14),(13,14),(14,12)}.
+	​
+
+
+Maker moves next. The accepted matching is
+
+𝑃
+′
+=
+(
+𝑃
+∖
+{
+𝑃
+33
+,
+𝑃
+42
+,
+𝑃
+47
+,
+𝑃
+51
+,
+𝑃
+56
+,
+𝑃
+57
+,
+𝑃
+58
+}
+)
+∪
+{
+{
+(
+13
+,
+11
+)
+,
+(
+14
+,
+9
+)
+}
+}
+.
+P
+′
+=(P∖{P33,P42,P47,P51,P56,P57,P58})∪{{(13,11),(14,9)}}.
+
+It protects every member of 
+𝐺
+G, but is not a complete defense of the exceptions. 
+Geplakte tekst
+
+Now play
+
+𝑀
+(
+10
+,
+12
+)
+.
+M(10,12).
+	​
+
+
+The full target
+
+𝑇
+14
+=
+{
+(
+9
+,
+12
+)
+,
+(
+10
+,
+12
+)
+,
+(
+10
+,
+13
+)
+,
+(
+11
+,
+13
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+13
+)
+}
+T
+14
+	​
+
+={(9,12),(10,12),(10,13),(11,13),(12,13),(13,13)}
+
+then has precisely one missing cell, 
+(
+9
+,
+12
+)
+(9,12). Thus:
+
+If Breaker claims any other legal cell, Maker claims 
+(
+9
+,
+12
+)
+(9,12) and wins with this literal 
+𝑇
+14
+T
+14
+	​
+
+.
+The only reply preventing that immediate completion is 
+𝐵
+(
+9
+,
+12
+)
+B(9,12).
+
+The two-cell requirement before this move is part of the accepted residual state. 
+Geplakte tekst
+
+Consequently, the only surviving physical branch reaches the following exact 
+33
++
+33
+33+33 Maker-turn state:
+
+𝑀
+𝑅
+=
+𝑀
+0
+∪
+{
+	
+(
+10
+,
+13
+)
+,
+(
+11
+,
+13
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+13
+)
+,
+(
+13
+,
+12
+)
+,
+(
+10
+,
+12
+)
+}
+,
+
+
+𝐵
+𝑅
+=
+𝐵
+0
+∪
+{
+	
+(
+9
+,
+13
+)
+,
+(
+11
+,
+14
+)
+,
+(
+12
+,
+14
+)
+,
+(
+13
+,
+14
+)
+,
+(
+14
+,
+12
+)
+,
+(
+9
+,
+12
+)
+}
+.
+M
+R
+	​
+
+=M
+0
+	​
+
+∪{
+B
+R
+	​
+
+=B
+0
+	​
+
+∪{
+	​
+
+(10,13),(11,13),(12,13),(13,13),(13,12),(10,12)},
+(9,13),(11,14),(12,14),(13,14),(14,12),(9,12)}.
+	​
+
+	​
+
+
+The next argument makes no assumption about which pairs Breaker wishes to retain, release, or replace.
+
+2. Five full protected targets give a global matching contradiction
+
+At 
+𝑀
+𝑅
+/
+𝐵
+𝑅
+M
+R
+	​
+
+/B
+R
+	​
+
+, label nine fresh cells as follows:
+
+Label	Physical cell	Label	Physical cell	Label	Physical cell
+
+𝑎
+a	
+(
+10
+,
+11
+)
+(10,11)	
+𝑏
+b	
+(
+11
+,
+12
+)
+(11,12)	
+𝑐
+c	
+(
+12
+,
+12
+)
+(12,12)
+
+𝑑
+d	
+(
+13
+,
+11
+)
+(13,11)	
+𝑒
+e	
+(
+14
+,
+11
+)
+(14,11)	
+𝑓
+f	
+(
+14
+,
+13
+)
+(14,13)
+
+𝑔
+g	
+(
+13
+,
+10
+)
+(13,10)	
+ℎ
+h	
+(
+14
+,
+14
+)
+(14,14)	
+𝑖
+i	
+(
+13
+,
+9
+)
+(13,9)
+
+Consider these five full physical Snakies:
+
+𝐸
+1
+=
+	
+{
+(
+10
+,
+12
+)
+,
+(
+11
+,
+12
+)
+,
+(
+11
+,
+13
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+13
+)
+,
+(
+14
+,
+13
+)
+}
+,
+
+
+𝐸
+2
+=
+	
+{
+(
+9
+,
+11
+)
+,
+(
+10
+,
+11
+)
+,
+(
+10
+,
+12
+)
+,
+(
+11
+,
+12
+)
+,
+(
+12
+,
+12
+)
+,
+(
+13
+,
+12
+)
+}
+,
+
+
+𝐸
+3
+=
+	
+{
+(
+10
+,
+12
+)
+,
+(
+11
+,
+12
+)
+,
+(
+12
+,
+12
+)
+,
+(
+13
+,
+12
+)
+,
+(
+13
+,
+11
+)
+,
+(
+14
+,
+11
+)
+}
+,
+
+
+𝐸
+4
+=
+	
+{
+(
+13
+,
+10
+)
+,
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+,
+(
+13
+,
+13
+)
+,
+(
+14
+,
+13
+)
+,
+(
+14
+,
+14
+)
+}
+,
+
+
+𝐸
+5
+=
+	
+{
+(
+12
+,
+12
+)
+,
+(
+12
+,
+13
+)
+,
+(
+13
+,
+9
+)
+,
+(
+13
+,
+10
+)
+,
+(
+13
+,
+11
+)
+,
+(
+13
+,
+12
+)
+}
+.
+E
+1
+	​
+
+=
+E
+2
+	​
+
+=
+E
+3
+	​
+
+=
+E
+4
+	​
+
+=
+E
+5
+	​
+
+=
+	​
+
+{(10,12),(11,12),(11,13),(12,13),(13,13),(14,13)},
+{(9,11),(10,11),(10,12),(11,12),(12,12),(13,12)},
+{(10,12),(11,12),(12,12),(13,12),(13,11),(14,11)},
+{(13,10),(13,11),(13,12),(13,13),(14,13),(14,14)},
+{(12,12),(12,13),(13,9),(13,10),(13,11),(13,12)}.
+	​
+
+
+Their geometry, original protection, and exact remaining requirements are:
+
+Target	Body and hook	Original protecting pair(s)	Required cells at 
+𝑀
+𝑅
+/
+𝐵
+𝑅
+M
+R
+	​
+
+/B
+R
+	​
+
+
+
+𝐸
+1
+E
+1
+	​
+
+	
+𝑅
+13
+(
+11
+)
+R
+13
+	​
+
+(11), hook 
+{
+(
+10
+,
+12
+)
+,
+(
+11
+,
+12
+)
+}
+{(10,12),(11,12)}	
+𝑃
+46
+P46	
+{
+𝑏
+,
+𝑓
+}
+{b,f}
+
+𝐸
+2
+E
+2
+	​
+
+	
+𝑅
+12
+(
+10
+)
+R
+12
+	​
+
+(10), hook 
+{
+(
+9
+,
+11
+)
+,
+(
+10
+,
+11
+)
+}
+{(9,11),(10,11)}	
+𝑃
+46
+P46	
+{
+𝑎
+,
+𝑏
+,
+𝑐
+}
+{a,b,c}
+
+𝐸
+3
+E
+3
+	​
+
+	
+𝑅
+12
+(
+10
+)
+R
+12
+	​
+
+(10), hook 
+{
+(
+13
+,
+11
+)
+,
+(
+14
+,
+11
+)
+}
+{(13,11),(14,11)}	
+𝑃
+46
+,
+𝑃
+42
+P46,P42	
+{
+𝑏
+,
+𝑐
+,
+𝑑
+,
+𝑒
+}
+{b,c,d,e}
+
+𝐸
+4
+E
+4
+	​
+
+	
+𝐶
+13
+(
+10
+)
+C
+13
+	​
+
+(10), hook 
+{
+(
+14
+,
+13
+)
+,
+(
+14
+,
+14
+)
+}
+{(14,13),(14,14)}	
+𝑃
+42
+,
+𝑃
+59
+P42,P59	
+{
+𝑑
+,
+𝑓
+,
+𝑔
+,
+ℎ
+}
+{d,f,g,h}
+
+𝐸
+5
+E
+5
+	​
+
+	
+𝐶
+13
+(
+9
+)
+C
+13
+	​
+
+(9), hook 
+{
+(
+12
+,
+12
+)
+,
+(
+12
+,
+13
+)
+}
+{(12,12),(12,13)}	
+𝑃
+40
+,
+𝑃
+42
+P40,P42	
+{
+𝑐
+,
+𝑑
+,
+𝑔
+,
+𝑖
+}
+{c,d,g,i}
+
+Every 
+𝐸
+𝑗
+E
+j
+	​
+
+ therefore belongs to the original 
+𝐺
+G. Every one still avoids the actual 
+𝐵
+𝑅
+B
+R
+	​
+
+. The remaining cells in the last column are all fresh; all other cells of those targets are actually Maker-owned.
+
+The forced-pair chain
+
+Suppose a fresh disjoint matching 
+𝑄
+Q, anywhere on the full board, protected all five targets.
+
+Since 
+𝐸
+1
+E
+1
+	​
+
+ has only two fresh cells, it forces
+
+𝑏
+𝑓
+∈
+𝑄
+.
+bf∈Q.
+
+In 
+𝐸
+2
+E
+2
+	​
+
+, the cell 
+𝑏
+b is now paired to 
+𝑓
+f, which lies outside 
+𝐸
+2
+E
+2
+	​
+
+. Therefore
+
+𝑎
+𝑐
+∈
+𝑄
+.
+ac∈Q.
+
+In 
+𝐸
+3
+E
+3
+	​
+
+, both 
+𝑏
+b and 
+𝑐
+c are paired outside that target. Therefore
+
+𝑑
+𝑒
+∈
+𝑄
+.
+de∈Q.
+
+In 
+𝐸
+4
+E
+4
+	​
+
+, both 
+𝑑
+d and 
+𝑓
+f are paired outside that target. Therefore
+
+𝑔
+ℎ
+∈
+𝑄
+.
+gh∈Q.
+
+But the fresh cells of 
+𝐸
+5
+E
+5
+	​
+
+ are
+
+{
+𝑐
+,
+𝑑
+,
+𝑔
+,
+𝑖
+}
+.
+{c,d,g,i}.
+
+The first three are already paired respectively to 
+𝑎
+,
+𝑒
+,
+ℎ
+a,e,h, all outside 
+𝐸
+5
+E
+5
+	​
+
+. Only 
+𝑖
+i remains available. Hence 
+𝐸
+5
+E
+5
+	​
+
+ cannot contain a pair—a contradiction.
+
+Thus:
+
+At 
+𝑀
+𝑅
+/
+𝐵
+𝑅
+,
+ no fresh disjoint matching covers even 
+{
+𝐸
+1
+,
+…
+,
+𝐸
+5
+}
+⊆
+𝐺
+.
+At M
+R
+	​
+
+/B
+R
+	​
+
+, no fresh disjoint matching covers even {E
+1
+	​
+
+,…,E
+5
+	​
+
+}⊆G.
+	​
+
+
+This rules out every global fresh-matching repair at this state. Additional cells, long pairs, or wholesale replacement of the remaining exterior pairs cannot resolve this particular contradiction.
+
+The five-target obstruction is inclusion-minimal
+
+Deleting any one of these five obligations admits a matching for the other four:
+
+Omitted obligation	Matching covering the other four residuals
+
+𝐸
+1
+E
+1
+	​
+
+	
+𝑏
+𝑐
+,
+ 
+𝑑
+𝑔
+bc, dg
+
+𝐸
+2
+E
+2
+	​
+
+	
+𝑏
+𝑓
+,
+ 
+𝑐
+𝑒
+,
+ 
+𝑑
+𝑔
+bf, ce, dg
+
+𝐸
+3
+E
+3
+	​
+
+	
+𝑏
+𝑓
+,
+ 
+𝑎
+𝑐
+,
+ 
+𝑑
+𝑔
+bf, ac, dg
+
+𝐸
+4
+E
+4
+	​
+
+	
+𝑏
+𝑓
+,
+ 
+𝑎
+𝑐
+,
+ 
+𝑑
+𝑒
+,
+ 
+𝑔
+𝑖
+bf, ac, de, gi
+
+𝐸
+5
+E
+5
+	​
+
+	
+𝑏
+𝑓
+,
+ 
+𝑎
+𝑐
+,
+ 
+𝑑
+𝑒
+,
+ 
+𝑔
+ℎ
+bf, ac, de, gh
+
+This is inclusion-minimality of the displayed obstruction, not a claim of minimum cardinality among all possible physical obstructions.
+
+Consequence for the accepted history
+
+A full defense that insists on the supplied fresh-matching invariant for 
+𝐺
+G at the start of every Maker turn cannot follow all four initial mate responses
+
+𝑀
+(
+10
+,
+13
+)
+	
+𝐵
+(
+9
+,
+13
+)
+
+
+𝑀
+(
+11
+,
+13
+)
+	
+𝐵
+(
+11
+,
+14
+)
+
+
+𝑀
+(
+12
+,
+13
+)
+	
+𝐵
+(
+12
+,
+14
+)
+
+
+𝑀
+(
+13
+,
+13
+)
+	
+𝐵
+(
+13
+,
+14
+)
+.
+M(10,13)
+M(11,13)
+M(12,13)
+M(13,13)
+	​
+
+B(9,13)
+B(11,14)
+B(12,14)
+B(13,14).
+	​
+
+
+After those colors occur, 
+𝑀
+(
+13
+,
+12
+)
+M(13,12) forces 
+𝐵
+(
+14
+,
+12
+)
+B(14,12) through 
+𝑇
+15
+T
+15
+	​
+
+; then 
+𝑀
+(
+10
+,
+12
+)
+M(10,12) forces 
+𝐵
+(
+9
+,
+12
+)
+B(9,12) through 
+𝑇
+14
+T
+14
+	​
+
+; and the five-target contradiction applies.
+
+Therefore such an extension must either change an earlier physical response or permit a genuinely adaptive protection condition for members of 
+𝐺
+G, rather than merely install another fresh matching.
+
+3. This matching contradiction is not an actual Maker-win proof
+
+The distinction is substantive here. The five residual obligations themselves admit an adaptive response-to-matching table.
+
+For the selected nine-cell game with edges
+
+𝑏
+𝑓
+,
+𝑎
+𝑏
+𝑐
+,
+𝑏
+𝑐
+𝑑
+𝑒
+,
+𝑑
+𝑓
+𝑔
+ℎ
+,
+𝑐
+𝑑
+𝑔
+𝑖
+,
+bf,abc,bcde,dfgh,cdgi,
+
+the following table covers every first Maker entry:
+
+First entry	Breaker reply	Subsequent fresh pairs
+
+𝑏
+b	
+𝑓
+f	
+𝑎
+𝑐
+,
+ 
+𝑑
+𝑒
+,
+ 
+𝑔
+𝑖
+ac, de, gi
+
+𝑑
+d	
+𝑏
+b	
+𝑔
+ℎ
+,
+ 
+𝑐
+𝑖
+gh, ci
+
+𝑔
+g	
+𝑏
+b	
+𝑑
+𝑓
+,
+ 
+𝑐
+𝑖
+df, ci
+Any of 
+𝑎
+,
+𝑐
+,
+𝑒
+,
+𝑓
+,
+ℎ
+,
+𝑖
+a,c,e,f,h,i	
+𝑏
+b	
+𝑑
+𝑔
+dg
+
+For instance, in the last row, 
+𝐵
+(
+𝑏
+)
+B(b) kills the first three obligations, while 
+𝑑
+𝑔
+dg lies in both remaining obligations.
+
+This table is not a plug-in physical controller for the full position: its cells participate in other targets and exterior pair dependencies. Its purpose is to make the logical scope explicit. The five-target proof prohibits a simultaneous fresh matching at 
+𝑀
+𝑅
+/
+𝐵
+𝑅
+M
+R
+	​
+
+/B
+R
+	​
+
+; it does not prohibit an adaptive defense of the physical game.
+
+4. The other forced 
+𝑇
+14
+T
+14
+	​
+
+ continuation does preserve 
+𝐺
+G
+
+The other entry from 
+𝑀
+5
+/
+𝐵
+5
+M
+5
+	​
+
+/B
+5
+	​
+
+ behaves differently:
+
+𝑀
+(
+9
+,
+12
+)
+,
+𝐵
+(
+10
+,
+12
+)
+.
+M(9,12),B(10,12).
+	​
+
+
+The reply is again forced by the full 
+𝑇
+14
+T
+14
+	​
+
+. The resulting exact colors are
+
+𝑀
+𝐿
+=
+𝑀
+5
+∪
+{
+(
+9
+,
+12
+)
+}
+,
+𝐵
+𝐿
+=
+𝐵
+5
+∪
+{
+(
+10
+,
+12
+)
+}
+.
+M
+L
+	​
+
+=M
+5
+	​
+
+∪{(9,12)},B
+L
+	​
+
+=B
+5
+	​
+
+∪{(10,12)}.
+
+Here the following matching does preserve every member of 
+𝐺
+G:
+
+𝑄
+𝐿
+=
+𝑃
+′
+∖
+{
+𝑃
+46
+,
+𝑃
+63
+}
+.
+Q
+L
+	​
+
+=P
+′
+∖{P46,P63}.
+	​
+
+
+It has 55 fresh disjoint pairs.
+
+The retirement of 
+𝑃
+46
+P46 is justified by the actual Breaker claim 
+(
+10
+,
+12
+)
+(10,12). For 
+𝑃
+63
+=
+{
+(
+8
+,
+10
+)
+,
+(
+9
+,
+12
+)
+}
+P63={(8,10),(9,12)}, the complete incidence check is particularly small.
+
+Because its endpoints differ by two rows, any Snaky containing both must have a vertical body. The four possible full targets are:
+
+Body	Hook	Actual blocker
+
+𝐶
+8
+(
+8
+)
+C
+8
+	​
+
+(8)	
+{
+(
+9
+,
+11
+)
+,
+(
+9
+,
+12
+)
+}
+{(9,11),(9,12)}	
+𝐵
+0
+(
+8
+,
+9
+)
+B
+0
+	​
+
+(8,9)
+
+𝐶
+8
+(
+9
+)
+C
+8
+	​
+
+(9)	
+{
+(
+9
+,
+12
+)
+,
+(
+9
+,
+13
+)
+}
+{(9,12),(9,13)}	
+𝐵
+0
+(
+8
+,
+9
+)
+B
+0
+	​
+
+(8,9)
+
+𝐶
+9
+(
+10
+)
+C
+9
+	​
+
+(10)	
+{
+(
+8
+,
+9
+)
+,
+(
+8
+,
+10
+)
+}
+{(8,9),(8,10)}	
+𝐵
+0
+(
+8
+,
+9
+)
+B
+0
+	​
+
+(8,9)
+
+𝐶
+9
+(
+11
+)
+C
+9
+	​
+
+(11)	
+{
+(
+8
+,
+10
+)
+,
+(
+8
+,
+11
+)
+}
+{(8,10),(8,11)}	
+𝐵
+5
+(
+9
+,
+13
+)
+B
+5
+	​
+
+(9,13)
+
+Thus every initially live target containing 
+𝑃
+63
+P63 was already blocked at 
+𝑀
+5
+/
+𝐵
+5
+M
+5
+	​
+
+/B
+5
+	​
+
+. Retiring it exposes nothing.
+
+The exact surviving exceptions at 
+𝑀
+𝐿
+/
+𝐵
+𝐿
+M
+L
+	​
+
+/B
+L
+	​
+
+ are
+
+{
+𝑇
+1
+,
+𝑇
+2
+,
+𝑇
+5
+,
+𝑇
+6
+,
+𝑇
+7
+,
+𝑇
+8
+,
+𝑇
+9
+,
+𝑇
+10
+,
+𝑇
+11
+}
+.
+{T
+1
+	​
+
+,T
+2
+	​
+
+,T
+5
+	​
+
+,T
+6
+	​
+
+,T
+7
+	​
+
+,T
+8
+	​
+
+,T
+9
+	​
+
+,T
+10
+	​
+
+,T
+11
+	​
+
+}.
+	​
+
+
+This is a complete 
+𝐺
+G-preserving transition, not a full matching leaf: those nine exceptions still need protection.
+
+The asymmetry is important. One cannot use a single “block the other 
+𝑇
+14
+T
+14
+	​
+
+ endpoint and rematch” justification for both entries.
+
+5. A complete physical counterplay against late exception repairs
+
+There is an independent obstruction at the original 
+𝑀
+0
+/
+𝐵
+0
+M
+0
+	​
+
+/B
+0
+	​
+
+ root.
+
+Define the restricted policy class 
+𝐿
+L as follows.
+
+While Maker has entered only original matched cells and no live exception 
+𝑇
+𝑖
+T
+i
+	​
+
+ has become a one-cell threat, Breaker follows the original 
+𝑃
+P mates. On the first unmatched entry or first one-cell exception threat, the policy may use arbitrary legal physical replies and arbitrary subsequent adaptation. No restriction is imposed after that activation.
+
+This includes the natural extension “keep the accepted mates, and perform an emergency repair when an exception is about to be completed.” It does not include proactive policies that intervene earlier.
+
+Six forced ordinary rounds
+
+Maker uses:
+
+Round	Maker claim	Required reply in 
+𝐿
+L
+1	
+(
+2
+,
+11
+)
+(2,11)	
+(
+1
+,
+11
+)
+(1,11), by 
+𝑃
+35
+P35
+2	
+(
+2
+,
+12
+)
+(2,12)	
+(
+1
+,
+12
+)
+(1,12), by 
+𝑃
+43
+P43
+3	
+(
+2
+,
+13
+)
+(2,13)	
+(
+1
+,
+13
+)
+(1,13), by 
+𝑃
+48
+P48
+4	
+(
+4
+,
+11
+)
+(4,11)	
+(
+5
+,
+11
+)
+(5,11), by 
+𝑃
+36
+P36
+5	
+(
+4
+,
+12
+)
+(4,12)	
+(
+5
+,
+12
+)
+(5,12), by 
+𝑃
+44
+P44
+6	
+(
+4
+,
+13
+)
+(4,13)	
+(
+5
+,
+13
+)
+(5,13), by 
+𝑃
+49
+P49
+
+All cells are physically fresh when claimed.
+
+There is no one-cell exception threat during these six rounds. After round 6:
+
+𝑇
+6
+∖
+𝑀
+=
+{
+(
+3
+,
+10
+)
+,
+(
+2
+,
+14
+)
+}
+,
+T
+6
+	​
+
+∖M={(3,10),(2,14)},
+𝑇
+7
+∖
+𝑀
+=
+{
+(
+3
+,
+10
+)
+,
+(
+4
+,
+14
+)
+}
+.
+T
+7
+	​
+
+∖M={(3,10),(4,14)}.
+
+The old common anchor 
+(
+3
+,
+11
+)
+(3,11) is Maker-owned throughout. The full definitions of these two exceptions include that anchor. 
+Geplakte tekst
+
+The only other exception advanced by this prefix is 
+𝑇
+1
+T
+1
+	​
+
+, which still needs
+
+{
+(
+2
+,
+10
+)
+,
+(
+3
+,
+13
+)
+,
+(
+3
+,
+14
+)
+}
+.
+{(2,10),(3,13),(3,14)}.
+
+Moreover, 
+𝑇
+8
+T
+8
+	​
+
+ has been killed by the actual 
+𝐵
+(
+5
+,
+11
+)
+B(5,11). The remaining exceptions are not close to completion.
+
+Every member of 
+𝐺
+G remains protected by the ordinary mate invariant during the prefix, so no unnoticed completion in 
+𝐺
+G is being assumed away.
+
+The activation comes too late
+
+Now Maker claims the initially unmatched cell
+
+𝑀
+(
+3
+,
+10
+)
+.
+M(3,10).
+	​
+
+
+This creates two distinct fresh completion cells:
+
+𝑇
+6
+=
+	
+{
+(
+2
+,
+11
+)
+,
+(
+2
+,
+12
+)
+,
+(
+2
+,
+13
+)
+,
+(
+2
+,
+14
+)
+,
+(
+3
+,
+10
+)
+,
+(
+3
+,
+11
+)
+}
+,
+
+
+𝑇
+7
+=
+	
+{
+(
+3
+,
+10
+)
+,
+(
+3
+,
+11
+)
+,
+(
+4
+,
+11
+)
+,
+(
+4
+,
+12
+)
+,
+(
+4
+,
+13
+)
+,
+(
+4
+,
+14
+)
+}
+.
+T
+6
+	​
+
+=
+T
+7
+	​
+
+=
+	​
+
+{(2,11),(2,12),(2,13),(2,14),(3,10),(3,11)},
+{(3,10),(3,11),(4,11),(4,12),(4,13),(4,14)}.
+	​
+
+
+Their only missing cells are respectively 
+(
+2
+,
+14
+)
+(2,14) and 
+(
+4
+,
+14
+)
+(4,14).
+
+The all-reply continuation is:
+
+Actual Breaker reply 
+𝑟
+r	Maker’s winning claim	Full witness
+
+𝑟
+=
+(
+2
+,
+14
+)
+r=(2,14)	
+(
+4
+,
+14
+)
+(4,14)	
+𝑇
+7
+T
+7
+	​
+
+
+Every other legal 
+𝑟
+r	
+(
+2
+,
+14
+)
+(2,14)	
+𝑇
+6
+T
+6
+	​
+
+
+This covers every inside and outside reply. In the second row, 
+(
+2
+,
+14
+)
+(2,14) remains fresh precisely because Breaker did not claim it.
+
+The exact terminal colors are
+
+𝑀
+t
+e
+r
+m
+=
+𝑀
+0
+∪
+{
+	
+(
+2
+,
+11
+)
+,
+(
+2
+,
+12
+)
+,
+(
+2
+,
+13
+)
+,
+(
+4
+,
+11
+)
+,
+(
+4
+,
+12
+)
+,
+(
+4
+,
+13
+)
+,
+(
+3
+,
+10
+)
+,
+𝑧
+}
+,
+
+
+𝐵
+t
+e
+r
+m
+=
+𝐵
+0
+∪
+{
+	
+(
+1
+,
+11
+)
+,
+(
+1
+,
+12
+)
+,
+(
+1
+,
+13
+)
+,
+(
+5
+,
+11
+)
+,
+(
+5
+,
+12
+)
+,
+(
+5
+,
+13
+)
+,
+𝑟
+}
+,
+M
+term
+	​
+
+=M
+0
+	​
+
+∪{
+B
+term
+	​
+
+=B
+0
+	​
+
+∪{
+	​
+
+(2,11),(2,12),(2,13),(4,11),(4,12),(4,13),(3,10),z},
+(1,11),(1,12),(1,13),(5,11),(5,12),(5,13),r},
+	​
+
+
+where
+
+𝑧
+=
+{
+(
+4
+,
+14
+)
+,
+	
+𝑟
+=
+(
+2
+,
+14
+)
+,
+
+
+(
+2
+,
+14
+)
+,
+	
+𝑟
+≠
+(
+2
+,
+14
+)
+.
+z={
+(4,14),
+(2,14),
+	​
+
+r=(2,14),
+r
+
+=(2,14).
+	​
+
+
+Maker wins on that claim; no later Breaker reply is allocated.
+
+Therefore:
+
+Every policy in 
+𝐿
+ loses by this physical fork.
+Every policy in L loses by this physical fork.
+	​
+
+
+This is an all-reply result for the stated policy class, not an unrestricted Maker theorem.
+
+6. The exact last safe intervention also forces a pair dependency
+
+The left fork gives a useful pending-reply state even for policies outside 
+𝐿
+L.
+
+Suppose only the first five printed replies have occurred, and Maker has just made the sixth claim 
+(
+4
+,
+13
+)
+(4,13). Thus the exact colors, before Breaker’s reply, are
+
+𝑀
+^
+=
+𝑀
+0
+∪
+{
+	
+(
+2
+,
+11
+)
+,
+(
+2
+,
+12
+)
+,
+(
+2
+,
+13
+)
+,
+(
+4
+,
+11
+)
+,
+(
+4
+,
+12
+)
+,
+(
+4
+,
+13
+)
+}
+,
+
+
+𝐵
+^
+=
+𝐵
+0
+∪
+{
+	
+(
+1
+,
+11
+)
+,
+(
+1
+,
+12
+)
+,
+(
+1
+,
+13
+)
+,
+(
+5
+,
+11
+)
+,
+(
+5
+,
+12
+)
+}
+.
+M
+=M
+0
+	​
+
+∪{
+B
+=B
+0
+	​
+
+∪{
+	​
+
+(2,11),(2,12),(2,13),(4,11),(4,12),(4,13)},
+(1,11),(1,12),(1,13),(5,11),(5,12)}.
+	​
+
+
+To prevent the next-move fork at 
+(
+3
+,
+10
+)
+(3,10), Breaker must now claim one of
+
+𝑍
+=
+{
+(
+3
+,
+10
+)
+,
+(
+2
+,
+14
+)
+,
+(
+4
+,
+14
+)
+}
+.
+Z={(3,10),(2,14),(4,14)}.
+	​
+
+
+Every other fresh reply leaves both 
+𝑇
+6
+T
+6
+	​
+
+ and 
+𝑇
+7
+T
+7
+	​
+
+ available for the fork. This necessity is physical and does not depend on which pairs Breaker announces.
+
+But each of these three replies is a non-mate response to 
+𝑀
+(
+4
+,
+13
+)
+M(4,13), leaving 
+(
+5
+,
+13
+)
+(5,13) fresh. That creates the following protected-family obligation:
+
+𝐸
+𝐿
+=
+{
+(
+3
+,
+12
+)
+,
+(
+4
+,
+12
+)
+,
+(
+4
+,
+13
+)
+,
+(
+5
+,
+13
+)
+,
+(
+6
+,
+13
+)
+,
+(
+7
+,
+13
+)
+}
+.
+E
+L
+	​
+
+={(3,12),(4,12),(4,13),(5,13),(6,13),(7,13)}.
+
+This is the full Snaky
+
+𝑅
+13
+(
+4
+)
+∪
+{
+(
+3
+,
+12
+)
+,
+(
+4
+,
+12
+)
+}
+,
+R
+13
+	​
+
+(4)∪{(3,12),(4,12)},
+
+and it belongs to 
+𝐺
+G through its original pair
+
+𝑃
+49
+=
+{
+(
+4
+,
+13
+)
+,
+(
+5
+,
+13
+)
+}
+.
+P49={(4,13),(5,13)}.
+
+After any 
+𝐵
+(
+𝑧
+)
+B(z), 
+𝑧
+∈
+𝑍
+z∈Z, it remains live. Maker owns 
+(
+4
+,
+12
+)
+,
+(
+4
+,
+13
+)
+(4,12),(4,13), and its exact fresh requirement is
+
+{
+(
+3
+,
+12
+)
+,
+(
+5
+,
+13
+)
+,
+(
+6
+,
+13
+)
+,
+(
+7
+,
+13
+)
+}
+.
+{(3,12),(5,13),(6,13),(7,13)}.
+
+Three of those cells are tied to these still-fresh original pairs:
+
+𝑃
+60
+	
+=
+{
+(
+3
+,
+12
+)
+,
+(
+3
+,
+13
+)
+}
+,
+
+
+𝑃
+61
+	
+=
+{
+(
+6
+,
+12
+)
+,
+(
+6
+,
+13
+)
+}
+,
+
+
+𝑃
+50
+	
+=
+{
+(
+7
+,
+13
+)
+,
+(
+8
+,
+13
+)
+}
+.
+P60
+P61
+P50
+	​
+
+={(3,12),(3,13)},
+={(6,12),(6,13)},
+={(7,13),(8,13)}.
+	​
+
+
+If all three pairs are retained, their mates lie outside 
+𝐸
+𝐿
+E
+L
+	​
+
+, leaving only 
+(
+5
+,
+13
+)
+(5,13) available for a new pair inside it. Therefore:
+
+After the first five printed mate responses and 
+𝑀
+(
+4
+,
+13
+)
+M(4,13), every response capable of stopping the left fork must also release or replace at least one of 
+𝑃
+50
+,
+𝑃
+60
+,
+𝑃
+61
+P50,P60,P61 if Breaker is to restore a fresh-matching certificate for 
+𝐺
+G.
+
+This allows arbitrary changes elsewhere. Keeping those three pairs alone is already enough to make the repair impossible.
+
+I do not claim that releasing any one of them suffices. The statement identifies an exact necessary additional dependency, rather than treating the non-mate reply as a free repair.
+
+Consequences for the remaining research question
+
+The accepted interface exposes two different failures of a simple adaptive extension.
+
+On the right, after the accepted history, the forced branch
+
+𝑀
+(
+10
+,
+12
+)
+,
+ 
+𝐵
+(
+9
+,
+12
+)
+M(10,12), B(9,12)
+
+has no fresh-matching certificate even for five members of the original protected family. A controller reaching that state must use a non-matching adaptive guard or a different protection invariant. No amount of global pair exchange alone restores the specified invariant.
+
+On the left, waiting until an exception has a one-cell completion is already too late. At the explicit pending-sixth-reply state, the only fork-preventing replies are the three cells in 
+𝑍
+Z, and any matching-based repair must reach into at least one of 
+𝑃
+50
+,
+𝑃
+60
+,
+𝑃
+61
+P50,P60,P61.
+
+The exact unresolved right-hand mode is 
+𝑀
+𝑅
+/
+𝐵
+𝑅
+M
+R
+	​
+
+/B
+R
+	​
+
+ above. The exact unresolved left-hand repairs are the three 
+𝐵
+(
+𝑧
+)
+B(z), 
+𝑧
+∈
+𝑍
+z∈Z, together with their necessary released-pair dependencies. Neither is being labeled a physical Breaker loss merely because a matching certificate fails.
+
+These finite objects rule out specific extension architectures while retaining every old color and every protected physical target. The unrestricted conditional outcome, and both empty-board objectives, remain unproved here.

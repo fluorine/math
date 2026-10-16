@@ -1,0 +1,546 @@
+{
+  "axiom_audit": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutAudit.guard01.log",
+  "axiom_audit_sha256": "aa6ece81bd961e8f46f921917c57c0b99fd7f97acf7bd66df776692bee19be9b",
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "board": [
+    14,
+    14
+  ],
+  "cards": 26,
+  "common_base_receipt": "closeout-base-reuse.json",
+  "common_base_receipt_sha256": "f2894dc589e75837cfc096e5c1555088e5d841dc5be5813f1915bf83bb70b636",
+  "entry_module": "Snaky.MakerCloseoutAudit",
+  "freshly_compiled_modules": 40,
+  "further_maker_claim_bound": 8,
+  "generator": "tools/maker_closeout_data.py",
+  "generator_sha256": "1da22f52380e2b1067bbd7c714ff1bd0f723b194103bfa0eb844a9d06a8c62a8",
+  "initial_replies": {
+    "N30": {
+      "covered": 119,
+      "legal": 135,
+      "remaining": 16
+    },
+    "N31": {
+      "covered": 117,
+      "legal": 133,
+      "remaining": 16
+    }
+  },
+  "max_child_peak_rss_bytes": 531775488,
+  "modules": {
+    "Snaky.Bounded": {
+      "imports": [
+        "Snaky.Controls"
+      ],
+      "olean_sha256": "62012fe70b321f2d4c6a1bcdf9a04fb5bd3019961531baeaf1b5ad7941fb0cac",
+      "provenance": "validated previously compiled common base; not freshly rebuilt",
+      "source": "Snaky/Bounded.lean",
+      "source_sha256": "4af5a64267f3f731f83ceb522ddc1d6533dab7fc7a8ba32fdeec3aa0602b2db2"
+    },
+    "Snaky.Cards": {
+      "imports": [
+        "Snaky.Game"
+      ],
+      "olean_sha256": "1852b0be62592da3ff6b96ccfb625243f93f12910da8c00980439bef6722bf79",
+      "provenance": "validated previously compiled common base; not freshly rebuilt",
+      "source": "Snaky/Cards.lean",
+      "source_sha256": "e32e0963fd44957fff82b5a95f252d61762c53086b7fb6dbaf4e1bd8b9c0c63a"
+    },
+    "Snaky.CardsSound": {
+      "imports": [
+        "Snaky.Cards",
+        "Snaky.Bounded"
+      ],
+      "olean_sha256": "406bb2d0021e13d84b4849936afa111373023774a5b001236ae1cb4ede0dceec",
+      "provenance": "validated previously compiled common base; not freshly rebuilt",
+      "source": "Snaky/CardsSound.lean",
+      "source_sha256": "abe03c08cda6e631ac6df6e07a474fdb74a5fa3245077a561c1af474c49b0f65"
+    },
+    "Snaky.Controls": {
+      "imports": [
+        "Snaky.Game"
+      ],
+      "olean_sha256": "82325d836b257d38f29319f5c0b6caf19af0955f43a38e4662d84051d52745b3",
+      "provenance": "validated previously compiled common base; not freshly rebuilt",
+      "source": "Snaky/Controls.lean",
+      "source_sha256": "6e3bd76dda6d241e14a972a1c8a6f78479913ff1b7ca068617fc99fc393ee981"
+    },
+    "Snaky.Game": {
+      "imports": [],
+      "olean_sha256": "2fe84939fdbd5903ac06c3318571c08ff89719944de59eda109be3603568a52b",
+      "provenance": "validated previously compiled common base; not freshly rebuilt",
+      "source": "Snaky/Game.lean",
+      "source_sha256": "6c50131917d312e5fc1b9f65476ff0d12462c049585a0e14969b8b9f59e137f5"
+    },
+    "Snaky.GenMakerCloseout.Card00": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card00.execution01.json",
+      "execution_sha256": "28bc1b0a886808e370b85e7ad40fd635e6ff68a7bc82f961626a8b50c179f698",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "066c20f3d929ccfd3add381b4f38a1158346c421c394e326e66ee0c19bd9b540",
+      "source": "Snaky/GenMakerCloseout/Card00.lean",
+      "source_sha256": "5a0addf890ca4731c7181c9fad561e93a62c033d1eb05d2baf618e6e47e8962b"
+    },
+    "Snaky.GenMakerCloseout.Card01": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card01.execution01.json",
+      "execution_sha256": "b348caa0a438609236d2a2496c786c2e1ca4f85d9a85ddd129c23477824bd41c",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "20167f5ee1c1a95c794be5cda145a097fdc7016033db998c6c843e1e148eee34",
+      "source": "Snaky/GenMakerCloseout/Card01.lean",
+      "source_sha256": "f755960aa55da72b29e42f814abc29d049f3aa2441ccf305ff900e08bef3752d"
+    },
+    "Snaky.GenMakerCloseout.Card02": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card02.execution01.json",
+      "execution_sha256": "509dd0f56f76583cef7bf45c05e0f85423d5ec7455cde2859804203f2e956489",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "bc137a38565a03d74a6cfa76ccda45f68761bf4e9a66130730d45386707d4225",
+      "source": "Snaky/GenMakerCloseout/Card02.lean",
+      "source_sha256": "1913ad3102cc37b684b3aaf7fd6237a6f6112df9378fbb3475ab98e3780fead0"
+    },
+    "Snaky.GenMakerCloseout.Card03": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card03.execution01.json",
+      "execution_sha256": "9528350eb8f55af3c5a2d294dee2133d21bfb8c32bb2c24da4f3de82d0f346d8",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "5dedb13e14b797ec589cfcc22f53ba0a407aa7563940c3a1fd88c39bf176f5c5",
+      "source": "Snaky/GenMakerCloseout/Card03.lean",
+      "source_sha256": "fad6c7ecf5c2025cdba4c9c41148eaab6e5ca2500e4761c4f097197746b1e57f"
+    },
+    "Snaky.GenMakerCloseout.Card04": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card04.execution01.json",
+      "execution_sha256": "6790a2b8b30b3f15efad1e0cbf8fa572be26374111d789f7d47580321edf1976",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "56e8952afba2f0cc20ab3b75498b99f2ff93d3ca052ba614c53d781e5a298afa",
+      "source": "Snaky/GenMakerCloseout/Card04.lean",
+      "source_sha256": "68380fdf9f93bb4b34d0313890db9032fddb1de1bd3f0636c69d53e3defaf014"
+    },
+    "Snaky.GenMakerCloseout.Card05": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card05.execution01.json",
+      "execution_sha256": "03ed6688d766006f6bf68e4941e2fbe028ecd749c4a688ec1466d3eb1b102723",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "2815382562e56d8f144c14febce57316a55c24279bda6f947bcb743df73ed13e",
+      "source": "Snaky/GenMakerCloseout/Card05.lean",
+      "source_sha256": "252c23149ffb24f9d854079a6e7a3b0bd6f4a08fc7bd7737c685f6010f29a961"
+    },
+    "Snaky.GenMakerCloseout.Card06": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card06.execution01.json",
+      "execution_sha256": "ad9d693f56bb6a6f4f79f6ede6adb400aa847e39f98126521c108ba2c9abadce",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "be44c9ff629e37ca22d8483bedbb97e37c507bcce2fd4b3f1949c21c3f7dc2dd",
+      "source": "Snaky/GenMakerCloseout/Card06.lean",
+      "source_sha256": "fa1345aed5a42aa3916628a492078390fb830391018fc42afd335f13e71ce6f9"
+    },
+    "Snaky.GenMakerCloseout.Card07": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card07.execution01.json",
+      "execution_sha256": "236128dd87816b66dd2e76734c8531f2f220d45f6a8a5630f94551d3cb023f4f",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "dbc374396fff343a0c314ecb4abc483fec4434f45f57d1986ef517168a95c901",
+      "source": "Snaky/GenMakerCloseout/Card07.lean",
+      "source_sha256": "da8f20a7d4fb3e32634c4cbc638cd5c6c582e8fefc6f711abbd1cdc392b7c4ea"
+    },
+    "Snaky.GenMakerCloseout.Card08": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card08.execution01.json",
+      "execution_sha256": "760b8503423c01acb61a324ee01c13d36968ed5a727a65fd208884c5089a8e60",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "3aee5a4f8522aea2c22142fb1c8d9a80471cfd4b033385c5fb76f03249326afa",
+      "source": "Snaky/GenMakerCloseout/Card08.lean",
+      "source_sha256": "cb24934153c81c5e66d0c2cc3423fc91f4e96eaddfec84362f0692c6041333fb"
+    },
+    "Snaky.GenMakerCloseout.Card09": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card09.execution01.json",
+      "execution_sha256": "0fc3c371da635a260b9d40f5c38677e7dff94d33ab66c5284b060e7c005b9826",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "c949f3ec00884defabddbde7dc7d33f8cd4aab91645d5b213bfd583b6f9d26d0",
+      "source": "Snaky/GenMakerCloseout/Card09.lean",
+      "source_sha256": "b421d8718161272cfa1581a413c37a3a6256bf88fdc800bd7231af45befcf195"
+    },
+    "Snaky.GenMakerCloseout.Card10": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card10.execution01.json",
+      "execution_sha256": "3105bb36fce7c592bf1612ebdd8d8ec4d1741a8d67cb68bdd98a20f52d967415",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "d0791be8da914412617c5d5ba940b966ff55ec23bb3d67426f2771325a855aca",
+      "source": "Snaky/GenMakerCloseout/Card10.lean",
+      "source_sha256": "29b5c1b60137f700d1383b67f36709898abd62d82efdf934dbfce4ee512e38a9"
+    },
+    "Snaky.GenMakerCloseout.Card11": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card11.execution01.json",
+      "execution_sha256": "fc935faef6de6e0f9a4036d23a544a748eb6c14cdfc194af6e7e5624e1775904",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "cb496ac836c342072a24846e0ed92b63121ea2e28f4eddd6a2398a4e96903e3b",
+      "source": "Snaky/GenMakerCloseout/Card11.lean",
+      "source_sha256": "08e61eb4748bd4ecc84c4e24ccf8d330f94af74576a50a589d13cb4fc4547cd1"
+    },
+    "Snaky.GenMakerCloseout.Card12": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card12.execution01.json",
+      "execution_sha256": "ccf7ad592b090d98417ed24aa4c7160f69379d338424635131023928d56e075e",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "f88ec5da4a6ef5b4ee0847c498886e5e23a15aa70d663ef0db8d6c6038b1349f",
+      "source": "Snaky/GenMakerCloseout/Card12.lean",
+      "source_sha256": "f7563489c4a78c8d0a87e6b085d56ff0b19a3e2d2c2004e737176f866a30343b"
+    },
+    "Snaky.GenMakerCloseout.Card13": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card13.execution01.json",
+      "execution_sha256": "3f3b20c4d09469e86e1c63a9055a9df9be3e323c36f46f02f4ce0ffb51a29522",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "7d8bc6ae6dffe5972028205d1229ec0a97405dd1116e67f9e3139fadd7e6f341",
+      "source": "Snaky/GenMakerCloseout/Card13.lean",
+      "source_sha256": "964dc42fde5a2cc807b32790d3c2909864be54d7fd536b17ce9de713b5c64a6a"
+    },
+    "Snaky.GenMakerCloseout.Card14": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card14.execution01.json",
+      "execution_sha256": "7847af0fa3d6b70e7dd09fe1a4c857279b95adea1abdcdade4e8ad808fb75249",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "a700b7279976c71259720fd1d2f743b7f67e57081f023a2e977bcb46604df861",
+      "source": "Snaky/GenMakerCloseout/Card14.lean",
+      "source_sha256": "cd82fc056b3464279bdd2fc6c2d1e68ddbe64fc7d15ec21b96812b4e8e239718"
+    },
+    "Snaky.GenMakerCloseout.Card15": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card15.execution01.json",
+      "execution_sha256": "4a64711b1b92bf0de73e3c4c314cd23b9931f19aac60ea6ca3aea4c82cb972de",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "fa10cb972e5a3b7d9511dd6206f49160285f82e5b08e7ef1bbf384556a3a8ff0",
+      "source": "Snaky/GenMakerCloseout/Card15.lean",
+      "source_sha256": "95cdd1d2fc080e338734adf539ed6795e21287ad60ade2bef82be077bb3bac0a"
+    },
+    "Snaky.GenMakerCloseout.Card16": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card16.execution01.json",
+      "execution_sha256": "93e6480d9608581d3daeebce909ab917523e4b44801f276a656fbb37707c9431",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "77b796847e6d7fd5f5eb7908318cf5b3fd8cb6a254a4d59f92685baa5ccd6d19",
+      "source": "Snaky/GenMakerCloseout/Card16.lean",
+      "source_sha256": "1aa7d162ffeada4eabb1bb4a73b84413f2b604ce031af68e93c7354863cf9e2b"
+    },
+    "Snaky.GenMakerCloseout.Card17": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card17.execution01.json",
+      "execution_sha256": "4a89cf81435c22094b408aa1e9d6dd168420761c91f9b167afd3bbc89dfb7a54",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "370e1f28b100da25fd1d5da65431725a01edb2511b23fee05d2cdeff27c96bd6",
+      "source": "Snaky/GenMakerCloseout/Card17.lean",
+      "source_sha256": "2933be500029ac858a9354c9fcdf3ea4b8866354c3fc6c59fa7b5c2236be4def"
+    },
+    "Snaky.GenMakerCloseout.Card18": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card18.execution01.json",
+      "execution_sha256": "cf773b0478c2a1aead5b815cd57fee28220c6605d6c1e3d9505ada18febc785e",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "3210cd623142926f2ba742c312d49ffe39f375985d99ee3661d3fbc1de57dd10",
+      "source": "Snaky/GenMakerCloseout/Card18.lean",
+      "source_sha256": "1ed81becf8a1e7c294c809ddb4a2a14fbbf29cb7c64b1df3c419fae74f58db5e"
+    },
+    "Snaky.GenMakerCloseout.Card19": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card19.execution01.json",
+      "execution_sha256": "1a32000d9c47952a9e629431fd1aeb3821f4735686c7988408d7fe6ff51c33e3",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "091b775de8afd1a040c833ada3f68c03851d7d8258b9c02fd34dc8346be612a9",
+      "source": "Snaky/GenMakerCloseout/Card19.lean",
+      "source_sha256": "699e13f66550c27de5518e168882659f8d765e2bb5efb3aaecd5ab0c3a9f6189"
+    },
+    "Snaky.GenMakerCloseout.Card20": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card20.execution01.json",
+      "execution_sha256": "59d3e1e1e338e9ddb1e40e4a5bf40f6ea9a006590d4ba0937f1f4433c37484b0",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "453e529ab3c9aef50e1b2de4a783c1158b39b8ea95719118b64b217a90141a41",
+      "source": "Snaky/GenMakerCloseout/Card20.lean",
+      "source_sha256": "c2d66569725206619337147b2bf375f81e17dba8c7275aece0638aef4575d32d"
+    },
+    "Snaky.GenMakerCloseout.Card21": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card21.execution01.json",
+      "execution_sha256": "519792788cc9e20a1aaa1719ca0d6d502ab9f2b0c5a3711f6b15a7d1079a7f7a",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "46d23000c836dbea8a26d23d71b284cf03570049f5bff9d10a6c5df6b8a8e75a",
+      "source": "Snaky/GenMakerCloseout/Card21.lean",
+      "source_sha256": "a10a10ea9124b0f1e6a54a1b91f90a7e9d3db63a43ede6f1ea85b9534da96367"
+    },
+    "Snaky.GenMakerCloseout.Card22": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card22.execution01.json",
+      "execution_sha256": "27ece80b136b60b790e6e0e2fb373c9bbede838845d08094f9eee9a50e144f36",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "cbcb133efd9cadb1f6a8038dfb79ce6ef6fc7e869f5fcbac7e7a1138773e573d",
+      "source": "Snaky/GenMakerCloseout/Card22.lean",
+      "source_sha256": "2b7cf63bf009ae4556ee9e817fa91b1f8e4d46c23c180b81ef6ba522767665a7"
+    },
+    "Snaky.GenMakerCloseout.Card23": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card23.execution01.json",
+      "execution_sha256": "2edd220d22d0ddfcba6d5662d97f8afc426ed77abf8c216b32c625a3c7f632e8",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "7039e91a93d977c037c0187fe975fe4b12f27db128da4ee394747ba71718acb9",
+      "source": "Snaky/GenMakerCloseout/Card23.lean",
+      "source_sha256": "4886777bbfaf51c860d35725eb0186778f94b4c4f63e28afcfdc78248504ab89"
+    },
+    "Snaky.GenMakerCloseout.Card24": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card24.execution01.json",
+      "execution_sha256": "c59f7615e25573d0481ff5adfda9ed9000b1263d82de45185cc6280e500b8c8e",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "c7b4a002e9aa1e184467c83d92e2da15cea9baabba7cf1ba30eefd485b5b83ff",
+      "source": "Snaky/GenMakerCloseout/Card24.lean",
+      "source_sha256": "eddd89412df3de53033304c90d57d80dd56339b4cce267f77e0ccb798f23821c"
+    },
+    "Snaky.GenMakerCloseout.Card25": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Card25.execution01.json",
+      "execution_sha256": "d09b56cbd5559dd6914839afb0c19ea02324ca77fdbbca954de43de3ec53fdb1",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "5ffacff9b8d67ebc553d5ea994bbf587a07ff8c74f5d5a5bca14f531f78a5a8e",
+      "source": "Snaky/GenMakerCloseout/Card25.lean",
+      "source_sha256": "e5f49d82e5eb1635dd73f31a46316852ed884369d78c5accb02f77ef64ba8e23"
+    },
+    "Snaky.GenMakerCloseout.Check": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Check.execution02.json",
+      "execution_sha256": "6cfec1947b2b19766db8a961f282bcabbfb6be6239907148d0614d5790de2aec",
+      "imports": [
+        "Snaky.GenMakerCloseout.Card00",
+        "Snaky.GenMakerCloseout.Card01",
+        "Snaky.GenMakerCloseout.Card02",
+        "Snaky.GenMakerCloseout.Card03",
+        "Snaky.GenMakerCloseout.Card04",
+        "Snaky.GenMakerCloseout.Card05",
+        "Snaky.GenMakerCloseout.Card06",
+        "Snaky.GenMakerCloseout.Card07",
+        "Snaky.GenMakerCloseout.Card08",
+        "Snaky.GenMakerCloseout.Card09",
+        "Snaky.GenMakerCloseout.Card10",
+        "Snaky.GenMakerCloseout.Card11",
+        "Snaky.GenMakerCloseout.Card12",
+        "Snaky.GenMakerCloseout.Card13",
+        "Snaky.GenMakerCloseout.Card14",
+        "Snaky.GenMakerCloseout.Card15",
+        "Snaky.GenMakerCloseout.Card16",
+        "Snaky.GenMakerCloseout.Card17",
+        "Snaky.GenMakerCloseout.Card18",
+        "Snaky.GenMakerCloseout.Card19",
+        "Snaky.GenMakerCloseout.Card20",
+        "Snaky.GenMakerCloseout.Card21",
+        "Snaky.GenMakerCloseout.Card22",
+        "Snaky.GenMakerCloseout.Card23",
+        "Snaky.GenMakerCloseout.Card24",
+        "Snaky.GenMakerCloseout.Card25",
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "69f3792de8704f418734d71faeb94d5adeb3c38e628fb8a461d5b08e9fb50311",
+      "source": "Snaky/GenMakerCloseout/Check.lean",
+      "source_sha256": "2c4ab89d2ef83b22fe0927aa437bd60b6c860570331e4d076aeb46052e702adf"
+    },
+    "Snaky.GenMakerCloseout.Data": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-GenMakerCloseout-Data.execution02.json",
+      "execution_sha256": "a6b6225e0766c0752e2c45b046091525b7bf856aa5a1835d0130325fe255c16b",
+      "imports": [
+        "Snaky.Cards"
+      ],
+      "olean_sha256": "419fa2a55ede1d0d37cd2bd5184cf4e2d3012986831e9e639da884c345fda714",
+      "source": "Snaky/GenMakerCloseout/Data.lean",
+      "source_sha256": "2582d72af71731c8ab1de6d780645159839cdce2166e80530bed3218d91ee046"
+    },
+    "Snaky.MakerCloseoutAudit": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutAudit.execution01.json",
+      "execution_sha256": "12164ad3fadd4bb4f8998fb86a1ac5fce6d2266f1b667a3570992886522f62c8",
+      "imports": [
+        "Snaky.MakerCloseoutResult"
+      ],
+      "olean_sha256": "e40c62c430ead70828646b2b80ce8516bc93144c4de3f8ab74535fd5145b442b",
+      "source": "Snaky/MakerCloseoutAudit.lean",
+      "source_sha256": "b5259540bc167c3fbfaa8dd1868ec0697e9d9fee8144c9582f2f3bd681016b1e"
+    },
+    "Snaky.MakerCloseoutCountN30Covered": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutCountN30Covered.execution01.json",
+      "execution_sha256": "ee0fc89516fd4f20446c9be0d74bdae220e93ef8ef058122ea43dcd091d43e17",
+      "imports": [
+        "Snaky.MakerCloseoutCountRows"
+      ],
+      "olean_sha256": "a0bbacca0470a254b63f58a851412b984ae9c94de56b7c40cc39d9b45da832c7",
+      "source": "Snaky/MakerCloseoutCountN30Covered.lean",
+      "source_sha256": "7c2d53d2bc16263a5c6d53dadfba67113cd9fb526707b8a6174e4618b1d1c30c"
+    },
+    "Snaky.MakerCloseoutCountN30Legal": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutCountN30Legal.execution04.json",
+      "execution_sha256": "e96ff85e311971be1f05471aba8c9506f4dce47f7d0e8e0af3c322a1d27a7cae",
+      "imports": [
+        "Snaky.MakerCloseoutCountRows"
+      ],
+      "olean_sha256": "2b09197bd725d4db34202719f81f121f07c57ac63f33e1cc0c937d2de108c7d3",
+      "source": "Snaky/MakerCloseoutCountN30Legal.lean",
+      "source_sha256": "d15fbeb5a024c8ccd8d4100bf1feb331185c169ab682f4f5fe7c683752f1ccfe"
+    },
+    "Snaky.MakerCloseoutCountN30Remaining": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutCountN30Remaining.execution01.json",
+      "execution_sha256": "792887fe5afbc2cd7a18ea5ddf4aa7b3b557156fee3e8a769a7d0bff5b99bb73",
+      "imports": [
+        "Snaky.MakerCloseoutCountRows"
+      ],
+      "olean_sha256": "18c187c7ba5b2743093fc738bc0c4a6fe4e1bde071fb2072ceb8bfe165f1fc8f",
+      "source": "Snaky/MakerCloseoutCountN30Remaining.lean",
+      "source_sha256": "446977151a035c375e7d6e2e0d39aa4d7e9b1ae359ad90d10aa41421f3668728"
+    },
+    "Snaky.MakerCloseoutCountN31Covered": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutCountN31Covered.execution01.json",
+      "execution_sha256": "a5a1ae6fbccfc70fc1b7c9a15e1a5456596bea6c11262250abf46ddd0f0bdf0f",
+      "imports": [
+        "Snaky.MakerCloseoutCountRows"
+      ],
+      "olean_sha256": "a64ef7021e318b65696a6158ad6b5dc32fb5c8b81220baed1b3b111db57674af",
+      "source": "Snaky/MakerCloseoutCountN31Covered.lean",
+      "source_sha256": "f3d1073eae2b176556ff50a047e372081b2587e56ea1a333dcd6cd8b3bf1eeb1"
+    },
+    "Snaky.MakerCloseoutCountN31Legal": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutCountN31Legal.execution01.json",
+      "execution_sha256": "013ec7eb264025d60ff29ec5650a04eb632f784f19ae92a4b8ac0f89f979c62f",
+      "imports": [
+        "Snaky.MakerCloseoutCountRows"
+      ],
+      "olean_sha256": "f4fc808a9e6929048715e7cdeee912fa6d51c3e90b02ddce2df248d5e8754720",
+      "source": "Snaky/MakerCloseoutCountN31Legal.lean",
+      "source_sha256": "14a29383a071917d222a77fbf65bf7cd6730a944ea89da866a06f7b502481bac"
+    },
+    "Snaky.MakerCloseoutCountN31Remaining": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutCountN31Remaining.execution01.json",
+      "execution_sha256": "25331f93c5ea04fac407d393d45eb0a9d4cace973c004b507e71a797270bbe6d",
+      "imports": [
+        "Snaky.MakerCloseoutCountRows"
+      ],
+      "olean_sha256": "4a8aba22978eee6b9d3690f98f78fcc450ae6d607f6dc17c1c84fb073f215cf6",
+      "source": "Snaky/MakerCloseoutCountN31Remaining.lean",
+      "source_sha256": "2a68b146715045c1939c216bce4ceb89137eb928f60a5671ed5c85d8febdbc5e"
+    },
+    "Snaky.MakerCloseoutCountRows": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutCountRows.execution05.json",
+      "execution_sha256": "87aa4d85e8dd65e991b5d9705085c3f5fe406cc3daf336939c472cf4bdc5eee9",
+      "imports": [
+        "Snaky.MakerCloseoutState"
+      ],
+      "olean_sha256": "b11374d9ae4d66c010b7a8eafa0ce368cced96ccda56fc010779ff204c69c23f",
+      "source": "Snaky/MakerCloseoutCountRows.lean",
+      "source_sha256": "a039c4dfbcef75d2a98335e54dc930232cc678faf7c47b19776f25d08794b87a"
+    },
+    "Snaky.MakerCloseoutCounts": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutCounts.execution03.json",
+      "execution_sha256": "21d7ff104e08b39dc40e9ea1f84288bb98c897429bbb4b82c251ed1499064101",
+      "imports": [
+        "Snaky.MakerCloseoutState",
+        "Snaky.MakerCloseoutCountN30Legal",
+        "Snaky.MakerCloseoutCountN30Covered",
+        "Snaky.MakerCloseoutCountN30Remaining",
+        "Snaky.MakerCloseoutCountN31Legal",
+        "Snaky.MakerCloseoutCountN31Covered",
+        "Snaky.MakerCloseoutCountN31Remaining"
+      ],
+      "olean_sha256": "abf51be9484c8dbba626ceb289e7b63932c80d580345d79c7b7d311389f28372",
+      "source": "Snaky/MakerCloseoutCounts.lean",
+      "source_sha256": "91f0d823ee64f233676911f1bff3afcaabf09bfe63f7ea9234be92d2ba13362c"
+    },
+    "Snaky.MakerCloseoutPlaced": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutPlaced.execution02.json",
+      "execution_sha256": "827822aa4aa5e6da171b5216faacb60902b866d30dc898d3e83b8bfa77e5df05",
+      "imports": [
+        "Snaky.GenMakerCloseout.Data",
+        "Snaky.MakerCloseoutState"
+      ],
+      "olean_sha256": "37b7ad52080e85775e825f3ff345cfe96b832a2eec2ff8d79ba9f417098d077c",
+      "source": "Snaky/MakerCloseoutPlaced.lean",
+      "source_sha256": "a6f797038a919d3983a1b84e956b3c3794b620237d253c0169bb423fad777fd9"
+    },
+    "Snaky.MakerCloseoutResult": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutResult.execution02.json",
+      "execution_sha256": "9f3e541df4f35e59196bc20b749da553a6c4a331191c47d6084098d21e037d73",
+      "imports": [
+        "Snaky.GenMakerCloseout.Check",
+        "Snaky.MakerCloseoutPlaced",
+        "Snaky.MakerCloseoutCounts"
+      ],
+      "olean_sha256": "eb293e3486c944ab68be2e9f91f6a984cd0ccb36e2a2eb1d90bce75bda514a04",
+      "source": "Snaky/MakerCloseoutResult.lean",
+      "source_sha256": "688f614bbc123ba3332d1ed30b47e5938440dc8dadfc865e5c0e2d478efa75d8"
+    },
+    "Snaky.MakerCloseoutState": {
+      "execution_receipt": "Snaky/GenMakerCloseout/verification/Snaky-MakerCloseoutState.execution02.json",
+      "execution_sha256": "b692e24df48e1f90bc4b3b8e718a2e1971ef9ba41621806d40d564dafd989cf6",
+      "imports": [
+        "Snaky.CardsSound"
+      ],
+      "olean_sha256": "532b5550333e98ef5509de54238f3d46ef99b8cca3154e0e8a4910d595a80d37",
+      "source": "Snaky/MakerCloseoutState.lean",
+      "source_sha256": "41aca75f2c963980fc66f9a216d668655a2805eb7f2909aae1c3ff48d8cee1a5"
+    }
+  },
+  "schema": "snaky-maker-closeout-kernel-acceptance-v1",
+  "scope": "Exact N30/N31 states after q=(12,6) and any legal Breaker reply outside the explicit sixteen-cell exception set. No empty-board or initial-q parent win.",
+  "status": "kernel_checked_conditional_theorems",
+  "successful_compile_wall_seconds": 31.332990295253694,
+  "utc": "2026-10-16T10:36:41.419251+00:00"
+}

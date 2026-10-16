@@ -1,0 +1,205 @@
+#!/usr/bin/env python3
+"""Emit untrusted Lean literals for accepted L_row/L_cap endpoints.
+
+The pinned reports are data sources, not proof oracles. All generated finite
+hypotheses and actual Snaky coverage are checked by the Lean kernel. Arbitrary
+fresh leftovers are paired only to make the mate function total; original
+protecting pairs and every local protecting pair are preserved.
+"""
+import hashlib
+import json
+from pathlib import Path
+
+FORMAL = Path(__file__).resolve().parent
+BOARD = FORMAL.parent / 'board_size'
+PINS = {
+    'maker/earlier-pairing-row-result.pairing.json':
+        '4798216f6401073a9c8830a7c65d454207268f856840d1fd5cf80732a421e8ea',
+    'verification/lcap_k8_controller.json':
+        '6923ff233b8b7fa0faeaecf65c03118eccf7c6e5f2f12739d1581d70409630cf',
+    'verification/upstream11-physical-matching-result-01.pairing.json':
+        'dd3a93b074a5c1f2ed6247979fead37ea9ae01b5ad8b7fc0d09a4ec93fab44b9',
+    'verification/browser-eighteenth-full-pairing05-01.pairing.json':
+        '315547489b51a54b1ec79ede7a47fa6c8fca9d025f043d80531c6b37237c2130',
+    'verification/post-m31-joint-matching-result-01.pairing.json':
+        '5d57788fd23e96a8e46a16cfd83d723dadbe75f90f2a2089e0f486854906b2bf',
+    'verification/browser_twentyfifth_physical05.02.json':
+        '5af2a85e778f613d94757c1e8e27e68b5a1681b197b55e09919c5d23bdfb5ab6',
+}
+
+
+def read(name):
+    raw = (BOARD / name).read_bytes()
+    assert hashlib.sha256(raw).hexdigest() == PINS[name], name
+    return json.loads(raw)
+
+
+def cell(q):
+    x, y = q
+    assert 1 <= x <= 14 and 1 <= y <= 14
+    return 14 * (y - 1) + x - 1
+
+
+def totalize(pairs, domain):
+    pairs = [tuple(p) for p in pairs]
+    flat = [q for p in pairs for q in p]
+    assert len(flat) == len(set(flat)) and set(flat) <= set(domain)
+    rest = sorted(set(domain) - set(flat))
+    assert len(rest) % 2 == 0
+    return pairs + list(zip(rest[::2], rest[1::2]))
+
+
+def lean(xs):
+    if isinstance(xs, tuple):
+        return '(' + ','.join(map(lean, xs)) + ')'
+    if isinstance(xs, list):
+        return '[' + ','.join(map(lean, xs)) + ']'
+    return str(xs)
+
+
+def write(name, text):
+    path = FORMAL / 'Snaky' / name
+    # Deterministic re-generation is safe only when bytes already agree.
+    if path.exists():
+        assert path.read_text() == text, 'refusing changed existing generated source'
+    else:
+        path.write_text(text)
+
+
+def validity(theorem, outer=False, n=196):
+    """Split a finite hypothesis, preserving the complete board quantifier."""
+    m = 'outsideMate' if outer else 'mate'
+    conclusion = f'Fresh {n} maker breaker ({m} x) ∧ '
+    if outer:
+        conclusion += f'{m} x ∉ reserved ∧ '
+    conclusion += f'{m} x ≠ x ∧ {m} ({m} x) = x'
+    extra = 'x ∉ reserved → ' if outer else ''
+    blocks = []
+    bounds = [(l, min(l+20, n)) for l in range(0,n,20)]
+    for l,u in bounds:
+        blocks += [f'private theorem block{l} : ∀ x ∈ List.range {u}, {l} ≤ x →',
+            f'    x ∉ maker → x ∉ breaker → {extra}{conclusion} := by',
+            '  unfold Fresh', '  decide +kernel', '']
+    typ = f'OuterOK {n} maker breaker reserved outsideMate' if outer else f'MatchingOK {n} maker breaker mate'
+    blocks += [f'theorem {theorem} : {typ} := by',
+        '  intro x hx hm hb' + (' hr' if outer else ''),
+        f'  have hx{n} : x < {n} := List.mem_range.mp hx']
+    args = ' hm hb' + (' hr' if outer else '')
+    for l,u in bounds[:-1]:
+        blocks += [f'  by_cases h{u} : x < {u}',
+                   f'  · exact block{l} x (List.mem_range.mpr h{u}) (by omega){args}']
+    blocks += [f'  exact block{bounds[-1][0]} x (List.mem_range.mpr hx{n}) (by omega){args}']
+    return '\n'.join(blocks)
+
+
+def static_source(module, source):
+    row = read(source)
+    if 'complete_leaf' in row:
+        leaf = row['complete_leaf']
+        row = dict(size=10, maker=leaf['state']['maker'], breaker=leaf['state']['breaker'], pairs=leaf['pairs'])
+    n = row['size'] ** 2
+    m, b = row['maker'], row['breaker']
+    ps = totalize(row['pairs'], set(range(n)) - set(m) - set(b))
+    write(module+'Data.lean', f'''import Snaky.BreakerPairing
+
+/-! Exact conditional physical endpoint from `{source}`.
+Generated literals are not axioms; all finite hypotheses and target coverage
+are independently reduced in Lean's kernel. -/
+namespace Snaky.{module}
+open Snaky.Breaker
+def maker : List Nat := {lean(m)}
+def breaker : List Nat := {lean(b)}
+def pairs : List (Nat × Nat) := {lean(ps)}
+def mate := mateOfPairs pairs
+theorem colors_disjoint : Disjoint maker breaker := by
+  unfold Disjoint
+  decide +kernel
+{validity('matching_ok', n=n)}
+end Snaky.{module}
+''')
+
+
+def main():
+    row = read('maker/earlier-pairing-row-result.pairing.json')
+    assert row['size'] == 14
+    m, b = row['maker'], row['breaker']
+    ps = totalize(row['pairs'], set(range(196)) - set(m) - set(b))
+    write('BreakerLRowData.lean', f'''import Snaky.BreakerPairing
+
+/-! Untrusted endpoint literals, generated by `Breaker_generate_endpoints.py`.
+Coordinates are the original 1-based physical (x,y) mapped to14*(y-1)+(x-1).
+Only the kernel-checked finite hypotheses below are used by the final proof. -/
+namespace Snaky.BreakerLRow
+open Snaky.Breaker
+def maker : List Nat := {lean(m)}
+def breaker : List Nat := {lean(b)}
+def pairs : List (Nat × Nat) := {lean(ps)}
+def mate := mateOfPairs pairs
+theorem colors_disjoint : Disjoint maker breaker := by
+  unfold Disjoint
+  decide +kernel
+{validity('matching_ok')}
+end Snaky.BreakerLRow
+''')
+    cap = read('verification/lcap_k8_controller.json')
+    state = cap['original_state']
+    m, b = sorted(map(cell, state['maker'])), sorted(map(cell, state['breaker']))
+    r = sorted(map(cell, cap['reserved_domain']))
+    gs = sorted([sorted(map(cell, g)) for g in cap['distinct_reserved_traces']])
+    ps = totalize([[cell(q) for q in p] for p in cap['exterior_pairs']],
+                  set(range(196)) - set(m) - set(b) - set(r))
+    rows = []
+    for name, v in cap['policy'].items():
+        if name == 'outside_unmatched':
+            continue
+        u, w = cell(v['maker_entry']), cell(v['breaker_reply'])
+        lp = totalize([[cell(q) for q in p] for p in v['replacement_pairs']], set(r)-{u,w})
+        rows.append((u,w,lp))
+    rows.sort()
+    reply = '\n'.join(f'  | {u} => {w}' for u,w,_ in rows)
+    local = '\n'.join(f'  | {u} => {lean(p)}' for u,_,p in rows)
+    write('BreakerLCapData.lean', f'''import Snaky.BreakerSwitch
+
+/-! Untrusted L_cap34+34 literals, generated from the pinned accepted report.
+Totalization pairs only unused fresh cells. The proof uses no report result. -/
+namespace Snaky.BreakerLCap
+open Snaky.Breaker
+def maker : List Nat := {lean(m)}
+def breaker : List Nat := {lean(b)}
+def reserved : List Nat := {lean(r)}
+def guards : List (List Nat) := {lean(gs)}
+def outsidePairs : List (Nat × Nat) := {lean(ps)}
+def outsideMate := mateOfPairs outsidePairs
+def reply : Nat → Nat
+{reply}
+  | u => u
+def localPairs : Nat → List (Nat × Nat)
+{local}
+  | _ => []
+def localMate (u : Nat) := mateOfPairs (localPairs u)
+theorem colors_disjoint : Disjoint maker breaker := by
+  unfold Disjoint
+  decide +kernel
+theorem reserved_fresh : ∀ x ∈ reserved, Fresh 196 maker breaker x := by
+  unfold Fresh
+  decide +kernel
+{validity('exterior_matching', outer=True)}
+theorem guard_shape : GuardOK reserved guards := by
+  unfold GuardOK
+  decide +kernel
+theorem switch_rows : SwitchOK reserved guards reply localMate := by
+  unfold SwitchOK
+  decide +kernel
+end Snaky.BreakerLCap
+''')
+    for name, source in (
+        ('BreakerS11', 'verification/upstream11-physical-matching-result-01.pairing.json'),
+        ('BreakerS13', 'verification/browser-eighteenth-full-pairing05-01.pairing.json'),
+        ('BreakerPostM31', 'verification/post-m31-joint-matching-result-01.pairing.json'),
+        ('BreakerP53Leaf', 'verification/browser_twentyfifth_physical05.02.json'),
+    ):
+        static_source(name, source)
+
+
+if __name__ == '__main__':
+    main()

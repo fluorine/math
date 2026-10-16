@@ -1,0 +1,5139 @@
+{
+  "acquisition": {
+    "exceptional_cases": [
+      {
+        "leaf": "L_cap",
+        "outcome": "OPEN",
+        "reply": [
+          12,
+          7
+        ]
+      },
+      {
+        "arrow": {
+          "forced_reply": [
+            12,
+            7
+          ],
+          "legal_breaker_replies": 127,
+          "move": [
+            11,
+            8
+          ],
+          "winning_deviations": [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              5
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              1,
+              7
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              1,
+              9
+            ],
+            [
+              1,
+              10
+            ],
+            [
+              1,
+              11
+            ],
+            [
+              1,
+              12
+            ],
+            [
+              1,
+              13
+            ],
+            [
+              1,
+              14
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              2,
+              7
+            ],
+            [
+              2,
+              8
+            ],
+            [
+              2,
+              9
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              2,
+              11
+            ],
+            [
+              2,
+              12
+            ],
+            [
+              2,
+              13
+            ],
+            [
+              2,
+              14
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              3,
+              7
+            ],
+            [
+              3,
+              8
+            ],
+            [
+              3,
+              9
+            ],
+            [
+              3,
+              10
+            ],
+            [
+              3,
+              11
+            ],
+            [
+              3,
+              12
+            ],
+            [
+              3,
+              13
+            ],
+            [
+              3,
+              14
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              4,
+              12
+            ],
+            [
+              4,
+              13
+            ],
+            [
+              4,
+              14
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              12
+            ],
+            [
+              5,
+              13
+            ],
+            [
+              5,
+              14
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              6,
+              11
+            ],
+            [
+              6,
+              12
+            ],
+            [
+              6,
+              13
+            ],
+            [
+              6,
+              14
+            ],
+            [
+              7,
+              1
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              7,
+              10
+            ],
+            [
+              7,
+              12
+            ],
+            [
+              7,
+              13
+            ],
+            [
+              7,
+              14
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              8,
+              2
+            ],
+            [
+              8,
+              12
+            ],
+            [
+              8,
+              13
+            ],
+            [
+              8,
+              14
+            ],
+            [
+              9,
+              1
+            ],
+            [
+              9,
+              2
+            ],
+            [
+              9,
+              3
+            ],
+            [
+              9,
+              5
+            ],
+            [
+              9,
+              13
+            ],
+            [
+              9,
+              14
+            ],
+            [
+              10,
+              1
+            ],
+            [
+              10,
+              2
+            ],
+            [
+              10,
+              3
+            ],
+            [
+              10,
+              12
+            ],
+            [
+              10,
+              13
+            ],
+            [
+              10,
+              14
+            ],
+            [
+              11,
+              1
+            ],
+            [
+              11,
+              2
+            ],
+            [
+              11,
+              3
+            ],
+            [
+              11,
+              4
+            ],
+            [
+              11,
+              13
+            ],
+            [
+              11,
+              14
+            ],
+            [
+              12,
+              1
+            ],
+            [
+              12,
+              3
+            ],
+            [
+              12,
+              4
+            ],
+            [
+              12,
+              5
+            ],
+            [
+              12,
+              6
+            ],
+            [
+              12,
+              11
+            ],
+            [
+              12,
+              12
+            ],
+            [
+              12,
+              13
+            ],
+            [
+              12,
+              14
+            ],
+            [
+              13,
+              1
+            ],
+            [
+              13,
+              2
+            ],
+            [
+              13,
+              3
+            ],
+            [
+              13,
+              4
+            ],
+            [
+              13,
+              8
+            ],
+            [
+              13,
+              9
+            ],
+            [
+              13,
+              11
+            ],
+            [
+              13,
+              12
+            ],
+            [
+              13,
+              13
+            ],
+            [
+              13,
+              14
+            ],
+            [
+              14,
+              1
+            ],
+            [
+              14,
+              2
+            ],
+            [
+              14,
+              3
+            ],
+            [
+              14,
+              4
+            ],
+            [
+              14,
+              5
+            ],
+            [
+              14,
+              6
+            ],
+            [
+              14,
+              7
+            ],
+            [
+              14,
+              8
+            ],
+            [
+              14,
+              9
+            ],
+            [
+              14,
+              10
+            ],
+            [
+              14,
+              11
+            ],
+            [
+              14,
+              12
+            ],
+            [
+              14,
+              13
+            ],
+            [
+              14,
+              14
+            ]
+          ],
+          "witness": [
+            [
+              9,
+              8
+            ],
+            [
+              10,
+              8
+            ],
+            [
+              11,
+              8
+            ],
+            [
+              12,
+              7
+            ],
+            [
+              12,
+              8
+            ],
+            [
+              13,
+              7
+            ]
+          ]
+        },
+        "leaf": "L_row",
+        "outcome": "forced_or_immediate_win",
+        "reply": [
+          12,
+          9
+        ]
+      }
+    ],
+    "max_further_Maker_claims_to_win_or_open": 4,
+    "partial_interface": {
+      "ordinary_win_card": false,
+      "required": [
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          13,
+          7
+        ]
+      ],
+      "support": [
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    },
+    "preparation": [
+      12,
+      8
+    ],
+    "residuals": {
+      "L_cap": {
+        "board": [
+          1,
+          1,
+          14,
+          14
+        ],
+        "breaker": [
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            10
+          ]
+        ],
+        "maker": [
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ]
+        ],
+        "status": "OPEN",
+        "stones_each": 34,
+        "turn": "Maker"
+      },
+      "L_row": {
+        "board": [
+          1,
+          1,
+          14,
+          14
+        ],
+        "breaker": [
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            7
+          ],
+          [
+            4,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            4,
+            11
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            6,
+            4
+          ],
+          [
+            6,
+            7
+          ],
+          [
+            6,
+            9
+          ],
+          [
+            6,
+            10
+          ],
+          [
+            7,
+            3
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            7,
+            11
+          ],
+          [
+            8,
+            3
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            8,
+            7
+          ],
+          [
+            8,
+            9
+          ],
+          [
+            9,
+            4
+          ],
+          [
+            9,
+            6
+          ],
+          [
+            9,
+            7
+          ],
+          [
+            9,
+            9
+          ],
+          [
+            9,
+            10
+          ],
+          [
+            9,
+            12
+          ],
+          [
+            10,
+            5
+          ],
+          [
+            11,
+            6
+          ],
+          [
+            11,
+            7
+          ],
+          [
+            11,
+            9
+          ],
+          [
+            11,
+            11
+          ],
+          [
+            11,
+            12
+          ],
+          [
+            12,
+            2
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            13,
+            5
+          ],
+          [
+            13,
+            10
+          ]
+        ],
+        "maker": [
+          [
+            4,
+            10
+          ],
+          [
+            5,
+            5
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            5,
+            8
+          ],
+          [
+            5,
+            9
+          ],
+          [
+            5,
+            10
+          ],
+          [
+            6,
+            5
+          ],
+          [
+            6,
+            6
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            4
+          ],
+          [
+            7,
+            5
+          ],
+          [
+            7,
+            6
+          ],
+          [
+            7,
+            7
+          ],
+          [
+            7,
+            8
+          ],
+          [
+            8,
+            4
+          ],
+          [
+            8,
+            6
+          ],
+          [
+            8,
+            8
+          ],
+          [
+            8,
+            10
+          ],
+          [
+            8,
+            11
+          ],
+          [
+            9,
+            8
+          ],
+          [
+            9,
+            11
+          ],
+          [
+            10,
+            4
+          ],
+          [
+            10,
+            6
+          ],
+          [
+            10,
+            7
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            10,
+            9
+          ],
+          [
+            10,
+            10
+          ],
+          [
+            10,
+            11
+          ],
+          [
+            11,
+            5
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            11,
+            10
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ]
+        ],
+        "status": "OPEN",
+        "stones_each": 35,
+        "turn": "Maker"
+      }
+    },
+    "total_replies": 129,
+    "winning_handoffs": [
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          4
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          5
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          6
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          7
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          8
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          9
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          10
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          11
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          1,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          4
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          5
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          6
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          7
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          8
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          9
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          10
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          11
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          2,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          4
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          5
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          6
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          7
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          8
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          9
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          10
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          11
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          3,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          4,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          4,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          4,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          4,
+          4
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          4,
+          6
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          4,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          4,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          4,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          5,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          5,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          5,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          5,
+          4
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          5,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          5,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          5,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          6,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          6,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          6,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          6,
+          11
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          6,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          6,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          6,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          7,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          7,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          7,
+          10
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          7,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          7,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          7,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          8,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          8,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          8,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          8,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          8,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          9,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          9,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          9,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          9,
+          5
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          9,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          9,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          10,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          10,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          10,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          10,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          10,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          10,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          11,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          11,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          11,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          11,
+          4
+        ]
+      },
+      {
+        "card": "turn_after_column",
+        "reply": [
+          11,
+          8
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          11,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          11,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          4
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          5
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          6
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          11
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          12,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          4
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          8
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          9
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          11
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          13,
+          14
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          1
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          2
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          3
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          4
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          5
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          6
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          7
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          8
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          9
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          10
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          11
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          12
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          13
+        ]
+      },
+      {
+        "card": "perpendicular_fork",
+        "reply": [
+          14,
+          14
+        ]
+      }
+    ]
+  },
+  "cpu_seconds": 0.010139999999999996,
+  "elapsed_seconds": 0.011094083078205585,
+  "final_response_sha256": "97cd840afb1107c99ec437cdf58fbc27c899b7a95a9c5b7e9c75193719a41dcf",
+  "geometry_count": 1040,
+  "input_sha256": {
+    "browser/02-sixteenth-final.txt": "aa324e2e29262334c72333100972487f354ac6c77751cd5441edc82bea55c34e",
+    "maker/fourteenth-n-repair-prefix.json": "a3714d593e7a0328e8a205d402aa8c329c0562b95256beb384dcae8092560466",
+    "maker/fourteenth-n-reply-13-5-launch.json": "38bd0dbce1087ddb852814ad98c89c0fac3d25764f3f4428ef9f4c5f0fd2483c",
+    "verification/browser_fifteenth_maker01.py": "37a84a4ce77c6e33964332e27d7966c38fa25318b6f7272169e0d3a3f0efb58e",
+    "verification/browser_thirteenth_maker01.py": "c816ad6a711ef4d64b94131edd876dabc6986cad9888ba9f3b54d5d28a6a4769"
+  },
+  "literals": {
+    "cards": {
+      "perpendicular_fork": {
+        "height": 2,
+        "policy": {
+          "completions": [
+            [
+              11,
+              8
+            ],
+            [
+              12,
+              9
+            ]
+          ],
+          "kind": "fork",
+          "move": [
+            12,
+            7
+          ],
+          "witnesses": [
+            [
+              [
+                9,
+                8
+              ],
+              [
+                10,
+                8
+              ],
+              [
+                11,
+                8
+              ],
+              [
+                12,
+                7
+              ],
+              [
+                12,
+                8
+              ],
+              [
+                13,
+                7
+              ]
+            ],
+            [
+              [
+                12,
+                7
+              ],
+              [
+                12,
+                8
+              ],
+              [
+                12,
+                9
+              ],
+              [
+                12,
+                10
+              ],
+              [
+                13,
+                6
+              ],
+              [
+                13,
+                7
+              ]
+            ]
+          ]
+        },
+        "required": [
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ]
+        ],
+        "support": [
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            12,
+            7
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ]
+        ]
+      },
+      "turn_after_column": {
+        "height": 3,
+        "policy": {
+          "following": {
+            "completions": [
+              [
+                13,
+                9
+              ],
+              [
+                12,
+                11
+              ]
+            ],
+            "kind": "fork",
+            "move": [
+              13,
+              8
+            ],
+            "witnesses": [
+              [
+                [
+                  12,
+                  9
+                ],
+                [
+                  12,
+                  10
+                ],
+                [
+                  13,
+                  6
+                ],
+                [
+                  13,
+                  7
+                ],
+                [
+                  13,
+                  8
+                ],
+                [
+                  13,
+                  9
+                ]
+              ],
+              [
+                [
+                  12,
+                  8
+                ],
+                [
+                  12,
+                  9
+                ],
+                [
+                  12,
+                  10
+                ],
+                [
+                  12,
+                  11
+                ],
+                [
+                  13,
+                  7
+                ],
+                [
+                  13,
+                  8
+                ]
+              ]
+            ]
+          },
+          "kind": "arrow",
+          "move": [
+            12,
+            9
+          ],
+          "reply": [
+            12,
+            7
+          ],
+          "witness": [
+            [
+              12,
+              7
+            ],
+            [
+              12,
+              8
+            ],
+            [
+              12,
+              9
+            ],
+            [
+              12,
+              10
+            ],
+            [
+              13,
+              6
+            ],
+            [
+              13,
+              7
+            ]
+          ]
+        },
+        "required": [
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ]
+        ],
+        "support": [
+          [
+            12,
+            7
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            11
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            9
+          ]
+        ]
+      }
+    }
+  },
+  "negative_controls": [
+    "missing_old_row_requirement",
+    "wrong_fork_completion",
+    "omitted_future_endpoint",
+    "understated_turn_height",
+    "omitted_actual_exception",
+    "discarded_earlier_breaker_stone",
+    "omitted_fifth_domain_target",
+    "pair_reuses_defensive_claim"
+  ],
+  "parent": {
+    "board": [
+      1,
+      1,
+      14,
+      14
+    ],
+    "breaker": [
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        7
+      ],
+      [
+        4,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        4,
+        11
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        5,
+        11
+      ],
+      [
+        6,
+        4
+      ],
+      [
+        6,
+        7
+      ],
+      [
+        6,
+        9
+      ],
+      [
+        6,
+        10
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        7,
+        9
+      ],
+      [
+        7,
+        11
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        8,
+        5
+      ],
+      [
+        8,
+        7
+      ],
+      [
+        8,
+        9
+      ],
+      [
+        9,
+        4
+      ],
+      [
+        9,
+        6
+      ],
+      [
+        9,
+        7
+      ],
+      [
+        9,
+        9
+      ],
+      [
+        9,
+        10
+      ],
+      [
+        9,
+        12
+      ],
+      [
+        10,
+        5
+      ],
+      [
+        11,
+        6
+      ],
+      [
+        11,
+        7
+      ],
+      [
+        11,
+        9
+      ],
+      [
+        11,
+        11
+      ],
+      [
+        11,
+        12
+      ],
+      [
+        12,
+        2
+      ],
+      [
+        13,
+        5
+      ],
+      [
+        13,
+        10
+      ]
+    ],
+    "maker": [
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        13,
+        6
+      ],
+      [
+        13,
+        7
+      ]
+    ],
+    "status": "OPEN",
+    "stones_each": 33,
+    "turn": "Maker"
+  },
+  "policy_checks": {
+    "child_handoffs": 0,
+    "heights": {
+      "perpendicular_fork": 2,
+      "turn_after_column": 3
+    },
+    "immediate_witness_wins": 10,
+    "inside_reply_classes": 8,
+    "outside_reply_classes": 3
+  },
+  "residuals": {
+    "L_cap": {
+      "board": [
+        1,
+        1,
+        14,
+        14
+      ],
+      "breaker": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          13,
+          10
+        ]
+      ],
+      "maker": [
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          13,
+          7
+        ]
+      ],
+      "status": "OPEN",
+      "stones_each": 34,
+      "turn": "Maker"
+    },
+    "L_row": {
+      "board": [
+        1,
+        1,
+        14,
+        14
+      ],
+      "breaker": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          9
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          13,
+          10
+        ]
+      ],
+      "maker": [
+        [
+          4,
+          10
+        ],
+        [
+          5,
+          5
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          6
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          13,
+          7
+        ]
+      ],
+      "status": "OPEN",
+      "stones_each": 35,
+      "turn": "Maker"
+    }
+  },
+  "restricted_domain": {
+    "L_cap_defense": {
+      "exceptional_breaker": [
+        13,
+        8
+      ],
+      "exceptional_maker": [
+        12,
+        9
+      ],
+      "first_move_cases": [
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            5
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            6
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            7
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            8
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            9
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            10
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            11
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            1,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            5
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            6
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            7
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            8
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            9
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            10
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            11
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            2,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            5
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            6
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            7
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            8
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            9
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            10
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            11
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            3,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            4,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            4,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            4,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            4,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            4,
+            6
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            4,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            4,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            4,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            5,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            5,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            5,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            5,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            5,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            5,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            5,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            6,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            6,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            6,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            6,
+            11
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            6,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            6,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            6,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            7,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            7,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            7,
+            10
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            7,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            7,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            7,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            8,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            8,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            8,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            8,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            8,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            9,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            9,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            9,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            9,
+            5
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            9,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            9,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            10,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            10,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            10,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            10,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            10,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            10,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            11,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            11,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            11,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            11,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            11,
+            8
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            11,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            11,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            5
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            6
+          ]
+        },
+        {
+          "breaker": [
+            13,
+            8
+          ],
+          "live_targets_after_reply": 1,
+          "maker": [
+            12,
+            9
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            11
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            12,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            8
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            9
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            11
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            13,
+            14
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            1
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            2
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            3
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            4
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            5
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            6
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            7
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            8
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            9
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            10
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            11
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            12
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            13
+          ]
+        },
+        {
+          "breaker": [
+            12,
+            9
+          ],
+          "live_targets_after_reply": 0,
+          "maker": [
+            14,
+            14
+          ]
+        }
+      ],
+      "initial_live_targets": [
+        [
+          [
+            9,
+            8
+          ],
+          [
+            10,
+            8
+          ],
+          [
+            11,
+            8
+          ],
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            13,
+            9
+          ]
+        ],
+        [
+          [
+            12,
+            8
+          ],
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            12,
+            11
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            13,
+            8
+          ]
+        ],
+        [
+          [
+            12,
+            9
+          ],
+          [
+            12,
+            10
+          ],
+          [
+            13,
+            6
+          ],
+          [
+            13,
+            7
+          ],
+          [
+            13,
+            8
+          ],
+          [
+            13,
+            9
+          ]
+        ]
+      ],
+      "pair_invariant": "Both endpoints are initially free. On first Maker entry Breaker takes the mate; hence the only remaining target cannot complete, including on a final Maker claim. Other claims can spend a free cell; taking a pair endpoint early also blocks the target.",
+      "remaining_pair": [
+        [
+          11,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ],
+      "scope": "Only the five targets contained in the fixed domain; no full-board defense."
+    },
+    "L_row_live_targets": 0,
+    "contained_targets": [
+      [
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          13,
+          7
+        ]
+      ],
+      [
+        [
+          9,
+          8
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          13,
+          9
+        ]
+      ],
+      [
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          13,
+          7
+        ]
+      ],
+      [
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          13,
+          8
+        ]
+      ],
+      [
+        [
+          12,
+          9
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ]
+      ]
+    ],
+    "domain": [
+      [
+        4,
+        10
+      ],
+      [
+        5,
+        5
+      ],
+      [
+        5,
+        7
+      ],
+      [
+        5,
+        8
+      ],
+      [
+        5,
+        9
+      ],
+      [
+        5,
+        10
+      ],
+      [
+        6,
+        5
+      ],
+      [
+        6,
+        6
+      ],
+      [
+        6,
+        8
+      ],
+      [
+        7,
+        4
+      ],
+      [
+        7,
+        5
+      ],
+      [
+        7,
+        6
+      ],
+      [
+        7,
+        7
+      ],
+      [
+        7,
+        8
+      ],
+      [
+        8,
+        4
+      ],
+      [
+        8,
+        6
+      ],
+      [
+        8,
+        8
+      ],
+      [
+        8,
+        10
+      ],
+      [
+        8,
+        11
+      ],
+      [
+        9,
+        8
+      ],
+      [
+        9,
+        11
+      ],
+      [
+        10,
+        4
+      ],
+      [
+        10,
+        6
+      ],
+      [
+        10,
+        7
+      ],
+      [
+        10,
+        8
+      ],
+      [
+        10,
+        9
+      ],
+      [
+        10,
+        10
+      ],
+      [
+        10,
+        11
+      ],
+      [
+        11,
+        5
+      ],
+      [
+        11,
+        8
+      ],
+      [
+        11,
+        10
+      ],
+      [
+        12,
+        7
+      ],
+      [
+        12,
+        8
+      ],
+      [
+        12,
+        9
+      ],
+      [
+        12,
+        10
+      ],
+      [
+        12,
+        11
+      ],
+      [
+        13,
+        6
+      ],
+      [
+        13,
+        7
+      ],
+      [
+        13,
+        8
+      ],
+      [
+        13,
+        9
+      ]
+    ],
+    "domain_cells": 40,
+    "scope": "Any win at L_row, or against the stated L_cap policy, must use a target extending outside this fixed domain. Neither full physical state is settled."
+  },
+  "scope": "Two complete height2/height3 local policies. Actual N33 preparation12,8 covers127/129 replies and retains L_cap34+34 and L_row35+35 OPEN. The five-target obstruction is restricted to the stated fixed domain. No partial-root ordinary card, empty14 win or new move-bound claim is accepted here.",
+  "source_sha256": "494e2cec61bf74587e1b775d131d9eb4a04932c0019ca597818706767191da7b",
+  "status": "verified_conditional_policies_open_reduction_and_restricted_domain",
+  "utc": "2026-10-16T04:52:03.918146+00:00"
+}

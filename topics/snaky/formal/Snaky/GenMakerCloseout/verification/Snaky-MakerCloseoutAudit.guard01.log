@@ -1,0 +1,47 @@
+{"event": "cpu_exec_ready", "pid": 72407, "argv": ["/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean", "-j", "1", "-M", "512", "-R", "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/formal", "-o", "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/formal/.build/maker-closeout/lib/Snaky/MakerCloseoutAudit.olean", "/Volumes/2tb/math/.worktrees/snaky-board-size-20261015-a/topics/snaky/formal/Snaky/MakerCloseoutAudit.lean"], "resolved_executable": "/Volumes/2tb/math/.research-cache/toolchains/lean-4.34.1-darwin_aarch64/bin/lean", "inherited_cpu_limits": [9223372036854775807, 9223372036854775807], "applied_cpu_limits": [60, 60], "limit_units": "CPU seconds; soft and hard limits equal", "launcher_sha256": "0819f781e2cd2e3ce29e499ecacca46373219d8ab7cbe263c0a59a91cbea6278"}
+Snaky.MakerCloseout.continuation_wins_in_eight {M W : List Nat}
+  (h : Snaky.Placed 14 14 Snaky.MakerCloseout.continuation Snaky.MakerCloseout.frame M W) :
+  Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 8 M W
+Snaky.MakerCloseout.n30_after_q_wins (b : Fin 196)
+  (hM : ¬↑b ∈ Snaky.MakerCloseout.initialClaim :: Snaky.MakerCloseout.n30Maker)
+  (hW : ¬↑b ∈ Snaky.MakerCloseout.n30Breaker) (hE : ¬↑b ∈ Snaky.MakerCloseout.exceptions) :
+  Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 8
+    (Snaky.MakerCloseout.initialClaim :: Snaky.MakerCloseout.n30Maker) (↑b :: Snaky.MakerCloseout.n30Breaker)
+Snaky.MakerCloseout.n31_after_q_wins (b : Fin 196)
+  (hM : ¬↑b ∈ Snaky.MakerCloseout.initialClaim :: Snaky.MakerCloseout.n31Maker)
+  (hW : ¬↑b ∈ Snaky.MakerCloseout.n31Breaker) (hE : ¬↑b ∈ Snaky.MakerCloseout.exceptions) :
+  Snaky.BlackWinsIn (Snaky.placements 14 14 Snaky.snaky) 196 8
+    (Snaky.MakerCloseout.initialClaim :: Snaky.MakerCloseout.n31Maker) (↑b :: Snaky.MakerCloseout.n31Breaker)
+Snaky.MakerCloseout.initial_reply_counts :
+  (Snaky.MakerCloseout.legalReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker).length = 135 ∧
+    (Snaky.MakerCloseout.coveredReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker).length = 119 ∧
+      (Snaky.MakerCloseout.remainingReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker).length = 16 ∧
+        (Snaky.MakerCloseout.legalReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker).length = 133 ∧
+          (Snaky.MakerCloseout.coveredReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker).length =
+              117 ∧
+            (Snaky.MakerCloseout.remainingReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker).length =
+                16 ∧
+              Snaky.MakerCloseout.exceptions.length = 16 ∧ Snaky.MakerCloseout.exceptions.Nodup
+Snaky.MakerCloseout.initial_reply_partition (b : Fin 196) :
+  (↑b ∈ Snaky.MakerCloseout.remainingReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker ↔
+      ↑b ∈ Snaky.MakerCloseout.exceptions) ∧
+    (↑b ∈ Snaky.MakerCloseout.remainingReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker ↔
+        ↑b ∈ Snaky.MakerCloseout.exceptions) ∧
+      (↑b ∈ Snaky.MakerCloseout.legalReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker ↔
+          ↑b ∈ Snaky.MakerCloseout.coveredReplies Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker ∨
+            ↑b ∈ Snaky.MakerCloseout.exceptions) ∧
+        (↑b ∈ Snaky.MakerCloseout.legalReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker ↔
+          ↑b ∈ Snaky.MakerCloseout.coveredReplies Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker ∨
+            ↑b ∈ Snaky.MakerCloseout.exceptions)
+Snaky.MakerCloseout.n30_full_state :
+  Snaky.MakerCloseout.physicalState 30 Snaky.MakerCloseout.n30Maker Snaky.MakerCloseout.n30Breaker
+Snaky.MakerCloseout.n31_full_state :
+  Snaky.MakerCloseout.physicalState 31 Snaky.MakerCloseout.n31Maker Snaky.MakerCloseout.n31Breaker
+'Snaky.GenMakerCloseout.tree_ok' depends on axioms: [propext]
+'Snaky.MakerCloseout.continuation_wins_in_eight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.MakerCloseout.n30_after_q_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.MakerCloseout.n31_after_q_wins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Snaky.MakerCloseout.initial_reply_counts' depends on axioms: [propext]
+'Snaky.MakerCloseout.initial_reply_partition' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerCloseout.n30_full_state' depends on axioms: [propext, Quot.sound]
+'Snaky.MakerCloseout.n31_full_state' depends on axioms: [propext, Quot.sound]

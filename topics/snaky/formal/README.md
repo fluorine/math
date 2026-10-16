@@ -116,3 +116,77 @@ by the Lean kernel, and the imported soundness theorem connects those exact
 checks to legal game play. A new direct plane soundness theorem supplies the
 infinite-board conclusion; no unformalized finite-to-infinite transfer is hidden
 in the stated Lean theorem.
+
+## Board-size closeout
+
+The separate [board-size research package](../board_size/README.md) concerns
+conditional positions and local constructions on 10×10 and 14×14. Neither
+empty-board objective was solved. The existing 19- and 24-move targets above
+are unchanged.
+
+The new proof package includes its literal data and every generated Lean
+module. Rebuild the committed sources with Lean 4.34.1:
+
+```sh
+python3 topics/snaky/formal/build.py --lean /absolute/path/to/lean \
+  --no-generate --target Snaky.BoardSizeAudit \
+  --memory-mb 4096 --module-seconds 180
+```
+
+This runs one compiler thread at a time and needs no mathlib, solver, browser
+session or research cache. `--no-generate` is intentional: the published
+sources are the canonical proof input. The shared builder's certificate hash
+field still records its default 19-move input for compatibility; that field
+is not the data binding for the board-size theorems. The separate
+[kernel audit](kernel-audit-board-size.json) records the exact new source
+closure and theorem audit.
+
+Every finite data assertion uses the Lean kernel. The card and defensive
+soundness arguments connect the finite objects to the ordinary game, including
+fresh moves, immediate completion and the last legal Maker claim. The selected
+C30 attack and the e1 replacement lemma have narrower statements: C30 concerns
+its displayed selected guards, and e1 assumes explicit compatibility conditions.
+Neither is an unrestricted physical game outcome.
+
+The final audit imports all delivered theorem roots and prints their types and
+axioms. Previously checked, byte-identical common game/card modules were reused
+after source, compiler, recursive import and object checks; the new modules
+were checked locally during closeout. A clean invocation of the command above
+rechecks the common modules too. Verification evidence describes which work
+was fresh and which was reused; cached objects are not part of the published
+proof source.
+
+The conditional opening source generator can be run separately with Python
+3.11 or newer. The compact deck and closure map are included; the large
+historical search libraries are not needed:
+
+```sh
+python3.12 topics/snaky/formal/tools/maker_opening_data.py \
+  --from-extracted --output-dir /tmp/snaky-opening-regenerated
+```
+
+The [regeneration receipt](Snaky/GenMakerOpening/regeneration.json) records a
+byte-for-byte comparison of all 1,761 generated Lean files. The closure map's
+original generator hash is historical; the receipt binds the current generator.
+
+The release also requires a [fresh kernel replay](kernel-fresh-board-size.json)
+of the complete aggregate. This uses the shipped Lean 4.34.1 `leanchecker`
+with `--fresh`: it replays safe declarations into an empty kernel environment
+and checks the induced constructors and recursors. It is the Lean kernel,
+not a separate verifier implementation. After the source build above, from
+the repository root:
+
+```sh
+PATH="/absolute/path/to/lean-toolchain/bin:$PATH" \
+LEAN_PATH="$PWD/topics/snaky/formal/.build/lib" \
+  /absolute/path/to/lean-toolchain/bin/leanchecker --fresh --verbose Snaky.BoardSizeAudit
+```
+
+Some early opening receipts recorded dependency source hashes without
+per-compilation imported-object hashes. The release therefore binds the full
+current source/object closure and requires this fresh replay, in addition to
+the source compilation and theorem/axiom audit. Historical local telemetry
+hashes in family manifests are provenance; rebuilding the committed sources
+does not depend on those private cache files.
+Source hashes pin the portable proof inputs. Object hashes identify the
+recorded local build and can differ across compiler platforms or build paths.
